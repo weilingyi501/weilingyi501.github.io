@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching | Lingyi Wei</title>
+  <meta name="description" content="Teaching by Lingyi Wei at the University of Utah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="index.html">Lingyi Wei</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html" class="on">Teaching</a></li>
+      <li><a href="food.html">Food</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page">
+  <h1>Teaching</h1>
+  <p class="lead">University of Utah</p>
+
+  <h2>Instructor of Record</h2>
+  <div class="courses">
+    <div class="course">
+      <div class="course-row"><span class="name">International Economics</span><span class="when">Fall 2026</span></div>
+    </div>
+    <div class="course">
+      <div class="course-row"><span class="name">Money and Banking</span><button type="button" class="fb-toggle" aria-expanded="false">Student feedback</button><span class="when">Summer 2026</span></div>
+      <div class="fb-body" hidden>
+        <p class="stat">Instructor recommendation: <strong>4.93 / 5</strong> (ECON average 4.48) · 15 responses</p>
+        <blockquote>Professor Wei was very engaged with the course and students. She was very warm, supportive and passionate. What I like most about her class was that she always updated us with current news, let us discuss and connect class materials with real-life events.</blockquote>
+        <blockquote>Promptly replies to emails and patiently answers any questions. Delivers lectures with clear logic and at a moderate pace. Teaches in a step-by-step manner.</blockquote>
+        <blockquote>The syllabus was clear and the professor nicely laid out objectives at the beginnings of lectures.</blockquote>
+        <blockquote>Thank you for teaching! I found this class to be one of the few online classes that I liked the structure of and I thoroughly have learned more about this topic.</blockquote>
+      </div>
+    </div>
+    <div class="course">
+      <div class="course-row"><span class="name">Principles of Macroeconomics</span><button type="button" class="fb-toggle" aria-expanded="false">Student feedback</button><span class="when">Summer 2025</span></div>
+      <div class="fb-body" hidden>
+        <p class="stat">Instructor recommendation: <strong>4.91 / 5</strong> (ECON average 4.48) · 11 responses</p>
+        <blockquote>Made everything so ridiculously organized it was almost impossible not to succeed.</blockquote>
+        <blockquote>I was able to learn a lot in the class and my professor was extremely helpful and responsive for the shortened course timeline</blockquote>
+        <blockquote>The professor explains everything clearly in the instruction videos and also follows up with announcements. The professor also includes reminders and encouragement in announcements.</blockquote>
+        <blockquote>I never felt judged by my professor</blockquote>
+      </div>
+    </div>
+    <div class="course">
+      <div class="course-row"><span class="name">Principles of Microeconomics</span><button type="button" class="fb-toggle" aria-expanded="false">Student feedback</button><span class="when">Summer 2024</span></div>
+      <div class="fb-body" hidden>
+        <p class="stat">Instructor recommendation: <strong>4.70 / 5</strong> (ECON average 4.48) · 10 responses</p>
+        <blockquote>The professor explains concepts very clearly. I&#x27;m glad this was an in-person class and not an online class.</blockquote>
+        <blockquote>The instructor helped answer questions and break up misunderstanding. The instructor also planned fun activities to learn from.</blockquote>
+        <blockquote>She has us help teach and give presentations</blockquote>
+        <blockquote>Thank you for the semester. I truly appreciate your teaching and the time you&#x27;ve dedicated to our class.</blockquote>
+      </div>
+    </div>
+  </div>
+
+  <h2>Mentoring &amp; Assisting</h2>
+  <div class="courses">
+    <div class="course">
+      <div class="course-row"><span class="name">Honors Graduate Teaching Assistant</span><button type="button" class="fb-toggle" aria-expanded="false">Impact</button><span class="when">2024–2026</span></div>
+      <div class="fb-body" hidden>
+        <div class="stats">
+          <div><b>63</b> <span>Honors students supported</span></div>
+          <div><b>22</b> <span>students mentored one-on-one</span></div>
+          <div><b>2 or 3 → 10</b> <span>Honors graduates per year</span></div>
+        </div>
+        <blockquote>Thank you for the reminders, they helped a lot with keeping on track. I almost didn’t write an honors thesis, and my meeting with you at the beginning of the semester helped me realize it wasn’t too late and it was still possible.</blockquote>
+        <blockquote>Thank you for all your help this semester as well. It really helped keep me on track!</blockquote>
+      </div>
+    </div>
+    <div class="course">
+      <div class="course-row"><span class="name">Teaching Assistant, Principles of Microeconomics</span><span class="when">2022–2023</span></div>
+    </div>
+  </div>
+
+  <h2>Pedagogical Training</h2>
+  <ul class="list">
+    <li><span>Graduate Fellow, Martha Bradley Evans Center for Teaching Excellence</span><span class="when">2023–2024</span></li>
+    <li><span>Research Mentoring Certificate</span><span class="when">2024</span></li>
+    <li><span>Graduate Teaching Institute</span><span class="when">2023, 2024</span></li>
+    <li><span>Annual Teaching Symposium, Martha Bradley Evans Center for Teaching Excellence</span><span class="when">2022, 2026</span></li>
+  </ul>
+</main>
+<script>
+  document.querySelectorAll('.fb-toggle').forEach(b => b.addEventListener('click', () => {
+    const body = b.closest('.course').querySelector('.fb-body');
+    const open = b.getAttribute('aria-expanded') === 'true';
+    b.setAttribute('aria-expanded', String(!open));
+    body.hidden = open;
+  }));
+</script>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+</body>
+</html>
