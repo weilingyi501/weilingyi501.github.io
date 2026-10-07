@@ -58,7 +58,7 @@ home = head('Lingyi Wei', 'Lingyi Wei, Ph.D. candidate in Economics at the Unive
 
   <div class="main">
     <p>I am a Ph.D. candidate in Economics at the <a href="https://economics.utah.edu/">University of Utah</a>. I am on the 2026–27 academic job market.</p>
-    <p>My research focuses on <strong>economic development</strong>, <strong>international economics</strong>, <strong>political economy</strong>, and the <strong>Chinese economy</strong>. My dissertation, <em>Understanding the Structure of the Capitalist World-System</em>, measures global economic hierarchy using cross-country income distributions and labor terms of trade for more than 170 countries. I find that the hierarchy has remained stable since 1950, but that lower-income countries moved up in labor terms of trade after the 2008 financial crisis.</p>
+    <p>My research focuses on <strong>economic development</strong>, <strong>international economics</strong>, <strong>political economy</strong>, and the <strong>Chinese economy</strong>. My dissertation, <em>Understanding the Structure of the Capitalist World-System</em>, measures global economic hierarchy using cross-country income distributions and labor terms of trade for more than 170 countries. I find that this hierarchy has barely moved: countries at the bottom still give over twenty hours of labor for one hour at the top.</p>
     <p>I am the 2026–27 Dissertation Fellow of the Union for Radical Political Economics (URPE).</p>
 
     <div class="jmp">
@@ -86,7 +86,7 @@ research = head('Research | Lingyi Wei', 'Research by Lingyi Wei: labor terms of
   <h2>Job Market Paper</h2>
   <div class="jmp">
     <div class="title">{JMP_TITLE}</div>
-    <p>I compute labor terms of trade for more than 170 countries over 1990–2017 using multi-regional input–output tables, providing the first systematic worldwide estimates. The global distribution has three or four distinct layers. Countries mostly stayed in place through the early 2000s, but after the global financial crisis the bottom and lower-middle layers moved up markedly.</p>
+    <p>I compute the first systematic worldwide estimates of labor terms of trade for more than 170 countries over 1990–2017 using multi-regional input–output tables. I show that this hierarchy of exchange mirrors the world income hierarchy and barely moved: even as peripheral economies upgraded into manufacturing exports, the countries at the bottom still gave over twenty hours of labor for one hour of labor at the top.</p>
   </div>
 
   <h2>Publications</h2>
