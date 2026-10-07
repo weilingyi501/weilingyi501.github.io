@@ -25,7 +25,6 @@ PERSON = json.dumps({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Lingyi Wei",
-    "alternateName": "魏凌漪",
     "url": "https://lingyiwei.org/",
     "image": "https://lingyiwei.org/photo.jpg",
     "jobTitle": "Ph.D. Candidate in Economics",
