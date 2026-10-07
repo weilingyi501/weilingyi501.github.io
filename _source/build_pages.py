@@ -4,7 +4,7 @@ SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 LEAF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></svg>'
 NAV = [('/', 'Home'), ('research.html', 'Research'), ('teaching.html', 'Teaching'), ('food.html', 'Food'), ('cv.html', 'CV')]
 
-def head(title, desc):
+def head(title, desc, extra=''):
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +16,31 @@ def head(title, desc):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-</head>
+{extra}</head>
 <body>
 '''
+
+import json
+PERSON = json.dumps({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lingyi Wei",
+    "alternateName": "魏凌漪",
+    "url": "https://lingyiwei.org/",
+    "image": "https://lingyiwei.org/photo.jpg",
+    "jobTitle": "Ph.D. Candidate in Economics",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Utah", "department": {"@type": "Organization", "name": "Department of Economics"}},
+    "alumniOf": [{"@type": "CollegeOrUniversity", "name": "University of Utah"}, {"@type": "CollegeOrUniversity", "name": "Hong Kong Polytechnic University"}],
+    "knowsAbout": ["Economic development", "International economics", "Political economy", "Chinese economy", "Labor terms of trade", "World-systems analysis"],
+    "email": "mailto:lingyi.wei@utah.edu",
+    "sameAs": [
+        "https://scholar.google.com/citations?hl=en&user=QQPJ5xoAAAAJ",
+        "https://www.researchgate.net/profile/Lingyi-Wei-2",
+        "https://orcid.org/0009-0000-7989-0453"
+    ]
+}, ensure_ascii=False, indent=2)
+HOME_EXTRA = ('  <link rel="canonical" href="https://lingyiwei.org/">\n'
+              '  <script type="application/ld+json">\n' + PERSON + '\n  </script>\n')
 
 def bar(on):
     lis = []
@@ -40,7 +62,7 @@ photo_html = ('<img class="photo" src="photo.jpg" alt="Lingyi Wei">' if os.path.
 
 JMP_TITLE = 'All Labors Are Equal, But Some Labor Is More “Equal” Than Others: Labor Terms of Trade and the Capitalist World-System'
 
-home = head('Lingyi Wei', 'Lingyi Wei, Ph.D. candidate in Economics at the University of Utah. Economic development, international economics, political economy, and the Chinese economy. On the 2026–27 job market.') + bar('Home') + f'''
+home = head('Lingyi Wei', 'Lingyi Wei, Ph.D. candidate in Economics at the University of Utah. Economic development, international economics, political economy, and the Chinese economy. On the 2026–27 job market.', HOME_EXTRA) + bar('Home') + f'''
 <main class="home">
   <aside class="side"><div class="inner">
     {photo_html}
