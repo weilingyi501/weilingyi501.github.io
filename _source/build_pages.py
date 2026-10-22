@@ -159,7 +159,7 @@ teaching = head('Teaching | Lingyi Wei', 'Teaching by Lingyi Wei at the Universi
   <h2>Instructor of Record</h2>
   <div class="courses">
     <div class="course">
-      <div class="course-row"><span class="name">International Economics</span><span class="when">Fall 2026</span></div>
+      <div class="course-row"><span class="name"><a href="trade-theory-tree.html">International Economics</a></span><span class="when">Fall 2026</span></div>
     </div>
     <div class="course">
       <div class="course-row"><span class="name">Money and Banking</span><button type="button" class="fb-toggle" aria-expanded="false">Student feedback</button><span class="when">Summer 2026</span></div>
