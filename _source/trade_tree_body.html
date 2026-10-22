@@ -1,0 +1,231 @@
+<main class="page tt">
+  <p class="crumb"><a href="teaching.html">← Teaching</a> · International Economics</p>
+  <h1>Schools of thought on international trade</h1>
+  <p class="lead">A family tree of economic traditions, from mercantilism to world-systems theory. Click any school to see what it says about trade.</p>
+
+<p class="hint">Scroll sideways to see all five lanes →</p>
+<div class="scroll">
+<div class="tree" role="group" aria-label="Family tree of schools of thought">
+  <div class="stem"><button class="c g" data-k="merc"><b>Mercantilism</b><span>c. 1500–1750</span></button></div>
+  <div class="v"></div>
+  <div class="stem"><button class="c g" data-k="phys"><b>Physiocrats</b><span>1750s–1770s</span></button></div>
+  <div class="v"></div>
+  <div class="stem">
+    <button class="c g" data-k="classical"><b>Classical political economy</b><span>Smith, Ricardo, Mill · 1776–1848</span></button>
+  </div>
+  <div class="v"></div>
+  <div class="branch"></div>
+  <div class="lanes">
+    <div class="lane"><div class="lh">Neoclassical</div>
+      <button class="c m" data-k="marshall"><b>Marginalists &amp; Marshall</b><span>1870s–1930s</span></button><div class="v"></div>
+      <button class="c m" data-k="hos"><b>Heckscher–Ohlin–Samuelson</b><span>1919–1950s</span></button><div class="v"></div>
+      <button class="c m" data-k="ntt"><b>New trade theory</b><span>Krugman · 1979–</span></button><div class="v"></div>
+      <button class="c m" data-k="quant"><b>Firms &amp; quantitative models</b><span>2002–today</span></button>
+    </div>
+    <div class="lane"><div class="lh">Nationalist &amp; developmentalist</div>
+      <button class="c h" data-k="list"><b>Hamilton &amp; List</b><span>1791–1841</span></button><div class="v"></div>
+      <button class="c h" data-k="hist"><b>German historical school</b><span>1840s–1900s</span></button><div class="v"></div>
+      <button class="c h" data-k="dev"><b>Developmental state</b><span>1980s–1990s</span></button><div class="v"></div>
+      <button class="c h" data-k="chang"><b>Neo-developmentalism</b><span>Chang · 2002–</span></button>
+    </div>
+    <div class="lane"><div class="lh">Institutionalist</div>
+      <button class="c h" data-k="oie"><b>Old institutionalism</b><span>Veblen · 1899–1930s</span></button><div class="v"></div>
+      <button class="c h" data-k="polanyi"><b>Polanyi</b><span>1944</span></button><div class="v"></div>
+      <button class="c m" data-k="nie"><b>New institutional economics</b><span>North · 1990–</span></button><div class="v"></div>
+      <button class="c m" data-k="rodrik"><b>Globalization trilemma</b><span>Rodrik · 1997–</span></button>
+    </div>
+    <div class="lane"><div class="lh">Keynesian &amp; structuralist</div>
+      <button class="c m" data-k="keynes"><b>Keynes</b><span>1933–1944</span></button><div class="v"></div>
+      <button class="c h" data-k="prebisch"><b>Structuralism</b><span>Prebisch–Singer · 1950</span></button><div class="v"></div>
+      <button class="c h" data-k="pk"><b>Post-Keynesian</b><span>Kaldor, Thirlwall · 1957–</span></button><div class="v"></div>
+      <button class="c h" data-k="neostr"><b>Neo-structuralism</b><span>ECLAC · 1990–</span></button>
+    </div>
+    <div class="lane"><div class="lh">Marxian &amp; world-systems</div>
+      <button class="c h" data-k="marx"><b>Marx</b><span>1848–1867</span></button><div class="v"></div>
+      <button class="c h" data-k="imp"><b>Theories of imperialism</b><span>1902–1916</span></button><div class="v"></div>
+      <button class="c h" data-k="dep"><b>Dependency theory</b><span>1957–1970s</span></button><div class="v"></div>
+      <button class="c h" data-k="ue"><b>Unequal exchange</b><span>Emmanuel, Amin · 1969–</span></button><div class="v"></div>
+      <button class="c h" data-k="ws"><b>World-systems</b><span>Wallerstein · 1974–</span></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="legend">
+  <span><span class="sw m"></span>Mainstream today</span>
+  <span><span class="sw h"></span>Heterodox</span>
+  <span><span class="sw g"></span>Shared roots</span>
+</div>
+
+<section class="panel" aria-live="polite">
+  <h2 id="pt"></h2>
+  <div class="yrs" id="py"></div>
+  <p class="one" id="ps"></p>
+  <div class="row"><div class="lb">Who</div><div class="tx" id="pw"></div></div>
+  <div class="row"><div class="lb">On trade</div><div class="tx" id="pv"></div></div>
+  <div class="row"><div class="lb">Key idea</div><div class="tx" id="pk"></div></div>
+  <div class="row"><div class="lb">Read</div><div class="tx" id="pr"></div></div>
+</section>
+
+  <p class="note">Prepared for my course in International Economics, University of Utah, Fall 2026.</p>
+</main>
+
+<script>
+const D = {
+merc:{t:"Mercantilism",y:"c. 1500–1750",
+ s:"Trade is a zero-sum contest in which a nation grows rich by running export surpluses, piling up gold and silver, and protecting its manufacturers.",
+ w:"Thomas Mun, Jean-Baptiste Colbert, Antonio Serra, Josiah Child.",
+ v:"One nation's gain is another's loss. Wealth is the stock of gold and silver, so a country should run a persistent export surplus, tax manufactured imports, import raw materials cheaply and treat colonies as captive markets.",
+ k:"Balance of trade. The logic survives in neo-mercantilist, export-led strategies and in political rhetoric that equates surpluses with winning.",
+ r:"Mun, England's Treasure by Forraign Trade (1664)."},
+phys:{t:"Physiocrats",y:"1750s–1770s",
+ s:"Wealth comes only from the land's net product, so trade creates nothing new, but free trade in grain should still be allowed because it raises farmers' returns.",
+ w:"François Quesnay, A. R. J. Turgot, the Marquis de Mirabeau.",
+ v:"Trade merely exchanges existing values and does not create wealth. Yet free trade in grain raises farm prices and the net product, so they attacked Colbert's controls. They coined laissez-faire.",
+ k:"Produit net and the Tableau économique, the first circular-flow model of an economy.",
+ r:"Quesnay, Tableau économique (1758)."},
+classical:{t:"Classical political economy",y:"1776–1848",
+ s:"Smith: trade extends the market and deepens the division of labor, so each country gains by specializing in goods it produces at an absolutely lower cost. Ricardo: even a country less productive in every good gains by specializing according to comparative advantage. Mill: the terms of trade, and so how the gains are split, are set by reciprocal demand.",
+ w:"Adam Smith, David Ricardo, Robert Torrens, John Stuart Mill; David Hume as precursor.",
+ v:"Trade is positive-sum. Smith grounds it in the division of labor and absolute advantage; Ricardo shows that comparative advantage alone guarantees gains; Mill shows how the terms of trade divide them. The policy conclusion is free trade, as in the campaign to repeal the Corn Laws (1846).",
+ k:"Comparative advantage, built on a labor theory of value. Both later mainstream and Marxian economics claim this inheritance: the first keeps comparative advantage, the second keeps labor value.",
+ r:"Smith, Wealth of Nations (1776), Book IV; Ricardo, Principles (1817), ch. 7; Mill, Principles (1848), Book III."},
+marshall:{t:"Marginalists & Marshall",y:"1870s–1930s",
+ s:"Comparative advantage holds without the labor theory of value, with the terms of trade fixed by offer curves and gains measured as opportunity cost.",
+ w:"Alfred Marshall, F. Y. Edgeworth, Gottfried Haberler.",
+ v:"Comparative advantage is kept but cut loose from labor value. Marshall's offer curves determine the terms of trade, and Haberler restates comparative advantage as opportunity cost along a production possibility frontier. Free trade is efficient; the remaining debate is about who gets the surplus.",
+ k:"Offer curves and opportunity cost, which put trade theory on subjective-value foundations.",
+ r:"Marshall, The Pure Theory of Foreign Trade (1879); Haberler, The Theory of International Trade (1936)."},
+hos:{t:"Heckscher–Ohlin–Samuelson",y:"1919–1950s",
+ s:"Countries export goods that use their abundant factors intensively, so trade raises national income but hurts the owners of scarce factors.",
+ w:"Eli Heckscher, Bertil Ohlin, Paul Samuelson, Wolfgang Stolper, T. M. Rybczynski, Wassily Leontief.",
+ v:"Comparative advantage comes from differences in factor endowments. Trade raises national income but redistributes within countries: the scarce factor loses (Stolper–Samuelson). Free trade plus compensation of losers is the standard recommendation. Leontief's paradox (1953) opened a long empirical fight.",
+ k:"Factor proportions; the Stolper–Samuelson, Rybczynski and factor price equalization theorems.",
+ r:"Ohlin, Interregional and International Trade (1933); Stolper & Samuelson (1941)."},
+ntt:{t:"New trade theory",y:"1979–",
+ s:"Similar countries trade similar goods because of increasing returns and consumers' love of variety, which yields gains from scale and product variety.",
+ w:"Paul Krugman, Elhanan Helpman, Avinash Dixit, James Brander & Barbara Spencer.",
+ v:"Much trade is between similar rich countries in similar goods. Strategic trade policy can in principle raise national welfare under oligopoly, but the mainstream verdict kept free trade as the rule of thumb. This line led to new economic geography (1991).",
+ k:"Intra-industry trade, the home-market effect, and gains from variety.",
+ r:"Krugman (1979, 1980); Helpman & Krugman, Market Structure and Foreign Trade (1985)."},
+quant:{t:"Firms & quantitative models",y:"2002–today",
+ s:"Only the most productive firms export, and calibrated gravity models measure the gains from trade, its distributional costs, and the effects of policy.",
+ w:"Marc Melitz, Jonathan Eaton & Samuel Kortum, Arkolakis–Costinot–Rodríguez-Clare, David Autor and co-authors.",
+ v:"Trade reallocates resources toward the most productive firms. Structural gravity models are calibrated to data to measure gains from trade and to simulate tariffs. Since the China shock studies, the distributional costs of trade are taken seriously inside the mainstream.",
+ k:"Firm selection, structural gravity, and the ACR gains-from-trade formula.",
+ r:"Melitz (2003); Arkolakis, Costinot & Rodríguez-Clare (2012); Autor, Dorn & Hanson (2013)."},
+list:{t:"Hamilton & List",y:"1791–1841",
+ s:"Free trade suits the industrial leader, so latecomers should temporarily protect infant industries until they can compete.",
+ w:"Alexander Hamilton, Friedrich List, Henry Carey (the American System).",
+ v:"Free trade suits the leader, then Britain. Latecomers must temporarily protect infant industries to build their productive powers before opening up. List contrasts Smith's cosmopolitical economy with a national economy.",
+ k:"Infant-industry protection and productive powers, as opposed to static exchange values.",
+ r:"Hamilton, Report on Manufactures (1791); List, The National System of Political Economy (1841)."},
+hist:{t:"German historical school",y:"1840s–1900s",
+ s:"No trade policy is universally correct, because the right policy depends on a nation's historical stage of development.",
+ w:"Wilhelm Roscher, Gustav Schmoller, Karl Bücher.",
+ v:"There are no universal economic laws; trade policy must fit a nation's historical stage. Schmoller reread mercantilism as state-building. The school backed the Zollverein and Bismarck's 1879 tariff. Its methods shaped American institutionalism through students trained in Germany.",
+ k:"Historical and inductive method; the economy embedded in the nation and the state.",
+ r:"Schmoller, The Mercantile System and Its Historical Significance (1884)."},
+dev:{t:"Developmental state",y:"1980s–1990s",
+ s:"East Asia industrialized by combining selective protection and directed credit with strict export discipline, using trade policy as industrial policy.",
+ w:"Chalmers Johnson, Alice Amsden, Robert Wade.",
+ v:"The East Asian miracles did not come from free trade alone. States combined selective protection, directed credit and export targets, deliberately getting relative prices wrong to build industries, while disciplining firms through export performance.",
+ k:"Governed markets and export discipline.",
+ r:"Johnson, MITI and the Japanese Miracle (1982); Amsden, Asia's Next Giant (1989); Wade, Governing the Market (1990)."},
+chang:{t:"Neo-developmentalism",y:"2002–",
+ s:"Rich countries climbed to prosperity behind tariffs and now kick away the ladder by imposing free trade rules on developing countries.",
+ w:"Ha-Joon Chang, Erik Reinert; contrast with Justin Yifu Lin.",
+ v:"WTO and investment rules shrink the policy space latecomers need. Lin's New Structural Economics answers that states should facilitate but follow latent comparative advantage; the two debated directly in 2009.",
+ k:"Policy space; the Chang–Lin debate on defying versus following comparative advantage.",
+ r:"Chang, Kicking Away the Ladder (2002); Reinert, How Rich Countries Got Rich (2007); Lin & Chang, Development Policy Review (2009)."},
+oie:{t:"Old institutionalism",y:"1899–1930s",
+ s:"Trade is shaped by evolving institutions, habits and power, and latecomers can borrow technology without the leader's institutional baggage.",
+ w:"Thorstein Veblen, John R. Commons, Wesley Mitchell, Clarence Ayres.",
+ v:"There is no separate trade theory: markets are evolving institutions shaped by habit, law and power. Veblen argued latecomers like Imperial Germany could borrow technology without the leader's inherited institutions, a seed of later catch-up ideas.",
+ k:"Cumulative institutional change; advantages of backwardness (later Gerschenkron).",
+ r:"Veblen, Imperial Germany and the Industrial Revolution (1915)."},
+polanyi:{t:"Polanyi",y:"1944",
+ s:"The 19th-century attempt to build a self-regulating world market provoked a protective backlash from society that ended in the collapse of the 1930s.",
+ w:"Karl Polanyi.",
+ v:"The self-regulating world market, built on the gold standard and free trade, tried to disembed the economy from society. Society pushed back with a double movement of tariffs and social protection. The framework is widely used to read today's backlash against globalization.",
+ k:"Embeddedness and the double movement.",
+ r:"Polanyi, The Great Transformation (1944)."},
+nie:{t:"New institutional economics",y:"1990–",
+ s:"Institutions such as contract enforcement are themselves a source of comparative advantage and decide whether trade produces lasting growth.",
+ w:"Douglass North, Oliver Williamson, Acemoglu–Johnson–Robinson, Nathan Nunn.",
+ v:"Institutions shape trade and are shaped by it. Contract enforcement creates comparative advantage in relationship-specific goods. Atlantic trade enriched Europe mainly where institutions constrained rulers. These ideas were absorbed into mainstream tools.",
+ k:"Institutions as comparative advantage; transaction costs.",
+ r:"North (1990); Acemoglu, Johnson & Robinson, AER (2005); Nunn, QJE (2007)."},
+rodrik:{t:"Globalization trilemma",y:"1997–",
+ s:"A country cannot have hyperglobalization, democracy and national sovereignty all at once, so deep integration has political limits.",
+ w:"Dani Rodrik.",
+ v:"Deep integration erodes the social bargains that sustain support for openness. Rodrik works with mainstream tools but is in many ways Polanyi's heir.",
+ k:"The political trilemma of the world economy.",
+ r:"Rodrik, Has Globalization Gone Too Far? (1997); The Globalization Paradox (2011)."},
+keynes:{t:"Keynes",y:"1933–1944",
+ s:"When there is unemployment, a trade surplus exports joblessness to partners, so surplus and deficit countries alike should be made to adjust.",
+ w:"John Maynard Keynes.",
+ v:"A surplus adds to domestic demand at partners' expense, so the mercantilists had a point (General Theory, ch. 23). His Bretton Woods plan for an International Clearing Union would have forced surplus countries, not only deficit ones, to adjust. In 1933 he also defended a degree of national self-sufficiency.",
+ k:"Trade imbalances and effective demand; symmetric adjustment.",
+ r:"Keynes, National Self-Sufficiency (1933); General Theory (1936), ch. 23."},
+prebisch:{t:"Structuralism",y:"1950",
+ s:"The periphery's terms of trade for primary exports decline over time, so developing countries should industrialize through import substitution.",
+ w:"Raúl Prebisch, Hans Singer, Celso Furtado, ECLA/CEPAL.",
+ v:"The world divides into an industrial center and a primary-exporting periphery. Productivity gains in the center become higher wages, while in the periphery they become lower prices, so the periphery's terms of trade decline secularly.",
+ k:"The Prebisch–Singer hypothesis of declining terms of trade for primary commodities.",
+ r:"Prebisch, The Economic Development of Latin America (1950); Singer, AER (1950)."},
+pk:{t:"Post-Keynesian",y:"1957–",
+ s:"Long-run growth is limited by the balance of payments, and trade tends to widen gaps between leading and lagging regions through cumulative causation.",
+ w:"Nicholas Kaldor, Gunnar Myrdal, A. P. Thirlwall.",
+ v:"Trade is governed by demand and cumulative causation, not comparative advantage. Leading manufacturing regions pull further ahead, and lagging ones suffer backwash effects. Thirlwall's law: long-run growth equals export growth divided by the income elasticity of import demand.",
+ k:"Balance-of-payments-constrained growth and cumulative causation.",
+ r:"Myrdal, Economic Theory and Underdeveloped Regions (1957); Thirlwall (1979)."},
+neostr:{t:"Neo-structuralism",y:"1990–",
+ s:"Openness is acceptable only if it comes with deliberate upgrading into higher-value exports, because what a country produces shapes its development.",
+ w:"Fernando Fajnzylber, José Antonio Ocampo, ECLAC; Gary Gereffi on upgrading.",
+ v:"It accepts openness but argues that what a country exports matters. Diversification and upgrading in value chains, with social equity, is the policy goal, rather than closure or pure laissez-faire.",
+ k:"Productive transformation and upgrading in value chains.",
+ r:"ECLAC, Changing Production Patterns with Social Equity (1990); Gereffi & Korzeniewicz (1994)."},
+marx:{t:"Marx",y:"1848–1867",
+ s:"The world market is capital's natural arena, where a more advanced country can exchange less labor for more labor.",
+ w:"Karl Marx, Friedrich Engels; later Anwar Shaikh.",
+ v:"In 1848 Marx backed free trade only because it would hasten capitalism's crisis. Capital vol. III notes that an advanced country can exchange less labor for more, the seed of unequal exchange. Shaikh later argues trade is governed by absolute, not comparative, advantage.",
+ k:"Labor value applied to international exchange.",
+ r:"Marx, On the Question of Free Trade (1848); Capital vol. III (1894), ch. 14; Shaikh (1980)."},
+imp:{t:"Theories of imperialism",y:"1902–1916",
+ s:"Monopoly capital drives the export of capital and the scramble for colonies and markets, so trade is bound up with finance and rivalry between powers.",
+ w:"J. A. Hobson, Rudolf Hilferding, Rosa Luxemburg, V. I. Lenin.",
+ v:"Trade cannot be separated from finance and power. Luxemburg argued that capitalism needs non-capitalist outlets to realize surplus value. Trade appears as an arm of imperial rivalry, not a voluntary exchange between equals.",
+ k:"Capital export, monopoly, and inter-imperialist rivalry.",
+ r:"Hobson, Imperialism (1902); Luxemburg, The Accumulation of Capital (1913); Lenin, Imperialism (1916)."},
+dep:{t:"Dependency theory",y:"1957–1970s",
+ s:"Integration into the world market drains surplus from the periphery to the core and produces the “development of underdevelopment.”",
+ w:"Paul Baran, Andre Gunder Frank, Theotonio dos Santos, Cardoso & Faletto, Walter Rodney.",
+ v:"The roots are both Marxian and structuralist. The radical wing called for delinking from the world market; Cardoso and Faletto allowed for dependent, associated development.",
+ k:"Metropole–satellite surplus drain.",
+ r:"Baran (1957); Frank, Capitalism and Underdevelopment in Latin America (1967); Cardoso & Faletto (1969)."},
+ue:{t:"Unequal exchange",y:"1969–",
+ s:"Because capital moves across borders but labor does not, trade between high-wage and low-wage countries hides a transfer of value even at fair market prices.",
+ w:"Arghiri Emmanuel, Samir Amin; recently Jason Hickel and co-authors; ecological version by Stephen Bunker and Alf Hornborg.",
+ v:"Mobile capital equalizes profit rates, but immobile labor keeps wages far apart, so prices of production transfer value from low-wage to high-wage countries. Recent work measures this drain with embodied labor and resources; the ecological version extends it to land and materials.",
+ k:"Hidden value transfer through wage differentials; labor-embodied terms of trade.",
+ r:"Emmanuel, Unequal Exchange (1969/1972); Amin, Unequal Development (1973); Hickel et al., Global Environmental Change (2022)."},
+ws:{t:"World-systems",y:"1974–",
+ s:"Trade organizes a hierarchical global division of labor among core, semi-periphery and periphery within a capitalist world-economy dating from the 16th century.",
+ w:"Immanuel Wallerstein, Giovanni Arrighi, Christopher Chase-Dunn.",
+ v:"The unit of analysis is the world-economy, not the nation, under successive hegemons (Dutch, British, American). Its commodity-chains concept was the ancestor of today's global value chain research.",
+ k:"Core, semi-periphery, periphery; hegemonic cycles; commodity chains.",
+ r:"Wallerstein, The Modern World-System vol. I (1974); Arrighi, The Long Twentieth Century (1994); Hopkins & Wallerstein (1986)."}
+};
+function show(k){
+  const d = D[k]; if(!d) return;
+  for (const [id,f] of [["pt","t"],["py","y"],["ps","s"],["pw","w"],["pv","v"],["pk","k"],["pr","r"]])
+    document.getElementById(id).textContent = d[f];
+  document.querySelectorAll(".c[data-k]").forEach(b=>{
+    const on = b.dataset.k===k; b.classList.toggle("on",on); b.setAttribute("aria-pressed",on);
+  });
+  if (location.hash.slice(1)!==k) history.replaceState(null,"","#"+k);
+}
+document.querySelectorAll(".c[data-k]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.k)));
+show(D[location.hash.slice(1)] ? location.hash.slice(1) : "classical");
+</script>

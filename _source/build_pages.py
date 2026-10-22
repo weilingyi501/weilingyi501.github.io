@@ -256,6 +256,12 @@ cv = head('CV | Lingyi Wei', 'Curriculum vitae of Lingyi Wei.') + bar('CV') + ''
 </main>
 ''' + FOOT
 
-for name, html in [('index.html', home), ('research.html', research), ('teaching.html', teaching), ('cv.html', cv)]:
+_here = os.path.dirname(os.path.abspath(__file__))
+trade_tree = (head('Schools of Thought on International Trade | Lingyi Wei',
+                   'An interactive family tree of economic schools of thought and what each says about international trade, from mercantilism to world-systems theory. Prepared for International Economics at the University of Utah.',
+                   open(os.path.join(_here, 'trade_tree_style.html')).read())
+              + bar('Teaching') + open(os.path.join(_here, 'trade_tree_body.html')).read() + FOOT)
+
+for name, html in [('index.html', home), ('research.html', research), ('teaching.html', teaching), ('cv.html', cv), ('trade-theory-tree.html', trade_tree)]:
     open(os.path.join(SITE, name), 'w').write(html)
 print('wrote index, research, teaching; photo:', os.path.exists(PHOTO))
