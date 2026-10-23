@@ -138,3 +138,6 @@ footer { text-align: center; padding: 28px 24px 44px; font-size: 14px; color: va
 .jmp .jmp-abs summary::before { content: "Abstract ▸"; }
 .jmp .jmp-abs[open] summary::before { content: "Abstract ▾"; }
 .jmp .jmp-abs p { margin-top: 10px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+/* Home: justify bio paragraphs */
+.home .main > p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
