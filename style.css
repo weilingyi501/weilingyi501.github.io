@@ -132,3 +132,9 @@ footer { text-align: center; padding: 28px 24px 44px; font-size: 14px; color: va
   .home .main { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; }
   .photo { width: 180px; height: 180px; font-size: 48px; }
 }
+
+/* Research page: job market paper abstract, collapsible and justified */
+.jmp .jmp-abs { margin-top: 4px; }
+.jmp .jmp-abs summary::before { content: "Abstract ▸"; }
+.jmp .jmp-abs[open] summary::before { content: "Abstract ▾"; }
+.jmp .jmp-abs p { margin-top: 10px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
