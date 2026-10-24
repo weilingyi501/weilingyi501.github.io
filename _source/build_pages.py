@@ -59,7 +59,7 @@ PHOTO = os.path.join(SITE, 'photo.jpg')
 photo_html = ('<img class="photo" src="photo.jpg" alt="Lingyi Wei">' if os.path.exists(PHOTO)
               else '<div class="photo" aria-hidden="true">LW</div>')
 
-JMP_TITLE = 'All Labors Are Equal, But Some Labor Is More “Equal” Than Others: Labor Terms of Trade and the Capitalist World-System'
+JMP_TITLE = 'All Labors Are Equal, But Some Are More “Equal” Than Others: Labor Terms of Trade and the Capitalist World-System'
 
 home = head('Lingyi Wei', 'Lingyi Wei, Ph.D. candidate in Economics at the University of Utah. Economic development, international economics, political economy, and the Chinese economy. On the 2026–27 job market.', HOME_EXTRA) + bar('Home') + f'''
 <main class="home">
