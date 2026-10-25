@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veblen, Imperialism, and the World-System | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on dissent at the turn of the twentieth century: Veblen and institutional economics, theories of imperialism from Hobson, Luxemburg, and Lenin, world-systems analysis, unequal exchange, and an interactive labor terms of trade calculator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12.5px; fill: #3a4450; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .zones b { display: block; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 10</p>
+  <h1>Veblen, Imperialism, and the World-System</h1>
+  <p class="lead">At the height of empire, a group of dissenters asked what neoclassical economics left out: institutions and power at home, and colonies and monopoly abroad. Their questions led, decades later, to the study of the world economy as a hierarchy.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#context">The age of empire</a></li><li><a href="#veblen">Veblen and the leisure class</a></li><li><a href="#hobson">Hobson: underconsumption and empire</a></li><li><a href="#luxemburg">Luxemburg: accumulation and the noncapitalist world</a></li><li><a href="#lenin">Lenin: imperialism as a stage of capitalism</a></li><li><a href="#worldsystem">Core and periphery after empire</a></li><li><a href="#ltt">Unequal exchange and labor terms of trade (interactive)</a></li></ol>
+  </div>
+
+  <h2 id="context">1. The age of empire</h2>
+  <p>Between the Berlin Conference of 1884–85 and the First World War, European powers divided almost all of Africa among themselves and extended their rule across much of Asia and the Pacific. By 1914 the British Empire covered about a quarter of the world’s land. Britain had also become the world’s banker: on the eve of the war, its income from foreign investment was large enough to cover a persistent deficit in its trade in goods. In the United States, giant trusts in oil, steel, and railways, and fortunes such as those of Rockefeller, Carnegie, and Morgan, defined the Gilded Age.</p>
+  <p>Neoclassical economics, meanwhile, was building a theory of competitive markets populated by small firms and rational individuals (Weeks 8–9). The thinkers of this week argued that this picture missed what mattered most about the economy of their time: concentrated corporate power, finance, and the expansion of capital across the globe.</p>
+
+  <h2 id="veblen">2. Veblen and the leisure class</h2>
+  <p>Thorstein Veblen (1857–1929), the son of Norwegian immigrant farmers in the American Midwest, was the founder of <b>institutional economics</b>. He rejected the marginalist picture of the consumer as a calculating machine; in a famous passage of 1898 he mocked it as a “lightning calculator of pleasures and pains.” People act from instinct, habit, and social convention, and these are shaped by the institutions they live in, which themselves change over time. Economics, he argued, should be an evolutionary science of institutions, not a theory of timeless equilibrium.</p>
+  <ul>
+    <li><b>Conspicuous consumption.</b> In <em>The Theory of the Leisure Class</em> (1899), Veblen argued that the wealthy consume not mainly for use but to display their status, and that other classes emulate them. Goods are valued partly <em>because</em> they are expensive.</li>
+    <li><b>Business versus industry.</b> In <em>The Theory of Business Enterprise</em> (1904), he distinguished the “industrial” employments that produce goods from the “pecuniary” employments of finance and business that make money, often by restricting output, manipulating prices, and capturing gains from others’ work. The captains of finance, in his view, were saboteurs of production rather than its organizers.</li>
+    <li><b>The instinct of workmanship.</b> People take pride in useful, competent work; a society that rewards predation and display corrupts that instinct.</li>
+  </ul>
+  <p>Veblen’s legacy runs through the American institutionalists of the 1920s and 1930s, many of whom shaped the New Deal, and through later work on power, consumption, and corporations, from John Kenneth Galbraith to today’s study of market concentration.</p>
+
+  <h2 id="hobson">3. Hobson: underconsumption and empire</h2>
+  <p>John A. Hobson (1858–1940), an English liberal journalist and economist, argued in <em>Imperialism: A Study</em> (1902), written after the Boer War, that empire was driven not by national glory but by a domestic economic problem. Income in Britain was so unequally distributed that the rich could not spend it all and workers could not afford to buy what they produced. The resulting surplus of savings sought profitable outlets abroad, and investors pressed the state to secure colonies to protect their investments. Imperialism benefited a narrow class of financiers at the cost of the nation as a whole. Hobson’s remedy was reform at home: redistribute income, raise wages, and domestic demand would absorb the surplus. Keynes later credited Hobson as a forerunner of the theory of effective demand (Week 11).</p>
+
+  <h2 id="luxemburg">4. Luxemburg: accumulation and the noncapitalist world</h2>
+  <p>Rosa Luxemburg (1871–1919), a leading figure of German and Polish socialism, argued in <em>The Accumulation of Capital</em> (1913) that a purely capitalist economy faces a persistent problem of realization: who buys the extra goods that accumulation produces, if workers are paid less than the value they create and capitalists keep investing? Her answer was that capitalism has always depended on markets, land, labor, and resources outside the capitalist system: peasant economies, colonies, and precapitalist societies, which it absorbs and transforms, often by force. Militarism and colonial conquest were not accidents of capitalism but conditions of its expansion. Her reading of Marx’s reproduction schemes was disputed even by fellow Marxists, but her emphasis on capitalism’s relation to its noncapitalist outside has influenced theories of development, ecology, and social reproduction.</p>
+
+  <h2 id="lenin">5. Lenin: imperialism as a stage of capitalism</h2>
+  <p>In <em>Imperialism, the Highest Stage of Capitalism</em> (written in 1916, published in 1917), Vladimir Lenin drew on Hobson and on Rudolf Hilferding’s <em>Finance Capital</em> (1910) to argue that capitalism had entered a new stage. He summarized it in five features:</p>
+  <ol>
+    <li>the concentration of production into <b>monopolies</b>;</li>
+    <li>the merger of bank capital with industrial capital into <b>finance capital</b>, controlled by a financial oligarchy;</li>
+    <li>the growing importance of the <b>export of capital</b>, as opposed to the export of goods;</li>
+    <li>the formation of <b>international monopolist associations</b> that divide the world market among themselves;</li>
+    <li>the completed <b>territorial division of the world</b> among the great powers.</li>
+  </ol>
+  <p>Since the world was already divided, any change in the relative strength of the powers had to lead to struggles to redivide it. The First World War, in Lenin’s view, was exactly that. Unlike Hobson, he did not think reform could end imperialism: it was the logic of monopoly capitalism itself.</p>
+  <table>
+    <thead><tr><th></th><th>Hobson (1902)</th><th>Luxemburg (1913)</th><th>Lenin (1917)</th></tr></thead>
+    <tbody>
+      <tr><td>Root cause</td><td>Unequal income: too little demand at home</td><td>Capital’s need for noncapitalist markets and resources</td><td>Monopoly and finance capital</td></tr>
+      <tr><td>Who benefits</td><td>A narrow group of financiers</td><td>Capital in general</td><td>Finance capital and, in part, a “labor aristocracy”</td></tr>
+      <tr><td>Remedy</td><td>Redistribution and reform</td><td>Socialist revolution</td><td>Socialist revolution</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="worldsystem">6. Core and periphery after empire</h2>
+  <p>After 1945 most colonies won independence, but the gap between rich and poor countries did not close. Economists and sociologists asked why. Raúl Prebisch and Hans Singer (1950) argued that the terms of trade of primary-commodity exporters tend to deteriorate (Week 12). Dependency theorists such as André Gunder Frank argued that underdevelopment was not an original state but a product of how poor regions had been incorporated into the world economy.</p>
+  <p>Immanuel Wallerstein’s <b>world-systems analysis</b>, beginning with <em>The Modern World-System</em> (1974), took the whole capitalist world-economy, rather than the nation, as the unit of analysis. It is divided into a <b>core</b>, a <b>periphery</b>, and a <b>semi-periphery</b> between them, distinguished not by what they produce but by the kinds of production they specialize in:</p>
+  <div class="zones">
+    <div style="background:#e3edf8"><b>Core</b>Monopolized, high-profit, technologically leading activities; strong states; most of the world’s wealth.</div>
+    <div style="background:#f1eef6"><b>Semi-periphery</b>A mix of core-like and peripheral activities; both exploited and exploiting; the zone of upward and downward mobility.</div>
+    <div style="background:#f6ece4"><b>Periphery</b>Highly competitive, low-profit activities; weaker states; the great majority of the world’s population.</div>
+  </div>
+  <p>Giovanni Arrighi and Jessica Drangel (1986) tested this idea against data on income per person and found a <b>trimodal</b> distribution: the world’s population clustered around three income levels rather than spreading out evenly, and very few countries moved between the clusters.</p>
+
+  <h2 id="ltt">7. Unequal exchange and labor terms of trade</h2>
+  <p>Arghiri Emmanuel’s <em>Unequal Exchange</em> (1969, English translation 1972) and Samir Amin argued that trade between rich and poor countries transfers value even when goods exchange at market prices, because the same market value embodies very different amounts of labor in different countries. The <b>labor terms of trade</b> measure this directly: how many hours of labor a country gives in its exports for each hour of labor it receives in its imports of equal market value.</p>
+  <p class="eq">labor terms of trade = labor embodied in exports ÷ labor embodied in imports of equal value</p>
+  <p>A ratio of 1 means hour-for-hour exchange; a ratio above 1 means the country gives more labor than it gets. Classical economists (Week 4) and Heckscher–Ohlin trade theory both have reasons to expect such ratios to differ from 1, but they were rarely measured across the whole world. The calculator below uses <b>hypothetical</b> numbers to show how the ratio is formed.</p>
+  <div class="box" id="lttbox">
+    <h3>Two countries trade $1 million of goods each way</h3>
+    <div class="grid2">
+      <div><label>Country A (high-income): value added per hour of labor in its exports: <b id="vav">$60</b></label><input type="range" id="va" min="10" max="120" step="5" value="60"></div>
+      <div><label>Country B (low-income): value added per hour of labor in its exports: <b id="vbv">$6</b></label><input type="range" id="vb" min="1" max="60" step="1" value="6"></div>
+    </div>
+    <div style="margin-top:10px"><button class="btn" type="button" id="up">Country B upgrades into manufacturing (value added per hour doubles)</button><button class="btn" type="button" id="reset">Reset</button></div>
+    <svg id="lttchart" viewBox="0 0 640 170" width="100%" role="img" aria-label="Hours of labor exchanged between two countries"></svg>
+    <div class="out" id="lttout"></div>
+    <p class="note">Simplification: all labor embodied in exports is counted at the exporting country’s own value added per hour. Real estimates trace labor through global input–output tables, including labor embodied in imported inputs.</p>
+  </div>
+  <div class="think"><b>Discussion:</b> Is a labor terms of trade above 1 evidence of exploitation, or only of differences in productivity? What would Ricardo, Marx, Lenin, and a neoclassical trade economist each say?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 12 (Thorstein Veblen).</p>
+  <p class="rd">Hunt, ch. 13 (theories of imperialism: Hobson, Luxemburg, Lenin).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 7–8.</p>
+  <p class="rd">Immanuel Wallerstein, <em>The Essential Wallerstein</em> (New Press, 2000), selections.</p>
+  <p class="rd">Lenin, <em>Imperialism, the Highest Stage of Capitalism</em> (1917), ch. 7.</p>
+
+  <p><a href="index.html#week-10">← Back to Week 10 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const TRADE = 1e6;
+function ltt(note) {
+  const va = +$('va').value, vb = +$('vb').value;
+  $('vav').textContent = '$' + va; $('vbv').textContent = '$' + vb;
+  const hA = TRADE / va, hB = TRADE / vb; // hours embodied in each country's $1m of exports
+  const r = hB / hA;
+  const W = 640, H = 170, L = 120, R = 20, mx = Math.max(hA, hB) * 1.05, bw = v => v/mx*(W-L-R);
+  const f = v => Math.round(v).toLocaleString();
+  let g = `<text x="${L-10}" y="48" text-anchor="end">A’s exports →</text><rect x="${L}" y="34" width="${bw(hA)}" height="22" rx="4" fill="#0077b6"/><text x="${L+bw(hA)+6}" y="50">${f(hA)} hours</text>`;
+  g += `<text x="${L-10}" y="108" text-anchor="end">← B’s exports</text><rect x="${L}" y="94" width="${bw(hB)}" height="22" rx="4" fill="#c47a2c"/><text x="${Math.min(L+bw(hB)+6, W-150)}" y="${bw(hB) > W-L-R-150 ? 86 : 110}">${f(hB)} hours</text>`;
+  g += `<text x="${L}" y="18">Each side ships $1,000,000 of goods</text>`;
+  $('lttchart').innerHTML = g;
+  const msg = Math.abs(r - 1) < 0.005 ? 'The two countries exchange hour for hour: the labor terms of trade equal 1.' :
+    r > 1 ? `Country B gives <b>${r.toFixed(1)} hours</b> of its labor for every hour of A’s labor it receives. B’s labor terms of trade = ${r.toFixed(2)}. A net ${f(hB - hA)} hours of labor flows from B to A in this trade.` :
+            `Country A gives ${(1/r).toFixed(1)} hours of its labor for every hour of B’s labor it receives.`;
+  $('lttout').innerHTML = msg + (note ? `<br>${note}` : '');
+}
+['va','vb'].forEach(i => $(i).addEventListener('input', () => ltt()));
+$('up').addEventListener('click', () => { const v0 = +$('vb').value; $('vb').value = Math.min(60, v0*2); ltt(`<i>Upgrading:</i> B’s value added per hour rose from $${v0} to $${$('vb').value}. The ratio halves. But if A’s productivity keeps rising too, B must keep upgrading just to hold its position.`); });
+$('reset').addEventListener('click', () => { $('va').value = 60; $('vb').value = 6; ltt(); });
+ltt();
+</script>
+</body>
+</html>
