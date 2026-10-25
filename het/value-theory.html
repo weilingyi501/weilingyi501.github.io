@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classical Value Theory | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on classical value theory: Smith's beaver and deer, Ricardo's natural price with an interactive calculator, Marx's transformation problem, and Sraffa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=number] { width: 84px; font: inherit; padding: 4px 6px; border: 1px solid var(--rule); border-radius: 6px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; white-space: nowrap; }
+.vt .labrow { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: end; }
+.vt .labrow div { display: flex; flex-direction: column; }
+.vt .labrow small { font-size: 12.5px; color: var(--faint); }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 3</p>
+  <h1>Classical Value Theory</h1>
+  <p class="lead">What determines the long-run prices of commodities? A module for Week 3, from Smith’s beaver and deer to Ricardo’s natural price, Marx’s transformation problem, and Sraffa.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#two">Two theories of value</a></li><li><a href="#smith">Smith: the beaver and the deer</a></li><li><a href="#adding">Smith’s adding-up theory and its circle</a></li><li><a href="#ricardo">Ricardo: labor, past labor, and the natural price (calculator)</a></li><li><a href="#marx">Marx: from values to prices of production</a></li><li><a href="#sraffa">Sraffa, capital, and the evidence</a></li></ol>
+  </div>
+
+  <h2 id="two">1. Two theories of value</h2>
+  <p>Classical economists distinguished the <b>market price</b> of a commodity, which moves with day-to-day supply and demand, from its <b>natural price</b> (its “value”), the long-run average around which market prices gravitate. Two broad answers have been given to the question of what determines natural prices:</p>
+  <ul>
+    <li><b>The labor theory of value:</b> relative prices are ultimately governed by the quantity of labor needed to produce commodities. This is the tradition of Smith, Ricardo, and Marx.</li>
+    <li><b>The utility theory of value:</b> relative prices reflect the satisfaction that commodities give to consumers. This is the tradition of Say, Senior, and later the marginalists.</li>
+  </ul>
+  <p>Smith himself noticed the puzzle that separates them. Water is essential to life but almost free; diamonds are useless for survival but very expensive. <b>Value in use</b> and <b>value in exchange</b> can point in opposite directions. The labor theory answers that diamonds take far more labor to find and cut. The marginalists of the 1870s would answer that what matters is the utility of the <em>last</em> unit, and water is plentiful (Week 8).</p>
+
+  <h2 id="smith">2. Smith: the beaver and the deer</h2>
+  <blockquote>In that early and rude state of society which precedes both the accumulation of stock and the appropriation of land, the proportion between the quantities of labour necessary for acquiring different objects seems to be the only circumstance which can afford any rule for exchanging them for one another.<cite>Adam Smith, <em>The Wealth of Nations</em>, Book I, ch. 6 (1776)</cite></blockquote>
+  <p>If hunters are free to hunt either animal, exchange ratios must settle at the ratio of hunting times. Otherwise everyone would switch to the better-paid prey. Try it:</p>
+  <div class="box" id="bd">
+    <h3>Beaver and deer</h3>
+    <div class="grid2">
+      <div><label>Hours to hunt one beaver: <b id="hbv">2</b></label><input type="range" id="hb" min="1" max="8" step="0.5" value="2"></div>
+      <div><label>Hours to hunt one deer: <b id="hdv">1</b></label><input type="range" id="hd" min="1" max="8" step="0.5" value="1"></div>
+      <div style="grid-column:1/-1"><label>Market price: one beaver trades for <b id="mkv">2</b> deer</label><input type="range" id="mk" min="0.5" max="6" step="0.25" value="2"></div>
+    </div>
+    <div class="out" id="bdout"></div>
+  </div>
+
+  <h2 id="adding">3. Smith’s adding-up theory and its circle</h2>
+  <p>Once capital is accumulated and land is privately owned, Smith argued, labor alone no longer governs prices. The product must now pay wages, profits, and rents, so the natural price is their sum at their “natural” (average) rates:</p>
+  <p class="eq">natural price = wages + profits + rents (each at its socially average rate)</p>
+  <p>Competition equalizes the wage rate across industries and the profit rate across capitals. Suppose the profit rate is 10% and two industries each employ workers, but industry 2 uses twice as much capital per worker. Then industry 2 must earn twice the profit per worker, and its prices must be higher <em>relative to the labor it uses</em>. Prices are no longer proportional to labor.</p>
+  <p>But the theory has a logical gap. Prices are explained by wages, profits, and rents; yet wages, profits, and rents are themselves sums of money whose size depends on prices. Smith’s theory explains prices by prices. Ricardo tried to break the circle by going back to labor.</p>
+
+  <h2 id="ricardo">4. Ricardo: labor, past labor, and the natural price</h2>
+  <p>Ricardo’s answer was that a commodity embodies not only the <b>present labor</b> of the workers who make it, but also the <b>past labor</b> that produced its tools and materials. In his famous example, the value of stockings includes the labor of growing the cotton, shipping it, building the ships and the machinery, spinning, weaving, and selling. Every input can be traced back to labor performed in earlier years.</p>
+  <p>Profits, however, accumulate over time. A capitalist who paid for labor a year ago expects a return on that outlay, so past labor counts for more in the price, the longer ago it was performed and the higher the profit rate. With wage rate <i>w</i> and profit rate <i>r</i>:</p>
+  <p class="eq">cost of past labor = Σ (labor t years ago) × w × (1 + r)<sup>t</sup></p>
+  <p class="eq">price = (present labor × w + cost of past labor) × (1 + r)</p>
+  <p>The calculator below uses Hunt’s numerical example (ch. 5). Both commodities embody 4 hours of labor per unit, so their labor ratio is 1 : 1, but <i>X</i> uses mostly old, past labor while <i>Y</i> uses mostly present labor.</p>
+
+  <div class="box" id="ric">
+    <h3>Ricardo’s natural price calculator</h3>
+    <p class="note">Labor needed to produce 100 units. Past labor is entered by how many years ago it was performed.</p>
+    <div id="ricin"></div>
+    <div class="grid2" style="margin-top:12px">
+      <div><label>Wage rate (£ per hour): <b id="wv">1.00</b></label><input type="range" id="w" min="0.5" max="4" step="0.25" value="1"></div>
+      <div><label>Profit rate: <b id="rv">50%</b></label><input type="range" id="r" min="0" max="100" step="1" value="50"></div>
+    </div>
+    <div id="ricout"></div>
+    <svg id="ricchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Relative price of X to Y as the profit rate changes"></svg>
+    <p class="note">The chart shows the price of X relative to Y at every profit rate. The dashed line is the labor ratio. The gap opens as the profit rate rises.</p>
+  </div>
+  <p>The lesson Ricardo drew, and Hunt emphasizes: as long as the profit rate is positive, and commodities differ in how their labor is spread over time, relative prices <b>deviate</b> from relative quantities of labor. The higher the profit rate, the bigger the deviation; at a zero profit rate, prices are exactly proportional to labor. Ricardo nonetheless judged that labor remained the main determinant of relative prices, with profits a secondary influence.</p>
+  <div class="think"><b>Try this:</b> set the profit rate to 0%. Then make X and Y use their labor with the same timing. What happens to the gap between prices and labor in each case?</div>
+
+  <h2 id="marx">5. Marx: from values to prices of production</h2>
+  <p>Marx divided the value of a commodity into three parts: <b>constant capital</b> (<i>C</i>, the value of means of production used up), <b>variable capital</b> (<i>V</i>, wages, the value of labor power), and <b>surplus value</b> (<i>S</i>, the new value workers create beyond their wages). His rate of profit is</p>
+  <p class="eq">r = S / (C + V) = (S/V) / (C/V + 1)</p>
+  <p>where <i>S/V</i> is the rate of surplus value and <i>C/V</i> the organic composition of capital. If both sectors have the same rate of surplus value but different compositions, profit rates differ when goods sell at their values. Competition moves capital until profit rates are equal, and goods then sell at <b>prices of production</b> that differ from values. Explaining how is the <b>transformation problem</b>.</p>
+  <table>
+    <thead><tr><th>Two-sector example</th><th>C</th><th>V</th><th>S</th><th>Value</th><th>Profit rate at values</th><th>Marx’s price</th><th>Complete solution</th></tr></thead>
+    <tbody>
+      <tr><td>Capital good</td><td>200</td><td>100</td><td>100</td><td>400</td><td>33.3%</td><td>420.0</td><td>423.9</td></tr>
+      <tr><td>Wage good</td><td>100</td><td>100</td><td>100</td><td>300</td><td>50.0%</td><td>280.0</td><td>276.1</td></tr>
+      <tr><td>Total / average</td><td>300</td><td>200</td><td>200</td><td>700</td><td>40.0%</td><td>700.0 (r = 40%)</td><td>700.0 (r = 39.4%)</td></tr>
+    </tbody>
+  </table>
+  <p>Marx’s own solution adds the average profit rate (40%) to each sector’s cost, but it prices the <em>outputs</em> at prices of production while leaving the <em>inputs</em> at values. Later economists, starting with Ladislaus von Bortkiewicz (1907), transformed inputs and outputs together. That requires solving the system simultaneously:</p>
+  <p class="eq">(200·p₁ + 100·p₂)(1 + r) = 400·p₁<br>(100·p₁ + 100·p₂)(1 + r) = 300·p₂<br>400·p₁ + 300·p₂ = 700</p>
+  <p>The solution gives r ≈ 39.4% and the prices in the last column. Total price still equals total value, but total profit no longer exactly equals total surplus value. Whether that matters for Marx’s argument has been debated ever since.</p>
+
+  <h2 id="sraffa">6. Sraffa, capital, and the evidence</h2>
+  <p>In 1960 Piero Sraffa published <em>Production of Commodities by Means of Commodities</em>, which revived the classical approach to prices without utility. It also exposed a problem for neoclassical theory: “capital” cannot be measured as a single quantity independent of the profit rate, because the prices of capital goods themselves depend on the profit rate. In the <b>Cambridge capital controversy</b> of the 1960s, this led to <b>reswitching</b>: the same technique can be the most profitable at both low and high profit rates, so techniques cannot always be ranked as more or less “capital-intensive.” Paul Samuelson conceded the point in 1966.</p>
+  <p>There is an irony here that Hunt underlines. The objection to the labor theory of value is that sectors use capital in different proportions; but that same difference is what produces reswitching in neoclassical theory. If all sectors had the same proportions, prices would be proportional to labor and reswitching could not occur.</p>
+  <p>How large are the deviations in practice? Using U.S. input–output tables for 1947–72, Eduardo Ochoa (“Values, prices, and wage–profit curves in the US economy,” <em>Cambridge Journal of Economics</em>, 1989) found that prices based on labor values were close to observed market prices, and that measured wage–profit curves were nearly straight lines. Later studies using input–output data have reached broadly similar conclusions. The theoretical debate continues, but the empirical gap between labor values and prices is smaller than the theory alone would suggest.</p>
+  <div class="think"><b>Discussion:</b> If labor values predict market prices well, does that settle the debate between labor and utility theories of value? What else would a theory of value need to explain?</div>
+
+  <p><a href="index.html">← Back to the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+// ---------- Beaver and deer ----------
+const $ = id => document.getElementById(id);
+function bd() {
+  const hb = +$('hb').value, hd = +$('hd').value, mk = +$('mk').value;
+  $('hbv').textContent = hb; $('hdv').textContent = hd; $('mkv').textContent = mk;
+  const nat = hb / hd;
+  const hourB = mk / hb, hourD = 1 / hd; // deer earned per hour hunting beaver vs deer
+  let msg;
+  if (Math.abs(mk - nat) < 1e-9) msg = 'The market ratio equals the ratio of labor times. An hour hunting either animal earns the same, so no hunter has a reason to switch. This is the natural price.';
+  else if (mk > nat) msg = `An hour hunting beaver earns ${hourB.toFixed(2)} deer, but an hour hunting deer earns only ${hourD.toFixed(2)}. Hunters switch to beaver, more beaver reaches the market, and its price falls toward ${nat.toFixed(2)} deer.`;
+  else msg = `An hour hunting beaver earns only ${hourB.toFixed(2)} deer, while an hour hunting deer earns ${hourD.toFixed(2)}. Hunters switch to deer, beaver becomes scarce, and its price rises toward ${nat.toFixed(2)} deer.`;
+  $('bdout').innerHTML = `<b>Natural exchange ratio:</b> 1 beaver = ${nat.toFixed(2)} deer (the ratio of hunting times).<br>${msg}`;
+}
+['hb','hd','mk'].forEach(i => $(i).addEventListener('input', bd)); bd();
+
+// ---------- Ricardo calculator ----------
+const YRS = 5;
+const C = { X: {present:100, past:[75,75,75,75,0]}, Y: {present:300, past:[50,50,0,0,0]} };
+function inputs() {
+  let h = '';
+  for (const k of ['X','Y']) {
+    h += `<div style="margin-top:10px"><b>Commodity ${k}</b><div class="labrow"><div><small>present labor</small><input type="number" min="0" step="1" data-k="${k}" data-t="0" value="${C[k].present}"></div>`;
+    for (let t = 1; t <= YRS; t++) h += `<div><small>${t} yr${t>1?'s':''} ago</small><input type="number" min="0" step="1" data-k="${k}" data-t="${t}" value="${C[k].past[t-1]}"></div>`;
+    h += `</div></div>`;
+  }
+  $('ricin').innerHTML = h;
+  $('ricin').querySelectorAll('input').forEach(i => i.addEventListener('input', () => {
+    const v = Math.max(0, +i.value || 0), k = i.dataset.k, t = +i.dataset.t;
+    if (t === 0) C[k].present = v; else C[k].past[t-1] = v; ric();
+  }));
+}
+function price(k, w, r) {
+  const past = C[k].past.reduce((s, l, i) => s + l * w * Math.pow(1 + r, i + 1), 0);
+  const pres = C[k].present * w;
+  return { pres, past, cost: pres + past, profit: (pres + past) * r, total: (pres + past) * (1 + r) };
+}
+const labor = k => (C[k].present + C[k].past.reduce((a, b) => a + b, 0)) / 100;
+const f2 = v => v.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+function ric() {
+  const w = +$('w').value, r = +$('r').value / 100;
+  $('wv').textContent = w.toFixed(2); $('rv').textContent = Math.round(r*100) + '%';
+  const X = price('X', w, r), Y = price('Y', w, r);
+  const lx = labor('X'), ly = labor('Y');
+  const px = X.total/100, py = Y.total/100;
+  const lr = ly ? lx/ly : NaN, pr = py ? px/py : NaN;
+  $('ricout').innerHTML = `<table><thead><tr><th>Per 100 units</th><th>Present labor cost</th><th>Cost of past labor</th><th>Profit</th><th>Total price</th><th>Price per unit</th><th>Labor per unit</th></tr></thead><tbody>
+    <tr><td>X</td><td>£${f2(X.pres)}</td><td>£${f2(X.past)}</td><td>£${f2(X.profit)}</td><td>£${f2(X.total)}</td><td><b>£${f2(px)}</b></td><td>${f2(lx)} hrs</td></tr>
+    <tr><td>Y</td><td>£${f2(Y.pres)}</td><td>£${f2(Y.past)}</td><td>£${f2(Y.profit)}</td><td>£${f2(Y.total)}</td><td><b>£${f2(py)}</b></td><td>${f2(ly)} hrs</td></tr></tbody></table>
+    <div class="out"><b>Labor ratio X : Y</b> = ${isFinite(lr)?lr.toFixed(2):'–'} : 1 &nbsp;·&nbsp; <b>Price ratio X : Y</b> = ${isFinite(pr)?pr.toFixed(2):'–'} : 1 &nbsp;·&nbsp; ${isFinite(lr)&&isFinite(pr) ? (Math.abs(pr/lr-1) < 0.005 ? 'Prices are proportional to labor.' : `Prices deviate from labor by ${Math.abs((pr/lr-1)*100).toFixed(1)}%.`) : ''}</div>`;
+  chart(w);
+}
+function chart(w) {
+  const s = $('ricchart'), W = 640, H = 230, L = 48, R = 14, T = 12, B = 32;
+  const pts = []; let mx = 0;
+  for (let i = 0; i <= 100; i++) { const r = i/100, a = price('X', w, r).total, b = price('Y', w, r).total; const v = b ? a/b : 0; pts.push([i, v]); mx = Math.max(mx, v); }
+  const lr = labor('Y') ? labor('X')/labor('Y') : 0; mx = Math.max(mx, lr) * 1.12 || 1;
+  const X = i => L + i/100*(W-L-R), Y = v => H-B - v/mx*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let i = 0; i <= 100; i += 25) g += `<text x="${X(i)}" y="${H-B+16}" text-anchor="middle">${i}%</text>`;
+  const step = mx > 4 ? 1 : 0.5;
+  for (let v = 0; v <= mx; v += step) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v.toFixed(1)}</text><line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">profit rate</text>`;
+  g += `<line x1="${L}" y1="${Y(lr)}" x2="${W-R}" y2="${Y(lr)}" stroke="#8a929b" stroke-dasharray="5 4"/>`;
+  g += `<polyline fill="none" stroke="#0077b6" stroke-width="2.5" points="${pts.map(([i,v]) => X(i)+','+Y(v)).join(' ')}"/>`;
+  const rc = +$('r').value; const cur = pts[rc][1];
+  g += `<circle cx="${X(rc)}" cy="${Y(cur)}" r="5" fill="#023e8a"/>`;
+  s.innerHTML = g;
+}
+['w','r'].forEach(i => $(i).addEventListener('input', ric));
+inputs(); ric();
+</script>
+</body>
+</html>

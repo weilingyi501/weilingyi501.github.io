@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History of Economic Thought | Lingyi Wei</title>
+  <meta name="description" content="A course in development by Lingyi Wei: the history of economic thought from mercantilism to the present, with an interactive timeline of schools of thought, historical context, and a 14-week outline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+/* History of Economic Thought course page. Scoped to .het. */
+.het { --soft:#f5f6f8; --line:#b9bfc7; --faint:#8a929b; }
+.page.het { max-width: 1000px; padding-top: 40px; }
+.het .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.het > h1 { margin-bottom: 6px; }
+.het .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--bar); background: var(--blue-soft); border-radius: 999px; padding: 2px 12px; margin-bottom: 12px; }
+.het p, .het li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.het .qs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 6px; }
+.het .qs div { background: var(--blue-soft); border-radius: 10px; padding: 14px 16px; }
+.het .qs b { display: block; color: var(--bar); margin-bottom: 4px; }
+.het .qs span { font-size: 16px; }
+@media (max-width: 760px) { .het .qs { grid-template-columns: 1fr; } }
+.het ol.goals li { margin-bottom: 6px; }
+
+/* Timeline */
+.het .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: 12px; background: #fff; }
+.het svg { display: block; }
+.het .hint { font-size: 14px; color: var(--faint); margin: 6px 0 0; }
+.het svg .era rect { stroke: #fff; stroke-width: 1; }
+.het svg .era text { font-size: 11px; fill: #33404d; }
+.het svg .yr { font-size: 11px; fill: var(--faint); }
+.het svg .grid { stroke: #eef0f3; }
+.het svg .lane-label { font-size: 12.5px; font-weight: 600; fill: #3a4450; }
+.het svg .bar { cursor: pointer; }
+.het svg .bar rect { rx: 7; }
+.het svg .bar text { font-size: 12px; font-weight: 600; fill: #fff; pointer-events: none; }
+.het svg .bar:hover rect, .het svg .bar:focus rect { filter: brightness(1.08); }
+.het svg .bar.on rect { stroke: #111; stroke-width: 2; }
+.het svg .link { fill: none; stroke: #7d8794; stroke-width: 1.4; }
+.het svg .link.react { stroke-dasharray: 4 3; }
+.het svg .ev circle { fill: #023e8a; }
+.het svg .ev text { font-size: 10.5px; fill: #023e8a; }
+.het .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.het .legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid #7d8794; vertical-align: middle; margin-right: 6px; }
+.het .legend i.d { border-top-style: dashed; }
+
+.het .panel { border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; margin-top: 16px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.het .panel h3 { font-size: 22px; margin: 0; color: var(--text); font-weight: 600; }
+.het .panel .yrs { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.het .one { margin: 12px 0 0; padding: 10px 14px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; }
+.het .row { display: flex; gap: 14px; margin-top: 12px; }
+.het .row .lb { flex: 0 0 104px; font-size: 14px; color: var(--faint); padding-top: 3px; }
+.het .row .tx { flex: 1; }
+@media (max-width: 560px) { .het .row { flex-direction: column; gap: 2px; } .het .row .lb { flex: none; } }
+
+/* Portraits */
+.het .people { display: flex; flex-wrap: wrap; gap: 12px 14px; }
+.het .person { display: flex; flex-direction: column; align-items: center; width: 86px; text-align: center; font-size: 13px; line-height: 1.25; color: var(--text); }
+.het .person img, .het .person .ini { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--blue-line); background: var(--blue-soft); margin-bottom: 5px; }
+.het .person .ini { display: grid; place-items: center; font-weight: 600; color: var(--bar); font-size: 18px; }
+.het .person small { color: var(--faint); font-size: 12px; }
+
+/* Weeks */
+.het .part { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bar); margin: 30px 0 8px; }
+.het details.wk { border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 10px; background: #fff; }
+.het details.wk > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; gap: 14px; align-items: baseline; }
+.het details.wk > summary::-webkit-details-marker { display: none; }
+.het details.wk > summary::before { content: none; }
+.het .wn { flex: 0 0 64px; font-size: 13px; font-weight: 600; color: var(--bar); }
+.het .wt { flex: 1; font-weight: 600; font-size: 17.5px; color: var(--text); }
+.het .wt small { display: block; font-weight: 400; color: var(--muted); font-size: 14.5px; }
+.het .chev { color: var(--link); font-size: 14px; }
+.het details.wk[open] .chev { transform: rotate(90deg); }
+.het .wb { padding: 2px 18px 18px 94px; }
+@media (max-width: 640px) { .het .wb { padding: 2px 16px 16px; } .het .wn { flex-basis: 52px; } }
+.het .ctx { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin: 6px 0 4px; }
+.het .ctx b { color: var(--bar); }
+.het .ctx ul { margin: 6px 0 0; padding-left: 18px; }
+.het .wb h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin: 16px 0 8px; }
+.het .wb ul.ideas { padding-left: 20px; margin: 0; }
+.het .wb ul.ideas li { margin-bottom: 5px; }
+.het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
+.het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
+.het .exam { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 16px; margin: 10px 0; color: var(--muted); font-size: 15.5px; }
+.het .books li { margin-bottom: 6px; }
+.het .credits { font-size: 13px; color: var(--faint); }
+.het .credits p { text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page het">
+  <p class="crumb"><a href="/resources.html">Resources</a> › History of Economic Thought</p>
+  <span class="tag">Course in development</span>
+  <h1>History of Economic Thought</h1>
+  <p class="lead">From mercantilism to the economics of the twenty-first century: how economists have explained value, distribution, and the stability of capitalism, and why their answers changed with the times.</p>
+
+  <h2>About the course</h2>
+  <p>Economic ideas are answers to the problems of their time. Adam Smith wrote as commerce was dissolving the old agrarian order; Ricardo and Malthus argued over the Corn Laws during the Industrial Revolution; Marx wrote amid the factories of Manchester and the revolutions of 1848; the marginalists wrote during the Long Depression; Keynes wrote during the Great Depression; and the monetarists rose with the stagflation of the 1970s. This course follows each school of thought through the historical conditions that produced it, the questions it tried to answer, and the debates it started.</p>
+  <p>Three questions run through the whole course:</p>
+  <div class="qs">
+    <div><b>Value</b><span>What determines the prices of commodities: labor, utility, or the costs of production?</span></div>
+    <div><b>Distribution</b><span>How is the social product divided among wages, profits, and rents, and is that division just?</span></div>
+    <div><b>Stability</b><span>Does a market economy correct itself, or does it generate gluts, crises, and unemployment?</span></div>
+  </div>
+
+  <h2>Learning goals</h2>
+  <p>By the end of the course, students will be able to:</p>
+  <ol class="goals">
+    <li>Trace the major schools of economic thought from mercantilism to the present and place each in the economic, political, and social conditions that produced it.</li>
+    <li>Compare how different schools answer the same questions about value, distribution, and the stability of markets.</li>
+    <li>Work through key models by hand, including Ricardo’s natural price, Marx’s rate of profit, the marginal utility rule, and the Keynesian theory of effective demand.</li>
+    <li>Use historical ideas to analyze present-day problems such as inequality, trade, financial crises, and climate change.</li>
+  </ol>
+
+  <h2>Schools of thought in historical time</h2>
+  <p>Each bar marks the period in which a school was active. The top band shows the historical eras behind them. Click a school to see its key thinkers, core ideas, and the weeks where it is covered.</p>
+  <div class="scroll" id="tlwrap"><svg id="tl" role="img" aria-label="Timeline of schools of economic thought from 1550 to 2025"></svg></div>
+  <p class="hint">On a small screen, scroll the timeline sideways.</p>
+  <div class="legend"><span><i></i>continuity: builds on</span><span><i class="d"></i>reaction: argues against</span></div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+
+  <h2>Course outline</h2>
+  <p>Fourteen weeks in five parts. Click a week to see its historical context, key thinkers, core ideas, and readings.</p>
+  <div id="weeks"></div>
+
+  <h2>Readings</h2>
+  <ul class="books">
+    <li><b>Main text:</b> E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought: A Critical Perspective</em>, 3rd ed. (M. E. Sharpe, 2011).</li>
+    <li><b>Companion texts:</b> Robert Heilbroner, <em>The Worldly Philosophers</em>; Linda Yueh, <em>What Would the Great Economists Do?</em> (Picador, 2018); Ha-Joon Chang, <em>Economics: The User’s Guide</em> (Pelican, 2014), chapter 4; Frank Stilwell, <em>Political Economy: The Contest of Economic Ideas</em>, 3rd ed. (Oxford University Press, 2012).</li>
+    <li><b>Primary sources:</b> short selections from Smith, Ricardo, Malthus, Mill, Marx, Jevons, Marshall, and Keynes (including chapters 12 and 24 of <em>The General Theory</em>).</li>
+    <li><b>Looking ahead:</b> Jorgen Randers, <em>2052: A Global Forecast for the Next Forty Years</em> (2012); Peter Zeihan, <em>The End of the World Is Just the Beginning</em> (2022).</li>
+  </ul>
+
+  <h2>Image credits</h2>
+  <div class="credits" id="credits"></div>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const P = {"Thomas Mun": null, "William Petty": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/SirWilliamPetty.jpg/250px-SirWilliamPetty.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:SirWilliamPetty.jpg", "lic": "Public domain", "by": "Isaac Fuller"}, "François Quesnay": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_%281694-1774%29%2C_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg/250px-Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_%281694-1774%29%2C_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_(1694-1774),_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_(cropped).jpg", "lic": "Public domain", "by": ""}, "Adam Smith": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Adam_Smith_The_Muir_portrait.jpg/250px-Adam_Smith_The_Muir_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Adam_Smith_The_Muir_portrait.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Thomas Malthus": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg/250px-Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg", "lic": "CC BY 4.0", "by": "John Linnell"}, "David Ricardo": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg/250px-Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg", "lic": "Public domain", "by": "Thomas Phillips"}, "Jean-Baptiste Say": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Jean-Baptiste_Say.jpg/250px-Jean-Baptiste_Say.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Say.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Jeremy Bentham": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Jeremy_Bentham_by_Henry_William_Pickersgill.jpg/250px-Jeremy_Bentham_by_Henry_William_Pickersgill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jeremy_Bentham_by_Henry_William_Pickersgill.jpg", "lic": "Public domain", "by": "Henry William Pickersgill"}, "Nassau Senior": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Nassau_William_Senior_%28portrait%29.jpg/250px-Nassau_William_Senior_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nassau_William_Senior_(portrait).jpg", "lic": "Public domain", "by": "Original uploader was user:Milneg at en.wikipedia"}, "William Thompson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chinnery_Thompson.jpg/250px-Chinnery_Thompson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Chinnery_Thompson.jpg", "lic": "Public domain", "by": "George Chinnery"}, "Thomas Hodgskin": null, "John Stuart Mill": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/250px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg", "lic": "Public domain", "by": "London Stereoscopic Company"}, "Karl Marx": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/250px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png", "lic": "Public domain", "by": "John Jabez Edwin Mayall"}, "Friedrich Engels": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Friedrich_Engels_portrait_%28cropped%29.jpg/250px-Friedrich_Engels_portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_Engels_portrait_(cropped).jpg", "lic": "Public domain", "by": "William Hall (1826–ca. 1898) (cropped and sepia tone removed)"}, "W. S. Jevons": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/William_Stanley_Jevons_portrait_extract.jpg/250px-William_Stanley_Jevons_portrait_extract.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:William_Stanley_Jevons_portrait_extract.jpg", "lic": "CC BY-SA 4.0", "by": "Unknown (via University of Manchester Libraries)"}, "Carl Menger": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Menger_Portrait_ONB_cropped.png/250px-Carl_Menger_Portrait_ONB_cropped.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Carl_Menger_Portrait_ONB_cropped.png", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Léon Walras": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Portrait_of_L%C3%A9on_Walras_1862_extract.png/250px-Portrait_of_L%C3%A9on_Walras_1862_extract.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_L%C3%A9on_Walras_1862_extract.png", "lic": "CC BY-SA 4.0", "by": "Philippe-Félix Dupuis (painter). Photographic reproduction by Claude Bornand."}, "Alfred Marshall": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Alfred_Marshall_1891.jpg/250px-Alfred_Marshall_1891.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Alfred_Marshall_1891.jpg", "lic": "Public domain", "by": "Elliott and Fry (London W., 55 Baker Street)"}, "John Bates Clark": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/John_Bates_Clark.jpg/250px-John_Bates_Clark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Bates_Clark.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Eugen von Böhm-Bawerk": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png/250px-Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png", "lic": "Public domain", "by": "Josef Löwy"}, "Vilfredo Pareto": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Vilfredo_Pareto_1870s2.jpg/250px-Vilfredo_Pareto_1870s2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Vilfredo_Pareto_1870s2.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "A. C. Pigou": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg/250px-Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_Arthur_Cecil_Pigou,_c._1918-1921.jpg", "lic": "Public domain", "by": "John Palmer Clarke"}, "Thorstein Veblen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Veblen3a.jpg/250px-Veblen3a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Veblen3a.jpg", "lic": "Public domain", "by": ""}, "J. A. Hobson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/J._A._Hobson.jpg/250px-J._A._Hobson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:J._A._Hobson.jpg", "lic": "Public domain", "by": "Elliott &amp; Fry"}, "Rosa Luxemburg": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Rosa_Luxemburg_%28cropped%29.jpg/250px-Rosa_Luxemburg_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Rosa_Luxemburg_(cropped).jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Vladimir Lenin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Lenin_in_1920_%28cropped%29.jpg/250px-Lenin_in_1920_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Lenin_in_1920_(cropped).jpg", "lic": "Public domain", "by": "Unknown, presumably official"}, "John Maynard Keynes": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/John_Maynard_Keynes_%281929%29.jpg/250px-John_Maynard_Keynes_%281929%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes_(1929).jpg", "lic": "Public domain", "by": "Unknown, dedicated to Bettmann Archive"}, "Michał Kalecki": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Michal_Kalecki.jpg/250px-Michal_Kalecki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Michal_Kalecki.jpg", "lic": "CC BY 2.5 es", "by": "Manuel García Jódar"}, "Piero Sraffa": null, "Joan Robinson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Joan_Robinson_%281973%29.jpg/250px-Joan_Robinson_%281973%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joan_Robinson_(1973).jpg", "lic": "CC0", "by": "W. Punt for Anefo"}, "Joseph Schumpeter": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Joseph_Schumpeter_1945_Bachrach_portrait.png/250px-Joseph_Schumpeter_1945_Bachrach_portrait.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joseph_Schumpeter_1945_Bachrach_portrait.png", "lic": "Public domain", "by": "Louis Fabian Bachrach"}, "Friedrich Hayek": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Friedrich_Hayek_portrait.jpg/250px-Friedrich_Hayek_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_Hayek_portrait.jpg", "lic": "CC BY-SA 3.0", "by": "The original uploader was DickClarkMises at English Wikipedia."}, "Ludwig von Mises": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Ludwig_von_Mises_%283x4_cropped%29.jpg/250px-Ludwig_von_Mises_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Ludwig_von_Mises_(3x4_cropped).jpg", "lic": "CC BY-SA 3.0", "by": "Ludwig von Mises Institute"}, "Milton Friedman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Portrait_of_Milton_Friedman_%284x5_cropped%29.jpg/250px-Portrait_of_Milton_Friedman_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_Milton_Friedman_(4x5_cropped).jpg", "lic": "Public domain", "by": "Bachrach Studios"}, "Paul Samuelson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Paul_A._Samuelson%2C_economist%2C_edited.jpg/250px-Paul_A._Samuelson%2C_economist%2C_edited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Paul_A._Samuelson,_economist,_edited.jpg", "lic": "Public domain", "by": "Gotfryd, Bernard, photographer"}, "Hyman Minsky": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/HymanMinsky-1.jpg/250px-HymanMinsky-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:HymanMinsky-1.jpg", "lic": "CC BY-SA 4.0", "by": "Pontificador"}, "Friedrich List": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Friedrich_List_1845_crop.jpg/250px-Friedrich_List_1845_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_List_1845_crop.jpg", "lic": "Public domain", "by": "Josef Kriehuber"}, "Alexander Hamilton": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Alexander_Hamilton_%28NPG%29.jpg/250px-Alexander_Hamilton_%28NPG%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Alexander_Hamilton_(NPG).jpg", "lic": "Public domain", "by": "John Trumbull / Giuseppe Ceracchi"}, "W. Arthur Lewis": null, "Raúl Prebisch": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Raul_Prebisch_%28cropped%29.tif/lossy-page1-250px-Raul_Prebisch_%28cropped%29.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Raul_Prebisch_(cropped).tif", "lic": "Public domain", "by": "UnknownUnknown"}, "Herbert Simon": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Herbert_Simon%2C_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg/250px-Herbert_Simon%2C_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Herbert_Simon,_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg", "lic": "Public domain", "by": "Rochester Institute of Technology"}, "Douglass North": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Douglass_North.jpg/250px-Douglass_North.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Douglass_North.jpg", "lic": "CC BY 2.0", "by": "UNU-WIDER"}, "Robert Solow": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Robert_Solow_by_Olaf_Storbeck_%28cropped%29.jpg/250px-Robert_Solow_by_Olaf_Storbeck_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_Solow_by_Olaf_Storbeck_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "Olaf Storbeck from Düsseldorf, Deutschland"}, "Irving Fisher": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Irvingfisher.jpg/250px-Irvingfisher.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Irvingfisher.jpg", "lic": "Public domain", "by": "Bain News Service"}, "Oskar Lange": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Oskar_Lange_20-65.jpg/250px-Oskar_Lange_20-65.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Oskar_Lange_20-65.jpg", "lic": "Public domain", "by": "Władysław Miernicki"}, "Paul Sweezy": null, "Sismondi": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Jean_Charles_Simonde_de_Sismondi_%281773-1842%29.png/250px-Jean_Charles_Simonde_de_Sismondi_%281773-1842%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jean_Charles_Simonde_de_Sismondi_(1773-1842).png", "lic": "Public domain", "by": "Amélie Munier-Romilly"}, "Henry George": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Henry_George_c1885_retouched.jpg/250px-Henry_George_c1885_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Henry_George_c1885_retouched.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}};
+
+const ERAS = [
+  [1550, 1700, 'Commercial revolution, Atlantic trade', '#dbe6f3'],
+  [1700, 1760, 'Agrarian change', '#e7eef7'],
+  [1760, 1850, 'Industrial Revolution', '#f6e3d6'],
+  [1850, 1873, 'Victorian boom', '#f2ece1'],
+  [1873, 1896, 'Long Depression', '#ebe1f1'],
+  [1896, 1914, 'Imperialism', '#f3e0e0'],
+  [1914, 1945, 'World wars & Depression', '#e3e3e3'],
+  [1945, 1973, 'Postwar golden age', '#dff0e4'],
+  [1973, 2008, 'Neoliberal globalization', '#f5ecd5'],
+  [2008, 2025, 'After the crisis', '#e2ecf3'],
+];
+const EVENTS = [[1776,'Wealth of Nations'],[1817,'Ricardo’s Principles'],[1848,'1848 revolutions'],[1867,'Capital, vol. 1'],[1871,'Marginal revolution'],[1929,'1929 crash'],[1936,'General Theory'],[1979,'Volcker shock'],[2008,'2008 crisis']];
+
+const SCHOOLS = [
+  { id:'merc', lane:0, from:1550, to:1776, name:'Mercantilism', color:'#6b7a8f', weeks:[1],
+    one:'National wealth comes from a favorable balance of trade, so the state should promote exports and manufacturing.',
+    people:['Thomas Mun','William Petty'],
+    ideas:'Wealth as precious metals; trade surpluses; state regulation of trade and industry; profit from buying cheap and selling dear.',
+    setting:'Rising nation-states, long-distance trade, colonial conquest, and the price revolution of the sixteenth century.' },
+  { id:'dev', lane:0, from:1791, to:2025, name:'Developmentalist tradition', color:'#8c6d46', weeks:[12,14],
+    one:'Backward economies cannot catch up if they leave everything to the market; the state must build productive capabilities.',
+    people:['Alexander Hamilton','Friedrich List','Raúl Prebisch','W. Arthur Lewis'],
+    ideas:'Infant-industry protection; industrial policy; structural change from agriculture to industry; terms-of-trade pessimism.',
+    setting:'Catch-up industrialization in the United States and Germany, postwar decolonization, and East Asian growth.' },
+  { id:'phys', lane:1, from:1756, to:1780, name:'Physiocrats', color:'#4f8a6f', weeks:[1],
+    one:'Only agriculture yields a net product; let goods circulate freely.',
+    people:['François Quesnay'],
+    ideas:'The net product; the Tableau économique as the first circular-flow model; “laissez faire, laissez passer.”',
+    setting:'Agrarian France before the Revolution, burdened by taxes and internal tolls.' },
+  { id:'class', lane:1, from:1776, to:1871, name:'Classical political economy', color:'#1f6f8b', weeks:[2,3,4,5],
+    one:'Competition channels self-interest toward growth; value comes from labor; distribution among classes drives accumulation.',
+    people:['Adam Smith','David Ricardo','Thomas Malthus','Jean-Baptiste Say','John Stuart Mill'],
+    ideas:'Division of labor; the invisible hand; labor theories of value; differential rent; the falling rate of profit; comparative advantage; Say’s law.',
+    setting:'The Industrial Revolution, the Napoleonic Wars, and the struggle over the Corn Laws.' },
+  { id:'ricsoc', lane:2, from:1824, to:1848, name:'Ricardian socialists', color:'#9b4d6b', weeks:[5],
+    one:'If labor creates value, labor should receive the whole product.',
+    people:['William Thompson','Thomas Hodgskin'],
+    ideas:'Labor’s right to the whole product; critique of profit and rent as deductions from labor.',
+    setting:'Early trade unions, the repeal of the Combination Acts (1824), and Owenite cooperatives.' },
+  { id:'marx', lane:2, from:1848, to:2025, name:'Marxian political economy', color:'#b03a2e', weeks:[6,7,10,14],
+    one:'Capitalism is a powerful engine of growth, but its own contradictions produce exploitation, crisis, and eventual transformation.',
+    people:['Karl Marx','Friedrich Engels','Rosa Luxemburg','Vladimir Lenin','Paul Sweezy'],
+    ideas:'Historical materialism; labor power and surplus value; the transformation problem; the falling rate of profit; theories of imperialism.',
+    setting:'Factory industry, the revolutions of 1848, the labor movement, and later the world wars and decolonization.' },
+  { id:'neo', lane:3, from:1871, to:2025, name:'Neoclassical economics', color:'#023e8a', weeks:[8,9,12,13],
+    one:'Prices reflect individual choices at the margin; competitive markets allocate resources efficiently, except where they fail.',
+    people:['W. S. Jevons','Léon Walras','Alfred Marshall','John Bates Clark','Vilfredo Pareto','A. C. Pigou','Paul Samuelson','Robert Solow'],
+    ideas:'Marginal utility; supply and demand; general equilibrium; marginal productivity theory of distribution; Pareto efficiency; externalities; growth theory.',
+    setting:'The Long Depression, the rise of socialist parties, the professionalization of economics, and later the postwar boom.' },
+  { id:'aus', lane:4, from:1871, to:2025, name:'Austrian school', color:'#5e548e', weeks:[8,13],
+    one:'Knowledge is dispersed and no planner can gather it; markets coordinate what no one fully understands.',
+    people:['Carl Menger','Eugen von Böhm-Bawerk','Ludwig von Mises','Friedrich Hayek'],
+    ideas:'Subjective value; roundabout production and interest; the socialist calculation debate; knowledge and spontaneous order.',
+    setting:'Fin-de-siècle Vienna, the Russian Revolution, and the planning debates of the 1920s–40s.' },
+  { id:'inst', lane:5, from:1899, to:2025, name:'Institutionalism', color:'#8e6c8a', weeks:[10,14],
+    one:'People are shaped by the institutions they live in, even as they change those institutions.',
+    people:['Thorstein Veblen','Douglass North'],
+    ideas:'Conspicuous consumption; business versus industry; habits and instincts; later, the new institutional economics of property rights and transaction costs.',
+    setting:'Gilded Age America: trusts, financiers, and mass consumption.' },
+  { id:'schum', lane:6, from:1911, to:2025, name:'Schumpeterian', color:'#c47a2c', weeks:[14],
+    one:'Capitalism advances through innovation and creative destruction, but may bureaucratize itself.',
+    people:['Joseph Schumpeter'],
+    ideas:'The entrepreneur; innovation and creative destruction; long waves; the large corporation and the decline of entrepreneurship.',
+    setting:'Second industrial revolution, the rise of the corporation, and later the digital economy.' },
+  { id:'keyn', lane:7, from:1936, to:2025, name:'Keynesian & post-Keynesian', color:'#2a9d8f', weeks:[11,12,14],
+    one:'What is rational for individuals can be ruinous for the whole economy; demand, uncertainty, and finance drive output and employment.',
+    people:['John Maynard Keynes','Michał Kalecki','Joan Robinson','Piero Sraffa','Hyman Minsky'],
+    ideas:'Effective demand; involuntary unemployment; uncertainty and animal spirits; liquidity preference; the capital controversy; financial instability.',
+    setting:'The Great Depression, the New Deal, wartime planning, and the postwar welfare state.' },
+  { id:'chic', lane:8, from:1956, to:2025, name:'Monetarism & new classical', color:'#3d5a80', weeks:[13],
+    one:'Markets clear and expectations are rational, so activist policy mostly creates inflation.',
+    people:['Milton Friedman','Irving Fisher'],
+    ideas:'The quantity theory of money; the natural rate of unemployment; rational expectations; the Lucas critique; rules over discretion.',
+    setting:'The collapse of Bretton Woods, the oil shocks, stagflation, and the turn to Thatcher and Reagan.' },
+  { id:'beh', lane:9, from:1955, to:2025, name:'Behavioural economics', color:'#6a994e', weeks:[14],
+    one:'People try to be rational but face real limits, so rules and institutions matter.',
+    people:['Herbert Simon'],
+    ideas:'Bounded rationality and satisficing; heuristics and biases; prospect theory; experimental economics.',
+    setting:'Postwar organization theory and computing; later, the financial crises of 2000 and 2008.' },
+];
+const LANES = ['Trade & development','Classical tradition','Radical & Marxian','Neoclassical','Austrian','Institutionalist','Innovation','Keynesian','Monetarist','Behavioural'];
+const LINKS = [ // from, to, year at junction, type
+  ['merc','class',1776,'react'],['phys','class',1776,'cont'],['class','marx',1848,'cont'],['class','ricsoc',1824,'cont'],['ricsoc','marx',1848,'cont'],
+  ['class','neo',1871,'react'],['neo','aus',1871,'cont'],['class','dev',1791,'react'],['neo','keyn',1936,'react'],['marx','schum',1911,'cont'],
+  ['neo','chic',1956,'cont'],['keyn','chic',1968,'react'],['inst','beh',1955,'cont'],['aus','chic',1956,'cont'],
+];
+
+// ---------- Timeline drawing ----------
+const X0 = 1550, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 30, EV = 52, LANE = 40;
+// Piecewise time scale: compress the early centuries, stretch 1850–1950 where schools multiply.
+const KNOTS = [[1550,0],[1750,0.13],[1850,0.36],[1950,0.70],[2025,1]];
+const frac = y => { for (let i = 1; i < KNOTS.length; i++) { const [a,fa] = KNOTS[i-1], [b,fb] = KNOTS[i]; if (y <= b) return fa + (y-a)/(b-a)*(fb-fa); } return 1; };
+const H = TOPH + EV + LANES.length * LANE + 26;
+const x = y => LEFT + frac(y) * (W - LEFT - RIGHT);
+const yLane = l => TOPH + EV + l * LANE + 6;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const svg = document.getElementById('tl');
+svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);
+
+[1550,1600,1650,1700,1750,1775,1800,1825,1850,1875,1900,1925,1950,1975,2000,2025].forEach(yr => {
+  el('line', {x1:x(yr), x2:x(yr), y1:TOPH, y2:H-20, class:'grid'}, svg);
+  const t = el('text', {x:x(yr), y:H-6, 'text-anchor':'middle', class:'yr'}, svg); t.textContent = yr;
+});
+const eras = el('g', {class:'era'}, svg);
+ERAS.forEach(([a,b,label,c]) => {
+  el('rect', {x:x(a), y:0, width:x(b)-x(a), height:TOPH-4, fill:c}, eras);
+  const fo = el('text', {x:(x(a)+x(b))/2, y:16, 'text-anchor':'middle'}, eras);
+  fo.textContent = (x(b)-x(a) > label.length*5.6) ? label : (x(b)-x(a) > 40 ? label.split(/[ ,]/)[0] : '');
+  const tt = el('title', {}, eras); tt.textContent = `${label} (${a}–${b})`;
+});
+const evs = el('g', {class:'ev'}, svg);
+EVENTS.forEach(([yr,label], i) => {
+  const cx = x(yr), cy = TOPH + 10 + (i % 3) * 14;
+  el('circle', {cx, cy, r:3}, evs);
+  const t = el('text', {x:cx+5, y:cy+4}, evs); t.textContent = label;
+});
+LANES.forEach((name, i) => { const t = el('text', {x:LEFT-10, y:yLane(i)+18, 'text-anchor':'end', class:'lane-label'}, svg); t.textContent = name; });
+
+const byId = Object.fromEntries(SCHOOLS.map(s => [s.id, s]));
+const links = el('g', {}, svg);
+LINKS.forEach(([a,b,yr,type]) => {
+  const A = byId[a], B = byId[b]; const xa = x(Math.min(yr, A.to)), xb = x(Math.max(yr, B.from));
+  const ya = yLane(A.lane)+13, yb = yLane(B.lane)+13;
+  el('path', {d:`M${xa},${ya} C${xa+28},${ya} ${xb-28},${yb} ${xb},${yb}`, class:'link'+(type==='react'?' react':'')}, links);
+});
+const bars = el('g', {}, svg);
+SCHOOLS.forEach(s => {
+  const g = el('g', {class:'bar', tabindex:0, role:'button', 'aria-label':s.name, 'data-id':s.id}, bars);
+  const w = Math.max(x(s.to)-x(s.from), 18);
+  el('rect', {x:x(s.from), y:yLane(s.lane), width:w, height:26, fill:s.color}, g);
+  const t = el('text', {x:x(s.from)+8, y:yLane(s.lane)+17}, g);
+  t.textContent = w > s.name.length*6.6 ? s.name : (w > 70 ? s.name.split(/[ &]/)[0] : '');
+  const tt = el('title', {}, g); tt.textContent = s.name;
+  g.addEventListener('click', () => show(s.id, true));
+  g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(s.id, true); } });
+});
+
+// ---------- People ----------
+function initials(n) { return n.replace(/[^A-Za-zÀ-ž .-]/g,'').split(/[ .-]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join(''); }
+const YEARS = {'Thomas Mun':'1571–1641','William Petty':'1623–1687','François Quesnay':'1694–1774','Adam Smith':'1723–1790','Thomas Malthus':'1766–1834','David Ricardo':'1772–1823','Jean-Baptiste Say':'1767–1832','Jeremy Bentham':'1748–1832','Nassau Senior':'1790–1864','William Thompson':'1775–1833','Thomas Hodgskin':'1787–1869','John Stuart Mill':'1806–1873','Sismondi':'1773–1842','Karl Marx':'1818–1883','Friedrich Engels':'1820–1895','W. S. Jevons':'1835–1882','Carl Menger':'1840–1921','Léon Walras':'1834–1910','Alfred Marshall':'1842–1924','John Bates Clark':'1847–1938','Eugen von Böhm-Bawerk':'1851–1914','Vilfredo Pareto':'1848–1923','A. C. Pigou':'1877–1959','Henry George':'1839–1897','Thorstein Veblen':'1857–1929','J. A. Hobson':'1858–1940','Rosa Luxemburg':'1871–1919','Vladimir Lenin':'1870–1924','John Maynard Keynes':'1883–1946','Irving Fisher':'1867–1947','Michał Kalecki':'1899–1970','Piero Sraffa':'1898–1983','Joan Robinson':'1903–1983','Joseph Schumpeter':'1883–1950','Friedrich Hayek':'1899–1992','Ludwig von Mises':'1881–1973','Oskar Lange':'1904–1965','Milton Friedman':'1912–2006','Paul Samuelson':'1915–2009','Robert Solow':'1924–2023','Hyman Minsky':'1919–1996','Paul Sweezy':'1910–2004','Alexander Hamilton':'1755–1804','Friedrich List':'1789–1846','Raúl Prebisch':'1901–1986','W. Arthur Lewis':'1915–1991','Herbert Simon':'1916–2001','Douglass North':'1920–2015'};
+function people(list) {
+  return '<div class="people">' + list.map(n => {
+    const p = P[n];
+    const pic = p ? `<img src="${p.img}" alt="${n}" loading="lazy">` : `<span class="ini" aria-hidden="true">${initials(n)}</span>`;
+    return `<div class="person">${pic}${n}<small>${YEARS[n]||''}</small></div>`;
+  }).join('') + '</div>';
+}
+
+// ---------- Panel ----------
+const panel = document.getElementById('panel');
+function show(id, scroll) {
+  const s = byId[id];
+  document.querySelectorAll('.het svg .bar').forEach(b => b.classList.toggle('on', b.dataset.id === id));
+  const wk = s.weeks.map(n => `<a href="#week-${n}" data-wk="${n}">Week ${n}</a>`).join(', ');
+  panel.innerHTML = `<h3>${s.name}</h3><div class="yrs">${s.from}${s.to >= 2025 ? '–present' : '–' + s.to}</div>
+    <p class="one">${s.one}</p>
+    <div class="row"><div class="lb">Key thinkers</div><div class="tx">${people(s.people)}</div></div>
+    <div class="row"><div class="lb">Core ideas</div><div class="tx">${s.ideas}</div></div>
+    <div class="row"><div class="lb">Historical setting</div><div class="tx">${s.setting}</div></div>
+    <div class="row"><div class="lb">In the course</div><div class="tx">${wk}</div></div>`;
+  panel.querySelectorAll('a[data-wk]').forEach(a => a.addEventListener('click', () => { const d = document.getElementById('week-' + a.dataset.wk); if (d) d.open = true; }));
+  if (scroll) panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+show('class', false);
+
+// ---------- Weeks ----------
+const PARTS = {1:'Part I · Origins', 2:'Part II · Classical political economy', 6:'Part III · Marx', 8:'Part IV · Neoclassical economics and its critics', 11:'Part V · Keynes and after'};
+const WEEKS = [
+ {n:1, t:'Surplus, Markets, and the Birth of Capitalism', sub:'Mercantilists and physiocrats, c. 1350–1770',
+  ctx:'After the Black Death (1347–51) cut Europe’s population by roughly a third or more, labor became scarce and feudal obligations weakened. Long-distance trade, the conquest of the Americas, and the flood of New World silver (the “price revolution”) enriched merchants and monarchs. Enclosures pushed peasants off the land, creating a class that had to sell its labor to live.',
+  ev:['1347–51: the Black Death','1492 onward: conquest of the Americas; Atlantic trade','16th century: price revolution; enclosures in England','1694: Bank of England founded','1758: Quesnay’s Tableau économique'],
+  people:['Thomas Mun','William Petty','François Quesnay'],
+  ideas:['What a surplus product is, and how different societies have used it.','Capital as self-expanding money: M – C – M′.','Mercantilism: wealth as precious metals and a favorable balance of trade.','The physiocrats: the net product of agriculture, the first circular-flow model, and the origin of “laissez faire.”'],
+  read:'Hunt, ch. 1–2. Companion: Heilbroner, ch. 2; Stilwell, ch. 5–7.',
+  q:'Why did economic thinking change so much when markets, rather than custom and command, began to organize production?'},
+ {n:2, t:'Adam Smith: Commerce, the Division of Labor, and the Invisible Hand', sub:'The Wealth of Nations, 1776',
+  ctx:'Smith wrote in Enlightenment Scotland as Britain’s commerce and manufacturing expanded. Textile machinery and Watt’s improved steam engine were beginning to transform production, and Britain’s American colonies declared independence in the year his book appeared.',
+  ev:['1759: Theory of Moral Sentiments','1760s–70s: new textile machinery; Watt’s steam engine','1776: Wealth of Nations; American independence'],
+  people:['Adam Smith'],
+  ideas:['Smith’s four stages of society: hunting, pasturage, agriculture, commerce.','The division of labor and the size of the market as the source of growing wealth.','Productive and unproductive labor; accumulation as the engine of growth.','The invisible hand, the case for laissez faire, and the three duties of government.','Where Smith saw limits to markets, and how modern economics describes market failure.'],
+  read:'Hunt, ch. 3. Companion: Heilbroner, ch. 3; Yueh, ch. 1 (Smith: should the government rebalance the economy?).',
+  q:'Smith used the phrase “invisible hand” only once in The Wealth of Nations. Why did it become the most famous idea in economics?'},
+ {n:3, t:'Classical Value Theory: From Smith to Ricardo', sub:'What determines prices in the long run?',
+  ctx:'The classical economists wanted to explain “natural prices,” the long-run averages around which market prices move. Their answer had a political edge: it decided whether wages, profits, and rents were rewards for contribution or something else.',
+  ev:['1776: Smith’s labor and adding-up theories of value','1817: Ricardo’s Principles of Political Economy and Taxation'],
+  people:['Adam Smith','David Ricardo'],
+  ideas:['Use value and exchange value; the water–diamond paradox.','Smith’s “early and rude state”: the beaver and the deer.','Smith’s natural price as wages plus profits plus rents, and why it reasons in a circle.','Ricardo’s labor embodied: present labor plus past labor in tools and materials.','Why prices diverge from labor ratios when the profit rate is positive and capital is used in different proportions.','A worked calculation of Ricardo’s natural price.'],
+  read:'Hunt, ch. 3 (Smith’s value theory) and ch. 5 (the labor theory of value; price determination with differing compositions of capital).',
+  q:'If prices do not exactly match labor ratios, is a labor theory of value still useful? What would count as evidence for or against it?',
+  mod:['value-theory.html','Open the module: Classical Value Theory (with interactive calculators) →']},
+ {n:4, t:'Ricardo and Malthus: Rent, Gluts, and the Corn Laws', sub:'Class conflict in the Industrial Revolution',
+  ctx:'The Napoleonic Wars raised grain prices and landlords’ rents. The Corn Laws of 1815 kept them high by restricting grain imports, at the expense of industrial capitalists and workers. Machine-breaking Luddites and the Peterloo massacre (1819) showed how sharp class conflict had become.',
+  ev:['1798: Malthus’s Essay on Population','1803–15: Napoleonic Wars','1811–16: Luddite machine-breaking','1815: Corn Laws','1819: Peterloo massacre','1846: repeal of the Corn Laws'],
+  people:['David Ricardo','Thomas Malthus','Jean-Baptiste Say','Sismondi'],
+  ideas:['Ricardo’s theory of differential rent and the margin of cultivation.','Why Ricardo expected the profit rate to fall and the economy to approach a stationary state.','Landlords versus capitalists: the economics of the Corn Laws.','Comparative advantage: England, Portugal, cloth, and wine.','Malthus’s population principle, and whether the “Malthusian trap” still matters.','Say’s law versus Malthus’s theory of gluts; Ricardo on machinery and unemployment.'],
+  read:'Hunt, ch. 4–5. Companion: Heilbroner, ch. 4; Yueh, ch. 2 (Ricardo: do trade deficits matter?).',
+  q:'Malthus defended landlords’ spending as a source of demand. Was he wrong to worry that a market economy could produce too much?',
+  mod:['/trade-theory-tree.html','Related: my interactive map of trade theories, from mercantilism to today →']},
+ {n:5, t:'Utility, Reform, and Dissent', sub:'Bentham, Say, Senior, the Ricardian socialists, and J. S. Mill',
+  ctx:'As industrial capitalism matured, the labor theory of value became politically uncomfortable: radicals used it to argue that labor deserved the whole product. The New Poor Law of 1834 made relief deliberately harsh, Chartists campaigned for working-class votes, and revolutions swept Europe in 1848, the year of Mill’s Principles and Marx and Engels’s Manifesto.',
+  ev:['1789: Bentham’s Principles of Morals and Legislation','1824: repeal of the Combination Acts','1834: New Poor Law','1838–48: Chartism','1845–52: Irish famine','1848: Mill’s Principles; revolutions in Europe'],
+  people:['Jeremy Bentham','Jean-Baptiste Say','Nassau Senior','William Thompson','Thomas Hodgskin','John Stuart Mill'],
+  ideas:['Utilitarianism: pleasure, pain, and the calculus of happiness.','Say’s utility theory of value and the three “productive agents.”','Senior’s abstinence theory of profit and the wage-fund doctrine.','The Ricardian socialists: labor’s right to the whole product.','Mill: the laws of production versus the laws of distribution; the stationary state; his views on socialism and reform.'],
+  read:'Hunt, ch. 6–8. Companion: Heilbroner, ch. 5.',
+  q:'Is waiting (abstinence) a cost of production in the same sense as labor? Why did the answer matter so much in the 1830s?'},
+ {n:6, t:'Marx I: History, Value, and Surplus Value', sub:'Capital, volume 1, 1867',
+  ctx:'Marx and Engels wrote amid the factory system: Engels’s Condition of the Working Class in England (1845) described Manchester’s slums. The revolutions of 1848 failed, Marx settled in London, and he spent two decades in the British Museum studying the classical economists he set out to criticize.',
+  ev:['1845: Engels’s Condition of the Working Class in England','1848: Communist Manifesto','1864: First International','1867: Capital, volume 1'],
+  people:['Karl Marx','Friedrich Engels'],
+  ideas:['Historical materialism: forces and relations of production; base and superstructure.','The commodity: use value, exchange value, and socially necessary labor time.','Labor power as a commodity; the source of surplus value.','Constant capital, variable capital, and surplus value (C + V + S); the rate of surplus value.','Absolute and relative surplus value: the working day and productivity.'],
+  read:'Hunt, ch. 9. Companion: Heilbroner, ch. 6; G. A. Cohen, Karl Marx’s Theory of History: A Defence (selections); Yueh, ch. 3 (Marx: can China become rich?).',
+  q:'If workers are paid the full value of their labor power, where does profit come from?'},
+ {n:7, t:'Marx II: Prices of Production, Accumulation, and Crisis', sub:'The transformation problem and the falling rate of profit',
+  ctx:'Volumes 2 and 3 of Capital were published by Engels after Marx’s death (1885, 1894). The long downturn of 1873–96 made crisis theory urgent, and the later debate over Marx’s “transformation problem” became one of the longest-running controversies in economics.',
+  ev:['1883: death of Marx','1885, 1894: Capital, volumes 2 and 3','1896: Böhm-Bawerk’s critique of Marx','1907: Bortkiewicz’s correction of the transformation'],
+  people:['Karl Marx','Friedrich Engels','Eugen von Böhm-Bawerk'],
+  ideas:['From labor values to prices of production when profit rates equalize.','The transformation problem: Marx’s solution and later complete solutions.','The organic composition of capital and the tendency of the rate of profit to fall.','Counteracting tendencies, and modern crisis theories: profit squeeze, underconsumption, rising capital intensity.','The reserve army of labor.'],
+  read:'Hunt, ch. 9 (continued).',
+  q:'Can the profit rate be measured? What do data on capital–output ratios and profit shares suggest?'},
+ {n:8, t:'The Marginal Revolution', sub:'Jevons, Menger, and Walras, 1871–74',
+  ctx:'Three economists in three countries independently built value theory on marginal utility within a few years. They wrote during the Long Depression (1873–96), as socialist parties grew and the Paris Commune (1871) frightened European elites, and as economics was becoming an academic profession.',
+  ev:['1871: Jevons’s Theory of Political Economy; Menger’s Principles; the Paris Commune','1873: start of the Long Depression','1874: Walras’s Elements of Pure Economics'],
+  people:['W. S. Jevons','Carl Menger','Léon Walras'],
+  ideas:['Total and marginal utility; diminishing marginal utility.','The equimarginal rule: MUx / Px = MUy / Py.','Why the demand curve slopes down, and how marginalism resolves the water–diamond paradox.','Menger and subjective value; the beginning of the Austrian school.','Walras’s general equilibrium: counting equations and unknowns; Walras’s law.','From “political economy” to “economics”: what changed in method and in politics.'],
+  read:'Hunt, ch. 10. Companion: Chang, ch. 4 (the Neoclassical and Austrian schools).',
+  q:'The marginalists moved the question of value from production to consumption. What did economics gain, and what did it lose?'},
+ {n:9, t:'Marshall, Clark, and the Neoclassical Theory of Distribution', sub:'Supply and demand, firms, and factor markets',
+  ctx:'In the Gilded Age, giant trusts and corporations dominated industry and labor conflict was fierce; the United States passed the Sherman Antitrust Act in 1890, the year of Marshall’s Principles. Clark’s theory that each factor earns its marginal product offered an answer to the socialist charge of exploitation.',
+  ev:['1886: Haymarket affair','1890: Marshall’s Principles of Economics; Sherman Antitrust Act','1899: Clark’s The Distribution of Wealth','1906: Pareto’s Manual','1920: Pigou’s Economics of Welfare'],
+  people:['Alfred Marshall','John Bates Clark','Eugen von Böhm-Bawerk','Vilfredo Pareto','A. C. Pigou'],
+  ideas:['Marshall’s scissors: supply, demand, and time periods; partial equilibrium.','The theory of the firm: cost curves and profit maximization.','Marginal productivity theory of wages and interest, and its claim to fairness.','Böhm-Bawerk on capital, roundabout production, and interest.','Pareto efficiency and the welfare theorems; Pigou on externalities and taxes.','The problem of measuring “capital” as a single quantity.'],
+  read:'Hunt, ch. 11 and 14. Companion: Yueh, ch. 4 (Marshall: is inequality inevitable?).',
+  q:'If each factor is paid its marginal product, is the resulting distribution of income fair? What would you need to assume?'},
+ {n:10, t:'Dissent at the Turn of the Century: Veblen and Theories of Imperialism', sub:'Institutions, monopoly, and empire',
+  ctx:'Between the Berlin Conference (1884–85) and the First World War, European powers divided most of Africa and much of Asia among themselves. In the United States, robber barons and conspicuous wealth prompted Veblen’s satire. Critics asked whether capitalism now needed colonies to absorb its surplus.',
+  ev:['1884–85: Berlin Conference','1899: Veblen’s Theory of the Leisure Class','1899–1902: Boer War','1902: Hobson’s Imperialism','1913: Luxemburg’s Accumulation of Capital','1914–18: First World War','1917: Lenin’s Imperialism; the Russian Revolution'],
+  people:['Thorstein Veblen','J. A. Hobson','Rosa Luxemburg','Vladimir Lenin','Henry George'],
+  ideas:['Veblen: conspicuous consumption, instincts and habits, business versus industry.','Hobson: underconsumption and the drive for colonies.','Luxemburg: why accumulation needs noncapitalist markets.','Lenin: monopoly, finance capital, and imperialism as a stage of capitalism.','Core and periphery: world-systems analysis, unequal exchange, and labor terms of trade today.'],
+  read:'Hunt, ch. 12–13. Companion: Heilbroner, ch. 7–8.',
+  q:'Does the world economy still have a stable core and periphery? How could we measure it?'},
+ {n:11, t:'Keynes and the Great Depression', sub:'The General Theory, 1936',
+  ctx:'After the crash of 1929, world output collapsed and unemployment reached about a quarter of the U.S. labor force. Orthodox economics said wages and interest rates would adjust and restore full employment; for years they did not. Britain left the gold standard in 1931 and the New Deal began in 1933.',
+  ev:['1929: Wall Street crash','1931: Britain leaves the gold standard','1933: Fisher’s debt-deflation theory; the New Deal','1936: Keynes’s General Theory','1939–45: Second World War and wartime full employment'],
+  people:['John Maynard Keynes','Irving Fisher','Michał Kalecki'],
+  ideas:['Why falling money wages need not restore employment.','Effective demand: saving and investment are made by different people for different reasons.','Investment, uncertainty, and animal spirits; Keynes’s “beauty contest” (General Theory, ch. 12).','Liquidity preference and the limits of monetary policy.','“A somewhat comprehensive socialisation of investment” (ch. 24).','Kalecki’s parallel discovery of effective demand.'],
+  read:'Hunt, ch. 15; Keynes, General Theory, ch. 12 and 24. Companion: Heilbroner, ch. 9; Yueh, ch. 5 (Fisher) and ch. 6 (Keynes).',
+  q:'Keynes said the stock market can become a casino. Was he describing the 1930s only, or a permanent feature of capitalism?'},
+ {n:12, t:'The Golden Age and Its Debates', sub:'Synthesis, growth, and Cambridge versus Cambridge, 1945–73',
+  ctx:'The Bretton Woods system (1944) fixed exchange rates and controlled capital flows. Western economies grew fast with low unemployment and expanding welfare states, newly independent countries pursued planned development, and the Cold War made economic performance a contest between systems.',
+  ev:['1937: Hicks’s IS–LM model','1944: Bretton Woods conference','1947–48: Samuelson’s Foundations and Economics','1950: the Prebisch–Singer thesis','1954: Lewis’s model of development with unlimited labor','1956: Solow’s growth model','1960: Sraffa’s Production of Commodities by Means of Commodities'],
+  people:['Paul Samuelson','Robert Solow','Joan Robinson','Michał Kalecki','Piero Sraffa','W. Arthur Lewis','Raúl Prebisch'],
+  ideas:['The neoclassical synthesis: Keynes in the short run, Walras in the long run (IS–LM).','Growth theory from Harrod–Domar to Solow.','Post-Keynesian economics: Robinson, Kalecki, and distribution-led demand.','Sraffa and the Cambridge capital controversy: reswitching and the measurement of capital.','Evidence: how closely do labor values track market prices in input–output data?','Development economics: dual economies, structural change, and terms of trade.'],
+  read:'Hunt, ch. 16–18. Companion: Yueh, ch. 9 (Robinson: why are wages so low?) and ch. 12 (Solow).',
+  q:'The capital controversy was won on logic but ignored in practice. Why might a theory survive a logical critique?'},
+ {n:13, t:'The Neoliberal Turn', sub:'Monetarism, rational expectations, and the Austrian revival, 1970s–2000s',
+  ctx:'The Bretton Woods system collapsed in 1971, oil shocks in 1973 and 1979 brought stagflation, and Keynesian policy seemed unable to explain it. The Volcker shock (1979), Thatcher and Reagan, and later the Washington Consensus and the end of the Soviet Union reshaped economic policy worldwide, while China began its market reforms in 1978.',
+  ev:['1944: Hayek’s Road to Serfdom','1963: Friedman and Schwartz’s Monetary History','1968: Friedman’s natural rate of unemployment','1971: end of dollar–gold convertibility','1973, 1979: oil shocks','1979: Volcker shock; Thatcher elected','1989–91: Washington Consensus; collapse of the USSR'],
+  people:['Milton Friedman','Friedrich Hayek','Ludwig von Mises','Oskar Lange'],
+  ideas:['The socialist calculation debate revisited: Mises, Hayek, and Lange.','Hayek on knowledge, prices, and spontaneous order.','Friedman: the quantity theory, the natural rate, and rules over discretion.','Rational expectations and the Lucas critique; new classical versus new Keynesian macroeconomics.','The Chicago school, public choice, and the case for markets.','What neoliberal policy did to growth, inequality, and finance.'],
+  read:'Hunt, ch. 17. Companion: Yueh, ch. 8 (Hayek) and ch. 10 (Friedman: are central banks doing too much?); Chang, ch. 4 (Austrian school).',
+  q:'Was stagflation a refutation of Keynes, or of a particular version of Keynesianism?'},
+ {n:14, t:'Economics After 2008: Instability, Institutions, and the Planet', sub:'Pluralism and the revival of political economy',
+  ctx:'The global financial crisis of 2008, the Great Recession, and the COVID-19 crisis brought back old questions about instability, while climate change, rising inequality, and the fracturing of globalization raised new ones. Economics today is more empirical and more varied than its textbooks suggest.',
+  ev:['1972: The Limits to Growth','1986: Minsky’s Stabilizing an Unstable Economy','2008: global financial crisis','2020: COVID-19 recession','2020s: trade wars and deglobalization'],
+  people:['Hyman Minsky','Herbert Simon','Douglass North','Joseph Schumpeter','Robert Solow'],
+  ideas:['Minsky’s financial instability hypothesis and why government deficits stabilize profits.','Behavioral economics: bounded rationality and its policy uses.','Institutions and long-run development: why so few countries are rich.','Schumpeter’s creative destruction and the innovation economy.','The developmentalist tradition and East Asian growth.','Ecological limits and the future of globalization.','The revival of critical political economy.'],
+  read:'Hunt, ch. 18–19. Companion: Heilbroner, ch. 10; Yueh, ch. 7 (Schumpeter), ch. 11 (North), ch. 12 (Solow), and epilogue; Chang, ch. 4; Randers, 2052; Zeihan, The End of the World Is Just the Beginning.',
+  q:'Which of the schools we studied best explains the world since 2008, and which explains it worst?'},
+];
+const weeks = document.getElementById('weeks');
+let html = '';
+WEEKS.forEach(w => {
+  if (PARTS[w.n]) html += `<div class="part">${PARTS[w.n]}</div>`;
+  html += `<details class="wk" id="week-${w.n}"><summary><span class="wn">Week ${w.n}</span><span class="wt">${w.t}<small>${w.sub}</small></span><span class="chev">▸</span></summary>
+  <div class="wb">
+    <div class="ctx"><b>Historical context.</b> ${w.ctx}<ul>${w.ev.map(e=>`<li>${e}</li>`).join('')}</ul></div>
+    <h4>Key thinkers</h4>${people(w.people)}
+    <h4>Core ideas</h4><ul class="ideas">${w.ideas.map(i=>`<li>${i}</li>`).join('')}</ul>
+    <h4>Readings</h4><p>${w.read}</p>
+    <div class="think"><b>Question to think about:</b> ${w.q}</div>
+    ${w.mod ? `<a class="mod" href="${w.mod[0]}">${w.mod[1]}</a>` : ''}
+  </div></details>`;
+  if (w.n === 7) html += `<div class="exam">Midterm exam after Week 7: classical political economy and Marx, including a calculation of Ricardo’s natural price.</div>`;
+});
+html += `<div class="exam">Final exam and short paper: applying one great economist’s ideas to a present-day problem.</div>`;
+weeks.innerHTML = html;
+function openHash() { if (location.hash.startsWith('#week-')) { const d = document.querySelector(location.hash); if (d) { d.open = true; d.scrollIntoView({block:'start'}); } } }
+openHash(); window.addEventListener('hashchange', openHash);
+
+// ---------- Credits ----------
+const cc = Object.entries(P).filter(([n,p]) => p).sort();
+const open = cc.filter(([n,p]) => !/public domain|^pd/i.test(p.lic));
+const pd = cc.filter(([n,p]) => /public domain|^pd/i.test(p.lic));
+document.getElementById('credits').innerHTML =
+  `<p>Portraits from Wikimedia Commons. Public domain: ${pd.map(([n,p])=>`<a href="${p.src}">${n}</a>`).join(', ')}.</p>` +
+  `<p>Openly licensed: ${open.map(([n,p])=>`<a href="${p.src}">${n}</a> (${p.by ? p.by.replace(/[<>]/g,'') + ', ' : ''}${p.lic})`).join('; ')}.</p>` +
+  `<p>Thinkers without a freely licensed portrait are shown with initials.</p>`;
+</script>
+</body>
+</html>

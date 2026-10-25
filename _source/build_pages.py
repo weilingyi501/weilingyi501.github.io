@@ -2,7 +2,7 @@
 import os
 SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 LEAF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></svg>'
-NAV = [('/', 'Home'), ('research.html', 'Research'), ('teaching.html', 'Teaching'), ('food.html', 'Food'), ('cv.html', 'CV')]
+NAV = [('/', 'Home'), ('research.html', 'Research'), ('teaching.html', 'Teaching'), ('food.html', 'Food'), ('resources.html', 'Resources'), ('cv.html', 'CV')]
 
 def head(title, desc, extra=''):
     return f'''<!DOCTYPE html>
