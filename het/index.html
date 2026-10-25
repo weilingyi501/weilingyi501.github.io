@@ -81,6 +81,8 @@
 .het .wb h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin: 16px 0 8px; }
 .het .wb ul.ideas { padding-left: 20px; margin: 0; }
 .het .wb ul.ideas li { margin-bottom: 5px; }
+.het p.rl, .het .wb p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.het p.rd, .het .wb p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
 .het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
 .het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
 .het .books li { margin-bottom: 6px; }
@@ -139,12 +141,18 @@
   <div id="weeks"></div>
 
   <h2>Readings</h2>
-  <ul class="books">
-    <li><b>Main text:</b> E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought: A Critical Perspective</em>, 3rd ed. (M. E. Sharpe, 2011).</li>
-    <li><b>Companion texts:</b> Robert Heilbroner, <em>The Worldly Philosophers</em>; Linda Yueh, <em>What Would the Great Economists Do?</em> (Picador, 2018); Ha-Joon Chang, <em>Economics: The User’s Guide</em> (Pelican, 2014), chapter 4; Frank Stilwell, <em>Political Economy: The Contest of Economic Ideas</em>, 3rd ed. (Oxford University Press, 2012).</li>
-    <li><b>Primary sources:</b> short selections from Smith, Ricardo, Malthus, Mill, Marx, Jevons, Marshall, and Keynes (including chapters 12 and 24 of <em>The General Theory</em>).</li>
-    <li><b>Looking ahead:</b> Jorgen Randers, <em>2052: A Global Forecast for the Next Forty Years</em> (2012); Peter Zeihan, <em>The End of the World Is Just the Beginning</em> (2022).</li>
-  </ul>
+  <p class="rl">Main text</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought: A Critical Perspective</em>, 3rd ed. (M. E. Sharpe, 2011).</p>
+  <p class="rl">Companion texts</p>
+  <p class="rd">Robert Heilbroner, <em>The Worldly Philosophers</em>.</p>
+  <p class="rd">Linda Yueh, <em>What Would the Great Economists Do?</em> (Picador, 2018).</p>
+  <p class="rd">Ha-Joon Chang, <em>Economics: The User’s Guide</em> (Pelican, 2014), chapter 4.</p>
+  <p class="rd">Frank Stilwell, <em>Political Economy: The Contest of Economic Ideas</em>, 3rd ed. (Oxford University Press, 2012).</p>
+  <p class="rl">Primary sources</p>
+  <p class="rd">Short selections from Smith, Ricardo, Malthus, Mill, Marx, Jevons, Marshall, and Keynes, including chapters 12 and 24 of <em>The General Theory</em>.</p>
+  <p class="rl">Looking ahead</p>
+  <p class="rd">Jorgen Randers, <em>2052: A Global Forecast for the Next Forty Years</em> (2012).</p>
+  <p class="rd">Peter Zeihan, <em>The End of the World Is Just the Beginning</em> (2022).</p>
 
   <h2>Image credits</h2>
   <div class="credits" id="credits"></div>
@@ -429,6 +437,15 @@ const WEEKS = [
   read:'Hunt, ch. 18–19. Companion: Heilbroner, ch. 10; Yueh, ch. 7 (Schumpeter), ch. 11 (North), ch. 12 (Solow), and epilogue; Chang, ch. 4; Randers, 2052; Zeihan, The End of the World Is Just the Beginning.',
   q:'Which of the schools we studied best explains the world since 2008, and which explains it worst?'},
 ];
+// Split a reading note into one entry per paragraph: core readings first, then companions.
+function splitTop(s) { const out = []; let depth = 0, cur = ''; for (const ch of s) { if (ch === '(') depth++; if (ch === ')') depth--; if (ch === ';' && depth === 0) { out.push(cur.trim()); cur = ''; } else cur += ch; } if (cur.trim()) out.push(cur.trim()); return out; }
+const dot = s => /[.?!]$/.test(s) ? s : s + '.';
+function readings(read) {
+  const [core, comp] = read.split(/\.\s*Companion:\s*/);
+  let h = '<p class="rl">Core reading</p>' + splitTop(core.replace(/\.$/, '')).map(x => `<p class="rd">${dot(x)}</p>`).join('');
+  if (comp) h += '<p class="rl">Companion reading</p>' + splitTop(comp.replace(/\.$/, '')).map(x => `<p class="rd">${dot(x)}</p>`).join('');
+  return h;
+}
 const weeks = document.getElementById('weeks');
 let html = '';
 WEEKS.forEach(w => {
@@ -438,7 +455,7 @@ WEEKS.forEach(w => {
     <div class="ctx"><b>Historical context.</b> ${w.ctx}<ul>${w.ev.map(e=>`<li>${e}</li>`).join('')}</ul></div>
     <h4>Key thinkers</h4>${people(w.people)}
     <h4>Core ideas</h4><ul class="ideas">${w.ideas.map(i=>`<li>${i}</li>`).join('')}</ul>
-    <h4>Readings</h4><p>${w.read}</p>
+    <h4>Readings</h4>${readings(w.read)}
     <div class="think"><b>Question to think about:</b> ${w.q}</div>
     ${w.mod ? `<a class="mod" href="${w.mod[0]}">${w.mod[1]}</a>` : ''}
   </div></details>`;
