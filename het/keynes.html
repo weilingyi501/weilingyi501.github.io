@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keynes and the Great Depression | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Keynes: the Great Depression, why wage cuts fail, effective demand and the multiplier with an interactive paradox-of-thrift model, uncertainty and animal spirits, liquidity preference, and the socialization of investment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid3 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin-right: 8px; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 11</p>
+  <h1>Keynes and the Great Depression</h1>
+  <p class="lead">Why a market economy can stay stuck with mass unemployment, and what Keynes thought should be done about it.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#depression">The Depression and the orthodox answer</a></li><li><a href="#wages">Why wage cuts do not restore employment</a></li><li><a href="#demand">Effective demand and the multiplier (interactive)</a></li><li><a href="#uncertainty">Investment, uncertainty, and animal spirits</a></li><li><a href="#money">Liquidity preference and the limits of monetary policy</a></li><li><a href="#policy">Socializing investment, and what came after</a></li></ol>
+  </div>
+
+  <h2 id="depression">1. The Depression and the orthodox answer</h2>
+  <p>After the Wall Street crash of October 1929, the U.S. economy contracted for almost four years. By 1933 real output had fallen by roughly a quarter, consumer prices had fallen by about a quarter, and roughly one worker in four was unemployed. Thousands of banks failed. The collapse spread through trade and finance to Europe and Latin America. Britain left the gold standard in 1931, and the United States began the New Deal in 1933.</p>
+  <p>The economics of the time, which Keynes called “classical,” had a clear answer. In a competitive economy, unemployment means the price of labor is too high. If money wages fall, firms hire more workers. If saving exceeds investment, the interest rate falls until investment rises to absorb the saving. Say’s law, the idea that supply creates its own demand, ruled out a general shortage of demand.</p>
+  <div class="vs">
+    <div><b>Orthodox view</b>Unemployment comes from wages that are too high. Flexible wages and interest rates bring the economy back to full employment. The best policy is to let prices adjust and balance the budget.</div>
+    <div><b>Keynes</b>Unemployment comes from too little spending. Falling wages and prices can make things worse. The government should sustain demand, if necessary by borrowing and investing.</div>
+  </div>
+
+  <h2 id="wages">2. Why wage cuts do not restore employment</h2>
+  <p>Keynes made two arguments. First, workers and employers bargain over <b>money wages</b>, not real wages. If money wages fall, prices tend to fall too, so the real wage need not fall much at all. Second, and more fundamentally, wages are not only a cost to firms but also the income from which workers buy goods. Cutting wages across the whole economy cuts demand, and firms facing falling sales do not hire more workers. What is sensible for one employer is self-defeating for all employers together: a <b>fallacy of composition</b>.</p>
+  <p>Falling prices can also raise the real burden of debt. Irving Fisher’s “debt-deflation” theory (1933) showed how deflation forces borrowers to cut spending and sell assets, which pushes prices down further.</p>
+
+  <h2 id="demand">3. Effective demand and the multiplier</h2>
+  <p>Keynes argued that output and employment are set by <b>effective demand</b>: what households, firms, and government actually spend. Households spend a fraction of each extra dollar of income, the <b>marginal propensity to consume</b> (<i>c</i>), and save the rest. Investment depends on firms’ expectations about the future, not on how much households save. In the simplest model, output settles where it equals spending:</p>
+  <p class="eq">Y = C + I + G, with C = a + c·Y &nbsp;⟹&nbsp; Y = (a + I + G) / (1 − c)</p>
+  <p>The term 1 / (1 − <i>c</i>) is the <b>multiplier</b>. An extra dollar of investment or government spending becomes someone’s income, part of which is spent again, and so on.</p>
+  <div class="box" id="kx">
+    <h3>The multiplier and the paradox of thrift</h3>
+    <div class="grid3">
+      <div><label>Marginal propensity to consume: <b id="cv">0.75</b></label><input type="range" id="c" min="0.5" max="0.9" step="0.05" value="0.75"></div>
+      <div><label>Investment: <b id="iv">200</b></label><input type="range" id="i" min="50" max="400" step="10" value="200"></div>
+      <div><label>Government spending: <b id="gv">200</b></label><input type="range" id="g" min="0" max="400" step="10" value="200"></div>
+    </div>
+    <div style="margin-top:10px"><label>Autonomous consumption (a): <b id="av">100</b></label><input type="range" id="a" min="0" max="300" step="10" value="100"></div>
+    <div style="margin-top:10px">
+      <button class="btn" type="button" id="thrift">Everyone tries to save 50 more</button>
+      <button class="btn" type="button" id="crash">Investment collapses by 100</button>
+      <button class="btn" type="button" id="stim">Government spends 100 more</button>
+      <button class="btn" type="button" id="reset">Reset</button>
+    </div>
+    <svg id="kchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Keynesian cross: planned spending against output"></svg>
+    <div id="kout"></div>
+  </div>
+  <p>The <b>paradox of thrift</b>: when households all try to save more, consumption falls, output and incomes fall, and in the end total saving is no higher than before, because saving must still equal investment. What is prudent for one household can impoverish the whole economy.</p>
+  <div class="think"><b>Try this:</b> press “Everyone tries to save 50 more” and compare total saving before and after. Then lower the marginal propensity to consume. What happens to the multiplier?</div>
+
+  <h2 id="uncertainty">4. Investment, uncertainty, and animal spirits</h2>
+  <p>If investment drives demand, what drives investment? In chapter 12 of <em>The General Theory</em>, Keynes argued that firms must estimate returns years into the future on knowledge that is extremely thin. In practice they fall back on convention: they assume the present will continue unless there is a reason to think otherwise. Because conventions are fragile, investment can swing violently on news and moods. Keynes called the urge to act despite uncertainty “animal spirits.”</p>
+  <p>Stock markets do not fix the problem. Keynes compared professional investing to a newspaper <b>beauty contest</b> in which readers win by picking the faces that <em>other</em> readers will pick. Investors try to anticipate average opinion about average opinion rather than the long-run yield of an asset. He distinguished <b>enterprise</b>, forecasting the yield of assets over their life, from <b>speculation</b>, forecasting the psychology of the market, and warned of the danger when enterprise becomes a bubble on a whirlpool of speculation.</p>
+
+  <h2 id="money">5. Liquidity preference and the limits of monetary policy</h2>
+  <p>In the orthodox story, the interest rate balances saving and investment. Keynes argued instead that it is the price of giving up <b>liquidity</b>: people hold money as a safe asset when they are uncertain, and the interest rate is what persuades them to hold bonds instead. In a deep slump, people may hoard money however low interest rates go, so a central bank cannot push them low enough to revive investment. Later economists called this the <b>liquidity trap</b>; it returned to policy debates in Japan in the 1990s and worldwide after 2008.</p>
+
+  <h2 id="policy">6. Socializing investment, and what came after</h2>
+  <p>Keynes was skeptical that monetary policy alone could secure full employment. In chapter 24 he concluded that “a somewhat comprehensive socialisation of investment” would be needed, by which he meant the state taking responsibility for the overall level of investment, not public ownership of industry. Fiscal policy, public works, and a large role for public investment followed from this.</p>
+  <p>Two further developments are worth knowing:</p>
+  <ul>
+    <li><b>Kalecki.</b> The Polish economist Michał Kalecki reached the principle of effective demand independently in the early 1930s. In “Political Aspects of Full Employment” (1943), he argued that business leaders might oppose lasting full employment because it strengthens workers’ bargaining power, producing a political business cycle.</li>
+    <li><b>Profits and deficits.</b> Building on Kalecki, Hyman Minsky emphasized that, in a simplified form, aggregate profits equal investment plus the government deficit plus the trade surplus, minus household saving. When private investment collapses, a large government deficit keeps profits, and therefore firms, afloat. Minsky argued that “big government” and a central bank acting as lender of last resort are why recent recessions, including 2008 and 2020, did not become depressions, but also that this socializes risk without socializing investment.</li>
+  </ul>
+  <p>After the war, economists such as Hicks and Samuelson absorbed parts of Keynes into a “neoclassical synthesis”: Keynes for the short run, Walras for the long run (Week 12). Post-Keynesians such as Joan Robinson called this “bastard Keynesianism,” arguing that it dropped uncertainty and the instability of finance, which were the heart of Keynes’s book.</p>
+  <div class="think"><b>Discussion:</b> Keynes said the problem of the 1930s was not scarcity but the failure to use the resources that existed. Is that a description of a special case, or of how capitalist economies normally work?</div>
+
+  <h2>Readings</h2>
+  <p>Hunt, ch. 15. Keynes, <em>The General Theory of Employment, Interest and Money</em> (1936), ch. 12 and ch. 24. Companion: Heilbroner, <em>The Worldly Philosophers</em>, ch. 9; Yueh, <em>What Would the Great Economists Do?</em>, ch. 5 (Fisher) and ch. 6 (Keynes).</p>
+
+  <p><a href="index.html#week-11">← Back to Week 11 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const BASE = {c:0.75, i:200, g:200, a:100};
+let prev = null;
+function eqY(s) { return (s.a + s.i + s.g) / (1 - s.c); }
+function state() { return {c:+$('c').value, i:+$('i').value, g:+$('g').value, a:+$('a').value}; }
+function snap(label) { prev = Object.assign(state(), {label}); }
+function k() {
+  const s = state();
+  $('cv').textContent = s.c.toFixed(2); $('iv').textContent = s.i; $('gv').textContent = s.g; $('av').textContent = s.a;
+  const Y = eqY(s), C = s.a + s.c*Y, S = Y - C, mult = 1/(1-s.c);
+  // chart: planned spending E = a + I + G + cY vs 45-degree line
+  const W = 640, H = 260, L = 50, R = 14, T = 12, B = 34, MAX = Math.max(5000, Math.ceil(Math.max(Y, prev ? eqY(prev) : 0)*1.15/500)*500);
+  const X = v => L + v/MAX*(W-L-R), Yp = v => H-B - v/MAX*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= MAX; v += MAX/5) g += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">output and income (Y)</text>`;
+  g += `<line x1="${X(0)}" y1="${Yp(0)}" x2="${X(MAX)}" y2="${Yp(MAX)}" stroke="#8a929b" stroke-dasharray="5 4"/><text x="${X(MAX*0.9)}" y="${Yp(MAX*0.9)-6}" text-anchor="end">output = spending</text>`;
+  if (prev) { const e0 = prev.a+prev.i+prev.g; g += `<line x1="${X(0)}" y1="${Yp(e0)}" x2="${X(MAX)}" y2="${Yp(e0+prev.c*MAX)}" stroke="#cfe2f3" stroke-width="2.5"/>`; const Y0 = eqY(prev); g += `<circle cx="${X(Y0)}" cy="${Yp(Y0)}" r="5" fill="#9fc4e6"/>`; }
+  const e = s.a+s.i+s.g;
+  g += `<line x1="${X(0)}" y1="${Yp(e)}" x2="${X(MAX)}" y2="${Yp(e+s.c*MAX)}" stroke="#0077b6" stroke-width="2.5"/><text x="${X(MAX*0.15)}" y="${Yp(e+s.c*MAX*0.15)-8}">planned spending</text>`;
+  g += `<line x1="${X(Y)}" y1="${Yp(Y)}" x2="${X(Y)}" y2="${H-B}" stroke="#023e8a" stroke-dasharray="3 3"/><circle cx="${X(Y)}" cy="${Yp(Y)}" r="6" fill="#023e8a"/>`;
+  $('kchart').innerHTML = g;
+  let cmp = '';
+  if (prev) {
+    const Y0 = eqY(prev), C0 = prev.a + prev.c*Y0, S0 = Y0 - C0;
+    cmp = `<tr><td>Before (${prev.label})</td><td>${Y0.toFixed(0)}</td><td>${C0.toFixed(0)}</td><td>${S0.toFixed(0)}</td><td>${prev.i}</td></tr>`;
+  }
+  $('kout').innerHTML = `<table><thead><tr><th></th><th>Output (Y)</th><th>Consumption</th><th>Saving</th><th>Investment</th></tr></thead><tbody>${cmp}<tr><td>${prev ? 'After' : 'Equilibrium'}</td><td><b>${Y.toFixed(0)}</b></td><td>${C.toFixed(0)}</td><td>${S.toFixed(0)}</td><td>${s.i}</td></tr></tbody></table>
+    <div class="out"><b>Multiplier</b> = 1 / (1 − ${s.c.toFixed(2)}) = ${mult.toFixed(2)}. Private saving (${S.toFixed(0)}) plus taxes equals investment plus government spending; with no taxes in this model, saving = investment + government spending (${(s.i+s.g).toFixed(0)})${prev && prev.label === 'households save more' ? `. Households tried to save more, but total saving ended at ${S.toFixed(0)}: output fell by ${(eqY(prev)-Y).toFixed(0)} instead.` : '.'}</div>`;
+}
+['c','i','g','a'].forEach(id => $(id).addEventListener('input', () => { prev = null; k(); }));
+$('thrift').addEventListener('click', () => { snap('households save more'); $('a').value = Math.max(0, +$('a').value - 50); k(); });
+$('crash').addEventListener('click', () => { snap('investment collapses'); $('i').value = Math.max(50, +$('i').value - 100); k(); });
+$('stim').addEventListener('click', () => { snap('government spends more'); $('g').value = Math.min(400, +$('g').value + 100); k(); });
+$('reset').addEventListener('click', () => { prev = null; for (const k2 in BASE) $(k2).value = BASE[k2]; k(); });
+k();
+</script>
+</body>
+</html>

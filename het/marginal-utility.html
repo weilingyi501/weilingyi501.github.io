@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Marginal Revolution | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the marginal revolution: Jevons, Menger, and Walras, diminishing marginal utility, the equimarginal rule with an interactive budget exercise, the demand curve, general equilibrium, and its critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+.vt .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2, .vt .grid3 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+.vt .three div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .three b { display: block; color: var(--bar); }
+@media (max-width: 680px) { .vt .three { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 8</p>
+  <h1>The Marginal Revolution</h1>
+  <p class="lead">How Jevons, Menger, and Walras moved the explanation of value from the costs of production to the choices of consumers, and what economics gained and lost along the way.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#context">Three discoverers, one decade</a></li><li><a href="#mu">Diminishing marginal utility</a></li><li><a href="#rule">The equimarginal rule (interactive)</a></li><li><a href="#demand">From utility to the demand curve</a></li><li><a href="#walras">Walras and general equilibrium</a></li><li><a href="#critics">Critics and consequences</a></li></ol>
+  </div>
+
+  <h2 id="context">1. Three discoverers, one decade</h2>
+  <p>Between 1871 and 1874, three economists working in different countries and languages each built a theory of value on the utility of the <em>last</em> unit consumed:</p>
+  <div class="three">
+    <div><b>W. S. Jevons</b>Manchester and London. <em>The Theory of Political Economy</em> (1871): utility measured at the margin, expressed in calculus.</div>
+    <div><b>Carl Menger</b>Vienna. <em>Principles of Economics</em> (1871): value is subjective, rooted in the importance people attach to satisfying their wants.</div>
+    <div><b>Léon Walras</b>Lausanne. <em>Elements of Pure Economics</em> (1874): a system of equations in which all markets clear at once.</div>
+  </div>
+  <p>Why then? Several conditions came together. The labor theory of value had become the theory of socialists: Marx’s <em>Capital</em> appeared in 1867, and the Paris Commune of 1871 alarmed property owners across Europe. The Long Depression that began in 1873 lowered prices and profits and sharpened labor conflict. Universities were creating economics as a profession that wanted the authority of a natural science. A theory that explained prices by individual choice, and that could be written in mathematics, suited all three conditions. That does not make it wrong, but it helps explain why it spread so quickly.</p>
+  <p>Within two decades the field itself was renamed. Alfred Marshall’s <em>Principles of Economics</em> (1890) helped replace “political economy,” the study of classes and the wealth of nations, with “economics,” the study of individual choice under scarcity.</p>
+
+  <h2 id="mu">2. Diminishing marginal utility</h2>
+  <p>The marginalists distinguished <b>total utility</b>, the satisfaction from all the units of a good a person consumes, from <b>marginal utility</b>, the extra satisfaction from one more unit. Their key assumption was that marginal utility falls as consumption rises. The first glass of water on a hot day is precious; the tenth is barely wanted.</p>
+  <blockquote>Value depends entirely upon utility.<cite>W. Stanley Jevons, <em>The Theory of Political Economy</em> (1871), ch. 1</cite></blockquote>
+  <p>This resolves the water–diamond paradox that troubled Smith (Week 3). Water has enormous total utility, but because it is plentiful, the marginal utility of one more liter is tiny. Diamonds have little total utility, but they are scarce, so the marginal utility of one more diamond is high. Price follows marginal utility, not total utility.</p>
+  <div class="box" id="mubox">
+    <h3>Total and marginal utility</h3>
+    <div class="grid2">
+      <div><label>Units consumed: <b id="qv">3</b></label><input type="range" id="q" min="1" max="12" step="1" value="3"></div>
+      <div><label>How strongly the good is wanted: <b id="av">10</b></label><input type="range" id="a" min="4" max="20" step="1" value="10"></div>
+    </div>
+    <svg id="muchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="Total utility rising at a decreasing rate and marginal utility falling"></svg>
+    <div class="out" id="muout"></div>
+    <p class="note">Bars show the marginal utility of each unit; the line shows total utility. Utility here follows u = a·ln(1 + q), a common textbook form with diminishing marginal utility.</p>
+  </div>
+
+  <h2 id="rule">3. The equimarginal rule</h2>
+  <p>Suppose a consumer has a fixed budget to spend on two goods. Where should the last dollar go? To whichever good gives more utility per dollar. As the consumer buys more of that good, its marginal utility falls, until the last dollar spent on each good brings the same extra satisfaction:</p>
+  <p class="eq">MU<sub>x</sub> / P<sub>x</sub> = MU<sub>y</sub> / P<sub>y</sub></p>
+  <p>If the left side is larger, a dollar moved from <i>y</i> to <i>x</i> raises total utility, and the reverse if the right side is larger. Only when the two are equal is utility at its maximum. Try to find that point:</p>
+  <div class="box" id="eq">
+    <h3>Spend a budget on bread and books</h3>
+    <div class="grid3">
+      <div><label>Budget: <b id="mv">$60</b></label><input type="range" id="m" min="20" max="120" step="5" value="60"></div>
+      <div><label>Price of bread: <b id="pxv">$2</b></label><input type="range" id="px" min="1" max="10" step="0.5" value="2"></div>
+      <div><label>Price of a book: <b id="pyv">$10</b></label><input type="range" id="py" min="2" max="20" step="1" value="10"></div>
+    </div>
+    <div style="margin-top:12px"><label>Spent on bread: <b id="sxv">$20</b> (the rest goes to books)</label><input type="range" id="sx" min="0" max="60" step="1" value="20"></div>
+    <div style="margin-top:10px"><button class="btn" id="best" type="button">Show the best allocation</button></div>
+    <div id="eqout"></div>
+    <svg id="eqchart" viewBox="0 0 640 200" width="100%" role="img" aria-label="Total utility for each way of splitting the budget"></svg>
+    <p class="note">The curve shows total utility for every way of splitting the budget; the dot is your choice. Preferences: u = 30·ln(1 + bread) + 40·ln(1 + books).</p>
+  </div>
+  <div class="think"><b>Try this:</b> find the best allocation, then raise the price of bread. Does the best quantity of bread go up or down? That is the next section.</div>
+
+  <h2 id="demand">4. From utility to the demand curve</h2>
+  <p>The equimarginal rule gives a theory of demand. When the price of bread rises, <i>MU / P</i> for bread falls, so the consumer buys less bread until its marginal utility rises enough to restore the balance. Repeating the exercise at different prices traces out a downward-sloping demand curve:</p>
+  <div class="box">
+    <h3>Demand for bread, from the same preferences</h3>
+    <table id="dtab"></table>
+    <p class="note">Calculated with the current budget and book price from the exercise above.</p>
+  </div>
+  <p>The marginalists thus explained prices from the demand side, which the classical economists had treated as secondary. Marshall would later combine this demand curve with a supply curve based on costs, insisting that both “blades of the scissors” matter (Week 9).</p>
+
+  <h2 id="walras">5. Walras and general equilibrium</h2>
+  <p>Jevons and Marshall studied one market at a time. Walras asked whether <em>all</em> markets could clear simultaneously, given that the demand for each good depends on all prices. He wrote down a system of equations for an economy with <i>m</i> consumer goods and <i>n</i> productive services:</p>
+  <ul>
+    <li>the supply of each productive service (<i>n</i> equations),</li>
+    <li>the demand for each consumer good (<i>m</i> equations),</li>
+    <li>the demand for each productive service equal to its supply (<i>n</i> equations), and</li>
+    <li>the price of each good equal to its cost of production (<i>m</i> equations).</li>
+  </ul>
+  <p>That gives 2<i>m</i> + 2<i>n</i> equations. With one good chosen as the unit of account (the <em>numéraire</em>), there are 2<i>m</i> + 2<i>n</i> − 1 unknowns. The extra equation is not independent: if every market but one clears, the last must clear too. This is <b>Walras’s law</b>. Counting equations does not prove that a solution exists. That was shown only in 1954 by Kenneth Arrow and Gérard Debreu, under strong assumptions about preferences and perfect competition.</p>
+
+  <h2 id="critics">6. Critics and consequences</h2>
+  <ul>
+    <li><b>Can utility be measured?</b> Jevons hoped it could. Later economists (Pareto, then Hicks and Allen in the 1930s) rebuilt demand theory on <em>ordinal</em> utility, which only ranks bundles. Price theory survived; the claim to measure satisfaction did not.</li>
+    <li><b>Can utilities be compared across people?</b> If not, the theory cannot say whether moving a dollar from a rich person to a poor one raises total welfare. Welfare economics after Pareto largely avoided the question.</li>
+    <li><b>From classes to individuals.</b> Classical economics analyzed workers, capitalists, and landlords. Marginalism analyzed individuals with given tastes and endowments. Critics such as Hunt argue that this took the existing distribution of property as given and left it out of view.</li>
+    <li><b>Is people’s behavior like that?</b> Thorstein Veblen mocked the marginalist consumer as a “lightning calculator of pleasures and pains” (1898). Behavioural economics would later study how people actually choose (Week 14).</li>
+  </ul>
+  <div class="think"><b>Discussion:</b> The classical economists asked what determines the wealth of nations; the marginalists asked how individuals allocate scarce means among given ends. Which question is more useful for the problems you care about?</div>
+
+  <h2>Readings</h2>
+  <p>Hunt, ch. 10 (Jevons, Menger, Walras). Companion: Chang, <em>Economics: The User’s Guide</em>, ch. 4 (the Neoclassical and Austrian schools); Heilbroner, <em>The Worldly Philosophers</em>, ch. 7.</p>
+
+  <p><a href="index.html#week-8">← Back to Week 8 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const fmt = (v, d=1) => v.toLocaleString(undefined, {minimumFractionDigits:d, maximumFractionDigits:d});
+
+// ---------- Total and marginal utility ----------
+function mu() {
+  const q = +$('q').value, a = +$('a').value; $('qv').textContent = q; $('av').textContent = a;
+  const U = n => a * Math.log(1 + n);
+  const W = 640, H = 220, L = 40, R = 40, T = 12, B = 30, N = 12;
+  const umax = U(N) * 1.08, mumax = (U(1) - U(0)) * 1.15;
+  const bw = (W-L-R)/N;
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let i = 1; i <= N; i++) {
+    const m = U(i) - U(i-1), h = m/mumax*(H-B-T), x = L + (i-1)*bw + 4;
+    g += `<rect x="${x}" y="${H-B-h}" width="${bw-8}" height="${h}" rx="3" fill="${i <= q ? '#0077b6' : '#cfe2f3'}"/><text x="${x+(bw-8)/2}" y="${H-B+15}" text-anchor="middle">${i}</text>`;
+  }
+  g += `<polyline fill="none" stroke="#023e8a" stroke-width="2.5" points="${Array.from({length:N+1},(_,i)=>(L+i*bw)+','+(H-B-U(i)/umax*(H-B-T))).join(' ')}"/>`;
+  g += `<circle cx="${L+q*bw}" cy="${H-B-U(q)/umax*(H-B-T)}" r="5" fill="#023e8a"/>`;
+  g += `<text x="${L}" y="${T+4}">marginal utility (bars)</text><text x="${W-R}" y="${T+4}" text-anchor="end">total utility (line)</text>`;
+  $('muchart').innerHTML = g;
+  $('muout').innerHTML = `<b>Total utility</b> of ${q} unit${q>1?'s':''}: ${fmt(U(q))} · <b>Marginal utility</b> of unit ${q}: ${fmt(U(q)-U(q-1),2)} · unit ${q+1} would add only ${fmt(U(q+1)-U(q),2)}.`;
+}
+['q','a'].forEach(i => $(i).addEventListener('input', mu)); mu();
+
+// ---------- Equimarginal rule ----------
+const A = 30, Bw = 40;
+const util = (x, y) => A*Math.log(1+x) + Bw*Math.log(1+y);
+function bestSpend(M, px, py) { let b = 0, bu = -1; for (let s = 0; s <= M; s += 0.1) { const u = util(s/px, (M-s)/py); if (u > bu) { bu = u; b = s; } } return b; }
+function eq() {
+  const M = +$('m').value, px = +$('px').value, py = +$('py').value;
+  $('sx').max = M; if (+$('sx').value > M) $('sx').value = M;
+  const sx = +$('sx').value; const x = sx/px, y = (M-sx)/py;
+  $('mv').textContent = '$'+M; $('pxv').textContent = '$'+px; $('pyv').textContent = '$'+py; $('sxv').textContent = '$'+sx;
+  const mux = A/(1+x), muy = Bw/(1+y), rx = mux/px, ry = muy/py;
+  let adv;
+  if (Math.abs(rx-ry)/Math.max(rx,ry) < 0.03) adv = 'The last dollar brings about the same utility in both uses. Utility is (approximately) maximized.';
+  else if (rx > ry) adv = 'A dollar spent on bread now brings more utility than a dollar on books. Move spending toward bread.';
+  else adv = 'A dollar spent on books now brings more utility than a dollar on bread. Move spending toward books.';
+  $('eqout').innerHTML = `<table><thead><tr><th></th><th>Quantity</th><th>Marginal utility</th><th>MU per dollar</th></tr></thead><tbody>
+    <tr><td>Bread</td><td>${fmt(x)}</td><td>${fmt(mux,2)}</td><td><b>${fmt(rx,3)}</b></td></tr>
+    <tr><td>Books</td><td>${fmt(y)}</td><td>${fmt(muy,2)}</td><td><b>${fmt(ry,3)}</b></td></tr></tbody></table>
+    <div class="out"><b>Total utility:</b> ${fmt(util(x,y))}. ${adv}</div>`;
+  // chart
+  const W = 640, H = 200, L = 46, R = 14, T = 12, B = 30; let pts = [], umin = Infinity, umax = -Infinity;
+  for (let s = 0; s <= M; s += M/120) { const u = util(s/px, (M-s)/py); pts.push([s,u]); umin = Math.min(umin,u); umax = Math.max(umax,u); }
+  const X = s => L + s/M*(W-L-R), Y = u => H-B - (u-umin)/((umax-umin)||1)*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0, M/2, M].forEach(s => g += `<text x="${X(s)}" y="${H-B+15}" text-anchor="middle">$${Math.round(s)}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">spent on bread</text>`;
+  g += `<polyline fill="none" stroke="#0077b6" stroke-width="2.5" points="${pts.map(([s,u])=>X(s)+','+Y(u)).join(' ')}"/>`;
+  const bs = bestSpend(M, px, py);
+  g += `<line x1="${X(bs)}" y1="${T}" x2="${X(bs)}" y2="${H-B}" stroke="#8a929b" stroke-dasharray="4 3"/><text x="${X(bs)+4}" y="${T+10}">best</text>`;
+  g += `<circle cx="${X(sx)}" cy="${Y(util(x,y))}" r="6" fill="#023e8a"/>`;
+  $('eqchart').innerHTML = g;
+  demand(M, py);
+}
+function demand(M, py) {
+  let rows = '';
+  for (const p of [1, 2, 3, 4, 6, 8, 10]) { const s = bestSpend(M, p, py); rows += `<tr><td>$${p}</td><td>${fmt(s/p)}</td><td>$${fmt(s,0)}</td></tr>`; }
+  $('dtab').innerHTML = `<thead><tr><th>Price of bread</th><th>Best quantity of bread</th><th>Spent on bread</th></tr></thead><tbody>${rows}</tbody>`;
+}
+['m','px','py','sx'].forEach(i => $(i).addEventListener('input', eq));
+$('best').addEventListener('click', () => { $('sx').value = Math.round(bestSpend(+$('m').value, +$('px').value, +$('py').value)); eq(); });
+eq();
+</script>
+</body>
+</html>
