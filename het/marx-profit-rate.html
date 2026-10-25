@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marx on Profit and Crisis | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Marx's theory of the falling rate of profit: the organic composition of capital, counteracting tendencies, modern crisis theories, the Okishio theorem, and evidence, with two interactive models.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn:hover { background: var(--blue-soft); }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 7</p>
+  <h1>Marx on Profit and Crisis</h1>
+  <p class="lead">Why Marx expected the rate of profit to fall as capitalism develops, what might stop it, and how modern economists have tried to measure and test the idea.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#context">Volumes 2 and 3 of Capital</a></li><li><a href="#formula">The rate of profit</a></li><li><a href="#tendency">The tendency to fall (interactive)</a></li><li><a href="#counter">Counteracting tendencies</a></li><li><a href="#modern">A modern formulation (interactive)</a></li><li><a href="#theories">Three theories of crisis</a></li><li><a href="#debate">Objections and evidence</a></li></ol>
+  </div>
+
+  <h2 id="context">1. Volumes 2 and 3 of Capital</h2>
+  <p>Marx published only the first volume of <em>Capital</em> (1867) in his lifetime. Friedrich Engels assembled the second (1885) and third (1894) from Marx’s manuscripts. Volume 3 contains the two arguments of this week: how labor values are transformed into prices of production when profit rates equalize (worked through in the <a href="value-theory.html#marx">Week 3 module</a>), and the “law of the tendency of the rate of profit to fall.”</p>
+  <p>The idea was not new. Smith had expected profits to fall as capital accumulated and competition intensified; Ricardo had blamed the falling profit rate on diminishing returns in agriculture and rising rents (Week 4); Mill had expected a stationary state. Marx’s innovation was to locate the cause inside production itself, in the way capitalist competition drives mechanization. He wrote in a period of recurring crises, including the panics of 1857 and 1866, and Engels edited Volume 3 during the Long Depression of 1873–96.</p>
+
+  <h2 id="formula">2. The rate of profit</h2>
+  <p>Recall Marx’s division of the value of output into constant capital (<i>C</i>, means of production used up), variable capital (<i>V</i>, wages), and surplus value (<i>S</i>). The rate of profit is surplus value relative to all capital advanced:</p>
+  <p class="eq">r = S / (C + V) = (S/V) / (C/V + 1)</p>
+  <p>The second form divides top and bottom by <i>V</i>. It shows that the profit rate depends on two ratios:</p>
+  <ul>
+    <li><b>The rate of surplus value</b> (<i>S/V</i>), or rate of exploitation: surplus value produced per dollar of wages. It rises if the working day is longer, work is more intense, or productivity in wage goods rises faster than real wages.</li>
+    <li><b>The organic composition of capital</b> (<i>C/V</i>): the value of means of production relative to wages. It rises with mechanization, as each worker operates more and more machinery and materials.</li>
+  </ul>
+
+  <h2 id="tendency">3. The tendency to fall</h2>
+  <p>Competition pushes each capitalist to adopt labor-saving machinery to cut costs. As this spreads, <i>C/V</i> rises. Only living labor produces surplus value, so if the rate of surplus value does not rise fast enough to compensate, the rate of profit falls. Marx called it a “tendency” because other forces work against it. Experiment with the race between mechanization and exploitation:</p>
+  <div class="box" id="sim">
+    <h3>Mechanization versus exploitation, over 30 years</h3>
+    <div class="grid2">
+      <div><label>Starting organic composition C/V: <b id="k0v">2.0</b></label><input type="range" id="k0" min="0.5" max="5" step="0.1" value="2"></div>
+      <div><label>Starting rate of surplus value S/V: <b id="e0v">100%</b></label><input type="range" id="e0" min="20" max="300" step="5" value="100"></div>
+      <div><label>Growth of C/V per year (mechanization): <b id="gkv">3.0%</b></label><input type="range" id="gk" min="0" max="6" step="0.25" value="3"></div>
+      <div><label>Growth of S/V per year (exploitation): <b id="gev">1.0%</b></label><input type="range" id="ge" min="0" max="6" step="0.25" value="1"></div>
+    </div>
+    <div style="margin-top:10px"><button class="btn" type="button" data-p="3,1">Mechanization outpaces exploitation</button><button class="btn" type="button" data-p="3,3">Both grow at the same rate</button><button class="btn" type="button" data-p="1,3">Exploitation outpaces mechanization</button></div>
+    <svg id="simchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Rate of profit over 30 years"></svg>
+    <div class="out" id="simout"></div>
+  </div>
+  <div class="think"><b>Try this:</b> set both growth rates equal. Does the profit rate stay constant? Look closely at the formula before you check the answer below the chart. Then ask: how fast must <i>S/V</i> rise to keep the profit rate from falling?</div>
+
+  <h2 id="counter">4. Counteracting tendencies</h2>
+  <p>In Volume 3, Marx listed forces that slow or reverse the fall:</p>
+  <table>
+    <thead><tr><th>Counteracting tendency</th><th>How it raises the profit rate</th></tr></thead>
+    <tbody>
+      <tr><td>Raising the intensity of exploitation</td><td>Longer hours or faster work raise <i>S/V</i>.</td></tr>
+      <tr><td>Depressing wages below the value of labor power</td><td>Lower wages raise <i>S</i> and lower <i>V</i>.</td></tr>
+      <tr><td>Cheapening the elements of constant capital</td><td>Productivity growth in the industries that make machines and materials lowers the <em>value</em> of <i>C</i>, even if the physical quantity of means of production per worker rises.</td></tr>
+      <tr><td>Relative surplus population</td><td>A reserve army of unemployed workers holds wages down and supports labor-intensive branches.</td></tr>
+      <tr><td>Foreign trade</td><td>Cheaper imported inputs and wage goods, and higher profits on capital invested abroad.</td></tr>
+      <tr><td>Increase of share capital</td><td>Capital that earns only interest or dividends stays out of the calculation of the general profit rate.</td></tr>
+    </tbody>
+  </table>
+  <p>The third item is the crux of the debate. If technical progress cheapens machines as fast as it multiplies them, the value composition <i>C/V</i> need not rise at all.</p>
+
+  <h2 id="modern">5. A modern formulation</h2>
+  <p>Modern Marxian economists usually measure the profit rate with national accounts data rather than labor values. Dividing total profit Π by the capital stock <i>K</i>, and multiplying and dividing by output <i>Y</i>:</p>
+  <p class="eq">r = Π / K = (Π / Y) × (Y / K)</p>
+  <p>The <b>profit share</b> Π/<i>Y</i> reflects the balance of power between capital and labor. The <b>capital–output ratio</b> <i>K/Y</i> plays the role of the organic composition. It is not fixed. In the long run it tends toward the ratio of net investment to output divided by the growth rate of output:</p>
+  <p class="eq">(K/Y)* = (net investment / Y) / (growth rate of Y)</p>
+  <p>For example, if net investment is about 3% of output and output grows about 2.5% a year, the capital–output ratio settles near 1.2. If growth slows while firms keep investing the same share of output, capital piles up relative to output and the profit rate falls.</p>
+  <div class="box" id="ky">
+    <h3>Growth, the capital–output ratio, and the profit rate</h3>
+    <div class="grid2">
+      <div><label>Profit share of output: <b id="psv">25%</b></label><input type="range" id="ps" min="10" max="45" step="1" value="25"></div>
+      <div><label>Net investment as a share of output: <b id="sv">3.0%</b></label><input type="range" id="s" min="1" max="10" step="0.25" value="3"></div>
+      <div><label>Growth rate of output: <b id="gv">2.5%</b></label><input type="range" id="g" min="0.5" max="8" step="0.25" value="2.5"></div>
+    </div>
+    <div class="out" id="kyout"></div>
+  </div>
+
+  <h2 id="theories">6. Three theories of crisis</h2>
+  <p>Later Marxian economists developed three main accounts of why profitability, and with it investment and employment, periodically collapses:</p>
+  <table>
+    <thead><tr><th>Theory</th><th>Mechanism</th><th>Main channel</th></tr></thead>
+    <tbody>
+      <tr><td><b>Profit squeeze</b></td><td>Rapid accumulation drains the reserve army of labor; workers gain bargaining power; wages rise faster than productivity.</td><td>Falling profit share</td></tr>
+      <tr><td><b>Underconsumption</b></td><td>Rising exploitation holds wages down; consumption lags behind output; factories run below capacity.</td><td>Rising <i>K/Y</i> through idle capacity</td></tr>
+      <tr><td><b>Rising organic composition</b></td><td>Technical change is biased toward capital; capital per worker rises faster than labor productivity.</td><td>Rising <i>K/Y</i> through mechanization</td></tr>
+    </tbody>
+  </table>
+  <p>The three are not mutually exclusive. Many historians of the postwar economy argue that a profit squeeze in the late 1960s, combined with slowing productivity, helped end the golden age (Week 12), while the decades of wage restraint that followed raised the profit share but left demand dependent on debt (Week 14).</p>
+
+  <h2 id="debate">7. Objections and evidence</h2>
+  <ul>
+    <li><b>The Okishio theorem (1961).</b> Nobuo Okishio showed that if capitalists only adopt techniques that cut costs at current prices, and the real wage stays constant, the new equilibrium profit rate cannot fall. On this view, the profit rate falls only if real wages rise or competition forces firms into techniques that lower profitability overall. Defenders of Marx reply that the theorem compares equilibria and ignores the dynamics of competition, fixed capital, and the time it takes for capital to be devalued.</li>
+    <li><b>Measurement.</b> Results depend on choices: which industries count, how fixed capital is valued, whether profit is measured before or after taxes and interest. Studies for the U.S. and other rich economies commonly find a fall in the profit rate from the mid-1960s to the early 1980s and a partial recovery in the neoliberal decades that followed, driven more by the profit share than by the capital–output ratio.</li>
+    <li><b>Is it a theory of crisis at all?</b> A slow trend cannot by itself explain sudden crises. Most modern Marxian accounts combine a long-run squeeze on profitability with short-run financial and demand mechanisms, much as Minsky and Keynes did from a different starting point (Week 11).</li>
+  </ul>
+  <div class="think"><b>Discussion:</b> If the profit rate is driven mainly by the profit share rather than by mechanization, is that still Marx’s law? What would change about its political implications?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 9 (Marx, the sections on the transformation of values into prices and on the falling rate of profit).</p>
+  <p class="rd">Marx, <em>Capital</em>, vol. 3, Part III (“The Law of the Tendential Fall in the Rate of Profit”), selections.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 6.</p>
+  <p class="rd">Deepankar Basu, <em>The Logic of Capital: An Introduction to Marxist Economic Theory</em> (Cambridge University Press, 2021), chapters on accumulation and crisis.</p>
+
+  <p><a href="index.html#week-7">← Back to Week 7 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const pct = (v, d=1) => (v*100).toFixed(d) + '%';
+function sim() {
+  const k0 = +$('k0').value, e0 = +$('e0').value/100, gk = +$('gk').value/100, ge = +$('ge').value/100;
+  $('k0v').textContent = k0.toFixed(1); $('e0v').textContent = Math.round(e0*100) + '%'; $('gkv').textContent = (gk*100).toFixed(2).replace(/0$/,'') + '%'; $('gev').textContent = (ge*100).toFixed(2).replace(/0$/,'') + '%';
+  const pts = [];
+  for (let t = 0; t <= 30; t++) { const k = k0*Math.pow(1+gk,t), e = e0*Math.pow(1+ge,t); pts.push([t, e/(k+1), k, e]); }
+  const W = 640, H = 230, L = 46, R = 14, T = 12, B = 32, mx = Math.max(...pts.map(p=>p[1]))*1.15;
+  const X = t => L + t/30*(W-L-R), Y = v => H-B - v/mx*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let t = 0; t <= 30; t += 5) g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  const step = mx > 0.6 ? 0.2 : (mx > 0.3 ? 0.1 : 0.05);
+  for (let v = 0; v <= mx; v += step) g += `<line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${Math.round(v*100)}%</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">years</text><text x="${L+6}" y="${T+10}">rate of profit</text>`;
+  g += `<polyline fill="none" stroke="#b03a2e" stroke-width="2.6" points="${pts.map(p=>X(p[0])+','+Y(p[1])).join(' ')}"/>`;
+  $('simchart').innerHTML = g;
+  const a = pts[0], z = pts[30], ch = z[1]/a[1]-1;
+  $('simout').innerHTML = `Year 0: C/V = ${a[2].toFixed(2)}, S/V = ${pct(a[3],0)}, profit rate <b>${pct(a[1])}</b>. Year 30: C/V = ${z[2].toFixed(2)}, S/V = ${pct(z[3],0)}, profit rate <b>${pct(z[1])}</b> (${ch >= 0 ? '+' : ''}${(ch*100).toFixed(0)}%). ` +
+    (Math.abs(ch) < 0.02 ? 'The profit rate is roughly stable.' : Math.abs(gk-ge) < 1e-9 ? 'Both ratios grow at the same rate, yet the profit rate rises toward (S/V) ÷ (C/V): as C/V grows, the “+1” in the denominator (variable capital) matters less and less.' : ch < 0 ? 'Mechanization outruns exploitation, and the profit rate falls.' : 'Exploitation outruns mechanization, and the profit rate rises.');
+}
+['k0','e0','gk','ge'].forEach(i => $(i).addEventListener('input', sim));
+document.querySelectorAll('#sim .btn').forEach(b => b.addEventListener('click', () => { const [k, e] = b.dataset.p.split(','); $('gk').value = k; $('ge').value = e; sim(); }));
+sim();
+function ky() {
+  const ps = +$('ps').value/100, s = +$('s').value/100, g = +$('g').value/100;
+  $('psv').textContent = Math.round(ps*100) + '%'; $('sv').textContent = (s*100).toFixed(2).replace(/\.?0+$/,'') + '%'; $('gv').textContent = (g*100).toFixed(2).replace(/\.?0+$/,'') + '%';
+  const kyr = s/g, r = ps/kyr;
+  $('kyout').innerHTML = `Equilibrium capital–output ratio: <b>${kyr.toFixed(2)}</b> (= ${(s*100).toFixed(2).replace(/\.?0+$/,'')}% ÷ ${(g*100).toFixed(2).replace(/\.?0+$/,'')}%). Rate of profit = ${Math.round(ps*100)}% × 1 / ${kyr.toFixed(2)} = <b>${pct(r)}</b>. Lower the growth rate with investment unchanged and watch the profit rate fall.`;
+}
+['ps','s','g'].forEach(i => $(i).addEventListener('input', ky)); ky();
+</script>
+</body>
+</html>
