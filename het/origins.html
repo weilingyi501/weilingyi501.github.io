@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surplus, Markets, and the Birth of Capitalism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the origins of capitalism and of economic thought: the surplus product, feudalism and its crisis, enclosure, the price revolution, mercantilism, the physiocrats, and an interactive on the arithmetic of economic growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .surplus { display: flex; height: 46px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .surplus div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 1</p>
+  <h1>Surplus, Markets, and the Birth of Capitalism</h1>
+  <p class="lead">Before there was economics, there had to be an economy that seemed to run by its own laws. This module traces how capitalism emerged in Europe and how the first economic thinkers, the mercantilists and the physiocrats, tried to understand it.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#economics">Economics or political economy?</a></li><li><a href="#surplus">The surplus product</a></li><li><a href="#feudal">Feudalism and its crisis</a></li><li><a href="#transition">The transition to capitalism</a></li><li><a href="#growth">The arithmetic of growth (interactive)</a></li><li><a href="#merc">Mercantilism</a></li><li><a href="#phys">The physiocrats</a></li></ol>
+  </div>
+
+  <h2 id="economics">1. Economics or political economy?</h2>
+  <p>The word “economics” comes from the Greek <em>oikonomia</em>, the management of a household. For most of its history the subject was called <b>political economy</b>, from <em>polis</em>, the city-state: the management of the wealth of a whole society, with its classes, laws, and states. Smith, Ricardo, Malthus, and Marx were all political economists. The shorter name “economics” spread only in the late nineteenth century, when Alfred Marshall and others recast the field as the study of individual choice (Week 9). The change of name was also a change of questions, and this course follows both.</p>
+
+  <h2 id="surplus">2. The surplus product</h2>
+  <p>Every society must produce enough to feed, clothe, and house its members and to replace the tools, seed, and materials used up in production. Whatever is produced beyond that is the <b>surplus product</b>. How large it is, who controls it, and how it is used are among the most important facts about any society.</p>
+  <div class="box" id="sbox">
+    <h3>Dividing the total product</h3>
+    <div class="grid2">
+      <div><label>Basic consumption of producers: <b id="cv">70%</b></label><input type="range" id="c" min="40" max="95" step="1" value="70"></div>
+      <div><label>Replacement of tools, seed, materials: <b id="rv">15%</b></label><input type="range" id="r" min="0" max="40" step="1" value="15"></div>
+    </div>
+    <div class="surplus"><div id="sc" style="background:#8a929b"></div><div id="sr" style="background:#5b6670"></div><div id="ss" style="background:#c47a2c"></div></div>
+    <div class="out" id="sout"></div>
+  </div>
+  <p>For most of human history, perhaps 99 percent of it, people lived in small foraging societies with little or no surplus and no permanent hierarchy. Agriculture, which began about 10,000 years ago, made a regular surplus possible. With it came classes that lived from the surplus without producing it, states, armies, priesthoods, and cities. In different societies the surplus was taken as tribute, as labor services, as rent, or as taxes, and spent on palaces, temples, wars, and luxury. What was new about capitalism was that a large part of the surplus would be reinvested to produce still more surplus.</p>
+
+  <h2 id="feudal">3. Feudalism and its crisis</h2>
+  <p>After the collapse of the Western Roman Empire, Western Europe was organized around the <b>manor</b>. Serfs were bound to the land; they farmed their own plots and owed the lord labor on his land, a share of their crops, or payments, in return for protection and the right to stay. The surplus was extracted by custom and force, not through markets, and was mostly consumed by lords, the church, and the crown.</p>
+  <p>Between about 1000 and 1300, Europe’s population and output grew: the three-field system, heavier ploughs, and horses raised yields; towns revived; trade expanded. Then came crisis. Famine struck in the 1310s, and the <b>Black Death</b> of 1347–51 killed somewhere between a third and a half of Europe’s population. Labor became scarce. Lords tried to hold wages down and tighten serfdom, and peasants revolted, in France (1358) and in England (1381). Over the following century serfdom faded in Western Europe, as labor services were commuted into money rents and many peasants gained more freedom.</p>
+
+  <h2 id="transition">4. The transition to capitalism</h2>
+  <p><b>Capitalism</b> here means an economy in which production is organized by owners of capital who hire wage workers to produce commodities for sale at a profit, and reinvest the profit. Several long processes created it:</p>
+  <ul>
+    <li><b>Long-distance trade and merchant capital.</b> Italian, Flemish, and later Dutch and English merchants grew rich by trade and finance. Merchants began to organize production directly through the <b>putting-out system</b>, supplying raw materials to rural households and selling the finished cloth.</li>
+    <li><b>Enclosure.</b> In England, rising demand for wool from the fifteenth century led landlords to fence common fields for sheep. Peasants lost access to land and became a class with nothing to sell but their labor.</li>
+    <li><b>Conquest and the price revolution.</b> After 1492, Spanish conquest of the Americas sent a flood of silver into Europe. Prices rose several-fold over the sixteenth century, which squeezed those on fixed incomes, including landlords with customary rents, and favored merchants and enterprising farmers.</li>
+    <li><b>The nation-state.</b> Monarchs built standing armies and bureaucracies financed by taxes and borrowing, and they used state power to promote trade, colonies, and manufacturing.</li>
+  </ul>
+  <p>The logic of the new system is captured by a simple formula. A merchant or industrialist begins with money (M), buys commodities (C), and sells them for more money (M′). The point is not the use of the goods but the increase in money, and the process starts again with M′:</p>
+  <p class="eq">M – C – M′ – C – M″ – …</p>
+  <p>Where the increment comes from is the central puzzle of political economy. The mercantilists found it in trade; the physiocrats in agriculture; Smith and Ricardo in labor; Marx in unpaid labor (Week 6); the marginalists in the productivity of capital and the reward for waiting (Weeks 8–9).</p>
+
+  <h2 id="growth">5. The arithmetic of growth</h2>
+  <p>Angus Maddison’s historical estimates for Britain suggest that income per person grew at almost zero percent a year in the first millennium, about 0.1 percent a year from 1000 to 1500, about 0.2 percent from 1500 to 1820, and about 1.4 percent a year after 1820. These differences look small, but compounding makes them enormous. A useful rule: a quantity growing at <i>g</i> percent a year doubles in about 70 ÷ <i>g</i> years.</p>
+  <div class="box" id="gbox">
+    <h3>What a growth rate means over time</h3>
+    <div class="grid2">
+      <div><label>Annual growth rate: <b id="gv">1.4%</b></label><input type="range" id="g" min="0" max="5" step="0.1" value="1.4"></div>
+      <div><label>Number of years: <b id="yv">100</b></label><input type="range" id="y" min="10" max="500" step="10" value="100"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" data-g="0.1" type="button">Medieval Europe (0.1%)</button><button class="btn" data-g="0.2" type="button">Early modern Britain (0.2%)</button><button class="btn" data-g="1.4" type="button">Britain after 1820 (1.4%)</button><button class="btn" data-g="7" type="button">China in its fastest decades (about 7–10%)</button></div>
+    <svg id="gchart" viewBox="0 0 640 210" width="100%" role="img" aria-label="Growth of income over time"></svg>
+    <div class="out" id="gout"></div>
+  </div>
+  <p>Modern economic growth began with the Industrial Revolution, which replaced human and animal muscle and wood with coal and, later, oil and gas. Explaining why it began in northwestern Europe, and whether it can continue on a finite planet (Week 14), are questions that run through the history of economic thought.</p>
+
+  <h2 id="merc">6. Mercantilism</h2>
+  <p>The first sustained writing on the economy came from merchants and royal advisers between the sixteenth and eighteenth centuries, later grouped together as <b>mercantilists</b>. They were not a school with a single doctrine, but they shared some common views:</p>
+  <ul>
+    <li>A nation’s wealth and power depend on its stock of gold and silver.</li>
+    <li>A nation without mines gains precious metals through a <b>favorable balance of trade</b>: exporting more than it imports.</li>
+    <li>The state should therefore encourage exports and manufacturing, restrict imports, and acquire colonies as sources of raw materials and markets.</li>
+  </ul>
+  <blockquote>The ordinary means therefore to encrease our wealth and treasure is by Forraign Trade, wherein wee must ever observe this rule; to sell more to strangers yearly than wee consume of theirs in value.<cite>Thomas Mun, <em>England’s Treasure by Forraign Trade</em> (written c. 1630, published 1664)</cite></blockquote>
+  <p>Mercantilists explained profit as arising in exchange, from buying cheap and selling dear. But what one trader gains, another loses; this can explain one nation’s gain at another’s expense, but not how the world as a whole grows richer. Later mercantilists such as William Petty began to look at production and labor: Petty argued that “labour is the father and active principle of wealth, as lands are the mother.” Adam Smith built his <em>Wealth of Nations</em> in part as an attack on what he called the “mercantile system.”</p>
+
+  <h2 id="phys">7. The physiocrats</h2>
+  <p>In mid-eighteenth-century France, a group around François Quesnay, physician to Louis XV, argued that only <b>agriculture</b> produces a surplus, the <em>produit net</em> (net product), because nature cooperates with labor on the land; manufacturing and trade merely transform or move what agriculture produces. They called themselves <em>économistes</em>; their name, “physiocrats,” means rule of nature.</p>
+  <p>Quesnay’s <b>Tableau économique</b> (1758) traced how the annual product circulates among three classes: farmers (the productive class), landowners (who receive the net product as rent), and artisans and merchants (the “sterile” class). It was the first model of the economy as a circular flow, an ancestor of both Marx’s reproduction schemes and modern input–output tables. The physiocrats’ policy conclusions were radical for absolutist France: abolish internal tolls and the regulations on the grain trade, and replace France’s many taxes with a single tax on the net product of land. Their slogan, <em>laissez faire, laissez passer</em>, would outlive them.</p>
+  <div class="think"><b>Discussion:</b> The mercantilists said wealth comes from trade, the physiocrats from land, Smith from labor. What do you think each of these views reflects about the economy its authors lived in?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 1 (Introduction: a definition of capitalism, precapitalist European economy, the transition to capitalism).</p>
+  <p class="rd">Hunt, ch. 2 (Economic Ideas Before Adam Smith).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 2 (The Economic Revolution).</p>
+  <p class="rd">Stilwell, <em>Political Economy: The Contest of Economic Ideas</em>, ch. 5–7.</p>
+
+  <p><a href="index.html#week-1">← Back to Week 1 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function sp() {
+  let c = +$('c').value, r = +$('r').value; if (c + r > 100) { r = 100 - c; $('r').value = r; }
+  const s = 100 - c - r;
+  $('cv').textContent = c + '%'; $('rv').textContent = r + '%';
+  $('sc').style.width = c + '%'; $('sr').style.width = r + '%'; $('ss').style.width = s + '%';
+  $('sc').textContent = c >= 12 ? 'consumption' : ''; $('sr').textContent = r >= 10 ? 'replacement' : ''; $('ss').textContent = s >= 8 ? `surplus ${s}%` : (s > 0 ? s + '%' : '');
+  $('sout').innerHTML = s <= 0 ? 'No surplus: the society can only reproduce itself. There is nothing to support non-producers or to invest.' :
+    `A surplus of <b>${s}%</b> of the total product can support people who do not produce (lords, priests, soldiers, officials), be consumed as luxury, or be <b>invested</b> to expand production. Under capitalism, much of it is reinvested.`;
+}
+['c','r'].forEach(i => $(i).addEventListener('input', sp)); sp();
+
+function gr() {
+  const g = +$('g').value/100, Y = +$('y').value;
+  $('gv').textContent = (g*100).toFixed(1) + '%'; $('yv').textContent = Y;
+  const fin = Math.pow(1+g, Y), dbl = g > 0 ? Math.log(2)/Math.log(1+g) : Infinity;
+  const W = 640, H = 210, L = 56, R = 14, T = 12, B = 30, mx = Math.max(2, fin);
+  const X = t => L + t/Y*(W-L-R), Yp = v => H-B - (v-1)/(mx-1)*(H-B-T);
+  let g2 = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let i = 0; i <= 4; i++) { const t = Math.round(Y*i/4); g2 += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`; }
+  for (let i = 0; i <= 4; i++) { const v = 1 + (mx-1)*i/4; g2 += `<text x="${L-6}" y="${Yp(v)+4}" text-anchor="end">${v < 10 ? v.toFixed(1) : Math.round(v).toLocaleString()}×</text>`; }
+  g2 += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">years</text>`;
+  let pts = []; for (let i = 0; i <= 100; i++) { const t = Y*i/100; pts.push(X(t)+','+Yp(Math.pow(1+g,t))); }
+  g2 += `<polyline fill="none" stroke="#0077b6" stroke-width="2.6" points="${pts.join(' ')}"/>`;
+  $('gchart').innerHTML = g2;
+  const life = Math.pow(1+g, 40);
+  $('gout').innerHTML = `After ${Y} years, income is <b>${fin < 100 ? fin.toFixed(2) : Math.round(fin).toLocaleString()}×</b> its starting level. Doubling time: <b>${isFinite(dbl) ? Math.round(dbl) + ' years' : 'never'}</b>. Over a 40-year working life, income changes by ${((life-1)*100).toFixed(0)}%, ${life < 1.1 ? 'too little for anyone to notice.' : life < 2 ? 'a noticeable rise.' : 'transforming living standards within one lifetime.'}`;
+}
+['g','y'].forEach(i => $(i).addEventListener('input', gr));
+document.querySelectorAll('#gbox .btn').forEach(b => b.addEventListener('click', () => { $('g').value = Math.min(5, +b.dataset.g); if (+b.dataset.g > 5) { $('g').max = 10; $('g').value = b.dataset.g; } gr(); }));
+gr();
+</script>
+</body>
+</html>
