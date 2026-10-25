@@ -83,7 +83,6 @@
 .het .wb ul.ideas li { margin-bottom: 5px; }
 .het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
 .het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
-.het .exam { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 16px; margin: 10px 0; color: var(--muted); font-size: 15.5px; }
 .het .books li { margin-bottom: 6px; }
 .het .credits { font-size: 13px; color: var(--faint); }
 .het .credits p { text-align: left; }
@@ -440,9 +439,7 @@ WEEKS.forEach(w => {
     <div class="think"><b>Question to think about:</b> ${w.q}</div>
     ${w.mod ? `<a class="mod" href="${w.mod[0]}">${w.mod[1]}</a>` : ''}
   </div></details>`;
-  if (w.n === 7) html += `<div class="exam">Midterm exam after Week 7: classical political economy and Marx, including a calculation of Ricardo’s natural price.</div>`;
 });
-html += `<div class="exam">Final exam and short paper: applying one great economist’s ideas to a present-day problem.</div>`;
 weeks.innerHTML = html;
 function openHash() { if (location.hash.startsWith('#week-')) { const d = document.querySelector(location.hash); if (d) { d.open = true; d.scrollIntoView({block:'start'}); } } }
 openHash(); window.addEventListener('hashchange', openHash);
