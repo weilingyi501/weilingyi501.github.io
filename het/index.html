@@ -498,7 +498,8 @@ const WEEKS = [
   people:['Hyman Minsky','Herbert Simon','Douglass North','Joseph Schumpeter','Robert Solow'],
   ideas:['Minsky’s financial instability hypothesis and why government deficits stabilize profits.','Behavioral economics: bounded rationality and its policy uses.','Institutions and long-run development: why so few countries are rich.','Schumpeter’s creative destruction and the innovation economy.','The developmentalist tradition and East Asian growth.','Ecological limits and the future of globalization.','The revival of critical political economy.'],
   read:'Hunt, ch. 18–19. Companion: Heilbroner, ch. 10; Yueh, ch. 7 (Schumpeter), ch. 11 (North), ch. 12 (Solow), and epilogue; Chang, ch. 4; Randers, 2052; Zeihan, The End of the World Is Just the Beginning.',
-  q:'Which of the schools we studied best explains the world since 2008, and which explains it worst?'},
+  q:'Which of the schools we studied best explains the world since 2008, and which explains it worst?',
+  mod:['after-2008.html','Open the module: Economics After 2008 (with interactive Minsky and limits-to-growth models) →']},
 ];
 // Split a reading note into one entry per paragraph: core readings first, then companions.
 function splitTop(s) { const out = []; let depth = 0, cur = ''; for (const ch of s) { if (ch === '(') depth++; if (ch === ')') depth--; if (ch === ';' && depth === 0) { out.push(cur.trim()); cur = ''; } else cur += ch; } if (cur.trim()) out.push(cur.trim()); return out; }

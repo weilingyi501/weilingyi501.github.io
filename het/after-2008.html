@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Economics After 2008 | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on economics after 2008: Minsky's financial instability hypothesis with an interactive model, behavioral economics, institutions and development, Schumpeter and innovation, ecological limits with an interactive exponential reserve index, deglobalization, and the revival of political economy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 14</p>
+  <h1>Economics After 2008: Instability, Institutions, and the Planet</h1>
+  <p class="lead">The financial crisis of 2008 sent economists back to thinkers the textbooks had set aside. This last module surveys the questions that now shape the field, and traces each to the traditions we have studied.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#minsky">2008 and the return of Minsky (interactive)</a></li><li><a href="#behavior">Behavioral economics</a></li><li><a href="#institutions">Institutions, development, and the state</a></li><li><a href="#innovation">Schumpeter and innovation</a></li><li><a href="#planet">Limits to growth (interactive)</a></li><li><a href="#global">Globalization and its discontents</a></li><li><a href="#revival">The revival of political economy</a></li></ol>
+  </div>
+
+  <h2 id="minsky">1. 2008 and the return of Minsky</h2>
+  <p>In September 2008, the investment bank Lehman Brothers failed and the world financial system came close to collapse. Output and trade fell faster than at any time since the Great Depression. Visiting the London School of Economics that November, Queen Elizabeth II reportedly asked why nobody had seen the crisis coming. The dominant macroeconomic models of the time had little room for banks, debt, or default.</p>
+  <p>One economist had built a theory around exactly these. Hyman Minsky (1919–1996), a post-Keynesian, argued in <em>Stabilizing an Unstable Economy</em> (1986) that financial fragility grows out of stability itself. After years of good times, lenders and borrowers grow confident and take on more debt relative to income. Minsky classified borrowers into three types:</p>
+  <ul>
+    <li><b>Hedge</b> finance: income covers both interest and repayment of principal.</li>
+    <li><b>Speculative</b> finance: income covers interest, but debts must be rolled over (refinanced) as they come due.</li>
+    <li><b>Ponzi</b> finance: income does not even cover interest; the borrower must borrow more, or sell assets, to pay, and depends on asset prices continuing to rise.</li>
+  </ul>
+  <p>As a boom continues, the share of speculative and Ponzi units rises. Then a rise in interest rates or a fall in income pushes speculative units into Ponzi positions, forced asset sales drive prices down, and the boom turns into a crash, the “Minsky moment.” Commentators in 2007–08 revived the phrase.</p>
+  <div class="box" id="fbox">
+    <h3>Hedge, speculative, or Ponzi?</h3>
+    <p class="note" style="margin-top:0">Five borrowers, each with annual income and a loan repaid in equal installments. Raise the interest rate, or let incomes fall in a recession.</p>
+    <div class="grid2">
+      <div><label>Interest rate: <b id="rv">4%</b></label><input type="range" id="r" min="1" max="12" step="0.5" value="4"></div>
+      <div><label>Fall in income: <b id="yv">0%</b></label><input type="range" id="y" min="0" max="40" step="5" value="0"></div>
+    </div>
+    <svg id="fchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="Income versus debt payments for five borrowers"></svg>
+    <div class="out" id="fout"></div>
+  </div>
+  <p>Minsky drew on Keynes and on Michał Kalecki. Kalecki’s profit equation shows why government deficits stabilized the economy in 2008–09: in a simplified accounting, aggregate profits equal investment plus the government deficit plus net exports, minus household saving. When private investment collapses, a larger deficit keeps profits, and with them firms’ ability to service debt, from collapsing too. Minsky called this the role of “big government,” together with a central bank acting as lender of last resort.</p>
+  <div class="think"><b>Discussion:</b> Minsky thought stability breeds instability. Does this imply that regulation must keep changing as finance innovates around it?</div>
+
+  <h2 id="behavior">2. Behavioral economics</h2>
+  <p>Neoclassical theory (Weeks 8–9) assumed that people maximize utility with full information. Herbert Simon argued in “A Behavioral Model of Rational Choice” (1955) that real people have <b>bounded rationality</b>: limited information and limited ability to compute. They <b>satisfice</b>, choosing the first option that is good enough, rather than optimize. Simon received the Nobel Prize in 1978.</p>
+  <p>Daniel Kahneman and Amos Tversky documented systematic departures from rational choice. Their “Prospect Theory” (<em>Econometrica</em>, 1979) showed that people judge outcomes as gains and losses relative to a reference point, and that losses hurt more than equal gains please (<b>loss aversion</b>). Richard Thaler carried these findings into economics proper; with Cass Sunstein he wrote <em>Nudge</em> (2008), which proposed changing default options, such as automatic enrollment in pension plans, to improve choices without forbidding any. Kahneman received the Nobel Prize in 2002, Thaler in 2017.</p>
+  <p>Critics note that behavioral economics mostly corrects the individual in the model and leaves the theory of markets and distribution untouched. Veblen (Week 10) had already argued in 1898 that the “lightning calculator of pleasures and pains” was a poor model of human beings shaped by habits and institutions.</p>
+
+  <h2 id="institutions">3. Institutions, development, and the state</h2>
+  <p>Why are so few countries rich? Douglass North answered that institutions matter most:</p>
+  <blockquote>Institutions are the rules of the game in a society or, more formally, are the humanly devised constraints that shape human interaction.<cite>Douglass North, <em>Institutions, Institutional Change and Economic Performance</em> (1990), p. 3</cite></blockquote>
+  <p>Secure property rights and the rule of law, North argued, lower the costs of transacting and allow markets to grow. Daron Acemoglu, Simon Johnson, and James Robinson extended this work, contrasting “inclusive” with “extractive” institutions and tracing the difference back to colonial history; they received the Nobel Prize in 2024.</p>
+  <p>A different tradition stresses the state. Alexander Hamilton’s <em>Report on Manufactures</em> (1791) and Friedrich List’s <em>National System of Political Economy</em> (1841) argued that young industries need protection before they can face free trade. Studies of Japan, South Korea, and Taiwan, such as Chalmers Johnson’s <em>MITI and the Japanese Miracle</em> (1982), Alice Amsden’s <em>Asia’s Next Giant</em> (1989), and Robert Wade’s <em>Governing the Market</em> (1990), showed that the <b>developmental state</b> used credit, tariffs, and export targets to build industries. Ha-Joon Chang’s <em>Kicking Away the Ladder</em> (2002) argued that today’s rich countries used these very policies before recommending free trade to others. China’s rise has made this debate central once again.</p>
+
+  <h2 id="innovation">4. Schumpeter and innovation</h2>
+  <p>Joseph Schumpeter (1883–1950) argued that capitalism is never in equilibrium. Its engine is the entrepreneur who introduces new products, methods, and forms of organization, which destroy old industries as they create new ones. In <em>Capitalism, Socialism and Democracy</em> (1942), he called this process of “creative destruction” the essential fact about capitalism.</p>
+  <p>Robert Solow’s growth model (1956) and his growth accounting (1957) found that most of the rise in output per worker in the United States came not from more capital but from a residual, “technical progress,” left unexplained by the model. Later endogenous growth theory sought to explain that residual with investment in research and ideas. Philippe Aghion and Peter Howitt built a formal model of Schumpeterian creative destruction, and Joel Mokyr studied the cultural and historical sources of innovation; the three shared the Nobel Prize in 2025. Debates about digital platforms, artificial intelligence, and market concentration revisit Schumpeter’s question of whether large firms promote or suppress innovation.</p>
+
+  <h2 id="planet">5. Limits to growth</h2>
+  <p>In 1972, a team at MIT led by Donella Meadows, Dennis Meadows, Jørgen Randers, and William Behrens published <em>The Limits to Growth</em> for the Club of Rome. Their computer model projected that if population, industrial output, and pollution kept growing exponentially, the world would overshoot its physical limits within roughly a century. Economists such as William Nordhaus criticized the model for ignoring prices and technical change. Yet the book’s central point about exponential growth is arithmetic. A resource that would last 100 years at today’s rate of use lasts far less if use grows each year:</p>
+  <div class="box" id="lbox">
+    <h3>The exponential reserve index</h3>
+    <div class="grid2">
+      <div><label>Reserves at today’s rate of use (static index): <b id="sv">100 years</b></label><input type="range" id="s" min="20" max="500" step="10" value="100"></div>
+      <div><label>Growth of use per year: <b id="gv">3%</b></label><input type="range" id="g" min="0" max="7" step="0.5" value="3"></div>
+    </div>
+    <div style="margin-top:6px"><button class="btn" type="button" id="x5">Discover five times more reserves</button></div>
+    <svg id="lchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Cumulative use of a resource compared with reserves"></svg>
+    <div class="out" id="lout"></div>
+    <p class="note">Formula: with continuous growth g, reserves equal to s years of current use last ln(1 + g·s) / g years. The Limits to Growth tabulated this “exponential index” for many minerals.</p>
+  </div>
+  <p>The debate has since moved from mineral exhaustion to the capacity of the atmosphere to absorb carbon. The Stern Review (2006) argued that the costs of climate change far exceed the costs of preventing it; Nordhaus, who received the Nobel Prize in 2018, recommended a gradually rising carbon tax, a Pigouvian remedy (Week 9). Randers’s <em>2052</em> (2012) forecasts that slower growth and political short-termism will leave the world well short of what is needed.</p>
+
+  <h2 id="global">6. Globalization and its discontents</h2>
+  <p>From the 1990s to 2008, world trade grew much faster than world output, and production was spread across global supply chains. Since then, that growth has stalled. Dani Rodrik’s <em>The Globalization Paradox</em> (2011) argued that a country cannot have deep economic integration, national sovereignty, and democracy all at once; it must give up one of the three. The trade war between the United States and China from 2018, the supply disruptions of the COVID-19 pandemic, and the return of broad tariffs in the 2020s turned the old debate between Ricardo’s case for free trade (Week 4) and List’s case for protection into front-page news. Peter Zeihan’s <em>The End of the World Is Just the Beginning</em> (2022) predicts that aging populations and a retreating United States will break global trade into regional blocs.</p>
+
+  <h2 id="revival">7. The revival of political economy</h2>
+  <p>The crisis also revived questions of distribution that the classical economists had placed at the center of the discipline. Thomas Piketty’s <em>Capital in the Twenty-First Century</em> (2013) assembled two centuries of tax data to show that inequality of wealth fell between 1914 and the 1970s and has risen since, and argued that when the return on capital (r) exceeds the growth rate (g), inherited wealth grows in importance. The book became a bestseller and brought the language of Ricardo and Marx, of rent, capital, and class shares, back into public debate.</p>
+  <p>Students, too, pushed for change. After 2008, groups such as Rethinking Economics and the International Student Initiative for Pluralism in Economics (2014) called for teaching that includes the history of economic thought, competing schools, and the real economy.</p>
+  <table>
+    <tr><th>Question after 2008</th><th>Traditions it draws on</th><th>Course weeks</th></tr>
+    <tr><td>Why do financial crises happen?</td><td>Keynes, Kalecki, Minsky; Austrian business-cycle theory</td><td>11, 13</td></tr>
+    <tr><td>Why are some countries rich?</td><td>Smith, List, institutionalism, developmentalism, world-systems</td><td>2, 10</td></tr>
+    <tr><td>Who gets what, and why?</td><td>Ricardo, Marx, Clark, the Cambridge controversy</td><td>4, 6–7, 9, 12</td></tr>
+    <tr><td>Can growth go on forever?</td><td>Malthus, Schumpeter, Pigou, ecological economics</td><td>4, 9</td></tr>
+  </table>
+  <div class="think"><b>Final discussion:</b> Which of the schools we studied best explains the world since 2008, and which explains it worst? Pick one event, such as the 2008 crisis, the rise of China, or climate change, and compare how two schools would explain it.</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt and Lautzenheiser, ch. 18–19.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 10.</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 7 (Schumpeter), ch. 11 (North), ch. 12 (Solow), and epilogue.</p>
+  <p class="rd">Chang, <em>Economics: The User’s Guide</em>, ch. 4.</p>
+  <p class="rd">Randers, <em>2052: A Global Forecast for the Next Forty Years</em> (2012).</p>
+  <p class="rd">Zeihan, <em>The End of the World Is Just the Beginning</em> (2022).</p>
+
+  <p><a href="index.html#week-14">← Back to Week 14 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// borrowers: name, income, debt, years to repay
+const F = [['A',14,60,10],['B',12,100,20],['C',10,120,25],['D',9,150,30],['E',8,180,30]];
+const COL = {Hedge:'#2a9d8f', Speculative:'#e9a23b', Ponzi:'#d1495b'};
+function minsky() {
+  const r = +$('r').value/100, cut = +$('y').value/100;
+  $('rv').textContent = (r*100).toFixed(1).replace('.0','') + '%'; $('yv').textContent = Math.round(cut*100) + '%';
+  const W = 640, H = 250, L = 40, T = 14, B = 34, MX = 24, bw = 44, gap = (W - L - 10) / F.length;
+  const Y = v => H - B - Math.min(v, MX)/MX*(H - B - T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-10}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,8,16,24].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
+  const cnt = {Hedge:0, Speculative:0, Ponzi:0};
+  F.forEach(([n, inc, D, T2], i) => {
+    const y = inc*(1 - cut), int = r*D, pr = D/T2;
+    const type = y >= int + pr ? 'Hedge' : y >= int ? 'Speculative' : 'Ponzi'; cnt[type]++;
+    const x = L + 14 + i*gap;
+    g += `<rect x="${x}" y="${Y(y)}" width="${bw}" height="${H-B-Y(y)}" fill="#0077b6" opacity=".85"/>`;
+    g += `<rect x="${x+bw+4}" y="${Y(int)}" width="${bw}" height="${H-B-Y(int)}" fill="#7d8790"/>`;
+    g += `<rect x="${x+bw+4}" y="${Y(int+pr)}" width="${bw}" height="${Y(int)-Y(int+pr)}" fill="#c3c9cf"/>`;
+    g += `<text x="${x+bw+2}" y="${H-B+14}" text-anchor="middle">Borrower ${n}</text>`;
+    g += `<text x="${x+bw+2}" y="${H-B+28}" text-anchor="middle" style="fill:${COL[type]};font-weight:600">${type}</text>`;
+  });
+  g += `<rect x="${W-250}" y="2" width="10" height="10" fill="#0077b6"/><text x="${W-236}" y="11">income</text><rect x="${W-186}" y="2" width="10" height="10" fill="#7d8790"/><text x="${W-172}" y="11">interest</text><rect x="${W-118}" y="2" width="10" height="10" fill="#c3c9cf"/><text x="${W-104}" y="11">principal due</text>`;
+  $('fchart').innerHTML = g;
+  $('fout').innerHTML = Object.keys(cnt).map(k => `<span class="tag" style="background:${COL[k]}">${k}: ${cnt[k]}</span>`).join(' ') +
+    (cnt.Ponzi ? ` &nbsp;${cnt.Ponzi} borrower${cnt.Ponzi>1?'s':''} must borrow more or sell assets just to pay interest. If many sell at once, asset prices fall and lenders stop rolling over the speculative borrowers’ debts too.` :
+     cnt.Speculative ? ` &nbsp;Speculative borrowers are fine as long as lenders keep refinancing them at today’s rate.` : ` &nbsp;Every borrower can pay off its debts from income: a robust financial structure.`);
+}
+['r','y'].forEach(i => $(i).addEventListener('input', minsky)); minsky();
+
+function limits() {
+  const s = +$('s').value, g = +$('g').value/100;
+  $('sv').textContent = s + ' years'; $('gv').textContent = (g*100).toFixed(1).replace('.0','') + '%';
+  const life = g ? Math.log(1 + g*s)/g : s;
+  const W = 640, H = 230, L = 46, T = 12, B = 30, XM = Math.max(60, Math.ceil(Math.min(s, 400)/50)*50);
+  const X = t => L + t/XM*(W - L - 14), Y = v => H - B - Math.min(v, s*1.15)/(s*1.15)*(H - B - T);
+  const cum = t => g ? (Math.exp(g*t) - 1)/g : t;
+  let g2 = `<line x1="${L}" y1="${H-B}" x2="${W-14}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let t = 0; t <= XM; t += XM/5) g2 += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g2 += `<text x="${(L+W)/2}" y="${H-2}" text-anchor="middle">years from today</text>`;
+  g2 += `<line x1="${L}" y1="${Y(s)}" x2="${W-14}" y2="${Y(s)}" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/><text x="${W-18}" y="${Y(s)-6}" text-anchor="end" fill="#c47a2c">total reserves</text>`;
+  let p = '', q = ''; for (let t = 0; t <= XM; t += XM/200) { p += (p ? 'L' : 'M') + X(t) + ' ' + Y(cum(t)); q += (q ? 'L' : 'M') + X(t) + ' ' + Y(t); }
+  g2 += `<path d="${q}" fill="none" stroke="#9fc4e6" stroke-width="2" stroke-dasharray="4 3"/><path d="${p}" fill="none" stroke="#0077b6" stroke-width="2.6"/>`;
+  if (life <= XM) g2 += `<circle cx="${X(life)}" cy="${Y(s)}" r="6" fill="#023e8a"/>`;
+  g2 += `<text x="${L+6}" y="${T+10}">cumulative use</text>`;
+  $('lchart').innerHTML = g2;
+  const life5 = g ? Math.log(1 + g*5*s)/g : 5*s;
+  $('lout').innerHTML = `Reserves last <b>${life.toFixed(0)} years</b>, not ${s}. ` + (g ? `Use doubles every ${(Math.log(2)/g).toFixed(0)} years. Discovering five times more reserves extends their life only to <b>${life5.toFixed(0)} years</b>.` : 'With no growth in use, the static index is exact.');
+}
+['s','g'].forEach(i => $(i).addEventListener('input', limits));
+$('x5').addEventListener('click', () => { const s = $('s'); s.value = Math.min(500, +s.value*5); limits(); });
+limits();
+</script>
+</body>
+</html>
