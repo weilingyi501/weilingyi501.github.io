@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adam Smith | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Adam Smith: the Scottish Enlightenment, moral sentiments, the four stages of society, the division of labor with an interactive pin factory, the invisible hand, the critique of the mercantile system, and the duties of government.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 10px 0; }
+.vt .stages div { background: var(--soft); border-radius: 10px; padding: 12px; font-size: 15.5px; }
+.vt .stages b { display: block; color: var(--bar); }
+@media (max-width: 680px) { .vt .stages { grid-template-columns: 1fr 1fr; } }
+.vt .workers { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 4px; min-height: 40px; }
+.vt .workers span { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 600; color: #fff; background: #0077b6; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 2</p>
+  <h1>Adam Smith: Commerce, the Division of Labor, and the Invisible Hand</h1>
+  <p class="lead">The founder of classical political economy explained how a society of self-interested strangers could grow rich, and was far more worried about merchants, monopolies, and the effects of factory work than his modern reputation suggests.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#life">Smith and the Scottish Enlightenment</a></li><li><a href="#moral">Moral sentiments</a></li><li><a href="#stages">The four stages of society</a></li><li><a href="#division">The division of labor (interactive)</a></li><li><a href="#hand">Self-interest and the invisible hand</a></li><li><a href="#merc">Against the mercantile system</a></li><li><a href="#state">The duties of government, and Smith’s worries</a></li></ol>
+  </div>
+
+  <h2 id="life">1. Smith and the Scottish Enlightenment</h2>
+  <p>Adam Smith (1723–1790) was born in Kirkcaldy, a small port near Edinburgh, and became professor of moral philosophy at the University of Glasgow. Scotland in his lifetime was changing fast: the union with England in 1707 opened English and colonial markets to Scottish merchants, Glasgow grew rich on the tobacco trade with Virginia, and the Scottish Enlightenment produced a remarkable circle of thinkers, including Smith’s close friend David Hume. Smith traveled in France in the 1760s as tutor to a young duke and met Quesnay and the physiocrats (Week 1). He spent a decade writing <em>An Inquiry into the Nature and Causes of the Wealth of Nations</em>, published in March 1776, a few months before the American Declaration of Independence.</p>
+  <p>Britain was then at the start of the Industrial Revolution. The large factories were still to come, but manufacturing was growing, export industries were expanding much faster than domestic ones, and new machines for spinning and weaving were appearing. Smith described an economy of workshops, merchants, and farms, not yet one of mills and steam power.</p>
+
+  <h2 id="moral">2. Moral sentiments</h2>
+  <p>Smith’s first book, <em>The Theory of Moral Sentiments</em> (1759), was not about self-interest. It explained morality through <b>sympathy</b>, our capacity to imagine ourselves in another’s position, and the <b>impartial spectator</b>, the imagined observer whose judgment we use to evaluate our own conduct. Smith revised the book until the end of his life. Scholars once debated an “Adam Smith problem”: how could the author of a book on sympathy also write a book on self-interest? Most now read the two as parts of one project: people are social beings with many motives, and in the specific setting of market exchange, self-interest can be channeled to good effect.</p>
+
+  <h2 id="stages">3. The four stages of society</h2>
+  <p>In his Glasgow lectures and in the <em>Wealth of Nations</em>, Smith described history as a sequence of stages, each defined by how people obtain their subsistence. Each stage has its own forms of property, government, and law:</p>
+  <div class="stages">
+    <div><b>Hunting</b>Little property, and so little need for government.</div>
+    <div><b>Pasturage</b>Property in herds appears; inequality follows, and with it government.</div>
+    <div><b>Agriculture</b>Land becomes the main form of property; in Europe, feudal lords ruled over dependent cultivators.</div>
+    <div><b>Commerce</b>Trade and manufacturing dissolve feudal dependence and create a society of exchange.</div>
+  </div>
+  <blockquote>Civil government, so far as it is instituted for the security of property, is in reality instituted for the defence of the rich against the poor, or of those who have some property against those who have none at all.<cite>Adam Smith, <em>The Wealth of Nations</em>, Book V, ch. 1 (1776)</cite></blockquote>
+  <p>Smith told a striking story about the end of feudalism. Great lords once spent their surplus maintaining crowds of retainers, which gave them power. When towns began to offer luxuries, the lords spent their rents on “trinkets and baubles” instead, dismissed their retainers, and lost their power, an unintended consequence of their own vanity. The idea that history is shaped by modes of subsistence, and that its outcomes are often unintended, influenced later thinkers including Marx (Week 6).</p>
+
+  <h2 id="division">4. The division of labor</h2>
+  <p>The <em>Wealth of Nations</em> opens with the division of labor. Smith’s famous example is a pin factory. A single worker, untrained, “could scarce, perhaps, with his utmost industry, make one pin in a day, and certainly could not make twenty.” But when pin-making is divided into about eighteen distinct operations (drawing the wire, straightening it, cutting it, pointing it, grinding the top for the head, and so on), ten workers could make upward of forty-eight thousand pins a day: about 4,800 each.</p>
+  <p>Smith gave three reasons: workers gain <b>dexterity</b> by repeating one task; they save the <b>time</b> lost in switching between tasks; and specialized work invites the <b>invention of machines</b>. But specialization has a precondition. A workshop can only divide labor finely if it can sell large quantities, which is why Smith titled chapter 3 “That the Division of Labour is Limited by the Extent of the Market.”</p>
+  <div class="box" id="pin">
+    <h3>The pin factory and the size of the market</h3>
+    <label>Size of the market the workshop can reach (pins sold per day): <b id="dv">2,000</b></label>
+    <input type="range" id="d" min="2" max="5.2" step="0.05" value="3.3">
+    <div class="workers" id="ws"></div>
+    <div class="out" id="pout"></div>
+    <svg id="pchart" viewBox="0 0 640 190" width="100%" role="img" aria-label="Output per worker by number of workers"></svg>
+    <p class="note">An illustrative model: with more workers, the eighteen operations can be split more finely, and output per worker rises from 20 pins (one worker doing everything) to 4,800 (ten specialized workers, Smith’s figure). The workshop hires as many workers as the market can absorb.</p>
+  </div>
+  <p>The same logic links the division of labor to the growth of towns, roads, canals, and trade. Water transport, Smith noted, opened wider markets than land carriage, which is why the earliest commercial civilizations grew up along coasts and navigable rivers.</p>
+
+  <h2 id="hand">5. Self-interest and the invisible hand</h2>
+  <blockquote>It is not from the benevolence of the butcher, the brewer, or the baker, that we expect our dinner, but from their regard to their own interest.<cite>Adam Smith, <em>The Wealth of Nations</em>, Book I, ch. 2</cite></blockquote>
+  <p>Exchange lets strangers cooperate without needing to care for one another. Competition among sellers keeps market prices close to natural prices (Week 3) and directs capital toward the uses that the society values most. In one passage, about why merchants prefer to invest at home rather than abroad, Smith wrote that an investor who “intends only his own gain” is in this, “as in many other cases, led by an invisible hand to promote an end which was no part of his intention” (Book IV, ch. 2). He used the phrase only once in the <em>Wealth of Nations</em>. It became famous much later, especially in the twentieth century, as a summary of the case for free markets.</p>
+  <p>Smith also distinguished <b>productive</b> labor, which produces goods that can be sold and so adds to the capital that employs more labor, from <b>unproductive</b> labor, such as that of servants, soldiers, and officials, whose services, in Smith’s words, “generally perish in the very instant of their performance.” A nation grows richer by devoting more of its revenue to productive labor, through saving and accumulation.</p>
+
+  <h2 id="merc">6. Against the mercantile system</h2>
+  <p>Much of the <em>Wealth of Nations</em> is an attack on the “mercantile system” (Week 1). Wealth, Smith argued, is not gold and silver but the annual produce of a nation’s labor. Tariffs, monopolies, and colonial trade restrictions benefit particular merchants and manufacturers at the expense of consumers and of the nation. He was scathing about businessmen’s influence on policy:</p>
+  <blockquote>People of the same trade seldom meet together, even for merriment and diversion, but the conversation ends in a conspiracy against the public, or in some contrivance to raise prices.<cite>Adam Smith, <em>The Wealth of Nations</em>, Book I, ch. 10</cite></blockquote>
+  <p>Smith also described a “natural progress of opulence”: capital is best employed first in agriculture, then in manufacturing, then in domestic trade, and only last in foreign trade, which he regarded as the least productive use of capital for a nation. Europe, he complained, had reversed this order through its policies.</p>
+
+  <h2 id="state">7. The duties of government, and Smith’s worries</h2>
+  <p>Smith did not argue for no government. He listed three duties of the sovereign: to defend the society from foreign invasion; to administer justice and protect every member from “the injustice or oppression of every other member”; and to build and maintain public works and institutions that private individuals would not profitably provide, such as roads, bridges, harbors, and the education of the common people.</p>
+  <p>He also saw the costs of the system he described. Repeating a few simple operations all day, he wrote in Book V, makes the worker “as stupid and ignorant as it is possible for a human creature to become,” which is why he wanted the state to fund parish schools. He recognized that wages depend on bargaining in which employers have the advantage, since they are fewer, can combine more easily, and can hold out longer. In modern terms, Smith was aware of what economists now call market failures: monopoly, public goods, and the unequal power of the parties to a bargain.</p>
+  <table>
+    <thead><tr><th>Smith’s concern</th><th>Modern term</th></tr></thead>
+    <tbody>
+      <tr><td>Merchants conspiring to raise prices; chartered monopolies</td><td>Monopoly and collusion</td></tr>
+      <tr><td>Roads, bridges, canals, education</td><td>Public goods</td></tr>
+      <tr><td>The stupefying effect of narrow work; schooling for workers</td><td>Externalities; human capital</td></tr>
+      <tr><td>Masters combining to keep wages down</td><td>Unequal bargaining power, monopsony</td></tr>
+    </tbody>
+  </table>
+  <div class="think"><b>Discussion:</b> Smith is often cited as the prophet of laissez-faire. After reading his own words, how accurate is that? Which modern school of thought (Week 13 or Week 14) has the best claim to be his heir?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 3 (Adam Smith: historical context, theories of history and sociology, value, economic welfare, class conflict and social harmony).</p>
+  <p class="rd">Smith, <em>The Wealth of Nations</em> (1776), Book I, ch. 1–3, and Book IV, ch. 2, selections.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 3.</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 1 (Adam Smith: should the government rebalance the economy?).</p>
+
+  <p><a href="index.html#week-2">← Back to Week 2 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// output per worker as tasks are divided among n workers (1..10): 20 pins alone, 4,800 with ten
+const per = n => 20 * Math.pow(4800/20, (n-1)/9);
+function pin() {
+  const D = Math.round(Math.pow(10, +$('d').value));
+  $('dv').textContent = D.toLocaleString();
+  let n = 0; for (let k = 1; k <= 10; k++) if (k * per(k) <= D) n = k;
+  const tasks = n ? Math.min(18, Math.round(18 * n / 10)) : 0;
+  $('ws').innerHTML = n ? Array.from({length: n}, (_, i) => `<span title="worker ${i+1}">${i+1}</span>`).join('') : '<span style="background:#cfd5dc">0</span>';
+  const out = n * (n ? per(n) : 0);
+  $('pout').innerHTML = n === 0 ? 'The market is too small to support even one full-time pin maker; pins are made at home as a side task.' :
+    `The market supports a workshop of <b>${n}</b> worker${n>1?'s':''}, each specializing in about ${Math.max(1, Math.round(18/n))} of the 18 operations. Output per worker: <b>${Math.round(per(n)).toLocaleString()}</b> pins a day; total output: ${Math.round(out).toLocaleString()} pins. ${n === 10 ? 'This is Smith’s pin factory: about 48,000 pins a day.' : 'A bigger market would allow a finer division of labor.'}`;
+  const W = 640, H = 190, L = 54, R = 14, T = 12, B = 30;
+  const X = k => L + (k-1)/9*(W-L-R), Y = v => H-B - Math.log10(v/10)/Math.log10(600)*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [20, 100, 500, 1000, 4800].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v.toLocaleString()}</text><line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/>`);
+  for (let k = 1; k <= 10; k++) g += `<text x="${X(k)}" y="${H-B+15}" text-anchor="middle">${k}</text><circle cx="${X(k)}" cy="${Y(per(k))}" r="${k===n?7:4}" fill="${k<=n?'#0077b6':'#cfe2f3'}"/>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">number of workers dividing the 18 operations</text><text x="${L+6}" y="${T+8}">pins per worker per day (log scale)</text>`;
+  $('pchart').innerHTML = g;
+}
+$('d').addEventListener('input', pin); pin();
+</script>
+</body>
+</html>
