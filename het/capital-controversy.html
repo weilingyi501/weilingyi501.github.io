@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Golden Age and the Capital Controversy | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on postwar economics: the neoclassical synthesis, growth theory, the neoclassical theory of distribution, Sraffa, the Cambridge capital controversy with an interactive reswitching example, and development economics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt .key { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-top: 6px; }
+.vt .key i { display: inline-block; width: 22px; height: 0; border-top: 3px solid; vertical-align: middle; margin-right: 6px; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 12</p>
+  <h1>The Golden Age and the Capital Controversy</h1>
+  <p class="lead">How postwar economics combined Keynes with neoclassical theory, and how a debate between two Cambridges exposed a problem at the center of the neoclassical theory of distribution.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#golden">The golden age, 1945–73</a></li><li><a href="#synthesis">The neoclassical synthesis</a></li><li><a href="#growth">Growth theory: Harrod–Domar and Solow</a></li><li><a href="#capital">What is “capital”?</a></li><li><a href="#sraffa">Sraffa and the wage–profit frontier</a></li><li><a href="#reswitch">Reswitching (interactive)</a></li><li><a href="#matter">Who won, and does it matter?</a></li><li><a href="#dev">Development economics</a></li></ol>
+  </div>
+
+  <h2 id="golden">1. The golden age, 1945–73</h2>
+  <p>The quarter-century after the Second World War was the fastest period of growth that Western Europe, North America, and Japan had ever seen. The Bretton Woods system (1944) fixed exchange rates to a dollar convertible into gold and allowed controls on capital flows. Governments committed themselves to full employment; welfare states and labor unions expanded; wages rose roughly with productivity. Former colonies won independence and pursued planned industrialization, and the Cold War turned economic performance into a contest between capitalism and socialism.</p>
+  <p>Economics changed with it. It became more mathematical, more American, and more confident that it could manage the economy. Two very different research programs grew up in two Cambridges: at MIT in Cambridge, Massachusetts, around Paul Samuelson and Robert Solow; and at the University of Cambridge in England, around Joan Robinson, Nicholas Kaldor, Piero Sraffa, and Luigi Pasinetti.</p>
+
+  <h2 id="synthesis">2. The neoclassical synthesis</h2>
+  <p>In 1937 John Hicks condensed Keynes’s book into the <b>IS–LM</b> diagram: one curve for the goods market (investment equals saving), one for the money market (liquidity preference equals money supply). Paul Samuelson’s textbook <em>Economics</em> (1948) taught a generation that Keynesian policy could secure full employment, after which the familiar neoclassical results about markets and prices would hold. He called this the <b>neoclassical synthesis</b>.</p>
+  <div class="vs">
+    <div><b>What the synthesis kept from Keynes</b>Aggregate demand determines output in the short run; fiscal and monetary policy can stabilize it; unemployment can persist when wages are slow to adjust.</div>
+    <div><b>What it left out, according to post-Keynesians</b>Fundamental uncertainty, the instability of investment and finance, and the claim that a market economy has no automatic tendency toward full employment even in the long run.</div>
+  </div>
+
+  <h2 id="growth">3. Growth theory: Harrod–Domar and Solow</h2>
+  <p>Roy Harrod (1939) and Evsey Domar (1946) extended Keynes to growth. If the capital–output ratio is fixed, the economy grows steadily only if saving and investment keep capital growing exactly in step with the labor force. Any deviation tends to widen: the economy balances on a “knife-edge.”</p>
+  <p>Robert Solow’s growth model (1956) removed the knife-edge by letting firms substitute capital for labor along an aggregate production function, <i>Y</i> = <i>F</i>(<i>K</i>, <i>L</i>). The capital–labor ratio adjusts until the economy reaches a steady state, and long-run growth per person comes only from technological progress. The model became the foundation of mainstream growth economics. It also depends on treating <i>K</i> as a single quantity of “capital,” and that is where the trouble began.</p>
+
+  <h2 id="capital">4. What is “capital”?</h2>
+  <p>The neoclassical theory of distribution (Week 9) says that, in competitive markets, the wage equals the marginal product of labor and the rate of interest (or profit) equals the marginal product of capital. More capital per worker lowers its marginal product, so a lower interest rate goes with more capital-intensive methods. For this story to work, “capital” must be a quantity that can be measured before we know the interest rate.</p>
+  <p>In 1953 Joan Robinson asked in what units capital is measured. Real capital is a collection of different goods: trucks, machines, buildings, software. To add them up we need prices. But the price of a machine includes the profit earned on the capital used to make it, so the value of the capital stock changes when the profit rate changes, even if not a single machine changes.</p>
+  <div class="box">
+    <h3>Ten trucks and five machines</h3>
+    <p class="note">Each truck needs $10,000 of labor and $10,000 of capital inputs; each machine needs $10,000 of labor and $20,000 of capital inputs. Price = labor cost + capital cost × (1 + profit rate).</p>
+    <label>Profit rate: <b id="pr2v">50%</b></label><input type="range" id="pr2" min="0" max="100" step="5" value="50">
+    <div class="out" id="trucks"></div>
+  </div>
+  <p>The same physical capital stock has a different “quantity” at each profit rate. If we need the profit rate to measure capital, we cannot then explain the profit rate by the marginal product of that capital without arguing in a circle.</p>
+
+  <h2 id="sraffa">5. Sraffa and the wage–profit frontier</h2>
+  <p>Piero Sraffa’s <em>Production of Commodities by Means of Commodities</em> (1960), a short book he had worked on since the 1920s, revived the classical approach of Ricardo. Given the technique of production, prices and one distributive variable can be determined once the other is known. If the profit rate is set, for instance, by the interest rate or by class conflict, the wage follows, and vice versa. Nothing in the system requires utility or marginal products.</p>
+  <p>For each technique there is a <b>wage–profit frontier</b>: the highest wage compatible with each profit rate. Higher profits mean lower wages; the shape of the curve depends on how capital is used across sectors. If every sector uses capital in the same proportion, the frontier is a straight line and prices are proportional to labor. Otherwise it bends. When firms can choose among techniques, they pick whichever gives the highest wage, or equivalently the lowest cost, at the going profit rate.</p>
+
+  <h2 id="reswitch">6. Reswitching</h2>
+  <p>This example appeared in Paul Samuelson’s 1966 article “A Summing Up,” in which he conceded the point. Two techniques produce one unit of the same good using only labor, applied at different dates:</p>
+  <ul>
+    <li><b>Technique A:</b> 7 hours of labor, applied two years before the output is ready.</li>
+    <li><b>Technique B:</b> 2 hours applied three years before, plus 6 hours applied one year before.</li>
+  </ul>
+  <p>Wages paid in advance must earn the going profit rate <i>r</i> until the output is sold, so in units of the wage the costs are</p>
+  <p class="eq">cost A = 7(1 + r)² &nbsp;&nbsp;&nbsp; cost B = 2(1 + r)³ + 6(1 + r)</p>
+  <div class="box" id="rs">
+    <h3>Which technique is cheaper?</h3>
+    <label>Profit rate: <b id="rv">25%</b></label><input type="range" id="r" min="0" max="150" step="1" value="25">
+    <svg id="rschart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Cost of techniques A and B as the profit rate changes"></svg>
+    <p class="note">The line shows how much B costs relative to A at each profit rate. Shaded: the range where B is cheaper.</p>
+    <div class="out" id="rsout"></div>
+  </div>
+  <p>Setting the two costs equal gives 2(1 + r)² − 7(1 + r) + 6 = 0, with roots 1 + r = 1.5 and 1 + r = 2. So the techniques switch at <b>r = 50%</b> and switch back at <b>r = 100%</b>:</p>
+  <table>
+    <thead><tr><th>Profit rate</th><th>Cheaper technique</th><th>What the neoclassical story would conclude</th></tr></thead>
+    <tbody>
+      <tr><td>below 50%</td><td>A</td><td>A is chosen at low interest rates, so A must be the more capital-intensive technique.</td></tr>
+      <tr><td>50% to 100%</td><td>B</td><td>B is chosen at higher interest rates, so B must be less capital-intensive.</td></tr>
+      <tr><td>above 100%</td><td>A again</td><td>But now A is chosen at an even higher interest rate, so A must be <em>less</em> capital-intensive than B.</td></tr>
+    </tbody>
+  </table>
+  <p>Both conclusions cannot be true. The ranking of techniques by “capital intensity” depends on the profit rate, so there is no general, profit-independent sense in which one technique uses more capital than another. A fall in the interest rate need not lead firms to use more capital per worker, and the downward-sloping demand curve for capital that the neoclassical story needs is not guaranteed.</p>
+  <div class="think"><b>Try this:</b> move the slider from 0% to 150% and watch which technique is chosen. Notice that technique A uses less total labor (7 hours against 8), yet it loses in the middle range.</div>
+
+  <h2 id="matter">7. Who won, and does it matter?</h2>
+  <p>On logic, the English Cambridge won. Samuelson accepted that reswitching is possible and that aggregate capital cannot in general be measured independently of distribution. Yet the aggregate production function stayed at the center of growth theory, macroeconomics, and empirical work. Defenders replied that it remains a useful approximation, or that a full general-equilibrium model with many capital goods does not need an aggregate <i>K</i>. Critics replied that the approximation hides the question of how income is distributed between wages and profits.</p>
+  <p>Empirically, reswitching may be rare. Studies of input–output data, such as Ochoa’s (1989) work on the U.S. economy, found measured wage–profit curves to be close to straight lines, which is also why labor values track market prices closely (see <a href="value-theory.html#sraffa">Week 3</a>). There is an irony here that Hunt emphasizes: the condition that makes reswitching unlikely is the same condition that makes the labor theory of value work well.</p>
+  <div class="think"><b>Discussion:</b> If a theory is logically flawed but works well as an approximation, should economists keep using it? What would you need to know to decide?</div>
+
+  <h2 id="dev">8. Development economics</h2>
+  <p>The golden age also produced development economics, as newly independent countries asked how to industrialize. W. Arthur Lewis (1954) described a <b>dual economy</b> in which a modern sector grows by drawing labor from a traditional sector at a near-subsistence wage, so profits and investment rise while wages stay low until the surplus labor is absorbed. Raúl Prebisch and Hans Singer (1950) argued that the terms of trade of primary-commodity exporters tend to decline against those of manufacturing exporters, a case for industrialization behind protection. These ideas returned in later debates about East Asia, China, and global value chains, and they connect to questions of unequal exchange (Week 10).</p>
+
+  <h2>Readings</h2>
+  <p>Hunt, ch. 16 (Sraffa) and ch. 17–18 (contemporary orthodoxy, post-Keynesianism, Sraffian price theory). Companion: Yueh, <em>What Would the Great Economists Do?</em>, ch. 9 (Joan Robinson) and ch. 12 (Robert Solow).</p>
+
+  <p><a href="index.html#week-12">← Back to Week 12 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const money = v => '$' + Math.round(v).toLocaleString();
+// trucks and machines
+function trucks() {
+  const r = +$('pr2').value/100; $('pr2v').textContent = Math.round(r*100) + '%';
+  const pt = 10000 + 10000*(1+r), pm = 10000 + 20000*(1+r), tot = 10*pt + 5*pm;
+  $('trucks').innerHTML = `Price of a truck: <b>${money(pt)}</b> · price of a machine: <b>${money(pm)}</b> · value of the capital stock (10 trucks + 5 machines): <b>${money(tot)}</b>`;
+}
+$('pr2').addEventListener('input', trucks); trucks();
+
+// reswitching
+const cA = r => 7*Math.pow(1+r,2), cB = r => 2*Math.pow(1+r,3) + 6*(1+r);
+function rs() {
+  const r = +$('r').value/100; $('rv').textContent = Math.round(r*100) + '%';
+  const W = 640, H = 260, L = 50, R = 14, T = 14, B = 34, RMAX = 1.5, YLO = 0.97, YHI = 1.16;
+  const X = v => L + v/RMAX*(W-L-R), Y = q => H-B - (q-YLO)/(YHI-YLO)*(H-B-T);
+  const ratio = v => cB(v)/cA(v);
+  let g = `<rect x="${X(0.5)}" y="${T}" width="${X(1)-X(0.5)}" height="${H-B-T}" fill="#fbeee3"/>`;
+  g += `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= 1.5001; v += 0.25) g += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${Math.round(v*100)}%</text>`;
+  for (const q of [0.98, 1.00, 1.05, 1.10, 1.15]) g += `<text x="${L-6}" y="${Y(q)+4}" text-anchor="end">${q.toFixed(2)}</text>`;
+  g += `<line x1="${L}" y1="${Y(1)}" x2="${W-R}" y2="${Y(1)}" stroke="#023e8a" stroke-dasharray="5 4"/>`;
+  g += `<text x="${W-R-4}" y="${Y(1)-6}" text-anchor="end">above the line: A is cheaper</text><text x="${W-R-4}" y="${Y(1)+16}" text-anchor="end">below: B is cheaper</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">profit rate</text><text x="${L+6}" y="${T+10}">cost of B ÷ cost of A</text>`;
+  let pts = []; for (let i = 0; i <= 150; i++) pts.push(X(i/100)+','+Y(ratio(i/100)));
+  g += `<polyline fill="none" stroke="#c47a2c" stroke-width="2.8" points="${pts.join(' ')}"/>`;
+  [0.5, 1].forEach(s => g += `<circle cx="${X(s)}" cy="${Y(1)}" r="4" fill="#023e8a"/><text x="${X(s)}" y="${Y(1)+30}" text-anchor="middle">switch at ${Math.round(s*100)}%</text>`);
+  g += `<line x1="${X(r)}" y1="${T}" x2="${X(r)}" y2="${H-B}" stroke="#023e8a" stroke-width="1.2"/><circle cx="${X(r)}" cy="${Y(ratio(r))}" r="6" fill="#023e8a"/>`;
+  $('rschart').innerHTML = g;
+  const a = cA(r), b = cB(r), d = Math.abs(a-b) < 1e-6;
+  const pick = d ? 'Both techniques cost the same: this is a switch point.' : (a < b ? 'Technique <b>A</b> is cheaper and will be chosen.' : 'Technique <b>B</b> is cheaper and will be chosen.');
+  $('rsout').innerHTML = `Cost of A: <b>${a.toFixed(2)}</b> · cost of B: <b>${b.toFixed(2)}</b> wage units. ${pick} The highest wage each technique can pay (output price = 1) is 1 / cost: A ${(1/a).toFixed(3)}, B ${(1/b).toFixed(3)}.`;
+}
+$('r').addEventListener('input', rs); rs();
+</script>
+</body>
+</html>
