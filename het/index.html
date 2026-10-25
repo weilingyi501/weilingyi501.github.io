@@ -42,6 +42,18 @@
 .het svg .link.react { stroke-dasharray: 4 3; }
 .het svg .ev circle { fill: #023e8a; }
 .het svg .ev text { font-size: 10.5px; fill: #023e8a; }
+.het .tip { position: fixed; z-index: 50; pointer-events: none; background: #1f2933; color: #fff; font-size: 13.5px; padding: 5px 10px; border-radius: 6px; max-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.het svg .eg { cursor: default; }
+.het svg .eg:hover rect, .het svg .eg:focus rect { filter: brightness(.95); stroke: #8a929b; stroke-width: 1; }
+.het .views { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 4px 0 10px; font-size: 15px; color: var(--muted); }
+.het .vbtn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.het .vbtn.on { background: var(--link); color: #fff; }
+.het .vlegend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--text); margin: 0 0 10px; }
+.het .vlegend[hidden], .het .tip[hidden] { display: none; }
+.het .vlegend span { display: inline-flex; align-items: center; gap: 6px; }
+.het .vlegend i, .het .vchip { display: inline-block; border-radius: 4px; }
+.het .vlegend i { width: 14px; height: 14px; }
+.het .vchip { color: #fff; font-size: 13px; font-weight: 600; padding: 1px 9px; margin-right: 4px; }
 .het .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin: 10px 0 0; }
 .het .legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid #7d8794; vertical-align: middle; margin-right: 6px; }
 .het .legend i.d { border-top-style: dashed; }
@@ -131,6 +143,9 @@
 
   <h2>Schools of thought in historical time</h2>
   <p>Each bar marks the period in which a school was active. The top band shows the historical eras behind them. Click a school to see its key thinkers, core ideas, and the weeks where it is covered.</p>
+  <div class="views" role="group" aria-label="Color the timeline by"><span>Color by:</span><button type="button" class="vbtn on" data-view="school">School</button><button type="button" class="vbtn" data-view="value">Theory of value</button></div>
+  <div class="vlegend" id="vlegend" hidden></div>
+  <div class="tip" id="tip" hidden></div>
   <div class="scroll" id="tlwrap"><svg id="tl" role="img" aria-label="Timeline of schools of economic thought from 1550 to 2025"></svg></div>
   <p class="hint">On a small screen, scroll the timeline sideways.</p>
   <div class="legend"><span><i></i>continuity: builds on</span><span><i class="d"></i>reaction: argues against</span></div>
@@ -165,82 +180,95 @@ const P = {"Thomas Mun": null, "William Petty": {"img": "https://thumb.wikimedia
 
 const ERAS = [
   [1550, 1700, 'Commercial revolution, Atlantic trade', '#dbe6f3'],
-  [1700, 1760, 'Agrarian change', '#e7eef7'],
+  [1700, 1760, 'Agrarian and early industrial change', '#e7eef7'],
   [1760, 1850, 'Industrial Revolution', '#f6e3d6'],
-  [1850, 1873, 'Victorian boom', '#f2ece1'],
+  [1850, 1873, 'Mid-Victorian boom', '#f2ece1'],
   [1873, 1896, 'Long Depression', '#ebe1f1'],
   [1896, 1914, 'Imperialism', '#f3e0e0'],
-  [1914, 1945, 'World wars & Depression', '#e3e3e3'],
+  [1914, 1945, 'World wars and the Great Depression', '#e3e3e3'],
   [1945, 1973, 'Postwar golden age', '#dff0e4'],
   [1973, 2008, 'Neoliberal globalization', '#f5ecd5'],
-  [2008, 2025, 'After the crisis', '#e2ecf3'],
+  [2008, 2025, 'After the 2008 crisis', '#e2ecf3'],
 ];
 const EVENTS = [[1776,'Wealth of Nations'],[1817,'Ricardo’s Principles'],[1848,'1848 revolutions'],[1867,'Capital, vol. 1'],[1871,'Marginal revolution'],[1929,'1929 crash'],[1936,'General Theory'],[1979,'Volcker shock'],[2008,'2008 crisis']];
 
 const SCHOOLS = [
   { id:'merc', lane:0, from:1550, to:1776, name:'Mercantilism', color:'#6b7a8f', weeks:[1],
+    val:'other', valNote:'Profit arises in exchange (“buying cheap and selling dear”); there is no theory of value rooted in production.',
     one:'National wealth comes from a favorable balance of trade, so the state should promote exports and manufacturing.',
     people:['Thomas Mun','William Petty'],
     ideas:'Wealth as precious metals; trade surpluses; state regulation of trade and industry; profit from buying cheap and selling dear.',
     setting:'Rising nation-states, long-distance trade, colonial conquest, and the price revolution of the sixteenth century.' },
   { id:'dev', lane:0, from:1791, to:2025, name:'Developmentalist tradition', color:'#8c6d46', weeks:[12,14],
+    val:'other', valNote:'The tradition is concerned with building productive capabilities, not with what determines relative prices.',
     one:'Backward economies cannot catch up if they leave everything to the market; the state must build productive capabilities.',
     people:['Alexander Hamilton','Friedrich List','Raúl Prebisch','W. Arthur Lewis'],
     ideas:'Infant-industry protection; industrial policy; structural change from agriculture to industry; terms-of-trade pessimism.',
     setting:'Catch-up industrialization in the United States and Germany, postwar decolonization, and East Asian growth.' },
   { id:'phys', lane:1, from:1756, to:1780, name:'Physiocrats', color:'#4f8a6f', weeks:[1],
+    val:'other', valNote:'Only land is productive: the net product is a gift of nature, so value and surplus originate in agriculture.',
     one:'Only agriculture yields a net product; let goods circulate freely.',
     people:['François Quesnay'],
     ideas:'The net product; the Tableau économique as the first circular-flow model; “laissez faire, laissez passer.”',
     setting:'Agrarian France before the Revolution, burdened by taxes and internal tolls.' },
   { id:'class', lane:1, from:1776, to:1871, name:'Classical political economy', color:'#1f6f8b', weeks:[2,3,4,5],
+    val:'labor', valNote:'Smith: labor governs exchange in the “early and rude state,” with an adding-up theory for capitalism; Ricardo: relative prices are mainly governed by labor embodied, modified by profits and time.',
     one:'Competition channels self-interest toward growth; value comes from labor; distribution among classes drives accumulation.',
     people:['Adam Smith','David Ricardo','Thomas Malthus','Jean-Baptiste Say','John Stuart Mill'],
     ideas:'Division of labor; the invisible hand; labor theories of value; differential rent; the falling rate of profit; comparative advantage; Say’s law.',
     setting:'The Industrial Revolution, the Napoleonic Wars, and the struggle over the Corn Laws.' },
   { id:'ricsoc', lane:2, from:1824, to:1848, name:'Ricardian socialists', color:'#9b4d6b', weeks:[5],
+    val:'labor', valNote:'Turned into a claim of justice: since labor creates value, labor should receive the whole product.',
     one:'If labor creates value, labor should receive the whole product.',
     people:['William Thompson','Thomas Hodgskin'],
     ideas:'Labor’s right to the whole product; critique of profit and rent as deductions from labor.',
     setting:'Early trade unions, the repeal of the Combination Acts (1824), and Owenite cooperatives.' },
   { id:'marx', lane:2, from:1848, to:2025, name:'Marxian political economy', color:'#b03a2e', weeks:[6,7,10,14],
+    val:'labor', valNote:'Value is socially necessary labor time; surplus value is unpaid labor; prices of production are transformed values.',
     one:'Capitalism is a powerful engine of growth, but its own contradictions produce exploitation, crisis, and eventual transformation.',
     people:['Karl Marx','Friedrich Engels','Rosa Luxemburg','Vladimir Lenin','Paul Sweezy'],
     ideas:'Historical materialism; labor power and surplus value; the transformation problem; the falling rate of profit; theories of imperialism.',
     setting:'Factory industry, the revolutions of 1848, the labor movement, and later the world wars and decolonization.' },
   { id:'neo', lane:3, from:1871, to:2025, name:'Neoclassical economics', color:'#023e8a', weeks:[8,9,12,13],
+    val:'utility', valNote:'Prices reflect marginal utility (demand) and marginal cost (supply); Marshall’s “scissors.”',
     one:'Prices reflect individual choices at the margin; competitive markets allocate resources efficiently, except where they fail.',
     people:['W. S. Jevons','Léon Walras','Alfred Marshall','John Bates Clark','Vilfredo Pareto','A. C. Pigou','Paul Samuelson','Robert Solow'],
     ideas:'Marginal utility; supply and demand; general equilibrium; marginal productivity theory of distribution; Pareto efficiency; externalities; growth theory.',
     setting:'The Long Depression, the rise of socialist parties, the professionalization of economics, and later the postwar boom.' },
   { id:'aus', lane:4, from:1871, to:2025, name:'Austrian school', color:'#5e548e', weeks:[8,13],
+    val:'utility', valNote:'Goods are valuable because of the importance people attach to satisfying their wants; costs are themselves forgone subjective value.',
     one:'Knowledge is dispersed and no planner can gather it; markets coordinate what no one fully understands.',
     people:['Carl Menger','Eugen von Böhm-Bawerk','Ludwig von Mises','Friedrich Hayek','Israel Kirzner','Murray Rothbard'],
     ideas:'Subjective value; roundabout production and interest; the socialist calculation debate; knowledge and spontaneous order.',
     vs:'Shares Chicago’s case for free markets, but reasons from first principles rather than statistical tests, distrusts mathematical equilibrium models, and treats the market as a process of discovery. It blames depressions on credit expansion and opposes stimulus, and its later wing (Mises, Rothbard) wants a far smaller state than Chicago does.',
     setting:'Fin-de-siècle Vienna, the Russian Revolution, and the planning debates of the 1920s–40s; later New York, London, and George Mason University.' },
   { id:'inst', lane:5, from:1899, to:2025, name:'Institutionalism', color:'#8e6c8a', weeks:[10,14],
+    val:'neither', valNote:'Rejects both: Veblen mocked the “hedonistic calculus” of utility and did not adopt the labor theory; values are shaped by institutions, habits, and power.',
     one:'People are shaped by the institutions they live in, even as they change those institutions.',
     people:['Thorstein Veblen','Douglass North'],
     ideas:'Conspicuous consumption; business versus industry; habits and instincts; later, the new institutional economics of property rights and transaction costs.',
     setting:'Gilded Age America: trusts, financiers, and mass consumption.' },
   { id:'schum', lane:6, from:1911, to:2025, name:'Schumpeterian', color:'#c47a2c', weeks:[14],
+    val:'utility', valNote:'Accepted Walras’s marginalist equilibrium as the starting point; his originality lay in innovation and development, not value theory.',
     one:'Capitalism advances through innovation and creative destruction, but may bureaucratize itself.',
     people:['Joseph Schumpeter'],
     ideas:'The entrepreneur; innovation and creative destruction; long waves; the large corporation and the decline of entrepreneurship.',
     setting:'Second industrial revolution, the rise of the corporation, and later the digital economy.' },
   { id:'keyn', lane:7, from:1936, to:2025, name:'Keynesian & post-Keynesian', color:'#2a9d8f', weeks:[11,12,14],
+    val:'mixed', valNote:'Keynes kept marginalist price theory, but Sraffa and many post-Keynesians revived the classical, cost-of-production approach and rejected marginal productivity.',
     one:'What is rational for individuals can be ruinous for the whole economy; demand, uncertainty, and finance drive output and employment.',
     people:['John Maynard Keynes','Michał Kalecki','Joan Robinson','Piero Sraffa','Hyman Minsky'],
     ideas:'Effective demand; involuntary unemployment; uncertainty and animal spirits; liquidity preference; the capital controversy; financial instability.',
     setting:'The Great Depression, the New Deal, wartime planning, and the postwar welfare state.' },
   { id:'chic', lane:8, from:1930, to:2025, name:'Chicago school', color:'#3d5a80', weeks:[13],
+    val:'utility', valNote:'Neoclassical price theory, applied to every area of choice.',
     one:'Competitive markets work well and can be tested against data; most government intervention, including discretionary monetary policy, does more harm than good.',
     people:['Frank Knight','Henry Simons','Milton Friedman','George Stigler','Ronald Coase','Gary Becker','Robert Lucas'],
     ideas:'Price theory applied to everything; positive economics judged by its predictions; monetarism and the money-growth rule; the natural rate of unemployment; rational expectations; regulatory capture; the Coase theorem; human capital; law and economics.',
     vs:'Shares the Austrians’ case for free markets, but is empiricist, mathematical, and built on equilibrium models. It blames the Great Depression on the Federal Reserve letting the money supply collapse, and accepts a limited role for the state: a money rule, a negative income tax, school vouchers.',
     setting:'The University of Chicago from the 1930s; the Mont Pelerin Society (1947); the stagflation of the 1970s and the turn to Thatcher and Reagan.' },
   { id:'beh', lane:9, from:1955, to:2025, name:'Behavioural economics', color:'#6a994e', weeks:[14],
+    val:'utility', valNote:'A modified utility theory: people value outcomes relative to reference points and choose with bounded rationality.',
     one:'People try to be rational but face real limits, so rules and institutions matter.',
     people:['Herbert Simon'],
     ideas:'Bounded rationality and satisficing; heuristics and biases; prospect theory; experimental economics.',
@@ -254,7 +282,7 @@ const LINKS = [ // from, to, year at junction, type
 ];
 
 // ---------- Timeline drawing ----------
-const X0 = 1550, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 30, EV = 52, LANE = 40;
+const X0 = 1550, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 64, EV = 52, LANE = 40;
 // Piecewise time scale: compress the early centuries, stretch 1850–1950 where schools multiply.
 const KNOTS = [[1550,0],[1750,0.13],[1850,0.36],[1950,0.70],[2025,1]];
 const frac = y => { for (let i = 1; i < KNOTS.length; i++) { const [a,fa] = KNOTS[i-1], [b,fb] = KNOTS[i]; if (y <= b) return fa + (y-a)/(b-a)*(fb-fa); } return 1; };
@@ -272,10 +300,22 @@ svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.
 });
 const eras = el('g', {class:'era'}, svg);
 ERAS.forEach(([a,b,label,c]) => {
-  el('rect', {x:x(a), y:0, width:x(b)-x(a), height:TOPH-4, fill:c}, eras);
-  const fo = el('text', {x:(x(a)+x(b))/2, y:16, 'text-anchor':'middle'}, eras);
-  fo.textContent = (x(b)-x(a) > label.length*5.6) ? label : (x(b)-x(a) > 40 ? label.split(/[ ,]/)[0] : '');
-  const tt = el('title', {}, eras); tt.textContent = `${label} (${a}–${b})`;
+  const eg = el('g', {class:'eg', tabindex:0, 'data-tip':`${label} (${a}–${b === 2025 ? 'present' : b})`}, eras);
+  el('rect', {x:x(a), y:0, width:x(b)-x(a), height:TOPH-4, fill:c}, eg);
+  // wrap the label into up to three lines that fit the era's width
+  const maxCh = Math.max(4, Math.floor((x(b)-x(a)-6) / 5.7)); const lines = []; let cur = '';
+  label.split(' ').forEach(wd => { if ((cur + ' ' + wd).trim().length <= maxCh) cur = (cur + ' ' + wd).trim(); else { if (cur) lines.push(cur); cur = wd; } });
+  if (cur) lines.push(cur);
+  const fo = el('text', {x:(x(a)+x(b))/2, y:(TOPH-4)/2 - (Math.min(lines.length,4)-1)*6.5 + 4, 'text-anchor':'middle'}, eg);
+  lines.slice(0,4).forEach((ln, i) => { const ts = el('tspan', {x:(x(a)+x(b))/2, dy: i ? 13 : 0}, fo); ts.textContent = ln; });
+  const tt = el('title', {}, eg); tt.textContent = eg.dataset.tip;
+});
+// hover tooltip with the full era name
+const tip = document.getElementById('tip');
+eras.querySelectorAll('.eg').forEach(g => {
+  const show = e => { tip.textContent = g.dataset.tip; tip.hidden = false; const r = g.getBoundingClientRect(); const px = e && e.clientX ? e.clientX : r.left + r.width/2; tip.style.left = Math.min(window.innerWidth - 270, Math.max(8, px - 60)) + 'px'; tip.style.top = (r.bottom + 6) + 'px'; };
+  g.addEventListener('mouseenter', show); g.addEventListener('mousemove', show); g.addEventListener('focus', show);
+  g.addEventListener('mouseleave', () => tip.hidden = true); g.addEventListener('blur', () => tip.hidden = true);
 });
 const evs = el('g', {class:'ev'}, svg);
 EVENTS.forEach(([yr,label], i) => {
@@ -304,6 +344,17 @@ SCHOOLS.forEach(s => {
   g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(s.id, true); } });
 });
 
+// ---------- Theory-of-value view ----------
+const VCOL = {labor:'#b03a2e', utility:'#0077b6', mixed:'#7b5ea7', other:'#9aa3ad', neither:'#9aa3ad'};
+const VLABEL = {labor:'Labor theory of value', utility:'Utility (subjective) theory', mixed:'Mixed or contested', other:'Neither / not central', neither:'Neither / not central'};
+document.getElementById('vlegend').innerHTML = ['labor','utility','mixed','other'].map(k => `<span><i style="background:${VCOL[k]}"></i>${VLABEL[k]}</span>`).join('');
+function setView(v) {
+  document.querySelectorAll('.het .vbtn').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  document.getElementById('vlegend').hidden = v !== 'value';
+  document.querySelectorAll('#tl .bar').forEach(g => { const sc = byId[g.dataset.id]; g.querySelector('rect').setAttribute('fill', v === 'value' ? VCOL[sc.val] : sc.color); });
+}
+document.querySelectorAll('.het .vbtn').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+
 // ---------- People ----------
 function initials(n) { return n.replace(/[^A-Za-zÀ-ž .-]/g,'').split(/[ .-]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join(''); }
 const YEARS = {'Thomas Mun':'1571–1641','William Petty':'1623–1687','François Quesnay':'1694–1774','Adam Smith':'1723–1790','Thomas Malthus':'1766–1834','David Ricardo':'1772–1823','Jean-Baptiste Say':'1767–1832','Jeremy Bentham':'1748–1832','Nassau Senior':'1790–1864','William Thompson':'1775–1833','Thomas Hodgskin':'1787–1869','John Stuart Mill':'1806–1873','Sismondi':'1773–1842','Karl Marx':'1818–1883','Friedrich Engels':'1820–1895','W. S. Jevons':'1835–1882','Carl Menger':'1840–1921','Léon Walras':'1834–1910','Alfred Marshall':'1842–1924','John Bates Clark':'1847–1938','Eugen von Böhm-Bawerk':'1851–1914','Vilfredo Pareto':'1848–1923','A. C. Pigou':'1877–1959','Henry George':'1839–1897','Thorstein Veblen':'1857–1929','J. A. Hobson':'1858–1940','Rosa Luxemburg':'1871–1919','Vladimir Lenin':'1870–1924','John Maynard Keynes':'1883–1946','Irving Fisher':'1867–1947','Michał Kalecki':'1899–1970','Piero Sraffa':'1898–1983','Joan Robinson':'1903–1983','Joseph Schumpeter':'1883–1950','Friedrich Hayek':'1899–1992','Ludwig von Mises':'1881–1973','Oskar Lange':'1904–1965','Milton Friedman':'1912–2006','Paul Samuelson':'1915–2009','Robert Solow':'1924–2023','Hyman Minsky':'1919–1996','Paul Sweezy':'1910–2004','Alexander Hamilton':'1755–1804','Friedrich List':'1789–1846','Raúl Prebisch':'1901–1986','W. Arthur Lewis':'1915–1991','Herbert Simon':'1916–2001','Douglass North':'1920–2015','Frank Knight':'1885–1972','Henry Simons':'1899–1946','George Stigler':'1911–1991','Ronald Coase':'1910–2013','Gary Becker':'1930–2014','Robert Lucas':'1937–2023','Israel Kirzner':'b. 1930','Murray Rothbard':'1926–1995'};
@@ -327,6 +378,7 @@ function show(id, scroll) {
     <div class="row"><div class="lb">Core ideas</div><div class="tx">${s.ideas}</div></div>
     <div class="row"><div class="lb">Historical setting</div><div class="tx">${s.setting}</div></div>
     ${s.vs ? `<div class="row"><div class="lb">Chicago vs. Austrian</div><div class="tx">${s.vs}</div></div>` : ''}
+    <div class="row"><div class="lb">Theory of value</div><div class="tx"><span class="vchip" style="background:${VCOL[s.val]}">${VLABEL[s.val]}</span> ${s.valNote}</div></div>
     <div class="row"><div class="lb">In the course</div><div class="tx">${wk}</div></div>`;
   panel.querySelectorAll('a[data-wk]').forEach(a => a.addEventListener('click', () => { const d = document.getElementById('week-' + a.dataset.wk); if (d) d.open = true; }));
   if (scroll) panel.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -379,7 +431,8 @@ const WEEKS = [
   people:['Karl Marx','Friedrich Engels'],
   ideas:['Historical materialism: forces and relations of production; base and superstructure.','The commodity: use value, exchange value, and socially necessary labor time.','Labor power as a commodity; the source of surplus value.','Constant capital, variable capital, and surplus value (C + V + S); the rate of surplus value.','Absolute and relative surplus value: the working day and productivity.'],
   read:'Hunt, ch. 9. Companion: Heilbroner, ch. 6; G. A. Cohen, Karl Marx’s Theory of History: A Defence (selections); Yueh, ch. 3 (Marx: can China become rich?).',
-  q:'If workers are paid the full value of their labor power, where does profit come from?'},
+  q:'If workers are paid the full value of their labor power, where does profit come from?',
+  mod:['marx-value.html','Open the module: Marx on History, Value, and Surplus Value (with an interactive working day) →']},
  {n:7, t:'Marx II: Prices of Production, Accumulation, and Crisis', sub:'The transformation problem and the falling rate of profit',
   ctx:'Volumes 2 and 3 of Capital were published by Engels after Marx’s death (1885, 1894). The long downturn of 1873–96 made crisis theory urgent, and the later debate over Marx’s “transformation problem” became one of the longest-running controversies in economics.',
   ev:['1883: death of Marx','1885, 1894: Capital, volumes 2 and 3','1896: Böhm-Bawerk’s critique of Marx','1907: Bortkiewicz’s correction of the transformation'],
