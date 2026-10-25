@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ricardo and Malthus | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Ricardo and Malthus: the Corn Laws, differential rent and the falling rate of profit with an interactive model, comparative advantage with an interactive example, population, and the debate over gluts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt input[type=number] { width: 80px; font: inherit; padding: 3px 6px; border: 1px solid var(--rule); border-radius: 6px; }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt table.txt td, .vt table.txt th { text-align: left; vertical-align: top; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .key { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .key i { display: inline-block; width: 13px; height: 13px; border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+.vt .classes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+.vt .classes div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .classes b { display: block; color: var(--bar); }
+@media (max-width: 680px) { .vt .classes { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 4</p>
+  <h1>Ricardo and Malthus: Rent, Gluts, and the Corn Laws</h1>
+  <p class="lead">Two friends who disagreed about almost everything: how rent is formed, whether profits must fall, whether trade should be free, and whether a market economy can produce too much.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#context">War, grain, and class conflict</a></li><li><a href="#rent">Ricardo’s theory of rent (interactive)</a></li><li><a href="#profit">The falling rate of profit and the stationary state</a></li><li><a href="#trade">Comparative advantage (interactive)</a></li><li><a href="#pop">Malthus on population</a></li><li><a href="#gluts">Gluts, effectual demand, and Say’s law</a></li><li><a href="#machinery">Ricardo on machinery</a></li></ol>
+  </div>
+
+  <h2 id="context">1. War, grain, and class conflict</h2>
+  <p>During the wars with revolutionary and Napoleonic France (1793–1815), imports of grain to Britain were disrupted and prices soared. Farmers brought poorer land under the plough, and landlords’ rents rose. When peace returned and grain prices fell, Parliament, dominated by landowners, passed the <b>Corn Law of 1815</b>, which barred imports of wheat until the domestic price reached 80 shillings a quarter. (“Corn” in British usage meant grain in general.)</p>
+  <p>The Corn Laws set the economic interests of Britain’s three great classes against one another:</p>
+  <div class="classes">
+    <div><b>Landlords</b>Received rent. They gained from high grain prices, and in Ricardo’s and Malthus’s accounts spent much of their income on luxuries, servants, and the arts.</div>
+    <div><b>Industrial capitalists</b>Received profits. High grain prices forced them to pay higher money wages, cutting profits; they saved and invested to accumulate capital.</div>
+    <div><b>Workers</b>Received wages, near subsistence. They spent everything on necessities, above all bread.</div>
+  </div>
+  <p>These were years of open conflict: Luddite machine-breaking (1811–16), the Peterloo massacre in Manchester (1819), when cavalry charged a crowd demanding parliamentary reform, and the long campaign of the Anti-Corn Law League, which ended with repeal in 1846. David Ricardo, a stockbroker turned economist and Member of Parliament, took the side of the industrial capitalists. Thomas Robert Malthus, a clergyman and the first professor of political economy in England, defended the landlords. They debated in print and in a long, friendly correspondence until Ricardo’s death in 1823.</p>
+
+  <h2 id="rent">2. Ricardo’s theory of rent</h2>
+  <p>Ricardo’s theory of <b>differential rent</b> (1815, 1817) rests on three assumptions: land differs in fertility; competition equalizes the rate of profit among capitalist farmers; and the least fertile land in use, the <b>margin of cultivation</b>, pays no rent. On every better plot, competition among farmers for land drives rent up until it absorbs the extra produce that the plot yields above the marginal plot. Rent is therefore not a reward for any productive effort of the landlord; it arises from differences in fertility and from the fact that land is privately owned.</p>
+  <div class="box" id="rentbox">
+    <h3>Extending the margin of cultivation</h3>
+    <p class="note">Each plot receives the same dose of capital, worth 100 bushels of corn (Ricardo measured everything in corn), most of it advanced as workers’ wages at subsistence. Output (net of seed) falls from plot to plot as poorer land is used.</p>
+    <div class="grid2">
+      <div><label>Plots under cultivation: <b id="nv">3</b></label><input type="range" id="n" min="1" max="8" step="1" value="3"></div>
+      <div><label>Output on the best plot (bushels): <b id="topv">160</b></label><input type="range" id="top" min="130" max="200" step="5" value="160"></div>
+      <div><label>Fall in output from each plot to the next: <b id="dv">10</b></label><input type="range" id="d" min="5" max="20" step="1" value="10"></div>
+      <div><label>Subsistence wage bill per plot (bushels): <b id="wv">60</b></label><input type="range" id="w" min="40" max="90" step="5" value="60"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" id="grow">Population grows: cultivate one more plot</button><button class="btn" type="button" id="rreset">Reset</button></div>
+    <svg id="rentchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="Wages, profit, and rent on each plot"></svg>
+    <div class="key"><span><i style="background:#cfd5dc"></i>Wages (subsistence)</span><span><i style="background:#1f6f8b"></i>Profit</span><span><i style="background:#c47a2c"></i>Rent</span></div>
+    <div class="out" id="rentout"></div>
+  </div>
+  <div class="think"><b>Try this:</b> start with one plot and press “Population grows” repeatedly. Watch what happens to total rent, to the profit on each plot, and to the profit rate. When does accumulation stop?</div>
+
+  <h2 id="profit">3. The falling rate of profit and the stationary state</h2>
+  <p>The model above contains Ricardo’s theory of distribution in miniature. Capital accumulation raises the demand for labor; wages rise above subsistence for a while; population grows; more food is needed; poorer land is brought into cultivation. At the new margin, the same capital yields less, so the profit rate, which competition makes the same everywhere, falls. Rents on all the better land rise. Wages return to subsistence, but the subsistence wage, measured in effort and land, has become more expensive.</p>
+  <p>As this continues, the profit rate approaches zero and accumulation stops: the <b>stationary state</b>. The only beneficiaries are the landlords. Hence Ricardo’s case against the Corn Laws: importing cheaper grain from abroad would halt the move to poorer land at home, keep profits up, and let accumulation continue. As he put it, the interest of the landlord is “always opposed to the interest of every other class in the community” (<em>Essay on the Influence of a Low Price of Corn on the Profits of Stock</em>, 1815).</p>
+  <p>Ricardo’s pessimism did not come true in Britain, mainly because agricultural productivity rose and cheap grain flowed in from the Americas and Eastern Europe after repeal. But his argument that rent is an unearned income, and his method of building a model of the whole economy from a few assumptions, shaped economics for the next two centuries. Marx (Week 7) kept the falling profit rate but moved its cause from agriculture to mechanization.</p>
+
+  <h2 id="trade">4. Comparative advantage</h2>
+  <p>In chapter 7 of the <em>Principles</em> (1817), Ricardo showed that two countries can both gain from trade even if one of them is more productive in everything. What matters is not <b>absolute advantage</b> but <b>comparative advantage</b>: each country should specialize in the good it produces at the lowest opportunity cost.</p>
+  <div class="box" id="ca">
+    <h3>England, Portugal, cloth, and wine</h3>
+    <p class="note">Hours of labor needed to produce one unit (Ricardo’s numbers). Change them to test the logic.</p>
+    <table>
+      <thead><tr><th></th><th>Cloth</th><th>Wine</th><th>Opportunity cost of 1 cloth</th></tr></thead>
+      <tbody>
+        <tr><td>England</td><td><input type="number" id="ec" min="1" value="100"></td><td><input type="number" id="ew" min="1" value="120"></td><td id="eoc"></td></tr>
+        <tr><td>Portugal</td><td><input type="number" id="pc" min="1" value="90"></td><td><input type="number" id="pw" min="1" value="80"></td><td id="poc"></td></tr>
+      </tbody>
+    </table>
+    <div class="out" id="caout"></div>
+  </div>
+  <p>Portugal is better at both goods, yet both countries end up with more by specializing and trading. The theory became the foundation of the case for free trade. Its assumptions, including full employment, immobile capital, and constant costs, have been debated ever since. For how later schools of thought have responded, see my <a href="/trade-theory-tree.html">interactive map of trade theories</a>.</p>
+
+  <h2 id="pop">5. Malthus on population</h2>
+  <p>Malthus first wrote his <em>Essay on the Principle of Population</em> (1798) against the radical optimism of William Godwin and Condorcet, who believed society could be made far more equal and prosperous. Population, Malthus argued, tends to grow geometrically (1, 2, 4, 8 …) while food supply grows at best arithmetically (1, 2, 3, 4 …). Any improvement in the condition of the poor would therefore be eaten up by population growth, held in check only by “misery and vice”: famine, disease, and war. In later editions he added “moral restraint,” late marriage and abstinence, as a gentler check.</p>
+  <p>Two conclusions followed that made Malthus influential and controversial. Wages could not stay above subsistence for long. And poor relief was self-defeating, because it encouraged the poor to have more children; this argument helped shape the harsh New Poor Law of 1834 (Week 5).</p>
+  <p>The “Malthusian trap” describes most of human history fairly well: before the nineteenth century, gains in output were largely absorbed by larger populations. Since then, world food production has grown faster than population, thanks to fertilizers, new crop varieties, and mechanization, and birth rates have fallen as incomes rose. But Malthus’s question has returned in new forms: limits to fossil energy, soil, water, and the climate (Week 14). Marx and Engels attacked the population principle, arguing that unemployment and poverty come from capital’s demand for labor, not from a law of nature.</p>
+
+  <h2 id="gluts">6. Gluts, effectual demand, and Say’s law</h2>
+  <p>Malthus asked whether a capitalist economy could produce more than it could sell, a <b>general glut</b>. Commodities sell at their natural prices only if there is enough <b>effectual demand</b>: spending by people willing and able to pay. Workers spend all their wages on subsistence; landlords spend their rents on comforts and services; capitalists, driven by the passion to accumulate, try to invest their profits. But as accumulation proceeds, especially with labor-saving machinery, capitalists receive more profit than they can profitably invest, demand falls short, and unsold goods pile up. Malthus concluded that landlords’ unproductive spending was useful, because it kept demand up.</p>
+  <p>Ricardo, following Jean-Baptiste Say, denied that a general glut was possible. People produce in order to buy: every sale puts money in someone’s hands that will be spent on something else. There could be too much of a <em>particular</em> good, but not too much of everything. This became known as <b>Say’s law</b>, often summarized as “supply creates its own demand.” Ricardo’s view prevailed for over a century. Keynes, writing in 1936, regretted that it had, and praised Malthus as an early theorist of effective demand (Week 11).</p>
+  <table class="txt">
+    <thead><tr><th></th><th>Ricardo</th><th>Malthus</th></tr></thead>
+    <tbody>
+      <tr><td>Rent</td><td>An unearned income that grows at the expense of profits.</td><td>A sign of the fertility of land and a useful source of demand.</td></tr>
+      <tr><td>Corn Laws</td><td>Repeal them: cheap imported grain keeps profits up.</td><td>Keep them: protect agriculture, landlords, and food security.</td></tr>
+      <tr><td>General gluts</td><td>Impossible (Say’s law).</td><td>Possible when capitalists save more than they can invest.</td></tr>
+      <tr><td>Whose spending matters</td><td>Capitalists’ saving and investment drive growth.</td><td>Landlords’ consumption sustains demand.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="machinery">7. Ricardo on machinery</h2>
+  <p>In the third edition of the <em>Principles</em> (1821), Ricardo added a new chapter, “On Machinery,” in which he changed his mind. He had believed that introducing machinery benefited all classes. He now argued that replacing workers with machines could reduce the gross product available to pay wages, so that “the opinion entertained by the labouring class, that the employment of machinery is frequently detrimental to their interests, is not founded on prejudice and error.” It was a rare admission by a founder of economics, and a question that returns with every new technology, from the power loom to artificial intelligence.</p>
+  <div class="think"><b>Discussion:</b> Ricardo argued that a tax on imported grain benefits one class at the expense of all others. Can you think of a present-day policy that is debated in similar terms? Who are the “landlords” today?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 4 (Malthus: class conflicts of his time, the theory of population, the theory of gluts).</p>
+  <p class="rd">Hunt, ch. 5 (Ricardo: rent and profits, comparative advantage, machinery).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 4.</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 2 (Ricardo: do trade deficits matter?).</p>
+
+  <p><a href="index.html#week-4">← Back to Week 4 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const K = 100; // capital advanced per plot, in bushels' worth
+function rent() {
+  const n = +$('n').value, top = +$('top').value, d = +$('d').value, w = +$('w').value;
+  $('nv').textContent = n; $('topv').textContent = top; $('dv').textContent = d; $('wv').textContent = w;
+  const out = Array.from({length: 8}, (_, i) => top - i*d);
+  const qm = out[n-1], profit = qm - w, r = profit / K;
+  const W = 640, H = 250, L = 46, R = 14, T = 14, B = 30, mx = top * 1.08, bw = (W-L-R)/8;
+  const Y = v => H-B - v/mx*(H-B-T), Hh = v => v/mx*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= mx; v += 40) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  out.forEach((q, i) => {
+    const x = L + i*bw + 6, wd = bw - 12, used = i < n;
+    if (!used) { g += `<rect x="${x}" y="${Y(q)}" width="${wd}" height="${Hh(q)}" fill="none" stroke="#ccd2d8" stroke-dasharray="4 3" rx="3"/>`; }
+    else {
+      const wages = Math.min(w, q), pr = Math.max(0, Math.min(profit, q - wages)), rt = Math.max(0, q - wages - pr);
+      g += `<rect x="${x}" y="${Y(wages)}" width="${wd}" height="${Hh(wages)}" fill="#cfd5dc" rx="2"/>`;
+      g += `<rect x="${x}" y="${Y(wages+pr)}" width="${wd}" height="${Hh(pr)}" fill="#1f6f8b"/>`;
+      if (rt > 0) g += `<rect x="${x}" y="${Y(q)}" width="${wd}" height="${Hh(rt)}" fill="#c47a2c"/>`;
+    }
+    g += `<text x="${x+wd/2}" y="${H-B+15}" text-anchor="middle">plot ${i+1}${i===n-1?' (margin)':''}</text>`;
+  });
+  $('rentchart').innerHTML = g;
+  const totRent = out.slice(0, n).reduce((s, q) => s + (q - qm), 0), totProfit = n * Math.max(0, profit), totOut = out.slice(0, n).reduce((a, b) => a + b, 0);
+  let msg;
+  if (profit <= 0) msg = `At the margin, output (${qm}) no longer covers the subsistence wage bill plus any profit. <b>Accumulation stops: the stationary state.</b> All the surplus on better land goes to rent.`;
+  else msg = `Profit on every plot = output on the marginal plot − wages = ${qm} − ${w} = <b>${profit}</b> bushels, a profit rate of <b>${(r*100).toFixed(0)}%</b> on capital of ${K}. Total rent: <b>${totRent}</b> (${(totRent/totOut*100).toFixed(0)}% of output); total profit: <b>${totProfit}</b>.`;
+  $('rentout').innerHTML = msg;
+}
+['n','top','d','w'].forEach(i => $(i).addEventListener('input', rent));
+$('grow').addEventListener('click', () => { $('n').value = Math.min(8, +$('n').value + 1); rent(); });
+$('rreset').addEventListener('click', () => { $('n').value = 1; $('top').value = 160; $('d').value = 10; $('w').value = 60; rent(); });
+rent();
+
+function ca() {
+  const ec = Math.max(1, +$('ec').value), ew = Math.max(1, +$('ew').value), pc = Math.max(1, +$('pc').value), pw = Math.max(1, +$('pw').value);
+  const eo = ec/ew, po = pc/pw; // wine given up per unit of cloth
+  $('eoc').textContent = eo.toFixed(2) + ' wine'; $('poc').textContent = po.toFixed(2) + ' wine';
+  if (Math.abs(eo - po) < 1e-9) { $('caout').innerHTML = 'Opportunity costs are identical, so neither country has a comparative advantage and there are no gains from specialization.'; return; }
+  const eCloth = eo < po, eT = ec + ew, pT = pc + pw;
+  // each country spends the labor it used for one unit of each good on its comparative-advantage good
+  const eOut = eCloth ? eT/ec : eT/ew, pOut = eCloth ? pT/pw : pT/pc;
+  const tot = `England ${eCloth ? 'cloth' : 'wine'}, Portugal ${eCloth ? 'wine' : 'cloth'}`;
+  const absP = pc < ec && pw < ew, absE = ec < pc && ew < pw;
+  $('caout').innerHTML = `${absP ? 'Portugal has an absolute advantage in <b>both</b> goods. ' : absE ? 'England has an absolute advantage in <b>both</b> goods. ' : ''}England has a comparative advantage in <b>${eCloth ? 'cloth' : 'wine'}</b> (it gives up less ${eCloth ? 'wine for each unit of cloth' : 'cloth for each unit of wine'}), Portugal in <b>${eCloth ? 'wine' : 'cloth'}</b>.<br>
+    Without trade, each country spends its labor (${eT} and ${pT} hours) on one unit of each good: world output is 2 cloth and 2 wine. If they specialize (${tot}), the same hours produce <b>${eOut.toFixed(3)} ${eCloth ? 'cloth' : 'wine'}</b> and <b>${pOut.toFixed(3)} ${eCloth ? 'wine' : 'cloth'}</b>, more than 2 of each. Trading at any ratio between the two opportunity costs (here ${Math.min(eo,po).toFixed(2)} to ${Math.max(eo,po).toFixed(2)} wine per cloth) leaves both countries better off.`;
+}
+['ec','ew','pc','pw'].forEach(i => $(i).addEventListener('input', ca)); ca();
+</script>
+</body>
+</html>
