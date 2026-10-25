@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marshall, Clark, and the Theory of Distribution | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Marshall and Clark: Marshall's scissors and time periods with an interactive model, the marginal productivity theory of distribution with an interactive production function, Böhm-Bawerk on interest, Pareto efficiency, Pigou's externalities, and the critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .split { display: flex; height: 40px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 9</p>
+  <h1>Marshall, Clark, and the Neoclassical Theory of Distribution</h1>
+  <p class="lead">How the marginal revolution became a complete system: supply and demand in every market, and a theory in which each factor of production is paid what it contributes.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#context">The Gilded Age and the new profession</a></li><li><a href="#marshall">Marshall’s scissors (interactive)</a></li><li><a href="#clark">Clark and marginal productivity (interactive)</a></li><li><a href="#bb">Böhm-Bawerk on capital and interest</a></li><li><a href="#welfare">Pareto and Pigou: efficiency and externalities</a></li><li><a href="#critics">Critics</a></li></ol>
+  </div>
+
+  <h2 id="context">1. The Gilded Age and the new profession</h2>
+  <p>By the 1880s, industry in the United States, Britain, and Germany was dominated by large firms: railways, steel, oil, chemicals. Giant trusts formed to fix prices, and the U.S. Congress passed the Sherman Antitrust Act in 1890. Labor conflict was fierce. In 1886, a bomb at a rally for the eight-hour day in Chicago’s Haymarket Square led to the execution of anarchist leaders after a trial widely seen as unjust. Socialist parties grew across Europe.</p>
+  <p>Economics, meanwhile, was becoming an academic profession. The American Economic Association was founded in 1885, and Alfred Marshall persuaded Cambridge to create a separate degree in economics in 1903. The new professionals built on the marginalism of the 1870s (Week 8) and extended it from the theory of consumer demand to the theory of production and distribution, which is where the politics lay: if wages, interest, and rent are each the reward of a productive contribution, the socialist charge of exploitation has an answer.</p>
+
+  <h2 id="marshall">2. Marshall’s scissors</h2>
+  <p>Alfred Marshall (1842–1924) dominated British economics for a generation. His <em>Principles of Economics</em> (1890), revised through eight editions, helped rename the field “economics” and taught generations of students its toolkit: supply and demand curves, elasticity, consumer surplus, the representative firm, and external economies. Marshall kept mathematics in footnotes and appendices; he believed economic reasoning should be translated into plain English and illustrated with real examples.</p>
+  <p>On the old dispute between labor (cost of production) and utility theories of value, Marshall answered that both matter:</p>
+  <blockquote>We might as reasonably dispute whether it is the upper or the under blade of a pair of scissors that cuts a piece of paper, as whether value is governed by utility or cost of production.<cite>Alfred Marshall, <em>Principles of Economics</em> (1890), Book V, ch. 3</cite></blockquote>
+  <p>His great innovation was <b>time</b>. Which blade matters more depends on the period considered. In the very short <b>market period</b>, supply is fixed and demand decides the price. In the <b>short run</b>, firms can produce more with existing plants, at rising cost. In the <b>long run</b>, firms can enter and build new capacity, and price returns to the cost of production. Marshall analyzed one market at a time, holding everything else constant (<em>ceteris paribus</em>), an approach called <b>partial equilibrium</b>, in contrast to Walras’s general equilibrium.</p>
+  <div class="box" id="mbox">
+    <h3>A rise in demand, over three time periods</h3>
+    <label>Increase in demand: <b id="shv">+30%</b></label><input type="range" id="sh" min="0" max="80" step="5" value="30">
+    <div style="margin-top:8px"><span class="note">Time period: </span><button class="btn on" type="button" data-p="m">Market period</button><button class="btn" type="button" data-p="s">Short run</button><button class="btn" type="button" data-p="l">Long run</button></div>
+    <svg id="mchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Supply and demand in three time periods"></svg>
+    <div class="out" id="mout"></div>
+    <p class="note">A constant-cost industry: in the long run, new firms produce at the same average cost of $10 per unit.</p>
+  </div>
+
+  <h2 id="clark">3. Clark and marginal productivity</h2>
+  <p>The American John Bates Clark (1847–1938) extended marginal analysis from consumption to production. In <em>The Distribution of Wealth</em> (1899), he argued that competitive markets pay each factor of production the value of its <b>marginal product</b>: the extra output from employing one more unit of it. Employers hire workers until the last worker adds just enough output to cover the wage; they borrow capital until the last unit of capital earns just the interest rate. Clark drew an ethical conclusion:</p>
+  <blockquote>It is the purpose of this work to show that the distribution of the income of society is controlled by a natural law, and that this law, if it worked without friction, would give to every agent of production the amount of wealth which that agent creates.<cite>John Bates Clark, <em>The Distribution of Wealth</em> (1899), preface</cite></blockquote>
+  <p>If everyone gets what they create, there is no exploitation. A puzzle followed: if every factor is paid its marginal product, do the payments add up to exactly the total product? Philip Wicksteed (1894) showed that they do when the production function has <b>constant returns to scale</b>, a result that follows from Euler’s theorem.</p>
+  <div class="box" id="cbox">
+    <h3>Paying each factor its marginal product</h3>
+    <p class="eq">output Q = 10 · K<sup>1−α</sup> · L<sup>α</sup> &nbsp; with capital K = 100 machines</p>
+    <div class="grid2">
+      <div><label>Workers employed (L): <b id="lv">100</b></label><input type="range" id="l" min="10" max="300" step="10" value="100"></div>
+      <div><label>Labor’s elasticity α: <b id="av">0.65</b></label><input type="range" id="a" min="0.3" max="0.9" step="0.05" value="0.65"></div>
+    </div>
+    <div class="split"><div id="ws" style="background:#0077b6"></div><div id="ks" style="background:#c47a2c"></div></div>
+    <div class="out" id="cout"></div>
+  </div>
+  <div class="think"><b>Try this:</b> add workers while capital stays fixed. What happens to the wage, and why? Then ask: the model says each worker is paid what the last worker adds, but does it say whether the capital stock itself was fairly acquired?</div>
+
+  <h2 id="bb">4. Böhm-Bawerk on capital and interest</h2>
+  <p>The Austrian Eugen von Böhm-Bawerk (1851–1914), several times Austria’s finance minister, gave the theory of interest its classic marginalist form in <em>Capital and Interest</em> (1884–89). Production is <b>roundabout</b>: it is more productive to first make tools, nets, and machines, and then use them, but roundabout methods take time. Interest exists because present goods are worth more than future goods, for three reasons: people expect to be better supplied in the future; they systematically underestimate future wants; and present goods can be invested in more productive, roundabout methods. In <em>Karl Marx and the Close of His System</em> (1896), he argued that Volume 3 of <em>Capital</em> contradicted Volume 1, opening the long debate over the transformation problem (Week 7).</p>
+
+  <h2 id="welfare">5. Pareto and Pigou: efficiency and externalities</h2>
+  <ul>
+    <li><b>Vilfredo Pareto</b> (1848–1923), Walras’s successor at Lausanne, rebuilt demand theory on rankings of preferences rather than measurable utility. He defined an allocation as efficient (<b>Pareto optimal</b>) when no one can be made better off without making someone else worse off. The criterion avoids comparing people’s utilities, but it is silent on distribution: an allocation in which one person owns everything can be Pareto optimal. Pareto also found that the upper tail of income distributions followed a regular pattern, the “Pareto law.”</li>
+    <li><b>A. C. Pigou</b> (1877–1959), Marshall’s successor at Cambridge, wrote <em>The Economics of Welfare</em> (1920). He showed that markets can fail when private and social costs diverge, as with smoke from a factory chimney, and proposed taxing such activities, a <b>Pigouvian tax</b>. He also argued, from diminishing marginal utility, that transferring income from rich to poor would, other things equal, raise total welfare.</li>
+  </ul>
+  <p>Together, these ideas form the core of <b>welfare economics</b>: competitive markets are efficient under ideal conditions, and departures from those conditions justify specific interventions. Coase (Week 13) would later challenge Pigou’s remedy.</p>
+
+  <h2 id="critics">6. Critics</h2>
+  <ul>
+    <li><b>Veblen</b> (Week 10) mocked Clark’s attempt to find marginal productivity everywhere, imagining it applied to “a gang of Aleutian Islanders slushing about in the wrack and surf with rakes and magical incantations for the capture of shell-fish” (1909).</li>
+    <li><b>Monopoly.</b> The theory assumes perfect competition, but the economy of the trusts was anything but competitive. In 1933, Joan Robinson and Edward Chamberlin independently developed theories of imperfect and monopolistic competition in which factors are paid less than the value of their marginal product.</li>
+    <li><b>Capital.</b> The theory needs a quantity of capital whose marginal product sets the interest rate. The Cambridge capital controversy of the 1960s showed that capital cannot in general be measured independently of the interest rate (Week 12).</li>
+    <li><b>Distribution and justice.</b> Even if each factor is paid its marginal product, the distribution of income depends on who owns the factors. Hunt argues that marginal productivity theory naturalizes the existing distribution of property and treats ownership as if it were a contribution.</li>
+  </ul>
+  <div class="think"><b>Discussion:</b> Clark claimed that, without friction, everyone receives what they create. What would you need to observe to test that claim, and how does it compare with Marx’s claim (Week 6) that profit is unpaid labor?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 11 (neoclassical theories of the firm and income distribution: Marshall, Clark, Böhm-Bawerk).</p>
+  <p class="rd">Hunt, ch. 14 (neoclassical welfare economics).</p>
+  <p class="rd">Marshall, <em>Principles of Economics</em> (1890), Book V, ch. 3 and 5, selections.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 4 (Alfred Marshall: is inequality inevitable?).</p>
+
+  <p><a href="index.html#week-9">← Back to Week 9 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let period = 'm';
+// demand: P = a - b Q ; initial a = 30, b = 0.2 ; long-run cost 10 ; initial equilibrium Q0 = 100, P0 = 10
+const B = 0.2, A0 = 30, C = 10, Q0 = 100;
+function marshall() {
+  const sh = +$('sh').value/100; $('shv').textContent = '+' + Math.round(sh*100) + '%';
+  const A1 = C + (A0 - C)*(1 + sh); // demand shifts out: willingness to pay at each Q rises so that quantity demanded at P=10 rises by sh
+  const Dq = (a, p) => (a - p)/B;
+  let P, Q, lab;
+  if (period === 'm') { Q = Q0; P = A1 - B*Q; lab = 'Market period: supply is fixed at what is already on hand.'; }
+  else if (period === 's') { const s = 0.06; Q = (A1 - (C - s*Q0)) / (B + s); P = C + s*(Q - Q0); lab = 'Short run: existing firms raise output along their rising marginal-cost curves.'; } // short-run supply P = C + s(Q - Q0)
+  else { P = C; Q = Dq(A1, C); lab = 'Long run: new firms enter until price returns to the cost of production.'; }
+  const W = 640, H = 260, L = 46, R = 14, T = 12, B2 = 30, QM = 260, PM = 32;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B2 - p/PM*(H-B2-T);
+  let g = `<line x1="${L}" y1="${H-B2}" x2="${W-R}" y2="${H-B2}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B2}" stroke="#ccd2d8"/>`;
+  [0,10,20,30].forEach(p => g += `<text x="${L-6}" y="${Y(p)+4}" text-anchor="end">$${p}</text>`);
+  [0,50,100,150,200,250].forEach(q => g += `<text x="${X(q)}" y="${H-B2+15}" text-anchor="middle">${q}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">quantity</text>`;
+  const q0 = a => Math.max(0, (a - PM)/B);
+  const dline = (a, col, dash) => `<line x1="${X(q0(a))}" y1="${Y(Math.min(a, PM))}" x2="${X(Math.min(QM, a/B))}" y2="${Y(Math.max(0, a - B*QM))}" stroke="${col}" stroke-width="2.4" ${dash ? 'stroke-dasharray="6 4"' : ''}/>`;
+  g += dline(A0, '#9fc4e6', true) + dline(A1, '#0077b6', false);
+  g += `<text x="${X(q0(A1))+10}" y="${Y(Math.min(A1, PM))+14}" fill="#0077b6">new demand</text>`;
+  // supply curves
+  g += `<line x1="${X(Q0)}" y1="${Y(0)}" x2="${X(Q0)}" y2="${Y(PM)}" stroke="${period==='m'?'#c47a2c':'#ead7c3'}" stroke-width="${period==='m'?2.6:1.5}"/>`;
+  g += `<line x1="${X(0)}" y1="${Y(C - 0.06*Q0)}" x2="${X(QM)}" y2="${Y(C + 0.06*(QM-Q0))}" stroke="${period==='s'?'#c47a2c':'#ead7c3'}" stroke-width="${period==='s'?2.6:1.5}"/>`;
+  g += `<line x1="${X(0)}" y1="${Y(C)}" x2="${X(QM)}" y2="${Y(C)}" stroke="${period==='l'?'#c47a2c':'#ead7c3'}" stroke-width="${period==='l'?2.6:1.5}"/>`;
+  g += `<text x="${X(QM)-4}" y="${Y(C)-6}" text-anchor="end" fill="#c47a2c">long-run supply (cost $10)</text>`;
+  g += `<circle cx="${X(Q0)}" cy="${Y(C)}" r="5" fill="#9fc4e6"/><circle cx="${X(Q)}" cy="${Y(P)}" r="7" fill="#023e8a"/>`;
+  $('mchart').innerHTML = g;
+  $('mout').innerHTML = `${lab} Price: <b>$${P.toFixed(2)}</b> (was $10.00); quantity: <b>${Q.toFixed(0)}</b> (was 100). ` +
+    (period === 'm' ? 'Demand alone sets the price.' : period === 's' ? 'Both blades matter.' : 'Cost of production alone sets the price; demand only decides the quantity.');
+}
+$('sh').addEventListener('input', marshall);
+document.querySelectorAll('#mbox .btn').forEach(b => b.addEventListener('click', () => { period = b.dataset.p; document.querySelectorAll('#mbox .btn').forEach(o => o.classList.toggle('on', o === b)); marshall(); }));
+marshall();
+
+function clark() {
+  const Lw = +$('l').value, a = +$('a').value, K = 100;
+  $('lv').textContent = Lw; $('av').textContent = a.toFixed(2);
+  const Q = 10 * Math.pow(K, 1-a) * Math.pow(Lw, a), mpl = a*Q/Lw, mpk = (1-a)*Q/K;
+  const wages = mpl*Lw, profits = mpk*K;
+  $('ws').style.width = (wages/Q*100) + '%'; $('ks').style.width = (profits/Q*100) + '%';
+  $('ws').textContent = `wages ${(wages/Q*100).toFixed(0)}%`; $('ks').textContent = `profit ${(profits/Q*100).toFixed(0)}%`;
+  const f = v => v.toLocaleString(undefined, {maximumFractionDigits:1});
+  $('cout').innerHTML = `Output: <b>${f(Q)}</b>. Marginal product of labor = wage = <b>${f(mpl)}</b> per worker; marginal product of capital = return per machine = <b>${f(mpk)}</b>. Wages (${f(wages)}) + returns to capital (${f(profits)}) = ${f(wages+profits)}: the product is exactly exhausted. Labor’s share is always α = ${a.toFixed(2)}, whatever the number of workers.`;
+}
+['l','a'].forEach(i => $(i).addEventListener('input', clark)); clark();
+</script>
+</body>
+</html>
