@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chicago and Vienna | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the neoliberal turn: the Chicago school and the Austrian school compared, monetarism and the natural rate with an interactive Phillips curve, rational expectations, Austrian business cycle theory, and Chicago beyond macroeconomics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; --chi:#3d5a80; --aus:#5e548e; }
+.page.vt { max-width: 940px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+/* comparison table */
+.vt table.cmp { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 15.5px; margin: 12px 0; }
+.vt table.cmp th, .vt table.cmp td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; text-align: left; }
+.vt table.cmp thead th { color: #fff; font-size: 15px; }
+.vt table.cmp thead th:first-child { background: none; color: var(--muted); }
+.vt table.cmp thead th.c { background: var(--chi); border-radius: 8px 8px 0 0; }
+.vt table.cmp thead th.a { background: var(--aus); border-radius: 8px 8px 0 0; }
+.vt table.cmp tbody th { width: 17%; color: var(--text); font-weight: 600; font-size: 15px; }
+.vt table.cmp td.c { background: #eef2f8; }
+.vt table.cmp td.a { background: #f1eff7; }
+.vt table.cmp tr.same td { background: var(--soft); text-align: center; }
+@media (max-width: 680px) { .vt table.cmp, .vt table.cmp tbody, .vt table.cmp tr, .vt table.cmp th, .vt table.cmp td { display: block; width: auto; } .vt table.cmp thead { display: none; } .vt table.cmp td.c::before { content: "Chicago: "; font-weight: 600; } .vt table.cmp td.a::before { content: "Austrian: "; font-weight: 600; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 13</p>
+  <h1>Chicago and Vienna: The Neoliberal Turn</h1>
+  <p class="lead">Two free-market traditions that waited out the Keynesian decades, and then shaped economic policy from the 1970s onward. They agree on the virtues of markets, and disagree on almost everything else.</p>
+
+  <div class="toc"><b>In this module</b>
+    <ol><li><a href="#context">From stagflation to Thatcher and Reagan</a></li><li><a href="#roots">Two traditions, two cities</a></li><li><a href="#compare">Chicago versus Vienna: a comparison</a></li><li><a href="#friedman">Friedman and the natural rate (interactive)</a></li><li><a href="#lucas">Rational expectations and the Lucas critique</a></li><li><a href="#abct">The Austrian theory of the business cycle</a></li><li><a href="#beyond">Chicago beyond macroeconomics</a></li><li><a href="#critics">Critics and consequences</a></li></ol>
+  </div>
+
+  <h2 id="context">1. From stagflation to Thatcher and Reagan</h2>
+  <p>By the late 1960s the postwar boom was slowing. In 1971 the United States ended the convertibility of the dollar into gold, and the Bretton Woods system of fixed exchange rates collapsed. Oil prices quadrupled in 1973–74 and doubled again in 1979. Rich economies now suffered high inflation and high unemployment at the same time, <b>stagflation</b>, which the simple Keynesian models of the day, with their stable trade-off between inflation and unemployment, could not explain.</p>
+  <p>Free-market economists had been waiting for this moment. In 1947 Friedrich Hayek gathered liberal economists and philosophers, including Milton Friedman, George Stigler, Frank Knight, and Ludwig von Mises, at Mont Pèlerin in Switzerland to found a society devoted to defending the market against planning and the welfare state. In the 1970s their ideas moved from the margins to the center: Hayek received the Nobel Prize in 1974 and Friedman in 1976. Paul Volcker’s Federal Reserve raised interest rates sharply from 1979, Margaret Thatcher came to power in 1979 and Ronald Reagan in 1981, and the policies later summed up as the Washington Consensus (deregulation, privatization, free trade, and free capital flows) spread across the world.</p>
+
+  <h2 id="roots">2. Two traditions, two cities</h2>
+  <p><b>The Austrian school</b> began with Carl Menger’s <em>Principles</em> in Vienna in 1871 (Week 8) and continued with Eugen von Böhm-Bawerk’s theory of capital and interest (Week 9). In the 1920s and 1930s Ludwig von Mises and Friedrich Hayek made it a force in the debates over socialism and the business cycle. Both left Austria before the Nazi annexation of 1938: Mises eventually settled in New York, and Hayek moved to the London School of Economics in 1931 and later to the University of Chicago (1950–62), though to its Committee on Social Thought rather than the economics department. After Mises, the tradition continued through students such as Israel Kirzner and Murray Rothbard, and later at George Mason University.</p>
+  <p><b>The Chicago school</b> grew out of the University of Chicago’s economics department. Its first generation in the 1920s and 1930s, Frank Knight, Jacob Viner, and Henry Simons, combined neoclassical price theory with a liberal suspicion of concentrated power, public or private. Its second generation, from the late 1940s, was led by Milton Friedman and George Stigler and included Ronald Coase, Gary Becker, and later Robert Lucas and Eugene Fama. Between 1974 and 2013, a striking number of Nobel prizes in economics went to economists associated with Chicago.</p>
+  <p>E. K. Hunt, in his account of contemporary orthodoxy, treats the two as “separate but similar schools” that share a commitment to individualism, voluntary exchange, and laissez-faire, and that differ mainly in method: the Austrians are rationalists, Friedman’s Chicago is empiricist. Hunt regards that methodological difference as minor. The comparison below suggests that the differences go further, even where the policy conclusions converge.</p>
+
+  <h2 id="compare">3. Chicago versus Vienna: a comparison</h2>
+  <table class="cmp">
+    <thead><tr><th></th><th class="c">Chicago school</th><th class="a">Austrian school</th></tr></thead>
+    <tbody>
+      <tr class="same"><td colspan="3"><b>Shared ground:</b> methodological individualism; confidence in voluntary exchange and competitive markets; suspicion of central planning, the welfare state, and Keynesian demand management; a minimal role for the state in the economy.</td></tr>
+      <tr><th>Method</th><td class="c">Empiricist. A theory is judged by the accuracy of its predictions, not the realism of its assumptions (Friedman, “The Methodology of Positive Economics,” 1953). Heavy use of mathematics and statistics.</td><td class="a">Rationalist. Economic laws are deduced from the axiom that people act purposefully (Mises called this <em>praxeology</em>). Skeptical of mathematical models and econometrics, since human action is not a stable, measurable regularity.</td></tr>
+      <tr><th>Equilibrium</th><td class="c">Markets are usually close to equilibrium; agents optimize with the information they have; prices clear markets.</td><td class="a">Markets are never in equilibrium. They are a <em>process</em> of discovery in which entrepreneurs notice and correct errors (Kirzner); prices transmit dispersed knowledge that no one possesses in full (Hayek, 1945).</td></tr>
+      <tr><th>Money and inflation</th><td class="c">Monetarism: inflation is “always and everywhere a monetary phenomenon.” The central bank should grow the money supply at a steady, announced rate.</td><td class="a">Money is not neutral: new credit enters the economy at particular points and distorts relative prices. Hayek later proposed competing private currencies (1976); Rothbard favored a gold standard.</td></tr>
+      <tr><th>The Great Depression</th><td class="c">Caused by the Federal Reserve, which let the money supply fall by about a third from 1929 to 1933 (Friedman and Schwartz, 1963). The Fed should have expanded money and credit.</td><td class="a">Caused by the credit boom of the 1920s, which pushed interest rates below their natural level and led to malinvestment. The bust was the necessary liquidation of those errors; stimulus only prolongs it.</td></tr>
+      <tr><th>Business cycles</th><td class="c">Mostly the result of monetary mistakes and, for later new classical economists, of real shocks and rational responses to them.</td><td class="a">The Austrian business cycle theory: artificially cheap credit lengthens the structure of production into projects that savings cannot sustain (Mises, 1912; Hayek, <em>Prices and Production</em>, 1931).</td></tr>
+      <tr><th>Capital</th><td class="c">Capital can be treated as a stock that earns a rate of return; Knight debated Hayek on this in the 1930s.</td><td class="a">Capital is a heterogeneous structure of specific goods arranged over time (Böhm-Bawerk’s “roundabout production”); it cannot be summed into one number.</td></tr>
+      <tr><th>Role of the state</th><td class="c">Limited but real: a money-growth rule, antitrust enforcement (later narrowed to “consumer welfare”), a negative income tax in place of welfare programs, school vouchers.</td><td class="a">Generally narrower. Hayek accepted a basic safety net and some public goods; Mises opposed almost all intervention; Rothbard argued for abolishing the state altogether.</td></tr>
+      <tr><th>Reach beyond economics</th><td class="c">“Economic imperialism”: price theory applied to crime, family, discrimination, and law (Becker; law and economics).</td><td class="a">Political and legal philosophy: spontaneous order, the rule of law, and the limits of reason (Hayek, <em>The Constitution of Liberty</em>, 1960).</td></tr>
+      <tr><th>Key works</th><td class="c">Friedman, <em>Capitalism and Freedom</em> (1962); Friedman and Schwartz, <em>A Monetary History of the United States</em> (1963); Stigler, “The Theory of Economic Regulation” (1971); Lucas, “Econometric Policy Evaluation: A Critique” (1976).</td><td class="a">Mises, “Economic Calculation in the Socialist Commonwealth” (1920) and <em>Human Action</em> (1949); Hayek, <em>The Road to Serfdom</em> (1944) and “The Use of Knowledge in Society” (1945).</td></tr>
+    </tbody>
+  </table>
+  <div class="think"><b>Discussion:</b> Chicago says the Fed caused the Depression by doing too little; the Austrians say credit policy caused it by doing too much beforehand. Both blame government rather than markets. What evidence would distinguish the two accounts?</div>
+
+  <h2 id="friedman">4. Friedman and the natural rate</h2>
+  <p>In the 1960s many Keynesians read the <b>Phillips curve</b>, the observed negative relation between unemployment and inflation, as a menu: accept a little more inflation, get a little less unemployment. In his 1967 presidential address to the American Economic Association (published 1968), Friedman argued that this trade-off holds only while people are surprised. There is a <b>natural rate of unemployment</b> set by real factors. If policy holds unemployment below it, workers and firms come to expect higher inflation, build it into wages and prices, and inflation keeps rising. The long-run Phillips curve is vertical. Edmund Phelps made a similar argument at the same time.</p>
+  <p class="eq">inflation = expected inflation − β × (unemployment − natural rate)</p>
+  <div class="box" id="pc">
+    <h3>Holding unemployment below the natural rate</h3>
+    <div class="grid2">
+      <div><label>Natural rate of unemployment: <b id="unv">5.0%</b></label><input type="range" id="un" min="3" max="8" step="0.5" value="5"></div>
+      <div><label>Unemployment the government targets: <b id="utv">4.0%</b></label><input type="range" id="ut" min="2" max="8" step="0.5" value="4"></div>
+      <div><label>Slope of the short-run Phillips curve (β): <b id="bv">0.5</b></label><input type="range" id="b" min="0.2" max="1.5" step="0.1" value="0.5"></div>
+      <div><label>Starting inflation: <b id="p0v">2%</b></label><input type="range" id="p0" min="0" max="6" step="0.5" value="2"></div>
+    </div>
+    <div style="margin-top:10px"><span class="note">Expectations: </span><button class="btn on" type="button" data-x="adaptive">Adaptive (Friedman)</button><button class="btn" type="button" data-x="rational">Rational (Lucas)</button></div>
+    <svg id="pcchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Inflation over time"></svg>
+    <div class="out" id="pcout"></div>
+  </div>
+  <p>Under adaptive expectations, people expect this year’s inflation to equal last year’s. Each year the government buys lower unemployment with a <em>further</em> rise in inflation, so inflation accelerates. When stagflation arrived in the 1970s, Friedman’s argument looked like a successful prediction, which is exactly the test his methodology prescribes.</p>
+
+  <h2 id="lucas">5. Rational expectations and the Lucas critique</h2>
+  <p>Robert Lucas and other <b>new classical</b> economists in the 1970s went further. If people form expectations rationally, using all available information including knowledge of the policy rule, they cannot be systematically fooled even in the short run. Switch the interactive above to “Rational”: a predictable attempt to hold unemployment down produces only inflation. Lucas’s critique of 1976 added that statistical relationships estimated under one policy regime will shift when the regime changes, so Keynesian econometric models could not be used to evaluate new policies. Macroeconomics was rebuilt on “microfoundations”: optimizing households and firms with rational expectations.</p>
+  <p>The response, <b>new Keynesian</b> economics, kept rational expectations but added sticky prices and wages, which restored a short-run role for monetary policy. By the 2000s the two had merged into a “new consensus” that guided central banks until the financial crisis of 2008 (Week 14).</p>
+
+  <h2 id="abct">6. The Austrian theory of the business cycle</h2>
+  <p>The Austrian account starts from the interest rate. In Hayek’s version, the “natural” rate reflects how willing people are to save, that is, to postpone consumption. When banks or a central bank push the market rate below it, investment in long, capital-intensive projects looks profitable even though people have not saved enough to complete them. Resources are drawn into “higher stages” of production far from consumers. When the credit expansion stops, or consumer demand reasserts itself, many of these projects turn out to be unsustainable: the boom has produced <b>malinvestment</b>, and the bust is the painful process of liquidating it.</p>
+  <p>The policy conclusion is the opposite of Keynes’s and of Friedman’s: do not prevent the liquidation with cheap money or public spending. Hayek and Keynes argued over this directly in the early 1930s. Most economists judged that Keynes won that debate during the Depression, but the Austrian theory found new audiences after the dot-com bubble of 2000 and the housing bubble of 2008.</p>
+
+  <h2 id="beyond">7. Chicago beyond macroeconomics</h2>
+  <ul>
+    <li><b>Regulatory capture.</b> George Stigler (1971) argued that regulation is usually acquired by the industry it regulates and run for its benefit, a theory of government failure to set beside the theory of market failure.</li>
+    <li><b>The Coase theorem.</b> Ronald Coase (1960) showed that if property rights are clear and bargaining is cheap, private parties can resolve externalities like pollution without taxes or regulation. Coase himself stressed that transaction costs are rarely low, but the result became the basis for tradable pollution permits.</li>
+    <li><b>Human capital and “economic imperialism.”</b> Gary Becker applied the logic of rational choice to education, discrimination, crime, and the family.</li>
+    <li><b>Law and economics, and antitrust.</b> Aaron Director, Richard Posner, and Robert Bork reshaped American antitrust law around a narrow “consumer welfare” standard, a long way from Henry Simons’s earlier hostility to monopoly.</li>
+    <li><b>Efficient markets.</b> Eugene Fama’s efficient markets hypothesis held that asset prices reflect all available information, an idea that became central to finance and was badly tested in 2008.</li>
+  </ul>
+
+  <h2 id="critics">8. Critics and consequences</h2>
+  <p>Hunt’s criticism applies to both schools. By reducing all economic life to voluntary exchange between individuals with given “initial endowments,” they leave out how those endowments came about, and the difference between owning means of production and having only one’s labor to sell. A wage bargain is voluntary, but the alternatives open to each side are very different. Hunt also questions their claim to be value-free; Joan Robinson made the same point, arguing that every economist has political views and that honesty requires stating them.</p>
+  <p>Defenders point to the end of the high inflation of the 1970s, to the failures of central planning that Mises and Hayek predicted, and to the economic opening of China and India. Critics point to slower growth than in the golden age, rising inequality, the weakening of labor, repeated financial crises, and the bailouts of 2008, in which governments rescued the financial system on a scale neither school would have endorsed.</p>
+  <div class="think"><b>Discussion:</b> Was neoliberalism a victory of ideas, or did the ideas win because the conditions of the 1970s, and the interests of those who gained from deregulation, favored them? How would each school we have studied answer that question?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 17 (“Liberal and Conservative Neoclassical Economics” and “The Austrian and Chicago Schools”).</p>
+  <p class="rd">Milton Friedman, “The Role of Monetary Policy,” <em>American Economic Review</em> 58, no. 1 (1968), selections.</p>
+  <p class="rd">Friedrich Hayek, “The Use of Knowledge in Society,” <em>American Economic Review</em> 35, no. 4 (1945).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 8 (Hayek) and ch. 10 (Friedman).</p>
+  <p class="rd">Chang, <em>Economics: The User’s Guide</em>, ch. 4 (the Austrian school).</p>
+
+  <p><a href="index.html#week-13">← Back to Week 13 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let mode = 'adaptive';
+function pc() {
+  const un = +$('un').value, ut = +$('ut').value, b = +$('b').value, p0 = +$('p0').value;
+  $('unv').textContent = un.toFixed(1) + '%'; $('utv').textContent = ut.toFixed(1) + '%'; $('bv').textContent = b.toFixed(1); $('p0v').textContent = p0 + '%';
+  const N = 15, inf = [p0], une = [un];
+  for (let t = 1; t <= N; t++) {
+    if (mode === 'adaptive') { const pe = inf[t-1]; inf.push(pe - b*(ut - un)); une.push(ut); }
+    else { inf.push(p0 - b*(ut - un)); une.push(un); } // the policy is anticipated: no surprise, so unemployment stays at the natural rate; inflation settles at a higher (or lower) level
+  }
+  const W = 640, H = 230, L = 46, R = 14, T = 12, B = 32;
+  const lo = Math.min(0, ...inf), hi = Math.max(8, ...inf) * 1.08;
+  const X = t => L + t/N*(W-L-R), Y = v => H-B - (v-lo)/(hi-lo)*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let t = 0; t <= N; t += 3) g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  const step = hi - lo > 20 ? 5 : 2;
+  for (let v = Math.ceil(lo/step)*step; v <= hi; v += step) g += `<line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}%</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">years</text>`;
+  g += `<polyline fill="none" stroke="#c0392b" stroke-width="2.6" points="${inf.map((v,t)=>X(t)+','+Y(v)).join(' ')}"/><text x="${X(N)-4}" y="${Y(inf[N])-8}" text-anchor="end" fill="#c0392b">inflation</text>`;
+  g += `<polyline fill="none" stroke="#3d5a80" stroke-width="2.2" stroke-dasharray="6 4" points="${une.map((v,t)=>X(t)+','+Y(v)).join(' ')}"/><text x="${X(N)-4}" y="${Y(une[N])+16}" text-anchor="end" fill="#3d5a80">unemployment</text>`;
+  $('pcchart').innerHTML = g;
+  const gap = un - ut;
+  let msg;
+  if (Math.abs(gap) < 1e-9) msg = 'The target equals the natural rate, so inflation stays where it started.';
+  else if (mode === 'adaptive') msg = gap > 0 ? `Holding unemployment ${gap.toFixed(1)} points below the natural rate raises inflation by ${(b*gap).toFixed(1)} points <b>every year</b>: from ${p0}% to ${inf[N].toFixed(1)}% after ${N} years. The trade-off exists only as long as inflation keeps accelerating.` : `Holding unemployment above the natural rate pushes inflation down by ${(b*-gap).toFixed(1)} points a year: disinflation, at the cost of extra unemployment (compare the Volcker years).`;
+  else msg = gap > 0 ? `With rational expectations everyone anticipates the policy. Unemployment stays at the natural rate (${un}%), and the only result is permanently higher inflation (${inf[1].toFixed(1)}% instead of ${p0}%): no trade-off, even in the short run.` : `With rational expectations the policy is anticipated: unemployment stays at the natural rate and inflation falls immediately, with no extra unemployment.`;
+  $('pcout').innerHTML = msg;
+}
+['un','ut','b','p0'].forEach(i => $(i).addEventListener('input', pc));
+document.querySelectorAll('#pc .btn').forEach(bt => bt.addEventListener('click', () => { mode = bt.dataset.x; document.querySelectorAll('#pc .btn').forEach(o => o.classList.toggle('on', o === bt)); pc(); }));
+pc();
+</script>
+</body>
+</html>
