@@ -141,3 +141,9 @@ footer { text-align: center; padding: 28px 24px 44px; font-size: 14px; color: va
 
 /* Home: justify bio paragraphs */
 .home .main > p, .home .jmp p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+/* Language toggle for the bilingual course pages */
+.langbtn { float: right; font-size: 14px; line-height: 1.4; border: 1px solid var(--link); border-radius: 999px; padding: 2px 12px; margin-left: 12px; color: var(--link); text-decoration: none; background: #fff; }
+.langbtn:hover { background: var(--link); color: #fff; text-decoration: none; }
+html[lang="zh-CN"] body { font-family: 'Source Sans 3', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+html[lang="zh-CN"] em { font-style: normal; }

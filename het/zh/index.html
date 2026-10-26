@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>经济思想史 | Lingyi Wei</title>
+  <meta name="description" content="Lingyi Wei 正在建设中的课程：从重商主义到当代的经济思想史，包括经济学流派的互动时间轴、历史背景和十四周课程大纲。">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+/* History of Economic Thought course page. Scoped to .het. */
+.het { --soft:#f5f6f8; --line:#b9bfc7; --faint:#8a929b; }
+.page.het { max-width: 1000px; padding-top: 40px; }
+.het .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.het > h1 { margin-bottom: 6px; }
+.het .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--bar); background: var(--blue-soft); border-radius: 999px; padding: 2px 12px; margin-bottom: 12px; }
+.het p, .het li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.het .qs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 6px; }
+.het .qs div { background: var(--blue-soft); border-radius: 10px; padding: 14px 16px; }
+.het .qs b { display: block; color: var(--bar); margin-bottom: 4px; }
+.het .qs span { font-size: 16px; }
+@media (max-width: 760px) { .het .qs { grid-template-columns: 1fr; } }
+.het ol.goals li { margin-bottom: 6px; }
+
+/* Timeline */
+.het .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: 12px; background: #fff; }
+.het svg { display: block; }
+.het .hint { font-size: 14px; color: var(--faint); margin: 6px 0 0; }
+.het svg .era rect { stroke: #fff; stroke-width: 1; }
+.het svg .era text { font-size: 11px; fill: #33404d; }
+.het svg .yr { font-size: 11px; fill: var(--faint); }
+.het svg .grid { stroke: #eef0f3; }
+.het svg .lane-label { font-size: 12.5px; font-weight: 600; fill: #3a4450; }
+.het svg .bar { cursor: pointer; }
+.het svg .bar rect { rx: 7; }
+.het svg .bar text { font-size: 12px; font-weight: 600; fill: #fff; pointer-events: none; }
+.het svg .bar:hover rect, .het svg .bar:focus rect { filter: brightness(1.08); }
+.het svg .bar.on rect { stroke: #111; stroke-width: 2; }
+.het svg .link { fill: none; stroke: #7d8794; stroke-width: 1.4; }
+.het svg .link.react { stroke-dasharray: 4 3; }
+.het svg .ev circle { fill: #023e8a; }
+.het svg .ev text { font-size: 10.5px; fill: #023e8a; }
+.het .tip { position: fixed; z-index: 50; pointer-events: none; background: #1f2933; color: #fff; font-size: 13.5px; padding: 5px 10px; border-radius: 6px; max-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.het svg .eg { cursor: default; }
+.het svg .eg:hover rect, .het svg .eg:focus rect { filter: brightness(.95); stroke: #8a929b; stroke-width: 1; }
+.het .views { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 4px 0 10px; font-size: 15px; color: var(--muted); }
+.het .vbtn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.het .vbtn.on { background: var(--link); color: #fff; }
+.het .vlegend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--text); margin: 0 0 10px; }
+.het .vlegend[hidden], .het .tip[hidden] { display: none; }
+.het .vlegend span { display: inline-flex; align-items: center; gap: 6px; }
+.het .vlegend i, .het .vchip { display: inline-block; border-radius: 4px; }
+.het .vlegend i { width: 14px; height: 14px; }
+.het .vchip { color: #fff; font-size: 13px; font-weight: 600; padding: 1px 9px; margin-right: 4px; }
+.het .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.het .legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid #7d8794; vertical-align: middle; margin-right: 6px; }
+.het .legend i.d { border-top-style: dashed; }
+
+.het .panel { border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; margin-top: 16px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.het .panel h3 { font-size: 22px; margin: 0; color: var(--text); font-weight: 600; }
+.het .panel .yrs { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.het .one { margin: 12px 0 0; padding: 10px 14px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; }
+.het .row { display: flex; gap: 14px; margin-top: 12px; }
+.het .row .lb { flex: 0 0 104px; font-size: 14px; color: var(--faint); padding-top: 3px; }
+.het .row .tx { flex: 1; }
+@media (max-width: 560px) { .het .row { flex-direction: column; gap: 2px; } .het .row .lb { flex: none; } }
+
+/* Portraits */
+.het .people { display: flex; flex-wrap: wrap; gap: 12px 14px; }
+.het .person { display: flex; flex-direction: column; align-items: center; width: 86px; text-align: center; font-size: 13px; line-height: 1.25; color: var(--text); }
+.het .person img, .het .person .ini { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--blue-line); background: var(--blue-soft); margin-bottom: 5px; }
+.het .person .ini { display: grid; place-items: center; font-weight: 600; color: var(--bar); font-size: 18px; }
+.het .person small { color: var(--faint); font-size: 12px; }
+
+/* Weeks */
+.het .part { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bar); margin: 30px 0 8px; }
+.het details.wk { border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 10px; background: #fff; }
+.het details.wk > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; gap: 14px; align-items: baseline; }
+.het details.wk > summary::-webkit-details-marker { display: none; }
+.het details.wk > summary::before { content: none; }
+.het .wn { flex: 0 0 64px; font-size: 13px; font-weight: 600; color: var(--bar); }
+.het .wt { flex: 1; font-weight: 600; font-size: 17.5px; color: var(--text); }
+.het .wt small { display: block; font-weight: 400; color: var(--muted); font-size: 14.5px; }
+.het .chev { color: var(--link); font-size: 14px; }
+.het details.wk[open] .chev { transform: rotate(90deg); }
+.het .wb { padding: 2px 18px 18px 94px; }
+@media (max-width: 640px) { .het .wb { padding: 2px 16px 16px; } .het .wn { flex-basis: 52px; } }
+.het .ctx { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin: 6px 0 4px; }
+.het .ctx b { color: var(--bar); }
+.het .ctx ul { margin: 6px 0 0; padding-left: 18px; }
+.het .wb h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin: 16px 0 8px; }
+.het .wb ul.ideas { padding-left: 20px; margin: 0; }
+.het .wb ul.ideas li { margin-bottom: 5px; }
+.het p.rl, .het .wb p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.het p.rd, .het .wb p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
+.het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
+.het .books li { margin-bottom: 6px; }
+.het .credits { font-size: 13px; color: var(--faint); }
+.het .credits p { text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page het">
+  <p class="crumb"><a class="langbtn" href="../index.html" lang="en" onclick="this.href += location.hash">English</a><a href="/resources.html">资源</a> › 经济思想史</p>
+  <span class="tag">课程建设中</span>
+  <h1>经济思想史</h1>
+  <p class="lead">从重商主义到二十一世纪的经济学：经济学家如何解释价值、分配和资本主义的稳定性，以及他们的答案为何随时代而变化。</p>
+
+  <h2>课程简介</h2>
+  <p>经济思想是对所处时代问题的回答。亚当·斯密写作时，商业正在瓦解旧的农业秩序；李嘉图和马尔萨斯在工业革命期间围绕《谷物法》展开争论；马克思在曼彻斯特的工厂和1848年革命的背景下写作；边际主义者写作于长期萧条时期；凯恩斯写作于大萧条时期；货币主义者则随着1970年代的滞胀而兴起。本课程追溯每一个思想流派：产生它的历史条件、它试图回答的问题，以及它引发的争论。</p>
+  <p>贯穿整个课程的有三个问题：</p>
+  <div class="qs">
+    <div><b>价值</b><span>什么决定商品的价格：劳动、效用，还是生产成本？</span></div>
+    <div><b>分配</b><span>社会产品如何在工资、利润和地租之间分配？这种分配公平吗？</span></div>
+    <div><b>稳定</b><span>市场经济能够自我纠正，还是会产生过剩、危机和失业？</span></div>
+  </div>
+
+  <h2>学习目标</h2>
+  <p>完成本课程后，学生将能够：</p>
+  <ol class="goals">
+    <li>梳理从重商主义到当代的主要经济思想流派，并把每个流派放回产生它的经济、政治和社会条件之中。</li>
+    <li>比较不同流派如何回答关于价值、分配和市场稳定性的同一组问题。</li>
+    <li>亲手推演关键模型，包括李嘉图的自然价格、马克思的利润率、边际效用法则和凯恩斯的有效需求理论。</li>
+    <li>运用历史上的思想分析当今的问题，例如不平等、贸易、金融危机和气候变化。</li>
+  </ol>
+
+  <h2>历史进程中的经济思想流派</h2>
+  <p>每一根横条标出一个流派活跃的时期，顶部色带显示它们背后的历史时代。点击一个流派，可以查看它的主要思想家、核心观点，以及课程中讲授它的周次。</p>
+  <div class="views" role="group" aria-label="时间轴着色方式"><span>着色方式：</span><button type="button" class="vbtn on" data-view="school">按流派</button><button type="button" class="vbtn" data-view="value">按价值理论</button></div>
+  <div class="vlegend" id="vlegend" hidden></div>
+  <div class="tip" id="tip" hidden></div>
+  <div class="scroll" id="tlwrap"><svg id="tl" role="img" aria-label="1550年至2025年经济思想流派时间轴"></svg></div>
+  <p class="hint">在小屏幕上，可以左右滑动时间轴。</p>
+  <div class="legend"><span><i></i>继承：在其基础上发展</span><span><i class="d"></i>反对：针对其展开批评</span></div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+
+  <h2>课程大纲</h2>
+  <p>十四周，分为五个部分。点击某一周，可以查看它的历史背景、主要思想家、核心观点和阅读材料。</p>
+  <div id="weeks"></div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">主要教材</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》（<em>History of Economic Thought: A Critical Perspective</em>），第3版（M. E. Sharpe，2011）。</p>
+  <p class="rl">辅助教材</p>
+  <p class="rd">罗伯特·海尔布罗纳，《俗世哲人》（<em>The Worldly Philosophers</em>）。</p>
+  <p class="rd">Linda Yueh，<em>What Would the Great Economists Do?</em>（Picador，2018）。</p>
+  <p class="rd">张夏准，<em>Economics: The User’s Guide</em>（Pelican，2014），第4章。</p>
+  <p class="rd">弗兰克·斯蒂尔维尔，<em>Political Economy: The Contest of Economic Ideas</em>，第3版（牛津大学出版社，2012）。</p>
+  <p class="rl">原著选读</p>
+  <p class="rd">斯密、李嘉图、马尔萨斯、穆勒、马克思、杰文斯、马歇尔和凯恩斯著作的简短选读，包括《通论》第12章和第24章。</p>
+  <p class="rl">展望未来</p>
+  <p class="rd">乔根·兰德斯，<em>2052: A Global Forecast for the Next Forty Years</em>（2012）。</p>
+  <p class="rd">彼得·泽汉，<em>The End of the World Is Just the Beginning</em>（2022）。</p>
+
+  <h2>图片来源</h2>
+  <div class="credits" id="credits"></div>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const P = {"Thomas Mun": null, "William Petty": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/SirWilliamPetty.jpg/250px-SirWilliamPetty.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:SirWilliamPetty.jpg", "lic": "Public domain", "by": "Isaac Fuller"}, "François Quesnay": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_%281694-1774%29%2C_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg/250px-Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_%281694-1774%29%2C_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_(1694-1774),_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_(cropped).jpg", "lic": "Public domain", "by": ""}, "Adam Smith": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Adam_Smith_The_Muir_portrait.jpg/250px-Adam_Smith_The_Muir_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Adam_Smith_The_Muir_portrait.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Thomas Malthus": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg/250px-Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg", "lic": "CC BY 4.0", "by": "John Linnell"}, "David Ricardo": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg/250px-Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg", "lic": "Public domain", "by": "Thomas Phillips"}, "Jean-Baptiste Say": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Jean-Baptiste_Say.jpg/250px-Jean-Baptiste_Say.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Say.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Jeremy Bentham": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Jeremy_Bentham_by_Henry_William_Pickersgill.jpg/250px-Jeremy_Bentham_by_Henry_William_Pickersgill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jeremy_Bentham_by_Henry_William_Pickersgill.jpg", "lic": "Public domain", "by": "Henry William Pickersgill"}, "Nassau Senior": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Nassau_William_Senior_%28portrait%29.jpg/250px-Nassau_William_Senior_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nassau_William_Senior_(portrait).jpg", "lic": "Public domain", "by": "Original uploader was user:Milneg at en.wikipedia"}, "William Thompson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chinnery_Thompson.jpg/250px-Chinnery_Thompson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Chinnery_Thompson.jpg", "lic": "Public domain", "by": "George Chinnery"}, "Thomas Hodgskin": null, "John Stuart Mill": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/250px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg", "lic": "Public domain", "by": "London Stereoscopic Company"}, "Karl Marx": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/250px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png", "lic": "Public domain", "by": "John Jabez Edwin Mayall"}, "Friedrich Engels": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Friedrich_Engels_portrait_%28cropped%29.jpg/250px-Friedrich_Engels_portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_Engels_portrait_(cropped).jpg", "lic": "Public domain", "by": "William Hall (1826–ca. 1898) (cropped and sepia tone removed)"}, "W. S. Jevons": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/William_Stanley_Jevons_portrait_extract.jpg/250px-William_Stanley_Jevons_portrait_extract.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:William_Stanley_Jevons_portrait_extract.jpg", "lic": "CC BY-SA 4.0", "by": "Unknown (via University of Manchester Libraries)"}, "Carl Menger": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Menger_Portrait_ONB_cropped.png/250px-Carl_Menger_Portrait_ONB_cropped.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Carl_Menger_Portrait_ONB_cropped.png", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Léon Walras": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Portrait_of_L%C3%A9on_Walras_1862_extract.png/250px-Portrait_of_L%C3%A9on_Walras_1862_extract.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_L%C3%A9on_Walras_1862_extract.png", "lic": "CC BY-SA 4.0", "by": "Philippe-Félix Dupuis (painter). Photographic reproduction by Claude Bornand."}, "Alfred Marshall": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Alfred_Marshall_1891.jpg/250px-Alfred_Marshall_1891.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Alfred_Marshall_1891.jpg", "lic": "Public domain", "by": "Elliott and Fry (London W., 55 Baker Street)"}, "John Bates Clark": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/John_Bates_Clark.jpg/250px-John_Bates_Clark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Bates_Clark.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Eugen von Böhm-Bawerk": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png/250px-Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png", "lic": "Public domain", "by": "Josef Löwy"}, "Vilfredo Pareto": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Vilfredo_Pareto_1870s2.jpg/250px-Vilfredo_Pareto_1870s2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Vilfredo_Pareto_1870s2.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "A. C. Pigou": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg/250px-Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_Arthur_Cecil_Pigou,_c._1918-1921.jpg", "lic": "Public domain", "by": "John Palmer Clarke"}, "Thorstein Veblen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Veblen3a.jpg/250px-Veblen3a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Veblen3a.jpg", "lic": "Public domain", "by": ""}, "J. A. Hobson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/J._A._Hobson.jpg/250px-J._A._Hobson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:J._A._Hobson.jpg", "lic": "Public domain", "by": "Elliott &amp; Fry"}, "Rosa Luxemburg": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Rosa_Luxemburg_%28cropped%29.jpg/250px-Rosa_Luxemburg_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Rosa_Luxemburg_(cropped).jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Vladimir Lenin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Lenin_in_1920_%28cropped%29.jpg/250px-Lenin_in_1920_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Lenin_in_1920_(cropped).jpg", "lic": "Public domain", "by": "Unknown, presumably official"}, "John Maynard Keynes": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/John_Maynard_Keynes_%281929%29.jpg/250px-John_Maynard_Keynes_%281929%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes_(1929).jpg", "lic": "Public domain", "by": "Unknown, dedicated to Bettmann Archive"}, "Michał Kalecki": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Michal_Kalecki.jpg/250px-Michal_Kalecki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Michal_Kalecki.jpg", "lic": "CC BY 2.5 es", "by": "Manuel García Jódar"}, "Piero Sraffa": null, "Joan Robinson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Joan_Robinson_%281973%29.jpg/250px-Joan_Robinson_%281973%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joan_Robinson_(1973).jpg", "lic": "CC0", "by": "W. Punt for Anefo"}, "Joseph Schumpeter": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Joseph_Schumpeter_1945_Bachrach_portrait.png/250px-Joseph_Schumpeter_1945_Bachrach_portrait.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joseph_Schumpeter_1945_Bachrach_portrait.png", "lic": "Public domain", "by": "Louis Fabian Bachrach"}, "Friedrich Hayek": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Friedrich_Hayek_portrait.jpg/250px-Friedrich_Hayek_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_Hayek_portrait.jpg", "lic": "CC BY-SA 3.0", "by": "The original uploader was DickClarkMises at English Wikipedia."}, "Ludwig von Mises": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Ludwig_von_Mises_%283x4_cropped%29.jpg/250px-Ludwig_von_Mises_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Ludwig_von_Mises_(3x4_cropped).jpg", "lic": "CC BY-SA 3.0", "by": "Ludwig von Mises Institute"}, "Milton Friedman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Portrait_of_Milton_Friedman_%284x5_cropped%29.jpg/250px-Portrait_of_Milton_Friedman_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_Milton_Friedman_(4x5_cropped).jpg", "lic": "Public domain", "by": "Bachrach Studios"}, "Paul Samuelson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Paul_A._Samuelson%2C_economist%2C_edited.jpg/250px-Paul_A._Samuelson%2C_economist%2C_edited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Paul_A._Samuelson,_economist,_edited.jpg", "lic": "Public domain", "by": "Gotfryd, Bernard, photographer"}, "Hyman Minsky": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/HymanMinsky-1.jpg/250px-HymanMinsky-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:HymanMinsky-1.jpg", "lic": "CC BY-SA 4.0", "by": "Pontificador"}, "Friedrich List": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Friedrich_List_1845_crop.jpg/250px-Friedrich_List_1845_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_List_1845_crop.jpg", "lic": "Public domain", "by": "Josef Kriehuber"}, "Alexander Hamilton": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Alexander_Hamilton_%28NPG%29.jpg/250px-Alexander_Hamilton_%28NPG%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Alexander_Hamilton_(NPG).jpg", "lic": "Public domain", "by": "John Trumbull / Giuseppe Ceracchi"}, "W. Arthur Lewis": null, "Raúl Prebisch": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Raul_Prebisch_%28cropped%29.tif/lossy-page1-250px-Raul_Prebisch_%28cropped%29.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Raul_Prebisch_(cropped).tif", "lic": "Public domain", "by": "UnknownUnknown"}, "Herbert Simon": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Herbert_Simon%2C_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg/250px-Herbert_Simon%2C_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Herbert_Simon,_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg", "lic": "Public domain", "by": "Rochester Institute of Technology"}, "Douglass North": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Douglass_North.jpg/250px-Douglass_North.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Douglass_North.jpg", "lic": "CC BY 2.0", "by": "UNU-WIDER"}, "Robert Solow": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Robert_Solow_by_Olaf_Storbeck_%28cropped%29.jpg/250px-Robert_Solow_by_Olaf_Storbeck_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_Solow_by_Olaf_Storbeck_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "Olaf Storbeck from Düsseldorf, Deutschland"}, "Irving Fisher": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Irvingfisher.jpg/250px-Irvingfisher.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Irvingfisher.jpg", "lic": "Public domain", "by": "Bain News Service"}, "Oskar Lange": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Oskar_Lange_20-65.jpg/250px-Oskar_Lange_20-65.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Oskar_Lange_20-65.jpg", "lic": "Public domain", "by": "Władysław Miernicki"}, "Paul Sweezy": null, "Sismondi": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Jean_Charles_Simonde_de_Sismondi_%281773-1842%29.png/250px-Jean_Charles_Simonde_de_Sismondi_%281773-1842%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jean_Charles_Simonde_de_Sismondi_(1773-1842).png", "lic": "Public domain", "by": "Amélie Munier-Romilly"}, "Henry George": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Henry_George_c1885_retouched.jpg/250px-Henry_George_c1885_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Henry_George_c1885_retouched.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Frank Knight": null, "George Stigler": null, "Gary Becker": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/GaryBecker-May24-2008.jpg/250px-GaryBecker-May24-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:GaryBecker-May24-2008.jpg", "lic": "Public domain", "by": "MAR"}, "Ronald Coase": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Coase_scan_11_edited_%28cropped%29.jpg/250px-Coase_scan_11_edited_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Coase_scan_11_edited_(cropped).jpg", "lic": "Attribution", "by": "University of Chicago Law School"}, "Robert Lucas": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/La_Revoluci%C3%B3n_Industrial_Pasado_y_Futuro%2C_Robert_E._Lucas_Jr._screenshot_%28cropped%29.jpg/250px-La_Revoluci%C3%B3n_Industrial_Pasado_y_Futuro%2C_Robert_E._Lucas_Jr._screenshot_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:La_Revoluci%C3%B3n_Industrial_Pasado_y_Futuro,_Robert_E._Lucas_Jr._screenshot_(cropped).jpg", "lic": "CC BY 3.0", "by": "Centro de Estudios Públicos"}, "Israel Kirzner": {"img": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Israel_Kirzner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:Israel_Kirzner.jpg", "lic": "CC BY-SA 3.0", "by": "Mises Institute"}, "Murray Rothbard": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Murray_Rothbard_Portrait.jpg/250px-Murray_Rothbard_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Murray_Rothbard_Portrait.jpg", "lic": "CC BY 3.0", "by": "Ludwig von Mises Institute"}, "Jacob Viner": null, "Henry Simons": {"img": "https://upload.wikimedia.org/wikipedia/commons/8/85/%D0%93%D0%B5%D0%BD%D1%80%D1%96_%D0%9A%D0%B0%D0%BB%D0%B2%D0%B5%D1%80%D1%82_%D0%A1%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D1%81.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D0%BD%D1%80%D1%96_%D0%9A%D0%B0%D0%BB%D0%B2%D0%B5%D1%80%D1%82_%D0%A1%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D1%81.jpg", "lic": "CC BY-SA 4.0", "by": "Moshko Zhyd"}, "Robert Owen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Robert_Owen_by_William_Henry_Brooke.jpg/250px-Robert_Owen_by_William_Henry_Brooke.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_Owen_by_William_Henry_Brooke.jpg", "lic": "Public domain", "by": "William Henry Brooke"}, "Henri de Saint-Simon": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Portrait_de_Claude-Henri_de_Rouvroy%2C_comte_de_Saint-Simon.jpg/250px-Portrait_de_Claude-Henri_de_Rouvroy%2C_comte_de_Saint-Simon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_de_Claude-Henri_de_Rouvroy,_comte_de_Saint-Simon.jpg", "lic": "Public domain", "by": "After Adélaïde Labille-Guiard"}, "Charles Fourier": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Portrait_painting_of_Charles_Fourier_by_Jean_Gigoux_%E2%80%94_1835_%283x4_cropped%29.jpg/250px-Portrait_painting_of_Charles_Fourier_by_Jean_Gigoux_%E2%80%94_1835_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_painting_of_Charles_Fourier_by_Jean_Gigoux_%E2%80%94_1835_(3x4_cropped).jpg", "lic": "CC BY-SA 4.0", "by": "Jean Gigoux"}, "Frédéric Bastiat": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Bastiat.jpg/250px-Bastiat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Bastiat.jpg", "lic": "Public domain", "by": "Émile Desmaisons. Lithograph by Auguste-Hilaire Léveillé."}, "F. Y. Edgeworth": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Edgeworth.jpeg/250px-Edgeworth.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Edgeworth.jpeg", "lic": "Public domain", "by": ""}, "Clarence Ayres": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Clarence_Edwin_Ayres.jpg/250px-Clarence_Edwin_Ayres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Clarence_Edwin_Ayres.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Harry Braverman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Harry_Braverman_1975.jpg/250px-Harry_Braverman_1975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Harry_Braverman_1975.jpg", "lic": "Public domain", "by": "David Tinney"}, "G. A. Cohen": null, "Ladislaus Bortkiewicz": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Ladislaus_Bortkiewicz.jpg/250px-Ladislaus_Bortkiewicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Ladislaus_Bortkiewicz.jpg", "lic": "Public domain", "by": "no conegut"}, "Paul Baran": null, "Anwar Shaikh": null, "Joseph Stiglitz": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Joseph_E._Stiglitz%2C_2019_%28cropped%29.jpg/250px-Joseph_E._Stiglitz%2C_2019_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joseph_E._Stiglitz,_2019_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "Jérémy Barande"}, "George Akerlof": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/George_Akerlof_%28cropped%29.jpg/250px-George_Akerlof_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:George_Akerlof_(cropped).jpg", "lic": "CC BY 3.0", "by": "Yan Chi Vinci Chow"}, "Paul Krugman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/P20230814AS-0367_%28cropped%29.jpg/250px-P20230814AS-0367_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:P20230814AS-0367_(cropped).jpg", "lic": "Public domain", "by": "The White House"}, "Simon Kuznets": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Simon_Kuznets_1971b.jpg/250px-Simon_Kuznets_1971b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Simon_Kuznets_1971b.jpg", "lic": "Public domain", "by": "Unknown (Associated Press)"}};
+// Modules available in Chinese; other weeks link to the English module.
+const ZHMOD = [];
+
+const ERAS = [
+  [1550, 1700, '商业革命与大西洋贸易', '#dbe6f3'],
+  [1700, 1760, '农业与早期工业变革', '#e7eef7'],
+  [1760, 1850, '工业革命', '#f6e3d6'],
+  [1850, 1873, '维多利亚中期繁荣', '#f2ece1'],
+  [1873, 1896, '长期萧条', '#ebe1f1'],
+  [1896, 1914, '帝国主义', '#f3e0e0'],
+  [1914, 1945, '世界大战与大萧条', '#e3e3e3'],
+  [1945, 1973, '战后黄金时代', '#dff0e4'],
+  [1973, 2008, '新自由主义全球化', '#f5ecd5'],
+  [2008, 2025, '2008年危机之后', '#e2ecf3'],
+];
+const EVENTS = [[1776,'《国富论》'],[1817,'李嘉图《原理》'],[1848,'1848年革命'],[1867,'《资本论》第一卷'],[1871,'边际革命'],[1929,'1929年股市崩盘'],[1936,'《通论》'],[1979,'沃尔克冲击'],[2008,'2008年危机']];
+
+const SCHOOLS = [
+  { id:'merc', lane:0, from:1550, to:1776, name:'重商主义', short:'重商主义', color:'#6b7a8f', weeks:[1],
+    val:'other', valNote:'利润产生于交换（“贱买贵卖”）；没有植根于生产的价值理论。',
+    one:'国家财富来自有利的贸易差额，因此国家应当扶持出口和制造业。',
+    people:['Thomas Mun','William Petty'],
+    ideas:'以贵金属为财富；贸易顺差；国家对贸易和工业的管制；从贱买贵卖中获利。',
+    setting:'民族国家兴起、远程贸易、殖民征服，以及十六世纪的价格革命。' },
+  { id:'dev', lane:0, from:1791, to:2025, name:'发展主义传统', short:'发展主义', color:'#8c6d46', weeks:[12,14],
+    val:'other', valNote:'这一传统关心的是建设生产能力，而不是什么决定相对价格。',
+    one:'落后经济如果把一切交给市场，就无法赶上；国家必须建设生产能力。',
+    people:['Alexander Hamilton','Friedrich List','Raúl Prebisch','W. Arthur Lewis'],
+    ideas:'幼稚产业保护；产业政策；从农业到工业的结构转变；贸易条件悲观论。',
+    setting:'美国和德国的赶超式工业化、战后去殖民化，以及东亚的经济增长。' },
+  { id:'phys', lane:1, from:1756, to:1780, name:'重农学派', short:'重农', color:'#4f8a6f', weeks:[1],
+    val:'other', valNote:'只有土地是生产性的：纯产品是自然的赠予，因此价值和剩余都源于农业。',
+    one:'只有农业能产生纯产品；让商品自由流通。',
+    people:['François Quesnay'],
+    ideas:'纯产品；《经济表》作为第一个循环流转模型；“自由放任，自由通行”。',
+    setting:'大革命前的法国农业社会，背负沉重的赋税和国内关卡。' },
+  { id:'class', lane:1, from:1776, to:1871, name:'古典政治经济学', short:'古典', color:'#1f6f8b', weeks:[2,3,4,5],
+    val:'labor', valNote:'斯密：在“早期未开化状态”中劳动支配交换，资本主义则用加总论解释；李嘉图：相对价格主要由耗费的劳动决定，并因利润和时间而有所修正。',
+    one:'竞争把自利引向增长；价值来自劳动；各阶级之间的分配推动积累。',
+    people:['Adam Smith','David Ricardo','Thomas Malthus','Jean-Baptiste Say','John Stuart Mill'],
+    ideas:'分工；看不见的手；劳动价值论；级差地租；利润率下降；比较优势；萨伊定律。',
+    setting:'工业革命、拿破仑战争，以及围绕《谷物法》的斗争。' },
+  { id:'utop', lane:2, from:1800, to:1848, name:'空想社会主义者', short:'空想', color:'#c06c84', weeks:[5],
+    val:'other', valNote:'没有共同的价值理论；他们的批判是道德的和实践的。欧文最接近劳动价值论：他的劳动交换所（1832）发行以工作小时计值的“劳动券”。',
+    one:'竞争和私有财产造成贫困与苦难；社会可以围绕合作、计划与和谐重新设计。',
+    people:['Robert Owen','Henri de Saint-Simon','Charles Fourier'],
+    ideas:'欧文在新拉纳克的模范工厂和合作社区；圣西门由生产者（“实业家”）主导、由专家计划的社会；傅立叶的法郎吉、有吸引力的劳动，以及以妇女解放程度衡量社会进步。',
+    setting:'最早的工厂城镇、童工和拿破仑战争后的萧条；1820—1830年代欧文派的合作运动和工会运动。马克思和恩格斯后来称他们为“空想的”，因为他们诉诸理性和善意，而不是阶级斗争。' },
+  { id:'ricsoc', lane:3, from:1824, to:1848, name:'李嘉图派社会主义者', short:'', color:'#9b4d6b', weeks:[5],
+    val:'labor', valNote:'把劳动价值论变成正义的主张：既然劳动创造价值，劳动就应当获得全部产品。',
+    one:'如果劳动创造价值，劳动就应当获得全部产品。',
+    people:['William Thompson','Thomas Hodgskin'],
+    ideas:'劳动获得全部产品的权利；把利润和地租批判为对劳动的扣除。',
+    setting:'早期工会、《结社法》的废除（1824），以及欧文派合作社。' },
+  { id:'marx', lane:3, from:1848, to:2025, name:'马克思主义政治经济学', short:'马克思主义', color:'#b03a2e', weeks:[6,7,10,14],
+    val:'labor', valNote:'价值是社会必要劳动时间；剩余价值是无偿劳动；生产价格是转形后的价值。',
+    one:'资本主义是强大的增长引擎，但它自身的矛盾会产生剥削、危机，并最终导致社会变革。',
+    people:['Karl Marx','Friedrich Engels','Rosa Luxemburg','Vladimir Lenin','Paul Sweezy','Paul Baran','Harry Braverman','Anwar Shaikh','G. A. Cohen'],
+    ideas:'历史唯物主义；劳动力与剩余价值；转形问题；利润率下降；帝国主义理论；垄断资本与剩余；斯拉法之后的价值论争；利润率和剥削率的测度。',
+    setting:'工厂工业、1848年革命、工人运动，以及后来的世界大战和去殖民化。' },
+  { id:'neo', lane:4, from:1871, to:2025, name:'新古典经济学', short:'新古典', color:'#023e8a', weeks:[8,9,12,13],
+    val:'utility', valNote:'价格反映边际效用（需求）和边际成本（供给）；马歇尔的“剪刀”。',
+    one:'价格反映个人在边际上的选择；竞争性市场能有效配置资源，除非出现市场失灵。',
+    people:['W. S. Jevons','Léon Walras','F. Y. Edgeworth','Alfred Marshall','John Bates Clark','Vilfredo Pareto','A. C. Pigou','Paul Samuelson','Robert Solow'],
+    ideas:'边际效用；供给与需求；一般均衡；边际生产力分配论；帕累托效率；外部性；增长理论。',
+    setting:'长期萧条、社会主义政党的兴起、经济学的职业化，以及后来的战后繁荣。' },
+  { id:'aus', lane:5, from:1871, to:2025, name:'奥地利学派', short:'奥地利学派', color:'#5e548e', weeks:[8,13],
+    val:'utility', valNote:'物品之所以有价值，是因为人们重视满足自己的需要；成本本身就是放弃的主观价值。',
+    one:'知识是分散的，没有任何计划者能够把它汇集起来；市场协调着没有人能完全理解的东西。',
+    people:['Carl Menger','Eugen von Böhm-Bawerk','Ludwig von Mises','Friedrich Hayek','Israel Kirzner','Murray Rothbard'],
+    ideas:'主观价值；迂回生产与利息；社会主义计算论战；知识与自发秩序。',
+    vs:'与芝加哥学派同样主张自由市场，但从第一原理出发推理，而不是依靠统计检验；不信任数学均衡模型，把市场看作一个发现的过程。它把萧条归咎于信贷扩张并反对刺激政策；它后来的一翼（米塞斯、罗斯巴德）希望国家比芝加哥学派主张的还要小得多。',
+    setting:'世纪末的维也纳、俄国革命，以及1920—1940年代的计划论战；后来在纽约、伦敦和乔治·梅森大学。' },
+  { id:'inst', lane:6, from:1899, to:2025, name:'制度主义', short:'制度主义', color:'#8e6c8a', weeks:[10,14],
+    val:'neither', valNote:'两者都不接受：凡勃伦嘲讽效用论的“享乐主义计算”，也没有采纳劳动价值论；价值由制度、习惯和权力塑造。',
+    one:'人被他们所处的制度塑造，同时又在改变这些制度。',
+    people:['Thorstein Veblen','Clarence Ayres','Douglass North'],
+    ideas:'炫耀性消费；企业与工业的对立；习惯与本能；后来关于产权和交易成本的新制度经济学。',
+    setting:'镀金时代的美国：托拉斯、金融家和大众消费。' },
+  { id:'schum', lane:7, from:1911, to:2025, name:'熊彼特学派', short:'熊彼特', color:'#c47a2c', weeks:[14],
+    val:'utility', valNote:'以瓦尔拉斯的边际主义均衡为出发点；他的独创性在于创新与发展，而不在价值理论。',
+    one:'资本主义通过创新和创造性破坏而前进，但它可能使自己官僚化。',
+    people:['Joseph Schumpeter'],
+    ideas:'企业家；创新与创造性破坏；长波；大公司与企业家精神的衰落。',
+    setting:'第二次工业革命、公司的兴起，以及后来的数字经济。' },
+  { id:'keyn', lane:8, from:1936, to:2025, name:'凯恩斯主义与后凯恩斯主义', short:'凯恩斯主义', color:'#2a9d8f', weeks:[11,12,14],
+    val:'mixed', valNote:'凯恩斯保留了边际主义价格理论，但斯拉法和许多后凯恩斯主义者复兴了古典的生产成本方法，拒绝边际生产力论。',
+    one:'对个人合理的行为可能毁掉整个经济；需求、不确定性和金融决定产出和就业。',
+    people:['John Maynard Keynes','Michał Kalecki','Joan Robinson','Piero Sraffa','Hyman Minsky','Joseph Stiglitz','George Akerlof','Paul Krugman'],
+    ideas:'有效需求；非自愿失业；不确定性与动物精神；流动性偏好；资本争论；金融不稳定；新凯恩斯主义关于不完全信息、价格黏性和流动性陷阱的研究。',
+    setting:'大萧条、罗斯福新政、战时计划，以及战后福利国家。' },
+  { id:'chic', lane:9, from:1930, to:2025, name:'芝加哥学派', short:'芝加哥学派', color:'#3d5a80', weeks:[13],
+    val:'utility', valNote:'新古典价格理论，应用于一切选择领域。',
+    one:'竞争性市场运行良好，并可以用数据检验；大多数政府干预，包括相机抉择的货币政策，弊大于利。',
+    people:['Frank Knight','Henry Simons','Milton Friedman','George Stigler','Ronald Coase','Gary Becker','Robert Lucas'],
+    ideas:'把价格理论应用于一切；以预测能力评判的实证经济学；货币主义和货币增长规则；自然失业率；理性预期；规制俘获；科斯定理；人力资本；法律经济学。',
+    vs:'与奥地利学派同样主张自由市场，但它是经验主义的、数学化的，建立在均衡模型之上。它把大萧条归咎于美联储任由货币供应崩溃，并接受国家的有限作用：货币规则、负所得税、教育券。',
+    setting:'1930年代以来的芝加哥大学；朝圣山学社（1947）；1970年代的滞胀以及撒切尔和里根的政策转向。' },
+  { id:'beh', lane:10, from:1955, to:2025, name:'行为经济学', short:'行为经济学', color:'#6a994e', weeks:[14],
+    val:'utility', valNote:'修正后的效用理论：人们相对于参照点评价结果，并在有限理性下做出选择。',
+    one:'人们试图理性，但面临真实的限制，因此规则和制度很重要。',
+    people:['Herbert Simon'],
+    ideas:'有限理性与满意化；启发式与偏差；前景理论；实验经济学。',
+    setting:'战后的组织理论和计算机；后来的2000年和2008年金融危机。' },
+];
+const LANES = ['贸易与发展','古典传统','空想社会主义','马克思主义','新古典','奥地利学派','制度主义','创新','凯恩斯主义','芝加哥学派','行为经济学'];
+const LINKS = [ // from, to, year at junction, type
+  ['merc','class',1776,'react'],['phys','class',1776,'cont'],['class','marx',1848,'cont'],['class','ricsoc',1824,'cont'],['utop','ricsoc',1824,'cont'],['utop','marx',1848,'react'],['ricsoc','marx',1848,'cont'],
+  ['class','neo',1871,'react'],['neo','aus',1871,'cont'],['class','dev',1791,'react'],['neo','keyn',1936,'react'],['marx','schum',1911,'cont'],
+  ['neo','chic',1930,'cont'],['keyn','chic',1946,'react'],['inst','beh',1955,'cont'],['aus','chic',1947,'cont'],
+];
+
+// ---------- Timeline drawing ----------
+const X0 = 1550, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 64, EV = 52, LANE = 40;
+// Piecewise time scale: compress the early centuries, stretch 1850–1950 where schools multiply.
+const KNOTS = [[1550,0],[1750,0.13],[1850,0.36],[1950,0.70],[2025,1]];
+const frac = y => { for (let i = 1; i < KNOTS.length; i++) { const [a,fa] = KNOTS[i-1], [b,fb] = KNOTS[i]; if (y <= b) return fa + (y-a)/(b-a)*(fb-fa); } return 1; };
+const H = TOPH + EV + LANES.length * LANE + 26;
+const x = y => LEFT + frac(y) * (W - LEFT - RIGHT);
+const yLane = l => TOPH + EV + l * LANE + 6;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const svg = document.getElementById('tl');
+svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);
+
+[1550,1600,1650,1700,1750,1775,1800,1825,1850,1875,1900,1925,1950,1975,2000,2025].forEach(yr => {
+  el('line', {x1:x(yr), x2:x(yr), y1:TOPH, y2:H-20, class:'grid'}, svg);
+  const t = el('text', {x:x(yr), y:H-6, 'text-anchor':'middle', class:'yr'}, svg); t.textContent = yr;
+});
+const eras = el('g', {class:'era'}, svg);
+ERAS.forEach(([a,b,label,c]) => {
+  const eg = el('g', {class:'eg', tabindex:0, 'data-tip':`${label}（${a}—${b === 2025 ? '至今' : b}）`}, eras);
+  el('rect', {x:x(a), y:0, width:x(b)-x(a), height:TOPH-4, fill:c}, eg);
+  // wrap the label into up to four lines of Chinese characters that fit the era's width
+  const per = Math.max(2, Math.floor((x(b)-x(a)-6) / 11.5)); const lines = [];
+  for (let i = 0; i < label.length; i += per) lines.push(label.slice(i, i + per));
+  const fo = el('text', {x:(x(a)+x(b))/2, y:(TOPH-4)/2 - (Math.min(lines.length,4)-1)*6.5 + 4, 'text-anchor':'middle'}, eg);
+  lines.slice(0,4).forEach((ln, i) => { const ts = el('tspan', {x:(x(a)+x(b))/2, dy: i ? 13 : 0}, fo); ts.textContent = ln; });
+  const tt = el('title', {}, eg); tt.textContent = eg.dataset.tip;
+});
+// hover tooltip with the full era name
+const tip = document.getElementById('tip');
+eras.querySelectorAll('.eg').forEach(g => {
+  const show = e => { tip.textContent = g.dataset.tip; tip.hidden = false; const r = g.getBoundingClientRect(); const px = e && e.clientX ? e.clientX : r.left + r.width/2; tip.style.left = Math.min(window.innerWidth - 270, Math.max(8, px - 60)) + 'px'; tip.style.top = (r.bottom + 6) + 'px'; };
+  g.addEventListener('mouseenter', show); g.addEventListener('mousemove', show); g.addEventListener('focus', show);
+  g.addEventListener('mouseleave', () => tip.hidden = true); g.addEventListener('blur', () => tip.hidden = true);
+});
+const evs = el('g', {class:'ev'}, svg);
+EVENTS.forEach(([yr,label], i) => {
+  const cx = x(yr), cy = TOPH + 10 + (i % 3) * 14;
+  el('circle', {cx, cy, r:3}, evs);
+  const t = el('text', {x:cx+5, y:cy+4}, evs); t.textContent = label;
+});
+LANES.forEach((name, i) => { const t = el('text', {x:LEFT-10, y:yLane(i)+18, 'text-anchor':'end', class:'lane-label'}, svg); t.textContent = name; });
+
+const byId = Object.fromEntries(SCHOOLS.map(s => [s.id, s]));
+const links = el('g', {}, svg);
+LINKS.forEach(([a,b,yr,type]) => {
+  const A = byId[a], B = byId[b]; const xa = x(Math.min(yr, A.to)), xb = x(Math.max(yr, B.from));
+  const ya = yLane(A.lane)+13, yb = yLane(B.lane)+13;
+  el('path', {d:`M${xa},${ya} C${xa+28},${ya} ${xb-28},${yb} ${xb},${yb}`, class:'link'+(type==='react'?' react':'')}, links);
+});
+const bars = el('g', {}, svg);
+SCHOOLS.forEach(s => {
+  const g = el('g', {class:'bar', tabindex:0, role:'button', 'aria-label':s.name, 'data-id':s.id}, bars);
+  const w = Math.max(x(s.to)-x(s.from), 18);
+  el('rect', {x:x(s.from), y:yLane(s.lane), width:w, height:26, fill:s.color}, g);
+  const t = el('text', {x:x(s.from)+8, y:yLane(s.lane)+17}, g);
+  t.textContent = w > s.name.length*12.5 + 14 ? s.name : (w > s.short.length*12.5 + 14 ? s.short : '');
+  const tt = el('title', {}, g); tt.textContent = s.name;
+  g.addEventListener('click', () => show(s.id, true));
+  g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(s.id, true); } });
+});
+
+// ---------- Theory-of-value view ----------
+const VCOL = {labor:'#b03a2e', utility:'#0077b6', mixed:'#7b5ea7', other:'#9aa3ad', neither:'#9aa3ad'};
+const VLABEL = {labor:'劳动价值论', utility:'效用（主观）价值论', mixed:'混合或有争议', other:'两者都不是 / 非核心', neither:'两者都不是 / 非核心'};
+document.getElementById('vlegend').innerHTML = ['labor','utility','mixed','other'].map(k => `<span><i style="background:${VCOL[k]}"></i>${VLABEL[k]}</span>`).join('');
+function setView(v) {
+  document.querySelectorAll('.het .vbtn').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  document.getElementById('vlegend').hidden = v !== 'value';
+  document.querySelectorAll('#tl .bar').forEach(g => { const sc = byId[g.dataset.id]; g.querySelector('rect').setAttribute('fill', v === 'value' ? VCOL[sc.val] : sc.color); });
+}
+document.querySelectorAll('.het .vbtn').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+
+// ---------- People ----------
+function initials(n) { return n.replace(/[^A-Za-zÀ-ž .-]/g,'').split(/[ .-]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join(''); }
+const YEARS = {'Thomas Mun':'1571–1641','William Petty':'1623–1687','François Quesnay':'1694–1774','Adam Smith':'1723–1790','Thomas Malthus':'1766–1834','David Ricardo':'1772–1823','Jean-Baptiste Say':'1767–1832','Jeremy Bentham':'1748–1832','Nassau Senior':'1790–1864','William Thompson':'1775–1833','Frédéric Bastiat':'1801–1850','F. Y. Edgeworth':'1845–1926','Clarence Ayres':'1891–1972','Harry Braverman':'1920–1976','G. A. Cohen':'1941–2009','Ladislaus Bortkiewicz':'1868–1931','Paul Baran':'1909–1964','Anwar Shaikh':'1945–2026','Joseph Stiglitz':'b. 1943','George Akerlof':'b. 1940','Paul Krugman':'b. 1953','Simon Kuznets':'1901–1985','Robert Owen':'1771–1858','Henri de Saint-Simon':'1760–1825','Charles Fourier':'1772–1837','Thomas Hodgskin':'1787–1869','John Stuart Mill':'1806–1873','Sismondi':'1773–1842','Karl Marx':'1818–1883','Friedrich Engels':'1820–1895','W. S. Jevons':'1835–1882','Carl Menger':'1840–1921','Léon Walras':'1834–1910','Alfred Marshall':'1842–1924','John Bates Clark':'1847–1938','Eugen von Böhm-Bawerk':'1851–1914','Vilfredo Pareto':'1848–1923','A. C. Pigou':'1877–1959','Henry George':'1839–1897','Thorstein Veblen':'1857–1929','J. A. Hobson':'1858–1940','Rosa Luxemburg':'1871–1919','Vladimir Lenin':'1870–1924','John Maynard Keynes':'1883–1946','Irving Fisher':'1867–1947','Michał Kalecki':'1899–1970','Piero Sraffa':'1898–1983','Joan Robinson':'1903–1983','Joseph Schumpeter':'1883–1950','Friedrich Hayek':'1899–1992','Ludwig von Mises':'1881–1973','Oskar Lange':'1904–1965','Milton Friedman':'1912–2006','Paul Samuelson':'1915–2009','Robert Solow':'1924–2023','Hyman Minsky':'1919–1996','Paul Sweezy':'1910–2004','Alexander Hamilton':'1755–1804','Friedrich List':'1789–1846','Raúl Prebisch':'1901–1986','W. Arthur Lewis':'1915–1991','Herbert Simon':'1916–2001','Douglass North':'1920–2015','Frank Knight':'1885–1972','Henry Simons':'1899–1946','George Stigler':'1911–1991','Ronald Coase':'1910–2013','Gary Becker':'1930–2014','Robert Lucas':'1937–2023','Israel Kirzner':'b. 1930','Murray Rothbard':'1926–1995'};
+const ZH = {'Thomas Mun':'托马斯·孟','William Petty':'威廉·配第','François Quesnay':'弗朗索瓦·魁奈','Adam Smith':'亚当·斯密','Thomas Malthus':'托马斯·马尔萨斯','David Ricardo':'大卫·李嘉图','Jean-Baptiste Say':'让-巴蒂斯特·萨伊','Jeremy Bentham':'杰里米·边沁','Nassau Senior':'纳索·西尼尔','William Thompson':'威廉·汤普森','Frédéric Bastiat':'弗雷德里克·巴斯夏','F. Y. Edgeworth':'F. Y. 埃奇沃思','Clarence Ayres':'克拉伦斯·艾尔斯','Harry Braverman':'哈里·布雷弗曼','G. A. Cohen':'G. A. 柯亨','Ladislaus Bortkiewicz':'拉迪斯劳斯·鲍特凯维兹','Paul Baran':'保罗·巴兰','Anwar Shaikh':'安瓦尔·谢克','Joseph Stiglitz':'约瑟夫·斯蒂格利茨','George Akerlof':'乔治·阿克洛夫','Paul Krugman':'保罗·克鲁格曼','Simon Kuznets':'西蒙·库兹涅茨','Robert Owen':'罗伯特·欧文','Henri de Saint-Simon':'亨利·德·圣西门','Charles Fourier':'夏尔·傅立叶','Thomas Hodgskin':'托马斯·霍吉斯金','John Stuart Mill':'约翰·斯图亚特·穆勒','Sismondi':'西斯蒙第','Karl Marx':'卡尔·马克思','Friedrich Engels':'弗里德里希·恩格斯','W. S. Jevons':'W. S. 杰文斯','Carl Menger':'卡尔·门格尔','Léon Walras':'莱昂·瓦尔拉斯','Alfred Marshall':'阿尔弗雷德·马歇尔','John Bates Clark':'约翰·贝茨·克拉克','Eugen von Böhm-Bawerk':'欧根·冯·庞巴维克','Vilfredo Pareto':'维尔弗雷多·帕累托','A. C. Pigou':'A. C. 庇古','Henry George':'亨利·乔治','Thorstein Veblen':'托斯丹·凡勃伦','J. A. Hobson':'J. A. 霍布森','Rosa Luxemburg':'罗莎·卢森堡','Vladimir Lenin':'弗拉基米尔·列宁','John Maynard Keynes':'约翰·梅纳德·凯恩斯','Irving Fisher':'欧文·费雪','Michał Kalecki':'米哈尔·卡莱茨基','Piero Sraffa':'皮耶罗·斯拉法','Joan Robinson':'琼·罗宾逊','Joseph Schumpeter':'约瑟夫·熊彼特','Friedrich Hayek':'弗里德里希·哈耶克','Ludwig von Mises':'路德维希·冯·米塞斯','Oskar Lange':'奥斯卡·兰格','Milton Friedman':'米尔顿·弗里德曼','Paul Samuelson':'保罗·萨缪尔森','Robert Solow':'罗伯特·索洛','Hyman Minsky':'海曼·明斯基','Paul Sweezy':'保罗·斯威齐','Alexander Hamilton':'亚历山大·汉密尔顿','Friedrich List':'弗里德里希·李斯特','Raúl Prebisch':'劳尔·普雷维什','W. Arthur Lewis':'W. 阿瑟·刘易斯','Herbert Simon':'赫伯特·西蒙','Douglass North':'道格拉斯·诺斯','Frank Knight':'弗兰克·奈特','Henry Simons':'亨利·西蒙斯','George Stigler':'乔治·施蒂格勒','Ronald Coase':'罗纳德·科斯','Gary Becker':'加里·贝克尔','Robert Lucas':'罗伯特·卢卡斯','Israel Kirzner':'伊斯雷尔·柯兹纳','Murray Rothbard':'默里·罗斯巴德','Jacob Viner':'雅各布·瓦伊纳'};
+const zh = n => ZH[n] || n;
+const yrs = n => (YEARS[n] || '').replace(/^b\. (\d+)/, '生于$1');
+function people(list) {
+  return '<div class="people">' + list.map(n => {
+    const p = P[n];
+    const pic = p ? `<img src="${p.img}" alt="${zh(n)}" loading="lazy">` : `<span class="ini" aria-hidden="true">${initials(n)}</span>`;
+    return `<div class="person">${pic}${zh(n)}<small>${yrs(n)}</small></div>`;
+  }).join('') + '</div>';
+}
+
+// ---------- Panel ----------
+const panel = document.getElementById('panel');
+function show(id, scroll) {
+  const s = byId[id];
+  document.querySelectorAll('.het svg .bar').forEach(b => b.classList.toggle('on', b.dataset.id === id));
+  const wk = s.weeks.map(n => `<a href="#week-${n}" data-wk="${n}">第${n}周</a>`).join('、');
+  panel.innerHTML = `<h3>${s.name}</h3><div class="yrs">${s.from}${s.to >= 2025 ? '—至今' : '—' + s.to}</div>
+    <p class="one">${s.one}</p>
+    <div class="row"><div class="lb">主要思想家</div><div class="tx">${people(s.people)}</div></div>
+    <div class="row"><div class="lb">核心观点</div><div class="tx">${s.ideas}</div></div>
+    <div class="row"><div class="lb">历史背景</div><div class="tx">${s.setting}</div></div>
+    ${s.vs ? `<div class="row"><div class="lb">芝加哥与奥地利</div><div class="tx">${s.vs}</div></div>` : ''}
+    <div class="row"><div class="lb">价值理论</div><div class="tx"><span class="vchip" style="background:${VCOL[s.val]}">${VLABEL[s.val]}</span> ${s.valNote}</div></div>
+    <div class="row"><div class="lb">课程周次</div><div class="tx">${wk}</div></div>`;
+  panel.querySelectorAll('a[data-wk]').forEach(a => a.addEventListener('click', () => { const d = document.getElementById('week-' + a.dataset.wk); if (d) d.open = true; }));
+  if (scroll) panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+show('class', false);
+
+// ---------- Weeks ----------
+const PARTS = {1:'第一部分 · 起源', 2:'第二部分 · 古典政治经济学', 6:'第三部分 · 马克思', 8:'第四部分 · 新古典经济学及其批评者', 11:'第五部分 · 凯恩斯及其之后'};
+const WEEKS = [
+ {n:1, t:'剩余、市场与资本主义的诞生', sub:'重商主义者与重农学派，约1350—1770年',
+  ctx:'黑死病（1347—1351）使欧洲人口减少了大约三分之一甚至更多，劳动力变得稀缺，封建义务随之削弱。远程贸易、对美洲的征服以及新大陆白银的涌入（“价格革命”）使商人和君主致富。圈地运动把农民赶出土地，造就了一个必须出卖劳动才能生存的阶级。',
+  ev:['1347—1351年：黑死病','1492年以后：征服美洲；大西洋贸易','16世纪：价格革命；英格兰圈地运动','1694年：英格兰银行成立','1758年：魁奈《经济表》'],
+  people:['Thomas Mun','William Petty','François Quesnay'],
+  ideas:['什么是剩余产品，不同社会如何使用它。','资本作为自我增殖的货币：G – W – G′。','重商主义：以贵金属为财富，追求有利的贸易差额。','重农学派：农业的纯产品、第一个循环流转模型，以及“自由放任”的起源。'],
+  read:'亨特，第1—2章。辅助阅读：海尔布罗纳，第2章；斯蒂尔维尔，第5—7章。',
+  q:'当市场而不是习俗和命令开始组织生产时，经济思想为什么会发生如此巨大的变化？',
+  mod:['origins.html','打开模块：剩余、市场与资本主义的诞生（含剩余与增长的互动练习）→']},
+ {n:2, t:'亚当·斯密：商业、分工与看不见的手', sub:'《国富论》，1776年',
+  ctx:'斯密写作于启蒙时代的苏格兰，当时英国的商业和制造业正在扩张。纺织机械和瓦特改良的蒸汽机开始改变生产，而他的书出版的那一年，英国的北美殖民地宣布独立。',
+  ev:['1759年：《道德情操论》','1760—1770年代：新的纺织机械；瓦特蒸汽机','1776年：《国富论》；美国独立'],
+  people:['Adam Smith'],
+  ideas:['斯密的社会四阶段：狩猎、游牧、农业、商业。','分工与市场规模是财富增长的源泉。','生产性劳动与非生产性劳动；积累是增长的引擎。','看不见的手、自由放任的理由，以及政府的三项职责。','斯密在哪里看到了市场的局限，现代经济学又如何描述市场失灵。'],
+  read:'亨特，第3章。辅助阅读：海尔布罗纳，第3章；Yueh，第1章（斯密：政府应当再平衡经济吗？）。',
+  q:'斯密在《国富论》中只用过一次“看不见的手”。它为什么会成为经济学中最著名的思想？',
+  mod:['adam-smith.html','打开模块：亚当·斯密（含互动的制针工厂）→']},
+ {n:3, t:'古典价值理论：从斯密到李嘉图', sub:'长期中什么决定价格？',
+  ctx:'古典经济学家希望解释“自然价格”，即市场价格围绕其波动的长期平均水平。他们的答案带有政治锋芒：它决定了工资、利润和地租究竟是对贡献的报酬，还是别的什么东西。',
+  ev:['1776年：斯密的劳动价值论与加总价值论','1817年：李嘉图《政治经济学及赋税原理》'],
+  people:['Adam Smith','David Ricardo'],
+  ideas:['使用价值与交换价值；水与钻石悖论。','斯密的“早期未开化状态”：海狸与鹿。','斯密把自然价格看作工资、利润与地租之和，以及为什么这是循环论证。','李嘉图的耗费劳动：现在的劳动加上体现在工具和原料中的过去劳动。','当利润率为正、各部门使用资本的比例不同时，价格为什么会偏离劳动比率。','李嘉图自然价格的计算实例。'],
+  read:'亨特，第3章（斯密的价值理论）和第5章（劳动价值论；资本构成不同时的价格决定）。',
+  q:'如果价格并不完全符合劳动比率，劳动价值论还有用吗？什么可以作为支持或反驳它的证据？',
+  mod:['value-theory.html','打开模块：古典价值理论（含互动计算器）→']},
+ {n:4, t:'李嘉图与马尔萨斯：地租、过剩与《谷物法》', sub:'工业革命中的阶级冲突',
+  ctx:'拿破仑战争抬高了粮价和地主的地租。1815年的《谷物法》通过限制粮食进口使粮价维持在高位，代价由工业资本家和工人承担。捣毁机器的卢德派和彼得卢屠杀（1819）显示了阶级冲突已经多么尖锐。',
+  ev:['1798年：马尔萨斯《人口原理》','1803—1815年：拿破仑战争','1811—1816年：卢德派捣毁机器','1815年：《谷物法》','1819年：彼得卢屠杀','1846年：废除《谷物法》'],
+  people:['David Ricardo','Thomas Malthus','Jean-Baptiste Say','Sismondi'],
+  ideas:['李嘉图的级差地租理论与耕作边际。','李嘉图为什么预期利润率会下降，经济会趋向静止状态。','地主与资本家：《谷物法》的经济学。','比较优势：英格兰、葡萄牙、毛呢与葡萄酒。','马尔萨斯的人口原理，以及“马尔萨斯陷阱”今天是否仍然重要。','萨伊定律与马尔萨斯的过剩理论；李嘉图论机器与失业。'],
+  read:'亨特，第4—5章。辅助阅读：海尔布罗纳，第4章；Yueh，第2章（李嘉图：贸易逆差重要吗？）。',
+  q:'马尔萨斯把地主的支出辩护为需求的来源。他担心市场经济可能生产过多，这错了吗？',
+  mod:['ricardo-malthus.html','打开模块：李嘉图与马尔萨斯（含互动的地租与贸易模型）→']},
+ {n:5, t:'效用、改革与异见', sub:'边沁、萨伊、西尼尔、社会主义者、巴斯夏与约翰·斯图亚特·穆勒',
+  ctx:'随着工业资本主义走向成熟，劳动价值论在政治上变得令人不安：激进派用它论证劳动应当获得全部产品。1834年的《新济贫法》有意让救济变得严苛，宪章派为工人阶级争取选举权，1848年革命席卷欧洲，这一年也是穆勒《原理》和马克思、恩格斯《宣言》出版的年份。',
+  ev:['1789年：边沁《道德与立法原理导论》','1824年：废除《结社法》','1825—1827年：欧文的新和谐公社','1834年：《新济贫法》','1838—1848年：宪章运动','1845—1852年：爱尔兰大饥荒','1848年：穆勒《原理》；欧洲革命'],
+  people:['Jeremy Bentham','Jean-Baptiste Say','Nassau Senior','Robert Owen','Henri de Saint-Simon','Charles Fourier','William Thompson','Thomas Hodgskin','Frédéric Bastiat','John Stuart Mill'],
+  ideas:['功利主义：快乐、痛苦与幸福计算。','萨伊的效用价值论与三种“生产要素”。','西尼尔的节欲论利润理论与工资基金说。','空想社会主义者：欧文、圣西门和傅立叶论合作与计划社区。','李嘉图派社会主义者：劳动获得全部产品的权利。','巴斯夏：交换即相互服务，以及利益和谐论。','穆勒：生产规律与分配规律的区分；静止状态；他对社会主义与改革的看法。'],
+  read:'亨特，第6—8章。辅助阅读：海尔布罗纳，第5章。',
+  q:'等待（节欲）是否与劳动一样是一种生产成本？这个问题的答案为什么在1830年代如此重要？',
+  mod:['utility-reform.html','打开模块：效用、改革与异见（含边沁的幸福计算）→']},
+ {n:6, t:'马克思（一）：历史、价值与剩余价值', sub:'《资本论》第一卷，1867年',
+  ctx:'马克思和恩格斯在工厂制度之中写作：恩格斯的《英国工人阶级状况》（1845）描写了曼彻斯特的贫民窟。1848年革命失败后，马克思定居伦敦，在大英博物馆用了二十年研究他要批判的古典经济学家。',
+  ev:['1845年：恩格斯《英国工人阶级状况》','1848年：《共产党宣言》','1864年：第一国际','1867年：《资本论》第一卷'],
+  people:['Karl Marx','Friedrich Engels'],
+  ideas:['历史唯物主义：生产力与生产关系；经济基础与上层建筑（以及G. A. 柯亨对它的辩护）。','商品：使用价值、交换价值与社会必要劳动时间。','劳动力作为商品；剩余价值的来源。','不变资本、可变资本与剩余价值（C + V + S）；剩余价值率。','绝对剩余价值与相对剩余价值：工作日与劳动生产率。'],
+  read:'亨特，第9章。辅助阅读：海尔布罗纳，第6章；G. A. 柯亨，《卡尔·马克思的历史理论：一个辩护》（选读）；Yueh，第3章（马克思：中国能变富吗？）。',
+  q:'如果工人得到了他们劳动力的全部价值，利润从何而来？',
+  mod:['marx-value.html','打开模块：马克思论历史、价值与剩余价值（含互动的工作日）→']},
+ {n:7, t:'马克思（二）：生产价格、积累与危机', sub:'转形问题与利润率下降',
+  ctx:'《资本论》第二卷和第三卷由恩格斯在马克思去世后出版（1885、1894）。1873—1896年的长期衰退使危机理论变得迫切，而后来关于马克思“转形问题”的争论成为经济学中持续时间最长的论战之一。',
+  ev:['1883年：马克思逝世','1885、1894年：《资本论》第二、三卷','1896年：庞巴维克对马克思的批评','1907年：鲍特凯维兹对转形的修正','1942年：斯威齐《资本主义发展论》','1977年：斯蒂德曼《按照斯拉法思想研究马克思》','1981年：《价值论争》'],
+  people:['Karl Marx','Friedrich Engels','Eugen von Böhm-Bawerk','Ladislaus Bortkiewicz','Paul Sweezy','Anwar Shaikh'],
+  ideas:['利润率平均化时，从劳动价值到生产价格。','转形问题：马克思的解法与后来的完整解法。','资本有机构成与利润率下降趋势。','起反作用的趋势，以及现代危机理论：利润挤压、消费不足、资本密集度上升。','产业后备军。','马克思之后：鲍特凯维兹与斯威齐、斯蒂德曼的斯拉法式批评、谢克的回应，以及迪梅尼尔和弗利的“新解释”。','价值与利润率的测度：谢克与托纳克、迪梅尼尔与莱维、布伦纳。'],
+  read:'亨特，第9章（续）和第19章（劳动价值论的复兴）。辅助阅读：斯威齐，《资本主义发展论》（1942），第7章；斯蒂德曼、斯威齐等，《价值论争》（<em>The Value Controversy</em>，1981），特别是斯蒂德曼和谢克的文章。',
+  q:'利润率可以测量吗？关于资本产出比和利润份额的数据说明了什么？',
+  mod:['marx-profit-rate.html','打开模块：马克思论利润与危机（含两个互动模型）→']},
+ {n:8, t:'边际革命', sub:'杰文斯、门格尔与瓦尔拉斯，1871—1874年',
+  ctx:'三个国家的三位经济学家在几年之内各自独立地把价值理论建立在边际效用之上。他们写作于长期萧条（1873—1896）期间，当时社会主义政党不断壮大，巴黎公社（1871）震惊了欧洲精英，经济学也正在成为一门学院职业。',
+  ev:['1871年：杰文斯《政治经济学理论》；门格尔《国民经济学原理》；巴黎公社','1873年：长期萧条开始','1874年：瓦尔拉斯《纯粹经济学要义》'],
+  people:['W. S. Jevons','Carl Menger','Léon Walras','F. Y. Edgeworth'],
+  ideas:['总效用与边际效用；边际效用递减。','等边际法则：MUx / Px = MUy / Py。','需求曲线为什么向下倾斜，边际主义如何解决水与钻石悖论。','门格尔与主观价值；奥地利学派的开端。','瓦尔拉斯的一般均衡：方程与未知数的计数；瓦尔拉斯定律。','从“政治经济学”到“经济学”：方法和政治发生了什么变化。','埃奇沃思的《数学心理学》（1881）：无差异曲线、契约曲线与讨价还价。'],
+  read:'亨特，第10章。辅助阅读：张夏准，第4章（新古典学派与奥地利学派）。',
+  q:'边际主义者把价值问题从生产转向消费。经济学因此得到了什么，又失去了什么？',
+  mod:['marginal-utility.html','打开模块：边际革命（含互动的预算练习）→']},
+ {n:9, t:'马歇尔、克拉克与新古典分配理论', sub:'供给与需求、厂商与要素市场',
+  ctx:'在镀金时代，巨型托拉斯和公司主宰着工业，劳资冲突十分激烈；1890年美国通过了《谢尔曼反托拉斯法》，同年马歇尔的《经济学原理》出版。克拉克关于每种要素都获得其边际产品的理论，为回应社会主义者的剥削指控提供了答案。',
+  ev:['1886年：干草市场事件','1890年：马歇尔《经济学原理》；《谢尔曼反托拉斯法》','1899年：克拉克《财富的分配》','1906年：帕累托《政治经济学手册》','1920年：庇古《福利经济学》'],
+  people:['Alfred Marshall','John Bates Clark','Eugen von Böhm-Bawerk','Vilfredo Pareto','A. C. Pigou'],
+  ideas:['马歇尔的剪刀：供给、需求与时间区间；局部均衡。','厂商理论：成本曲线与利润最大化。','工资和利息的边际生产力理论，及其对公平的主张。','庞巴维克论资本、迂回生产与利息。','帕累托效率与福利定理；庇古论外部性与税收。','把“资本”作为单一数量来衡量的问题。'],
+  read:'亨特，第11章和第14章。辅助阅读：Yueh，第4章（马歇尔：不平等不可避免吗？）。',
+  q:'如果每种要素都按其边际产品获得报酬，由此产生的收入分配公平吗？你需要做出哪些假设？',
+  mod:['marshall-clark.html','打开模块：马歇尔、克拉克与分配理论（含互动的供求和边际生产力模型）→']},
+ {n:10, t:'世纪之交的异见：凡勃伦与帝国主义理论', sub:'制度、垄断与帝国',
+  ctx:'从柏林会议（1884—1885）到第一次世界大战，欧洲列强瓜分了非洲的大部分和亚洲的许多地区。在美国，强盗大亨和炫耀性的财富引来了凡勃伦的讽刺。批评者追问：资本主义是否已经需要殖民地来吸收它的剩余？',
+  ev:['1884—1885年：柏林会议','1899年：凡勃伦《有闲阶级论》','1899—1902年：布尔战争','1902年：霍布森《帝国主义》','1913年：卢森堡《资本积累论》','1914—1918年：第一次世界大战','1917年：列宁《帝国主义》；俄国革命'],
+  people:['Thorstein Veblen','J. A. Hobson','Rosa Luxemburg','Vladimir Lenin','Henry George'],
+  ideas:['凡勃伦：炫耀性消费、本能与习惯、企业与工业的对立。','霍布森：消费不足与对殖民地的追逐。','卢森堡：积累为什么需要非资本主义市场。','列宁：垄断、金融资本，以及作为资本主义一个阶段的帝国主义。','中心与外围：世界体系分析、不平等交换，以及今天的劳动贸易条件。'],
+  read:'亨特，第12—13章。辅助阅读：海尔布罗纳，第7—8章。',
+  q:'世界经济是否仍然有稳定的中心和外围？我们可以如何测量它？',
+  mod:['imperialism.html','打开模块：凡勃伦、帝国主义与世界体系（含劳动贸易条件计算器）→']},
+ {n:11, t:'凯恩斯与大萧条', sub:'《通论》，1936年',
+  ctx:'1929年股市崩盘之后，世界产出急剧下降，美国的失业率达到劳动力的约四分之一。正统经济学认为工资和利率会自动调整并恢复充分就业，但多年过去，这并没有发生。英国在1931年放弃金本位，罗斯福新政于1933年开始。',
+  ev:['1929年：华尔街股市崩盘','1931年：英国放弃金本位','1933年：费雪的债务—通缩理论；罗斯福新政','1936年：凯恩斯《就业、利息和货币通论》','1939—1945年：第二次世界大战与战时充分就业'],
+  people:['John Maynard Keynes','Irving Fisher','Michał Kalecki'],
+  ideas:['为什么货币工资下降未必能恢复就业。','有效需求：储蓄和投资由不同的人出于不同的原因做出。','投资、不确定性与动物精神；凯恩斯的“选美比赛”（《通论》第12章）。','流动性偏好与货币政策的局限。','“某种程度的全面的投资社会化”（第24章）。','卡莱茨基对有效需求的平行发现。'],
+  read:'亨特，第15章；凯恩斯，《通论》第12章和第24章。辅助阅读：海尔布罗纳，第9章；Yueh，第5章（费雪）和第6章（凯恩斯）。',
+  q:'凯恩斯说股票市场可能变成赌场。他描述的只是1930年代，还是资本主义的一个永久特征？',
+  mod:['keynes.html','打开模块：凯恩斯与大萧条（含互动的乘数模型）→']},
+ {n:12, t:'黄金时代及其论争', sub:'综合、增长，以及两个剑桥之争，1945—1973年',
+  ctx:'布雷顿森林体系（1944）固定了汇率并管制资本流动。西方经济在低失业率和不断扩大的福利国家中快速增长，新独立的国家推行计划发展，冷战则把经济表现变成了两种制度之间的竞赛。',
+  ev:['1937年：希克斯的IS–LM模型','1944年：布雷顿森林会议','1947—1948年：萨缪尔森《经济分析基础》和《经济学》','1950年：普雷维什—辛格命题','1954年：刘易斯的无限劳动供给发展模型','1956年：索洛增长模型','1955年：库兹涅茨论经济增长与收入不平等','1960年：斯拉法《用商品生产商品》','1966年：巴兰和斯威齐《垄断资本》'],
+  people:['Paul Samuelson','Robert Solow','Joan Robinson','Michał Kalecki','Piero Sraffa','Simon Kuznets','Paul Baran','Paul Sweezy','W. Arthur Lewis','Raúl Prebisch'],
+  ideas:['新古典综合：短期是凯恩斯，长期是瓦尔拉斯（IS–LM）。','从哈罗德—多马到索洛的增长理论。','后凯恩斯主义经济学：罗宾逊、卡莱茨基与分配驱动的需求。','库兹涅茨：国民收入核算与倒U形不平等曲线。','垄断资本：巴兰和斯威齐论不断上升的剩余及其吸收。','斯拉法与剑桥资本争论：再转换与资本的测量。','证据：在投入产出数据中，劳动价值与市场价格有多接近？','发展经济学：二元经济、结构转变与贸易条件。'],
+  read:'亨特，第16—18章。辅助阅读：Yueh，第9章（罗宾逊：工资为什么这么低？）和第12章（索洛）；巴兰和斯威齐，《垄断资本》（1966），第1—5章。',
+  q:'资本争论在逻辑上分出了胜负，在实践中却被忽视。为什么一个理论在逻辑批判之后仍能存活？',
+  mod:['capital-controversy.html','打开模块：黄金时代与资本争论（含互动的再转换例子）→']},
+ {n:13, t:'新自由主义转向：芝加哥与维也纳', sub:'货币主义、理性预期与奥地利学派的复兴，1970—2000年代',
+  ctx:'布雷顿森林体系在1971年崩溃，1973年和1979年的石油冲击带来了滞胀，而凯恩斯主义政策似乎无法解释它。两个更古老的自由市场传统，芝加哥学派和奥地利学派，在战后几十年里一直保持着自己的思想，部分是通过哈耶克在1947年创立的朝圣山学社。沃尔克冲击（1979）、撒切尔和里根，以及后来的华盛顿共识和苏联解体，把他们的思想变成了政策，而中国在1978年开始了市场化改革。',
+  ev:['1944年：哈耶克《通往奴役之路》','1947年：朝圣山学社成立','1953年：弗里德曼《实证经济学方法论》','1960年：科斯《社会成本问题》','1962年：弗里德曼《资本主义与自由》','1963年：弗里德曼和施瓦茨《美国货币史》','1968年：弗里德曼的自然失业率','1971年：美元与黄金脱钩；施蒂格勒论规制俘获','1973、1979年：石油危机','1974、1976年：哈耶克和弗里德曼获诺贝尔奖','1979年：沃尔克冲击；撒切尔当选','1989—1991年：华盛顿共识；苏联解体'],
+  people:['Milton Friedman','Friedrich Hayek','Ludwig von Mises','Frank Knight','George Stigler','Ronald Coase','Gary Becker','Robert Lucas'],
+  ideas:['通往自由市场的两条道路：芝加哥学派与奥地利学派，以及它们在方法、均衡、货币、资本和国家作用上的分歧。','重访社会主义计算论战：米塞斯、哈耶克与兰格。','哈耶克论知识、价格与自发秩序；奥地利学派的经济周期理论。','弗里德曼：货币数量论、自然率，以及规则优于相机抉择。','理性预期与卢卡斯批判；新古典宏观经济学与新凯恩斯主义宏观经济学。','宏观经济学之外的芝加哥：规制俘获、科斯定理、人力资本与法律经济学。','新自由主义政策对增长、不平等和金融产生了什么影响。'],
+  read:'亨特，第17章（“奥地利学派与芝加哥学派”）。辅助阅读：Yueh，第8章（哈耶克）和第10章（弗里德曼：中央银行做得太多了吗？）；张夏准，第4章（奥地利学派）。',
+  q:'滞胀驳倒的是凯恩斯，还是某一种特定版本的凯恩斯主义？如果芝加哥和维也纳都赞成自由市场，它们在几乎所有其他问题上的分歧还重要吗？',
+  mod:['chicago-austrian.html','打开模块：芝加哥与维也纳（含互动的菲利普斯曲线）→']},
+ {n:14, t:'2008年之后的经济学：不稳定、制度与地球', sub:'多元主义与政治经济学的复兴',
+  ctx:'2008年全球金融危机、大衰退和新冠疫情危机让关于不稳定的老问题重新浮现，而气候变化、不平等加剧和全球化的分裂又提出了新的问题。今天的经济学比它的教科书所显示的更注重实证，也更加多样。',
+  ev:['1972年：《增长的极限》','1986年：明斯基《稳定不稳定的经济》','2008年：全球金融危机','2020年：新冠疫情衰退','2020年代：贸易战与逆全球化'],
+  people:['Hyman Minsky','Joseph Stiglitz','George Akerlof','Paul Krugman','Clarence Ayres','Harry Braverman','Anwar Shaikh','Herbert Simon','Douglass North','Joseph Schumpeter','Robert Solow'],
+  ideas:['明斯基的金融不稳定假说，以及政府赤字为什么能稳定利润。','行为经济学：有限理性及其政策用途。','不完全信息与不完全竞争：阿克洛夫、斯蒂格利茨与克鲁格曼的新贸易理论。','不平等：从库兹涅茨曲线到皮凯蒂。','制度与长期发展：为什么富裕的国家如此之少。','熊彼特的创造性破坏与创新经济。','发展主义传统与东亚增长。','生态极限与全球化的未来。','批判性政治经济学的复兴：艾尔斯的制度主义、后凯恩斯主义与斯拉法经济学，以及布雷弗曼论劳动过程。'],
+  read:'亨特，第18—19章。辅助阅读：海尔布罗纳，第10章；Yueh，第7章（熊彼特）、第11章（诺斯）、第12章（索洛）和尾声；张夏准，第4章；兰德斯，<em>2052</em>；泽汉，<em>The End of the World Is Just the Beginning</em>。',
+  q:'我们学过的流派中，哪一个最能解释2008年以来的世界，哪一个最不能？',
+  mod:['after-2008.html','打开模块：2008年之后的经济学（含互动的明斯基模型和增长极限模型）→']},
+];
+// Split a reading note into one entry per paragraph: core readings first, then companions.
+function splitTop(s) { const out = []; let depth = 0, cur = ''; for (const ch of s) { if (ch === '(' || ch === '（') depth++; if (ch === ')' || ch === '）') depth--; if ((ch === ';' || ch === '；') && depth === 0) { out.push(cur.trim()); cur = ''; } else cur += ch; } if (cur.trim()) out.push(cur.trim()); return out; }
+const dot = s => /[。？！]$/.test(s) ? s : s + '。';
+function readings(read) {
+  const [core, comp] = read.split(/。\s*辅助阅读：/);
+  let h = '<p class="rl">核心阅读</p>' + splitTop(core.replace(/。$/, '')).map(x => `<p class="rd">${dot(x)}</p>`).join('');
+  if (comp) h += '<p class="rl">辅助阅读</p>' + splitTop(comp.replace(/。$/, '')).map(x => `<p class="rd">${dot(x)}</p>`).join('');
+  return h;
+}
+const modLink = m => ZHMOD.includes(m[0]) ? `<a class="mod" href="${m[0]}">${m[1]}</a>` : `<a class="mod" href="../${m[0]}">${m[1].replace(/→$/, '（英文版）→')}</a>`;
+const weeks = document.getElementById('weeks');
+let html = '';
+WEEKS.forEach(w => {
+  if (PARTS[w.n]) html += `<div class="part">${PARTS[w.n]}</div>`;
+  html += `<details class="wk" id="week-${w.n}"><summary><span class="wn">第${w.n}周</span><span class="wt">${w.t}<small>${w.sub}</small></span><span class="chev">▸</span></summary>
+  <div class="wb">
+    <div class="ctx"><b>历史背景。</b>${w.ctx}<ul>${w.ev.map(e=>`<li>${e}</li>`).join('')}</ul></div>
+    <h4>主要思想家</h4>${people(w.people)}
+    <h4>核心观点</h4><ul class="ideas">${w.ideas.map(i=>`<li>${i}</li>`).join('')}</ul>
+    <h4>阅读材料</h4>${readings(w.read)}
+    <div class="think"><b>思考题：</b>${w.q}</div>
+    ${w.mod ? modLink(w.mod) : ''}
+  </div></details>`;
+});
+weeks.innerHTML = html;
+function openHash() { if (location.hash.startsWith('#week-')) { const d = document.querySelector(location.hash); if (d) { d.open = true; d.scrollIntoView({block:'start'}); } } }
+openHash(); window.addEventListener('hashchange', openHash);
+
+// ---------- Credits ----------
+const cc = Object.entries(P).filter(([n,p]) => p).sort();
+const open = cc.filter(([n,p]) => !/public domain|^pd/i.test(p.lic));
+const pd = cc.filter(([n,p]) => /public domain|^pd/i.test(p.lic));
+document.getElementById('credits').innerHTML =
+  `<p>肖像来自维基共享资源（Wikimedia Commons）。公有领域：${pd.map(([n,p])=>`<a href="${p.src}">${zh(n)}</a>`).join('、')}。</p>` +
+  `<p>开放许可：${open.map(([n,p])=>`<a href="${p.src}">${zh(n)}</a>（${p.by ? p.by.replace(/[<>]/g,'') + '，' : ''}${p.lic}）`).join('；')}。</p>` +
+  `<p>没有自由许可肖像的思想家以姓名首字母显示。</p>`;
+</script>
+</body>
+</html>
