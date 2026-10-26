@@ -295,30 +295,30 @@ const LINKS = [ // from, to, year at junction, type
 ];
 
 // ---------- Timeline drawing ----------
-const X0 = 1550, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 64, EV = 52, LANE = 40;
+const X0 = 1550, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 64, EV = 52, LANE = 40, YR = 20; // YR: row of year labels above the era bands
 // Piecewise time scale: compress the early centuries, stretch 1850–1950 where schools multiply.
 const KNOTS = [[1550,0],[1750,0.13],[1850,0.36],[1950,0.70],[2025,1]];
 const frac = y => { for (let i = 1; i < KNOTS.length; i++) { const [a,fa] = KNOTS[i-1], [b,fb] = KNOTS[i]; if (y <= b) return fa + (y-a)/(b-a)*(fb-fa); } return 1; };
-const H = TOPH + EV + LANES.length * LANE + 26;
+const H = YR + TOPH + EV + LANES.length * LANE + 10;
 const x = y => LEFT + frac(y) * (W - LEFT - RIGHT);
-const yLane = l => TOPH + EV + l * LANE + 6;
+const yLane = l => YR + TOPH + EV + l * LANE + 6;
 const NS = 'http://www.w3.org/2000/svg';
 const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
 const svg = document.getElementById('tl');
 svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);
 
 [1550,1600,1650,1700,1750,1775,1800,1825,1850,1875,1900,1925,1950,1975,2000,2025].forEach(yr => {
-  el('line', {x1:x(yr), x2:x(yr), y1:TOPH, y2:H-20, class:'grid'}, svg);
-  const t = el('text', {x:x(yr), y:H-6, 'text-anchor':'middle', class:'yr'}, svg); t.textContent = yr;
+  el('line', {x1:x(yr), x2:x(yr), y1:YR + TOPH, y2:H-4, class:'grid'}, svg);
+  const t = el('text', {x:x(yr), y:14, 'text-anchor':'middle', class:'yr'}, svg); t.textContent = yr;
 });
 const eras = el('g', {class:'era'}, svg);
 ERAS.forEach(([a,b,label,c]) => {
   const eg = el('g', {class:'eg', tabindex:0, 'data-tip':`${label}（${a}—${b === 2025 ? '至今' : b}）`}, eras);
-  el('rect', {x:x(a), y:0, width:x(b)-x(a), height:TOPH-4, fill:c}, eg);
+  el('rect', {x:x(a), y:YR, width:x(b)-x(a), height:TOPH-4, fill:c}, eg);
   // wrap the label into up to four lines of Chinese characters that fit the era's width
   const per = Math.max(2, Math.floor((x(b)-x(a)-6) / 11.5)); const lines = [];
   for (let i = 0; i < label.length; i += per) lines.push(label.slice(i, i + per));
-  const fo = el('text', {x:(x(a)+x(b))/2, y:(TOPH-4)/2 - (Math.min(lines.length,4)-1)*6.5 + 4, 'text-anchor':'middle'}, eg);
+  const fo = el('text', {x:(x(a)+x(b))/2, y:YR + (TOPH-4)/2 - (Math.min(lines.length,4)-1)*6.5 + 4, 'text-anchor':'middle'}, eg);
   lines.slice(0,4).forEach((ln, i) => { const ts = el('tspan', {x:(x(a)+x(b))/2, dy: i ? 13 : 0}, fo); ts.textContent = ln; });
   const tt = el('title', {}, eg); tt.textContent = eg.dataset.tip;
 });
@@ -331,7 +331,7 @@ eras.querySelectorAll('.eg').forEach(g => {
 });
 const evs = el('g', {class:'ev'}, svg);
 EVENTS.forEach(([yr,label], i) => {
-  const cx = x(yr), cy = TOPH + 10 + (i % 3) * 14;
+  const cx = x(yr), cy = YR + TOPH + 10 + (i % 3) * 14;
   el('circle', {cx, cy, r:3}, evs);
   const t = el('text', {x:cx+5, y:cy+4}, evs); t.textContent = label;
 });
