@@ -42,6 +42,9 @@
 .vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
 .vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
 .vt .btn.on { background: var(--link); color: #fff; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
 .vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
 </style>
 </head>
@@ -66,7 +69,7 @@
   <p class="lead">2008年的金融危机把经济学家带回到那些曾被教科书搁置一旁的思想家那里。这最后一个模块概述了今天塑造这一领域的问题，并把每个问题追溯到我们学过的传统。</p>
 
   <div class="toc"><b>本模块内容</b>
-    <ol><li><a href="#minsky">2008年与明斯基的回归（互动）</a></li><li><a href="#behavior">行为经济学</a></li><li><a href="#info">信息、不完全市场与新贸易理论</a></li><li><a href="#institutions">制度、发展与国家</a></li><li><a href="#innovation">熊彼特与创新</a></li><li><a href="#planet">增长的极限（互动）</a></li><li><a href="#global">全球化及其不满</a></li><li><a href="#revival">政治经济学的复兴</a></li></ol>
+    <ol><li><a href="#minsky">2008年与明斯基的回归（互动）</a></li><li><a href="#behavior">行为经济学</a></li><li><a href="#info">信息、不完全市场与新贸易理论</a></li><li><a href="#institutions">制度、发展与国家</a></li><li><a href="#innovation">熊彼特与创新</a></li><li><a href="#planet">增长的极限（互动）</a></li><li><a href="#environmental">环境经济学（互动）</a></li><li><a href="#ecological">生态经济学（互动）</a></li><li><a href="#feminist">女性主义经济学（互动）</a></li><li><a href="#global">全球化及其不满</a></li><li><a href="#revival">政治经济学的复兴</a></li></ol>
   </div>
 
   <h2 id="minsky">1. 2008年与明斯基的回归</h2>
@@ -126,10 +129,101 @@
   </div>
   <p>此后，争论的焦点已经从矿产枯竭转移到大气吸收碳的能力。《斯特恩报告》（2006）认为，气候变化的代价远远超过防止它的代价；2018年获得诺贝尔奖的诺德豪斯主张征收逐步提高的碳税，这是一种庇古式的方案（第9周）。兰德斯的《2052》（2012）预测，增长放缓和政治上的短视将使世界远远达不到所需的目标。</p>
 
-  <h2 id="global">7. 全球化及其不满</h2>
+  <h2 id="environmental">7. 环境经济学</h2>
+  <p><b>环境经济学</b>是新古典的应用微观经济学。它把污染和自然资源的枯竭看作<b>市场失灵</b>：这些成本落在交易之外的人身上，因此市场会生产过多。药方是让污染者承担其行为的全部成本。目标不是零污染，而是<em>有效率的</em>污染水平，即多生产一单位所带来的收益恰好等于它造成的损害。</p>
+  <h3 class="sub">三种工具</h3>
+  <ul>
+    <li><b>税收。</b>A. C. 庇古（第9周）主张对社会成本超过私人成本的活动征税。税额等于有效率水平上的边际损害时，污染者就会恰好削减到这一水平。</li>
+    <li><b>产权与谈判。</b>罗纳德·科斯（1960）认为，如果产权界定清楚、谈判成本低廉，那么无论权利归谁，污染者和受害者都能自行达成有效率的结果。科斯本人强调交易成本很少是低廉的，这就是政府常常必须采取行动的原因。</li>
+    <li><b>可交易许可证。</b>政府为排放总量设定上限，并允许企业买卖排放许可证，使减排发生在成本最低的地方。美国1990年针对二氧化硫的酸雨计划是第一个大规模的例子，欧盟碳市场（2005）是最大的例子。</li>
+  </ul>
+  <div class="box" id="pigou">
+    <h3>有效率的污染水平与庇古税</h3>
+    <div class="grid2">
+      <div><label>每多排放一吨造成的损害（边际损害的斜率）：<b id="mdv">1.0</b></label><input type="range" id="md" min="0.2" max="3" step="0.1" value="1"></div>
+      <div><label>实际征收的碳税（美元/吨）：<b id="txv">$0</b></label><input type="range" id="tx" min="0" max="90" step="1" value="0"></div>
+    </div>
+    <svg id="pchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="排放的边际收益与边际损害"></svg>
+    <div class="out" id="pout"></div>
+    <p class="note">企业从排放中获得的边际收益从第一吨的100美元下降到第100吨的0美元；对他人造成的边际损害随每一吨而上升。没有税收时，企业会一直排放到其收益为零。</p>
+  </div>
+  <h3 class="sub">资源、估值与贴现</h3>
+  <p>哈罗德·霍特林（1931）证明，石油等可耗竭资源的所有者应当这样开采：使资源的净价格以利率的速度上涨，从而使把资源留在地下与把它卖掉同样是好的投资。环境经济学家还发展出一些方法，为清洁空气或一个物种等没有市场价格的东西赋予货币价值，例如询问人们愿意为此支付多少（“条件价值评估法”），或从房价和旅行成本中推断价值。这些价值被用于对管制措施进行<b>成本—收益分析</b>。</p>
+  <p>气候变化提高了赌注。威廉·诺德豪斯建立了第一批把经济与气候联系起来的“综合评估模型”，主张征收一种起点较低、逐步提高的碳税；他于2018年获得诺贝尔奖。《斯特恩报告》（2006）称气候变化是“世界上前所未有的最大的市场失灵”，主张采取快得多的行动。两者的分歧大部分来自一个数字：用来比较遥远未来的损害与今天成本的<b>贴现率</b>。</p>
+  <div class="box" id="disc">
+    <h3>未来的气候损害在今天值多少钱？</h3>
+    <div class="grid2">
+      <div><label>贴现率：<b id="drv">1.4%</b></label><input type="range" id="dr" min="0" max="6" step="0.1" value="1.4"></div>
+      <div><label>距离损害发生的年数：<b id="dyv">100</b></label><input type="range" id="dy" min="10" max="200" step="10" value="100"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" data-r="1.4">斯特恩（约1.4%）</button><button class="btn" type="button" data-r="4.5">诺德豪斯（约4%—5%）</button></div>
+    <div class="out" id="dout"></div>
+  </div>
+  <p>包括生态经济学家在内的批评者认为，这一框架把自然看作可以用金钱替代的东西；贴现率是一个关于后代的伦理选择，却被包装成技术问题；而支付意愿取决于支付能力，这使富人的偏好获得了更大的权重。</p>
+
+  <h2 id="ecological">8. 生态经济学</h2>
+  <p><b>生态经济学</b>颠倒了这种关系。环境经济学把环境看作经济的一部分，需要正确定价；生态经济学则把经济看作<b>生物圈的一个子系统</b>，而生物圈是有限的、不会增长的。它把生态置于市场效率之上，并质疑经济增长这一目标本身，至少在富裕国家是如此。</p>
+  <h3 class="sub">奠基者</h3>
+  <ul>
+    <li><b>肯尼斯·博尔丁</b>在《即将到来的宇宙飞船地球经济学》（1966）中，把开放边疆上的“牛仔经济”与封闭系统中的“宇航员经济”加以对比：前者以吞吐量衡量成功，后者的目标是以尽可能少的吞吐量维持资源存量。</li>
+    <li><b>尼古拉斯·乔治斯库-罗根</b>在《熵定律与经济过程》（1971）中认为，生产受热力学第二定律支配：它把低熵的能量和物质不可逆转地变成高熵的废物。他抱怨说，经济学以力学为榜样塑造自己，而在力学中，每个过程都可以倒过来进行。</li>
+    <li><b>赫尔曼·戴利</b>是他的学生，提出了<b>稳态经济</b>（1977）：人口和资本存量保持不变，由一个保持在生态系统再生和吸收能力范围之内的能量和物质吞吐量来维持。他像约翰·斯图亚特·穆勒（第5周）一样认为，静止的经济并不意味着静止的文化。</li>
+  </ul>
+  <h3 class="sub">核心思想</h3>
+  <ul>
+    <li><b>规模先于配置。</b>市场可以有效率地配置资源，但无法告诉我们经济相对于生态系统应当有多大。这必须首先通过政治来决定，作为吞吐量的上限。</li>
+    <li><b>强可持续性与弱可持续性。</b>罗伯特·索洛等新古典经济学家认为，人造资本和技术可以替代自然资源，因此只要总资本不减少，经济就是可持续的（“弱可持续性”）。生态经济学家回应说，稳定的气候或肥沃的土壤等自然资本与人造资本是互补的，而不是可以相互替代的，必须为其本身而加以保护（“强可持续性”）。</li>
+    <li><b>反弹效应。</b>W. S. 杰文斯（第8周）在《煤炭问题》（1865）中观察到，更有效率的蒸汽机反而增加了英国的煤炭总消耗量，因为它们使用煤变得更便宜了。仅靠提高效率并不能保证资源使用的减少。</li>
+    <li><b>地球边界与去增长。</b>约翰·罗克斯特伦及其同事（2009）为气候、氮循环等九个地球系统提出了界限。乔戈斯·卡利斯、杰森·希克尔等<b>去增长</b>与后增长经济学的作者，以及凯特·拉沃斯的《甜甜圈经济学》（2017），认为富裕国家应当以在这些界限之内的福祉为目标，而不是以增长为目标。</li>
+    <li><b>生态分配冲突。</b>胡安·马丁内斯-阿列尔的《穷人的环境主义》（2002）研究了全球南方围绕采矿、水坝和污染的冲突。生态不平等交换理论把不平等交换的思想（第10周）从劳动扩展到土地、能源和物质。</li>
+  </ul>
+  <p>核心的经验问题是<b>脱钩</b>：产出能否在资源使用和排放下降的同时继续增长？相对脱钩，即每一美元产出的碳排放减少，是常见的。绝对脱钩，即排放下降而产出上升，已经在一些富裕国家发生，但生态经济学家怀疑它能否足够快。其中的算术来自一个简单的恒等式：排放 = 产出 × 单位产出的排放。</p>
+  <div class="box" id="dcp">
+    <h3>经济必须以多快的速度脱钩？</h3>
+    <div class="grid2">
+      <div><label>到目标年份要实现的减排幅度：<b id="ctv">90%</b></label><input type="range" id="ct" min="20" max="100" step="5" value="90"></div>
+      <div><label>所需年数：<b id="tyv">25</b></label><input type="range" id="ty" min="10" max="50" step="5" value="25"></div>
+      <div><label>产出的年增长率：<b id="ggv">3.0%</b></label><input type="range" id="gg" min="0" max="6" step="0.5" value="3"></div>
+    </div>
+    <div class="out" id="dcout"></div>
+  </div>
+  <div class="think"><b>讨论：</b>环境经济学家问的是什么样的污染水平是有效率的；生态经济学家问的是经济可以有多大。这两个问题都能用价格来回答吗？你会先问哪一个？</div>
+
+  <h2 id="feminist">9. 女性主义经济学</h2>
+  <p><b>女性主义经济学</b>从一个简单的观察出发：维持一个社会运转的大量工作，例如做饭、清洁，以及照顾儿童、病人和老人，是无偿的，主要由女性承担，并且被排除在国民账户和大多数经济理论之外。女性主义经济学家认为，把它排除在外，既扭曲了对经济的测量，也扭曲了对经济的解释。</p>
+  <h3 class="sub">先驱</h3>
+  <p>威廉·汤普森和安娜·惠勒的《人类的一半，即妇女的呼吁》（1825），以及受哈丽雅特·泰勒·穆勒影响的约翰·斯图亚特·穆勒的《妇女的屈从地位》（1869），都主张妇女在法律和经济上的平等（第5周）。夏洛特·珀金斯·吉尔曼的《妇女与经济》（1898）认为，妇女在经济上对丈夫的依赖既扭曲了妇女的生活，也扭曲了社会。玛格丽特·里德的《家庭生产经济学》（1934）把家庭生产定义为原则上可以由付费的第三方来完成的无偿劳动，这一标准至今仍被用来测量家庭生产。埃丝特·博塞鲁普的《妇女在经济发展中的作用》（1970）表明，发展项目常常忽视、有时甚至恶化了妇女在农业中的劳动。</p>
+  <h3 class="sub">两场奠基性的争论</h3>
+  <ul>
+    <li><b>家务劳动争论。</b>马克思主义女性主义者追问无偿家务劳动在马克思的价值理论中处于什么位置。玛格丽特·本斯顿（1969）认为，妇女的家务劳动在市场之外生产使用价值；玛丽亚罗萨·达拉·科斯塔和塞尔玛·詹姆斯（1972）认为，家务劳动再生产了劳动力，即利润赖以产生的那种商品，并发起了“为家务劳动争取工资”运动。西尔维娅·费代里奇的《凯列班与女巫》（2004）把妇女劳动的从属地位追溯到原始积累（第6周）。这一研究路线发展成为<b>社会再生产理论</b>。</li>
+    <li><b>作为一个单位的家庭。</b>加里·贝克尔的《家庭论》（1981）把理性选择应用于婚姻、生育和分工，用一个使单一联合效用最大化的家庭内部的比较优势来解释专业化（第13周）。女性主义经济学家回应说，这把性别规范和不平等的权力当作既定的。家庭讨价还价模型（曼瑟和布朗，1980；麦克尔罗伊和霍尼，1981）以及阿马蒂亚·森的“合作性冲突”思想（1990），把家庭看作一个谈判的场所，每个成员的外部选择会影响结果。</li>
+  </ul>
+  <h3 class="sub">今天的女性主义经济学</h3>
+  <ul>
+    <li><b>测量。</b>玛丽琳·韦林的《如果女性被计算在内》（1988）揭示了联合国国民账户体系如何把大部分无偿劳动排除在外。时间利用调查现在对它进行测量。国际劳工组织（2018）估计，人们每天从事约164亿小时的无偿照料劳动，其中四分之三由女性承担；如果按最低工资计算，其价值约相当于世界GDP的9%。</li>
+    <li><b>照料与对“经济人”的批判。</b>南希·弗尔布雷（《看不见的心》，2001）和朱莉·纳尔逊认为，照料劳动不符合自利交换的模型，而市场依赖于它，却不为它付费。</li>
+    <li><b>发展与宏观经济学。</b>黛安·埃尔森表明，1980年代的结构调整计划假定无偿家务劳动可以吸收公共服务的任何削减，这是宏观经济政策中的一种“男性偏见”。比娜·阿加瓦尔的《属于自己的田地》（1994）表明，南亚妇女的土地权利决定了她们的议价能力和福利。森（1990）估计亚洲和北非的人口中有超过一亿女性“消失”了，揭示了歧视对生存本身造成的后果。</li>
+    <li><b>主流的承认。</b>克劳迪娅·戈尔丁因其关于女性工作与薪酬的历史研究获得2023年诺贝尔奖，包括女性劳动参与率随经济发展而呈U形变化的轨迹，以及“贪婪的工作”在今天性别薪酬差距中的作用。</li>
+  </ul>
+  <p>国际女性主义经济学会成立于1992年，其期刊《女性主义经济学》创刊于1995年。与生态经济学一样，女性主义经济学同时借鉴了几个传统：马克思主义、制度主义和新古典经济学。</p>
+  <div class="box" id="care">
+    <h3>无偿劳动值多少钱？</h3>
+    <div class="grid2">
+      <div><label>每个成年人每周的无偿家务和照料劳动：<b id="uhv">20 小时</b></label><input type="range" id="uh" min="5" max="40" step="1" value="20"></div>
+      <div><label>雇人代劳的小时工资：<b id="uwv">$15</b></label><input type="range" id="uw" min="5" max="40" step="1" value="15"></div>
+      <div><label>每个成年人的GDP：<b id="ugv">$80,000</b></label><input type="range" id="ug" min="5000" max="120000" step="5000" value="80000"></div>
+      <div><label>女性承担的无偿劳动份额：<b id="usv">65%</b></label><input type="range" id="us" min="50" max="85" step="1" value="65"></div>
+    </div>
+    <div class="split" id="csplit"><div id="cw" style="background:#b8577e"></div><div id="cm" style="background:#7d8790"></div></div>
+    <div class="out" id="cout"></div>
+    <p class="note">这里使用“替代成本”法：按照里德的第三方标准，以雇人做同样工作的工资来估算无偿劳动时间的价值。其他方法则按这个人在有偿工作中本可以赚到的收入来估值。</p>
+  </div>
+  <div class="think"><b>讨论：</b>如果把无偿照料劳动计入GDP，那么随着女性在过去一个世纪里从家务劳动转向有偿劳动，我们对经济增长的看法会发生怎样的变化？</div>
+
+  <h2 id="global">10. 全球化及其不满</h2>
   <p>从1990年代到2008年，世界贸易的增长远快于世界产出，生产分布在全球供应链之中。此后，这种增长停滞了。丹尼·罗德里克的《全球化的悖论》（2011）认为，一个国家不可能同时拥有深度的经济一体化、国家主权和民主；它必须放弃三者之一。2018年起的中美贸易战、新冠疫情造成的供应中断，以及2020年代全面关税的回归，使李嘉图的自由贸易主张（第4周）与李斯特的保护主张之间的老辩论成了头版新闻。彼得·泽汉的《世界的终结只是开始》（<em>The End of the World Is Just the Beginning</em>，2022）预测，人口老龄化和美国的收缩将把全球贸易分裂为区域集团。</p>
 
-  <h2 id="revival">8. 政治经济学的复兴</h2>
+  <h2 id="revival">11. 政治经济学的复兴</h2>
   <p>这场危机也使古典经济学家曾置于这门学科中心的分配问题重新受到关注。托马斯·皮凯蒂的《二十一世纪资本论》（2013）汇集了两个世纪的税收数据，表明财富不平等在1914年到1970年代之间下降，此后又不断上升，并认为当资本收益率（r）超过经济增长率（g）时，继承财富的重要性就会增加。这对西蒙·库兹涅茨的乐观看法提出了挑战，库兹涅茨曾在1955年提出，在增长的后期阶段不平等会自然下降（第12周）；而在皮凯蒂看来，二十世纪中叶的下降是战争、萧条和政策的产物。这本书成为畅销书，把李嘉图和马克思的语言，即地租、资本和阶级份额，带回了公共辩论。</p>
   <p>亨特和劳岑海泽的最后几章追溯了几个使古典问题保持活力的传统。克拉伦斯·艾尔斯（1891—1972）是二十世纪中叶美国制度主义的领军人物，他把经济进步看作技术与保护地位和特权的“礼仪性”制度之间的斗争。后凯恩斯主义者在凯恩斯、卡莱茨基和琼·罗宾逊的基础上发展，斯拉法学派则在斯拉法对古典价格理论的复兴（第12周）的基础上发展。哈里·布雷弗曼的《劳动与垄断资本》（1974）复兴了马克思对劳动过程的分析，认为二十世纪的管理，从弗雷德里克·泰勒的“科学管理”开始，使工作去技能化，以加强对工人的控制。</p>
   <p>亨特和劳岑海泽的最后一章概述了1960年代以来古典和马克思主义传统中更广泛的研究复兴：</p>
@@ -146,7 +240,8 @@
     <tr><td>金融危机为什么会发生？</td><td>凯恩斯、卡莱茨基、明斯基；奥地利学派经济周期理论</td><td>11、13</td></tr>
     <tr><td>为什么有些国家富裕？</td><td>斯密、李斯特、制度主义、发展主义、世界体系</td><td>2、10</td></tr>
     <tr><td>谁得到什么，为什么？</td><td>李嘉图、马克思、克拉克、剑桥资本争论、库兹涅茨、皮凯蒂</td><td>4、6—7、9、12</td></tr>
-    <tr><td>增长能永远持续下去吗？</td><td>马尔萨斯、熊彼特、庇古、生态经济学</td><td>4、9</td></tr>
+    <tr><td>增长能永远持续下去吗？</td><td>马尔萨斯、熊彼特、庇古、环境经济学与生态经济学</td><td>4、9、14</td></tr>
+    <tr><td>谁在从事维持社会运转的劳动？</td><td>汤普森和惠勒、穆勒、马克思论再生产、女性主义经济学</td><td>5、6、14</td></tr>
   </table>
   <div class="think"><b>最后的讨论：</b>我们学过的流派中，哪一个最能解释2008年以来的世界，哪一个最不能？挑选一个事件，例如2008年危机、中国的崛起或气候变化，比较两个学派会如何解释它。</div>
 
@@ -157,6 +252,8 @@
   <p class="rd">海尔布罗纳，《俗世哲人》，第10章。</p>
   <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第7章（熊彼特）、第11章（诺斯）、第12章（索洛）和尾声。</p>
   <p class="rd">张夏准，<em>Economics: The User’s Guide</em>，第4章。</p>
+  <p class="rd">赫尔曼·E. 戴利，<em>Steady-State Economics</em>（1977），第1—2章。</p>
+  <p class="rd">南希·弗尔布雷，《看不见的心：经济学与家庭价值观》（<em>The Invisible Heart</em>，2001）。</p>
   <p class="rd">兰德斯，<em>2052: A Global Forecast for the Next Forty Years</em>（2012）。</p>
   <p class="rd">泽汉，<em>The End of the World Is Just the Beginning</em>（2022）。</p>
 
@@ -219,6 +316,61 @@ function limits() {
 ['s','g'].forEach(i => $(i).addEventListener('input', limits));
 $('x5').addEventListener('click', () => { const s = $('s'); s.value = Math.min(500, +s.value*5); limits(); });
 limits();
+
+// Pigouvian tax: MB = 100 - Q, MD = d·Q
+function pigou() {
+  const d = +$('md').value, t = +$('tx').value;
+  $('mdv').textContent = d.toFixed(1); $('txv').textContent = '$' + t;
+  const qs = 100/(1 + d), ts = d*qs, qt = Math.max(0, 100 - t);
+  const W = 640, H = 250, L = 46, R = 14, T = 12, B = 30, QM = 105, PM = 110;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B - Math.min(p, PM)/PM*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">$${v}</text><text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">排放吨数</text>`;
+  g += `<line x1="${X(0)}" y1="${Y(100)}" x2="${X(100)}" y2="${Y(0)}" stroke="#0077b6" stroke-width="2.4"/><text x="${X(74)}" y="${Y(26)+18}" fill="#0077b6">企业的边际收益</text>`;
+  const qe = Math.min(QM, PM/d);
+  g += `<line x1="${X(0)}" y1="${Y(0)}" x2="${X(qe)}" y2="${Y(d*qe)}" stroke="#c0392b" stroke-width="2.4"/><text x="${X(qe)-12}" y="${Y(d*qe)-8}" text-anchor="end" fill="#c0392b">边际损害</text>`;
+  if (t > 0) g += `<line x1="${L}" y1="${Y(t)}" x2="${W-R}" y2="${Y(t)}" stroke="#3f8f6b" stroke-dasharray="6 4"/><text x="${W-R-4}" y="${Y(t)-6}" text-anchor="end" fill="#3f8f6b">税额 $${t}</text>`;
+  g += `<circle cx="${X(qs)}" cy="${Y(ts)}" r="6" fill="#023e8a"/><circle cx="${X(qt)}" cy="${Y(100-qt)}" r="5" fill="#3f8f6b"/>`;
+  $('pchart').innerHTML = g;
+  const gap = Math.abs(qt - qs) < 0.5;
+  $('pout').innerHTML = `有效率的排放量：<b>${qs.toFixed(0)} 吨</b>，此时边际收益等于边际损害；有效率的庇古税为每吨 <b>$${ts.toFixed(0)}</b>。在 $${t} 的税额下，企业排放 <b>${qt.toFixed(0)} 吨</b>。` +
+    (gap ? '税额设定得恰当：企业自己就会选择有效率的水平。' : qt > qs ? '税额太低（或为零）：排放超过有效率的水平，额外的损害超过了企业的收益。' : '税额太高：排放被削减到有效率的水平以下，企业放弃的收益超过了避免的损害。');
+}
+['md','tx'].forEach(i => $(i).addEventListener('input', pigou)); pigou();
+
+// discounting future damage
+function disc() {
+  const r = +$('dr').value/100, n = +$('dy').value;
+  $('drv').textContent = (r*100).toFixed(1) + '%'; $('dyv').textContent = n;
+  const pv = 1e12 / Math.pow(1 + r, n), f = v => v >= 1e9 ? (v/1e8).toFixed(0) + ' 亿美元' : (v/1e4).toFixed(0) + ' 万美元';
+  $('dout').innerHTML = `在 ${(r*100).toFixed(1)}% 的贴现率下，${n} 年后1万亿美元的损害在今天值 <b>${f(pv)}</b>。今天为防止这一损害最多值得花这么多钱。按1.4%计算是 ${f(1e12/Math.pow(1.014, n))}；按4.5%计算是 ${f(1e12/Math.pow(1.045, n))}。`;
+}
+['dr','dy'].forEach(i => $(i).addEventListener('input', disc));
+document.querySelectorAll('#disc .btn').forEach(b => b.addEventListener('click', () => { $('dr').value = b.dataset.r; disc(); }));
+disc();
+
+// decoupling: emissions = output × intensity
+function dcp() {
+  const c = +$('ct').value/100, n = +$('ty').value, g = +$('gg').value/100;
+  $('ctv').textContent = Math.round(c*100) + '%'; $('tyv').textContent = n; $('ggv').textContent = (g*100).toFixed(1) + '%';
+  const e = c >= 1 ? null : Math.pow(1 - c, 1/n) - 1, i = c >= 1 ? null : (1 + e)/(1 + g) - 1;
+  $('dcout').innerHTML = c >= 1 ? '100%的减排意味着单位产出的排放必须降到零：仅靠效率无法抵消任何增长；能源体系本身必须改变。' :
+    `排放每年必须下降 <b>${(-e*100).toFixed(1)}%</b>。在产出每年增长 ${(g*100).toFixed(1)}% 的情况下，单位产出的排放每年必须下降 <b>${(-i*100).toFixed(1)}%</b>，连续 ${n} 年。作为对比，近几十年来世界产出的碳强度每年大约下降1%—2%。` +
+    (g > 0 ? `如果增长为零，所需的下降幅度将是每年 ${(-e*100).toFixed(1)}%。` : '增长为零时，全部任务就落在直接减排上。');
+}
+['ct','ty','gg'].forEach(i => $(i).addEventListener('input', dcp)); dcp();
+
+// value of unpaid work
+function care() {
+  const h = +$('uh').value, w = +$('uw').value, gdp = +$('ug').value, s = +$('us').value/100;
+  $('uhv').textContent = h + ' 小时'; $('uwv').textContent = '$' + w; $('ugv').textContent = '$' + gdp.toLocaleString(); $('usv').textContent = Math.round(s*100) + '%';
+  const v = h*52*w, share = v/gdp;
+  $('cw').style.width = (s*100) + '%'; $('cm').style.width = ((1-s)*100) + '%';
+  $('cw').textContent = `女性 ${Math.round(s*100)}%`; $('cm').textContent = `男性 ${Math.round((1-s)*100)}%`;
+  $('cout').innerHTML = `按替代成本计算，每个成年人的无偿劳动每年价值约 <b>$${Math.round(v).toLocaleString()}</b>，相当于 <b>GDP 的 ${(share*100).toFixed(0)}%</b>。这些都没有计入GDP。女性承担其中的 ${Math.round(s*100)}%；如果成年人男女各半，每位女性每年约为 $${Math.round(v*2*s).toLocaleString()}。`;
+}
+['uh','uw','ug','us'].forEach(i => $(i).addEventListener('input', care)); care();
 </script>
 <button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
 <script>
