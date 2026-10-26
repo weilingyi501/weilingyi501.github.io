@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>马歇尔、克拉克与分配理论 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：马歇尔的剪刀与时间区间（互动模型）、边际生产力分配理论（互动生产函数）、庞巴维克论利息、帕累托效率、庇古论外部性，以及批评者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/marshall-clark.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/marshall-clark.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .split { display: flex; height: 40px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../marshall-clark.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 第9周</p>
+  <h1>马歇尔、克拉克与新古典分配理论</h1>
+  <p class="lead">边际革命如何成为一个完整的体系：每个市场都有供给和需求，而在一种分配理论中，每种生产要素都按其贡献获得报酬。</p>
+
+  <div class="toc"><b>本模块内容</b>
+    <ol><li><a href="#context">镀金时代与新的职业</a></li><li><a href="#marshall">马歇尔的剪刀（互动）</a></li><li><a href="#clark">克拉克与边际生产力（互动）</a></li><li><a href="#bb">庞巴维克论资本与利息</a></li><li><a href="#welfare">帕累托与庇古：效率与外部性</a></li><li><a href="#critics">批评者</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 镀金时代与新的职业</h2>
+  <p>到1880年代，美国、英国和德国的工业已被大企业主宰：铁路、钢铁、石油、化工。巨型托拉斯形成并操纵价格，美国国会在1890年通过了《谢尔曼反托拉斯法》。劳资冲突十分激烈。1886年，在芝加哥干草市场争取八小时工作制的集会上发生了一起爆炸，随后无政府主义领袖在一场被普遍认为不公正的审判后被处决。社会主义政党在欧洲各地壮大。</p>
+  <p>与此同时，经济学正在成为一门学院职业。美国经济学会成立于1885年；阿尔弗雷德·马歇尔说服剑桥大学在1903年设立了独立的经济学学位。这些新的专业人士在1870年代边际主义（第8周）的基础上，把它从消费需求理论扩展到生产和分配理论，而政治正寓于其中：如果工资、利息和地租都是对生产性贡献的报酬，那么社会主义者关于剥削的指控就有了回答。</p>
+
+  <h2 id="marshall">2. 马歇尔的剪刀</h2>
+  <p>阿尔弗雷德·马歇尔（1842—1924）主宰英国经济学达一代人之久。他的《经济学原理》（1890）修订了八版，帮助这门学科改名为“经济学”，并教给一代又一代学生它的工具箱：供给曲线和需求曲线、弹性、消费者剩余、代表性厂商和外部经济。马歇尔把数学放在脚注和附录中；他认为经济推理应当被翻译成平实的语言，并用真实的例子加以说明。</p>
+  <p>对于劳动（生产成本）价值论与效用价值论之间的老争论，马歇尔的回答是两者都重要：</p>
+  <blockquote>我们讨论价值是由效用决定还是由生产成本决定，就像讨论一块纸是由剪刀的上刃还是下刃剪开的一样，同样合理。<cite>阿尔弗雷德·马歇尔，《经济学原理》（1890），第五篇第三章</cite></blockquote>
+  <p>他的伟大创新在于<b>时间</b>。哪一片刀刃更重要，取决于所考察的时期。在很短的<b>市场时期</b>，供给是固定的，由需求决定价格。在<b>短期</b>，企业可以利用现有工厂增加生产，但成本上升。在<b>长期</b>，企业可以进入并建设新的产能，价格回到生产成本。马歇尔一次分析一个市场，假定其他一切不变（<em>ceteris paribus</em>，其他条件不变），这种方法被称为<b>局部均衡</b>，与瓦尔拉斯的一般均衡相对。</p>
+  <div class="box" id="mbox">
+    <h3>需求增加在三个时期中的效果</h3>
+    <label>需求增加：<b id="shv">+30%</b></label><input type="range" id="sh" min="0" max="80" step="5" value="30">
+    <div style="margin-top:8px"><span class="note">时期：</span><button class="btn on" type="button" data-p="m">市场时期</button><button class="btn" type="button" data-p="s">短期</button><button class="btn" type="button" data-p="l">长期</button></div>
+    <svg id="mchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="三个时期中的供给与需求"></svg>
+    <div class="out" id="mout"></div>
+    <p class="note">一个成本不变的行业：在长期中，新企业以同样的每单位10美元平均成本进行生产。</p>
+  </div>
+
+  <h2 id="clark">3. 克拉克与边际生产力</h2>
+  <p>美国经济学家约翰·贝茨·克拉克（1847—1938）把边际分析从消费扩展到生产。在《财富的分配》（1899）中，他认为竞争性市场按照每种生产要素的<b>边际产品</b>价值支付报酬，边际产品即多雇用一单位该要素所增加的产量。雇主不断雇用工人，直到最后一个工人增加的产量刚好够支付工资；不断借入资本，直到最后一单位资本的收益刚好等于利率。克拉克由此得出一个伦理结论：</p>
+  <blockquote>本书的目的在于说明，社会收入的分配受一种自然规律支配，而这一规律如果在没有摩擦的情况下发挥作用，就会使每一种生产要素获得它所创造的那份财富。<cite>约翰·贝茨·克拉克，《财富的分配》（1899），序言</cite></blockquote>
+  <p>如果每个人都得到自己所创造的东西，就不存在剥削。随之而来的一个难题是：如果每种要素都按其边际产品获得报酬，这些报酬加起来是否恰好等于总产品？菲利普·威克斯蒂德（1894）证明，当生产函数具有<b>规模报酬不变</b>的性质时，答案是肯定的，这一结果来自欧拉定理。</p>
+  <div class="box" id="cbox">
+    <h3>按边际产品支付每种要素</h3>
+    <p class="eq">产量 Q = 10 · K<sup>1−α</sup> · L<sup>α</sup> &nbsp; 资本 K = 100 台机器</p>
+    <div class="grid2">
+      <div><label>雇用的工人数（L）：<b id="lv">100</b></label><input type="range" id="l" min="10" max="300" step="10" value="100"></div>
+      <div><label>劳动的产出弹性 α：<b id="av">0.65</b></label><input type="range" id="a" min="0.3" max="0.9" step="0.05" value="0.65"></div>
+    </div>
+    <div class="split"><div id="ws" style="background:#0077b6"></div><div id="ks" style="background:#c47a2c"></div></div>
+    <div class="out" id="cout"></div>
+  </div>
+  <div class="think"><b>试一试：</b>在资本固定的情况下增加工人。工资会怎样变化？为什么？再问：这个模型说每个工人得到的是最后一个工人增加的产量，但它是否说明了资本存量本身是否是公平获得的？</div>
+
+  <h2 id="bb">4. 庞巴维克论资本与利息</h2>
+  <p>奥地利人欧根·冯·庞巴维克（1851—1914）曾数次担任奥地利财政部长，他在《资本与利息》（1884—1889）中给出了利息理论的经典边际主义形式。生产是<b>迂回</b>的：先制造工具、渔网和机器，然后再使用它们，生产效率会更高，但迂回的方法需要时间。利息之所以存在，是因为现在的物品比未来的物品更有价值，理由有三：人们预期将来的供给会更充足；人们系统性地低估未来的需要；现在的物品可以投入到更有效率的迂回生产方法中。在《马克思及其体系的终结》（1896）中，他认为《资本论》第三卷与第一卷相矛盾，由此开启了关于转形问题的长期争论（第7周）。</p>
+
+  <h2 id="welfare">5. 帕累托与庇古：效率与外部性</h2>
+  <ul>
+    <li><b>维尔弗雷多·帕累托</b>（1848—1923）是瓦尔拉斯在洛桑的继任者，他在偏好排序而不是可测量的效用之上重建了需求理论。他把这样一种配置定义为有效率的（<b>帕累托最优</b>）：不可能在不使某人境况变坏的情况下使任何人境况变好。这一标准避免了对不同人的效用进行比较，但它对分配不置一词：一个人拥有一切的配置也可以是帕累托最优的。帕累托还发现，收入分配的上尾遵循一种规律性的模式，即“帕累托定律”。</li>
+    <li><b>A. C. 庇古</b>（1877—1959）是马歇尔在剑桥的继任者，著有《福利经济学》（1920）。他指出，当私人成本与社会成本不一致时，例如工厂烟囱冒出的烟，市场就会失灵，他主张对这类活动征税，即<b>庇古税</b>。他还根据边际效用递减论证，在其他条件相同的情况下，把收入从富人转移给穷人会提高总福利。</li>
+  </ul>
+  <p>这些思想共同构成了<b>福利经济学</b>的核心：竞争性市场在理想条件下是有效率的，而对这些条件的偏离为特定的干预提供了理由。科斯（第13周）后来对庇古的方案提出了挑战。</p>
+
+  <h2 id="critics">6. 批评者</h2>
+  <ul>
+    <li><b>凡勃伦</b>（第10周）嘲笑克拉克到处寻找边际生产力，他想象把这一理论应用于“一群阿留申岛民，拿着耙子、念着咒语，在海藻和浪花中蹚来蹚去捕捉贝类”（1909）。</li>
+    <li><b>垄断。</b>这一理论假定完全竞争，但托拉斯时代的经济根本不是竞争性的。1933年，琼·罗宾逊和爱德华·张伯伦各自独立地提出了不完全竞争和垄断竞争理论，在这些理论中，要素获得的报酬低于其边际产品价值。</li>
+    <li><b>资本。</b>这一理论需要一个资本数量，由它的边际产品决定利率。1960年代的剑桥资本争论表明，资本一般无法独立于利率来衡量（第12周）。</li>
+    <li><b>分配与正义。</b>即使每种要素都按其边际产品获得报酬，收入分配仍然取决于谁拥有这些要素。亨特认为，边际生产力理论把现存的财产分配自然化了，把所有权当成了一种贡献。</li>
+  </ul>
+  <div class="think"><b>讨论：</b>克拉克声称，在没有摩擦的情况下，每个人都会得到他所创造的东西。你需要观察到什么才能检验这一主张？它与马克思关于利润是无偿劳动的主张（第6周）相比如何？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亨特，第11章（新古典的厂商理论与收入分配理论：马歇尔、克拉克、庞巴维克）。</p>
+  <p class="rd">亨特，第14章（新古典福利经济学）。</p>
+  <p class="rd">马歇尔，《经济学原理》（1890），第五篇第三章和第五章，选读。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第4章（阿尔弗雷德·马歇尔：不平等不可避免吗？）。</p>
+
+  <p><a href="index.html#week-9">← 返回课程大纲第9周</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let period = 'm';
+// demand: P = a - b Q ; initial a = 30, b = 0.2 ; long-run cost 10 ; initial equilibrium Q0 = 100, P0 = 10
+const B = 0.2, A0 = 30, C = 10, Q0 = 100;
+function marshall() {
+  const sh = +$('sh').value/100; $('shv').textContent = '+' + Math.round(sh*100) + '%';
+  const A1 = C + (A0 - C)*(1 + sh); // demand shifts out: willingness to pay at each Q rises so that quantity demanded at P=10 rises by sh
+  const Dq = (a, p) => (a - p)/B;
+  let P, Q, lab;
+  if (period === 'm') { Q = Q0; P = A1 - B*Q; lab = '市场时期：供给固定为现有的存货。'; }
+  else if (period === 's') { const s = 0.06; Q = (A1 - (C - s*Q0)) / (B + s); P = C + s*(Q - Q0); lab = '短期：现有企业沿着不断上升的边际成本曲线增加产量。'; } // short-run supply P = C + s(Q - Q0)
+  else { P = C; Q = Dq(A1, C); lab = '长期：新企业不断进入，直到价格回到生产成本。'; }
+  const W = 640, H = 260, L = 46, R = 14, T = 12, B2 = 30, QM = 260, PM = 32;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B2 - p/PM*(H-B2-T);
+  let g = `<line x1="${L}" y1="${H-B2}" x2="${W-R}" y2="${H-B2}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B2}" stroke="#ccd2d8"/>`;
+  [0,10,20,30].forEach(p => g += `<text x="${L-6}" y="${Y(p)+4}" text-anchor="end">$${p}</text>`);
+  [0,50,100,150,200,250].forEach(q => g += `<text x="${X(q)}" y="${H-B2+15}" text-anchor="middle">${q}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">数量</text>`;
+  const q0 = a => Math.max(0, (a - PM)/B);
+  const dline = (a, col, dash) => `<line x1="${X(q0(a))}" y1="${Y(Math.min(a, PM))}" x2="${X(Math.min(QM, a/B))}" y2="${Y(Math.max(0, a - B*QM))}" stroke="${col}" stroke-width="2.4" ${dash ? 'stroke-dasharray="6 4"' : ''}/>`;
+  g += dline(A0, '#9fc4e6', true) + dline(A1, '#0077b6', false);
+  g += `<text x="${X(q0(A1))+10}" y="${Y(Math.min(A1, PM))+14}" fill="#0077b6">新的需求</text>`;
+  // supply curves
+  g += `<line x1="${X(Q0)}" y1="${Y(0)}" x2="${X(Q0)}" y2="${Y(PM)}" stroke="${period==='m'?'#c47a2c':'#ead7c3'}" stroke-width="${period==='m'?2.6:1.5}"/>`;
+  g += `<line x1="${X(0)}" y1="${Y(C - 0.06*Q0)}" x2="${X(QM)}" y2="${Y(C + 0.06*(QM-Q0))}" stroke="${period==='s'?'#c47a2c':'#ead7c3'}" stroke-width="${period==='s'?2.6:1.5}"/>`;
+  g += `<line x1="${X(0)}" y1="${Y(C)}" x2="${X(QM)}" y2="${Y(C)}" stroke="${period==='l'?'#c47a2c':'#ead7c3'}" stroke-width="${period==='l'?2.6:1.5}"/>`;
+  g += `<text x="${X(QM)-4}" y="${Y(C)-6}" text-anchor="end" fill="#c47a2c">长期供给（成本10美元）</text>`;
+  g += `<circle cx="${X(Q0)}" cy="${Y(C)}" r="5" fill="#9fc4e6"/><circle cx="${X(Q)}" cy="${Y(P)}" r="7" fill="#023e8a"/>`;
+  $('mchart').innerHTML = g;
+  $('mout').innerHTML = `${lab}价格：<b>$${P.toFixed(2)}</b>（原为 $10.00）；数量：<b>${Q.toFixed(0)}</b>（原为100）。` +
+    (period === 'm' ? '价格完全由需求决定。' : period === 's' ? '两片刀刃都起作用。' : '价格完全由生产成本决定；需求只决定数量。');
+}
+$('sh').addEventListener('input', marshall);
+document.querySelectorAll('#mbox .btn').forEach(b => b.addEventListener('click', () => { period = b.dataset.p; document.querySelectorAll('#mbox .btn').forEach(o => o.classList.toggle('on', o === b)); marshall(); }));
+marshall();
+
+function clark() {
+  const Lw = +$('l').value, a = +$('a').value, K = 100;
+  $('lv').textContent = Lw; $('av').textContent = a.toFixed(2);
+  const Q = 10 * Math.pow(K, 1-a) * Math.pow(Lw, a), mpl = a*Q/Lw, mpk = (1-a)*Q/K;
+  const wages = mpl*Lw, profits = mpk*K;
+  $('ws').style.width = (wages/Q*100) + '%'; $('ks').style.width = (profits/Q*100) + '%';
+  $('ws').textContent = `工资 ${(wages/Q*100).toFixed(0)}%`; $('ks').textContent = `利润 ${(profits/Q*100).toFixed(0)}%`;
+  const f = v => v.toLocaleString(undefined, {maximumFractionDigits:1});
+  $('cout').innerHTML = `产量：<b>${f(Q)}</b>。劳动的边际产品 = 工资 = 每个工人 <b>${f(mpl)}</b>；资本的边际产品 = 每台机器的收益 = <b>${f(mpk)}</b>。工资（${f(wages)}）+ 资本收益（${f(profits)}）= ${f(wages+profits)}：产品恰好分配完毕。无论工人有多少，劳动份额始终等于 α = ${a.toFixed(2)}。`;
+}
+['l','a'].forEach(i => $(i).addEventListener('input', clark)); clark();
+</script>
+</body>
+</html>

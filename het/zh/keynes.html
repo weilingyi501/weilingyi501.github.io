@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凯恩斯与大萧条 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：大萧条与正统的回答、为什么削减工资不能恢复就业、有效需求与乘数（互动模型）、不确定性与动物精神、流动性偏好，以及投资社会化。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/keynes.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/keynes.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid3 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin-right: 8px; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../keynes.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 第11周</p>
+  <h1>凯恩斯与大萧条</h1>
+  <p class="lead">为什么市场经济可能长期陷于大规模失业，以及凯恩斯认为应当为此做些什么。</p>
+
+  <div class="toc"><b>本模块内容</b>
+    <ol><li><a href="#depression">大萧条与正统的回答</a></li><li><a href="#wages">为什么削减工资不能恢复就业</a></li><li><a href="#demand">有效需求与乘数（互动）</a></li><li><a href="#uncertainty">投资、不确定性与动物精神</a></li><li><a href="#money">流动性偏好与货币政策的局限</a></li><li><a href="#policy">投资社会化及其后续</a></li></ol>
+  </div>
+
+  <h2 id="depression">1. 大萧条与正统的回答</h2>
+  <p>1929年10月华尔街股市崩盘之后，美国经济连续收缩了将近四年。到1933年，实际产出下降了大约四分之一，消费价格下降了约四分之一，大约每四个工人中就有一个失业。数千家银行倒闭。崩溃通过贸易和金融蔓延到欧洲和拉丁美洲。英国在1931年放弃了金本位，美国在1933年开始实行罗斯福新政。</p>
+  <p>当时的经济学，即凯恩斯所说的“古典”经济学，有一个明确的答案。在竞争性经济中，失业意味着劳动的价格太高。如果货币工资下降，企业就会雇用更多的工人。如果储蓄超过投资，利率就会下降，直到投资增加到足以吸收储蓄。萨伊定律，即供给创造自己的需求的思想，排除了需求普遍不足的可能。</p>
+  <div class="vs">
+    <div><b>正统观点</b>失业来自过高的工资。灵活的工资和利率会使经济回到充分就业。最好的政策是让价格自行调整，并保持预算平衡。</div>
+    <div><b>凯恩斯</b>失业来自支出太少。工资和价格的下降可能使情况更糟。政府应当维持需求，必要时通过借债和投资来实现。</div>
+  </div>
+
+  <h2 id="wages">2. 为什么削减工资不能恢复就业</h2>
+  <p>凯恩斯提出了两个论点。第一，工人和雇主就<b>货币工资</b>而不是实际工资讨价还价。如果货币工资下降，价格往往也会下降，因此实际工资可能根本不会下降多少。第二，也是更根本的一点，工资不仅是企业的成本，也是工人用来购买商品的收入。在整个经济中削减工资会削减需求，而面临销售下降的企业不会雇用更多的工人。对一个雇主来说合理的做法，对所有雇主合在一起来说却适得其反：这就是<b>合成谬误</b>。</p>
+  <p>价格下降还会加重债务的实际负担。欧文·费雪的“债务—通缩”理论（1933）说明了通货紧缩如何迫使借款人削减支出、出售资产，从而进一步压低价格。</p>
+
+  <h2 id="demand">3. 有效需求与乘数</h2>
+  <p>凯恩斯认为，产出和就业由<b>有效需求</b>决定：家庭、企业和政府实际支出了多少。家庭把每一美元新增收入的一部分花掉，即<b>边际消费倾向</b>（<i>c</i>），其余的储蓄起来。投资取决于企业对未来的预期，而不取决于家庭储蓄了多少。在最简单的模型中，产出稳定在它等于支出的水平上：</p>
+  <p class="eq">Y = C + I + G，其中 C = a + c·Y &nbsp;⟹&nbsp; Y = (a + I + G) / (1 − c)</p>
+  <p>1 / (1 − <i>c</i>) 这一项就是<b>乘数</b>。多出的一美元投资或政府支出会成为某个人的收入，其中一部分又被花掉，如此循环往复。</p>
+  <div class="box" id="kx">
+    <h3>乘数与节俭悖论</h3>
+    <div class="grid3">
+      <div><label>边际消费倾向：<b id="cv">0.75</b></label><input type="range" id="c" min="0.5" max="0.9" step="0.05" value="0.75"></div>
+      <div><label>投资：<b id="iv">200</b></label><input type="range" id="i" min="50" max="400" step="10" value="200"></div>
+      <div><label>政府支出：<b id="gv">200</b></label><input type="range" id="g" min="0" max="400" step="10" value="200"></div>
+    </div>
+    <div style="margin-top:10px"><label>自主消费（a）：<b id="av">100</b></label><input type="range" id="a" min="0" max="300" step="10" value="100"></div>
+    <div style="margin-top:10px">
+      <button class="btn" type="button" id="thrift">每个人都试图多储蓄50</button>
+      <button class="btn" type="button" id="crash">投资骤降100</button>
+      <button class="btn" type="button" id="stim">政府多支出100</button>
+      <button class="btn" type="button" id="reset">重置</button>
+    </div>
+    <svg id="kchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="凯恩斯交叉图：计划支出与产出"></svg>
+    <div id="kout"></div>
+  </div>
+  <p><b>节俭悖论</b>：当所有家庭都试图多储蓄时，消费下降，产出和收入下降，最终总储蓄并不比以前多，因为储蓄仍然必须等于投资。对一个家庭来说审慎的做法，可能使整个经济陷入贫困。</p>
+  <div class="think"><b>试一试：</b>点击“每个人都试图多储蓄50”，比较前后的总储蓄。然后降低边际消费倾向。乘数会怎样变化？</div>
+
+  <h2 id="uncertainty">4. 投资、不确定性与动物精神</h2>
+  <p>如果投资推动需求，那么什么推动投资？在《通论》第12章中，凯恩斯认为，企业必须依据极其有限的知识去估计多年以后的收益。实际上，它们只能依靠惯例：除非有理由认为情况会改变，否则就假定现状会持续下去。由于惯例很脆弱，投资可能随着消息和情绪而剧烈波动。凯恩斯把这种不顾不确定性而采取行动的冲动称为“动物精神”。</p>
+  <p>股票市场并不能解决这个问题。凯恩斯把职业投资比作报纸上的<b>选美比赛</b>：读者要想获胜，就得挑出<em>其他</em>读者会挑选的面孔。投资者试图预测的是一般看法对一般看法的看法，而不是一项资产的长期收益。他区分了<b>企业</b>，即预测资产在整个寿命期内的收益，和<b>投机</b>，即预测市场心理，并警告说，当企业变成投机漩涡上的泡沫时，危险就来了。</p>
+
+  <h2 id="money">5. 流动性偏好与货币政策的局限</h2>
+  <p>在正统的说法中，利率使储蓄与投资相等。凯恩斯则认为，利率是放弃<b>流动性</b>的价格：人们在不确定时把货币作为安全资产持有，而利率是说服他们转而持有债券的东西。在严重的萧条中，无论利率降到多低，人们都可能囤积货币，因此中央银行无法把利率压到足以重振投资的水平。后来的经济学家称之为<b>流动性陷阱</b>；它在1990年代的日本以及2008年后的全世界重新回到了政策辩论之中。</p>
+
+  <h2 id="policy">6. 投资社会化及其后续</h2>
+  <p>凯恩斯怀疑仅靠货币政策能否确保充分就业。他在第24章中得出结论说，需要“某种程度的全面的投资社会化”，他的意思是由国家对投资的总体水平负责，而不是工业的公有制。财政政策、公共工程以及公共投资的重要作用都由此而来。</p>
+  <p>另外两个发展值得了解：</p>
+  <ul>
+    <li><b>卡莱茨基。</b>波兰经济学家米哈尔·卡莱茨基在1930年代初独立地得出了有效需求原理。在《充分就业的政治方面》（1943）中，他认为企业界领袖可能反对持久的充分就业，因为它会增强工人的议价能力，从而产生政治性的经济周期。</li>
+    <li><b>利润与赤字。</b>在卡莱茨基的基础上，海曼·明斯基强调，以简化的形式来说，总利润等于投资加政府赤字加贸易顺差，减去家庭储蓄。当私人投资崩溃时，巨额的政府赤字使利润，从而使企业得以维持。明斯基认为，“大政府”和作为最后贷款人的中央银行，是近来的衰退，包括2008年和2020年的衰退，没有演变成萧条的原因；但这也使风险社会化了，却没有使投资社会化。</li>
+  </ul>
+  <p>战后，希克斯和萨缪尔森等经济学家把凯恩斯的部分思想吸收进“新古典综合”：短期是凯恩斯，长期是瓦尔拉斯（第12周）。琼·罗宾逊等后凯恩斯主义者把这称为“冒牌凯恩斯主义”，认为它丢掉了不确定性和金融的不稳定性，而这些正是凯恩斯著作的核心。</p>
+  <div class="think"><b>讨论：</b>凯恩斯说，1930年代的问题不是稀缺，而是未能利用现有的资源。这描述的是一个特例，还是资本主义经济通常的运行方式？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亨特，第15章。</p>
+  <p class="rd">凯恩斯，《就业、利息和货币通论》（1936），第12章和第24章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">海尔布罗纳，《俗世哲人》，第9章。</p>
+  <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第5章（费雪）和第6章（凯恩斯）。</p>
+
+  <p><a href="index.html#week-11">← 返回课程大纲第11周</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const BASE = {c:0.75, i:200, g:200, a:100};
+const LAB = {thrift:'家庭多储蓄', crash:'投资骤降', stim:'政府多支出'};
+let prev = null;
+function eqY(s) { return (s.a + s.i + s.g) / (1 - s.c); }
+function state() { return {c:+$('c').value, i:+$('i').value, g:+$('g').value, a:+$('a').value}; }
+function snap(key) { prev = Object.assign(state(), {key}); }
+function k() {
+  const s = state();
+  $('cv').textContent = s.c.toFixed(2); $('iv').textContent = s.i; $('gv').textContent = s.g; $('av').textContent = s.a;
+  const Y = eqY(s), C = s.a + s.c*Y, S = Y - C, mult = 1/(1-s.c);
+  // chart: planned spending E = a + I + G + cY vs 45-degree line
+  const W = 640, H = 260, L = 50, R = 14, T = 12, B = 34, MAX = Math.max(5000, Math.ceil(Math.max(Y, prev ? eqY(prev) : 0)*1.15/500)*500);
+  const X = v => L + v/MAX*(W-L-R), Yp = v => H-B - v/MAX*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= MAX; v += MAX/5) g += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">产出与收入（Y）</text>`;
+  g += `<line x1="${X(0)}" y1="${Yp(0)}" x2="${X(MAX)}" y2="${Yp(MAX)}" stroke="#8a929b" stroke-dasharray="5 4"/><text x="${X(MAX*0.9)}" y="${Yp(MAX*0.9)-6}" text-anchor="end">产出 = 支出</text>`;
+  if (prev) { const e0 = prev.a+prev.i+prev.g; g += `<line x1="${X(0)}" y1="${Yp(e0)}" x2="${X(MAX)}" y2="${Yp(e0+prev.c*MAX)}" stroke="#cfe2f3" stroke-width="2.5"/>`; const Y0 = eqY(prev); g += `<circle cx="${X(Y0)}" cy="${Yp(Y0)}" r="5" fill="#9fc4e6"/>`; }
+  const e = s.a+s.i+s.g;
+  g += `<line x1="${X(0)}" y1="${Yp(e)}" x2="${X(MAX)}" y2="${Yp(e+s.c*MAX)}" stroke="#0077b6" stroke-width="2.5"/><text x="${X(MAX*0.15)}" y="${Yp(e+s.c*MAX*0.15)-8}">计划支出</text>`;
+  g += `<line x1="${X(Y)}" y1="${Yp(Y)}" x2="${X(Y)}" y2="${H-B}" stroke="#023e8a" stroke-dasharray="3 3"/><circle cx="${X(Y)}" cy="${Yp(Y)}" r="6" fill="#023e8a"/>`;
+  $('kchart').innerHTML = g;
+  let cmp = '';
+  if (prev) {
+    const Y0 = eqY(prev), C0 = prev.a + prev.c*Y0, S0 = Y0 - C0;
+    cmp = `<tr><td>之前（${LAB[prev.key]}）</td><td>${Y0.toFixed(0)}</td><td>${C0.toFixed(0)}</td><td>${S0.toFixed(0)}</td><td>${prev.i}</td></tr>`;
+  }
+  $('kout').innerHTML = `<table><thead><tr><th></th><th>产出（Y）</th><th>消费</th><th>储蓄</th><th>投资</th></tr></thead><tbody>${cmp}<tr><td>${prev ? '之后' : '均衡'}</td><td><b>${Y.toFixed(0)}</b></td><td>${C.toFixed(0)}</td><td>${S.toFixed(0)}</td><td>${s.i}</td></tr></tbody></table>
+    <div class="out"><b>乘数</b> = 1 / (1 − ${s.c.toFixed(2)}) = ${mult.toFixed(2)}。私人储蓄（${S.toFixed(0)}）加税收等于投资加政府支出；本模型中没有税收，因此储蓄 = 投资 + 政府支出（${(s.i+s.g).toFixed(0)}）${prev && prev.key === 'thrift' ? `。家庭试图多储蓄，但总储蓄最终是 ${S.toFixed(0)}：结果是产出下降了 ${(eqY(prev)-Y).toFixed(0)}。` : '。'}</div>`;
+}
+['c','i','g','a'].forEach(id => $(id).addEventListener('input', () => { prev = null; k(); }));
+$('thrift').addEventListener('click', () => { snap('thrift'); $('a').value = Math.max(0, +$('a').value - 50); k(); });
+$('crash').addEventListener('click', () => { snap('crash'); $('i').value = Math.max(50, +$('i').value - 100); k(); });
+$('stim').addEventListener('click', () => { snap('stim'); $('g').value = Math.min(400, +$('g').value + 100); k(); });
+$('reset').addEventListener('click', () => { prev = null; for (const k2 in BASE) $(k2).value = BASE[k2]; k(); });
+k();
+</script>
+</body>
+</html>

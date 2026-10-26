@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>边际革命 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：杰文斯、门格尔与瓦尔拉斯，边际效用递减，等边际法则（互动预算练习），从效用到需求曲线，一般均衡，以及批评与影响。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/marginal-utility.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/marginal-utility.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+.vt .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2, .vt .grid3 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+.vt .three div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .three b { display: block; color: var(--bar); }
+@media (max-width: 680px) { .vt .three { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../marginal-utility.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 第8周</p>
+  <h1>边际革命</h1>
+  <p class="lead">杰文斯、门格尔和瓦尔拉斯如何把对价值的解释从生产成本转向消费者的选择，以及经济学在这一过程中得到了什么、失去了什么。</p>
+
+  <div class="toc"><b>本模块内容</b>
+    <ol><li><a href="#context">三位发现者，同一个十年</a></li><li><a href="#mu">边际效用递减</a></li><li><a href="#rule">等边际法则（互动）</a></li><li><a href="#demand">从效用到需求曲线</a></li><li><a href="#walras">瓦尔拉斯与一般均衡</a></li><li><a href="#critics">批评与影响</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 三位发现者，同一个十年</h2>
+  <p>在1871年到1874年之间，三位在不同国家、用不同语言工作的经济学家，各自把价值理论建立在<em>最后</em>一单位消费品的效用之上：</p>
+  <div class="three">
+    <div><b>W. S. 杰文斯</b>曼彻斯特和伦敦。《政治经济学理论》（1871）：在边际上衡量效用，并用微积分来表达。</div>
+    <div><b>卡尔·门格尔</b>维也纳。《国民经济学原理》（1871）：价值是主观的，根植于人们对满足自身需要的重视程度。</div>
+    <div><b>莱昂·瓦尔拉斯</b>洛桑。《纯粹经济学要义》（1874）：一个所有市场同时出清的方程组。</div>
+  </div>
+  <p>为什么是那个时候？几个条件凑在了一起。劳动价值论已经成为社会主义者的理论：马克思的《资本论》出版于1867年，1871年的巴黎公社令整个欧洲的有产者惊恐不安。始于1873年的长期萧条压低了价格和利润，使劳资冲突更加尖锐。大学正在把经济学建设成一门希望拥有自然科学权威的职业。一种用个人选择来解释价格、并且可以用数学表达的理论，恰好适合这三个条件。这并不说明它是错的，但有助于解释它为什么传播得如此之快。</p>
+  <p>不到二十年，这门学科本身就改了名字。阿尔弗雷德·马歇尔的《经济学原理》（1890）推动了以“经济学”，即研究稀缺条件下的个人选择的学问，取代“政治经济学”，即研究阶级和国民财富的学问。</p>
+
+  <h2 id="mu">2. 边际效用递减</h2>
+  <p>边际主义者区分了<b>总效用</b>，即一个人消费某种物品的全部单位所获得的满足，和<b>边际效用</b>，即多消费一单位所增加的满足。他们的关键假设是，边际效用随着消费的增加而递减。炎热的日子里，第一杯水弥足珍贵；第十杯就几乎不想要了。</p>
+  <blockquote>价值完全取决于效用。<cite>W. 斯坦利·杰文斯，《政治经济学理论》（1871），第1章</cite></blockquote>
+  <p>这解决了困扰斯密的水与钻石悖论（第3周）。水的总效用极大，但因为它很充裕，多一升水的边际效用微乎其微。钻石的总效用很小，但它很稀缺，所以多一颗钻石的边际效用很高。价格取决于边际效用，而不是总效用。</p>
+  <div class="box" id="mubox">
+    <h3>总效用与边际效用</h3>
+    <div class="grid2">
+      <div><label>消费的单位数：<b id="qv">3</b></label><input type="range" id="q" min="1" max="12" step="1" value="3"></div>
+      <div><label>对这种物品的需要程度：<b id="av">10</b></label><input type="range" id="a" min="4" max="20" step="1" value="10"></div>
+    </div>
+    <svg id="muchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="总效用以递减的速度上升，边际效用下降"></svg>
+    <div class="out" id="muout"></div>
+    <p class="note">柱形表示每一单位的边际效用；曲线表示总效用。这里的效用函数为 u = a·ln(1 + q)，这是一种常见的、具有边际效用递减性质的教科书形式。</p>
+  </div>
+
+  <h2 id="rule">3. 等边际法则</h2>
+  <p>假设一个消费者有固定的预算，要花在两种物品上。最后一美元应该花在哪里？花在每一美元能带来更多效用的那种物品上。随着消费者购买更多这种物品，它的边际效用下降，直到花在每种物品上的最后一美元带来相同的额外满足：</p>
+  <p class="eq">MU<sub>x</sub> / P<sub>x</sub> = MU<sub>y</sub> / P<sub>y</sub></p>
+  <p>如果左边更大，把一美元从 <i>y</i> 转到 <i>x</i> 会提高总效用；如果右边更大，则反之。只有当两边相等时，效用才达到最大。试着找到这个点：</p>
+  <div class="box" id="eq">
+    <h3>把预算花在面包和书上</h3>
+    <div class="grid3">
+      <div><label>预算：<b id="mv">$60</b></label><input type="range" id="m" min="20" max="120" step="5" value="60"></div>
+      <div><label>面包的价格：<b id="pxv">$2</b></label><input type="range" id="px" min="1" max="10" step="0.5" value="2"></div>
+      <div><label>一本书的价格：<b id="pyv">$10</b></label><input type="range" id="py" min="2" max="20" step="1" value="10"></div>
+    </div>
+    <div style="margin-top:12px"><label>花在面包上的钱：<b id="sxv">$20</b>（其余用于买书）</label><input type="range" id="sx" min="0" max="60" step="1" value="20"></div>
+    <div style="margin-top:10px"><button class="btn" id="best" type="button">显示最佳分配</button></div>
+    <div id="eqout"></div>
+    <svg id="eqchart" viewBox="0 0 640 200" width="100%" role="img" aria-label="每一种预算分配方式下的总效用"></svg>
+    <p class="note">曲线显示每一种预算分配方式下的总效用；圆点是你的选择。偏好：u = 30·ln(1 + 面包) + 40·ln(1 + 书)。</p>
+  </div>
+  <div class="think"><b>试一试：</b>找到最佳分配，然后提高面包的价格。面包的最佳购买量是上升还是下降？这就是下一节的内容。</div>
+
+  <h2 id="demand">4. 从效用到需求曲线</h2>
+  <p>等边际法则给出了一种需求理论。当面包的价格上涨时，面包的 <i>MU / P</i> 下降，因此消费者减少面包的购买，直到它的边际效用上升到足以恢复平衡。在不同的价格下重复这一练习，就描绘出一条向下倾斜的需求曲线：</p>
+  <div class="box">
+    <h3>根据同样的偏好得出的面包需求</h3>
+    <table id="dtab"></table>
+    <p class="note">按上面练习中当前的预算和书价计算。</p>
+  </div>
+  <p>由此，边际主义者从需求一方解释了价格，而古典经济学家曾把需求看作次要的。马歇尔后来把这条需求曲线与一条基于成本的供给曲线结合起来，坚持认为“剪刀的两片刀刃”都很重要（第9周）。</p>
+
+  <h2 id="walras">5. 瓦尔拉斯与一般均衡</h2>
+  <p>杰文斯和马歇尔一次只研究一个市场。瓦尔拉斯则问：既然每种物品的需求都取决于所有的价格，那么<em>所有</em>市场能否同时出清？他为一个有 <i>m</i> 种消费品和 <i>n</i> 种生产性服务的经济写下了一个方程组：</p>
+  <ul>
+    <li>每种生产性服务的供给（<i>n</i> 个方程），</li>
+    <li>每种消费品的需求（<i>m</i> 个方程），</li>
+    <li>每种生产性服务的需求等于其供给（<i>n</i> 个方程），以及</li>
+    <li>每种物品的价格等于其生产成本（<i>m</i> 个方程）。</li>
+  </ul>
+  <p>这就得到了 2<i>m</i> + 2<i>n</i> 个方程。选定一种物品作为计价单位（<em>numéraire</em>，计价物）之后，有 2<i>m</i> + 2<i>n</i> − 1 个未知数。多出的那个方程并不是独立的：如果除一个市场之外的所有市场都出清了，最后一个市场也必然出清。这就是<b>瓦尔拉斯定律</b>。数方程的个数并不能证明解的存在。直到1954年，肯尼斯·阿罗和热拉尔·德布鲁才在关于偏好和完全竞争的严格假设下证明了这一点。</p>
+
+  <p>出生于爱尔兰的牛津经济学家弗朗西斯·伊西德罗·埃奇沃思（1845—1926）增添了两个至今每本教科书都在使用的工具。在《数学心理学》（1881）中，他画出了最早的<b>无差异曲线</b>，表示给一个人带来同等效用的物品组合；以及<b>契约曲线</b>，即两人之间的一组交易，在这些交易上任何一方都不能在不使另一方受损的情况下获益。他证明，只有两个交易者时，讨价还价的结果在这条曲线上是不确定的；随着交易者人数的增加，可能结果的范围逐渐缩小到竞争均衡。埃奇沃思还是《经济学杂志》（1891）的首任主编。</p>
+
+  <h2 id="critics">6. 批评与影响</h2>
+  <ul>
+    <li><b>效用能被测量吗？</b>杰文斯希望能够。后来的经济学家（帕累托，以及1930年代的希克斯和艾伦）在只对商品组合进行排序的<em>序数</em>效用之上重建了需求理论。价格理论保留了下来；测量满足程度的主张则没有。</li>
+    <li><b>不同人的效用可以比较吗？</b>如果不能，这一理论就无法判断把一美元从富人转移给穷人是否会提高总福利。帕累托之后的福利经济学大体上回避了这个问题。</li>
+    <li><b>从阶级到个人。</b>古典经济学分析的是工人、资本家和地主。边际主义分析的是具有既定偏好和禀赋的个人。亨特等批评者认为，这把现存的财产分配当作既定的，并把它排除在视野之外。</li>
+    <li><b>人们的行为真是这样的吗？</b>托斯丹·凡勃伦嘲笑边际主义的消费者是“快乐与痛苦的闪电计算器”（1898）。行为经济学后来研究了人们实际上如何做出选择（第14周）。</li>
+  </ul>
+  <div class="think"><b>讨论：</b>古典经济学家问的是什么决定国民财富；边际主义者问的是个人如何在既定目的之间分配稀缺手段。对于你所关心的问题，哪一个问题更有用？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亨特，第10章（杰文斯、门格尔、瓦尔拉斯）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">张夏准，<em>Economics: The User’s Guide</em>，第4章（新古典学派与奥地利学派）。</p>
+  <p class="rd">海尔布罗纳，《俗世哲人》，第7章。</p>
+
+  <p><a href="index.html#week-8">← 返回课程大纲第8周</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const fmt = (v, d=1) => v.toLocaleString(undefined, {minimumFractionDigits:d, maximumFractionDigits:d});
+
+// ---------- Total and marginal utility ----------
+function mu() {
+  const q = +$('q').value, a = +$('a').value; $('qv').textContent = q; $('av').textContent = a;
+  const U = n => a * Math.log(1 + n);
+  const W = 640, H = 220, L = 40, R = 40, T = 12, B = 30, N = 12;
+  const umax = U(N) * 1.08, mumax = (U(1) - U(0)) * 1.15;
+  const bw = (W-L-R)/N;
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let i = 1; i <= N; i++) {
+    const m = U(i) - U(i-1), h = m/mumax*(H-B-T), x = L + (i-1)*bw + 4;
+    g += `<rect x="${x}" y="${H-B-h}" width="${bw-8}" height="${h}" rx="3" fill="${i <= q ? '#0077b6' : '#cfe2f3'}"/><text x="${x+(bw-8)/2}" y="${H-B+15}" text-anchor="middle">${i}</text>`;
+  }
+  g += `<polyline fill="none" stroke="#023e8a" stroke-width="2.5" points="${Array.from({length:N+1},(_,i)=>(L+i*bw)+','+(H-B-U(i)/umax*(H-B-T))).join(' ')}"/>`;
+  g += `<circle cx="${L+q*bw}" cy="${H-B-U(q)/umax*(H-B-T)}" r="5" fill="#023e8a"/>`;
+  g += `<text x="${L}" y="${T+4}">边际效用（柱形）</text><text x="${W-R}" y="${T+4}" text-anchor="end">总效用（曲线）</text>`;
+  $('muchart').innerHTML = g;
+  $('muout').innerHTML = `${q}单位的<b>总效用</b>：${fmt(U(q))} · 第${q}单位的<b>边际效用</b>：${fmt(U(q)-U(q-1),2)} · 第${q+1}单位只会增加 ${fmt(U(q+1)-U(q),2)}。`;
+}
+['q','a'].forEach(i => $(i).addEventListener('input', mu)); mu();
+
+// ---------- Equimarginal rule ----------
+const A = 30, Bw = 40;
+const util = (x, y) => A*Math.log(1+x) + Bw*Math.log(1+y);
+function bestSpend(M, px, py) { let b = 0, bu = -1; for (let s = 0; s <= M; s += 0.1) { const u = util(s/px, (M-s)/py); if (u > bu) { bu = u; b = s; } } return b; }
+function eq() {
+  const M = +$('m').value, px = +$('px').value, py = +$('py').value;
+  $('sx').max = M; if (+$('sx').value > M) $('sx').value = M;
+  const sx = +$('sx').value; const x = sx/px, y = (M-sx)/py;
+  $('mv').textContent = '$'+M; $('pxv').textContent = '$'+px; $('pyv').textContent = '$'+py; $('sxv').textContent = '$'+sx;
+  const mux = A/(1+x), muy = Bw/(1+y), rx = mux/px, ry = muy/py;
+  let adv;
+  if (Math.abs(rx-ry)/Math.max(rx,ry) < 0.03) adv = '最后一美元在两种用途上带来的效用大致相同。效用（近似地）达到了最大。';
+  else if (rx > ry) adv = '现在花在面包上的一美元比花在书上的一美元带来更多的效用。应当把支出转向面包。';
+  else adv = '现在花在书上的一美元比花在面包上的一美元带来更多的效用。应当把支出转向书。';
+  $('eqout').innerHTML = `<table><thead><tr><th></th><th>数量</th><th>边际效用</th><th>每美元的边际效用</th></tr></thead><tbody>
+    <tr><td>面包</td><td>${fmt(x)}</td><td>${fmt(mux,2)}</td><td><b>${fmt(rx,3)}</b></td></tr>
+    <tr><td>书</td><td>${fmt(y)}</td><td>${fmt(muy,2)}</td><td><b>${fmt(ry,3)}</b></td></tr></tbody></table>
+    <div class="out"><b>总效用：</b>${fmt(util(x,y))}。${adv}</div>`;
+  // chart
+  const W = 640, H = 200, L = 46, R = 14, T = 12, B = 30; let pts = [], umin = Infinity, umax = -Infinity;
+  for (let s = 0; s <= M; s += M/120) { const u = util(s/px, (M-s)/py); pts.push([s,u]); umin = Math.min(umin,u); umax = Math.max(umax,u); }
+  const X = s => L + s/M*(W-L-R), Y = u => H-B - (u-umin)/((umax-umin)||1)*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0, M/2, M].forEach(s => g += `<text x="${X(s)}" y="${H-B+15}" text-anchor="middle">$${Math.round(s)}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">花在面包上的钱</text>`;
+  g += `<polyline fill="none" stroke="#0077b6" stroke-width="2.5" points="${pts.map(([s,u])=>X(s)+','+Y(u)).join(' ')}"/>`;
+  const bs = bestSpend(M, px, py);
+  g += `<line x1="${X(bs)}" y1="${T}" x2="${X(bs)}" y2="${H-B}" stroke="#8a929b" stroke-dasharray="4 3"/><text x="${X(bs)+4}" y="${T+10}">最佳</text>`;
+  g += `<circle cx="${X(sx)}" cy="${Y(util(x,y))}" r="6" fill="#023e8a"/>`;
+  $('eqchart').innerHTML = g;
+  demand(M, py);
+}
+function demand(M, py) {
+  let rows = '';
+  for (const p of [1, 2, 3, 4, 6, 8, 10]) { const s = bestSpend(M, p, py); rows += `<tr><td>$${p}</td><td>${fmt(s/p)}</td><td>$${fmt(s,0)}</td></tr>`; }
+  $('dtab').innerHTML = `<thead><tr><th>面包价格</th><th>面包的最佳购买量</th><th>花在面包上的钱</th></tr></thead><tbody>${rows}</tbody>`;
+}
+['m','px','py','sx'].forEach(i => $(i).addEventListener('input', eq));
+$('best').addEventListener('click', () => { $('sx').value = Math.round(bestSpend(+$('m').value, +$('px').value, +$('py').value)); eq(); });
+eq();
+</script>
+</body>
+</html>

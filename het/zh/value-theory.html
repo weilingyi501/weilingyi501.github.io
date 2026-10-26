@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>古典价值理论 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：从斯密的海狸与鹿到李嘉图的自然价格、马克思的转形问题和斯拉法，含互动计算器。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/value-theory.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/value-theory.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=number] { width: 84px; font: inherit; padding: 4px 6px; border: 1px solid var(--rule); border-radius: 6px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; white-space: nowrap; }
+.vt .labrow { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: end; }
+.vt .labrow div { display: flex; flex-direction: column; }
+.vt .labrow small { font-size: 12.5px; color: var(--faint); }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../value-theory.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 第3周</p>
+  <h1>古典价值理论</h1>
+  <p class="lead">什么决定商品的长期价格？这是第3周的模块，从斯密的海狸与鹿，到李嘉图的自然价格、马克思的转形问题，再到斯拉法。</p>
+
+  <div class="toc"><b>本模块内容</b>
+    <ol><li><a href="#two">两种价值理论</a></li><li><a href="#smith">斯密：海狸与鹿</a></li><li><a href="#adding">斯密的加总论及其循环</a></li><li><a href="#ricardo">李嘉图：劳动、过去劳动与自然价格（计算器）</a></li><li><a href="#marx">马克思：从价值到生产价格</a></li><li><a href="#sraffa">斯拉法、资本与经验证据</a></li></ol>
+  </div>
+
+  <h2 id="two">1. 两种价值理论</h2>
+  <p>古典经济学家区分了商品的<b>市场价格</b>和<b>自然价格</b>（即它的“价值”）：前者随日常的供求而变动，后者是市场价格围绕其波动的长期平均水平。对于什么决定自然价格，大致有两种回答：</p>
+  <ul>
+    <li><b>劳动价值论：</b>相对价格最终由生产商品所需的劳动量决定。这是斯密、李嘉图和马克思的传统。</li>
+    <li><b>效用价值论：</b>相对价格反映商品给消费者带来的满足。这是萨伊、西尼尔以及后来的边际主义者的传统。</li>
+  </ul>
+  <p>斯密本人就注意到了区分两者的难题。水是生命所必需的，却几乎不花钱；钻石对生存毫无用处，却非常昂贵。<b>使用价值</b>和<b>交换价值</b>可能指向相反的方向。劳动价值论的回答是：寻找和切割钻石需要多得多的劳动。1870年代的边际主义者则会回答：重要的是<em>最后</em>一单位的效用，而水是充裕的（第8周）。</p>
+
+  <h2 id="smith">2. 斯密：海狸与鹿</h2>
+  <blockquote>在资本积累和土地私有尚未发生以前的早期未开化社会中，获取各种物品所需的劳动量之间的比例，似乎是能够为相互交换提供某种规则的唯一情况。<cite>亚当·斯密，《国富论》，第一篇第六章（1776）</cite></blockquote>
+  <p>如果猎人可以自由选择猎取哪一种动物，交换比例就必然稳定在狩猎时间的比例上。否则，所有人都会转向报酬更高的猎物。试一试：</p>
+  <div class="box" id="bd">
+    <h3>海狸与鹿</h3>
+    <div class="grid2">
+      <div><label>猎取一只海狸所需小时数：<b id="hbv">2</b></label><input type="range" id="hb" min="1" max="8" step="0.5" value="2"></div>
+      <div><label>猎取一头鹿所需小时数：<b id="hdv">1</b></label><input type="range" id="hd" min="1" max="8" step="0.5" value="1"></div>
+      <div style="grid-column:1/-1"><label>市场价格：一只海狸换 <b id="mkv">2</b> 头鹿</label><input type="range" id="mk" min="0.5" max="6" step="0.25" value="2"></div>
+    </div>
+    <div class="out" id="bdout"></div>
+  </div>
+
+  <h2 id="adding">3. 斯密的加总论及其循环</h2>
+  <p>斯密认为，一旦资本得到积累、土地成为私有财产，劳动就不再单独决定价格。产品现在必须支付工资、利润和地租，因此自然价格就是三者按其“自然”（平均）水平之和：</p>
+  <p class="eq">自然价格 = 工资 + 利润 + 地租（各自按社会平均水平计算）</p>
+  <p>竞争使各行业的工资率趋于相等，也使各资本的利润率趋于相等。假设利润率为10%，两个行业都雇用工人，但行业2每个工人使用的资本是行业1的两倍。那么行业2每个工人必须赚取两倍的利润，它的价格<em>相对于它所使用的劳动</em>就必须更高。价格不再与劳动成比例。</p>
+  <p>但这个理论有一个逻辑缺口。价格用工资、利润和地租来解释；然而工资、利润和地租本身就是货币额，其大小取决于价格。斯密的理论是用价格解释价格。李嘉图试图回到劳动来打破这个循环。</p>
+
+  <h2 id="ricardo">4. 李嘉图：劳动、过去劳动与自然价格</h2>
+  <p>李嘉图的回答是：一件商品不仅包含了制造它的工人的<b>现在劳动</b>，也包含了生产其工具和原料的<b>过去劳动</b>。在他著名的例子中，袜子的价值包括了种植棉花、运输棉花、建造船只和机器、纺纱、织布和销售的劳动。每一种投入都可以追溯到更早年份所付出的劳动。</p>
+  <p>然而，利润是随时间累积的。一个一年前就为劳动付了钱的资本家，期望从这笔支出中获得回报；因此，过去劳动付出的时间越早、利润率越高，它在价格中所占的分量就越大。设工资率为 <i>w</i>，利润率为 <i>r</i>：</p>
+  <p class="eq">过去劳动的成本 = Σ（t 年前的劳动）× w ×（1 + r）<sup>t</sup></p>
+  <p class="eq">价格 =（现在劳动 × w + 过去劳动的成本）×（1 + r）</p>
+  <p>下面的计算器使用亨特的数字例子（第5章）。两种商品每单位都包含4小时劳动，因此它们的劳动比率是 1 : 1，但 <i>X</i> 主要使用很久以前的过去劳动，而 <i>Y</i> 主要使用现在劳动。</p>
+
+  <div class="box" id="ric">
+    <h3>李嘉图自然价格计算器</h3>
+    <p class="note">生产100单位所需的劳动。过去劳动按其付出于多少年前填写。</p>
+    <div id="ricin"></div>
+    <div class="grid2" style="margin-top:12px">
+      <div><label>工资率（每小时英镑）：<b id="wv">1.00</b></label><input type="range" id="w" min="0.5" max="4" step="0.25" value="1"></div>
+      <div><label>利润率：<b id="rv">50%</b></label><input type="range" id="r" min="0" max="100" step="1" value="50"></div>
+    </div>
+    <div id="ricout"></div>
+    <svg id="ricchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="X 相对于 Y 的价格随利润率的变化"></svg>
+    <p class="note">图中显示了每一个利润率下 X 相对于 Y 的价格。虚线是劳动比率。利润率越高，两者的差距越大。</p>
+  </div>
+  <p>李嘉图得出、亨特也加以强调的结论是：只要利润率为正，且各商品的劳动在时间上的分布不同，相对价格就会<b>偏离</b>相对劳动量。利润率越高，偏离越大；利润率为零时，价格与劳动恰好成比例。尽管如此，李嘉图仍然认为劳动是相对价格的主要决定因素，利润只是次要的影响。</p>
+  <div class="think"><b>试一试：</b>把利润率设为0%。然后让 X 和 Y 的劳动在时间上的分布相同。在这两种情况下，价格与劳动之间的差距会怎样？</div>
+
+  <h2 id="marx">5. 马克思：从价值到生产价格</h2>
+  <p>马克思把商品的价值分为三个部分：<b>不变资本</b>（<i>C</i>，所耗费的生产资料的价值）、<b>可变资本</b>（<i>V</i>，工资，即劳动力的价值）和<b>剩余价值</b>（<i>S</i>，工人在工资之外创造的新价值）。他的利润率是</p>
+  <p class="eq">r = S / (C + V) = (S/V) / (C/V + 1)</p>
+  <p>其中 <i>S/V</i> 是剩余价值率，<i>C/V</i> 是资本有机构成。如果两个部门的剩余价值率相同而有机构成不同，那么当商品按价值出售时，它们的利润率就不同。竞争使资本流动，直到利润率相等，此时商品按不同于价值的<b>生产价格</b>出售。说明这一过程如何发生，就是<b>转形问题</b>。</p>
+  <table>
+    <thead><tr><th>两部门例子</th><th>C</th><th>V</th><th>S</th><th>价值</th><th>按价值出售时的利润率</th><th>马克思的价格</th><th>完整解法</th></tr></thead>
+    <tbody>
+      <tr><td>资本品</td><td>200</td><td>100</td><td>100</td><td>400</td><td>33.3%</td><td>420.0</td><td>423.9</td></tr>
+      <tr><td>工资品</td><td>100</td><td>100</td><td>100</td><td>300</td><td>50.0%</td><td>280.0</td><td>276.1</td></tr>
+      <tr><td>总计 / 平均</td><td>300</td><td>200</td><td>200</td><td>700</td><td>40.0%</td><td>700.0（r = 40%）</td><td>700.0（r = 39.4%）</td></tr>
+    </tbody>
+  </table>
+  <p>马克思自己的解法是在每个部门的成本上加上平均利润率（40%），但他只把<em>产出</em>按生产价格计价，而<em>投入</em>仍按价值计算。后来的经济学家从拉迪斯劳斯·冯·鲍特凯维兹（1907）开始，同时对投入和产出进行转形。这需要联立求解方程组：</p>
+  <p class="eq">(200·p₁ + 100·p₂)(1 + r) = 400·p₁<br>(100·p₁ + 100·p₂)(1 + r) = 300·p₂<br>400·p₁ + 300·p₂ = 700</p>
+  <p>解得 r ≈ 39.4%，价格见最后一列。总价格仍然等于总价值，但总利润不再恰好等于总剩余价值。这一点对马克思的论证是否重要，从那以后一直争论不休。</p>
+
+  <h2 id="sraffa">6. 斯拉法、资本与经验证据</h2>
+  <p>1960年，皮耶罗·斯拉法出版了《用商品生产商品》，复兴了不依赖效用的古典价格理论。它也揭示了新古典理论的一个问题：“资本”无法作为独立于利润率的单一数量来衡量，因为资本品的价格本身就取决于利润率。在1960年代的<b>剑桥资本争论</b>中，这引出了<b>再转换</b>：同一种技术可能在低利润率和高利润率下都是最有利可图的，因此无法总是把各种技术排列为“资本密集度”更高或更低。保罗·萨缪尔森在1966年承认了这一点。</p>
+  <p>这里有一个亨特着重指出的讽刺。反对劳动价值论的理由是各部门使用资本的比例不同；而正是同样的差异在新古典理论中造成了再转换。如果所有部门的比例都相同，价格就会与劳动成比例，再转换也就不可能发生。</p>
+  <p>在实践中，偏离有多大？爱德华多·奥乔亚利用1947—1972年美国的投入产出表（“Values, prices, and wage–profit curves in the US economy”，<em>Cambridge Journal of Economics</em>，1989）发现，基于劳动价值的价格与观察到的市场价格非常接近，测得的工资—利润曲线几乎是直线。后来使用投入产出数据的研究得出了大体相似的结论。理论上的争论仍在继续，但劳动价值与价格之间的经验差距，比单凭理论所推测的要小。</p>
+  <div class="think"><b>讨论：</b>如果劳动价值能很好地预测市场价格，这是否就解决了劳动价值论与效用价值论之间的争论？一种价值理论还需要解释什么？</div>
+
+  <p><a href="index.html">← 返回课程大纲</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+// ---------- Beaver and deer ----------
+const $ = id => document.getElementById(id);
+function bd() {
+  const hb = +$('hb').value, hd = +$('hd').value, mk = +$('mk').value;
+  $('hbv').textContent = hb; $('hdv').textContent = hd; $('mkv').textContent = mk;
+  const nat = hb / hd;
+  const hourB = mk / hb, hourD = 1 / hd; // deer earned per hour hunting beaver vs deer
+  let msg;
+  if (Math.abs(mk - nat) < 1e-9) msg = '市场比例等于劳动时间之比。无论猎取哪种动物，一小时的收获都相同，因此没有猎人有理由改变。这就是自然价格。';
+  else if (mk > nat) msg = `猎海狸一小时可得 ${hourB.toFixed(2)} 头鹿，而猎鹿一小时只得 ${hourD.toFixed(2)} 头。猎人们转向猎海狸，更多的海狸进入市场，它的价格下降到 ${nat.toFixed(2)} 头鹿。`;
+  else msg = `猎海狸一小时只得 ${hourB.toFixed(2)} 头鹿，而猎鹿一小时可得 ${hourD.toFixed(2)} 头。猎人们转向猎鹿，海狸变得稀缺，它的价格上升到 ${nat.toFixed(2)} 头鹿。`;
+  $('bdout').innerHTML = `<b>自然交换比例：</b>1只海狸 = ${nat.toFixed(2)} 头鹿（狩猎时间之比）。<br>${msg}`;
+}
+['hb','hd','mk'].forEach(i => $(i).addEventListener('input', bd)); bd();
+
+// ---------- Ricardo calculator ----------
+const YRS = 5;
+const C = { X: {present:100, past:[75,75,75,75,0]}, Y: {present:300, past:[50,50,0,0,0]} };
+function inputs() {
+  let h = '';
+  for (const k of ['X','Y']) {
+    h += `<div style="margin-top:10px"><b>商品 ${k}</b><div class="labrow"><div><small>现在劳动</small><input type="number" min="0" step="1" data-k="${k}" data-t="0" value="${C[k].present}"></div>`;
+    for (let t = 1; t <= YRS; t++) h += `<div><small>${t}年前</small><input type="number" min="0" step="1" data-k="${k}" data-t="${t}" value="${C[k].past[t-1]}"></div>`;
+    h += `</div></div>`;
+  }
+  $('ricin').innerHTML = h;
+  $('ricin').querySelectorAll('input').forEach(i => i.addEventListener('input', () => {
+    const v = Math.max(0, +i.value || 0), k = i.dataset.k, t = +i.dataset.t;
+    if (t === 0) C[k].present = v; else C[k].past[t-1] = v; ric();
+  }));
+}
+function price(k, w, r) {
+  const past = C[k].past.reduce((s, l, i) => s + l * w * Math.pow(1 + r, i + 1), 0);
+  const pres = C[k].present * w;
+  return { pres, past, cost: pres + past, profit: (pres + past) * r, total: (pres + past) * (1 + r) };
+}
+const labor = k => (C[k].present + C[k].past.reduce((a, b) => a + b, 0)) / 100;
+const f2 = v => v.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+function ric() {
+  const w = +$('w').value, r = +$('r').value / 100;
+  $('wv').textContent = w.toFixed(2); $('rv').textContent = Math.round(r*100) + '%';
+  const X = price('X', w, r), Y = price('Y', w, r);
+  const lx = labor('X'), ly = labor('Y');
+  const px = X.total/100, py = Y.total/100;
+  const lr = ly ? lx/ly : NaN, pr = py ? px/py : NaN;
+  $('ricout').innerHTML = `<table><thead><tr><th>每100单位</th><th>现在劳动成本</th><th>过去劳动成本</th><th>利润</th><th>总价格</th><th>单位价格</th><th>单位劳动</th></tr></thead><tbody>
+    <tr><td>X</td><td>£${f2(X.pres)}</td><td>£${f2(X.past)}</td><td>£${f2(X.profit)}</td><td>£${f2(X.total)}</td><td><b>£${f2(px)}</b></td><td>${f2(lx)} 小时</td></tr>
+    <tr><td>Y</td><td>£${f2(Y.pres)}</td><td>£${f2(Y.past)}</td><td>£${f2(Y.profit)}</td><td>£${f2(Y.total)}</td><td><b>£${f2(py)}</b></td><td>${f2(ly)} 小时</td></tr></tbody></table>
+    <div class="out"><b>劳动比率 X : Y</b> = ${isFinite(lr)?lr.toFixed(2):'–'} : 1 &nbsp;·&nbsp; <b>价格比率 X : Y</b> = ${isFinite(pr)?pr.toFixed(2):'–'} : 1 &nbsp;·&nbsp; ${isFinite(lr)&&isFinite(pr) ? (Math.abs(pr/lr-1) < 0.005 ? '价格与劳动成比例。' : `价格偏离劳动 ${Math.abs((pr/lr-1)*100).toFixed(1)}%。`) : ''}</div>`;
+  chart(w);
+}
+function chart(w) {
+  const s = $('ricchart'), W = 640, H = 230, L = 48, R = 14, T = 12, B = 32;
+  const pts = []; let mx = 0;
+  for (let i = 0; i <= 100; i++) { const r = i/100, a = price('X', w, r).total, b = price('Y', w, r).total; const v = b ? a/b : 0; pts.push([i, v]); mx = Math.max(mx, v); }
+  const lr = labor('Y') ? labor('X')/labor('Y') : 0; mx = Math.max(mx, lr) * 1.12 || 1;
+  const X = i => L + i/100*(W-L-R), Y = v => H-B - v/mx*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let i = 0; i <= 100; i += 25) g += `<text x="${X(i)}" y="${H-B+16}" text-anchor="middle">${i}%</text>`;
+  const step = mx > 4 ? 1 : 0.5;
+  for (let v = 0; v <= mx; v += step) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v.toFixed(1)}</text><line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">利润率</text>`;
+  g += `<line x1="${L}" y1="${Y(lr)}" x2="${W-R}" y2="${Y(lr)}" stroke="#8a929b" stroke-dasharray="5 4"/>`;
+  g += `<polyline fill="none" stroke="#0077b6" stroke-width="2.5" points="${pts.map(([i,v]) => X(i)+','+Y(v)).join(' ')}"/>`;
+  const rc = +$('r').value; const cur = pts[rc][1];
+  g += `<circle cx="${X(rc)}" cy="${Y(cur)}" r="5" fill="#023e8a"/>`;
+  s.innerHTML = g;
+}
+['w','r'].forEach(i => $(i).addEventListener('input', ric));
+inputs(); ric();
+</script>
+</body>
+</html>

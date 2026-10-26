@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>李嘉图与马尔萨斯：地租、过剩与《谷物法》 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：李嘉图与马尔萨斯，包括级差地租（互动模型）、利润率下降与静止状态、比较优势（互动模型）、人口原理、普遍过剩与萨伊定律，以及李嘉图论机器。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/ricardo-malthus.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/ricardo-malthus.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt input[type=number] { width: 80px; font: inherit; padding: 3px 6px; border: 1px solid var(--rule); border-radius: 6px; }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: right; }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt table.txt td, .vt table.txt th { text-align: left; vertical-align: top; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn:hover { background: var(--blue-soft); }
+.vt .key { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .key i { display: inline-block; width: 13px; height: 13px; border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+.vt .classes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0; }
+.vt .classes div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .classes b { display: block; color: var(--bar); }
+@media (max-width: 680px) { .vt .classes { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../ricardo-malthus.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 第4周</p>
+  <h1>李嘉图与马尔萨斯：地租、过剩与《谷物法》</h1>
+  <p class="lead">两位几乎在所有问题上都意见相左的朋友：地租如何形成，利润是否必然下降，贸易是否应当自由，以及市场经济是否会生产过多。</p>
+
+  <div class="toc"><b>本模块内容</b>
+    <ol><li><a href="#context">战争、粮食与阶级冲突</a></li><li><a href="#rent">李嘉图的地租理论（互动）</a></li><li><a href="#profit">利润率下降与静止状态</a></li><li><a href="#trade">比较优势（互动）</a></li><li><a href="#pop">马尔萨斯论人口</a></li><li><a href="#gluts">普遍过剩、有效需求与萨伊定律</a></li><li><a href="#machinery">李嘉图论机器</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 战争、粮食与阶级冲突</h2>
+  <p>在与革命法国和拿破仑法国的战争期间（1793—1815），英国的粮食进口受阻，粮价飞涨。农场主把更贫瘠的土地开垦出来，地主的地租随之上涨。和平恢复、粮价下跌之后，由土地所有者把持的议会通过了<b>1815年《谷物法》</b>，规定在国内小麦价格达到每夸特80先令之前禁止进口小麦。（英国用法中的“谷物”（corn）泛指各种粮食。）</p>
+  <p>《谷物法》使英国三大阶级的经济利益相互对立：</p>
+  <div class="classes">
+    <div><b>地主</b>获得地租。他们从高粮价中获益；按照李嘉图和马尔萨斯的说法，他们把大部分收入花在奢侈品、仆人和艺术上。</div>
+    <div><b>产业资本家</b>获得利润。高粮价迫使他们支付更高的货币工资，从而减少利润；他们储蓄和投资，以积累资本。</div>
+    <div><b>工人</b>获得接近维持生存水平的工资。他们把全部收入花在必需品上，首先是面包。</div>
+  </div>
+  <p>那是公开冲突的年代：卢德派捣毁机器（1811—1816）；曼彻斯特的彼得卢屠杀（1819），骑兵冲向要求议会改革的人群；以及反谷物法同盟的长期斗争，最终以1846年废除《谷物法》告终。大卫·李嘉图是一位由股票经纪人转为经济学家的议会议员，站在产业资本家一边。托马斯·罗伯特·马尔萨斯是一位牧师，也是英国第一位政治经济学教授，他为地主辩护。两人在出版物中、也在长期友好的通信中展开辩论，直到李嘉图1823年去世。</p>
+
+  <h2 id="rent">2. 李嘉图的地租理论</h2>
+  <p>李嘉图的<b>级差地租</b>理论（1815、1817）建立在三个假设之上：土地的肥力各不相同；竞争使资本主义农场主之间的利润率相等；使用中最贫瘠的土地，即<b>耕作边际</b>，不支付地租。在每一块更好的土地上，农场主之间对土地的竞争会把地租抬高，直到它吸收掉这块土地相对于边际土地多出的产量。因此，地租并不是对地主任何生产性努力的报酬；它产生于肥力的差异，以及土地归私人所有这一事实。</p>
+  <div class="box" id="rentbox">
+    <h3>扩展耕作边际</h3>
+    <p class="note">每块土地投入同样数量的资本，价值100蒲式耳谷物（李嘉图用谷物衡量一切），其中大部分以维持生存的工资形式预付给工人。随着使用更贫瘠的土地，产量（扣除种子后）逐块下降。</p>
+    <div class="grid2">
+      <div><label>耕种的土地块数：<b id="nv">3</b></label><input type="range" id="n" min="1" max="8" step="1" value="3"></div>
+      <div><label>最好土地的产量（蒲式耳）：<b id="topv">160</b></label><input type="range" id="top" min="130" max="200" step="5" value="160"></div>
+      <div><label>每块土地比上一块减少的产量：<b id="dv">10</b></label><input type="range" id="d" min="5" max="20" step="1" value="10"></div>
+      <div><label>每块土地维持生存的工资总额（蒲式耳）：<b id="wv">60</b></label><input type="range" id="w" min="40" max="90" step="5" value="60"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" id="grow">人口增长：再耕种一块土地</button><button class="btn" type="button" id="rreset">重置</button></div>
+    <svg id="rentchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="每块土地上的工资、利润与地租"></svg>
+    <div class="key"><span><i style="background:#cfd5dc"></i>工资（维持生存）</span><span><i style="background:#1f6f8b"></i>利润</span><span><i style="background:#c47a2c"></i>地租</span></div>
+    <div class="out" id="rentout"></div>
+  </div>
+  <div class="think"><b>试一试：</b>从一块土地开始，反复点击“人口增长”。观察总地租、每块土地上的利润以及利润率如何变化。积累在什么时候停止？</div>
+
+  <h2 id="profit">3. 利润率下降与静止状态</h2>
+  <p>上面的模型以缩影的形式包含了李嘉图的分配理论。资本积累提高了对劳动的需求；工资暂时上升到维持生存的水平之上；人口增长；需要更多的粮食；更贫瘠的土地被开垦。在新的边际上，同样的资本产出更少，因此竞争使之处处相等的利润率下降。所有较好土地上的地租都上涨。工资回到维持生存的水平，但以劳动和土地衡量的生存工资已经变得更加昂贵。</p>
+  <p>随着这一过程继续，利润率趋近于零，积累停止：这就是<b>静止状态</b>。唯一的受益者是地主。由此产生了李嘉图反对《谷物法》的理由：从国外进口更便宜的粮食，可以阻止国内向更贫瘠的土地推进，保持利润，使积累得以继续。用他的话说，地主的利益“总是与社会中所有其他阶级的利益相对立”（《论低价谷物对资本利润的影响》，1815）。</p>
+  <p>李嘉图的悲观预言在英国并没有成真，主要是因为农业生产率提高了，而且在《谷物法》废除后，廉价粮食从美洲和东欧大量涌入。但他关于地租是不劳而获的收入的论证，以及他从少数几个假设出发构建整个经济模型的方法，塑造了此后两个世纪的经济学。马克思（第7周）保留了利润率下降的思想，但把其原因从农业转到了机械化。</p>
+
+  <h2 id="trade">4. 比较优势</h2>
+  <p>在《政治经济学及赋税原理》（1817）第七章中，李嘉图证明，即使一个国家在所有产品上都更有效率，两个国家仍然都能从贸易中获益。重要的不是<b>绝对优势</b>，而是<b>比较优势</b>：每个国家都应当专门生产机会成本最低的产品。</p>
+  <div class="box" id="ca">
+    <h3>英格兰、葡萄牙、毛呢与葡萄酒</h3>
+    <p class="note">生产一单位产品所需的劳动小时数（李嘉图的数字）。修改这些数字来检验其中的逻辑。</p>
+    <table>
+      <thead><tr><th></th><th>毛呢</th><th>葡萄酒</th><th>1单位毛呢的机会成本</th></tr></thead>
+      <tbody>
+        <tr><td>英格兰</td><td><input type="number" id="ec" min="1" value="100"></td><td><input type="number" id="ew" min="1" value="120"></td><td id="eoc"></td></tr>
+        <tr><td>葡萄牙</td><td><input type="number" id="pc" min="1" value="90"></td><td><input type="number" id="pw" min="1" value="80"></td><td id="poc"></td></tr>
+      </tbody>
+    </table>
+    <div class="out" id="caout"></div>
+  </div>
+  <p>葡萄牙在两种产品上都更有效率，但两国通过专业化和贸易都得到了更多。这一理论成为自由贸易主张的基础。它的假设，包括充分就业、资本不流动和成本不变，此后一直存在争议。关于后来各个思想流派如何回应，请参阅我的<a href="/trade-theory-tree.html">贸易理论互动图谱</a>（英文）。</p>
+
+  <h2 id="pop">5. 马尔萨斯论人口</h2>
+  <p>马尔萨斯最初写作《人口原理》（1798），是为了反驳威廉·葛德文和孔多塞的激进乐观主义，他们相信社会可以变得远为平等和繁荣。马尔萨斯认为，人口倾向于按几何级数增长（1, 2, 4, 8 …），而食物供给充其量按算术级数增长（1, 2, 3, 4 …）。因此，穷人境况的任何改善都会被人口增长吞噬，只有“苦难和罪恶”，即饥荒、疾病和战争，才能抑制人口。在后来的版本中，他加入了“道德抑制”，即晚婚和禁欲，作为一种较温和的抑制。</p>
+  <p>由此得出的两个结论使马尔萨斯既有影响力又饱受争议。工资不可能长期高于维持生存的水平。济贫是适得其反的，因为它鼓励穷人生育更多的孩子；这一论点帮助塑造了1834年严苛的《新济贫法》（第5周）。</p>
+  <p>“马尔萨斯陷阱”相当准确地描述了人类历史的大部分时期：在十九世纪以前，产出的增长大多被更多的人口吸收了。从那以后，由于化肥、新的作物品种和机械化，世界粮食生产的增长快于人口，而随着收入提高，出生率也下降了。但马尔萨斯的问题以新的形式回来了：化石能源、土壤、水和气候的极限（第14周）。马克思和恩格斯抨击人口原理，认为失业和贫困来自资本对劳动的需求，而不是来自某种自然规律。</p>
+
+  <h2 id="gluts">6. 普遍过剩、有效需求与萨伊定律</h2>
+  <p>马尔萨斯提出的问题是：资本主义经济能否生产出多于它能够卖出的东西，即出现<b>普遍过剩</b>？商品只有在存在足够的<b>有效需求</b>，即有意愿也有能力付款的人的支出时，才能按自然价格出售。工人把全部工资花在生活必需品上；地主把地租花在舒适品和服务上；资本家受积累欲望的驱使，力图把利润用于投资。但随着积累的推进，特别是在使用节约劳动的机器时，资本家获得的利润多于他们能够有利地投资的数额，需求不足，卖不出去的商品堆积起来。马尔萨斯的结论是，地主的非生产性支出是有用的，因为它维持了需求。</p>
+  <p>李嘉图追随让-巴蒂斯特·萨伊，否认普遍过剩的可能。人们生产是为了购买：每一次出售都把货币交到某个人手中，而他会把钱花在别的东西上。某一种<em>特定</em>商品可能过多，但不可能一切商品都过多。这就是后来所说的<b>萨伊定律</b>，常被概括为“供给创造自己的需求”。李嘉图的观点在一个多世纪里占据上风。凯恩斯在1936年对此深表遗憾，并称赞马尔萨斯是有效需求理论的早期提出者（第11周）。</p>
+  <table class="txt">
+    <thead><tr><th></th><th>李嘉图</th><th>马尔萨斯</th></tr></thead>
+    <tbody>
+      <tr><td>地租</td><td>一种以牺牲利润为代价增长的不劳而获的收入。</td><td>土地肥力的标志，也是有用的需求来源。</td></tr>
+      <tr><td>《谷物法》</td><td>废除它：廉价的进口粮食能保持利润。</td><td>保留它：保护农业、地主和粮食安全。</td></tr>
+      <tr><td>普遍过剩</td><td>不可能（萨伊定律）。</td><td>当资本家的储蓄多于其能够投资的数额时就可能发生。</td></tr>
+      <tr><td>谁的支出重要</td><td>资本家的储蓄和投资推动增长。</td><td>地主的消费维持需求。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="machinery">7. 李嘉图论机器</h2>
+  <p>在《原理》第三版（1821）中，李嘉图新增了一章“论机器”，在其中改变了自己的看法。他原来认为采用机器对所有阶级都有利。现在他认为，用机器代替工人可能减少可用于支付工资的总产品，因此，“劳动阶级所抱有的、认为使用机器常常有损于他们利益的看法，并不是建立在偏见和错误之上的”。这是一位经济学奠基人难得的自我修正，而这个问题随着每一项新技术，从动力织布机到人工智能，都会重新出现。</p>
+  <div class="think"><b>讨论：</b>李嘉图认为，对进口粮食征税使一个阶级受益，而其他所有阶级受损。你能想到今天有哪项政策是以类似的方式被争论的吗？今天的“地主”是谁？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亨特，第4章（马尔萨斯：他那个时代的阶级冲突、人口理论、过剩理论）。</p>
+  <p class="rd">亨特，第5章（李嘉图：地租与利润、比较优势、机器）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">海尔布罗纳，《俗世哲人》，第4章。</p>
+  <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第2章（李嘉图：贸易逆差重要吗？）。</p>
+
+  <p><a href="index.html#week-4">← 返回课程大纲第4周</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const K = 100; // capital advanced per plot, in bushels' worth
+function rent() {
+  const n = +$('n').value, top = +$('top').value, d = +$('d').value, w = +$('w').value;
+  $('nv').textContent = n; $('topv').textContent = top; $('dv').textContent = d; $('wv').textContent = w;
+  const out = Array.from({length: 8}, (_, i) => top - i*d);
+  const qm = out[n-1], profit = qm - w, r = profit / K;
+  const W = 640, H = 250, L = 46, R = 14, T = 14, B = 30, mx = top * 1.08, bw = (W-L-R)/8;
+  const Y = v => H-B - v/mx*(H-B-T), Hh = v => v/mx*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= mx; v += 40) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  out.forEach((q, i) => {
+    const x = L + i*bw + 6, wd = bw - 12, used = i < n;
+    if (!used) { g += `<rect x="${x}" y="${Y(q)}" width="${wd}" height="${Hh(q)}" fill="none" stroke="#ccd2d8" stroke-dasharray="4 3" rx="3"/>`; }
+    else {
+      const wages = Math.min(w, q), pr = Math.max(0, Math.min(profit, q - wages)), rt = Math.max(0, q - wages - pr);
+      g += `<rect x="${x}" y="${Y(wages)}" width="${wd}" height="${Hh(wages)}" fill="#cfd5dc" rx="2"/>`;
+      g += `<rect x="${x}" y="${Y(wages+pr)}" width="${wd}" height="${Hh(pr)}" fill="#1f6f8b"/>`;
+      if (rt > 0) g += `<rect x="${x}" y="${Y(q)}" width="${wd}" height="${Hh(rt)}" fill="#c47a2c"/>`;
+    }
+    g += `<text x="${x+wd/2}" y="${H-B+15}" text-anchor="middle">第${i+1}块${i===n-1?'（边际）':''}</text>`;
+  });
+  $('rentchart').innerHTML = g;
+  const totRent = out.slice(0, n).reduce((s, q) => s + (q - qm), 0), totProfit = n * Math.max(0, profit), totOut = out.slice(0, n).reduce((a, b) => a + b, 0);
+  let msg;
+  if (profit <= 0) msg = `在边际土地上，产量（${qm}）已经不足以支付维持生存的工资总额外加任何利润。<b>积累停止：静止状态。</b>较好土地上的全部剩余都成为地租。`;
+  else msg = `每块土地上的利润 = 边际土地的产量 − 工资 = ${qm} − ${w} = <b>${profit}</b> 蒲式耳，相对于 ${K} 的资本，利润率为 <b>${(r*100).toFixed(0)}%</b>。总地租：<b>${totRent}</b>（占产量的 ${(totRent/totOut*100).toFixed(0)}%）；总利润：<b>${totProfit}</b>。`;
+  $('rentout').innerHTML = msg;
+}
+['n','top','d','w'].forEach(i => $(i).addEventListener('input', rent));
+$('grow').addEventListener('click', () => { $('n').value = Math.min(8, +$('n').value + 1); rent(); });
+$('rreset').addEventListener('click', () => { $('n').value = 1; $('top').value = 160; $('d').value = 10; $('w').value = 60; rent(); });
+rent();
+
+function ca() {
+  const ec = Math.max(1, +$('ec').value), ew = Math.max(1, +$('ew').value), pc = Math.max(1, +$('pc').value), pw = Math.max(1, +$('pw').value);
+  const eo = ec/ew, po = pc/pw; // wine given up per unit of cloth
+  $('eoc').textContent = eo.toFixed(2) + ' 葡萄酒'; $('poc').textContent = po.toFixed(2) + ' 葡萄酒';
+  if (Math.abs(eo - po) < 1e-9) { $('caout').innerHTML = '两国的机会成本相同，因此哪个国家都没有比较优势，专业化也不会带来收益。'; return; }
+  const eCloth = eo < po, eT = ec + ew, pT = pc + pw;
+  // each country spends the labor it used for one unit of each good on its comparative-advantage good
+  const eOut = eCloth ? eT/ec : eT/ew, pOut = eCloth ? pT/pw : pT/pc;
+  const cl = '毛呢', wi = '葡萄酒';
+  const tot = `英格兰生产${eCloth ? cl : wi}，葡萄牙生产${eCloth ? wi : cl}`;
+  const absP = pc < ec && pw < ew, absE = ec < pc && ew < pw;
+  $('caout').innerHTML = `${absP ? '葡萄牙在<b>两种</b>产品上都有绝对优势。' : absE ? '英格兰在<b>两种</b>产品上都有绝对优势。' : ''}英格兰在<b>${eCloth ? cl : wi}</b>上有比较优势（${eCloth ? '每生产一单位毛呢放弃的葡萄酒更少' : '每生产一单位葡萄酒放弃的毛呢更少'}），葡萄牙在<b>${eCloth ? wi : cl}</b>上有比较优势。<br>
+    没有贸易时，每个国家用自己的劳动（${eT}小时和${pT}小时）各生产一单位的两种产品：世界产量是2单位毛呢和2单位葡萄酒。如果实行专业化（${tot}），同样的劳动时间可以生产 <b>${eOut.toFixed(3)} 单位${eCloth ? cl : wi}</b> 和 <b>${pOut.toFixed(3)} 单位${eCloth ? wi : cl}</b>，两种产品都多于2单位。只要交换比例处于两国机会成本之间（这里是每单位毛呢换 ${Math.min(eo,po).toFixed(2)} 到 ${Math.max(eo,po).toFixed(2)} 单位葡萄酒），两国的境况都会变好。`;
+}
+['ec','ew','pc','pw'].forEach(i => $(i).addEventListener('input', ca)); ca();
+</script>
+</body>
+</html>
