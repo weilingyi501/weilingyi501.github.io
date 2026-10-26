@@ -147,3 +147,9 @@ footer { text-align: center; padding: 28px 24px 44px; font-size: 14px; color: va
 .langbtn:hover { background: var(--link); color: #fff; text-decoration: none; }
 html[lang="zh-CN"] body { font-family: 'Source Sans 3', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
 html[lang="zh-CN"] em { font-style: normal; }
+
+/* Back-to-top button */
+.totop { position: fixed; right: 20px; bottom: 24px; z-index: 60; width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--bar); color: #fff; font-size: 20px; line-height: 44px; text-align: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.2); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.totop.show { opacity: .9; pointer-events: auto; }
+.totop:hover { opacity: 1; }
+@media (max-width: 560px) { .totop { right: 14px; bottom: 16px; width: 40px; height: 40px; line-height: 40px; } }

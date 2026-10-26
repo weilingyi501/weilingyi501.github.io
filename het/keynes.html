@@ -173,5 +173,14 @@ $('stim').addEventListener('click', () => { snap('government spends more'); $('g
 $('reset').addEventListener('click', () => { prev = null; for (const k2 in BASE) $(k2).value = BASE[k2]; k(); });
 k();
 </script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
 </body>
 </html>

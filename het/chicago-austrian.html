@@ -186,5 +186,14 @@ function pc() {
 document.querySelectorAll('#pc .btn').forEach(bt => bt.addEventListener('click', () => { mode = bt.dataset.x; document.querySelectorAll('#pc .btn').forEach(o => o.classList.toggle('on', o === bt)); pc(); }));
 pc();
 </script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
 </body>
 </html>

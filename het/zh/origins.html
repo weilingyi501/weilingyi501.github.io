@@ -178,5 +178,14 @@ function gr() {
 document.querySelectorAll('#gbox .btn').forEach(b => b.addEventListener('click', () => { $('g').value = Math.min(5, +b.dataset.g); if (+b.dataset.g > 5) { $('g').max = 10; $('g').value = b.dataset.g; } gr(); }));
 gr();
 </script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
 </body>
 </html>
