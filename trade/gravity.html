@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Firms, Gravity, and Quantitative Trade Models | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the mainstream of trade economics today: the gravity equation with an interactive calculator, heterogeneous firms, Ricardian and quantitative trade models, measuring the gains from trade with an interactive calculator, the China shock, and the tariff war of 2018–19.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/gravity.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 8</p>
+  <h1>Firms, Gravity, and Quantitative Trade Models</h1>
+  <p class="lead">Since 2000, mainstream trade economics has become a quantitative science. New data on individual firms, a revived gravity equation, and general-equilibrium models that can be fitted to data have let economists measure the gains from trade, simulate trade policies, and track who loses. The same tools brought distribution back to the center of the debate.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#gravity">The gravity equation (interactive)</a></li><li><a href="#firms">Heterogeneous firms</a></li><li><a href="#ek">Ricardo returns: Eaton and Kortum</a></li><li><a href="#gains">How large are the gains from trade? (interactive)</a></li><li><a href="#china">The China shock</a></li><li><a href="#gvc">Value chains and the tariff war</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="gravity">1. The gravity equation</h2>
+  <p>In 1962 the Dutch economist Jan Tinbergen proposed a simple equation for trade between two countries, borrowed from Newton’s law of gravitation. Trade between two countries is proportional to the product of their economic sizes and inversely related to the distance between them:</p>
+  <p class="eq">Trade<sub>ij</sub> = G × GDP<sub>i</sub> × GDP<sub>j</sub> / Distance<sub>ij</sub><sup>θ</sup></p>
+  <p>The equation fits the data remarkably well. Estimates of the distance elasticity θ cluster around 1: a doubling of distance roughly halves trade. Shared borders, a common language, colonial ties, and trade agreements all raise trade; national borders sharply reduce it. John McCallum (1995) found that, after allowing for size and distance, Canadian provinces traded with each other many times more than with U.S. states, even though the border between the two countries is among the most open in the world.</p>
+  <p>For decades, gravity was considered an empirical regularity without a theory. James Anderson (1979) and later Anderson and Eric van Wincoop (2003) showed that it follows from many trade models, provided one accounts for <b>multilateral resistance</b>: trade between two countries depends on their trade costs with each other relative to their trade costs with everyone else. Gravity is now the workhorse for estimating the effects of tariffs, trade agreements, and currency unions.</p>
+
+  <div class="box" id="gbox">
+    <h3>A gravity calculator</h3>
+    <p class="note">Compare predicted trade between two country pairs. Trade is scaled so that two economies of size 1 at a distance of 1,000 km trade 100 units.</p>
+    <div class="grid2">
+      <div><label>Size of country A (relative units): <b id="yav">2.0</b></label><input type="range" id="ya" min="0.2" max="10" step="0.1" value="2"></div>
+      <div><label>Size of country B (relative units): <b id="ybv">1.0</b></label><input type="range" id="yb" min="0.2" max="10" step="0.1" value="1"></div>
+      <div><label>Distance between them: <b id="dv">2,000 km</b></label><input type="range" id="d" min="200" max="15000" step="100" value="2000"></div>
+      <div><label>Distance elasticity θ: <b id="thv">1.0</b></label><input type="range" id="th" min="0.5" max="1.6" step="0.1" value="1"></div>
+    </div>
+    <div class="out" id="gout"></div>
+  </div>
+
+  <h2 id="firms">2. Heterogeneous firms</h2>
+  <p>In the 1990s, Andrew Bernard and J. Bradford Jensen used U.S. census data on individual plants to look at who actually exports. The answer upset the assumption, common to all earlier theories, that firms within an industry are alike. Only a minority of manufacturing firms export, and exporters are larger, more productive, more capital- and skill-intensive, and pay higher wages than non-exporters in the same industry. A handful of very large firms account for most of a country’s exports.</p>
+  <p>Marc Melitz (2003) built these facts into a model. Firms differ in productivity, and exporting has fixed costs, such as setting up distribution networks abroad. Only the most productive firms can cover those costs and export. When trade opens, exporters expand, the least productive firms are driven out by tougher competition, and resources shift toward more productive firms. Average productivity in the industry rises. This <b>selection effect</b> is a new source of gains from trade, alongside comparative advantage and variety, and it implies that trade creates winners and losers among firms as well as among factors of production.</p>
+
+  <h2 id="ek">3. Ricardo returns: Eaton and Kortum</h2>
+  <p>Jonathan Eaton and Samuel Kortum (2002) revived Ricardo’s idea of technology differences (Topic 3) in a model with many countries, a continuum of goods, and realistic trade costs. Each country draws its productivity in each good from a probability distribution; a country buys each good from whichever supplier can deliver it most cheaply. The model produces a gravity equation and can be fitted to data on trade flows, prices, and wages. It made it possible to ask counterfactual questions with numbers: how much would each country gain or lose if a particular trade cost fell, or if a trade agreement were signed or abandoned? Models of this kind are called <b>quantitative trade models</b>.</p>
+
+  <h2 id="gains">4. How large are the gains from trade?</h2>
+  <p>Costas Arkolakis, Arnaud Costinot, and Andrés Rodríguez-Clare (2012) showed that in a wide class of these models, including Krugman’s, Eaton and Kortum’s, and Melitz’s under common assumptions, the gains from trade can be calculated from just two numbers. One is the share of a country’s spending that goes to its own producers, λ. The other is the trade elasticity, ε, which measures how strongly trade responds to trade costs. The gains from trade relative to complete autarky are</p>
+  <p class="eq">Gains = λ<sup>−1/ε</sup> − 1</p>
+  <p>The formula implies that the gains from trade are modest for large economies that buy mostly from themselves, and much larger for small open economies. Critics note that the formula leaves out several channels that could make the gains larger (such as trade in intermediate inputs or the spread of technology) and others that would make the real costs larger (such as unemployment, regional decline, and the costs of adjustment).</p>
+
+  <div class="box" id="acrbox">
+    <h3>The gains from trade in two numbers</h3>
+    <div class="grid2">
+      <div><label>Share of spending on domestic goods, λ: <b id="lv">0.85</b></label><input type="range" id="l" min="0.3" max="0.99" step="0.01" value="0.85"></div>
+      <div><label>Trade elasticity, ε: <b id="ev">5</b></label><input type="range" id="e" min="2" max="12" step="0.5" value="5"></div>
+    </div>
+    <p><button type="button" class="btn" data-l="0.9">Large economy (λ = 0.90)</button><button type="button" class="btn" data-l="0.75">Medium economy (λ = 0.75)</button><button type="button" class="btn" data-l="0.5">Small open economy (λ = 0.50)</button></p>
+    <div class="out" id="acrout"></div>
+  </div>
+
+  <h2 id="china">5. The China shock</h2>
+  <p>China’s entry into the WTO in 2001 produced one of the largest and fastest changes in trade in history. David Autor, David Dorn, and Gordon Hanson (2013, 2016) compared U.S. local labor markets that, because of their industrial structure, were more or less exposed to Chinese import competition. The most exposed regions suffered large and lasting losses of manufacturing jobs, lower wages, more people outside the labor force, and greater reliance on disability and other transfers. Workers did not move away or find new jobs as quickly as standard models assumed. Later work linked the shock to political polarization.</p>
+  <p>The China shock did not overturn the finding that trade raises national income. It showed that the costs are concentrated in particular places and people, that adjustment can take a decade or more, and that the assumption of smooth, costless reallocation built into most trade models was unrealistic. The finding gave new life to the distributional concerns of Stolper–Samuelson (Topic 6) and to Polanyian and Rodrikian arguments about the social limits of globalization (Topics 14 and 16).</p>
+
+  <h2 id="gvc">6. Value chains and the tariff war</h2>
+  <p>Since the 1990s, production has been split across countries, with parts and components crossing borders many times. Measured in gross terms, a smartphone assembled in China counts as a Chinese export, though most of its value was created elsewhere. The OECD–WTO <b>Trade in Value Added</b> database (2013) measures where value is actually created. The theory of global value chains is taken up in Topic 20.</p>
+  <p>In 2018–19 the United States raised tariffs on steel, aluminum, washing machines, solar panels, and most imports from China, and China and other partners retaliated. The new quantitative tools were applied at once. Studies by Mary Amiti, Stephen Redding, and David Weinstein (2019) and by Pablo Fajgelbaum and coauthors (2020) found that the tariffs were passed almost entirely into higher prices for American buyers, rather than being paid by foreign exporters. A large economy might in theory have improved its terms of trade (Topic 4); in practice, the burden fell at home.</p>
+  <div class="think"><b>Question to think about:</b> Mainstream models now measure both the gains from trade and its concentrated costs. Does that change the policy conclusion?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Marc Melitz, “The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity,” <em>Econometrica</em> (2003), introduction.</p>
+  <p class="rd">David Autor, David Dorn, and Gordon Hanson, “The China Shock: Learning from Labor-Market Adjustment to Large Changes in Trade,” <em>Annual Review of Economics</em> (2016).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Douglas A. Irwin, <em>Free Trade under Fire</em>, 5th ed. (2020).</p>
+  <p class="rd">Keith Head and Thierry Mayer, “Gravity Equations: Workhorse, Toolkit, and Cookbook,” <em>Handbook of International Economics</em>, vol. 4 (2014).</p>
+  <p><a href="index.html#topic-8">← Back to Topic 8 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function grav() {
+  const ya = +$('ya').value, yb = +$('yb').value, d = +$('d').value, th = +$('th').value;
+  $('yav').textContent = ya.toFixed(1); $('ybv').textContent = yb.toFixed(1); $('dv').textContent = d.toLocaleString('en-US') + ' km'; $('thv').textContent = th.toFixed(1);
+  const t = 100*ya*yb/Math.pow(d/1000, th), t2 = 100*ya*yb/Math.pow(2*d/1000, th);
+  $('gout').innerHTML = `Predicted trade: <b>${t >= 100 ? Math.round(t).toLocaleString('en-US') : t.toFixed(1)}</b> units. ` +
+    `Doubling the distance would cut it to ${t2 >= 100 ? Math.round(t2).toLocaleString('en-US') : t2.toFixed(1)} (a ${((1 - Math.pow(0.5, th))*100).toFixed(0)}% fall); doubling either country’s size would double it. ` +
+    `For comparison, two economies of size 5, 8,000 km apart, would trade ${(100*25/Math.pow(8, th)).toFixed(0)} units: the product of their sizes is 25 times that of two size-1 economies, but distance offsets much of the difference.`;
+}
+['ya','yb','d','th'].forEach(i => $(i).addEventListener('input', grav)); grav();
+function acr() {
+  const l = +$('l').value, e = +$('e').value;
+  $('lv').textContent = l.toFixed(2); $('ev').textContent = e % 1 ? e.toFixed(1) : e;
+  const g = Math.pow(l, -1/e) - 1, g2 = Math.pow(l, -1/2.5) - 1;
+  document.querySelectorAll('#acrbox .btn').forEach(b => b.classList.toggle('on', Math.abs(+b.dataset.l - l) < 0.005));
+  $('acrout').innerHTML = `A country that spends ${(l*100).toFixed(0)}% of its income on its own goods would lose <b>${(g*100).toFixed(1)}%</b> of its real income if it were cut off from trade entirely, with a trade elasticity of ${e}. ` +
+    `With a lower elasticity of 2.5, meaning foreign goods are harder to replace, the loss would be ${(g2*100).toFixed(1)}%. The more open the economy and the harder imports are to replace, the larger the gains from trade.`;
+}
+['l','e'].forEach(i => $(i).addEventListener('input', acr));
+document.querySelectorAll('#acrbox .btn').forEach(b => b.addEventListener('click', () => { $('l').value = b.dataset.l; acr(); }));
+acr();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

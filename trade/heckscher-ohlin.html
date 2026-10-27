@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Heckscher–Ohlin and the Distribution of Gains | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the Heckscher–Ohlin theory of trade: factor endowments, the Stolper–Samuelson theorem with an interactive model, factor-price equalization and the Rybczynski theorem, the Leontief paradox, and the debate over trade and wages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/heckscher-ohlin.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 6</p>
+  <h1>Heckscher–Ohlin and the Distribution of Gains</h1>
+  <p class="lead">Ricardo took differences in technology between countries as given. Two Swedish economists asked a different question: if all countries had access to the same technology, why would they still trade? Their answer, differences in factor endowments, became the core of trade theory for half a century and showed that trade creates losers as well as winners within each country.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#swedes">The Swedish contribution</a></li><li><a href="#ho">The Heckscher–Ohlin theorem</a></li><li><a href="#ss">Stolper–Samuelson: trade and income distribution (interactive)</a></li><li><a href="#fpe">Factor-price equalization and Rybczynski</a></li><li><a href="#leontief">The Leontief paradox</a></li><li><a href="#wages">Trade and wages in rich countries</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="swedes">1. The Swedish contribution</h2>
+  <p>Eli Heckscher, an economic historian best known for his study of mercantilism (Topic 1), published an article in Swedish in 1919 on “The Effect of Foreign Trade on the Distribution of Income.” His student Bertil Ohlin developed the idea in a dissertation and then in <em>Interregional and International Trade</em> (1933). Ohlin treated international trade as a special case of trade between regions, each with different supplies of land, labor, and capital. He shared the Nobel Prize in 1977, largely for this work.</p>
+  <p>Ohlin wrote in an era of falling trade. The First World War, the collapse of the gold standard, and the tariff wars of the early 1930s had broken up the world economy of the nineteenth century. His theory explained why trade had developed in the first place and what was lost when it collapsed.</p>
+
+  <h2 id="ho">2. The Heckscher–Ohlin theorem</h2>
+  <p>The theory rests on two concepts. <b>Factor abundance</b>: a country is labor-abundant if it has more labor relative to capital than its trading partner, so labor is relatively cheap there before trade. <b>Factor intensity</b>: a good is labor-intensive if its production uses more labor relative to capital than another good, at any given wages and rents.</p>
+  <p>With the same technology everywhere, the only reason costs differ is that factor prices differ. A labor-abundant country has cheap labor and so can produce labor-intensive goods cheaply. The <b>Heckscher–Ohlin theorem</b> follows: <em>a country exports the goods that use its abundant factor intensively, and imports the goods that use its scarce factor intensively.</em> In effect, a country exports its abundant factor embodied in goods. China exports labor-intensive clothing and toys; the United States exports capital- and skill-intensive aircraft and software; Australia and Argentina export land-intensive grain and beef.</p>
+
+  <h2 id="ss">3. Stolper–Samuelson: trade and income distribution</h2>
+  <p>Heckscher’s original concern was distribution. If a country exports goods that use its abundant factor, trade raises the demand for that factor and lowers the demand for its scarce factor. Wolfgang Stolper and Paul Samuelson made this precise in “Protection and Real Wages” (1941). The <b>Stolper–Samuelson theorem</b> states that a rise in the relative price of a good raises the real return to the factor used intensively in producing it and lowers the real return to the other factor, in terms of <em>both</em> goods.</p>
+  <p>The striking word is “both.” The change is magnified: the winning factor’s income rises by more than the price of either good, and the losing factor’s income falls by more than either price, so the losing factor is worse off whatever it buys. Applied to trade: free trade lowers the price of imported goods, so it hurts the scarce factor and helps the abundant factor. In a capital-abundant rich country, the scarce factor is labor, or more precisely less-skilled labor. Trade benefits the country as a whole, so the winners could in principle compensate the losers, but nothing guarantees that they will.</p>
+
+  <div class="box" id="ssbox">
+    <h3>The Stolper–Samuelson theorem</h3>
+    <p class="note">A rich country makes two goods with labor and capital: textiles, which are labor-intensive, and machinery, which is capital-intensive. Both markets are competitive, so each good’s price equals its cost of production. Opening to trade with a labor-abundant country lowers the price of textiles relative to machinery. Choose how much it falls, and how labor-intensive textiles are.</p>
+    <div class="grid2">
+      <div><label>Change in the price of textiles relative to machinery: <b id="dpv">−20%</b></label><input type="range" id="dp" min="-40" max="40" step="1" value="-20"></div>
+      <div><label>Labor’s share of the cost of textiles: <b id="atv">70%</b> (machinery: <b id="amv">30%</b>)</label><input type="range" id="at" min="55" max="90" step="1" value="70"></div>
+    </div>
+    <svg id="sschart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Percentage changes in prices, wages, and returns to capital"></svg>
+    <div class="out" id="ssout"></div>
+  </div>
+
+  <h2 id="fpe">4. Factor-price equalization and Rybczynski</h2>
+  <p>Samuelson carried the theory further in two articles (1948 and 1949). If trade equalizes the prices of goods, and both countries use the same technology and produce both goods, then trade also equalizes the prices of factors. This is the <b>factor-price equalization theorem</b>: free trade in goods is a substitute for the free movement of labor and capital, and wages for the same kind of labor would be the same everywhere. Ohlin had argued that trade would only partly equalize factor prices; Samuelson showed that under the model’s strict assumptions the equalization is complete. In practice, wages differ enormously across countries, which tells us how far the real world is from those assumptions: technologies differ, many goods are not traded, and countries do not all produce the same goods.</p>
+  <p>Tadeusz Rybczynski (1955) added the companion result. At constant goods prices, an increase in one factor raises output of the good that uses it intensively and <em>reduces</em> output of the other good. Growth in a country’s capital stock thus shifts its economy toward capital-intensive goods. Together, the four theorems (Heckscher–Ohlin, Stolper–Samuelson, factor-price equalization, and Rybczynski) form the “Heckscher–Ohlin–Samuelson” model that dominated trade theory from the 1950s to the 1970s.</p>
+
+  <h2 id="leontief">5. The Leontief paradox</h2>
+  <p>The first serious test came from Wassily Leontief, who had built an input–output table of the U.S. economy. In 1953 he calculated how much labor and capital were needed to produce a million dollars’ worth of U.S. exports and of goods that competed with U.S. imports. The United States was surely the most capital-abundant country in the world, so it should have exported capital-intensive goods. Leontief found the reverse: U.S. import-competing goods used more capital per worker than U.S. exports. This became the <b>Leontief paradox</b>.</p>
+  <p>Many explanations followed:</p>
+  <ul>
+    <li><b>Human capital.</b> U.S. workers were more skilled than foreign workers. Counting skills as a form of capital, U.S. exports were intensive in skilled labor, consistent with the theory (Kenen, Keesing).</li>
+    <li><b>Productivity.</b> Leontief himself suggested that an American worker was about three times as productive as a foreign one, so in effective units the United States was labor-abundant.</li>
+    <li><b>Natural resources.</b> Many U.S. imports, such as minerals, are intensive in natural resources, which also require much capital to extract.</li>
+    <li><b>Trade barriers and demand.</b> U.S. tariffs protected labor-intensive industries, and American consumers had a strong taste for capital-intensive goods.</li>
+  </ul>
+  <p>Later tests with many countries and factors found that the theory predicts much less trade than actually occurs, a problem Daniel Trefler (1995) called “the case of the missing trade.” Allowing for differences in technology between countries brings the predictions much closer to the data. The lesson is that endowments matter, but Ricardo’s technology differences cannot be ignored.</p>
+
+  <h2 id="wages">6. Trade and wages in rich countries</h2>
+  <p>Stolper–Samuelson returned to the center of debate in the 1990s, as wages of less-skilled workers in the United States stagnated and inequality rose while imports from developing countries grew. Adrian Wood (1994) argued that trade with the South explained much of the fall in demand for unskilled labor in the North. Most economists, including Paul Krugman and Robert Lawrence, concluded that trade explained only a small part and that skill-biased technological change explained more. The evidence that the prices of unskilled-labor-intensive goods had fallen, which the Stolper–Samuelson mechanism requires, was weak. The debate was reopened by research on the “China shock” after 2001 (Topic 8), which found large, concentrated, and lasting losses in the local labor markets most exposed to Chinese imports.</p>
+  <div class="think"><b>Question to think about:</b> Stolper–Samuelson says free trade hurts the scarce factor. In a rich country, that is unskilled labor. What does that imply for the politics of trade?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Bertil Ohlin, <em>Interregional and International Trade</em> (1933), chapters 1–2.</p>
+  <p class="rd">Wolfgang Stolper and Paul Samuelson, “Protection and Real Wages,” <em>Review of Economic Studies</em> (1941).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Wassily Leontief, “Domestic Production and Foreign Trade: The American Capital Position Re-examined,” <em>Proceedings of the American Philosophical Society</em> (1953).</p>
+  <p class="rd">Adrian Wood, “How Trade Hurt Unskilled Workers,” <em>Journal of Economic Perspectives</em> (1995).</p>
+  <p><a href="index.html#topic-6">← Back to Topic 6 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Zero-profit conditions with Cobb–Douglas costs: p_T = w^aT r^(1-aT), p_M = w^aM r^(1-aM); p_M fixed at 1.
+function ss() {
+  const dp = +$('dp').value/100, aT = +$('at').value/100, aM = 1 - aT;
+  $('dpv').textContent = (dp > 0 ? '+' : dp < 0 ? '−' : '') + Math.abs(Math.round(dp*100)) + '%';
+  $('atv').textContent = Math.round(aT*100) + '%'; $('amv').textContent = Math.round(aM*100) + '%';
+  const lp = Math.log(1 + dp);
+  // aT lnw + (1-aT) lnr = lp ; aM lnw + (1-aM) lnr = 0
+  const det = aT*(1-aM) - (1-aT)*aM;
+  const lw = (lp*(1-aM)) / det, lr = (-aM*lp) / det;
+  const w = Math.exp(lw) - 1, r = Math.exp(lr) - 1, pT = dp, pM = 0;
+  const wT = Math.exp(lw - lp) - 1, wM = Math.exp(lw) - 1, rT = Math.exp(lr - lp) - 1, rM = Math.exp(lr) - 1;
+  const items = [['Price of textiles', pT, '#9aa3ad'], ['Price of machinery', pM, '#9aa3ad'], ['Wage', w, '#c47a2c'], ['Return to capital', r, '#023e8a']];
+  const W = 640, H = 230, L = 150, R = 60, mid = L + (W-L-R)/2, M = Math.max(0.1, ...items.map(i => Math.abs(i[1]))) * 1.1;
+  const X = v => mid + v/M*(W-L-R)/2;
+  let g = `<line x1="${mid}" x2="${mid}" y1="8" y2="${H-20}" stroke="#ccd2d8"/>`;
+  items.forEach(([n, v, c], i) => {
+    const y = 18 + i*50;
+    g += `<text x="${L-10}" y="${y+18}" text-anchor="end">${n}</text>`;
+    g += `<rect x="${Math.min(X(0), X(v))}" y="${y}" width="${Math.max(1, Math.abs(X(v)-X(0)))}" height="26" rx="4" fill="${c}"/>`;
+    const lab = (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v*100).toFixed(1) + '%';
+    g += `<text x="${v >= 0 ? X(v)+6 : X(v)-6}" y="${y+18}" text-anchor="${v >= 0 ? 'start' : 'end'}" style="fill:#1f2933;font-weight:600">${lab}</text>`;
+  });
+  $('sschart').innerHTML = g;
+  const pc = v => (v > 0 ? 'rise' : 'fall') + 's ' + Math.abs(v*100).toFixed(1) + '%';
+  let msg;
+  if (Math.abs(dp) < 0.005) msg = 'With no change in relative prices, nothing happens to wages or returns to capital.';
+  else msg = `When the price of textiles ${dp < 0 ? 'falls' : 'rises'} ${Math.abs(dp*100).toFixed(0)}%, the wage ${pc(w)} and the return to capital ${pc(r)}. ` +
+    `The changes are <b>magnified</b>: the wage changes by more than either price. In terms of textiles, the real wage ${pc(wT)}; in terms of machinery, it ${pc(wM)}. ` +
+    (w < 0 ? `<b>Workers are worse off whatever they buy</b>, while the real return to capital rises ${(rT*100).toFixed(1)}% in terms of textiles and ${(rM*100).toFixed(1)}% in terms of machinery.` : `<b>Workers are better off whatever they buy</b>, while the real return to capital falls ${(-rT*100).toFixed(1)}% in terms of textiles and ${(-rM*100).toFixed(1)}% in terms of machinery.`) +
+    ` The closer the two industries’ factor intensities, the larger the magnification.`;
+  $('ssout').innerHTML = msg;
+}
+['dp','at'].forEach(i => $(i).addEventListener('input', ss)); ss();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

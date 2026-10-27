@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>New Trade Theory and Economic Geography | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on new trade theory: intra-industry trade, increasing returns and monopolistic competition, the gains from variety with an interactive model, the home-market effect, strategic trade policy, and the new economic geography.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/new-trade-theory.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 7</p>
+  <h1>New Trade Theory and Economic Geography</h1>
+  <p class="lead">By the 1970s, most world trade no longer looked like Ricardo’s cloth for wine. Rich countries with similar technologies and endowments were exchanging similar goods: German cars for French cars, American software for Japanese software. New trade theory explained this trade with increasing returns to scale and imperfect competition, and in doing so reopened old questions about whether governments should help their industries win.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#puzzle">The puzzle of intra-industry trade</a></li><li><a href="#krugman">Increasing returns and monopolistic competition</a></li><li><a href="#variety">The gains from variety (interactive)</a></li><li><a href="#hme">The home-market effect</a></li><li><a href="#strategic">Strategic trade policy</a></li><li><a href="#geo">The new economic geography</a></li><li><a href="#policy">What follows for policy?</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="puzzle">1. The puzzle of intra-industry trade</h2>
+  <p>The Heckscher–Ohlin model (Topic 6) predicts that countries with different endowments trade different goods. Yet after the Second World War, the fastest-growing trade was among the industrial countries of Western Europe, North America, and Japan, which had similar endowments. Much of it was <b>intra-industry trade</b>: two-way trade in goods from the same industry. Studies of the European Economic Community by Bela Balassa (1966) and the measurements of Herbert Grubel and Peter Lloyd (1975) showed that intra-industry trade made up a large and rising share of trade among rich countries. The formation of the European common market had led not to whole industries closing in one country and expanding in another, as comparative advantage would predict, but to firms in each country specializing in narrower ranges of products.</p>
+
+  <h2 id="krugman">2. Increasing returns and monopolistic competition</h2>
+  <p>The explanation lay in an idea as old as Adam Smith (Topic 2): the division of labor is limited by the extent of the market. If production involves <b>increasing returns to scale</b>, for instance because each product requires a large fixed cost of design, tooling, or marketing, then each firm can produce only a limited range of products efficiently. A larger market supports more firms and more varieties. Trade enlarges the market.</p>
+  <p>Increasing returns are incompatible with perfect competition, which had made trade theory hard to formalize. The breakthrough came from the model of monopolistic competition developed by Avinash Dixit and Joseph Stiglitz (1977), building on Edward Chamberlin’s work of the 1930s. Each firm produces a distinct variety and has some power over its price, but free entry drives profits to zero. Paul Krugman applied this model to trade in “Increasing Returns, Monopolistic Competition, and International Trade” (1979) and “Scale Economies, Product Differentiation, and the Pattern of Trade” (1980). Elhanan Helpman and Krugman’s <em>Market Structure and Foreign Trade</em> (1985) integrated the new approach with comparative advantage: endowments explain inter-industry trade, scale economies explain intra-industry trade.</p>
+  <p>In this model, trade does not depend on differences between countries at all. Two identical countries gain from trade because their consumers get access to more varieties, and firms may produce at larger scale and lower average cost. Which country produces which variety is arbitrary, the result of history and accident.</p>
+
+  <div class="box" id="varbox">
+    <h3>The gains from variety</h3>
+    <p class="note">In the Krugman (1980) model, the number of varieties a country can sustain is proportional to the size of its market, and consumers gain from each additional variety. The gain is larger the less substitutable the varieties are. Set how easily consumers substitute between varieties and how large the trading partner is.</p>
+    <div class="grid2">
+      <div><label>Elasticity of substitution between varieties: <b id="sgv">4.0</b></label><input type="range" id="sg" min="1.5" max="12" step="0.5" value="4"></div>
+      <div><label>Size of the trading partner relative to the home country: <b id="szv">1.0</b></label><input type="range" id="sz" min="0.1" max="10" step="0.1" value="1"></div>
+    </div>
+    <svg id="varchart" viewBox="0 0 640 150" width="100%" role="img" aria-label="Varieties available before and after trade"></svg>
+    <div class="out" id="varout"></div>
+  </div>
+
+  <h2 id="hme">3. The home-market effect</h2>
+  <p>Krugman (1980) also showed that when trade has costs, firms prefer to locate in the larger market and export to the smaller one. A country with a large domestic demand for a product will end up exporting it, a result called the <b>home-market effect</b>. Large domestic markets thus become a source of comparative advantage. The old argument of Staffan Burenstam Linder (1961), that countries export goods first developed for demand at home, received a formal foundation. The effect also gives some support to the idea that protecting the home market can promote exports, a claim long made by advocates of infant-industry protection (Topic 9).</p>
+
+  <h2 id="strategic">4. Strategic trade policy</h2>
+  <p>If some industries contain only a few firms earning large profits, governments might help their own firms capture those profits. James Brander and Barbara Spencer (1985) showed that a subsidy can deter a foreign rival from entering a market in which only one firm can profit. The standard example is the market for large passenger aircraft, which can support only a few producers because development costs are enormous.</p>
+  <table>
+    <tr><th>Profits (Boeing, Airbus)</th><th>Airbus produces</th><th>Airbus stays out</th></tr>
+    <tr><td><b>Boeing produces</b></td><td>(−5, −5)</td><td>(100, 0)</td></tr>
+    <tr><td><b>Boeing stays out</b></td><td>(0, 100)</td><td>(0, 0)</td></tr>
+  </table>
+  <p class="note">An illustrative game. If both firms produce, both lose; if only one produces, it earns large profits. Whoever is established first wins. Now suppose Europe promises Airbus a subsidy of 25 if it produces. Producing becomes Airbus’s best choice whatever Boeing does (it earns 20 even if Boeing also produces), so Boeing, anticipating this, stays out. A subsidy of 25 has raised Airbus’s profits from 0 to 125, a net gain of 100 for Europe, at Boeing’s expense.</p>
+  <p>The idea was controversial. Krugman himself warned that the argument needs precise knowledge of firms’ costs and strategies that governments rarely have, that results reverse under other assumptions about competition (Eaton and Grossman, 1986), and that rival governments can respond in kind, leaving all countries worse off. The Airbus subsidies did lead to long disputes at the GATT and the WTO.</p>
+
+  <h2 id="geo">5. The new economic geography</h2>
+  <p>In <em>Geography and Trade</em> (1991) and “Increasing Returns and Economic Geography” (1991), Krugman applied the same tools to the location of industry within and between countries. When firms benefit from being close to large markets and to one another, and workers move to where firms are, small initial differences can cumulate. A region that gains a slight head start attracts more firms, which attracts more workers and demand, which attracts more firms. The economy can split into an industrial <b>core</b> and an agricultural <b>periphery</b>, even if regions started out identical. This is a formal version of the cumulative causation that Gunnar Myrdal and Nicholas Kaldor had described decades earlier (Topic 19), and the language of core and periphery echoes Prebisch (Topic 18). Krugman received the Nobel Prize in 2008 for his analysis of trade patterns and the location of economic activity.</p>
+
+  <h2 id="policy">6. What follows for policy?</h2>
+  <p>New trade theory undermined the assumptions behind the classical case for free trade: perfect competition, constant returns, and a pattern of trade fixed by nature. If trade patterns are the result of history, scale, and accident, then a country’s comparative advantage can be created, and policy might create it. Krugman’s answer, in “Is Free Trade Passé?” (1987), was that free trade remained the best policy in practice, not because it was optimal in theory but because interventions were likely to be captured by special interests and to provoke retaliation. Others, including developmentalists (Topics 11–12), drew the opposite conclusion.</p>
+  <div class="think"><b>Question to think about:</b> If trade patterns can be the result of historical accident and scale economies, is there still a case for free trade?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Paul Krugman, “Increasing Returns, Monopolistic Competition, and International Trade,” <em>Journal of International Economics</em> (1979).</p>
+  <p class="rd">Paul Krugman, “Is Free Trade Passé?” <em>Journal of Economic Perspectives</em> (1987).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Paul Krugman, <em>Geography and Trade</em> (1991), chapter 1.</p>
+  <p class="rd">Douglas A. Irwin, <em>Against the Tide</em> (1996), chapters 9 and 14.</p>
+  <p><a href="index.html#topic-7">← Back to Topic 7 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Krugman (1980): varieties ∝ market size; welfare ∝ n^(1/(σ−1))
+function variety() {
+  const s = +$('sg').value, z = +$('sz').value;
+  $('sgv').textContent = s.toFixed(1); $('szv').textContent = z.toFixed(1);
+  const n0 = 100, n1 = Math.round(n0*(1 + z)), gain = Math.pow(1 + z, 1/(s - 1)) - 1;
+  const W = 640, H = 150, L = 140, R = 70, M = 1350, X = v => L + v/M*(W-L-R);
+  let g = '';
+  [['Before trade', n0, '#9aa3ad'], ['After trade', n1, '#023e8a']].forEach(([n, v, c], i) => {
+    const y = 22 + i*56;
+    g += `<text x="${L-10}" y="${y+20}" text-anchor="end">${n}</text><rect x="${L}" y="${y}" width="${X(v)-L}" height="30" rx="4" fill="${c}"/>`;
+    g += `<text x="${X(v)+6}" y="${y+20}" style="fill:#1f2933;font-weight:600">${v} varieties</text>`;
+  });
+  $('varchart').innerHTML = g;
+  $('varout').innerHTML = `Before trade, the home market supports ${n0} varieties. Trade with a partner ${z.toFixed(1)} times as large makes <b>${n1}</b> varieties available to every consumer. ` +
+    `With an elasticity of substitution of ${s.toFixed(1)}, real income rises by <b>${(gain*100).toFixed(1)}%</b>. ` +
+    (s >= 8 ? 'Varieties are close substitutes, so having more of them adds little.' : s <= 2.5 ? 'Varieties are poor substitutes for one another, so access to new ones is worth a great deal.' : 'Try lowering the elasticity: the less substitutable the varieties, the more consumers value new ones.') +
+    ` The gain does not depend on any difference between the two countries; it comes from the larger market alone. A small country gains more from trade with a large one than the reverse.`;
+}
+['sg','sz'].forEach(i => $(i).addEventListener('input', variety)); variety();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
