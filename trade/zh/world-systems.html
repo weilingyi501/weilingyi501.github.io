@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>世界体系分析 | Lingyi Wei</title>
+  <meta name="description" content="关于世界体系分析与贸易的教学模块：沃勒斯坦的现代世界体系、核心、半外围与外围、轴心分工、商品链、霸权周期、阿瑞吉的体系性积累周期（含互动时间线），以及中国的崛起。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/world-systems.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../world-systems.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题25</p>
+  <h1>世界体系分析</h1>
+  <p class="lead">大多数贸易理论从国家出发，追问国家之间如何贸易。世界体系分析颠倒了这个顺序。它从整个资本主义世界经济出发，把它看作一个只有一种分工的单一体系，然后追问各国如何在其中占据不同的位置。在这种观点看来，贸易是世界经济组织地区之间等级的方式。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#unit">世界体系作为分析单位</a></li><li><a href="#zones">核心、半外围与外围</a></li><li><a href="#chains">商品链与不平等交换</a></li><li><a href="#hegemony">霸权及其周期</a></li><li><a href="#arrighi">阿瑞吉的体系性积累周期（互动）</a></li><li><a href="#china">中国的崛起</a></li><li><a href="#critics">批评者</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="unit">1. 世界体系作为分析单位</h2>
+  <p>伊曼纽尔·沃勒斯坦是一位以研究后殖民非洲起家的美国社会学家，他在1974年出版了《现代世界体系》第一卷。他认为，社会变迁不能像现代化理论和许多马克思主义那样一国一国地去理解。恰当的分析单位是<b>世界体系</b>：一个具有单一分工和多种文化的社会体系。历史上存在过两种世界体系：政治上统一的世界帝国，如罗马或中华帝国；以及只有一种分工却有许多国家的世界经济。现代世界体系在“漫长的十六世纪”（约1450—1640年）出现于欧洲，是一个资本主义世界经济。它的显著特征是没有一个国家能控制它，因此资本可以在国家之间流动，使它们相互竞争。</p>
+  <p>沃勒斯坦借鉴了法国历史学家费尔南·布罗代尔、马克思以及依附理论（专题23）。1976年，他在纽约州立大学宾厄姆顿分校创立了费尔南·布罗代尔中心，它成为世界体系研究的中心。后来的各卷追溯了这一体系经过重商主义、革命时代直到十九世纪的历程。</p>
+
+  <h2 id="zones">2. 核心、半外围与外围</h2>
+  <p>世界经济存在着核心型生产过程与外围型生产过程之间的<b>轴心分工</b>。沃勒斯坦不是按所涉及的商品，而是按其盈利程度和垄断程度来界定它们：</p>
+  <table>
+    <tr><th>区域</th><th>生产</th><th>劳动与国家</th><th>十六世纪的例子</th></tr>
+    <tr><td><b>核心</b></td><td>相对垄断的、高利润的、资本和技能密集型的过程</td><td>雇佣劳动，工资相对较高；强国家</td><td>西北欧：荷兰、英格兰、法国北部</td></tr>
+    <tr><td><b>半外围</b></td><td>核心型与外围型过程的混合</td><td>居中；往往是雄心勃勃的国家</td><td>地中海欧洲：西班牙、葡萄牙、意大利北部</td></tr>
+    <tr><td><b>外围</b></td><td>高度竞争的、低利润的过程</td><td>强制劳动（奴隶制、“再版农奴制”）；弱国家</td><td>东欧（谷物）和美洲（白银、蔗糖）</td></tr>
+  </table>
+  <p>区域之间的贸易把剩余从外围转移到核心。<b>半外围</b>是沃勒斯坦的独特贡献：它既被剥削又剥削别人，它防止了贫富之间的简单两极分化，从而在政治上稳定了这一体系。国家可以在区域之间移动。荷兰和英格兰上升到核心，西班牙和葡萄牙下降到半外围，二十世纪日本和韩国上升了。但等级本身持续存在：不是每个国家都能同时处于核心，因为核心正是由它与外围的关系来界定的。</p>
+
+  <h2 id="chains">3. 商品链与不平等交换</h2>
+  <p>为了追踪剩余如何在世界经济中流动，特伦斯·霍普金斯和沃勒斯坦（1977，1986）提出了<b>商品链</b>的概念：以一种成品为最终结果的劳动和生产过程网络。追踪一条商品链，例如十六世纪的造船链或面粉链，可以表明核心和外围在同一个生产过程中联系在一起，而最有利可图的节点位于核心。这一概念后来被加里·杰里菲改造为全球价值链分析（专题20）。沃勒斯坦还接受了伊曼纽尔的不平等交换理论（专题24），把它看作剩余从外围转移到核心的机制之一。</p>
+
+  <h2 id="hegemony">4. 霸权及其周期</h2>
+  <p>由于没有一个国家控制世界经济，它的政治结构是一个国家间体系。在罕见的时刻，某个国家会取得<b>霸权</b>：在生产、商业和金融上同时领先，从而能够塑造体系的规则。沃勒斯坦识别出三个霸权：十七世纪中叶的联省共和国（荷兰）、十九世纪中叶的英国，以及1945年以后的美国。每个霸权都是短暂的。霸权国在生产上的领先最先被侵蚀，然后是商业，最后是金融。每个霸权国在其力量鼎盛时都倡导自由贸易，因为开放的市场有利于它高效的生产者，这一模式呼应了李斯特所说的“踢开梯子”（专题9）。</p>
+  <p>世界经济也在扩张和停滞的长波中运动，世界体系学者把它与大约五十年一个周期的康德拉季耶夫周期联系起来。</p>
+
+  <h2 id="arrighi">5. 阿瑞吉的体系性积累周期</h2>
+  <p>乔万尼·阿瑞吉是一位意大利经济学家，曾在罗得西亚和坦桑尼亚工作，后来加入布罗代尔中心。他在《漫长的20世纪》（1994）中发展了霸权理论。他追随布罗代尔，识别出四个由不同主体领导的<b>体系性积累周期</b>。每个周期都按照马克思的资本公式G—W—G′分为两个阶段。在第一阶段（G—W），资本投资于贸易和生产，领导主体扩大物质产出。在第二阶段（W—G′），当竞争挤压贸易和生产的利润时，资本转向金融。这些<b>金融扩张</b>对于正在衰落的领导者来说是表面繁荣的时期，但阿瑞吉称之为“秋天的信号”：它们预示着一个周期的结束和一个新中心的出现。点击一个周期进行探索。</p>
+
+  <div class="box" id="arbox">
+    <h3>体系性积累周期</h3>
+    <svg id="archart" viewBox="0 0 640 170" width="100%" role="img" aria-label="四个相互重叠的体系性积累周期"></svg>
+    <div class="out" id="arout"></div>
+    <p class="note">日期是阿瑞吉的大致分期。每根横条表示一个周期；颜色较浅的末端表示它的金融扩张。</p>
+  </div>
+
+  <h2 id="china">6. 中国的崛起</h2>
+  <p>在他最后一部重要著作《亚当·斯密在北京》（2007）中，阿瑞吉认为世界经济的中心正在转向东亚，中国的崛起走的是一条以市场为基础的发展道路，它更接近斯密所说的“自然的”富裕进程，而不是资本密集型的西方模式。他把1970年代以来美国的金融扩张及其在中东的战争解读为美国霸权终极危机的信号。这一传统中的其他学者，包括克里斯托弗·蔡斯-邓恩，研究中国是否正在从半外围进入核心，以及前方是新的霸权、多极秩序，还是一段漫长的体系混乱。沃勒斯坦本人则认为，资本主义世界体系作为一个整体已经进入一场结构性危机，它不会以现在的形式从中恢复。</p>
+
+  <h2 id="critics">7. 批评者</h2>
+  <p>世界体系分析受到了来自几个方面的批评。罗伯特·布伦纳（1977）认为，它把资本主义的起源放在贸易和交换中，而不是放在生产的阶级关系中，这是一种它与弗兰克共有的“新斯密主义”错误。西达·斯考切波等人认为，它把国家简化为它们在世界经济中的位置，忽视了国家的独立作用。经济史学家质疑与外围的贸易是否大到足以为欧洲的发展提供资金，帕特里克·奥布莱恩在1982年就提出了这一点。还有人指出，这一理论的范畴弹性太大，几乎可以容纳任何结果。辩护者回应说，世界体系分析是一种视角而不是一个封闭的理论，它的长期的、全球的视野捕捉到了逐国分析所忽略的模式，例如霸权国家的兴衰和核心—外围等级的持续存在。</p>
+  <div class="think"><b>思考题：</b>中国是否正在从半外围进入核心？这对世界体系意味着什么？</div>
+
+  <h2 id="read">8. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">伊曼纽尔·沃勒斯坦，《现代世界体系》第一卷（1974），导言。</p>
+  <p class="rd">特伦斯·霍普金斯、伊曼纽尔·沃勒斯坦，“Commodity Chains in the World-Economy Prior to 1800”，<em>Review</em>（1986）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">乔万尼·阿瑞吉，《漫长的20世纪：金钱、权力与我们社会的根源》（1994），导言。</p>
+  <p class="rd">伊曼纽尔·沃勒斯坦，《世界体系分析导论》（2004），第2章。</p>
+  <p><a href="index.html#topic-25">← 返回课程大纲中的专题25</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const C = [
+  ['热那亚', 1450, 1560, 1630, '#7b5ea7', '热那亚的商人银行家与伊比利亚君主结盟，为西班牙帝国提供资金，并组织地中海和大西洋的远程贸易。他们的金融扩张来自向西班牙王室放贷，而西班牙王室一再违约，这一扩张最终崩溃。'],
+  ['荷兰', 1560, 1740, 1790, '#c47a2c', '联省共和国建立了资本主义时代第一个伟大的商业和海上体系，拥有荷兰东印度公司、阿姆斯特丹交易所，并主导着波罗的海和亚洲贸易。十八世纪，荷兰资本转向向其他国家、特别是英国放贷。'],
+  ['英国', 1740, 1870, 1930, '#023e8a', '英国把工业革命、全球帝国和伦敦金融城结合在一起。它在十九世纪引领世界走向自由贸易和金本位。1870年代以后，英国资本大规模流向国外，而它的工业领先地位则转到了德国和美国手中。'],
+  ['美国', 1870, 1970, 2025, '#b03a2e', '美国建立了一个以纵向一体化的公司、大陆规模的市场以及1945年以后的布雷顿森林秩序和关贸总协定为基础的体系。1970年代以后，利润转向金融，阿瑞吉把这解读为新一轮金融扩张的信号和美国霸权进入秋天的标志。'],
+];
+let sel = 3;
+function ar() {
+  const W = 640, H = 170, L = 80, R = 20, X = y => L + (y - 1400)/(2050 - 1400)*(W-L-R);
+  let g = '';
+  [1400, 1500, 1600, 1700, 1800, 1900, 2000].forEach(y => g += `<line x1="${X(y)}" x2="${X(y)}" y1="16" y2="${H-10}" stroke="#eef0f3"/><text x="${X(y)}" y="12" text-anchor="middle">${y}</text>`);
+  C.forEach(([n, a, f, b, c], i) => {
+    const y = 24 + i*36, on = i === sel;
+    g += `<g class="cy" data-i="${i}" style="cursor:pointer" tabindex="0" role="button">`;
+    g += `<text x="${L-8}" y="${y+18}" text-anchor="end" style="${on ? 'font-weight:600;fill:#1f2933' : ''}">${n}</text>`;
+    g += `<rect x="${X(a)}" y="${y}" width="${X(f)-X(a)}" height="26" rx="4" fill="${c}" opacity="${on ? 1 : 0.55}"/>`;
+    g += `<rect x="${X(f)}" y="${y}" width="${X(b)-X(f)}" height="26" rx="4" fill="${c}" opacity="${on ? 0.45 : 0.25}"/>`;
+    if (on) g += `<rect x="${X(a)}" y="${y}" width="${X(b)-X(a)}" height="26" rx="4" fill="none" stroke="#111" stroke-width="2"/>`;
+    g += `</g>`;
+  });
+  $('archart').innerHTML = g;
+  document.querySelectorAll('#archart .cy').forEach(el => {
+    const act = () => { sel = +el.dataset.i; ar(); };
+    el.addEventListener('click', act); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  const [n, a, f, b, , t] = C[sel];
+  $('arout').innerHTML = `<b>${n}周期</b>（约${a}—${b === 2025 ? '至今' : b}年）。物质扩张持续到约${f}年，此后是金融扩张。${t}`;
+}
+ar();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

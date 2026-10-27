@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>马克思与世界市场 | Lingyi Wei</title>
+  <meta name="description" content="关于马克思与国际贸易的教学模块：世界市场作为资本的舞台、马克思1848年关于自由贸易的演说、殖民地与国际分工、价值规律在国家之间的作用，以及安瓦尔·谢克的绝对优势理论（含持续贸易失衡的互动模型）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/marx-trade.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../marx-trade.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题21</p>
+  <h1>马克思与世界市场</h1>
+  <p class="lead">马克思为他的政治经济学批判计划了一卷论世界市场，却始终没有写成。但贸易、殖民地和世界市场贯穿于他的著作，从《共产党宣言》到《资本论》第三卷。本专题重建他的观点，并追溯其最成熟的现代形式：安瓦尔·谢克关于贸易受绝对优势而非比较优势支配的论证。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#world">世界市场作为资本的舞台</a></li><li><a href="#free">马克思论自由贸易（1848）</a></li><li><a href="#colonies">殖民地与国际分工</a></li><li><a href="#value">价值规律在国家之间</a></li><li><a href="#shaikh">谢克：绝对优势与持续的失衡（互动）</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="world">1. 世界市场作为资本的舞台</h2>
+  <p>在马克思看来，资本是必须不断增殖的价值，因此它要冲破一切界限。《共产党宣言》（1848）描述了不断扩大产品销路的需要如何驱使资产阶级奔走于全球各地。马克思和恩格斯写道，商品的低廉价格是摧毁一切万里长城的重炮：它迫使一切民族采用资产阶级的生产方式，否则就要灭亡。世界市场不是国民经济的附加物，而是资本主义的天然基础。在《政治经济学批判大纲》（1857—1858）中，马克思写道，创造世界市场的趋势已经直接包含在资本的概念本身之中。</p>
+  <p>贸易在马克思的利润理论中也有一席之地。在《资本论》第三卷中，对外贸易是利润率下降的“起反作用的各种原因”之一：它使不变资本的要素和工人消费的必需品变得便宜，而投在对外贸易特别是殖民地贸易上的资本能够获得更高的利润。但贸易通过扩大生产规模，也加速了积累以及推动利润率下降的力量（见经济思想史课程<a href="/het/zh/marx-profit-rate.html">专题7</a>）。</p>
+
+  <h2 id="free">2. 马克思论自由贸易（1848）</h2>
+  <p>1848年1月，就在《谷物法》废除（专题3）之后不久，马克思在布鲁塞尔民主协会发表了《关于自由贸易问题的演说》。他嘲笑自由贸易者关于更便宜的面包将使工人受益的许诺：他认为，如果面包变得更便宜，工资很快就会随之下降，主要受益者是工厂主，他们想要便宜的面包，好支付更低的工资。自由贸易就是资本的自由。但马克思也不支持保护。他认为，保护是在一个国家内部建立大工业的手段，因而是保守的；而自由贸易瓦解了旧的民族性，把资本与劳动之间的对立推向极端。他最后表示，只是在这种革命的意义上，他才赞成自由贸易，因为它会加速社会革命。</p>
+  <p>恩格斯后来补充了一些细微的区别。在1888年为这篇演说写的序言中，他指出，对于美国这样的国家，保护也许是发展工业的正确政策，在自由贸易与保护之间作选择，是一个取决于各国所处阶段和具体情况的问题，而不是原则问题。</p>
+
+  <h2 id="colonies">3. 殖民地与国际分工</h2>
+  <p>在《资本论》第一卷中，马克思描述了机器大工业如何造成一种新的国际分工，使地球的一部分转变为主要从事农业的生产地区，以服务于另一部分主要从事工业的地区。他的例子包括英国机器制造的棉布摧毁了印度的手工织布业，以及爱尔兰被变成向英国供应羊毛和肉类的牧场。在为《纽约每日论坛报》写的关于印度的文章（1853）中，马克思谴责英国统治的残暴，同时又有争议地认为，它正在摧毁旧的印度村社经济，从而为一个新社会奠定物质基础。在后来关于爱尔兰和俄国农村公社的著作中，他对殖民资本主义是否会使殖民地得到发展越来越怀疑，后来的马克思主义者把这种怀疑发展成了帝国主义理论和依附理论（专题22—23）。</p>
+  <p>马克思还把对美洲、非洲和亚洲的殖民掠夺看作资本<b>原始积累</b>的核心部分。用他的话说，把非洲变成商业性地猎获黑人的场所，标志着资本主义生产时代的曙光。</p>
+
+  <h2 id="value">4. 价值规律在国家之间</h2>
+  <p>马克思的劳动价值论如何应用于国家之间的贸易？在第一卷第20章中，他指出价值规律在国际上的应用会发生“变形”。在世界市场上，生产率较高的国民劳动被算作强度较大的劳动：在生产率较高的国家，一小时劳动在国际上生产的价值多于生产率较低国家的一小时劳动。因此，较富的国家在交换中可以用较少的劳动换取较多的外国劳动产品。在第三卷讨论对外贸易时，马克思写道，一个较发达的国家可以高于价值、但低于较不发达国家生产这些商品所需的成本出售商品，因此它在实物形式上得到的劳动多于它付出的劳动，而较不发达的国家仍然以比自己生产更便宜的价格得到这些商品。</p>
+  <p>马克思没有展开这些论述。它们成为后来马克思主义者争论富国与穷国之间的贸易是否涉及价值转移的出发点，这就是专题24的主题。</p>
+
+  <h2 id="shaikh">5. 谢克：绝对优势与持续的失衡</h2>
+  <p>最系统的马克思主义贸易理论来自新学院大学的经济学家安瓦尔·谢克。他从1970年代后期开始发展这一理论，并在《资本主义：竞争、冲突与危机》（2016）第11章中完整地加以阐述。谢克拒绝比较优势。他认为，李嘉图的理论依赖于休谟的物价—铸币流动机制（专题1）：贸易逆差国流失货币，物价下降，于是在具有比较优势的商品上变得有竞争力，直到贸易平衡。但在现代经济中，货币流动并不是这样起作用的。逆差国流失储备，信用收紧，利率<em>上升</em>，从而吸引资本流入为逆差融资。物价不会下降到足以恢复平衡的程度。</p>
+  <p>谢克认为，国际贸易实际上受<b>绝对优势</b>支配，就像一国内部企业之间的竞争一样。实际汇率由两国可贸易商品的相对实际单位劳动成本锚定。一个国家的生产者实际成本较低（因为生产率相对于实际工资较高），往往会保持持续的贸易顺差，而成本较高的国家则会出现持续的逆差，靠借债来弥补。自由贸易不会使各国趋于平等：它强化强者的优势，导致弱者长期逆差和外债不断增加。这一结论与发展主义者和后凯恩斯主义者（专题9和专题19）相近，只是从古典和马克思主义的基础上得出的。谢克用实际汇率长期追随相对实际单位劳动成本的证据支持这一观点。</p>
+
+  <div class="box" id="shbox">
+    <h3>比较优势与绝对优势</h3>
+    <p class="note">两个国家进行制成品贸易。设定B国相对于A国的实际单位劳动成本。在古典机制下，逆差使货币流出、物价下降，贸易恢复平衡。在谢克的机制下，逆差国的利率上升，它向国外借债，于是失衡持续，外债不断增加。数字是示意性的。</p>
+    <div class="grid2">
+      <div><label>B国实际单位劳动成本相对于A国：<b id="rcv">1.20</b></label><input type="range" id="rc" min="0.7" max="1.5" step="0.01" value="1.2"></div>
+      <div><label>年数：<b id="nyv">20</b></label><input type="range" id="ny" min="5" max="40" step="1" value="20"></div>
+    </div>
+    <p><button type="button" class="btn on" data-m="shaikh">谢克：绝对优势</button><button type="button" class="btn" data-m="hume">古典：自我纠正</button></p>
+    <svg id="shchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="B国贸易差额与外债随时间的变化"></svg>
+    <div class="out" id="shout"></div>
+  </div>
+  <div class="think"><b>思考题：</b>马克思在1848年支持自由贸易，因为它会加速资本主义的危机。这算是为自由贸易辩护吗？</div>
+
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">卡尔·马克思，《关于自由贸易问题的演说》（1848）。</p>
+  <p class="rd">卡尔·马克思、弗里德里希·恩格斯，《共产党宣言》（1848），第一章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">安瓦尔·谢克，《资本主义：竞争、冲突与危机》（2016），第11章。</p>
+  <p class="rd">卡尔·马克思，《资本论》第一卷（1867），第13章第7节和第20章（按中文版章节编号）。</p>
+  <p><a href="index.html#topic-21">← 返回课程大纲中的专题21</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let mode = 'shaikh';
+function sh() {
+  const rc = +$('rc').value, N = +$('ny').value;
+  $('rcv').textContent = rc.toFixed(2); $('nyv').textContent = N;
+  document.querySelectorAll('#shbox .btn').forEach(b => b.classList.toggle('on', b.dataset.m === mode));
+  const tb0 = -10*(rc - 1); // B's trade balance, % of GDP
+  const TB = [], D = []; let debt = 0, gap = rc - 1;
+  for (let t = 0; t <= N; t++) {
+    const tb = mode === 'hume' ? -10*gap : tb0;
+    TB.push(tb); D.push(debt);
+    debt = debt*1.03 - tb; // interest on debt plus new borrowing
+    if (mode === 'hume') gap *= 0.8; // prices fall in the deficit country until costs equalize
+  }
+  const W = 640, H = 230, L = 50, R = 20, T = 14, B = 34, X = t => L + t/N*(W-L-R);
+  const hi = Math.max(10, ...D.map(Math.abs), ...TB.map(Math.abs)) * 1.1, Y = v => (H-B+T)/2 - v/hi*(H-B-T)/2;
+  let g = `<line x1="${L}" y1="${Y(0)}" x2="${W-R}" y2="${Y(0)}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [-1, -0.5, 0, 0.5, 1].forEach(f => g += `<text x="${L-6}" y="${Y(f*hi/1.1)+4}" text-anchor="end">${(f*hi/1.1).toFixed(0)}</text>`);
+  for (let t = 0; t <= N; t += N > 20 ? 10 : 5) g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">年（数值为占B国年度GDP的百分比）</text>`;
+  const path = a => a.map((v, t) => (t ? 'L' : 'M') + X(t).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ');
+  g += `<path d="${path(TB)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/><path d="${path(D)}" fill="none" stroke="#b03a2e" stroke-width="2.4" stroke-dasharray="6 4"/>`;
+  g += `<text x="${X(N)-4}" y="${Y(TB[N]) + (TB[N] < 0 ? 16 : -8)}" text-anchor="end" style="fill:#c47a2c">B国的贸易差额</text><text x="${X(N)-4}" y="${Y(D[N]) + (D[N] > 0 ? -8 : 16)}" text-anchor="end" style="fill:#b03a2e">B国的外债</text>`;
+  $('shchart').innerHTML = g;
+  const f = v => v.toFixed(1);
+  let msg;
+  if (Math.abs(rc - 1) < 0.005) msg = '实际单位劳动成本相同时，两国都没有绝对优势，贸易是平衡的。';
+  else if (mode === 'hume') msg = `B国起初有相当于GDP ${f(Math.abs(tb0))}%的贸易${tb0 < 0 ? '逆差' : '顺差'}。按照古典的说法，货币${tb0 < 0 ? '流出' : '流入'}B国，它的物价${tb0 < 0 ? '下降' : '上升'}，失衡在几年内消失。累计债务很小（${f(D[N])}%），每个国家最终出口自己具有比较优势的商品。`;
+  else msg = `B国的实际成本${rc > 1 ? '高于' : '低于'}A国，因此B国保持相当于GDP ${f(Math.abs(tb0))}%的持续贸易${tb0 < 0 ? '逆差' : '顺差'}。${tb0 < 0 ? '它的利率上升，于是向国外借债；没有什么能自动恢复平衡。' + N + '年后，它的外债达到<b>GDP的' + f(D[N]) + '%</b>。' : N + '年后，它积累了相当于<b>GDP ' + f(-D[N]) + '%</b>的对A国债权。'}在绝对优势之下，自由贸易强化了低成本国家的地位。`;
+  $('shout').innerHTML = msg;
+}
+['rc','ny'].forEach(i => $(i).addEventListener('input', sh));
+document.querySelectorAll('#shbox .btn').forEach(b => b.addEventListener('click', () => { mode = b.dataset.m; sh(); }));
+sh();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

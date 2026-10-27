@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>新制度经济学与贸易 | Lingyi Wei</title>
+  <meta name="description" content="关于新制度经济学与贸易的教学模块：交易成本与市场范围、中世纪商人与交换的制度、合同执行作为比较优势的来源、大西洋贸易与欧洲的兴起、奴隶贸易，以及关于贸易还是制度导致增长的争论。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/institutions-trade.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../institutions-trade.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题15</p>
+  <h1>新制度经济学与贸易</h1>
+  <p class="lead">从1970年代起，一批经济学家开始用主流经济学的工具来解释制度：理性选择、交易成本和博弈论。应用到贸易上，他们的研究追问：在没有世界政府执行合同的情况下，远程交换是如何成为可能的？制度如何塑造比较优势？贸易本身又如何改变制度，有时使之变好，有时却带来灾难性的后果？</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#tc">交易成本与市场范围</a></li><li><a href="#medieval">远程贸易是如何成为可能的？</a></li><li><a href="#ca">制度作为比较优势的来源</a></li><li><a href="#atlantic">大西洋贸易与欧洲的兴起</a></li><li><a href="#slave">奴隶贸易与非洲</a></li><li><a href="#which">贸易还是制度？</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="tc">1. 交易成本与市场范围</h2>
+  <p>古典贸易理论假定，一旦商品能够运输，交换就很容易：买卖双方会找到彼此、谈妥条件并信守承诺。罗纳德·科斯（1937）指出，使用市场是有成本的：寻找交易伙伴、谈判、订立合同和执行合同。道格拉斯·诺思在《制度、制度变迁与经济绩效》（1990）中把这些<b>交易成本</b>置于经济史的中心。诺思把制度定义为“一个社会的游戏规则”，包括正式的（法律、宪法、产权）和非正式的（习俗、规范、行为准则），它们决定了交易的成本有多高。在制度不良的地方，交换只限于彼此认识和信任的人之间，斯密所说的分工（专题2）不仅受市场范围的限制，还受信任和执行所能达到的范围的限制。</p>
+  <p>远程贸易是最困难的情形。交易双方相距遥远，付款与交货在时间上分离，而且没有一个统一的权威能够执行不同国家商人之间的合同。诺思因用经济理论革新经济史研究，与罗伯特·福格尔一同获得1993年诺贝尔奖。</p>
+
+  <h2 id="medieval">2. 远程贸易是如何成为可能的？</h2>
+  <p>阿夫纳·格雷夫用博弈论研究了支撑中世纪地中海贸易的制度：</p>
+  <ul>
+    <li><b>马格里布商人。</b>十一世纪的犹太商人依靠海外代理人销售他们的货物，他们的信件保存在开罗藏经库中。格雷夫（1989，1993）认为，是一个<b>商人联盟</b>保证了诚实：欺骗了一个商人的代理人会被所有商人排斥，因此集体惩罚的威胁使欺骗无利可图。这一体系在群体内部运作良好，却很难扩展到群体之外。</li>
+    <li><b>热那亚人</b>则发展出更具个人主义色彩、以正式法律制度为后盾的安排，格雷夫认为随着贸易的扩大，这种安排更容易扩展。</li>
+    <li><b>社区责任制。</b>在中世纪欧洲的许多地方，如果一个城镇的商人违约，债权人所在的城镇可以扣押债务人所在城镇任何商人的货物。这使每个社区都要约束自己的成员。</li>
+  </ul>
+  <p>保罗·米尔格罗姆、道格拉斯·诺思和巴里·温加斯特（1990）分析了十二、十三世纪香槟集市上的私人法官，他们记录商人的行为，并依据“商人法”解决纠纷。这些研究表明，市场建立在制度之上，其中许多是私人制度，而这些制度的形式影响着贸易能够发展到多远。</p>
+
+  <h2 id="ca">3. 制度作为比较优势的来源</h2>
+  <p>如果合同在一些国家比在另一些国家更容易执行，那么高度依赖合同的产业就会倾向于设在合同执行良好的国家。内森·纳恩（2007）为每个产业测算了其投入品中有多少是<b>关系专用</b>的：这些定制零部件很难卖给其他买家，因此一旦买家违约，供应商就会受损。汽车和飞机需要许多这样的投入品；面粉加工和石油精炼则很少。纳恩发现，合同执行较好的国家，在依赖关系专用投入品的产业中出口相对更多。按照他的估计，制度对贸易模式的解释力不亚于物质资本和熟练劳动两者之和。</p>
+  <p>安德烈·列夫琴科（2007）得出了类似的结论，其他研究也发现，金融发展、劳动力市场制度和法院质量以同样的方式塑造比较优势。制度成为一种生产要素，就像赫克歇尔—俄林模型中的资本或熟练劳动（专题6）。这一含义是双向的：制度薄弱的国家被推向简单的、对合同依赖少的产业，而改善制度可以改变一个国家出口什么。</p>
+
+  <h2 id="atlantic">4. 大西洋贸易与欧洲的兴起</h2>
+  <p>贸易也能改变制度。达龙·阿西莫格鲁、西蒙·约翰逊和詹姆斯·罗宾逊（2005）注意到，1500年以后西欧与世界其他地区的分化，主要是由英国和荷兰等能够进入大西洋的国家以及大西洋港口城市推动的。他们认为，大西洋贸易的利润使王室圈子之外的商人集团富裕起来，这些集团随后要求并赢得了对王权的限制，例如荷兰起义和1688年英国的光荣革命。随之而来的是有保障的产权，为后来的增长奠定了基础。在王权本已强大并控制着贸易本身的地方，例如西班牙和葡萄牙，大西洋贸易反而加强了王权，没有带来同样的制度变迁。道格拉斯·诺思和巴里·温加斯特（1989）曾认为，光荣革命使英国国家尊重财产的承诺变得可信。</p>
+
+  <h2 id="slave">5. 奴隶贸易与非洲</h2>
+  <p>对非洲来说，贸易带来了毁灭性的制度后果。1400年至1900年间，约有一千二百万人被贩运跨越大西洋，还有数百万人被运过撒哈拉、红海和印度洋。内森·纳恩（2008）证明，被掳走奴隶最多的非洲地区今天最为贫穷。由于奴隶常常是被邻居、亲属甚至家人掳获的，奴隶贸易破坏了信任，削弱了国家，使社会四分五裂。纳恩和伦纳德·旺切孔（2011）发现，来自受奴隶贸易冲击较重的族群的人，今天对邻居、亲属和地方政府的信任更低。这些发现与沃尔特·罗德尼的论点（专题23）相呼应，尽管它们是用不同的方法得出的。</p>
+
+  <h2 id="which">6. 贸易还是制度？</h2>
+  <p>是贸易导致增长，还是良好的制度同时导致贸易和增长？杰弗里·弗兰克尔和戴维·罗默（1999）利用地理因素分离出不是由收入引起的那部分贸易，发现贸易提高了收入。丹尼·罗德里克、阿尔温德·萨勃拉曼尼亚和弗朗切斯科·特雷比（2004）在地理、贸易和制度之间进行了一场“赛跑”，得出“制度至上”的结论：一旦控制了制度质量，贸易对收入几乎没有直接影响。由于贸易、制度和收入彼此影响，这一争论仍未结束。</p>
+  <table>
+    <tr><th>机制</th><th>方向</th><th>例子</th></tr>
+    <tr><td>制度使贸易成为可能</td><td>制度 → 贸易</td><td>商人联盟、商人法、法院</td></tr>
+    <tr><td>制度塑造比较优势</td><td>制度 → 贸易模式</td><td>合同执行与关系专用型产业</td></tr>
+    <tr><td>贸易加强良好的制度</td><td>贸易 → 制度</td><td>大西洋商人与对王权的限制</td></tr>
+    <tr><td>贸易摧毁制度</td><td>贸易 → 制度</td><td>奴隶贸易与信任的瓦解</td></tr>
+  </table>
+  <p>来自旧制度主义传统（专题13）和政治经济学的批评者认为，新制度经济学把制度理解得太狭窄，把它看作解决交换问题的有效率的方案，而对权力关注太少。他们认为，出现哪些制度取决于谁有权力塑造它们，阿西莫格鲁和罗宾逊本人也越来越强调这一点。</p>
+  <div class="think"><b>思考题：</b>是贸易造就了好的制度，还是好的制度使贸易变得有益？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">道格拉斯·诺思，《制度、制度变迁与经济绩效》（1990），第1章。</p>
+  <p class="rd">内森·纳恩，“Relationship-Specificity, Incomplete Contracts, and the Pattern of Trade”，<em>Quarterly Journal of Economics</em>（2007），引言。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">达龙·阿西莫格鲁、西蒙·约翰逊、詹姆斯·罗宾逊，“The Rise of Europe: Atlantic Trade, Institutional Change, and Economic Growth”，<em>American Economic Review</em>（2005）。</p>
+  <p class="rd">内森·纳恩，“The Long-Term Effects of Africa’s Slave Trades”，<em>Quarterly Journal of Economics</em>（2008）。</p>
+  <p><a href="index.html#topic-15">← 返回课程大纲中的专题15</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

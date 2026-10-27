@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>罗德里克的全球化三难困境 | Lingyi Wei</title>
+  <meta name="description" content="关于丹尼·罗德里克对全球化政治限度分析的教学模块：《全球化走得太远了吗？》、开放与政府规模、世界经济的政治三难困境（含互动三角形），以及“明智的全球化”。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/trilemma.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../trilemma.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题16</p>
+  <h1>罗德里克的全球化三难困境</h1>
+  <p class="lead">丹尼·罗德里克是一位主流贸易经济学家，三十年来他一直提醒同行，他们低估了深度经济一体化的政治代价。他的三难困境指出，一个国家不可能同时拥有超级全球化、民主和国家主权，这是理解反全球化浪潮时使用最广泛的框架之一。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#far">全球化走得太远了吗？</a></li><li><a href="#gov">开放的经济与庞大的政府</a></li><li><a href="#tri">政治三难困境（互动）</a></li><li><a href="#deep">从浅层一体化到深度一体化</a></li><li><a href="#smart">更明智的全球化</a></li><li><a href="#critics">批评者与反弹</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="far">1. 全球化走得太远了吗？</h2>
+  <p>1997年，正值人们对全球化热情最高的时候，罗德里克出版了一本书名颇具挑衅性的小书：《全球化走得太远了吗？》。他承认贸易提高国民收入，但指出了经济学家往往忽视的三种紧张关系：</p>
+  <ul>
+    <li><b>议价能力。</b>当企业可以把生产转移到国外，或者能可信地以此相威胁时，工人就更容易被替代。劳动的议价能力下降，工人要为改善工作条件和福利承担更多的代价。</li>
+    <li><b>社会规范的冲突。</b>与劳动、环境或社会标准截然不同的国家进行贸易，可能会破坏人们认为正当的国内规范和安排，例如关于童工或罢工权利的争议。</li>
+    <li><b>社会保险。</b>开放增加了经济的不安全，因而提高了对社会保险的需求；与此同时，资本的流动性又使政府更难对资本征税来为社会保险筹资。</li>
+  </ul>
+  <p>罗德里克警告说，如果忽视这些紧张关系，支持开放市场的社会共识就可能像1930年代那样破裂。</p>
+
+  <h2 id="gov">2. 开放的经济与庞大的政府</h2>
+  <p>在1998年的论文《为什么更开放的经济有更大的政府？》中，罗德里克记录了一个引人注目的规律：在各国之间，受贸易影响越大的国家，政府规模往往越大。瑞典、荷兰和奥地利等开放的欧洲小国拥有世界上规模最大的福利国家。他的解释是，开放经济中的政府为抵御外部冲击的风险提供社会保险。这就是<b>补偿假说</b>，它符合鲁杰所说的嵌入式自由主义的交易（专题14）：公民接受开放，是因为国家保护他们免受开放带来的最坏影响。</p>
+
+  <h2 id="tri">3. 政治三难困境</h2>
+  <p>在《全球化的悖论》（2011）中，罗德里克把这一论证概括为一个三难困境。在以下三者中，一个国家最多只能同时拥有两个：</p>
+  <ul>
+    <li><b>超级全球化：</b>深度的经济一体化，消除各国在监管、税收和标准上的差异，使市场跨越国界运作，就像在国内一样。</li>
+    <li><b>民族国家：</b>国家主权，由国家共同体自己并为自己制定政策。</li>
+    <li><b>民主政治：</b>回应公民偏好、包括回应社会保护要求的政策。</li>
+  </ul>
+  <p>点击三角形的两个角，看看它们使什么样的世界成为可能。</p>
+
+  <div class="box" id="tribox">
+    <h3>三选二</h3>
+    <svg id="trisvg" viewBox="0 0 640 345" width="100%" role="img" aria-label="可点击的三难困境三角形"></svg>
+    <div class="out" id="triout"></div>
+  </div>
+
+  <h2 id="deep">4. 从浅层一体化到深度一体化</h2>
+  <p>罗德里克的论证建立在两种贸易协定的区分之上。关贸总协定时代（1947—1994）是<b>浅层一体化</b>的时代：各国削减制成品关税，但在农业、服务业、投资、资本流动和国内监管方面保留了广泛的自主权。1990年代以来，协定追求<b>深度一体化</b>，深入到知识产权、卫生和安全标准、设有独立争端法庭的投资规则、补贴和金融监管。罗德里克指出，取消剩余关税的收益很小，因为关税已经很低了。新规则主要起再分配作用，往往有利于资本和大企业，同时限制了国内的民主选择。</p>
+  <p>在他看来，金融全球化是超级全球化超越其政治基础的最明显的例子。资本自由流动使各国暴露在资本骤停和危机之下，从墨西哥（1994—1995）、东亚（1997—1998）到阿根廷（2001）和2010年以后的欧元区，而能够管理这些危机的全球性制度却并不存在。</p>
+
+  <h2 id="smart">5. 更明智的全球化</h2>
+  <p>罗德里克自己倾向于布雷顿森林那一角，并为二十一世纪加以更新。他为“理智的”全球化提出的原则包括：</p>
+  <ul>
+    <li>市场必须嵌入治理体系之中；没有规则就没有市场，而规则主要是国家的。</li>
+    <li>民主治理和政治共同体主要是在民族国家内部组织起来的，在可预见的将来仍将如此。</li>
+    <li>各国有权保护自己的社会安排、监管和制度，也不应把自己的安排强加给别国。</li>
+    <li>国际经济安排的目的是为管理各国制度之间的衔接制定交通规则，而不是凌驾于各国制度之上。</li>
+    <li>非民主国家不能指望在国际经济秩序中享有与民主国家相同的权利和特权。</li>
+  </ul>
+  <p>在实践中，这意味着允许各国在贸易威胁到国内规范时采取保障措施、限制资本流动，并在约定的限度内推行产业政策。</p>
+
+  <h2 id="critics">6. 批评者与反弹</h2>
+  <p>批评者提出了几点反对意见。自由贸易者认为，罗德里克夸大了贸易协定施加的约束，又低估了放松这些约束带来的保护主义风险。一些政治学家把三难困境看作一个权衡的光谱，而不是严格的不可能。超国家治理的支持者把欧盟看作向全球联邦主义那一角的不完美尝试；左翼批评者则认为，民族国家太弱，驯服不了全球资本，这需要国际性的劳工和社会标准。</p>
+  <p>2016年以来的事件，包括英国脱欧、中美关税战和产业政策的回归（专题12），被广泛解读为罗德里克所预言的政治反应。由此形成的秩序会更像他所说的明智的全球化，还是更像1930年代那个分裂的、保护主义的世界，仍是一个悬而未决的问题。</p>
+  <div class="think"><b>思考题：</b>一个国家应当放弃三难困境中的哪一角？又该由谁来决定？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">丹尼·罗德里克，《全球化的悖论：全球经济的未来与民主》（2011），第9章和第12章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">丹尼·罗德里克，《全球化走得太远了吗？》（1997），第1章。</p>
+  <p class="rd">丹尼·罗德里克，“Why Do More Open Economies Have Bigger Governments?”，<em>Journal of Political Economy</em>（1998）。</p>
+  <p><a href="index.html#topic-16">← 返回课程大纲中的专题16</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const V = {g:{x:320, y:46, name:'超级全球化'}, n:{x:120, y:282, name:'民族国家'}, d:{x:520, y:282, name:'民主政治'}};
+const R = {
+  'g+n': ['金色紧身衣', '保留超级全球化和民族国家，放弃民主政治。各国政府保有主权，但必须奉行全球市场所奖励的政策：对资本低税、灵活的劳动力市场、平衡的预算、独立的中央银行。托马斯·弗里德曼称之为“金色紧身衣”：经济增长了，政治却萎缩了。1914年以前的金本位时代，很少有工人拥有选举权，就接近于此。'],
+  'g+d': ['全球联邦主义', '保留超级全球化和民主，放弃民族国家。规则和社会保护在全球层面以民主方式制定，就像美国在联邦层面为五十个州制定规则一样。市场与民主的范围相匹配。这是合乎逻辑的答案，但世界缺乏它所需要的共同政治共同体。欧盟是一个局部的、区域性的尝试，它的困难表明这有多难。'],
+  'n+d': ['布雷顿森林妥协', '保留民族国家和民主，放弃超级全球化。各国接受有限的浅层一体化：关税分阶段降低，但资本流动受到管制，每个国家都保留实行自己的社会安排、产业政策和保障措施的空间。这就是1945年到1970年代的战后秩序，也是罗德里克偏爱的那一角。'],
+};
+let pick = [];
+function tri() {
+  let g = '';
+  const on = (a, b) => pick.includes(a) && pick.includes(b);
+  [['g','n'],['g','d'],['n','d']].forEach(([a, b]) => {
+    const A = V[a], B = V[b], k = [a, b].sort().join('+'), sel = on(a, b);
+    g += `<line x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" stroke="${sel ? '#023e8a' : '#ccd2d8'}" stroke-width="${sel ? 5 : 2}"/>`;
+    const key = k === 'd+g' ? 'g+d' : k === 'd+n' ? 'n+d' : k;
+    g += `<text x="${(A.x+B.x)/2 + (a === 'n' && b === 'd' ? 0 : a === 'g' && b === 'n' ? -62 : 62)}" y="${(A.y+B.y)/2 + (a === 'n' && b === 'd' ? 26 : 0)}" text-anchor="middle" style="fill:${sel ? '#023e8a' : '#8a929b'};font-weight:600;font-size:13px">${R[key][0]}</text>`;
+  });
+  Object.entries(V).forEach(([k, v]) => {
+    const sel = pick.includes(k);
+    g += `<g class="vtx" data-k="${k}" style="cursor:pointer" tabindex="0" role="button" aria-pressed="${sel}"><circle cx="${v.x}" cy="${v.y}" r="26" fill="${sel ? '#023e8a' : '#fff'}" stroke="#023e8a" stroke-width="2.5"/>`;
+    g += `<text x="${v.x}" y="${v.y + (k === 'g' ? -36 : 48)}" text-anchor="middle" style="fill:#1f2933;font-weight:600;font-size:14px">${v.name}</text></g>`;
+  });
+  $('trisvg').innerHTML = g;
+  document.querySelectorAll('#trisvg .vtx').forEach(el => {
+    const act = () => { const k = el.dataset.k; if (pick.includes(k)) pick = pick.filter(p => p !== k); else { pick.push(k); if (pick.length > 2) pick.shift(); } tri(); };
+    el.addEventListener('click', act); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  if (pick.length < 2) { $('triout').innerHTML = pick.length ? `你选择了<b>${V[pick[0]].name}</b>。请再选择一个角。` : '点击三角形的两个角。'; return; }
+  const k = [...pick].sort((a, b) => 'gnd'.indexOf(a) - 'gnd'.indexOf(b)).join('+');
+  const left = Object.keys(V).find(x => !pick.includes(x));
+  $('triout').innerHTML = `<b>${R[k][0]}。</b>${R[k][1]} <span class="note">放弃的是：${V[left].name}。</span>`;
+}
+pick = ['n','d']; tri();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

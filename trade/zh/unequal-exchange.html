@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>不平等交换 | Lingyi Wei</title>
+  <meta name="description" content="关于不平等交换的教学模块：阿尔吉里·伊曼纽尔关于资本可流动、劳动不可流动条件下国际生产价格的理论、狭义和广义的不平等交换（含互动模型）、与贝特尔海姆的论战、萨米尔·阿明、萨缪尔森的批评、生态不平等交换，以及与普雷维什—辛格假说的区别。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/unequal-exchange.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../unequal-exchange.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题24</p>
+  <h1>不平等交换</h1>
+  <p class="lead">1969年，出生于希腊的经济学家阿尔吉里·伊曼纽尔出版了《不平等交换》（<em>L’échange inégal</em>，英译本<em>Unequal Exchange</em>，1972）。他把马克思的生产价格理论应用于世界经济，认为高工资国家与低工资国家之间的贸易，即使商品按市场价格交换、没有任何人欺骗，也会把价值从穷国转移到富国。这一理论引发了激进经济学中最激烈的论战之一。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#setting">伊曼纽尔与他的问题</a></li><li><a href="#premises">资本可流动，劳动不可流动</a></li><li><a href="#model">狭义与广义（互动）</a></li><li><a href="#wages">工资作为自变量</a></li><li><a href="#bettelheim">与贝特尔海姆的论战</a></li><li><a href="#amin">萨米尔·阿明</a></li><li><a href="#critics">萨缪尔森及其他批评者</a></li><li><a href="#eco">生态不平等交换</a></li><li><a href="#ps">不平等交换与普雷维什—辛格假说</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="setting">1. 伊曼纽尔与他的问题</h2>
+  <p>阿尔吉里·伊曼纽尔1911年生于希腊，曾在比属刚果经商，第二次世界大战期间在中东加入希腊军队作战，后来在巴黎任教。他的问题是：为什么穷国经过几十年的贸易仍然贫穷？为什么在同样的商品、用相似的技术在两类国家都能生产的情况下，富国与穷国之间的差距仍然如此之大？他拒绝了“穷国只是专门生产了错误的产品”这种解释。他认为，即使富国和穷国生产同类商品，由于工资差距，它们之间的贸易也是不平等的。</p>
+
+  <h2 id="premises">2. 资本可流动，劳动不可流动</h2>
+  <p>伊曼纽尔的理论建立在马克思《资本论》第三卷对<b>生产价格</b>的分析之上。在一个国家内部，资本之间的竞争使各产业的利润率趋于平均，因此商品不是按劳动价值出售，而是按生产价格出售：生产成本加上按所预付资本计算的平均利润。人均资本相对较多的产业高于价值出售，人均资本较少的产业低于价值出售，于是价值在各个资本之间重新分配（见经济思想史课程<a href="/het/zh/marx-profit-rate.html">专题7</a>）。</p>
+  <p>伊曼纽尔把这一分析移用到世界经济，提出两个前提：</p>
+  <ul>
+    <li><b>资本在国际上可以流动</b>，因此各国的利润率趋于平均。李嘉图的比较优势理论（专题3）假定的恰恰相反。</li>
+    <li><b>劳动在国际上不能流动</b>，因此工资不会趋于平均。富国的工资是穷国的许多倍，这一差距远远大于利润率的任何差距。</li>
+  </ul>
+  <p>在这些条件下，国际生产价格体现了工资差距。高工资国家以高于价值的价格出售商品，低工资国家则以低于价值的价格出售。按这些价格进行的交换把价值从低工资国家转移到高工资国家。伊曼纽尔称之为<b>不平等交换</b>。</p>
+
+  <h2 id="model">3. 狭义与广义</h2>
+  <p>伊曼纽尔区分了非等价交换的两个来源：</p>
+  <ul>
+    <li><b>广义的不平等交换</b>来自各国<b>资本有机构成</b>（资本相对于劳动）的差异，即使工资相等也会发生。这不过是把马克思的价值向生产价格的转形应用于跨国情形。它在任何一个国家内部也会发生，伊曼纽尔并不认为它是国际贸易所特有的。</li>
+    <li><b>狭义的不平等交换</b>来自<b>工资</b>的差异，而有机构成相同。伊曼纽尔认为这才是国际所特有的现象，因为只有在国家之间，同类工作的工资才会有如此巨大而持久的差异。</li>
+  </ul>
+
+  <div class="box" id="uebox">
+    <h3>伊曼纽尔的国际生产价格模型</h3>
+    <p class="note">每个国家使用100小时劳动，创造100单位新价值，并耗费一定的不变资本（机器和原材料）。每个国家产出的价值等于它的不变资本加100。工人每小时得到一定的工资（以价值单位计），新价值的其余部分是剩余价值。资本自由流动，因此两国按预付资本（不变资本加工资）获得相同的利润率。比较每个国家的生产价格与其产出的价值。</p>
+    <div class="grid2">
+      <div><label>中心每小时工资：<b id="wcv">0.80</b></label><input type="range" id="wc" min="0.1" max="0.95" step="0.05" value="0.8"></div>
+      <div><label>外围每小时工资：<b id="wpv">0.20</b></label><input type="range" id="wp" min="0.05" max="0.95" step="0.05" value="0.2"></div>
+      <div><label>中心的不变资本：<b id="ccv">100</b></label><input type="range" id="cc" min="20" max="300" step="10" value="100"></div>
+      <div><label>外围的不变资本：<b id="cpv">100</b></label><input type="range" id="cp" min="20" max="300" step="10" value="100"></div>
+    </div>
+    <table id="uetab"></table>
+    <div class="out" id="ueout"></div>
+  </div>
+
+  <h2 id="wages">4. 工资作为自变量</h2>
+  <p>伊曼纽尔最具争议的主张涉及因果关系。在古典和马克思主义理论中，工资通常被看作由历史和制度条件决定，即马克思所说的“历史的和道德的因素”。伊曼纽尔认真对待了这一点：工资是这一体系的<b>自变量</b>。它在每个国家由阶级斗争的历史、社会规范和制度决定，而价格则随之调整。他认为，穷国工资低不是因为它们的产品便宜，而是因为工资低，它们的产品才便宜。富国之所以富，不是因为它们生产率高；它们之所以变得生产率高，部分是因为高工资通过提高价格和收入创造了市场、引致了投资。</p>
+  <p>另一个含义在左翼中引起了激烈争论。如果富国工人得到的工资因不平等交换而被抬高，那么他们也分享了来自穷国的转移。伊曼纽尔的结论是，国际工人阶级的团结面临一个物质障碍，许多马克思主义者拒绝了这一结论。</p>
+
+  <h2 id="bettelheim">5. 与贝特尔海姆的论战</h2>
+  <p>《不平等交换》的法文版与法国马克思主义经济学家夏尔·贝特尔海姆的批评以及伊曼纽尔的答复一同出版。贝特尔海姆提出了几点反对意见：</p>
+  <ul>
+    <li><b>工资反映生产率。</b>富国的高工资反映了更高的劳动生产率和更发达的生产力，因此工资不是自变量。如果考虑到生产率差异，“转移”可能就消失了。</li>
+    <li><b>剥削发生在生产中。</b>穷国的工人是在生产中被资本剥削的，而不是通过交换被富国的工人剥削。伊曼纽尔对交换的关注掩盖了生产关系。</li>
+    <li><b>团结。</b>贝特尔海姆拒绝了富国工人剥削穷国工人的观点。</li>
+  </ul>
+  <p>伊曼纽尔回答说，对于用相似技术生产的商品，生产率差异无法解释十比一甚至二十比一的工资差异；问题在于，当商品按照体现这些工资差异的价格交换时，所创造的价值发生了什么。</p>
+
+  <h2 id="amin">6. 萨米尔·阿明</h2>
+  <p>埃及裔法国经济学家萨米尔·阿明在《世界规模的积累》（1970）和《不平等的发展》（1973）中，把不平等交换纳入了一个更广泛的世界经济理论。阿明对不平等交换的界定比伊曼纽尔更窄：当中心与外围之间的工资差异大于生产率差异时，才存在不平等交换。他认为，外围的现代出口产业，例如矿山、种植园以及后来的工厂，生产率往往接近中心，而工资却低得多。不平等交换是更广泛的<b>世界规模的积累</b>过程中的一个机制，在这一过程中，外围的经济被塑造成为中心的积累服务。阿明的答案是<b>脱钩</b>（专题23）：使对外关系服从于以本国为中心的发展的要求。</p>
+
+  <h2 id="critics">7. 萨缪尔森及其他批评者</h2>
+  <p>保罗·萨缪尔森在《新马克思主义不平等交换学说的不合逻辑》（1976）中认为，伊曼纽尔的结果可以用普通的价格理论重新表述，而无需提及劳动价值。在工资外生给定的模型中，工资较低的国家只是价格较低、生活水平较低；称之为“价值转移”并没有增加任何内容，而且与自给自足相比，穷国仍然可以从贸易中获益。来自马克思主义和主流两方面的其他批评者质疑：利润率在国际上是否真的平均化？用来衡量转移的劳动价值能否在生产率差异如此之大的国家之间进行比较？这一理论能否解释随时间推移的变化？辩护者回应说，这一理论的要点不是外围与自给自足相比受损，而是国际价格体系系统性地以有利于高工资国家的方式分配收益。</p>
+
+  <h2 id="eco">8. 生态不平等交换</h2>
+  <p>从1980年代起，社会学家和人类学家把这一思想扩展到自然。斯蒂芬·邦克对亚马孙的研究《使亚马孙欠发达》（1985）认为，采掘经济输出的能量和物质从该地区流失，而接受这些能量和物质的工业中心则积累起复杂性。阿尔夫·霍恩堡认为，按市场价格进行的商品交换掩盖了体现在商品中的土地、能源和物质从外围向中心的不对称流动，因此核心的技术进步依赖于对外围生物物理资源的占有。这种<b>生态不平等交换</b>把这一理论与生态经济学联系了起来。</p>
+
+  <h2 id="ps">9. 不平等交换与普雷维什—辛格假说</h2>
+  <p>不平等交换常常与普雷维什—辛格假说（专题18）相混淆，但两者是不同的：</p>
+  <table>
+    <tr><th></th><th>普雷维什—辛格假说</th><th>伊曼纽尔的不平等交换</th></tr>
+    <tr><td>主张</td><td>初级产品的相对价格<em>随时间推移</em>趋于下降</td><td>在任何时刻，价格都体现了工资差异，因此交换在价值上是<em>非等价的</em></td></tr>
+    <tr><td>商品</td><td>初级产品与制成品</td><td>高工资国家与低工资国家之间交易的任何商品</td></tr>
+    <tr><td>机制</td><td>不同的市场结构和需求弹性</td><td>工资不等条件下利润率的国际平均化</td></tr>
+    <tr><td>框架</td><td>结构主义；市场价格</td><td>马克思主义；价值与生产价格</td></tr>
+  </table>
+  <div class="think"><b>思考题：</b>如果工资差异反映了生产率差异，是否还存在价值转移？</div>
+
+  <h2 id="read">10. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">阿尔吉里·伊曼纽尔，《不平等交换：对贸易帝国主义的研究》（英译本1972），引言。</p>
+  <p class="rd">萨米尔·阿明，《不平等的发展》（英译本1976），选读。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">阿尔夫·霍恩堡，<em>Global Ecology and Unequal Exchange: Fetishism in a Zero-Sum World</em>（2011），第1章。</p>
+  <p class="rd">保罗·萨缪尔森，“Illogic of Neo-Marxian Doctrine of Unequal Exchange”，收入D. A. 贝尔斯利等编，<em>Inflation, Trade and Taxes</em>（1976）。</p>
+  <p><a href="index.html#topic-24">← 返回课程大纲中的专题24</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const L = 100;
+function prices(wc, wp, cc, cp) {
+  const s = [L*(1 - wc), L*(1 - wp)], K = [cc + wc*L, cp + wp*L], v = [cc + L, cp + L];
+  const r = (s[0] + s[1])/(K[0] + K[1]);
+  const p = K.map(k => k*(1 + r));
+  return {s, K, v, r, p, t: p[0] - v[0]};
+}
+function ue() {
+  const wc = +$('wc').value, wp = +$('wp').value, cc = +$('cc').value, cp = +$('cp').value;
+  $('wcv').textContent = wc.toFixed(2); $('wpv').textContent = wp.toFixed(2); $('ccv').textContent = cc; $('cpv').textContent = cp;
+  const R = prices(wc, wp, cc, cp);
+  const f = x => x.toFixed(1);
+  $('uetab').innerHTML = `<tr><th></th><th>不变资本</th><th>工资</th><th>剩余价值</th><th>产出价值</th><th>生产价格</th><th>价格 − 价值</th></tr>` +
+    ['中心', '外围'].map((n, i) => `<tr><td>${n}</td><td>${[cc, cp][i]}</td><td>${f([wc, wp][i]*L)}</td><td>${f(R.s[i])}</td><td>${f(R.v[i])}</td><td>${f(R.p[i])}</td><td><b>${(R.p[i] - R.v[i] >= 0 ? '+' : '') + f(R.p[i] - R.v[i])}</b></td></tr>`).join('');
+  // decomposition: broad sense = transfer with equal wages (average wage); strict = remainder
+  const wa = (wc + wp)/2, broad = prices(wa, wa, cc, cp).t, total = R.t, strict = total - broad;
+  let msg = `资本自由流动时，两国的预付资本都获得<b>${(R.r*100).toFixed(1)}%</b>的利润率。`;
+  if (Math.abs(total) < 0.05) msg += '生产价格等于价值：交换是等价的。这发生在两国的工资和资本有机构成都相同的时候。';
+  else {
+    msg += `按照这些价格，尽管商品按市场价格交易，仍有<b>${f(Math.abs(total))}</b>单位价值从${total > 0 ? '外围转移到中心' : '中心转移到外围'}。`;
+    msg += `其中约${f(Math.abs(strict))}来自工资差异（<b>狭义</b>的不平等交换），约${f(Math.abs(broad))}来自人均不变资本的差异（<b>广义</b>的不平等交换）。`;
+    if (cc === cp) msg += '由于两国使用相同的不变资本，这里的全部转移都是狭义的不平等交换，也就是伊曼纽尔所强调的情形。';
+    else if (Math.abs(wc - wp) < 0.001) msg += '由于工资相等，这里的全部转移都属于广义：即普通的价值向价格的转形，在一个国家内部也会发生。';
+  }
+  $('ueout').innerHTML = msg + ' <span class="note">两种含义的划分是近似的：它把实际情况与两国都支付平均工资的情况相比较。</span>';
+}
+['wc','wp','cc','cp'].forEach(x => $(x).addEventListener('input', ue)); ue();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

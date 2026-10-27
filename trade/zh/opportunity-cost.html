@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>马歇尔、哈伯勒与机会成本 | Lingyi Wei</title>
+  <meta name="description" content="关于贸易理论新古典重建的教学模块：马歇尔和埃奇沃思的提供曲线、哈伯勒的机会成本、成本递增与不完全专业化（含互动模型）、贸易收益与最优关税。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/opportunity-cost.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../opportunity-cost.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题5</p>
+  <h1>马歇尔、哈伯勒与机会成本</h1>
+  <p class="lead">边际革命取代劳动价值论之后，贸易理论必须建立在新的基础上。马歇尔和埃奇沃思把穆勒的相互需求变成几何学，戈特弗里德·哈伯勒则用机会成本重新表述了比较优势。这就是今天教科书中讲授的版本。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#problem">劳动成本的问题</a></li><li><a href="#offer">马歇尔、埃奇沃思与提供曲线</a></li><li><a href="#haberler">哈伯勒的机会成本</a></li><li><a href="#increasing">成本递增与贸易收益（互动）</a></li><li><a href="#welfare">福利与最优关税</a></li><li><a href="#taussig">陶西格与经验的检验</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="problem">1. 劳动成本的问题</h2>
+  <p>李嘉图的理论（专题3）用劳动小时来衡量比较成本。如果劳动是唯一的投入，而且所有劳动都相同，这样做是可行的。但生产除了劳动还要使用土地和资本，劳动本身也有各种技能和工资。1870年代的边际革命之后（见经济思想史课程<a href="/het/zh/marginal-utility.html">专题8</a>），大多数经济学家不再相信劳动时间决定价值。如果劳动价值论被抛弃，比较优势是否也随之倒下？</p>
+  <p>出现了两种回应。马歇尔、埃奇沃思和弗兰克·陶西格代表的英美传统保留了古典框架，但补充了更完整的需求分析，并把“实际成本”看作既包括工人的牺牲，也包括资本所有者的牺牲。奥地利经济学家戈特弗里德·哈伯勒则完全抛开实际成本，用<b>机会成本</b>来重新表述这一理论。</p>
+
+  <h2 id="offer">2. 马歇尔、埃奇沃思与提供曲线</h2>
+  <p>阿尔弗雷德·马歇尔在1870年代建立了一套图示化的贸易理论。他的《对外贸易纯理论》各章于1879年私人印行，后来成为《货币、信用与商业》（1923）的附录。马歇尔把穆勒的相互需求（专题4）变成了<b>提供曲线</b>。每个国家的提供曲线表示，对于每一个进口商品数量，它愿意付出多少出口商品。两条曲线的交点就是双方的提供相互吻合之处，从原点到这一点的直线的斜率就是均衡的贸易条件。</p>
+  <p>弗朗西斯·伊西德罗·埃奇沃思在《国际价值理论》（1894）中完善了这一分析，并把它与自己关于交换和无差异曲线的研究联系起来。提供曲线使人们能够分析需求、增长或关税的变化如何移动贸易条件。例如，关税会使征税国的提供曲线向内移动：对于任何给定的进口量，它愿意付出的出口减少了；只要贸易伙伴的提供曲线不是完全平坦的，它的贸易条件就会改善。</p>
+
+  <h2 id="haberler">3. 哈伯勒的机会成本</h2>
+  <p>哈伯勒在1930年的一篇论文和《国际贸易理论》（1936）中证明，比较优势并不需要劳动价值论。重要的是一种商品以另一种商品表示的<b>机会成本</b>：一个国家多生产一单位呢绒必须放弃多少葡萄酒。这种权衡可以从该国的<b>生产可能性边界</b>上读出来；生产可能性边界表示一个国家用它的全部资源（无论这些资源是什么）能够生产的各种商品组合。如果一个国家在贸易前生产呢绒的机会成本低于它的贸易伙伴，它就在呢绒上具有比较优势。</p>
+  <p>批评者指出，这一重新表述代价不菲。李嘉图的理论是关于生产成本的理论。哈伯勒的机会成本以其他商品来衡量，它既反映技术，也同样反映需求和价格。雅各布·瓦伊纳（1937）反驳说，如果没有对生产背后实际牺牲的某种衡量，机会成本无法告诉我们贸易是否提高了福利。尽管如此，哈伯勒的版本占了上风，今天的教科书讲的就是它。</p>
+
+  <h2 id="increasing">4. 成本递增与贸易收益</h2>
+  <p>在李嘉图的例子中，成本是不变的，所以生产可能性边界是一条直线，各国会完全专业化。如果某些资源更适合生产一种商品而不是另一种，边界就会向外凸出：每多生产一单位呢绒所放弃的葡萄酒都比上一单位更多。在<b>机会成本递增</b>的情况下，一个国家只会部分专业化。它扩大出口产业，直到它的机会成本上升到世界价格，同时继续生产一些进口商品。</p>
+  <p>贸易收益于是分为两部分。<b>交换收益</b>来自这样一个事实：即使不改变生产，一个国家也可以按世界价格进行交换。<b>专业化收益</b>则来自它把生产转向具有比较优势的商品。</p>
+
+  <div class="box" id="ocbox">
+    <h3>成本递增：生产、消费与贸易收益</h3>
+    <p class="note">一个国家最多能生产10单位呢绒或10单位葡萄酒；它的边界向外凸出。没有贸易时，它在边界与本国价格线相切的那一点生产和消费。设定呢绒的世界价格（以葡萄酒表示），看看它在哪里生产、消费什么，以及福利提高了多少。</p>
+    <div class="grid2">
+      <div><label>呢绒的世界价格（每单位呢绒换得的葡萄酒）：<b id="wpv">1.60</b></label><input type="range" id="wp" min="0.4" max="2.5" step="0.05" value="1.6"></div>
+      <div><label>这个国家生产呢绒的适宜程度（最大呢绒产量）：<b id="acv">10</b></label><input type="range" id="ac" min="6" max="16" step="1" value="10"></div>
+    </div>
+    <svg id="occhart" viewBox="0 0 640 330" width="100%" role="img" aria-label="生产可能性边界、世界价格线以及生产点和消费点"></svg>
+    <div class="out" id="ocout"></div>
+  </div>
+
+  <h2 id="welfare">5. 福利与最优关税</h2>
+  <p>马歇尔还提出了<b>消费者剩余</b>，即消费者愿意支付的价格与实际支付的价格之差。它使人们能够把贸易收益和关税造成的损失衡量为需求曲线和供给曲线下的面积，这种方法后来成为贸易政策分析的标准方法（专题9）。</p>
+  <p>新工具为托伦斯的论证（专题4）提供了精确的形式。1906年，查尔斯·比克迪克证明，一个大到足以影响贸易条件的国家可以从小额关税中获益，因为一开始贸易条件的改善超过了贸易减少造成的损失。<b>最优关税</b>就是使这种收益最大化的关税；外国提供曲线的弹性越小，最优关税越高。经济学家提出了三点保留。这种收益是以贸易伙伴的损失为代价的，并会降低世界福利。小国无法利用它。贸易伙伴可能报复，最终可能使所有人都变得更糟，就像1930年代的关税战那样。1936年，阿巴·勒纳补充了对称定理：对进口统一征收关税与对出口统一征税具有相同的实际效果。</p>
+
+  <h2 id="taussig">6. 陶西格与经验的检验</h2>
+  <p>在哈佛，弗兰克·陶西格用数十年时间研究美国关税。他的《美国关税史》（1888年初版，此后多次再版）追溯了关税是如何制定的；他的《国际贸易》（1927）则试图用价格、黄金流动和汇率的证据来检验古典理论。陶西格接受比较优势，但对它的实际适用范围持谨慎态度。他认为十九世纪初美国的某些产业可以适用幼稚产业论，同时判断后来的大多数关税保护的是早已不需要保护的产业。他的学生雅各布·瓦伊纳的《国际贸易理论研究》（1937）成为古典贸易学说的标准史著。</p>
+  <div class="think"><b>思考题：</b>放弃劳动价值论，改变的是比较优势的含义，还是仅仅改变了它的证明方式？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">戈特弗里德·哈伯勒，《国际贸易理论》（<em>The Theory of International Trade with Its Applications to Commercial Policy</em>，1936），第12章。</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第12章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第11章。</p>
+  <p class="rd">雅各布·瓦伊纳，<em>Studies in the Theory of International Trade</em>（1937），第8章。</p>
+  <p><a href="index.html#topic-5">← 返回课程大纲中的专题5</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Frontier: (x/a)^2 + (y/b)^2 = 1, x = cloth, y = wine. Preferences: equal budget shares (utility = sqrt(cx·cy)).
+const b = 10;
+function prod(a, p) { const d = Math.sqrt(a*a*p*p + b*b); return [a*a*p/d, b*b/d]; }
+function oc() {
+  const p = +$('wp').value, a = +$('ac').value;
+  $('wpv').textContent = p.toFixed(2); $('acv').textContent = a;
+  const pa = b/a;                                    // autarky price of cloth in wine
+  const [xa, ya] = prod(a, pa), ua = Math.sqrt(xa*ya);
+  const [x, y] = prod(a, p), I = p*x + y, cx = I/(2*p), cy = I/2, u = Math.sqrt(cx*cy);
+  // exchange only: produce at autarky point, trade at world price
+  const I0 = p*xa + ya, u0 = Math.sqrt((I0/(2*p))*(I0/2));
+  const W = 640, H = 330, L = 44, R = 20, T = 14, B = 34, M = Math.max(16, cx*1.1, cy*1.1);
+  const X = v => L + v/M*(W-L-R), Y = v => H-B - v/M*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= M; v += 4) g += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`;
+  g += `<text x="${W-R}" y="${H-4}" text-anchor="end">呢绒</text><text x="${L+6}" y="${T+4}">葡萄酒</text>`;
+  let d = ''; for (let i = 0; i <= 60; i++) { const t = i/60*Math.PI/2; d += (i ? 'L' : 'M') + X(a*Math.sin(t)).toFixed(1) + ',' + Y(b*Math.cos(t)).toFixed(1); }
+  g += `<path d="${d}" fill="none" stroke="#023e8a" stroke-width="2.4"/><text x="${X(a*Math.sin(0.35))}" y="${Y(b*Math.cos(0.35))+18}" style="fill:#023e8a">边界</text>`;
+  // world price line through production point
+  const x0 = I/p; g += `<line x1="${X(0)}" y1="${Y(I)}" x2="${X(x0)}" y2="${Y(0)}" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/>`;
+  // autarky price line
+  const Ia = pa*xa + ya; g += `<line x1="${X(0)}" y1="${Y(Ia)}" x2="${X(Ia/pa)}" y2="${Y(0)}" stroke="#9aa3ad" stroke-width="1.2"/>`;
+  g += `<circle cx="${X(xa)}" cy="${Y(ya)}" r="5" fill="#5b6670"/><text x="${X(xa)-8}" y="${Y(ya)-8}" text-anchor="end">没有贸易</text>`;
+  g += `<circle cx="${X(x)}" cy="${Y(y)}" r="6" fill="#023e8a"/><text x="${X(x)+8}" y="${Y(y)+16}" style="fill:#023e8a">生产</text>`;
+  g += `<circle cx="${X(cx)}" cy="${Y(cy)}" r="6" fill="#c47a2c"/><text x="${X(cx)+8}" y="${Y(cy)-8}" style="fill:#c47a2c">消费</text>`;
+  if (Math.abs(x - cx) > 0.05) g += `<line x1="${X(x)}" y1="${Y(y)}" x2="${X(cx)}" y2="${Y(y)}" stroke="#7b5ea7" stroke-width="1.4"/><line x1="${X(cx)}" y1="${Y(y)}" x2="${X(cx)}" y2="${Y(cy)}" stroke="#7b5ea7" stroke-width="1.4"/>`;
+  $('occhart').innerHTML = g;
+  const f = v => v.toFixed(1), pct = v => ((v-1)*100).toFixed(1) + '%';
+  let msg = `没有贸易时，呢绒的价格是<b>${pa.toFixed(2)}</b>单位葡萄酒。`;
+  if (Math.abs(p - pa) < 0.03) msg += '世界价格等于本国价格，所以这个国家没有比较优势，也无法从贸易中获益。';
+  else {
+    const ex = x > cx ? 'cloth' : 'wine';
+    msg += `在${p.toFixed(2)}的世界价格下，呢绒在国外比在国内${p > pa ? '贵' : '便宜'}，所以这个国家在<b>${ex === 'cloth' ? '呢绒' : '葡萄酒'}</b>上具有比较优势。它生产${f(x)}单位呢绒和${f(y)}单位葡萄酒，${ex === 'cloth' ? '出口' + f(x-cx) + '单位呢绒，换回' + f(cy-y) + '单位葡萄酒' : '出口' + f(y-cy) + '单位葡萄酒，换回' + f(cx-x) + '单位呢绒'}（紫线）。它没有完全专业化：它继续生产一些${ex === 'cloth' ? '葡萄酒' : '呢绒'}，因为成本上升使进一步扩张无利可图。`;
+    msg += `与没有贸易相比，福利提高了<b>${pct(u/ua)}</b>：其中${pct(u0/ua)}仅来自交换，其余来自生产的转移。`;
+  }
+  $('ocout').innerHTML = msg;
+}
+['wp','ac'].forEach(i => $(i).addEventListener('input', oc)); oc();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

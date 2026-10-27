@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>旧制度主义与后发优势 | Lingyi Wei</title>
+  <meta name="description" content="关于制度主义的贸易与追赶研究的教学模块：凡勃伦论德意志帝国与“领先的代价”、康芒斯论制度、格申克龙的后发优势、阿布拉莫维茨的社会能力，以及追赶增长的互动模型。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/backwardness.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../backwardness.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题13</p>
+  <h1>旧制度主义与后发优势</h1>
+  <p class="lead">1914年以前，德国和美国超过了第一个工业国家英国。制度经济学家追问这是如何做到的。他们的答案围绕着技术的跨国借用，以及使一些后来者能够成功借用、另一些却更加落后的制度。本专题追溯这一论证从托斯丹·凡勃伦到亚历山大·格申克龙和摩西·阿布拉莫维茨的发展。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#inst">制度主义与贸易</a></li><li><a href="#veblen">凡勃伦论德意志帝国</a></li><li><a href="#commons">康芒斯与交换的规则</a></li><li><a href="#gersch">格申克龙的后发优势</a></li><li><a href="#abram">社会能力与趋同</a></li><li><a href="#model">追赶、领先与落后（互动）</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="inst">1. 制度主义与贸易</h2>
+  <p>美国制度经济学源于德国历史学派（专题10）和十九世纪后期美国的改革运动，它从未提出一套可与李嘉图或赫克歇尔—俄林相比的独立贸易理论。它的创始人托斯丹·凡勃伦、约翰·R. 康芒斯和韦斯利·米切尔反对这类理论的整个方法。他们认为，市场不是配置既定资源的自然机制，而是不断演化的制度：一整套随时间变化的习惯、法律和组织。技术是累积发展的，并跨越国界传播。要理解贸易和发展，就必须研究技术与制度在特定国家和时期如何相互作用。制度主义者对贸易理论的贡献，正是通过这种历史的、比较的方法，尤其是对后来者的研究而作出的。</p>
+
+  <h2 id="veblen">2. 凡勃伦论德意志帝国</h2>
+  <p>在第一次世界大战期间写成的《德意志帝国与工业革命》（1915）中，凡勃伦追问德国如何在几十年内成为工业强国。他的回答是，德国<b>借用</b>了英国花一个世纪发展起来的工业技术，却没有同时继承围绕这些技术在英国形成的制度和习惯。</p>
+  <p>凡勃伦认为，英国承受着<b>领先的代价</b>。它的铁路是用小车厢和窄隧道建成的，后来要改变就得付出巨大代价；它的工厂、城镇和商业惯例都是围绕旧技术成长起来的；它的商人阶级也染上了有闲绅士的习气。德国则可以立即大规模采用最新技术，而不必背负早期投资和惯例的包袱。但德国把现代技术与一个更古老的王朝国家结合在一起，把技术用于军事目的，凡勃伦认为这种结合既不稳定又很危险。他对日本也提出了类似的论证。</p>
+  <p>后来者可以通过借用领先者的技术跳过某些阶段，而领先者则可能被锁定在过时的安排之中，这一思想成为贸易、技术和增长研究中的一个持久主题。</p>
+
+  <h2 id="commons">3. 康芒斯与交换的规则</h2>
+  <p>威斯康星大学的约翰·R. 康芒斯把<b>交易</b>而不是商品作为经济学的基本单位。他认为，每一次交换都依赖于界定产权、执行合同和解决纠纷的运行规则，这些规则是由法院、立法机关和各种组织通过集体行动制定的。在《资本主义的法律基础》（1924）和《制度经济学》（1934）中，他追溯了美国法院如何随着经济变化而重新界定财产和合同。应用到贸易上，这意味着无论国内市场还是国际市场，都不是先于构成它们的规则而存在的。从十九世纪的商约到世贸组织（专题12），每一个贸易协定都是一套关于可以交易什么、以什么条件交易的运行规则。这一观点预示了波兰尼（专题14）和新制度经济学（专题15），尽管后者会用非常不同的工具来发展它。</p>
+
+  <h2 id="gersch">4. 格申克龙的后发优势</h2>
+  <p>出生于敖德萨、任教于哈佛的经济史学家亚历山大·格申克龙，在论文《经济落后的历史透视》（1952年首次发表，后作为他1962年同名文集的首篇重印）中推广了凡勃伦的洞见。通过比较英国、法国、德国、意大利、奥地利和俄国，他认为，一个国家开始工业化时越落后，它的工业化就与英国越不相同：</p>
+  <ul>
+    <li>它表现为突然的<b>大冲刺</b>，而不是渐进的过程，因为可能与现实之间的差距更大。</li>
+    <li>它侧重于使用最新技术的<b>大型工厂和企业</b>，侧重于钢铁和机械等<b>生产资料</b>，而不是消费品。</li>
+    <li>它对居民消费施加更大的压力，较少依靠农业作为不断扩大的市场。</li>
+    <li>它需要<b>特殊的制度</b>来动员市场本身无法提供的资本。在中等落后的德国，这是大型投资银行；在极度落后的俄国，连银行也筹集不到足够的资本，于是由国家本身来主导。</li>
+    <li>它需要一种强大的<b>意识形态</b>来激励这种努力，例如法国的圣西门主义或德国的民族主义。</li>
+  </ul>
+  <p>因此，落后既是障碍也是机遇。后来者可以从国外引进技术、资本和熟练工人。格申克龙的方法明确批评了阶段论（专题10），后者认为每个国家都必须经历与英国相同的阶段。后来者并不重复领先者的历史，而是用新的制度来替代它们所缺乏的前提条件。这一思想影响了后来对国家主导型发展的分析，包括对发展型国家的分析（专题11）。</p>
+
+  <h2 id="abram">5. 社会能力与趋同</h2>
+  <p>如果落后能带来优势，为什么不是所有穷国都能追上？摩西·阿布拉莫维茨在《追赶、领先与落后》（1986）中回答说，只有具备足够<b>社会能力</b>的国家，才能实现借用技术带来的快速增长潜力：教育、技术能力、能够动员资本的金融和商业制度，以及政治稳定。技术落后而社会先进的国家处于追赶的有利地位；两方面都落后的国家则不然。阿布拉莫维茨还指出，领先国家开发的技术适合它自己的条件，例如大市场和丰富的资本，可能并不适合追随者。经济学家后来称之为<b>条件趋同</b>：只有在考虑了制度和人力资本之后，穷国才倾向于比富国增长得更快。</p>
+
+  <div class="box" id="cbox">
+    <h3>追赶、领先与落后</h3>
+    <p class="note">领先国的收入每年增长2%。追随国的初始收入是领先国的五分之一。它的增长由两部分组成：基本增长率，以及与它可以借用的技术差距成正比、并按其社会能力加权的追赶红利。没有社会能力，差距就只是差距。</p>
+    <div class="grid2">
+      <div><label>追随国的社会能力：<b id="scv">0.6</b></label><input type="range" id="sc" min="0" max="1" step="0.05" value="0.6"></div>
+      <div><label>追随国的基本增长率：<b id="bgv">1.5%</b></label><input type="range" id="bg" min="0" max="3" step="0.1" value="1.5"></div>
+    </div>
+    <svg id="cchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="100年间领先国和追随国的收入"></svg>
+    <div class="out" id="cout"></div>
+  </div>
+  <div class="think"><b>思考题：</b>作为后来者，是优势还是劣势？由什么决定？</div>
+
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">托斯丹·凡勃伦，《德意志帝国与工业革命》（1915），选读。</p>
+  <p class="rd">亚历山大·格申克龙，《经济落后的历史透视》（1962），第1章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第12章。</p>
+  <p class="rd">摩西·阿布拉莫维茨，“Catching Up, Forging Ahead, and Falling Behind”，<em>Journal of Economic History</em>（1986）。</p>
+  <p><a href="index.html#topic-13">← 返回课程大纲中的专题13</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function catchup() {
+  const sc = +$('sc').value, bg = +$('bg').value/100;
+  $('scv').textContent = sc.toFixed(2).replace(/0$/, ''); $('bgv').textContent = (bg*100).toFixed(1) + '%';
+  const N = 100, gL = 0.02, beta = 0.04; let yL = 100, yF = 20; const L = [], F = [];
+  for (let t = 0; t <= N; t++) {
+    L.push(yL); F.push(yF);
+    const gap = Math.max(0, Math.log(yL/yF));
+    yL *= 1 + gL; yF *= 1 + bg + beta*sc*gap;
+  }
+  const W = 640, H = 260, Lm = 50, R = 20, T = 14, B = 34, M = Math.max(...L, ...F)*1.05;
+  const X = t => Lm + t/N*(W-Lm-R), Y = v => H-B - v/M*(H-B-T);
+  let g = `<line x1="${Lm}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${Lm}" y1="${T}" x2="${Lm}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  const step = M > 1200 ? 500 : M > 600 ? 200 : 100;
+  for (let v = 0; v <= M; v += step) g += `<text x="${Lm-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`;
+  [0,25,50,75,100].forEach(t => g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(Lm+W-R)/2}" y="${H-4}" text-anchor="middle">年</text>`;
+  const path = arr => arr.map((v, i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ');
+  g += `<path d="${path(L)}" fill="none" stroke="#023e8a" stroke-width="2.4"/><path d="${path(F)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/>`;
+  g += `<text x="${X(N)-4}" y="${Y(L[N])-8}" text-anchor="end" style="fill:#023e8a">领先国</text><text x="${X(N)-4}" y="${Y(F[N]) + (F[N] > L[N]*0.93 ? 16 : -8)}" text-anchor="end" style="fill:#c47a2c">追随国</text>`;
+  $('cchart').innerHTML = g;
+  const r0 = F[0]/L[0], r50 = F[50]/L[50], r100 = F[N]/L[N];
+  let msg = `追随国的收入相当于领先国的比例，从${Math.round(r0*100)}%变为50年后的<b>${Math.round(r50*100)}%</b>和100年后的<b>${Math.round(r100*100)}%</b>。`;
+  if (r100 > r0 + 0.3) msg += '它的社会能力使它能够利用后发优势：差距越大，增长越快，因此它向领先国趋同。';
+  else if (r100 > r0 + 0.02) msg += '它在追赶，但很慢：有限的社会能力使借用技术的大部分潜力没有得到利用。';
+  else if (r100 >= r0 - 0.02) msg += '差距大体保持不变。';
+  else msg += '<b>它进一步落后了</b>：没有借用技术的能力，差距就不能带来任何优势，而领先国更快的增长还在扩大差距。';
+  $('cout').innerHTML = msg;
+}
+['sc','bg'].forEach(i => $(i).addEventListener('input', catchup)); catchup();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

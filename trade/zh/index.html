@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>国际贸易理论 | Lingyi Wei</title>
+  <meta name="description" content="Lingyi Wei建设中的课程：从重商主义到全球价值链的国际贸易理论，包括流派互动时间轴、历史背景和二十五个专题的大纲。">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/trade/">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/trade/zh/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+/* Theories of International Trade course page (shares the HET course styles). */
+.het { --soft:#f5f6f8; --line:#b9bfc7; --faint:#8a929b; }
+.page.het { max-width: 1000px; padding-top: 40px; }
+.het .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.het > h1 { margin-bottom: 6px; }
+.het .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--bar); background: var(--blue-soft); border-radius: 999px; padding: 2px 12px; margin-bottom: 12px; }
+.het p, .het li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.het .qs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 6px; }
+.het .qs div { background: var(--blue-soft); border-radius: 10px; padding: 14px 16px; }
+.het .qs b { display: block; color: var(--bar); margin-bottom: 4px; }
+.het .qs span { font-size: 16px; }
+@media (max-width: 760px) { .het .qs { grid-template-columns: 1fr; } }
+.het ol.goals li { margin-bottom: 6px; }
+
+/* Timeline */
+.het .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: 12px; background: #fff; }
+.het svg { display: block; }
+.het .hint { font-size: 14px; color: var(--faint); margin: 6px 0 0; }
+.het svg .era rect { stroke: #fff; stroke-width: 1; }
+.het svg .era text { font-size: 11px; fill: #33404d; }
+.het svg .yr { font-size: 11px; fill: var(--faint); }
+.het svg .grid { stroke: #eef0f3; }
+.het svg .lane-label { font-size: 12.5px; font-weight: 600; fill: #3a4450; }
+.het svg .bar { cursor: pointer; }
+.het svg .bar rect { rx: 7; }
+.het svg .bar text { font-size: 12px; font-weight: 600; fill: #fff; pointer-events: none; }
+.het svg .bar:hover rect, .het svg .bar:focus rect { filter: brightness(1.08); }
+.het svg .bar.on rect { stroke: #111; stroke-width: 2; }
+.het svg .link { fill: none; stroke: #4a5560; stroke-width: 1.6; opacity: 0; transition: opacity .15s; pointer-events: none; }
+.het svg .link.on { opacity: 1; }
+.het svg .link.react { stroke-dasharray: 4 3; }
+.het svg .ev circle { fill: #023e8a; }
+.het svg .hev { cursor: default; }
+.het svg .hev:hover text, .het svg .hev:focus text { text-decoration: underline; }
+.het svg .ev text { font-size: 10.5px; fill: #023e8a; }
+.het .tip { position: fixed; z-index: 50; pointer-events: none; background: #1f2933; color: #fff; font-size: 13.5px; padding: 5px 10px; border-radius: 6px; max-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.het svg .eg { cursor: default; }
+.het svg .eg:hover rect, .het svg .eg:focus rect { filter: brightness(.95); stroke: #8a929b; stroke-width: 1; }
+.het .views { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 4px 0 10px; font-size: 15px; color: var(--muted); }
+.het .vbtn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.het .vbtn.on { background: var(--link); color: #fff; }
+.het .vlegend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--text); margin: 0 0 10px; }
+.het .vlegend[hidden], .het .tip[hidden] { display: none; }
+.het .vlegend span { display: inline-flex; align-items: center; gap: 6px; }
+.het .vlegend i, .het .vchip { display: inline-block; border-radius: 4px; }
+.het .vlegend i { width: 14px; height: 14px; }
+.het .vchip { color: #fff; font-size: 13px; font-weight: 600; padding: 1px 9px; margin-right: 4px; }
+.het .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.het .legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid #7d8794; vertical-align: middle; margin-right: 6px; }
+.het .legend i.d { border-top-style: dashed; }
+
+.het .panel { border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; margin-top: 16px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.het .panel h3 { font-size: 22px; margin: 0; color: var(--text); font-weight: 600; }
+.het .panel .yrs { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.het .one { margin: 12px 0 0; padding: 10px 14px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; }
+.het .row { display: flex; gap: 14px; margin-top: 12px; }
+.het .row .lb { flex: 0 0 104px; font-size: 14px; color: var(--faint); padding-top: 3px; }
+.het .row .tx { flex: 1; }
+@media (max-width: 560px) { .het .row { flex-direction: column; gap: 2px; } .het .row .lb { flex: none; } }
+
+/* Portraits */
+.het .people { display: flex; flex-wrap: wrap; gap: 12px 14px; }
+.het .person { display: flex; flex-direction: column; align-items: center; width: 86px; text-align: center; font-size: 13px; line-height: 1.25; color: var(--text); }
+.het .person img, .het .person .ini { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--blue-line); background: var(--blue-soft); margin-bottom: 5px; }
+.het .person .ini { display: grid; place-items: center; font-weight: 600; color: var(--bar); font-size: 18px; }
+.het .person small { color: var(--faint); font-size: 12px; }
+
+/* Topics */
+.het .part { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bar); margin: 30px 0 8px; }
+.het details.wk { border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 10px; background: #fff; }
+.het details.wk > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; gap: 14px; align-items: baseline; }
+.het details.wk > summary::-webkit-details-marker { display: none; }
+.het details.wk > summary::before { content: none; }
+.het .wn { flex: 0 0 64px; font-size: 13px; font-weight: 600; color: var(--bar); }
+.het .wt { flex: 1; font-weight: 600; font-size: 17.5px; color: var(--text); }
+.het .wt small { display: block; font-weight: 400; color: var(--muted); font-size: 14.5px; }
+.het .chev { color: var(--link); font-size: 14px; }
+.het details.wk[open] .chev { transform: rotate(90deg); }
+.het .wb { padding: 2px 18px 18px 94px; }
+@media (max-width: 640px) { .het .wb { padding: 2px 16px 16px; } .het .wn { flex-basis: 52px; } }
+.het .ctx { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin: 6px 0 4px; }
+.het .ctx b { color: var(--bar); }
+.het .ctx ul { margin: 6px 0 0; padding-left: 18px; }
+.het .wb h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin: 16px 0 8px; }
+.het .wb ul.ideas { padding-left: 20px; margin: 0; }
+.het .wb ul.ideas li { margin-bottom: 5px; }
+.het p.rl, .het .wb p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.het p.rd, .het .wb p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
+.het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
+.het .books li { margin-bottom: 6px; }
+.het .credits { font-size: 13px; color: var(--faint); }
+.het .credits p { text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page het">
+  <p class="crumb"><a class="langbtn" href="../index.html" lang="en" onclick="this.href += location.hash">English</a><a href="/resources.html">资源</a> › 国际贸易理论</p>
+  <span class="tag">课程建设中</span>
+  <h1>国际贸易理论</h1>
+  <p class="lead">从重商主义者到全球价值链：经济学家如何解释国家为什么进行贸易、谁从贸易中获益，以及贸易是帮助较穷的国家追赶，还是把它们固定在原来的位置上。</p>
+
+  <h2>课程简介</h2>
+  <p>每一种贸易理论都是为世界经济史上的某个特定时刻而写的。重商主义者为争夺殖民地和金银的君主写作；斯密和李嘉图写作时，英国正在成为“世界工厂”；汉密尔顿和李斯特为试图追赶英国的后来者写作；普雷维什为出口咖啡、铜和小麦的拉丁美洲国家写作；克鲁格曼写作时，世界贸易的大部分已经发生在相似的富国之间。本课程依次讲授每一种理论，把它放回产生它的历史条件之中，并追溯各传统之间至今仍在影响关税、贸易协定和产业政策之争的辩论。</p>
+  <p>贯穿整个课程的有三个问题：</p>
+  <div class="qs">
+    <div><b>收益</b><span>国家为什么进行贸易？贸易是否使每个国家都变得更好？</span></div>
+    <div><b>分配</b><span>在国家之间和国家内部，谁从贸易中获益，谁受损？</span></div>
+    <div><b>发展</b><span>贸易是帮助较穷的国家追赶，还是固化了国家之间的等级？</span></div>
+  </div>
+
+  <h2>学习目标</h2>
+  <p>完成本课程后，学生将能够：</p>
+  <ol class="goals">
+    <li>梳理从重商主义到当代的主要国际贸易理论，并把每种理论放回产生它的经济和政治条件之中。</li>
+    <li>亲手推演关键模型，包括比较优势、赫克歇尔—俄林模型、局部均衡中的关税、普雷维什—辛格的贸易条件，以及国际收支约束型增长。</li>
+    <li>比较不同传统如何回答关于贸易收益、收益分配及其对发展影响的同一组问题。</li>
+    <li>运用这些理论分析当今关于关税、贸易协定、产业政策和全球价值链的争论。</li>
+  </ol>
+
+  <h2>历史进程中的贸易理论</h2>
+  <p>每一根横条标出一个流派活跃的时期。顶部色带显示它们背后的世界经济时代，其下一行标出重大历史事件；把光标移到事件上可以查看详情。点击一个流派，可以查看它的主要思想家、核心观点，以及课程中讲授它的专题。</p>
+  <div class="views" role="group" aria-label="时间轴着色方式"><span>着色方式：</span><button type="button" class="vbtn on" data-view="school">按传统</button><button type="button" class="vbtn" data-view="value">按自由贸易立场</button></div>
+  <div class="vlegend" id="vlegend" hidden></div>
+  <div class="tip" id="tip" hidden></div>
+  <div class="scroll" id="tlwrap"><svg id="tl" role="img" aria-label="1340年至2025年国际贸易理论时间轴"></svg></div>
+  <p class="hint">在小屏幕上，可以左右滑动时间轴。</p>
+  <div class="legend"><span>把光标移到一个流派上，可以看到它的联系：</span><span><i></i>继承：在其基础上发展</span><span><i class="d"></i>反对：针对其展开批评</span></div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+  <p>如需以家族树的形式简要了解这些流派，请参阅<a href="/trade-theory-tree.html">贸易理论谱系图</a>（英文）。</p>
+
+  <h2>课程大纲</h2>
+  <p>二十五个专题，分为六个部分。每个专题都可以单独阅读。点击一个专题，可以查看它的历史背景、主要思想家、核心观点和阅读材料。</p>
+  <div id="topics"></div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">主要教材</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide: An Intellectual History of Free Trade</em>（普林斯顿大学出版社，1996）。</p>
+  <p class="rl">辅助教材</p>
+  <p class="rd">保罗·克鲁格曼、茅瑞斯·奥伯斯法尔德、马克·梅里兹，《国际经济学：理论与政策》（培生），贸易理论和贸易政策各章。</p>
+  <p class="rd">张夏准，《富国陷阱：发达国家为何踢开梯子？》（<em>Kicking Away the Ladder</em>，Anthem，2002）。</p>
+  <p class="rd">埃里克·赖纳特，《富国为什么富，穷国为什么穷》（<em>How Rich Countries Got Rich … and Why Poor Countries Stay Poor</em>，Constable，2007）。</p>
+  <p class="rd">丹尼·罗德里克，《全球化的悖论》（<em>The Globalization Paradox</em>，Norton，2011）。</p>
+  <p class="rd">安瓦尔·谢克，《资本主义：竞争、冲突与危机》（<em>Capitalism: Competition, Conflict, Crises</em>，牛津大学出版社，2016），第11章。</p>
+  <p class="rl">原著选读</p>
+  <p class="rd">孟、休谟、斯密、李嘉图、穆勒、李斯特、俄林、凯恩斯、普雷维什、伊曼纽尔和沃勒斯坦著作的简短选读。</p>
+
+  <h2>图片来源</h2>
+  <div class="credits" id="credits"></div>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script src="/timeline-history.js"></script>
+<script>
+const P = {"Thomas Mun": null, "William Petty": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/SirWilliamPetty.jpg/250px-SirWilliamPetty.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:SirWilliamPetty.jpg", "lic": "Public domain", "by": "Isaac Fuller"}, "François Quesnay": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_%281694-1774%29%2C_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg/250px-Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_%281694-1774%29%2C_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Anonymous_-_Portrait_du_docteur_Fran%C3%A7ois_Quesnay_(1694-1774),_m%C3%A9decin_et_%C3%A9conomiste_-_P683_-_Mus%C3%A9e_Carnavalet_(cropped).jpg", "lic": "Public domain", "by": ""}, "Adam Smith": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Adam_Smith_The_Muir_portrait.jpg/250px-Adam_Smith_The_Muir_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Adam_Smith_The_Muir_portrait.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Thomas Malthus": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg/250px-Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg", "lic": "CC BY 4.0", "by": "John Linnell"}, "David Ricardo": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg/250px-Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg", "lic": "Public domain", "by": "Thomas Phillips"}, "Jean-Baptiste Say": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Jean-Baptiste_Say.jpg/250px-Jean-Baptiste_Say.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Say.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Jeremy Bentham": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Jeremy_Bentham_by_Henry_William_Pickersgill.jpg/250px-Jeremy_Bentham_by_Henry_William_Pickersgill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jeremy_Bentham_by_Henry_William_Pickersgill.jpg", "lic": "Public domain", "by": "Henry William Pickersgill"}, "Nassau Senior": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Nassau_William_Senior_%28portrait%29.jpg/250px-Nassau_William_Senior_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nassau_William_Senior_(portrait).jpg", "lic": "Public domain", "by": "Original uploader was user:Milneg at en.wikipedia"}, "William Thompson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chinnery_Thompson.jpg/250px-Chinnery_Thompson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Chinnery_Thompson.jpg", "lic": "Public domain", "by": "George Chinnery"}, "Thomas Hodgskin": null, "John Stuart Mill": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/250px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg", "lic": "Public domain", "by": "London Stereoscopic Company"}, "Karl Marx": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/250px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png", "lic": "Public domain", "by": "John Jabez Edwin Mayall"}, "Friedrich Engels": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Friedrich_Engels_portrait_%28cropped%29.jpg/250px-Friedrich_Engels_portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_Engels_portrait_(cropped).jpg", "lic": "Public domain", "by": "William Hall (1826–ca. 1898) (cropped and sepia tone removed)"}, "W. S. Jevons": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/William_Stanley_Jevons_portrait_extract.jpg/250px-William_Stanley_Jevons_portrait_extract.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:William_Stanley_Jevons_portrait_extract.jpg", "lic": "CC BY-SA 4.0", "by": "Unknown (via University of Manchester Libraries)"}, "Carl Menger": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Menger_Portrait_ONB_cropped.png/250px-Carl_Menger_Portrait_ONB_cropped.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Carl_Menger_Portrait_ONB_cropped.png", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Léon Walras": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Portrait_of_L%C3%A9on_Walras_1862_extract.png/250px-Portrait_of_L%C3%A9on_Walras_1862_extract.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_L%C3%A9on_Walras_1862_extract.png", "lic": "CC BY-SA 4.0", "by": "Philippe-Félix Dupuis (painter). Photographic reproduction by Claude Bornand."}, "Alfred Marshall": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Alfred_Marshall_1891.jpg/250px-Alfred_Marshall_1891.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Alfred_Marshall_1891.jpg", "lic": "Public domain", "by": "Elliott and Fry (London W., 55 Baker Street)"}, "John Bates Clark": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/John_Bates_Clark.jpg/250px-John_Bates_Clark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Bates_Clark.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Eugen von Böhm-Bawerk": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png/250px-Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Eugen_von_B%C3%B6hm-Bawerk_1896_Portrait_cropped.png", "lic": "Public domain", "by": "Josef Löwy"}, "Vilfredo Pareto": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Vilfredo_Pareto_1870s2.jpg/250px-Vilfredo_Pareto_1870s2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Vilfredo_Pareto_1870s2.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "A. C. Pigou": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg/250px-Portrait_of_Arthur_Cecil_Pigou%2C_c._1918-1921.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_Arthur_Cecil_Pigou,_c._1918-1921.jpg", "lic": "Public domain", "by": "John Palmer Clarke"}, "Thorstein Veblen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Veblen3a.jpg/250px-Veblen3a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Veblen3a.jpg", "lic": "Public domain", "by": ""}, "J. A. Hobson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/J._A._Hobson.jpg/250px-J._A._Hobson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:J._A._Hobson.jpg", "lic": "Public domain", "by": "Elliott &amp; Fry"}, "Rosa Luxemburg": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Rosa_Luxemburg_%28cropped%29.jpg/250px-Rosa_Luxemburg_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Rosa_Luxemburg_(cropped).jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Vladimir Lenin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Lenin_in_1920_%28cropped%29.jpg/250px-Lenin_in_1920_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Lenin_in_1920_(cropped).jpg", "lic": "Public domain", "by": "Unknown, presumably official"}, "John Maynard Keynes": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/John_Maynard_Keynes_%281929%29.jpg/250px-John_Maynard_Keynes_%281929%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes_(1929).jpg", "lic": "Public domain", "by": "Unknown, dedicated to Bettmann Archive"}, "Michał Kalecki": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Michal_Kalecki.jpg/250px-Michal_Kalecki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Michal_Kalecki.jpg", "lic": "CC BY 2.5 es", "by": "Manuel García Jódar"}, "Piero Sraffa": null, "Joan Robinson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Joan_Robinson_%281973%29.jpg/250px-Joan_Robinson_%281973%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joan_Robinson_(1973).jpg", "lic": "CC0", "by": "W. Punt for Anefo"}, "Joseph Schumpeter": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Joseph_Schumpeter_1945_Bachrach_portrait.png/250px-Joseph_Schumpeter_1945_Bachrach_portrait.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joseph_Schumpeter_1945_Bachrach_portrait.png", "lic": "Public domain", "by": "Louis Fabian Bachrach"}, "Friedrich Hayek": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Friedrich_Hayek_portrait.jpg/250px-Friedrich_Hayek_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_Hayek_portrait.jpg", "lic": "CC BY-SA 3.0", "by": "The original uploader was DickClarkMises at English Wikipedia."}, "Ludwig von Mises": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Ludwig_von_Mises_%283x4_cropped%29.jpg/250px-Ludwig_von_Mises_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Ludwig_von_Mises_(3x4_cropped).jpg", "lic": "CC BY-SA 3.0", "by": "Ludwig von Mises Institute"}, "Milton Friedman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Portrait_of_Milton_Friedman_%284x5_cropped%29.jpg/250px-Portrait_of_Milton_Friedman_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_of_Milton_Friedman_(4x5_cropped).jpg", "lic": "Public domain", "by": "Bachrach Studios"}, "Paul Samuelson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Paul_A._Samuelson%2C_economist%2C_edited.jpg/250px-Paul_A._Samuelson%2C_economist%2C_edited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Paul_A._Samuelson,_economist,_edited.jpg", "lic": "Public domain", "by": "Gotfryd, Bernard, photographer"}, "Hyman Minsky": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/HymanMinsky-1.jpg/250px-HymanMinsky-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:HymanMinsky-1.jpg", "lic": "CC BY-SA 4.0", "by": "Pontificador"}, "Friedrich List": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Friedrich_List_1845_crop.jpg/250px-Friedrich_List_1845_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Friedrich_List_1845_crop.jpg", "lic": "Public domain", "by": "Josef Kriehuber"}, "Alexander Hamilton": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Alexander_Hamilton_%28NPG%29.jpg/250px-Alexander_Hamilton_%28NPG%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Alexander_Hamilton_(NPG).jpg", "lic": "Public domain", "by": "John Trumbull / Giuseppe Ceracchi"}, "W. Arthur Lewis": null, "Raúl Prebisch": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Raul_Prebisch_%28cropped%29.tif/lossy-page1-250px-Raul_Prebisch_%28cropped%29.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Raul_Prebisch_(cropped).tif", "lic": "Public domain", "by": "UnknownUnknown"}, "Herbert Simon": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Herbert_Simon%2C_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg/250px-Herbert_Simon%2C_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Herbert_Simon,_RIT_NandE_Vol13Num11_1981_Mar19_Complete.jpg", "lic": "Public domain", "by": "Rochester Institute of Technology"}, "Douglass North": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Douglass_North.jpg/250px-Douglass_North.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Douglass_North.jpg", "lic": "CC BY 2.0", "by": "UNU-WIDER"}, "Robert Solow": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Robert_Solow_by_Olaf_Storbeck_%28cropped%29.jpg/250px-Robert_Solow_by_Olaf_Storbeck_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_Solow_by_Olaf_Storbeck_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "Olaf Storbeck from Düsseldorf, Deutschland"}, "Irving Fisher": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Irvingfisher.jpg/250px-Irvingfisher.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Irvingfisher.jpg", "lic": "Public domain", "by": "Bain News Service"}, "Oskar Lange": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Oskar_Lange_20-65.jpg/250px-Oskar_Lange_20-65.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Oskar_Lange_20-65.jpg", "lic": "Public domain", "by": "Władysław Miernicki"}, "Paul Sweezy": null, "Sismondi": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Jean_Charles_Simonde_de_Sismondi_%281773-1842%29.png/250px-Jean_Charles_Simonde_de_Sismondi_%281773-1842%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jean_Charles_Simonde_de_Sismondi_(1773-1842).png", "lic": "Public domain", "by": "Amélie Munier-Romilly"}, "Henry George": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Henry_George_c1885_retouched.jpg/250px-Henry_George_c1885_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Henry_George_c1885_retouched.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Frank Knight": null, "George Stigler": null, "Gary Becker": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/GaryBecker-May24-2008.jpg/250px-GaryBecker-May24-2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:GaryBecker-May24-2008.jpg", "lic": "Public domain", "by": "MAR"}, "Ronald Coase": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Coase_scan_11_edited_%28cropped%29.jpg/250px-Coase_scan_11_edited_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Coase_scan_11_edited_(cropped).jpg", "lic": "Attribution", "by": "University of Chicago Law School"}, "Robert Lucas": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/La_Revoluci%C3%B3n_Industrial_Pasado_y_Futuro%2C_Robert_E._Lucas_Jr._screenshot_%28cropped%29.jpg/250px-La_Revoluci%C3%B3n_Industrial_Pasado_y_Futuro%2C_Robert_E._Lucas_Jr._screenshot_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:La_Revoluci%C3%B3n_Industrial_Pasado_y_Futuro,_Robert_E._Lucas_Jr._screenshot_(cropped).jpg", "lic": "CC BY 3.0", "by": "Centro de Estudios Públicos"}, "Israel Kirzner": {"img": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Israel_Kirzner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:Israel_Kirzner.jpg", "lic": "CC BY-SA 3.0", "by": "Mises Institute"}, "Murray Rothbard": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Murray_Rothbard_Portrait.jpg/250px-Murray_Rothbard_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Murray_Rothbard_Portrait.jpg", "lic": "CC BY 3.0", "by": "Ludwig von Mises Institute"}, "Jacob Viner": null, "Henry Simons": {"img": "https://upload.wikimedia.org/wikipedia/commons/8/85/%D0%93%D0%B5%D0%BD%D1%80%D1%96_%D0%9A%D0%B0%D0%BB%D0%B2%D0%B5%D1%80%D1%82_%D0%A1%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D1%81.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B5%D0%BD%D1%80%D1%96_%D0%9A%D0%B0%D0%BB%D0%B2%D0%B5%D1%80%D1%82_%D0%A1%D0%B0%D0%B9%D0%BC%D0%BE%D0%BD%D1%81.jpg", "lic": "CC BY-SA 4.0", "by": "Moshko Zhyd"}, "Robert Owen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Robert_Owen_by_William_Henry_Brooke.jpg/250px-Robert_Owen_by_William_Henry_Brooke.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_Owen_by_William_Henry_Brooke.jpg", "lic": "Public domain", "by": "William Henry Brooke"}, "Henri de Saint-Simon": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Portrait_de_Claude-Henri_de_Rouvroy%2C_comte_de_Saint-Simon.jpg/250px-Portrait_de_Claude-Henri_de_Rouvroy%2C_comte_de_Saint-Simon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_de_Claude-Henri_de_Rouvroy,_comte_de_Saint-Simon.jpg", "lic": "Public domain", "by": "After Adélaïde Labille-Guiard"}, "Charles Fourier": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Portrait_painting_of_Charles_Fourier_by_Jean_Gigoux_%E2%80%94_1835_%283x4_cropped%29.jpg/250px-Portrait_painting_of_Charles_Fourier_by_Jean_Gigoux_%E2%80%94_1835_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_painting_of_Charles_Fourier_by_Jean_Gigoux_%E2%80%94_1835_(3x4_cropped).jpg", "lic": "CC BY-SA 4.0", "by": "Jean Gigoux"}, "Frédéric Bastiat": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Bastiat.jpg/250px-Bastiat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Bastiat.jpg", "lic": "Public domain", "by": "Émile Desmaisons. Lithograph by Auguste-Hilaire Léveillé."}, "F. Y. Edgeworth": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Edgeworth.jpeg/250px-Edgeworth.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Edgeworth.jpeg", "lic": "Public domain", "by": ""}, "Clarence Ayres": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Clarence_Edwin_Ayres.jpg/250px-Clarence_Edwin_Ayres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Clarence_Edwin_Ayres.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Harry Braverman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Harry_Braverman_1975.jpg/250px-Harry_Braverman_1975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Harry_Braverman_1975.jpg", "lic": "Public domain", "by": "David Tinney"}, "G. A. Cohen": null, "Ladislaus Bortkiewicz": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Ladislaus_Bortkiewicz.jpg/250px-Ladislaus_Bortkiewicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Ladislaus_Bortkiewicz.jpg", "lic": "Public domain", "by": "no conegut"}, "Paul Baran": null, "Anwar Shaikh": null, "Joseph Stiglitz": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Joseph_E._Stiglitz%2C_2019_%28cropped%29.jpg/250px-Joseph_E._Stiglitz%2C_2019_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joseph_E._Stiglitz,_2019_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "Jérémy Barande"}, "George Akerlof": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/George_Akerlof_%28cropped%29.jpg/250px-George_Akerlof_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:George_Akerlof_(cropped).jpg", "lic": "CC BY 3.0", "by": "Yan Chi Vinci Chow"}, "Paul Krugman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/P20230814AS-0367_%28cropped%29.jpg/250px-P20230814AS-0367_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:P20230814AS-0367_(cropped).jpg", "lic": "Public domain", "by": "The White House"}, "Simon Kuznets": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Simon_Kuznets_1971b.jpg/250px-Simon_Kuznets_1971b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Simon_Kuznets_1971b.jpg", "lic": "Public domain", "by": "Unknown (Associated Press)"}, "N. Gregory Mankiw": {"img": "https://upload.wikimedia.org/wikipedia/commons/9/91/GregoryMankiw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:GregoryMankiw.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Olivier Blanchard": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Oliver_Blanchard%2C_IMF_98BlanchardWEO1_lg.jpg/250px-Oliver_Blanchard%2C_IMF_98BlanchardWEO1_lg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Oliver_Blanchard,_IMF_98BlanchardWEO1_lg.jpg", "lic": "Public domain", "by": "IMF Staff Photographer Eugene Salazar"}, "Janet Yellen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Secretary_Janet_Yellen_portrait.jpg/250px-Secretary_Janet_Yellen_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Secretary_Janet_Yellen_portrait.jpg", "lic": "Public domain", "by": "US Department of the Treasury"}, "Rudolf Hilferding": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Rudolf_Hilferding.jpg/250px-Rudolf_Hilferding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Rudolf_Hilferding.jpg", "lic": "Public domain", "by": "AnonymousUnknown author"}, "Nikolai Bukharin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/N.I._Bukharin_%281888-1938%29_Crop.jpg/250px-N.I._Bukharin_%281888-1938%29_Crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:N.I._Bukharin_(1888-1938)_Crop.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Andre Gunder Frank": null, "Fernando Henrique Cardoso": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Fernando_Henrique_Cardoso_%281999%29.jpg/250px-Fernando_Henrique_Cardoso_%281999%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Fernando_Henrique_Cardoso_(1999).jpg", "lic": "CC BY 3.0 br", "by": "Agência Brasil"}, "Theotonio dos Santos": null, "Samir Amin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Samir_Amin_%28cropped%29.jpg/250px-Samir_Amin_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Samir_Amin_(cropped).jpg", "lic": "CC BY 3.0", "by": "Rosa-Luxemburg-Stiftung"}, "Arghiri Emmanuel": null, "Immanuel Wallerstein": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Immanuel_Wallerstein.2008.jpg/250px-Immanuel_Wallerstein.2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Immanuel_Wallerstein.2008.jpg", "lic": "CC BY-SA 3.0", "by": "Alexei Kouprianov"}, "Giovanni Arrighi": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/2007_Giovanni_Arrighi_lecture_in_South_Africa.jpg/250px-2007_Giovanni_Arrighi_lecture_in_South_Africa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:2007_Giovanni_Arrighi_lecture_in_South_Africa.jpg", "lic": "CC BY-SA 3.0", "by": "Kkharris"}, "Christopher Chase-Dunn": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Chris_chase-dunn_self-photo.JPG/250px-Chris_chase-dunn_self-photo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Chris_chase-dunn_self-photo.JPG", "lic": "CC BY-SA 4.0", "by": "Christopher Chase-Dunn"}, "William Baumol": null, "William Nordhaus": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/William_Nordhaus_EM1B6043_%2846234132921%29.jpg/250px-William_Nordhaus_EM1B6043_%2846234132921%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:William_Nordhaus_EM1B6043_(46234132921).jpg", "lic": "CC BY 2.0", "by": "Bengt Nyman"}, "Nicholas Stern": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Nicholas_Herbert_Stern%2C_Baron_Stern_of_Brentford.jpg/250px-Nicholas_Herbert_Stern%2C_Baron_Stern_of_Brentford.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nicholas_Herbert_Stern,_Baron_Stern_of_Brentford.jpg", "lic": "CC BY-SA 4.0", "by": "Royal Society uploader"}, "Kenneth Boulding": null, "Nicholas Georgescu-Roegen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Nicholas_Georgescu-Roegen_%281974%29.jpg/250px-Nicholas_Georgescu-Roegen_%281974%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nicholas_Georgescu-Roegen_(1974).jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Herman Daly": null, "Robert Costanza": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Robert_Costanza_2016.jpg/250px-Robert_Costanza_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_Costanza_2016.jpg", "lic": "CC BY-SA 4.0", "by": "Bahudhara"}, "Joan Martínez-Alier": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Joan_martinez_alier.png/250px-Joan_martinez_alier.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Joan_martinez_alier.png", "lic": "CC BY-SA 3.0", "by": "Txolo"}, "Charlotte Perkins Gilman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Charlotte_Perkins_Gilman_c._1900.jpg/250px-Charlotte_Perkins_Gilman_c._1900.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Charlotte_Perkins_Gilman_c._1900.jpg", "lic": "Public domain", "by": "Charles Fletcher Lummis / Adam Cuerden"}, "Margaret Reid": null, "Silvia Federici": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/La_escritora_y_activista_feminista_Silvia_Federici_%28cropped%29.jpg/250px-La_escritora_y_activista_feminista_Silvia_Federici_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:La_escritora_y_activista_feminista_Silvia_Federici_(cropped).jpg", "lic": "CC BY-SA 3.0 es", "by": "Marta Jara (eldiario.es)"}, "Marilyn Waring": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Marilyn_Waring_CNZM_%28cropped%29.jpg/250px-Marilyn_Waring_CNZM_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Marilyn_Waring_CNZM_(cropped).jpg", "lic": "CC BY 4.0", "by": "New Zealand Government, Office of the Governor-General"}, "Nancy Folbre": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Nancy_Folbre.jpg/250px-Nancy_Folbre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nancy_Folbre.jpg", "lic": "CC BY-SA 3.0", "by": "Nancy Folbre"}, "Diane Elson": null, "Bina Agarwal": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bina_Agarwal%2C_2012_%28cropped%29.jpg/250px-Bina_Agarwal%2C_2012_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Bina_Agarwal,_2012_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "World Economic Forum from Cologny, Switzerland"}, "John Hicks": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/John_Hicks_1972.jpg/250px-John_Hicks_1972.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Hicks_1972.jpg", "lic": "Public domain", "by": "Unknown (Associated Press)"}, "Alvin Hansen": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Prof._Alvin_W._Hansen_of_Harvard_U._before_Senate_Unemployment_%26_Relief_Comm._Hearings_LCCN2016878028_%28cropped%29.jpg/250px-Prof._Alvin_W._Hansen_of_Harvard_U._before_Senate_Unemployment_%26_Relief_Comm._Hearings_LCCN2016878028_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Prof._Alvin_W._Hansen_of_Harvard_U._before_Senate_Unemployment_%26_Relief_Comm._Hearings_LCCN2016878028_(cropped).jpg", "lic": "Public domain", "by": "Harris &amp; Ewing, photographer"}, "Franco Modigliani": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Franco_Modigliani.jpg/250px-Franco_Modigliani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Franco_Modigliani.jpg", "lic": "CC BY-SA 3.0", "by": "Umofomia"}, "James Tobin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/James_Tobin.png/250px-James_Tobin.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:James_Tobin.png", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Nicholas Kaldor": {"img": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Nicholas_Kaldor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:Nicholas_Kaldor.jpg", "lic": "Public domain", "by": "London School of Economics"}, "Luigi Pasinetti": {"img": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Luigi_L._Pasinetti.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:Luigi_L._Pasinetti.png", "lic": "CC BY-SA 3.0", "by": "Javier López Bernardo"}, "Wynne Godley": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Wynne_Godley.png/250px-Wynne_Godley.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Wynne_Godley.png", "lic": "CC BY-SA 3.0", "by": "Javier López Bernardo"}, "John R. Commons": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/John_R_Commons_001.jpg/250px-John_R_Commons_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_R_Commons_001.jpg", "lic": "Public domain", "by": "AnonymousUnknown author"}, "Wesley Mitchell": {"img": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wesley_Clair_Mitchell.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "src": "https://commons.wikimedia.org/wiki/File:Wesley_Clair_Mitchell.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "John Kenneth Galbraith": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/John_Kenneth_Galbraith_from_the_back_cover_of_%22The_Affluent_Society%22.jpeg/250px-John_Kenneth_Galbraith_from_the_back_cover_of_%22The_Affluent_Society%22.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:John_Kenneth_Galbraith_from_the_back_cover_of_%22The_Affluent_Society%22.jpeg", "lic": "Public domain", "by": "Published by Houghton Mifflin Company. Photographer is unknown."}, "Daniel Kahneman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Daniel_Kahneman_%283283955327%29_%28cropped%29.jpg/250px-Daniel_Kahneman_%283283955327%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Daniel_Kahneman_(3283955327)_(cropped).jpg", "lic": "CC BY-SA 2.0", "by": "nrkbeta"}, "Amos Tversky": null, "Richard Thaler": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Richard_Thaler_Chatham.jpg/250px-Richard_Thaler_Chatham.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Richard_Thaler_Chatham.jpg", "lic": "CC BY 2.0", "by": "Chatham House"}, "Robert Shiller": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Robert_J._Shiller_2017.jpg/250px-Robert_J._Shiller_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Robert_J._Shiller_2017.jpg", "lic": "CC BY 2.0", "by": "w:en:Presidential Office Building, Taiwan"}, "Vernon Smith": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Vernon_L._Smith_2011.jpg/250px-Vernon_L._Smith_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Vernon_L._Smith_2011.jpg", "lic": "CC BY-SA 3.0", "by": "Dstringer71"}, "Oliver Williamson": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Nobel_Prize_2009-Press_Conference_KVA-42.jpg/250px-Nobel_Prize_2009-Press_Conference_KVA-42.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nobel_Prize_2009-Press_Conference_KVA-42.jpg", "lic": "CC BY-SA 3.0", "by": "Prolineserver (talk)"}, "Elinor Ostrom": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Nobel_Prize_2009-Press_Conference_KVA-30.jpg/250px-Nobel_Prize_2009-Press_Conference_KVA-30.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Nobel_Prize_2009-Press_Conference_KVA-30.jpg", "lic": "CC BY-SA 3.0", "by": "Holger Motzkau"}, "Daron Acemoglu": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Acemoglu_2016_%283x4_cropped%29.png/250px-Acemoglu_2016_%283x4_cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Acemoglu_2016_(3x4_cropped).png", "lic": "CC BY 3.0", "by": "MeJudice"}, "Chalmers Johnson": null, "Alice Amsden": null, "Ha-Joon Chang": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Ha-Joon_Chang_profile_cropped.jpg/250px-Ha-Joon_Chang_profile_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Ha-Joon_Chang_profile_cropped.jpg", "lic": "CC BY-SA 3.0", "by": "Discott"}, "Dani Rodrik": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Dani_Rodrik%2C_2012_%28cropped%29.jpg/250px-Dani_Rodrik%2C_2012_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Dani_Rodrik,_2012_(cropped).jpg", "lic": "CC BY-SA 3.0", "by": "Andrzej Barabasz"}, "Richard Nelson": null, "Carlota Perez": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Perez_on_16_January_2015.jpg/250px-Perez_on_16_January_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Perez_on_16_January_2015.jpg", "lic": "CC BY-SA 4.0", "by": "Ângela Campos"}, "Paul Romer": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Paul_Romer_in_2005.jpg/250px-Paul_Romer_in_2005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Paul_Romer_in_2005.jpg", "lic": "CC BY-SA 3.0", "by": "The original uploader was Doerrb at English Wikipedia."}, "Philippe Aghion": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Phillipe_Aghion_-_The_State_of_France_%28cropped%2Boptimised%29.jpg/250px-Phillipe_Aghion_-_The_State_of_France_%28cropped%2Boptimised%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Phillipe_Aghion_-_The_State_of_France_(cropped%2Boptimised).jpg", "lic": "CC BY-SA 2.0", "by": "File:Phillipe Aghion - The State of France (cropped).jpg: Center for the Study of Europe Boston Univ"}, "Joel Mokyr": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Professor_Joel_Mokyr.jpg/250px-Professor_Joel_Mokyr.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Professor_Joel_Mokyr.jpg", "lic": "CC BY-SA 3.0", "by": "Joel Mokyr"}, "Mariana Mazzucato": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Mariana_Mazzucato_2016_%28cropped%29.jpg/250px-Mariana_Mazzucato_2016_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Mariana_Mazzucato_2016_(cropped).jpg", "lic": "CC BY 2.0", "by": "Simon Fraser University - Communications &amp; Marketing"}, "Claudia Goldin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Claudia_Goldin_%283x4_cropped%29.jpg/250px-Claudia_Goldin_%283x4_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Claudia_Goldin_(3x4_cropped).jpg", "lic": "CC BY-SA 4.0", "by": "Editing1088"}, "Thomas Piketty": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Thomas_Piketty%2C_2015_%28cropped%29.jpg/250px-Thomas_Piketty%2C_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Thomas_Piketty,_2015_(cropped).jpg", "lic": "CC BY 2.0", "by": "Gobierno de Chile"}, "Walter Rodney": null, "Jean-Baptiste Colbert": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Colbert1666.jpg/250px-Colbert1666.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Colbert1666.jpg", "lic": "Public domain", "by": "Philippe de Champaigne"}, "Josiah Child": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Sir_Josiah_Child%2C_Bt_by_John_Riley.jpg/250px-Sir_Josiah_Child%2C_Bt_by_John_Riley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Sir_Josiah_Child,_Bt_by_John_Riley.jpg", "lic": "Public domain", "by": "John Riley"}, "A. R. J. Turgot": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Portrait_de_Turgot.jpg/250px-Portrait_de_Turgot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Portrait_de_Turgot.jpg", "lic": "Public domain", "by": "François-Hubert Drouais"}, "David Hume": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/David_Hume_Ramsay.jpg/250px-David_Hume_Ramsay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:David_Hume_Ramsay.jpg", "lic": "Public domain", "by": "Allan Ramsay"}, "Robert Torrens": null, "Gottfried Haberler": null, "Eli Heckscher": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Eli_Heckscher.jpg/250px-Eli_Heckscher.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Eli_Heckscher.jpg", "lic": "Public domain", "by": "user:Slarre"}, "Bertil Ohlin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/BertilOhlin.jpg/250px-BertilOhlin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:BertilOhlin.jpg", "lic": "CC BY-SA 3.0", "by": "Jan de Meyere"}, "Wolfgang Stolper": null, "Tadeusz Rybczynski": null, "Wassily Leontief": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Wassily_Leontief_1973.jpg/250px-Wassily_Leontief_1973.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Wassily_Leontief_1973.jpg", "lic": "Public domain", "by": "Keystone"}, "Elhanan Helpman": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/2008_-_Elhanan_Helpman.jpg/250px-2008_-_Elhanan_Helpman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:2008_-_Elhanan_Helpman.jpg", "lic": "CC BY 3.0", "by": "Elhanan Helpman"}, "Avinash Dixit": null, "Marc Melitz": null, "Samuel Kortum": null, "Jonathan Eaton": null, "David Autor": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/David_Autor_Lake_Como.jpg/250px-David_Autor_Lake_Como.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:David_Autor_Lake_Como.jpg", "lic": "CC BY 4.0", "by": "MysteriousTrousers"}, "Henry Carey": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Henry_charles_carey.jpg/250px-Henry_charles_carey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Henry_charles_carey.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Wilhelm Roscher": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Wilhelm_roscher.jpg/250px-Wilhelm_roscher.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Wilhelm_roscher.jpg", "lic": "Public domain", "by": "Moritz Klinkicht"}, "Gustav Schmoller": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Gustav_von_Schmoller_by_Nicola_Perscheid_c1908.jpg/250px-Gustav_von_Schmoller_by_Nicola_Perscheid_c1908.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Gustav_von_Schmoller_by_Nicola_Perscheid_c1908.jpg", "lic": "Public domain", "by": "Nicola Perscheid"}, "Karl Bücher": null, "Erik Reinert": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Erik_Reinert.JPG/250px-Erik_Reinert.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Erik_Reinert.JPG", "lic": "CC BY-SA 3.0", "by": "Jarvin - Jarle Vines"}, "Justin Yifu Lin": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Justin_Yifu_Lin_%282025%29.jpg/250px-Justin_Yifu_Lin_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Justin_Yifu_Lin_(2025).jpg", "lic": "CC BY 3.0", "by": "中国新闻社"}, "Karl Polanyi": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Pol%C3%A1nyi_K%C3%A1roly.jpg/250px-Pol%C3%A1nyi_K%C3%A1roly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Pol%C3%A1nyi_K%C3%A1roly.jpg", "lic": "Public domain", "by": "Unknown authorUnknown author"}, "Nathan Nunn": null, "Celso Furtado": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Celso_Furtado.tif/lossy-page1-250px-Celso_Furtado.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Celso_Furtado.tif", "lic": "Public domain", "by": "UnknownUnknown"}, "Hans Singer": null, "Anthony Thirlwall": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Tony_Thirlwall.tif/lossy-page1-250px-Tony_Thirlwall.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Tony_Thirlwall.tif", "lic": "CC BY-SA 3.0", "by": "Byzantivm007 (talk) (Uploads)"}, "Gunnar Myrdal": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gunnar_Myrdal_1964_002_%28cropped%29.jpg/250px-Gunnar_Myrdal_1964_002_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Gunnar_Myrdal_1964_002_(cropped).jpg", "lic": "Public domain", "by": "Uppsala-Bild / Upplandsmuseet"}, "José Antonio Ocampo": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jose_Antonio_Ocampo_G.jpg/250px-Jose_Antonio_Ocampo_G.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jose_Antonio_Ocampo_G.jpg", "lic": "CC BY 3.0", "by": "UNUWIDER"}, "Gary Gereffi": null, "Alexander Gerschenkron": null, "Alf Hornborg": null, "Terence Hopkins": null, "Frank Taussig": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Frank_William_Taussig_circa_1915_%28cropped%29.jpg/250px-Frank_William_Taussig_circa_1915_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Frank_William_Taussig_circa_1915_(cropped).jpg", "lic": "Public domain", "by": "Bain"}, "Jagdish Bhagwati": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Jagdish_N._Bhagwati_Professor_Jagdish_pa_Columbia_University_talar_vid_invigningen_av_Nordiskt_globaliseringsforum_i_Riksgransen_2008-04-02.jpg/250px-Jagdish_N._Bhagwati_Professor_Jagdish_pa_Columbia_University_talar_vid_invigningen_av_Nordiskt_globaliseringsforum_i_Riksgransen_2008-04-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Jagdish_N._Bhagwati_Professor_Jagdish_pa_Columbia_University_talar_vid_invigningen_av_Nordiskt_globaliseringsforum_i_Riksgransen_2008-04-02.jpg", "lic": "CC BY 2.5 dk", "by": "Johannes Jansson"}, "Douglas Irwin": null, "Antonio Serra": null, "Arnold Toynbee": null, "Richard Cobden": {"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hon._Richard_Corden%2C_M.P_-_NARA_-_528678.jpg/250px-Hon._Richard_Corden%2C_M.P_-_NARA_-_528678.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "src": "https://commons.wikimedia.org/wiki/File:Hon._Richard_Corden,_M.P_-_NARA_-_528678.jpg", "lic": "Public domain", "by": "Mathew Benjamin Brady"}};
+// Modules available in Chinese; other weeks link to the English module.
+const ZHMOD = ['backwardness.html', 'dependency.html', 'developmental-state.html', 'gravity.html', 'heckscher-ohlin.html', 'historical-school.html', 'imperialism-trade.html', 'institutions-trade.html', 'keynes-trade.html', 'list.html', 'marx-trade.html', 'mercantilism.html', 'mill.html', 'neo-developmentalism.html', 'new-trade-theory.html', 'opportunity-cost.html', 'polanyi.html', 'prebisch-singer.html', 'ricardo.html', 'smith.html', 'thirlwall.html', 'trilemma.html', 'unequal-exchange.html', 'value-chains.html', 'world-systems.html'];
+
+const ERAS = [
+  [1340, 1500, '中世纪晚期的危机与复苏', '#eef1f4'],
+  [1500, 1650, '地理大发现与商业帝国', '#dbe6f3'],
+  [1650, 1815, '重商主义战争与殖民贸易', '#e7eef7'],
+  [1815, 1914, '第一次全球化', '#f6e3d6'],
+  [1914, 1945, '战争、萧条与逆全球化', '#e3e3e3'],
+  [1945, 1980, '布雷顿森林体系与关贸总协定', '#dff0e4'],
+  [1980, 2008, '超级全球化', '#f5ecd5'],
+  [2008, 2025, '慢全球化与贸易战', '#e2ecf3'],
+];
+const EVENTS = [[1651,'《航海法》'],[1776,'《国富论》'],[1817,'李嘉图《原理》'],[1846,'废除《谷物法》'],[1860,'《科布登—谢瓦利埃条约》'],[1879,'俾斯麦关税'],[1930,'《斯穆特—霍利关税法》'],[1947,'关贸总协定'],[1995,'世界贸易组织'],[2001,'中国加入世贸组织'],[2018,'中美贸易战']];
+
+const SCHOOLS = [
+  { id:'merc', lane:0, from:1500, to:1750, name:'重商主义', short:'重商主义', color:'#6b7a8f', weeks:[1],
+    val:'protect', valNote:'出口是好事，进口是坏事：保护制造业，廉价进口原料，靠贸易顺差积累金银。',
+    one:'贸易是一场零和竞争：一个国家靠出口顺差、积累金银和保护本国制造商而致富。',
+    people:['Thomas Mun','Jean-Baptiste Colbert','Josiah Child'],
+    ideas:'贸易差额；以金银为财富；保护制造业；殖民地作为专属市场；《航海法》。这一逻辑延续在出口导向的新重商主义战略之中。',
+    setting:'民族国家兴起，东印度公司等大西洋和亚洲贸易垄断组织，以及争夺商业帝国的战争。' },
+  { id:'phys', lane:0, from:1756, to:1776, name:'重农学派', short:'重农学派', color:'#4f8a6f', weeks:[1],
+    val:'free', valNote:'贸易不创造新的财富，但谷物自由贸易可以提高农产品价格和土地的纯产品。',
+    one:'财富只来自土地的纯产品，所以贸易不创造新东西；但仍应允许谷物自由贸易，因为它能提高农民的收益。',
+    people:['François Quesnay','A. R. J. Turgot'],
+    ideas:'纯产品；《经济表》；“自由放任，自由通行”；国内外谷物的自由贸易。',
+    setting:'处在柯尔贝尔式管制、国内关卡和粮食短缺之下的农业法国。' },
+  { id:'classical', lane:0, from:1776, to:1871, name:'古典政治经济学', short:'古典学派', color:'#1f6f8b', weeks:[2,3,4],
+    val:'free', valNote:'贸易是正和的：绝对优势（斯密）、比较优势（李嘉图），以及由相互需求决定的贸易条件（穆勒）。',
+    one:'贸易扩大市场、深化分工；即使一个国家生产每种商品的效率都更低，按比较优势专业化也能获益。',
+    people:['David Hume','Adam Smith','David Ricardo','Robert Torrens','John Stuart Mill'],
+    ideas:'物价—铸币流动机制；建立在劳动价值论上的绝对优势和比较优势；相互需求与贸易条件；反《谷物法》运动。',
+    setting:'英国的工业领先地位、拿破仑战争、《谷物法》及其在1846年的废除，以及1860年代的自由贸易条约。' },
+  { id:'marshall', lane:0, from:1871, to:1919, name:'边际主义者与马歇尔', short:'马歇尔', color:'#2f5d8a', weeks:[5],
+    val:'free', valNote:'比较优势被重新表述为机会成本；自由贸易是有效率的，争论在于谁得到收益。',
+    one:'没有劳动价值论，比较优势依然成立：提供曲线决定贸易条件，收益以机会成本来衡量。',
+    people:['Alfred Marshall','F. Y. Edgeworth','Frank Taussig','Gottfried Haberler'],
+    ideas:'提供曲线与相互需求；机会成本与生产可能性边界；最优关税；消费者剩余。',
+    setting:'金本位下的第一次全球化，以及欧洲大陆和美国关税的回归。' },
+  { id:'hos', lane:0, from:1919, to:1979, name:'赫克歇尔—俄林—萨缪尔森', short:'赫—俄—萨', color:'#023e8a', weeks:[6],
+    val:'free', valNote:'贸易提高国民收入，但在国内重新分配收入；标准建议是自由贸易加上对受损者的补偿。',
+    one:'各国出口密集使用其丰裕要素的商品，因此贸易提高国民收入，却损害稀缺要素所有者的利益。',
+    people:['Eli Heckscher','Bertil Ohlin','Paul Samuelson','Wolfgang Stolper','Wassily Leontief'],
+    ideas:'要素比例；斯托尔珀—萨缪尔森定理、雷布津斯基定理和要素价格均等化定理；里昂惕夫之谜。',
+    setting:'两次大战之间的保护主义，以及战后工业国之间关贸总协定的历轮减税谈判。' },
+  { id:'ntt', lane:0, from:1979, to:2002, name:'新贸易理论', short:'新贸易理论', color:'#3a6ea5', weeks:[7],
+    val:'conditional', valNote:'规模和多样性带来收益；战略性贸易政策在理论上可以提高本国福利，但主流仍把自由贸易当作经验法则。',
+    one:'由于规模报酬递增和消费者对多样性的偏好，相似的国家交换相似的商品。',
+    people:['Paul Krugman','Elhanan Helpman','Avinash Dixit'],
+    ideas:'垄断竞争；产业内贸易；本地市场效应；战略性贸易政策；新经济地理学。',
+    setting:'富国之间贸易的繁荣、日本在高技术产业的竞争，以及欧洲单一市场。' },
+  { id:'quant', lane:0, from:2002, to:2025, name:'企业与量化模型', short:'量化模型', color:'#4a7fa7', weeks:[8],
+    val:'free', valNote:'贸易通过把资源重新配置给最好的企业来提高平均生产率；主流如今也认真对待其分配代价。',
+    one:'只有生产率最高的企业才出口；经过校准的引力模型可以衡量贸易收益、分配代价和政策效果。',
+    people:['Marc Melitz','Jonathan Eaton','Samuel Kortum','David Autor'],
+    ideas:'异质性企业；结构引力模型；ACR贸易收益公式；“中国冲击”；投入产出数据中的全球价值链。',
+    setting:'中国加入世贸组织、离岸外包与全球价值链，以及反全球化浪潮。' },
+  { id:'list', lane:1, from:1791, to:1843, name:'汉密尔顿与李斯特', short:'李斯特', color:'#8c6d46', weeks:[9],
+    val:'protect', valNote:'自由贸易适合工业领先国；后来者应当保护幼稚产业，直到它们能够参与竞争。',
+    one:'自由贸易适合工业领先国，因此后来者应当暂时保护幼稚产业，以培育本国的生产力。',
+    people:['Alexander Hamilton','Friedrich List','Henry Carey'],
+    ideas:'幼稚产业保护；生产力与交换价值；国家经济学与世界主义经济学；“美国体系”。',
+    setting:'面对英国制成品的年轻美国；德意志各邦与关税同盟（1834年）。' },
+  { id:'hist', lane:1, from:1843, to:1910, name:'德国历史学派', short:'历史学派', color:'#9b7b4f', weeks:[10],
+    val:'protect', valNote:'没有普遍正确的贸易政策；一个国家在某个发展阶段适合保护，在另一个阶段适合自由贸易。',
+    one:'没有普遍正确的贸易政策，因为合适的政策取决于一个国家所处的历史发展阶段。',
+    people:['Wilhelm Roscher','Gustav Schmoller'],
+    ideas:'历史的、归纳的方法；经济发展阶段论；把重商主义重新解读为国家建设；支持关税同盟和俾斯麦1879年的关税。',
+    setting:'德国统一、关税保护下的快速工业化，以及关于英国自由贸易模式的争论。' },
+  { id:'dev', lane:1, from:1950, to:2002, name:'发展型国家', short:'发展型国家', color:'#b08a55', weeks:[11],
+    val:'protect', valNote:'有选择的保护和定向信贷，以出口目标加以约束：贸易政策即产业政策。',
+    one:'东亚把有选择的保护、定向信贷与严格的出口纪律结合起来，实现了工业化。',
+    people:['Chalmers Johnson','Alice Amsden'],
+    ideas:'驾驭市场；故意把价格“扭曲”；出口纪律；官僚机构的“嵌入式自主性”。',
+    setting:'日本、韩国和台湾地区的东亚“奇迹”，以及与世界银行关于其成因的争论。' },
+  { id:'chang', lane:1, from:2002, to:2025, name:'新发展主义', short:'新发展主义', color:'#7a5a33', weeks:[12],
+    val:'protect', valNote:'富国靠关税爬上来，如今却踢开梯子；发展中国家需要政策空间。',
+    one:'富国在关税保护下走向繁荣，如今却通过向发展中国家强加自由贸易规则而“踢开梯子”。',
+    people:['Ha-Joon Chang','Erik Reinert','Justin Yifu Lin'],
+    ideas:'“踢开梯子”；世贸组织规则下的政策空间；张夏准与林毅夫关于违背还是遵循比较优势的辩论。',
+    setting:'世贸组织关于补贴、知识产权和投资的规则；中国的崛起；产业政策的回归。' },
+  { id:'oie', lane:2, from:1899, to:1944, name:'旧制度主义', short:'旧制度主义', color:'#8e6c8a', weeks:[13],
+    val:'conditional', valNote:'没有单独的贸易理论：市场是由习惯、法律和权力塑造的制度；后来者可以借用技术。',
+    one:'贸易由不断演化的制度、习惯和权力塑造，后来者可以借用技术，而不必背负领先者的制度包袱。',
+    people:['Thorstein Veblen','John R. Commons','Alexander Gerschenkron'],
+    ideas:'累积的制度变迁；凡勃伦论德意志帝国；后发优势（格申克龙）。',
+    setting:'第一次世界大战前德国和美国在工业上追赶英国。' },
+  { id:'polanyi', lane:2, from:1944, to:1997, name:'波兰尼', short:'波兰尼', color:'#7a5a78', weeks:[14],
+    val:'conditional', valNote:'自我调节的世界市场会激起保护性的反向运动；市场必须嵌入社会。',
+    one:'十九世纪建立自我调节的世界市场的尝试激起了保护性反弹，最终在1930年代崩溃。',
+    people:['Karl Polanyi'],
+    ideas:'嵌入性；双向运动；金本位作为市场社会的支柱；1945年后的“嵌入式自由主义”（鲁杰）。',
+    setting:'大萧条中金本位和自由贸易的崩溃；战后布雷顿森林体系的妥协。' },
+  { id:'rodrik', lane:2, from:1997, to:2025, name:'全球化三难困境', short:'三难困境', color:'#9e7b9b', weeks:[16],
+    val:'conditional', valNote:'深度一体化有其政治限度；各国应保留保护本国社会契约的空间。',
+    one:'一个国家不可能同时拥有超级全球化、民主和国家主权。',
+    people:['Dani Rodrik'],
+    ideas:'世界经济的政治三难困境；深度一体化的代价；为国家政策留出空间的“明智的全球化”。',
+    setting:'世贸组织时代、新兴市场的金融危机、“中国冲击”以及民粹主义反弹。' },
+  { id:'nie', lane:3, from:1990, to:2025, name:'新制度经济学', short:'新制度经济学', color:'#a88aa6', weeks:[15],
+    val:'conditional', valNote:'合同执行等制度本身就是比较优势的来源；贸易可能加强制度，也可能削弱制度。',
+    one:'合同执行等制度是比较优势的来源，并决定贸易能否带来持久的增长。',
+    people:['Douglass North','Daron Acemoglu','Nathan Nunn'],
+    ideas:'制度作为比较优势；大西洋贸易与欧洲的兴起；贸易与交易成本。',
+    setting:'转型经济、生产的全球化，以及发展经济学的制度转向。' },
+  { id:'keynes', lane:4, from:1933, to:1950, name:'凯恩斯', short:'凯恩斯', color:'#2a9d8f', weeks:[17],
+    val:'conditional', valNote:'存在失业时，顺差等于输出失业；顺差国和逆差国都应当调整。',
+    one:'存在失业时，贸易顺差会把失业输出给贸易伙伴，因此顺差国和逆差国都应当被要求调整。',
+    people:['John Maynard Keynes'],
+    ideas:'贸易失衡与有效需求；《国家自给自足》（1933）；重新评价重商主义者（《通论》第23章）；国际清算联盟与对称调整。',
+    setting:'大萧条、贸易崩溃，以及1944年的布雷顿森林谈判。' },
+  { id:'prebisch', lane:4, from:1950, to:1990, name:'结构主义', short:'结构主义', color:'#3aa597', weeks:[18],
+    val:'protect', valNote:'外围国家的贸易条件不断恶化，因此应通过进口替代实现工业化。',
+    one:'外围国家初级产品出口的贸易条件随时间恶化，因此发展中国家应当实现工业化。',
+    people:['Raúl Prebisch','Hans Singer','Celso Furtado'],
+    ideas:'中心与外围；普雷维什—辛格假说；进口替代工业化；联合国贸发会议（1964）。',
+    setting:'拉丁美洲的工业化、非殖民化，以及建立国际经济新秩序的要求（1974）。' },
+  { id:'neostr', lane:4, from:1990, to:2025, name:'新结构主义', short:'新结构主义', color:'#5bb5a8', weeks:[20],
+    val:'conditional', valNote:'开放是可以接受的，前提是有意识地升级到更高附加值的活动。',
+    one:'只有伴随着向更高附加值出口的有意识升级，开放才可以接受，因为一个国家生产什么决定了它的发展。',
+    people:['José Antonio Ocampo','Gary Gereffi'],
+    ideas:'兼顾公平的生产转型；多元化；全球价值链中的升级；“微笑曲线”。',
+    setting:'债务危机和华盛顿共识之后的拉丁美洲；全球价值链的扩散。' },
+  { id:'pk', lane:5, from:1957, to:2025, name:'后凯恩斯主义', short:'后凯恩斯', color:'#1f8a7a', weeks:[19],
+    val:'conditional', valNote:'贸易由需求和累积因果决定；长期增长受国际收支约束。',
+    one:'长期增长受国际收支的限制，而贸易往往扩大领先地区和落后地区之间的差距。',
+    people:['Gunnar Myrdal','Nicholas Kaldor','Anthony Thirlwall'],
+    ideas:'累积因果；回流效应与扩散效应；国际收支约束型增长的瑟尔沃尔定律；出口导向型增长。',
+    setting:'欧洲的地区分化、战后英国的“走走停停”周期，以及关于出口导向型增长的争论。' },
+  { id:'marx', lane:6, from:1848, to:1902, name:'马克思', short:'马克思', color:'#b03a2e', weeks:[21],
+    val:'critical', valNote:'贸易受资本规律支配；自由贸易加速资本主义的发展及其矛盾。',
+    one:'世界市场是资本的天然舞台，在这里较发达的国家可以用较少的劳动换取较多的劳动。',
+    people:['Karl Marx','Friedrich Engels','Anwar Shaikh'],
+    ideas:'世界市场；国际交换中的劳动价值；马克思论自由贸易（1848）；谢克论绝对优势与持续的贸易失衡。',
+    setting:'作为“世界工厂”的英国、《谷物法》的废除，以及在印度和爱尔兰的殖民扩张。' },
+  { id:'imp', lane:6, from:1902, to:1957, name:'帝国主义理论', short:'帝国主义', color:'#a0522d', weeks:[22],
+    val:'critical', valNote:'贸易与金融和权力密不可分；它是帝国争霸的工具。',
+    one:'垄断资本推动资本输出以及对殖民地和市场的争夺。',
+    people:['J. A. Hobson','Rudolf Hilferding','Rosa Luxemburg','Vladimir Lenin'],
+    ideas:'资本输出；金融资本；非资本主义市场；帝国主义列强之间的竞争。',
+    setting:'瓜分非洲、列强之间的军备竞赛，以及第一次世界大战。' },
+  { id:'dep', lane:6, from:1957, to:1990, name:'依附理论', short:'依附理论', color:'#b5651d', weeks:[23],
+    val:'critical', valNote:'融入世界市场使剩余从外围流出，造成“不发达的发展”。',
+    one:'融入世界市场使剩余从外围流向中心。',
+    people:['Paul Baran','Andre Gunder Frank','Fernando Henrique Cardoso','Theotonio dos Santos','Walter Rodney'],
+    ideas:'宗主中心与卫星；不发达的发展；依附性发展；脱钩。',
+    setting:'进口替代之后的拉丁美洲、非洲的非殖民化，以及冷战时期的干预。' },
+  { id:'ue', lane:7, from:1969, to:2025, name:'不平等交换', short:'不平等交换', color:'#c0603a', weeks:[24],
+    val:'critical', valNote:'资本可以流动而劳动不能流动时，按生产价格进行的贸易会把价值从低工资国家转移到高工资国家。',
+    one:'由于资本跨越国界流动而劳动不能，高工资国家与低工资国家之间的贸易即使按市场价格进行，也隐藏着价值转移。',
+    people:['Arghiri Emmanuel','Samir Amin','Alf Hornborg'],
+    ideas:'伊曼纽尔狭义和广义的不平等交换；阿明的世界规模的积累；与贝特尔海姆的论战；生态不平等交换。',
+    setting:'非殖民化、建立国际经济新秩序的要求，以及关于国际工人阶级团结的争论。' },
+  { id:'ws', lane:8, from:1974, to:2025, name:'世界体系', short:'世界体系', color:'#8b4a62', weeks:[25],
+    val:'critical', valNote:'贸易组织起核心、半外围和外围之间等级化的全球分工。',
+    one:'在资本主义世界经济中，贸易组织起核心、半外围和外围之间等级化的全球分工。',
+    people:['Immanuel Wallerstein','Giovanni Arrighi','Terence Hopkins','Christopher Chase-Dunn'],
+    ideas:'现代世界体系；霸权周期；商品链——全球价值链研究的前身。',
+    setting:'战后繁荣的结束、外围国家的债务危机，以及东亚的崛起。' },
+];
+const LANES = ['主流','发展主义','制度主义','','凯恩斯与结构主义','','马克思主义与世界体系','',''];
+const LINKS = [ // from, to, year at junction, type
+  ['merc','classical',1776,'react'],['phys','classical',1776,'cont'],['classical','marshall',1871,'cont'],['marshall','hos',1919,'cont'],['hos','ntt',1979,'cont'],['ntt','quant',2002,'cont'],
+  ['classical','list',1791,'react'],['list','hist',1843,'cont'],['hist','oie',1899,'cont'],['hist','dev',1950,'cont'],['dev','chang',2002,'cont'],
+  ['oie','polanyi',1944,'cont'],['polanyi','rodrik',1997,'cont'],['hos','nie',1990,'cont'],
+  ['keynes','prebisch',1950,'cont'],['prebisch','neostr',1990,'cont'],['keynes','pk',1957,'cont'],['prebisch','dep',1957,'cont'],
+  ['classical','marx',1848,'cont'],['marx','imp',1902,'cont'],['imp','dep',1957,'cont'],['marx','ue',1969,'cont'],['dep','ws',1974,'cont'],
+];
+
+// ---------- Timeline drawing ----------
+const X0 = 1340, X1 = 2025, W = 1240, LEFT = 170, RIGHT = 20, TOPH = 64, INC = 64, EV = 52, LANE = 40, YR = 20; // INC: band of historical events // YR: row of year labels above the era bands
+// Piecewise time scale: compress the early centuries, stretch 1850–1950 where schools multiply.
+const KNOTS = [[1340,0],[1500,0.06],[1750,0.19],[1850,0.36],[1950,0.64],[2025,1]];
+const frac = y => { for (let i = 1; i < KNOTS.length; i++) { const [a,fa] = KNOTS[i-1], [b,fb] = KNOTS[i]; if (y <= b) return fa + (y-a)/(b-a)*(fb-fa); } return 1; };
+const H = YR + TOPH + INC + EV + LANES.length * LANE + 10;
+const x = y => LEFT + frac(y) * (W - LEFT - RIGHT);
+const yLane = l => YR + TOPH + INC + EV + l * LANE + 6;
+const NS = 'http://www.w3.org/2000/svg';
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const svg = document.getElementById('tl');
+svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);
+
+[1350,1450,1500,1600,1700,1750,1800,1850,1900,1925,1950,1975,2000,2025].forEach(yr => {
+  el('line', {x1:x(yr), x2:x(yr), y1:YR + TOPH, y2:H-4, class:'grid'}, svg);
+  const t = el('text', {x:x(yr), y:14, 'text-anchor':'middle', class:'yr'}, svg); t.textContent = yr;
+});
+const eras = el('g', {class:'era'}, svg);
+ERAS.forEach(([a,b,label,c]) => {
+  const eg = el('g', {class:'eg', tabindex:0, 'data-tip':`${label}（${a}—${b === 2025 ? '至今' : b}）`}, eras);
+  el('rect', {x:x(a), y:YR, width:x(b)-x(a), height:TOPH-4, fill:c}, eg);
+  // wrap the label into up to four lines of Chinese characters that fit the era's width
+  const per = Math.max(2, Math.floor((x(b)-x(a)-6) / 11.5)); const lines = [];
+  for (let i = 0; i < label.length; i += per) lines.push(label.slice(i, i + per));
+  const fo = el('text', {x:(x(a)+x(b))/2, y:YR + (TOPH-4)/2 - (Math.min(lines.length,4)-1)*6.5 + 4, 'text-anchor':'middle'}, eg);
+  lines.slice(0,4).forEach((ln, i) => { const ts = el('tspan', {x:(x(a)+x(b))/2, dy: i ? 13 : 0}, fo); ts.textContent = ln; });
+  const tt = el('title', {}, eg); tt.textContent = eg.dataset.tip;
+});
+// hover tooltip with the full era name
+const tip = document.getElementById('tip');
+eras.querySelectorAll('.eg').forEach(g => {
+  const show = e => { tip.textContent = g.dataset.tip; tip.hidden = false; const r = g.getBoundingClientRect(); const px = e && e.clientX ? e.clientX : r.left + r.width/2; tip.style.left = Math.min(window.innerWidth - 270, Math.max(8, px - 60)) + 'px'; tip.style.top = (r.bottom + 6) + 'px'; };
+  g.addEventListener('mouseenter', show); g.addEventListener('mousemove', show); g.addEventListener('focus', show);
+  g.addEventListener('mouseleave', () => tip.hidden = true); g.addEventListener('blur', () => tip.hidden = true);
+});
+const evs = el('g', {class:'ev'}, svg);
+EVENTS.forEach(([yr,label], i) => {
+  const cx = x(yr), cy = YR + TOPH + INC + 10 + (i % 3) * 14;
+  el('circle', {cx, cy, r:3}, evs);
+  const t = el('text', cx > W - 140 ? {x:cx-5, y:cy+4, 'text-anchor':'end'} : {x:cx+5, y:cy+4}, evs); t.textContent = label;
+});
+LANES.forEach((name, i) => { const t = el('text', {x:LEFT-10, y:yLane(i)+18, 'text-anchor':'end', class:'lane-label'}, svg); t.textContent = name; });
+drawHistory({svg, el, x, top:YR + TOPH, height:INC, left:LEFT, right:W - RIGHT, lang:'zh', tip, evLabelY:YR + TOPH + INC + 28});
+
+const byId = Object.fromEntries(SCHOOLS.map(s => [s.id, s]));
+const links = el('g', {}, svg);
+LINKS.forEach(([a,b,yr,type]) => {
+  const A = byId[a], B = byId[b]; const xa = x(Math.min(yr, A.to)), xb = x(Math.max(yr, B.from));
+  const ya = yLane(A.lane)+13, yb = yLane(B.lane)+13;
+  el('path', {d:`M${xa},${ya} C${xa+28},${ya} ${xb-28},${yb} ${xb},${yb}`, class:'link'+(type==='react'?' react':''), 'data-a':a, 'data-b':b}, links);
+});
+let selected = null;
+function showLinks(id) { links.querySelectorAll('.link').forEach(l => l.classList.toggle('on', !!id && (l.dataset.a === id || l.dataset.b === id))); }
+const bars = el('g', {}, svg);
+SCHOOLS.forEach(s => {
+  const g = el('g', {class:'bar', tabindex:0, role:'button', 'aria-label':s.name, 'data-id':s.id}, bars);
+  const w = Math.max(x(s.to)-x(s.from), 18);
+  el('rect', {x:x(s.from), y:yLane(s.lane), width:w, height:26, fill:s.color}, g);
+  const t = el('text', {x:x(s.from)+8, y:yLane(s.lane)+17}, g);
+  t.textContent = w > s.name.length*12.5 + 14 ? s.name : (w > s.short.length*12.5 + 14 ? s.short : '');
+  const tt = el('title', {}, g); tt.textContent = s.name;
+  g.addEventListener('click', () => show(s.id, true));
+  g.addEventListener('mouseenter', () => showLinks(s.id)); g.addEventListener('focus', () => showLinks(s.id));
+  g.addEventListener('mouseleave', () => showLinks(selected)); g.addEventListener('blur', () => showLinks(selected));
+  g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(s.id, true); } });
+});
+
+// ---------- Theory-of-value view ----------
+const VCOL = {free:'#0077b6', conditional:'#7b5ea7', protect:'#c47a2c', critical:'#b03a2e'};
+const VLABEL = {free:'自由贸易使各方受益', conditional:'有条件或有管理的开放', protect:'为发展而保护', critical:'贸易作为等级与剥削'};
+document.getElementById('vlegend').innerHTML = ['free','conditional','protect','critical'].map(k => `<span><i style="background:${VCOL[k]}"></i>${VLABEL[k]}</span>`).join('');
+function setView(v) {
+  document.querySelectorAll('.het .vbtn').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  document.getElementById('vlegend').hidden = v !== 'value';
+  document.querySelectorAll('#tl .bar').forEach(g => { const sc = byId[g.dataset.id]; g.querySelector('rect').setAttribute('fill', v === 'value' ? VCOL[sc.val] : sc.color); });
+}
+document.querySelectorAll('.het .vbtn').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+
+// ---------- People ----------
+function initials(n) { return n.replace(/[^A-Za-zÀ-ž .-]/g,'').split(/[ .-]+/).filter(Boolean).map(w=>w[0]).slice(0,2).join(''); }
+const YEARS = {'John R. Commons':'1862–1945','Wesley Mitchell':'1874–1948','John Kenneth Galbraith':'1908–2006','Daniel Kahneman':'1934–2024','Amos Tversky':'1937–1996','Richard Thaler':'b. 1945','Robert Shiller':'b. 1946','Vernon Smith':'b. 1927','Oliver Williamson':'1932–2020','Elinor Ostrom':'1933–2012','Daron Acemoglu':'b. 1967','Chalmers Johnson':'1931–2010','Alice Amsden':'1943–2012','Ha-Joon Chang':'b. 1963','Dani Rodrik':'b. 1957','Carlota Perez':'b. 1939','Paul Romer':'b. 1955','Philippe Aghion':'b. 1956','Joel Mokyr':'b. 1946','Mariana Mazzucato':'b. 1968','Claudia Goldin':'b. 1946','Thomas Piketty':'b. 1971','Walter Rodney':'1942–1980','John Hicks':'1904–1989','Alvin Hansen':'1887–1975','Franco Modigliani':'1918–2003','James Tobin':'1918–2002','Nicholas Kaldor':'1908–1986','Luigi Pasinetti':'1930–2023','Wynne Godley':'1926–2010','Charlotte Perkins Gilman':'1860–1935','Margaret Reid':'1896–1991','Silvia Federici':'b. 1942','Marilyn Waring':'b. 1952','Nancy Folbre':'b. 1952','Diane Elson':'b. 1946','Bina Agarwal':'b. 1951','Rudolf Hilferding':'1877–1941','Nikolai Bukharin':'1888–1938','Andre Gunder Frank':'1929–2005','Fernando Henrique Cardoso':'b. 1931','Theotonio dos Santos':'1936–2018','Samir Amin':'1931–2018','Arghiri Emmanuel':'1911–2001','Immanuel Wallerstein':'1930–2019','Giovanni Arrighi':'1937–2009','Christopher Chase-Dunn':'b. 1944','William Baumol':'1922–2017','William Nordhaus':'b. 1941','Nicholas Stern':'b. 1946','Kenneth Boulding':'1910–1993','Nicholas Georgescu-Roegen':'1906–1994','Herman Daly':'1938–2022','Robert Costanza':'b. 1950','Joan Martínez-Alier':'b. 1939','Thomas Mun':'1571–1641','William Petty':'1623–1687','François Quesnay':'1694–1774','Adam Smith':'1723–1790','Thomas Malthus':'1766–1834','David Ricardo':'1772–1823','Jean-Baptiste Say':'1767–1832','Jeremy Bentham':'1748–1832','Nassau Senior':'1790–1864','William Thompson':'1775–1833','Frédéric Bastiat':'1801–1850','F. Y. Edgeworth':'1845–1926','Clarence Ayres':'1891–1972','Harry Braverman':'1920–1976','G. A. Cohen':'1941–2009','Ladislaus Bortkiewicz':'1868–1931','Paul Baran':'1909–1964','Anwar Shaikh':'1945–2026','Joseph Stiglitz':'b. 1943','George Akerlof':'b. 1940','Paul Krugman':'b. 1953','N. Gregory Mankiw':'b. 1958','Olivier Blanchard':'b. 1948','Janet Yellen':'b. 1946','Simon Kuznets':'1901–1985','Robert Owen':'1771–1858','Henri de Saint-Simon':'1760–1825','Charles Fourier':'1772–1837','Thomas Hodgskin':'1787–1869','John Stuart Mill':'1806–1873','Sismondi':'1773–1842','Karl Marx':'1818–1883','Friedrich Engels':'1820–1895','W. S. Jevons':'1835–1882','Carl Menger':'1840–1921','Léon Walras':'1834–1910','Alfred Marshall':'1842–1924','John Bates Clark':'1847–1938','Eugen von Böhm-Bawerk':'1851–1914','Vilfredo Pareto':'1848–1923','A. C. Pigou':'1877–1959','Henry George':'1839–1897','Thorstein Veblen':'1857–1929','J. A. Hobson':'1858–1940','Rosa Luxemburg':'1871–1919','Vladimir Lenin':'1870–1924','John Maynard Keynes':'1883–1946','Irving Fisher':'1867–1947','Michał Kalecki':'1899–1970','Piero Sraffa':'1898–1983','Joan Robinson':'1903–1983','Joseph Schumpeter':'1883–1950','Friedrich Hayek':'1899–1992','Ludwig von Mises':'1881–1973','Oskar Lange':'1904–1965','Milton Friedman':'1912–2006','Paul Samuelson':'1915–2009','Robert Solow':'1924–2023','Hyman Minsky':'1919–1996','Paul Sweezy':'1910–2004','Alexander Hamilton':'1755–1804','Friedrich List':'1789–1846','Raúl Prebisch':'1901–1986','W. Arthur Lewis':'1915–1991','Herbert Simon':'1916–2001','Douglass North':'1920–2015','Frank Knight':'1885–1972','Henry Simons':'1899–1946','George Stigler':'1911–1991','Ronald Coase':'1910–2013','Gary Becker':'1930–2014','Robert Lucas':'1937–2023','Israel Kirzner':'b. 1930','Murray Rothbard':'1926–1995','Jean-Baptiste Colbert':'1619–1683','Josiah Child':'1630–1699','A. R. J. Turgot':'1727–1781','David Hume':'1711–1776','Robert Torrens':'1780–1864','Richard Cobden':'1804–1865','Gottfried Haberler':'1900–1995','Frank Taussig':'1859–1940','Eli Heckscher':'1879–1952','Bertil Ohlin':'1899–1979','Wolfgang Stolper':'1912–2002','Wassily Leontief':'1905–1999','Elhanan Helpman':'b. 1946','Avinash Dixit':'b. 1944','David Autor':'b. 1967','Henry Carey':'1793–1879','Wilhelm Roscher':'1817–1894','Gustav Schmoller':'1838–1917','Erik Reinert':'b. 1949','Justin Yifu Lin':'b. 1952','Alexander Gerschenkron':'1904–1978','Karl Polanyi':'1886–1964','Hans Singer':'1910–2006','Celso Furtado':'1920–2004','Gunnar Myrdal':'1898–1987','Anthony Thirlwall':'b. 1941','José Antonio Ocampo':'b. 1952','Alf Hornborg':'b. 1954','Terence Hopkins':'1928–1997'};
+const ZH = {'John R. Commons':'约翰·R. 康芒斯','Wesley Mitchell':'韦斯利·米切尔','John Kenneth Galbraith':'约翰·肯尼斯·加尔布雷思','Daniel Kahneman':'丹尼尔·卡尼曼','Amos Tversky':'阿莫斯·特沃斯基','Richard Thaler':'理查德·塞勒','Robert Shiller':'罗伯特·席勒','Vernon Smith':'弗农·史密斯','Oliver Williamson':'奥利弗·威廉姆森','Elinor Ostrom':'埃莉诺·奥斯特罗姆','Daron Acemoglu':'达龙·阿西莫格鲁','Chalmers Johnson':'查默斯·约翰逊','Alice Amsden':'爱丽丝·阿姆斯登','Ha-Joon Chang':'张夏准','Dani Rodrik':'丹尼·罗德里克','Carlota Perez':'卡洛塔·佩雷斯','Paul Romer':'保罗·罗默','Philippe Aghion':'菲利普·阿吉翁','Joel Mokyr':'乔尔·莫基尔','Mariana Mazzucato':'玛丽安娜·马祖卡托','Claudia Goldin':'克劳迪娅·戈尔丁','Thomas Piketty':'托马斯·皮凯蒂','Walter Rodney':'沃尔特·罗德尼','John Hicks':'约翰·希克斯','Alvin Hansen':'阿尔文·汉森','Franco Modigliani':'佛朗哥·莫迪利安尼','James Tobin':'詹姆斯·托宾','Nicholas Kaldor':'尼古拉斯·卡尔多','Luigi Pasinetti':'路易吉·帕西内蒂','Wynne Godley':'温·戈德利','Charlotte Perkins Gilman':'夏洛特·珀金斯·吉尔曼','Margaret Reid':'玛格丽特·里德','Silvia Federici':'西尔维娅·费代里奇','Marilyn Waring':'玛丽琳·韦林','Nancy Folbre':'南希·弗尔布雷','Diane Elson':'黛安·埃尔森','Bina Agarwal':'比娜·阿加瓦尔','Rudolf Hilferding':'鲁道夫·希法亭','Nikolai Bukharin':'尼古拉·布哈林','Andre Gunder Frank':'安德烈·冈德·弗兰克','Fernando Henrique Cardoso':'费尔南多·恩里克·卡多佐','Theotonio dos Santos':'特奥托尼奥·多斯桑托斯','Samir Amin':'萨米尔·阿明','Arghiri Emmanuel':'阿吉里·伊曼纽尔','Immanuel Wallerstein':'伊曼纽尔·沃勒斯坦','Giovanni Arrighi':'乔瓦尼·阿瑞吉','Christopher Chase-Dunn':'克里斯托弗·蔡斯-邓恩','William Baumol':'威廉·鲍莫尔','William Nordhaus':'威廉·诺德豪斯','Nicholas Stern':'尼古拉斯·斯特恩','Kenneth Boulding':'肯尼斯·博尔丁','Nicholas Georgescu-Roegen':'尼古拉斯·乔治斯库-罗根','Herman Daly':'赫尔曼·戴利','Robert Costanza':'罗伯特·科斯坦扎','Joan Martínez-Alier':'胡安·马丁内斯-阿列尔','Thomas Mun':'托马斯·孟','William Petty':'威廉·配第','François Quesnay':'弗朗索瓦·魁奈','Adam Smith':'亚当·斯密','Thomas Malthus':'托马斯·马尔萨斯','David Ricardo':'大卫·李嘉图','Jean-Baptiste Say':'让-巴蒂斯特·萨伊','Jeremy Bentham':'杰里米·边沁','Nassau Senior':'纳索·西尼尔','William Thompson':'威廉·汤普森','Frédéric Bastiat':'弗雷德里克·巴斯夏','F. Y. Edgeworth':'F. Y. 埃奇沃思','Clarence Ayres':'克拉伦斯·艾尔斯','Harry Braverman':'哈里·布雷弗曼','G. A. Cohen':'G. A. 柯亨','Ladislaus Bortkiewicz':'拉迪斯劳斯·鲍特凯维兹','Paul Baran':'保罗·巴兰','Anwar Shaikh':'安瓦尔·谢克','Joseph Stiglitz':'约瑟夫·斯蒂格利茨','George Akerlof':'乔治·阿克洛夫','Paul Krugman':'保罗·克鲁格曼','N. Gregory Mankiw':'N. 格里高利·曼昆','Olivier Blanchard':'奥利维尔·布兰查德','Janet Yellen':'珍妮特·耶伦','Simon Kuznets':'西蒙·库兹涅茨','Robert Owen':'罗伯特·欧文','Henri de Saint-Simon':'亨利·德·圣西门','Charles Fourier':'夏尔·傅立叶','Thomas Hodgskin':'托马斯·霍吉斯金','John Stuart Mill':'约翰·斯图亚特·穆勒','Sismondi':'西斯蒙第','Karl Marx':'卡尔·马克思','Friedrich Engels':'弗里德里希·恩格斯','W. S. Jevons':'W. S. 杰文斯','Carl Menger':'卡尔·门格尔','Léon Walras':'莱昂·瓦尔拉斯','Alfred Marshall':'阿尔弗雷德·马歇尔','John Bates Clark':'约翰·贝茨·克拉克','Eugen von Böhm-Bawerk':'欧根·冯·庞巴维克','Vilfredo Pareto':'维尔弗雷多·帕累托','A. C. Pigou':'A. C. 庇古','Henry George':'亨利·乔治','Thorstein Veblen':'托斯丹·凡勃伦','J. A. Hobson':'J. A. 霍布森','Rosa Luxemburg':'罗莎·卢森堡','Vladimir Lenin':'弗拉基米尔·列宁','John Maynard Keynes':'约翰·梅纳德·凯恩斯','Irving Fisher':'欧文·费雪','Michał Kalecki':'米哈尔·卡莱茨基','Piero Sraffa':'皮耶罗·斯拉法','Joan Robinson':'琼·罗宾逊','Joseph Schumpeter':'约瑟夫·熊彼特','Friedrich Hayek':'弗里德里希·哈耶克','Ludwig von Mises':'路德维希·冯·米塞斯','Oskar Lange':'奥斯卡·兰格','Milton Friedman':'米尔顿·弗里德曼','Paul Samuelson':'保罗·萨缪尔森','Robert Solow':'罗伯特·索洛','Hyman Minsky':'海曼·明斯基','Paul Sweezy':'保罗·斯威齐','Alexander Hamilton':'亚历山大·汉密尔顿','Friedrich List':'弗里德里希·李斯特','Raúl Prebisch':'劳尔·普雷维什','W. Arthur Lewis':'W. 阿瑟·刘易斯','Herbert Simon':'赫伯特·西蒙','Douglass North':'道格拉斯·诺斯','Frank Knight':'弗兰克·奈特','Henry Simons':'亨利·西蒙斯','George Stigler':'乔治·施蒂格勒','Ronald Coase':'罗纳德·科斯','Gary Becker':'加里·贝克尔','Robert Lucas':'罗伯特·卢卡斯','Israel Kirzner':'伊斯雷尔·柯兹纳','Murray Rothbard':'默里·罗斯巴德','Jacob Viner':'雅各布·瓦伊纳'};
+Object.assign(ZH, {"Jean-Baptiste Colbert": "让-巴蒂斯特·柯尔贝尔", "Josiah Child": "约西亚·柴尔德", "David Hume": "大卫·休谟", "A. R. J. Turgot": "杜尔哥", "Robert Torrens": "罗伯特·托伦斯", "Richard Cobden": "理查德·科布登", "Frank Taussig": "弗兰克·陶西格", "Gottfried Haberler": "戈特弗里德·哈伯勒", "Eli Heckscher": "伊莱·赫克歇尔", "Bertil Ohlin": "贝蒂尔·俄林", "Wolfgang Stolper": "沃尔夫冈·斯托尔珀", "Wassily Leontief": "瓦西里·里昂惕夫", "Elhanan Helpman": "埃尔赫南·赫尔普曼", "Avinash Dixit": "阿维纳什·迪克西特", "Marc Melitz": "马克·梅里兹", "Jonathan Eaton": "乔纳森·伊顿", "Samuel Kortum": "塞缪尔·科特姆", "David Autor": "大卫·奥托", "Henry Carey": "亨利·凯里", "Wilhelm Roscher": "威廉·罗雪尔", "Gustav Schmoller": "古斯塔夫·施穆勒", "Erik Reinert": "埃里克·赖纳特", "Justin Yifu Lin": "林毅夫", "Alexander Gerschenkron": "亚历山大·格申克龙", "Karl Polanyi": "卡尔·波兰尼", "Nathan Nunn": "内森·纳恩", "Hans Singer": "汉斯·辛格", "Celso Furtado": "塞尔索·富尔塔多", "Gunnar Myrdal": "冈纳·缪尔达尔", "Anthony Thirlwall": "安东尼·瑟尔沃尔", "José Antonio Ocampo": "何塞·安东尼奥·奥坎波", "Gary Gereffi": "加里·杰里菲", "Alf Hornborg": "阿尔夫·霍恩堡", "Terence Hopkins": "特伦斯·霍普金斯"});
+const zh = n => ZH[n] || n;
+const yrs = n => (YEARS[n] || '').replace(/^b\. (\d+)/, '生于$1');
+function people(list) {
+  return '<div class="people">' + list.map(n => {
+    const p = P[n];
+    const pic = p ? `<img src="${p.img}" alt="${zh(n)}" loading="lazy">` : `<span class="ini" aria-hidden="true">${initials(n)}</span>`;
+    return `<div class="person">${pic}${zh(n)}<small>${yrs(n)}</small></div>`;
+  }).join('') + '</div>';
+}
+
+// ---------- Panel ----------
+const panel = document.getElementById('panel');
+function show(id, scroll) {
+  const s = byId[id];
+  document.querySelectorAll('.het svg .bar').forEach(b => b.classList.toggle('on', b.dataset.id === id));
+  selected = scroll ? id : null; showLinks(selected); // links stay visible only for a school the visitor clicked
+  const wk = s.weeks.map(n => `<a href="#topic-${n}" data-wk="${n}">专题${n}</a>`).join('、');
+  panel.innerHTML = `<h3>${s.name}</h3><div class="yrs">${s.from}${s.to >= 2025 ? '—至今' : '—' + s.to}</div>
+    <p class="one">${s.one}</p>
+    <div class="row"><div class="lb">主要思想家</div><div class="tx">${people(s.people)}</div></div>
+    <div class="row"><div class="lb">核心观点</div><div class="tx">${s.ideas}</div></div>
+    <div class="row"><div class="lb">历史背景</div><div class="tx">${s.setting}</div></div>
+    ${s.vs ? `<div class="row"><div class="lb">${s.vslabel || '芝加哥与奥地利'}</div><div class="tx">${s.vs}</div></div>` : ''}
+    <div class="row"><div class="lb">贸易立场</div><div class="tx"><span class="vchip" style="background:${VCOL[s.val]}">${VLABEL[s.val]}</span> ${s.valNote}</div></div>
+    <div class="row"><div class="lb">课程专题</div><div class="tx">${wk}</div></div>`;
+  panel.querySelectorAll('a[data-wk]').forEach(a => a.addEventListener('click', () => { const d = document.getElementById('topic-' + a.dataset.wk); if (d) d.open = true; }));
+  if (scroll) panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+show('classical', false);
+
+// ---------- Topics ----------
+const PARTS = {1:'第一部分 · 重商主义者与古典经济学家', 5:'第二部分 · 新古典主流', 9:'第三部分 · 国家主义与发展主义传统', 13:'第四部分 · 制度主义传统', 17:'第五部分 · 凯恩斯主义与结构主义传统', 21:'第六部分 · 马克思主义与世界体系传统'};
+const TOPICS = [
+ {n:1, t:'重商主义与重农学派', sub:'贸易、金银与国家权力，约1500—1776年',
+  ctx:'欧洲国家依靠远程贸易建立帝国，并为争夺贸易而开战。特许公司垄断贸易，《航海法》把航运保留给本国船队，作家们向君主献策，教他们如何积累金银。在法国，重农学派抨击柯尔贝尔的管制体系。',
+  ev:['1600年、1602年：英国和荷兰东印度公司成立','1651年：英国《航海法》','1664年：孟《英国得自对外贸易的财富》出版','1665—1683年：柯尔贝尔任法国财政大臣','1752年：休谟《论贸易差额》','1758年：魁奈《经济表》'],
+  people:['Thomas Mun','Jean-Baptiste Colbert','Josiah Child','David Hume','François Quesnay','A. R. J. Turgot'],
+  ideas:['贸易差额与金银的积累。','保护制造业、殖民地作为专属市场，以及《航海法》。','重新解读重商主义：国家建设和生产能力，而不仅仅是黄金。','休谟的物价—铸币流动机制：为什么永久的顺差不可能存在。','重农学派：纯产品与谷物自由贸易。'],
+  read:'欧文，<em>Against the Tide</em>（1996），第2—4章；孟，《英国得自对外贸易的财富》（1664），第2章。辅助阅读：休谟，《论贸易差额》（1752）；亨特，第2章。',
+  q:'重商主义者把财富等同于贸易顺差。这种观念已经消亡了吗？还是仍然存在于今天的贸易政治之中？',
+  mod:'mercantilism.html'},
+ {n:2, t:'亚当·斯密：分工与绝对优势', sub:'《国富论》，1776年',
+  ctx:'斯密的写作针对的是由特许垄断、殖民地限制和出口奖励金构成的“重商主义体系”。在他的书出版的同一年，英国的北美殖民地宣布独立。',
+  ev:['1707年：英格兰与苏格兰合并','1763年：英国赢得七年战争','1776年：《国富论》出版；美国独立','1786年：英法《伊登条约》'],
+  people:['Adam Smith'],
+  ideas:['分工受市场范围的限制，因此贸易提高生产率。','绝对优势：每个国家出口它生产成本最低的商品。','“剩余的出路”与开放的收益。','反对重商主义体系：垄断、殖民地和商人的利益。','斯密的例外：国防、报复和渐进的自由化。'],
+  read:'斯密，《国富论》（1776），第四篇第1—2章；欧文，<em>Against the Tide</em>，第5章。辅助阅读：亨特，第3章。',
+  q:'斯密认为贸易扩大市场，从而深化专业分工。这与比较优势是不同的论证吗？',
+  mod:'smith.html'},
+ {n:3, t:'李嘉图与比较优势', sub:'经济学中最著名的结论，1817年',
+  ctx:'拿破仑战争之后，英国的《谷物法》保护地主免受进口粮食的冲击。李嘉图、托伦斯等人证明，即使一个国家在每种商品上都更有效率，贸易也能使它获益；这一结论成为自由贸易运动的思想基础。',
+  ev:['1815年：《谷物法》；托伦斯论比较成本','1817年：李嘉图《政治经济学及赋税原理》第7章','1838年：反谷物法同盟成立','1846年：废除《谷物法》'],
+  people:['David Ricardo','Robert Torrens','Richard Cobden'],
+  ideas:['比较优势与绝对优势：英国、葡萄牙、呢绒和葡萄酒。','借助生产可能性边界理解专业化的收益。','贸易条件的可能范围。','前提假设：资本和劳动不能跨国流动、充分就业、成本不变。','从理论到政策：《谷物法》与自由贸易运动。'],
+  read:'李嘉图，《政治经济学及赋税原理》（1817），第7章；欧文，<em>Against the Tide</em>，第6章。辅助阅读：亨特，第5章；Yueh，第2章（李嘉图）。',
+  q:'比较优势假定资本不能在国家之间流动。如果资本可以流动，这一论证会怎样？',
+  mod:'ricardo.html'},
+ {n:4, t:'穆勒与贸易条件', sub:'谁得到收益？1829—1848年',
+  ctx:'李嘉图证明了贸易对双方都有利，却没有说明收益如何分配。约翰·斯图亚特·穆勒用相互需求理论回答了这个问题，托伦斯则据此主张关税可以使贸易条件朝有利于本国的方向移动。',
+  ev:['1829—1830年：穆勒写成《论国家之间的交换法则》（1844年出版）','1844年：托伦斯《预算》，论互惠关税','1848年：穆勒《政治经济学原理》','1860年：《科布登—谢瓦利埃条约》'],
+  people:['John Stuart Mill','Robert Torrens'],
+  ideas:['相互需求：贸易条件稳定在每个国家的出口恰好支付其进口的那一点。','贸易收益如何在国家之间分配。','关税的贸易条件论证，以及互惠主张。','穆勒的幼稚产业例外。'],
+  read:'穆勒，《政治经济学原理》（1848），第三编第18章；欧文，<em>Against the Tide</em>，第7章。辅助阅读：亨特，第8章。',
+  q:'如果一个大国可以通过关税改善自己的贸易条件，为什么经济学家仍然推荐自由贸易？',
+  mod:'mill.html'},
+ {n:5, t:'马歇尔、哈伯勒与机会成本', sub:'没有劳动价值论的比较优势，1879—1936年',
+  ctx:'边际革命取代了劳动价值论。马歇尔和埃奇沃思用提供曲线和消费者剩余重建了贸易理论，哈伯勒则把比较优势重新表述为机会成本，这也是今天教科书中的讲法。',
+  ev:['1879年：马歇尔《对外贸易纯理论》','1894年：埃奇沃思论国际价值的纯理论','1927年：陶西格《国际贸易》','1936年：哈伯勒《国际贸易理论》'],
+  people:['Alfred Marshall','F. Y. Edgeworth','Frank Taussig','Gottfried Haberler'],
+  ideas:['机会成本与生产可能性边界。','成本递增与不完全专业化。','提供曲线与贸易条件的决定。','以消费者剩余衡量的贸易收益；最优关税。'],
+  read:'哈伯勒，《国际贸易理论》（1936），第12章；欧文，<em>Against the Tide</em>，第12章。辅助阅读：亨特，第11章。',
+  q:'放弃劳动价值论，改变的是比较优势的含义，还是仅仅改变了它的证明方式？',
+  mod:'opportunity-cost.html'},
+ {n:6, t:'赫克歇尔—俄林模型与收益的分配', sub:'要素禀赋，1919—1953年',
+  ctx:'瑞典经济学家追问各国的比较优势为什么不同，并在要素禀赋中找到了答案。萨缪尔森和斯托尔珀推出了它对收入分配的含义，而里昂惕夫对这一理论的检验产生了一个著名的悖论。',
+  ev:['1919年：赫克歇尔论贸易对收入分配的影响','1933年：俄林《区际贸易与国际贸易》','1941年：斯托尔珀—萨缪尔森定理','1948年：萨缪尔森论要素价格均等化','1953年：里昂惕夫之谜','1977年：俄林获诺贝尔奖'],
+  people:['Eli Heckscher','Bertil Ohlin','Paul Samuelson','Wolfgang Stolper','Wassily Leontief'],
+  ideas:['要素丰裕度与要素密集度。','斯托尔珀—萨缪尔森定理：贸易损害稀缺要素。','雷布津斯基定理与要素价格均等化。','里昂惕夫之谜及其解释。','富国的贸易、工资与不平等。'],
+  read:'俄林，《区际贸易与国际贸易》（1933），第1—2章；斯托尔珀、萨缪尔森，《保护与实际工资》（1941）。辅助阅读：里昂惕夫（1953）。',
+  q:'斯托尔珀—萨缪尔森定理说，自由贸易损害稀缺要素。在富国，稀缺要素是非熟练劳动。这对贸易政治意味着什么？',
+  mod:'heckscher-ohlin.html'},
+ {n:7, t:'新贸易理论与经济地理学', sub:'规模报酬递增与不完全竞争，1979—2008年',
+  ctx:'人们发现，世界贸易的大部分发生在相似的富国之间，交换的是相似的商品，这是比较优势无法解释的。克鲁格曼等人建立了规模报酬递增和垄断竞争的模型，并追问政府能否帮助本国企业胜出。',
+  ev:['1977年：迪克西特—斯蒂格利茨垄断竞争模型','1979年：克鲁格曼《规模报酬递增、垄断竞争与国际贸易》','1985年：布兰德—斯潘塞论战略性贸易政策；赫尔普曼和克鲁格曼《市场结构与对外贸易》','1991年：克鲁格曼《地理和贸易》','2008年：克鲁格曼获诺贝尔奖'],
+  people:['Paul Krugman','Elhanan Helpman','Avinash Dixit'],
+  ideas:['产业内贸易与多样性带来的收益。','规模报酬递增与本地市场效应。','战略性贸易政策：波音与空客。','新经济地理学：由规模经济产生的核心与外围。'],
+  read:'克鲁格曼，《规模报酬递增、垄断竞争与国际贸易》（1979）；克鲁格曼，《自由贸易过时了吗？》（1987）。辅助阅读：克鲁格曼，《地理和贸易》（1991），第1章；欧文，<em>Against the Tide</em>，第9章和第14章。',
+  q:'如果贸易格局可以是历史偶然和规模经济的结果，自由贸易还有理由吗？',
+  mod:'new-trade-theory.html'},
+ {n:8, t:'企业、引力模型与量化贸易模型', sub:'今天的主流，2002年至今',
+  ctx:'企业层面的数据显示，只有一小部分企业出口。异质性企业和结构引力的新模型让经济学家能够衡量贸易收益、模拟贸易政策，而关于“中国冲击”的研究把收入分配重新带回争论的中心。',
+  ev:['1962年：丁伯根的引力方程','2002年：伊顿和科特姆的李嘉图模型','2003年：梅里兹的异质性企业模型','2012年：阿克拉基斯、科斯蒂诺和罗德里格斯-克莱尔论贸易收益','2013年：奥托、多恩和汉森论“中国冲击”','2018—2019年：中美关税战'],
+  people:['Marc Melitz','Jonathan Eaton','Samuel Kortum','David Autor'],
+  ideas:['引力方程：贸易、规模与距离。','异质性企业与出口选择。','衡量贸易收益。','“中国冲击”与贸易的地方性代价。','全球价值链与增加值贸易。'],
+  read:'梅里兹，《贸易对产业内资源再配置和行业总生产率的影响》（2003），引言；奥托、多恩、汉森，《中国冲击》（2016）。辅助阅读：欧文，<em>Free Trade under Fire</em>，第5版（2020）。',
+  q:'主流模型如今既衡量贸易收益，也衡量其集中的代价。这会改变政策结论吗？',
+  mod:'gravity.html'},
+ {n:9, t:'汉密尔顿、李斯特与幼稚产业', sub:'政治经济学的国民体系，1791—1841年',
+  ctx:'对自由贸易的第一次严肃挑战来自试图追赶英国的国家。年轻美国的汉密尔顿和德意志各邦的李斯特都认为，后来者必须保护本国产业，直到它们能够参与竞争。',
+  ev:['1791年：汉密尔顿《关于制造业的报告》','1816年、1828年：美国保护性关税','1834年：德意志关税同盟','1841年：李斯特《政治经济学的国民体系》','1861—1913年：内战后美国的高关税'],
+  people:['Alexander Hamilton','Friedrich List','Henry Carey'],
+  ideas:['生产力与交换价值。','幼稚产业论及其条件。','国家经济学与世界主义经济学。','“美国体系”以及凯里对英国自由贸易的批判。','关税如何起作用：消费者的代价、生产者的收益和无谓损失。'],
+  read:'李斯特，《政治经济学的国民体系》（1841），第11—12章；汉密尔顿，《关于制造业的报告》（1791），选读。辅助阅读：张夏准，《富国陷阱》（2002），第2章；欧文，<em>Against the Tide</em>，第8章。',
+  q:'穆勒在原则上接受了幼稚产业论。李斯特的观点与穆勒有什么不同？',
+  mod:'list.html'},
+ {n:10, t:'德国历史学派', sub:'发展阶段与贸易政策，1843—1910年',
+  ctx:'在新统一的德国，一个经济学流派拒绝普遍规律，主张历史研究。他们把重商主义重新解读为国家建设，并支持俾斯麦在1879年转向保护主义。',
+  ev:['1843年：罗雪尔《历史方法的国民经济学讲义大纲》','1872年：社会政策协会成立','1879年：俾斯麦对钢铁和粮食征收关税','1883—1884年：施穆勒与门格尔的方法论之争','1884年：施穆勒《重商主义制度》'],
+  people:['Wilhelm Roscher','Gustav Schmoller'],
+  ideas:['历史的、归纳的方法与演绎理论之争。','经济发展阶段与适合各阶段的政策。','重商主义作为国家建设。','方法论之争及其在美国制度主义中的遗产。'],
+  read:'施穆勒，《重商主义制度及其历史意义》（1884）。辅助阅读：赖纳特，《富国为什么富，穷国为什么穷》（2007），第1章。',
+  q:'“贸易政策应当取决于一个国家的发展阶段”，这是一种理论，还是拒绝建立理论？',
+  mod:'historical-school.html'},
+ {n:11, t:'发展型国家', sub:'东亚：作为产业政策的贸易政策',
+  ctx:'日本、韩国和台湾地区实现工业化的速度超过了历史上任何经济体。自由市场派经济学家把功劳归于出口导向和开放市场；政治经济学家则指出，是国家在管理贸易、信贷和投资。',
+  ev:['1950—1960年代：日本通产省指导产业政策','1961—1979年：朴正熙推动韩国出口','1982年：约翰逊《通产省与日本奇迹》','1989年：阿姆斯登《亚洲的下一个巨人》','1990年：韦德《驾驭市场》','1993年：世界银行《东亚奇迹》'],
+  people:['Chalmers Johnson','Alice Amsden'],
+  ideas:['出口导向与进口替代。','故意把价格“扭曲”，并用出口目标约束企业。','有选择的保护与定向信贷。','关于“东亚奇迹”的争论。'],
+  read:'阿姆斯登，《亚洲的下一个巨人》（1989），第1章；韦德，《驾驭市场》（1990），第1章。辅助阅读：张夏准，<em>Economics: The User’s Guide</em>，第4章（发展主义传统）。',
+  q:'东亚的成功是支持自由贸易的证据，还是反对自由贸易的证据？',
+  mod:'developmental-state.html'},
+ {n:12, t:'新发展主义：踢开梯子', sub:'世贸组织时代的政策空间，2002年至今',
+  ctx:'世贸组织关于补贴、知识产权和投资的规则收窄了东亚曾经使用的政策工具。张夏准和赖纳特认为，富国正在拒绝让别人使用它们自己爬上来的梯子；林毅夫则提出了另一条道路。',
+  ev:['1995年：世贸组织成立；《与贸易有关的知识产权协定》和《与贸易有关的投资措施协定》','2001年：多哈发展回合启动','2002年：张夏准《富国陷阱》','2007年：赖纳特《富国为什么富，穷国为什么穷》','2009年：林毅夫与张夏准的辩论','2020年代：产业政策在富国回归'],
+  people:['Ha-Joon Chang','Erik Reinert','Justin Yifu Lin'],
+  ideas:['今天的富国实行保护的历史记录。','政策空间与世贸组织规则。','林毅夫的新结构经济学：遵循潜在比较优势。','张夏准与林毅夫之辩：违背还是遵循比较优势？'],
+  read:'张夏准，《富国陷阱》（2002），第2章；林毅夫、张夏准，《发展中国家的产业政策应当遵循还是违背比较优势？》（2009）。辅助阅读：赖纳特（2007），第1章。',
+  q:'林毅夫说一个国家应当沿着比较优势的阶梯一步一步向上爬；张夏准说有时必须跳跃。案例支持哪一种观点？',
+  mod:'neo-developmentalism.html'},
+ {n:13, t:'旧制度主义与后发优势', sub:'凡勃伦、格申克龙与追赶',
+  ctx:'1914年以前，德国和美国在工业上超过了英国。凡勃伦追问后来者如何能借用领先者的技术而不背负它的制度，格申克龙后来把这一观点加以推广。',
+  ev:['1899年：凡勃伦《有闲阶级论》','1915年：凡勃伦《德意志帝国与工业革命》','1924年：康芒斯《资本主义的法律基础》','1962年：格申克龙《经济落后的历史透视》'],
+  people:['Thorstein Veblen','John R. Commons','Alexander Gerschenkron'],
+  ideas:['市场作为不断演化的制度；没有单独的贸易理论。','凡勃伦论德意志帝国：借用技术而不借用其制度。','格申克龙的后发优势。','追赶型增长及其条件。'],
+  read:'凡勃伦，《德意志帝国与工业革命》（1915），选读；格申克龙，《经济落后的历史透视》（1962），第1章。辅助阅读：亨特，第12章。',
+  q:'作为后来者，是优势还是劣势？由什么决定？',
+  mod:'backwardness.html'},
+ {n:14, t:'波兰尼与双向运动', sub:'自我调节的世界市场，1944年',
+  ctx:'卡尔·波兰尼在第二次世界大战期间写作，他把1930年代的灾难追溯到十九世纪以金本位和自由贸易为基础建立自我调节的市场经济的尝试。',
+  ev:['1846—1914年：自由贸易与金本位','1929—1933年：大萧条；世界贸易崩溃','1944年：波兰尼《大转型》；布雷顿森林会议','1982年：鲁杰论“嵌入式自由主义”'],
+  people:['Karl Polanyi'],
+  ideas:['嵌入性：经济是社会的一部分。','双向运动：市场扩张与社会保护。','金本位作为市场社会的支柱。','1945年后的嵌入式自由主义，以及对今天反弹的解读。'],
+  read:'波兰尼，《大转型》（1944），第1—2章和第19章。辅助阅读：鲁杰，《国际体制、交易与变迁》（1982）。',
+  q:'2016年以来对全球化的反弹，是一场波兰尼意义上的双向运动吗？',
+  mod:'polanyi.html'},
+ {n:15, t:'新制度经济学与贸易', sub:'制度作为比较优势，1990年至今',
+  ctx:'经济学的制度转向追问合同执行、产权和政治制度如何塑造贸易，以及贸易反过来如何塑造它们。',
+  ev:['1990年：诺思《制度、制度变迁与经济绩效》','2005年：阿西莫格鲁、约翰逊和罗宾逊论大西洋贸易','2007年：纳恩论关系专用性'],
+  people:['Douglass North','Daron Acemoglu','Nathan Nunn'],
+  ideas:['交易成本与市场范围。','合同执行作为比较优势的来源。','大西洋贸易、制度与欧洲的兴起。','奴隶贸易与长期发展。'],
+  read:'诺思，《制度、制度变迁与经济绩效》（1990），第1章；纳恩，《关系专用性、不完全合同与贸易模式》（2007），引言。辅助阅读：阿西莫格鲁、约翰逊、罗宾逊，《欧洲的兴起》（2005）。',
+  q:'是贸易造就了好的制度，还是好的制度使贸易变得有益？',
+  mod:'institutions-trade.html'},
+ {n:16, t:'罗德里克的全球化三难困境', sub:'深度一体化的政治限度，1997年至今',
+  ctx:'随着贸易协定越来越深地触及监管、投资和金融，丹尼·罗德里克认为，深度一体化有着被经济学家低估的政治代价。',
+  ev:['1997年：罗德里克《全球化走得太远了吗？》','1997—1998年：亚洲金融危机','2011年：罗德里克《全球化的悖论》','2016年：英国脱欧公投与美国大选','2018年：中美贸易战'],
+  people:['Dani Rodrik'],
+  ideas:['三难困境：超级全球化、民主与国家主权。','布雷顿森林、“金色紧身衣”与全球联邦主义。','社会契约与深度一体化的代价。','为国家政策留出空间的“明智的全球化”。'],
+  read:'罗德里克，《全球化的悖论》（2011），第9章和第12章。辅助阅读：罗德里克，《全球化走得太远了吗？》（1997），第1章。',
+  q:'一个国家应当放弃三难困境中的哪一角？又该由谁来决定？',
+  mod:'trilemma.html'},
+ {n:17, t:'凯恩斯论贸易与失衡', sub:'开放经济中的有效需求，1933—1944年',
+  ctx:'大萧条时期，各国试图用关税和货币贬值输出失业。曾经的自由贸易者凯恩斯认为，贸易失衡关系到就业，并设计了一个顺差国也必须调整的战后体系。',
+  ev:['1930年：《斯穆特—霍利关税法》','1931年：英国放弃金本位','1933年：凯恩斯《国家自给自足》','1936年：《通论》第23章','1944年：布雷顿森林会议；凯恩斯的清算联盟方案被否决'],
+  people:['John Maynard Keynes'],
+  ideas:['贸易顺差与就业：输出失业。','重新评价重商主义者（《通论》第23章）。','《国家自给自足》（1933）。','国际清算联盟与对称调整。','今天的全球失衡。'],
+  read:'凯恩斯，《国家自给自足》（1933）；凯恩斯，《就业、利息和货币通论》（1936），第23章第1—4节。辅助阅读：欧文，<em>Against the Tide</em>，第13章。',
+  q:'持续顺差的国家是否应当像凯恩斯提议的那样被要求调整？',
+  mod:'keynes-trade.html'},
+ {n:18, t:'结构主义与贸易条件', sub:'普雷维什与辛格，1950年',
+  ctx:'拉丁美洲和联合国的经济学家认为，世界经济分为工业化的中心和出口初级产品的外围，贸易非但不会使两者趋同，反而会扩大差距。',
+  ev:['1948年：拉丁美洲经济委员会成立','1950年：普雷维什《拉丁美洲的经济发展》；辛格在《美国经济评论》发表论文','1959年：富尔塔多《巴西经济的形成》','1964年：联合国贸发会议成立，普雷维什任秘书长','1974年：国际经济新秩序'],
+  people:['Raúl Prebisch','Hans Singer','Celso Furtado'],
+  ideas:['中心与外围。','关于贸易条件恶化的普雷维什—辛格假说。','进口替代工业化。','联合国贸发会议与全球南方的诉求。','证据显示了什么。'],
+  read:'普雷维什，《拉丁美洲的经济发展及其主要问题》（1950），第1—2章；辛格，《投资国与借款国之间的收益分配》（1950）。辅助阅读：托伊、托伊，《普雷维什—辛格命题的起源与解释》（2003）。',
+  q:'如果初级产品出口国的贸易条件恶化，答案是工业化、商品协定，还是别的什么？',
+  mod:'prebisch-singer.html'},
+ {n:19, t:'后凯恩斯主义贸易理论：累积因果与瑟尔沃尔定律', sub:'开放经济中的需求驱动型增长，1957年至今',
+  ctx:'后凯恩斯主义者认为，贸易由需求和累积因果而非比较优势决定，国际收支限制着一个经济体能够增长的速度。',
+  ev:['1957年：缪尔达尔《经济理论与不发达地区》','1966年：卡尔多论英国增长缓慢的原因','1970年：卡尔多论地区政策','1979年：瑟尔沃尔定律'],
+  people:['Gunnar Myrdal','Nicholas Kaldor','Anthony Thirlwall'],
+  ideas:['累积因果：回流效应与扩散效应。','卡尔多增长定律与制造业的作用。','瑟尔沃尔定律：国际收支约束型增长。','出口导向型增长及其局限。'],
+  read:'瑟尔沃尔，《国际收支约束作为国际增长率差异的一种解释》（1979）；缪尔达尔，《经济理论与不发达地区》（1957），第3章。辅助阅读：亨特，第18章。',
+  q:'如果增长受国际收支约束，一个国家可以做些什么来放松这一约束？',
+  mod:'thirlwall.html'},
+ {n:20, t:'新结构主义与全球价值链', sub:'碎片化世界经济中的升级，1990年至今',
+  ctx:'债务危机之后，拉丁美洲的结构主义者接受了开放，但坚持必须有意识地升级。与此同时，生产被拆分到各国，形成全球价值链，由此提出了谁获得价值的问题。',
+  ev:['1990年：拉美经委会《兼顾社会公平的生产转型》','1994年：杰里菲与科热涅维奇《商品链与全球资本主义》','2005年：杰里菲、汉弗莱和斯特金论价值链治理','2013年：经合组织—世贸组织增加值贸易数据库'],
+  people:['José Antonio Ocampo','Gary Gereffi'],
+  ideas:['兼顾公平的生产转型。','从商品链到全球价值链。','价值链的治理。','升级与“微笑曲线”。','多元化与经济复杂度。'],
+  read:'杰里菲，<em>Global Value Chains and Development</em>（2018），第1章；拉美经委会，《兼顾社会公平的生产转型》（1990），摘要。辅助阅读：奥坎波，《发展中国家的结构动态与经济增长》（2005）。',
+  q:'在价值链的世界里，一个国家出口什么商品还重要吗？还是只有它承担什么工序才重要？',
+  mod:'value-chains.html'},
+ {n:21, t:'马克思与世界市场', sub:'资本、价值与国际交换，1848—1894年',
+  ctx:'马克思和恩格斯目睹英国在自由贸易下成为“世界工厂”。他们把世界市场看作资本的天然舞台，并追问价值规律如何在国家之间起作用。',
+  ev:['1846年：废除《谷物法》','1848年：马克思《关于自由贸易问题的演说》；《共产党宣言》','1867年：《资本论》第一卷','1894年：《资本论》第三卷'],
+  people:['Karl Marx','Friedrich Engels','Anwar Shaikh'],
+  ideas:['世界市场与资本的普遍化趋势。','马克思论自由贸易（1848）。','国家之间的价值：价值规律在国际上的变形。','谢克论绝对优势与持续的失衡。'],
+  read:'马克思，《关于自由贸易问题的演说》（1848）；马克思、恩格斯，《共产党宣言》（1848），第一章。辅助阅读：谢克，《资本主义：竞争、冲突与危机》（2016），第11章。',
+  q:'马克思在1848年支持自由贸易，因为它会加速资本主义的危机。这算是为自由贸易辩护吗？',
+  mod:'marx-trade.html'},
+ {n:22, t:'帝国主义理论', sub:'贸易、金融与帝国，1902—1917年',
+  ctx:'从柏林会议到第一次世界大战，列强瓜分了世界的大部分地区。霍布森、希法亭、卢森堡和列宁认为，贸易和资本输出与垄断、金融和国家之间的争霸紧密相连。',
+  ev:['1884—1885年：柏林会议','1902年：霍布森《帝国主义》','1910年：希法亭《金融资本》','1913年：卢森堡《资本积累论》','1917年：列宁《帝国主义是资本主义的最高阶段》'],
+  people:['J. A. Hobson','Rudolf Hilferding','Rosa Luxemburg','Vladimir Lenin'],
+  ideas:['资本输出与消费不足。','金融资本与保护主义。','积累与非资本主义市场。','帝国主义作为资本主义的一个阶段。'],
+  read:'亨特，第13章；列宁，《帝国主义是资本主义的最高阶段》（1917），第四章和第七章。辅助阅读：霍布森，《帝国主义》（1902），第一部分第6章。',
+  q:'今天中美之间的贸易冲突，是列宁意义上的帝国主义国家之间的争霸吗？',
+  mod:'imperialism-trade.html'},
+ {n:23, t:'依附理论', sub:'不发达的发展，1957—1980年代',
+  ctx:'非殖民化之后，富国与穷国之间的差距依然存在。拉丁美洲、非洲和北美的依附理论家认为，正是融入世界市场本身造成了不发达。',
+  ev:['1957年：巴兰《增长的政治经济学》','1966—1967年：弗兰克论“不发达的发展”','1969年：卡多佐与法莱托《拉丁美洲的依附与发展》','1970年：多斯桑托斯论依附的结构','1972年：罗德尼《欧洲如何使非洲欠发达》'],
+  people:['Paul Baran','Andre Gunder Frank','Fernando Henrique Cardoso','Theotonio dos Santos','Walter Rodney'],
+  ideas:['宗主中心与卫星；剩余的流失。','不发达的发展。','依附性发展与联合依附性发展。','脱钩及其批评者。'],
+  read:'弗兰克，《不发达的发展》（1966）；多斯桑托斯，《依附的结构》（1970）。辅助阅读：卡多佐、法莱托，《拉丁美洲的依附与发展》（1969），序言。',
+  q:'东亚通过融入世界市场实现了发展。这是否驳倒了依附理论？',
+  mod:'dependency.html'},
+ {n:24, t:'不平等交换', sub:'伊曼纽尔、阿明及其论战，1969年至今',
+  ctx:'阿尔吉里·伊曼纽尔把马克思的生产价格理论应用于世界经济，认为高工资国家与低工资国家之间的贸易即使按市场价格进行，也会转移价值。这一理论引发了激进经济学中最激烈的论战之一。',
+  ev:['1969年：伊曼纽尔《不平等交换》法文版出版，附贝特尔海姆的批评','1970年：阿明《世界规模的积累》','1973年：阿明《不平等的发展》','1976年：萨缪尔森的批评','2000年代：生态不平等交换（霍恩堡）'],
+  people:['Arghiri Emmanuel','Samir Amin','Alf Hornborg'],
+  ideas:['资本可流动、劳动不可流动，以及国际生产价格。','狭义和广义的不平等交换。','与贝特尔海姆的论战：工资差异是否源于生产率差异？','阿明与世界规模的积累。','生态不平等交换。'],
+  read:'伊曼纽尔，《不平等交换》（英译本1972），引言；阿明，《不平等的发展》（英译本1976），选读。辅助阅读：霍恩堡，<em>Global Ecology and Unequal Exchange</em>（2011），第1章。',
+  q:'如果工资差异反映了生产率差异，是否还存在价值转移？',
+  mod:'unequal-exchange.html'},
+ {n:25, t:'世界体系分析', sub:'贸易与世界经济的等级结构，1974年至今',
+  ctx:'世界体系分析把整个资本主义世界经济作为分析单位，追溯贸易如何组织起核心、半外围和外围之间等级化的分工。',
+  ev:['1974年：沃勒斯坦《现代世界体系》第一卷','1976年：费尔南·布罗代尔中心成立','1986年：霍普金斯与沃勒斯坦论商品链','1994年：阿瑞吉《漫长的20世纪》'],
+  people:['Immanuel Wallerstein','Giovanni Arrighi','Terence Hopkins','Christopher Chase-Dunn'],
+  ideas:['漫长的十六世纪以来的现代世界体系。','核心、半外围与外围。','商品链——全球价值链的前身。','霸权周期与体系性积累周期。','中国的崛起与世界体系的未来。'],
+  read:'沃勒斯坦，《现代世界体系》第一卷（1974），导言；霍普金斯、沃勒斯坦，《1800年以前世界经济中的商品链》（1986）。辅助阅读：阿瑞吉，《漫长的20世纪》（1994），导言。',
+  q:'中国是否正在从半外围进入核心？这对世界体系意味着什么？',
+  mod:'world-systems.html'},
+];
+const MODS = {"mercantilism.html": "重商主义与重农学派（含物价—铸币流动机制的互动模型）", "smith.html": "亚当·斯密（含绝对优势计算器）", "ricardo.html": "李嘉图与比较优势（含生产可能性的互动模型）", "mill.html": "穆勒与贸易条件（含相互需求的互动模型）", "opportunity-cost.html": "马歇尔、哈伯勒与机会成本（含成本递增边界的互动模型）", "heckscher-ohlin.html": "赫克歇尔—俄林模型（含斯托尔珀—萨缪尔森定理的互动模型）", "new-trade-theory.html": "新贸易理论（含多样性收益的互动模型）", "gravity.html": "企业、引力模型与量化模型（含引力模型和贸易收益计算器）", "list.html": "汉密尔顿、李斯特与幼稚产业（含关税和幼稚产业的互动模型）", "historical-school.html": "德国历史学派", "developmental-state.html": "发展型国家", "neo-developmentalism.html": "新发展主义（含张夏准—林毅夫辩论的互动对照）", "backwardness.html": "旧制度主义与后发优势（含追赶增长的互动模型）", "polanyi.html": "波兰尼与双向运动（含互动时间线）", "institutions-trade.html": "新制度经济学与贸易", "trilemma.html": "罗德里克的全球化三难困境（含互动三角形）", "keynes-trade.html": "凯恩斯论贸易与失衡（含国际清算联盟的互动模型）", "prebisch-singer.html": "结构主义与贸易条件（含普雷维什—辛格的互动模型）", "thirlwall.html": "后凯恩斯主义贸易理论（含瑟尔沃尔定律计算器）", "value-chains.html": "新结构主义与全球价值链（含互动微笑曲线）", "marx-trade.html": "马克思与世界市场（含绝对优势的互动模型）", "imperialism-trade.html": "帝国主义理论（含霍布森消费不足的互动模型）", "dependency.html": "依附理论（含宗主中心—卫星链条的互动模型）", "unequal-exchange.html": "不平等交换（含伊曼纽尔模型的互动演示）", "world-systems.html": "世界体系分析（含体系性积累周期的互动时间线）"};
+// Split a reading note into one entry per paragraph: core readings first, then companions.
+function splitTop(s) { const out = []; let depth = 0, cur = ''; for (const ch of s) { if (ch === '(' || ch === '（') depth++; if (ch === ')' || ch === '）') depth--; if ((ch === ';' || ch === '；') && depth === 0) { out.push(cur.trim()); cur = ''; } else cur += ch; } if (cur.trim()) out.push(cur.trim()); return out; }
+const dot = s => /[。？！]$/.test(s) ? s : s + '。';
+function readings(read) {
+  const [core, comp] = read.split(/。\s*辅助阅读：/);
+  let h = '<p class="rl">核心阅读</p>' + splitTop(core.replace(/。$/, '')).map(x => `<p class="rd">${dot(x)}</p>`).join('');
+  if (comp) h += '<p class="rl">辅助阅读</p>' + splitTop(comp.replace(/。$/, '')).map(x => `<p class="rd">${dot(x)}</p>`).join('');
+  return h;
+}
+const modLink = m => ZHMOD.includes(m) ? `<a class="mod" href="${m}">打开模块：${MODS[m]} →</a>` : `<a class="mod" href="../${m}">打开模块：${MODS[m]}（英文版）→</a>`;
+const weeks = document.getElementById('topics');
+let html = '';
+TOPICS.forEach(w => {
+  if (PARTS[w.n]) html += `<div class="part">${PARTS[w.n]}</div>`;
+  html += `<details class="wk" id="topic-${w.n}"><summary><span class="wn">专题${w.n}</span><span class="wt">${w.t}<small>${w.sub}</small></span><span class="chev">▸</span></summary>
+  <div class="wb">
+    <div class="ctx"><b>历史背景。</b>${w.ctx}<ul>${w.ev.map(e=>`<li>${e}</li>`).join('')}</ul></div>
+    <h4>主要思想家</h4>${people(w.people)}
+    <h4>核心观点</h4><ul class="ideas">${w.ideas.map(i=>`<li>${i}</li>`).join('')}</ul>
+    <h4>阅读材料</h4>${readings(w.read)}
+    <div class="think"><b>思考题：</b>${w.q}</div>
+    ${w.mod ? modLink(w.mod) : ''}
+  </div></details>`;
+});
+weeks.innerHTML = html;
+function openHash() { const h = location.hash; if (h.startsWith('#topic-')) { const d = document.querySelector(h); if (d) { d.open = true; d.scrollIntoView({block:'start'}); } } }
+openHash(); window.addEventListener('hashchange', openHash);
+
+// ---------- Credits ----------
+const USED = new Set([...SCHOOLS.flatMap(s => s.people), ...TOPICS.flatMap(w => w.people)]);
+const cc = Object.entries(P).filter(([n,p]) => p && USED.has(n)).sort();
+const open = cc.filter(([n,p]) => !/public domain|^pd/i.test(p.lic));
+const pd = cc.filter(([n,p]) => /public domain|^pd/i.test(p.lic));
+document.getElementById('credits').innerHTML =
+  `<p>肖像来自维基共享资源（Wikimedia Commons）。公有领域：${pd.map(([n,p])=>`<a href="${p.src}">${zh(n)}</a>`).join('、')}。</p>` +
+  `<p>开放许可：${open.map(([n,p])=>`<a href="${p.src}">${zh(n)}</a>（${p.by ? p.by.replace(/[<>]/g,'') + '，' : ''}${p.lic}）`).join('；')}。</p>` +
+  `<p>没有自由许可肖像的思想家以姓名首字母显示。</p>`;
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>凯恩斯论贸易与失衡 | Lingyi Wei</title>
+  <meta name="description" content="关于凯恩斯与国际贸易的教学模块：从自由贸易者到批评者、大萧条中的以邻为壑政策、《国家自给自足》、重新评价重商主义者、国际清算联盟（含互动模拟）、布雷顿森林体系，以及今天的全球失衡。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/keynes-trade.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../keynes-trade.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题17</p>
+  <h1>凯恩斯论贸易与失衡</h1>
+  <p class="lead">古典贸易理论假定充分就业：因进口而失业的工人会在出口产业找到新工作。大萧条打破了这一假定。在自由贸易传统中成长起来的约翰·梅纳德·凯恩斯后来认为，贸易顺差和逆差影响就业，国家可以输出自己的失业，而一个健全的国际体系必须让顺差国和逆差国一样承担调整。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#free">从自由贸易者到批评者</a></li><li><a href="#beggar">输出失业</a></li><li><a href="#ns">国家自给自足</a></li><li><a href="#merc">重新评价重商主义者</a></li><li><a href="#icu">国际清算联盟（互动）</a></li><li><a href="#bw">布雷顿森林及其后</a></li><li><a href="#today">今天的全球失衡</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="free">1. 从自由贸易者到批评者</h2>
+  <p>和他那一代的大多数英国经济学家一样，凯恩斯从小就是一个坚定的自由贸易者。1923年，保守党提出用关税来减少失业，凯恩斯认为保护无法治愈失业，因为失业是一个货币问题。到了1920年代末，他改变了看法。英国在1925年按战前平价恢复了金本位，凯恩斯曾反对这样做；英国的出口价格过高，失业人数一直在一百万以上，而政府既不愿贬值，也不愿扩大支出。1930—1931年，凯恩斯在麦克米伦委员会和经济顾问委员会中提议对进口征收财政关税。在金本位下，当汇率不能变动时，关税是减少进口、增加就业的一种办法。</p>
+  <p>英国在1931年9月放弃金本位，并于1932年实行普遍关税，结束了八十六年的自由贸易。其他国家早已提高了关税，最臭名昭著的是美国1930年的《斯穆特—霍利关税法》。1929年至1933年间，世界贸易额下降了约三分之二。</p>
+
+  <h2 id="beggar">2. 输出失业</h2>
+  <p>在凯恩斯的经济中，产出由有效需求决定，而净出口是需求的一部分。一个通过提高关税、削减工资或货币贬值来扩大贸易顺差的国家，会增加本国的产出和就业。但一国的顺差就是另一国的逆差。在世界性萧条中，这类政策只是把失业从一个国家转移到另一个国家。琼·罗宾逊称之为<b>以邻为壑</b>的补救办法，这个名字来自一种纸牌游戏，一方赢走另一方的所有牌。如果每个国家都通过报复性关税和竞争性贬值来推行这类政策，世界贸易就会萎缩，谁也得不到好处。这正是1930年代初的经历。</p>
+  <p>凯恩斯式的替代办法是通过公共支出和低利率直接扩大国内需求，使每个国家都能同时扩张。但一个单独扩张的国家会看到它的进口增加、贸易差额恶化。国际体系必须设计得使扩张不受惩罚。</p>
+
+  <h2 id="ns">3. 国家自给自足</h2>
+  <p>在1933年的论文《国家自给自足》中，凯恩斯走得更远。他不再相信国际分工带来的经济收益大到足以压倒其他考虑。他认为，大多数现代制造业在大多数国家都可以以差不多的效率进行。与此同时，经济上的相互纠缠带来政治危险，而资本的自由流动把每个国家的利率和经济政策都与世界金融市场捆绑在一起。凯恩斯写道，思想、知识、艺术和旅行应当是国际性的；但在合理而方便的地方，他宁愿“让商品在本国生产”，最重要的是让金融主要保持在国家范围内。他认为，每个国家都需要有进行自己的经济组织试验的自由。这篇论文应当放在世界经济正在解体的那个时代来读，而不是当作一条普遍的规则。</p>
+
+  <h2 id="merc">4. 重新评价重商主义者</h2>
+  <p>在《通论》（1936）第23章《略论重商主义》中，凯恩斯认为重商主义者（专题1）抓住了一个被古典经济学家遗忘的真理。在一个国内利率取决于货币数量、而货币数量又取决于贵金属流入的经济中，有利的贸易差额会降低利率，增加投资和就业。因此，重商主义者对贸易差额的关注，并不仅仅是把货币与财富混为一谈。凯恩斯补充说，对一个国家合理的做法，对所有国家却是危险的：每个国家都试图以别国为代价取得顺差，导致了争夺市场的竞争，而这种竞争往往以战争告终。</p>
+
+  <h2 id="icu">5. 国际清算联盟</h2>
+  <p>第二次世界大战期间，凯恩斯领导了英国对战后货币秩序的规划。他提出的<b>国际清算联盟</b>方案（1941—1943）旨在赋予世界经济它所缺乏的扩张性倾向。各国将通过在清算联盟的账户结算国际支付，账户以一种新的国际单位<b>班科</b>计价。每个国家根据它在世界贸易中的份额获得一个份额。逆差国可以在份额以内透支，因此不必立即实行通货紧缩。关键的创新在于<b>对称性</b>。在金本位下，逆差国必须通过流失黄金和通货紧缩来调整，而顺差国则没有任何压力。按照凯恩斯的方案，顺差国也要为大额贷方余额支付费用，并被要求采取措施减少余额：扩大需求、货币升值、降低关税或对外贷款。在万不得已时，年终仍然超额的余额将被转入储备基金。</p>
+
+  <div class="box" id="icubox">
+    <h3>简化的清算联盟</h3>
+    <p class="note">两个国家各有100班科的份额。一国持续保持贸易顺差，另一国有相应的逆差。按照凯恩斯的方案，一国的余额（无论是贷方还是借方）超过份额四分之一的部分每年要付1%的费用，超过一半的部分再加付1%。一旦余额超过份额的一半，该国就必须采取纠正措施。比较清算联盟与只对逆差国施压的金本位。</p>
+    <div class="grid2">
+      <div><label>顺差国的年度顺差（班科）：<b id="sv">15</b></label><input type="range" id="s" min="0" max="40" step="1" value="15"></div>
+      <div><label>年数：<b id="yv">5</b></label><input type="range" id="y" min="1" max="10" step="1" value="5"></div>
+    </div>
+    <p><button type="button" class="btn on" data-m="icu">清算联盟</button><button type="button" class="btn" data-m="gold">金本位</button></p>
+    <svg id="icuchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="顺差国和逆差国的累计余额与份额的比较"></svg>
+    <div class="out" id="icuout"></div>
+  </div>
+
+  <h2 id="bw">6. 布雷顿森林及其后</h2>
+  <p>预计自己将成为世界最大顺差国的美国拒绝了清算联盟。由哈里·德克斯特·怀特起草的美国方案在1944年的布雷顿森林会议上占了上风。国际货币基金组织的资源远少于凯恩斯的清算联盟，它附带条件地向逆差国贷款，而几乎不对顺差国施加压力。对对称性的唯一让步是“稀缺货币条款”：如果基金组织宣布某国货币稀缺，成员国可以限制从该国的进口。这一条款从未被使用过。调整的压力仍然落在逆差国身上，往往以国际货币基金组织贷款条件所要求的紧缩政策的形式出现。</p>
+  <p>凯恩斯也赢得了其他几点。布雷顿森林协定允许各国管制资本流动，汇率虽然固定，但在“根本性失衡”的情况下可以调整。战后西方经济在关贸总协定历轮谈判逐步降低关税的同时保持了充分就业，这就是鲁杰所说的嵌入式自由主义（专题14）。</p>
+
+  <h2 id="today">7. 今天的全球失衡</h2>
+  <p>凯恩斯提出的问题在2000年代重新出现。中国、德国、日本和石油出口国庞大而持续的顺差，对应着美国、英国和南欧庞大的逆差。本·伯南克（2005）把美国的逆差归因于顺差国的“全球储蓄过剩”。2010年以后的欧元区，希腊、西班牙和葡萄牙等逆差国被迫实行严厉的紧缩，而德国的顺差却持续扩大，这一格局重现了凯恩斯试图防止的不对称。马修·克莱因和迈克尔·佩蒂斯（2020）认为，持续的顺差反映了顺差国压低居民收入和消费的国内政策，由此产生的失衡把失业和债务转移给了逆差国。恢复凯恩斯向顺差国收费的设想，在关于国际货币体系改革的讨论中不断被重新提起。</p>
+  <div class="think"><b>思考题：</b>持续顺差的国家是否应当像凯恩斯提议的那样被要求调整？</div>
+
+  <h2 id="read">8. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">约翰·梅纳德·凯恩斯，“National Self-Sufficiency”，<em>Yale Review</em>（1933）。</p>
+  <p class="rd">约翰·梅纳德·凯恩斯，《就业、利息和货币通论》（1936），第23章第1—4节。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第13章。</p>
+  <p class="rd">马修·克莱因、迈克尔·佩蒂斯，《贸易战就是阶级战》（2020），第1章。</p>
+  <p><a href="index.html#topic-17">← 返回课程大纲中的专题17</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let mode = 'icu';
+const Q = 100;
+const charge = b => { const a = Math.abs(b); return 0.01*Math.max(0, a - Q/4) + 0.01*Math.max(0, a - Q/2); };
+function icu() {
+  const s = +$('s').value, Y = +$('y').value;
+  $('sv').textContent = s; $('yv').textContent = Y;
+  document.querySelectorAll('#icubox .btn').forEach(b => b.classList.toggle('on', b.dataset.m === mode));
+  let bal = 0, cS = 0, cD = 0, firstAct = null; const B = [];
+  for (let t = 1; t <= Y; t++) {
+    bal += s; B.push(bal);
+    if (mode === 'icu') { cS += charge(bal); cD += charge(bal); }
+    if (firstAct === null && bal > Q/2) firstAct = t;
+  }
+  const W = 640, H = 220, L = 150, R = 30, M = Math.max(Q*1.1, bal*1.05), X = v => L + v/M*(W-L-R);
+  let g = '';
+  [['顺差国', '#023e8a'], ['逆差国', '#c47a2c']].forEach(([n, c], i) => {
+    const y = 40 + i*70;
+    g += `<text x="${L-10}" y="${y+20}" text-anchor="end">${n}</text>`;
+    g += `<rect x="${L}" y="${y}" width="${X(bal)-L}" height="30" rx="4" fill="${c}"/>`;
+    g += `<text x="${X(bal)+6}" y="${y+20}" style="fill:#1f2933;font-weight:600">${i ? '−' : '+'}${bal}</text>`;
+  });
+  [[Q/4, '¼份额'], [Q/2, '½份额'], [Q, '份额']].forEach(([v, lab]) => {
+    if (X(v) <= W-R) g += `<line x1="${X(v)}" x2="${X(v)}" y1="24" y2="${H-30}" stroke="#8a929b" stroke-dasharray="4 4"/><text x="${X(v)}" y="18" text-anchor="middle">${lab}</text>`;
+  });
+  g += `<text x="${L}" y="${H-8}">${Y}年后的班科余额</text>`;
+  $('icuchart').innerHTML = g;
+  let msg = `${Y}年后，顺差国持有<b>${bal}</b>班科的贷方余额，逆差国则有同等数额的透支。`;
+  if (s === 0) msg = '贸易平衡时，两国都不会积累余额，什么也不会发生。请提高顺差。';
+  else if (mode === 'icu') {
+    msg += `在清算联盟下，<b>两国</b>都要付费：这段时间内各付${cS.toFixed(1)}班科。`;
+    msg += firstAct ? `从第${firstAct}年起，两国的余额都超过份额的一半，因此顺差国必须采取措施减少顺差（扩大需求、货币升值、降低关税或对外贷款），逆差国则可能被要求贬值或限制资本外流。调整由双方分担。` : '两国的余额都还没有超过份额的一半，因此不需要采取纠正措施。';
+    if (bal > Q) msg += '逆差国已经用尽了透支额度。';
+  } else {
+    msg += `在金本位下，逆差国损失${bal}单位储备，必须紧缩信用、削减工资并接受失业，直到逆差消失。顺差国则<b>没有任何压力</b>去改变什么，可以继续积累储备。调整的负担完全落在逆差国身上，使世界经济带有通货紧缩的倾向。`;
+  }
+  $('icuout').innerHTML = msg;
+}
+['s','y'].forEach(i => $(i).addEventListener('input', icu));
+document.querySelectorAll('#icubox .btn').forEach(b => b.addEventListener('click', () => { mode = b.dataset.m; icu(); }));
+icu();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

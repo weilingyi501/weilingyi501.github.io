@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>企业、引力模型与量化贸易模型 | Lingyi Wei</title>
+  <meta name="description" content="关于当今主流贸易经济学的教学模块：引力方程（含互动计算器）、异质性企业、李嘉图模型与量化贸易模型、衡量贸易收益（含互动计算器）、“中国冲击”，以及2018—2019年的关税战。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/gravity.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../gravity.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题8</p>
+  <h1>企业、引力模型与量化贸易模型</h1>
+  <p class="lead">2000年以来，主流贸易经济学成了一门量化科学。关于单个企业的新数据、复兴的引力方程，以及可以用数据校准的一般均衡模型，使经济学家能够衡量贸易收益、模拟贸易政策，并追踪谁是受损者。同样的工具也把收入分配重新带回了争论的中心。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#gravity">引力方程（互动）</a></li><li><a href="#firms">异质性企业</a></li><li><a href="#ek">李嘉图的回归：伊顿与科特姆</a></li><li><a href="#gains">贸易收益有多大？（互动）</a></li><li><a href="#china">“中国冲击”</a></li><li><a href="#gvc">价值链与关税战</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="gravity">1. 引力方程</h2>
+  <p>1962年，荷兰经济学家扬·丁伯根借用牛顿的万有引力定律，为两国之间的贸易提出了一个简单的方程：两国之间的贸易与它们经济规模的乘积成正比，与它们之间的距离成反比：</p>
+  <p class="eq">Trade<sub>ij</sub> = G × GDP<sub>i</sub> × GDP<sub>j</sub> / Distance<sub>ij</sub><sup>θ</sup></p>
+  <p>这个方程与数据的拟合程度非常好。对距离弹性θ的估计集中在1附近：距离加倍，贸易大约减半。共同边界、共同语言、殖民联系和贸易协定都会增加贸易；国界则会大幅减少贸易。约翰·麦卡勒姆（1995）发现，在考虑了规模和距离之后，加拿大各省之间的贸易是它们与美国各州之间贸易的许多倍，尽管两国之间的边界是世界上最开放的边界之一。</p>
+  <p>几十年来，引力模型一直被视为没有理论基础的经验规律。詹姆斯·安德森（1979）以及后来的安德森和埃里克·范温库普（2003）证明，只要考虑到<b>多边阻力</b>，引力方程可以从许多贸易模型中推导出来：两国之间的贸易取决于它们彼此之间的贸易成本相对于它们与其他所有国家之间的贸易成本。引力模型如今是估计关税、贸易协定和货币联盟效果的主力工具。</p>
+
+  <div class="box" id="gbox">
+    <h3>引力计算器</h3>
+    <p class="note">比较两组国家之间的预测贸易量。贸易量经过标准化，使两个规模为1、相距1000公里的经济体之间的贸易为100单位。</p>
+    <div class="grid2">
+      <div><label>国家A的规模（相对单位）：<b id="yav">2.0</b></label><input type="range" id="ya" min="0.2" max="10" step="0.1" value="2"></div>
+      <div><label>国家B的规模（相对单位）：<b id="ybv">1.0</b></label><input type="range" id="yb" min="0.2" max="10" step="0.1" value="1"></div>
+      <div><label>两国之间的距离：<b id="dv">2,000 km</b></label><input type="range" id="d" min="200" max="15000" step="100" value="2000"></div>
+      <div><label>距离弹性θ：<b id="thv">1.0</b></label><input type="range" id="th" min="0.5" max="1.6" step="0.1" value="1"></div>
+    </div>
+    <div class="out" id="gout"></div>
+  </div>
+
+  <h2 id="firms">2. 异质性企业</h2>
+  <p>1990年代，安德鲁·伯纳德和J. 布拉德福德·詹森利用美国人口普查中单个工厂的数据，考察究竟是谁在出口。答案推翻了以往所有理论共有的一个假设，即同一产业中的企业都差不多。只有少数制造业企业出口；与同一产业中不出口的企业相比，出口企业规模更大、生产率更高、资本和技能更密集，支付的工资也更高。少数几家非常大的企业占了一个国家出口的大部分。</p>
+  <p>马克·梅里兹（2003）把这些事实纳入模型。企业的生产率各不相同，而出口有固定成本，例如在国外建立分销网络。只有生产率最高的企业才能负担这些成本并出口。贸易开放后，出口企业扩张，生产率最低的企业被更激烈的竞争淘汰，资源转向生产率更高的企业，产业的平均生产率随之提高。这种<b>选择效应</b>是比较优势和多样性之外的一个新的贸易收益来源，它也意味着贸易不仅在生产要素之间，而且在企业之间制造赢家和输家。</p>
+
+  <h2 id="ek">3. 李嘉图的回归：伊顿与科特姆</h2>
+  <p>乔纳森·伊顿和塞缪尔·科特姆（2002）在一个包含许多国家、连续统商品和现实贸易成本的模型中，复兴了李嘉图关于技术差异的思想（专题3）。每个国家在每种商品上的生产率都从一个概率分布中抽取；一个国家从能以最低价格供货的供应者那里购买每种商品。这个模型能推导出引力方程，并能用贸易流量、价格和工资的数据加以拟合。它使人们可以用数字回答反事实问题：如果某种贸易成本下降，或者签订或放弃某个贸易协定，每个国家会得到或失去多少？这类模型被称为<b>量化贸易模型</b>。</p>
+
+  <h2 id="gains">4. 贸易收益有多大？</h2>
+  <p>科斯塔斯·阿克拉基斯、阿尔诺·科斯蒂诺和安德烈斯·罗德里格斯-克莱尔（2012）证明，在一大类模型中，包括克鲁格曼的模型、伊顿和科特姆的模型，以及常见假设下梅里兹的模型，贸易收益只需两个数字就能计算出来。一个是一国支出中用于本国生产者的份额λ；另一个是贸易弹性ε，它衡量贸易对贸易成本的反应程度。相对于完全封闭，贸易收益为</p>
+  <p class="eq">收益 = λ<sup>−1/ε</sup> − 1</p>
+  <p>这个公式意味着，主要购买本国商品的大经济体，贸易收益不大；小型开放经济体的贸易收益则大得多。批评者指出，这个公式遗漏了一些可能使收益更大的渠道（例如中间投入品贸易或技术扩散），也遗漏了一些会使实际代价更大的因素（例如失业、地区衰落和调整成本）。</p>
+
+  <div class="box" id="acrbox">
+    <h3>用两个数字计算贸易收益</h3>
+    <div class="grid2">
+      <div><label>本国商品在支出中的份额λ：<b id="lv">0.85</b></label><input type="range" id="l" min="0.3" max="0.99" step="0.01" value="0.85"></div>
+      <div><label>贸易弹性ε：<b id="ev">5</b></label><input type="range" id="e" min="2" max="12" step="0.5" value="5"></div>
+    </div>
+    <p><button type="button" class="btn" data-l="0.9">大经济体（λ = 0.90）</button><button type="button" class="btn" data-l="0.75">中等经济体（λ = 0.75）</button><button type="button" class="btn" data-l="0.5">小型开放经济体（λ = 0.50）</button></p>
+    <div class="out" id="acrout"></div>
+  </div>
+
+  <h2 id="china">5. “中国冲击”</h2>
+  <p>2001年中国加入世贸组织，带来了历史上规模最大、速度最快的贸易变化之一。大卫·奥托、大卫·多恩和戈登·汉森（2013，2016）比较了美国各地方劳动力市场：由于产业结构不同，它们受到中国进口竞争冲击的程度也不同。冲击最大的地区遭受了制造业就业的大量而持久的流失、工资下降、更多人退出劳动力市场，以及更依赖残疾补助和其他转移支付。工人迁移或找到新工作的速度没有标准模型所假设的那么快。后来的研究把这一冲击与政治极化联系起来。</p>
+  <p>“中国冲击”并没有推翻贸易提高国民收入的结论。它表明，代价集中在特定的地方和人群身上，调整可能需要十年或更长时间，而大多数贸易模型中关于平稳、无成本的再配置的假设是不现实的。这一发现使斯托尔珀—萨缪尔森定理所关心的分配问题（专题6），以及波兰尼和罗德里克关于全球化社会限度的论证（专题14和专题16），重新焕发了生命力。</p>
+
+  <h2 id="gvc">6. 价值链与关税战</h2>
+  <p>1990年代以来，生产被拆分到不同国家，零部件多次跨越国界。按总值计算，一部在中国组装的智能手机算作中国的出口，尽管它的大部分价值是在别处创造的。经合组织—世贸组织的<b>增加值贸易</b>数据库（2013）衡量价值实际在哪里创造。全球价值链理论在专题20中讨论。</p>
+  <p>2018—2019年，美国提高了对钢铁、铝、洗衣机、太阳能电池板以及大多数中国进口商品的关税，中国和其他贸易伙伴随即报复。新的量化工具马上被派上用场。玛丽·阿米蒂、斯蒂芬·雷丁和大卫·温斯坦（2019）以及巴勃罗·法伊格尔鲍姆等人（2020）的研究发现，这些关税几乎全部转化为美国买家支付的更高价格，而不是由外国出口商承担。一个大经济体在理论上也许可以改善自己的贸易条件（专题4）；但在实践中，负担落在了本国。</p>
+  <div class="think"><b>思考题：</b>主流模型如今既衡量贸易收益，也衡量其集中的代价。这会改变政策结论吗？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">马克·梅里兹，“The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity”，<em>Econometrica</em>（2003），引言。</p>
+  <p class="rd">大卫·奥托、大卫·多恩、戈登·汉森，“The China Shock: Learning from Labor-Market Adjustment to Large Changes in Trade”，<em>Annual Review of Economics</em>（2016）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">道格拉斯·欧文，<em>Free Trade under Fire</em>，第5版（2020）。</p>
+  <p class="rd">基斯·黑德、蒂埃里·迈耶，“Gravity Equations: Workhorse, Toolkit, and Cookbook”，<em>Handbook of International Economics</em>，第4卷（2014）。</p>
+  <p><a href="index.html#topic-8">← 返回课程大纲中的专题8</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function grav() {
+  const ya = +$('ya').value, yb = +$('yb').value, d = +$('d').value, th = +$('th').value;
+  $('yav').textContent = ya.toFixed(1); $('ybv').textContent = yb.toFixed(1); $('dv').textContent = d.toLocaleString('en-US') + ' km'; $('thv').textContent = th.toFixed(1);
+  const t = 100*ya*yb/Math.pow(d/1000, th), t2 = 100*ya*yb/Math.pow(2*d/1000, th);
+  $('gout').innerHTML = `预测的贸易量：<b>${t >= 100 ? Math.round(t).toLocaleString('en-US') : t.toFixed(1)}</b>单位。` +
+    `距离加倍，贸易量会降到${t2 >= 100 ? Math.round(t2).toLocaleString('en-US') : t2.toFixed(1)}（下降${((1 - Math.pow(0.5, th))*100).toFixed(0)}%）；任何一国的规模加倍，贸易量都会加倍。` +
+    `作为对比，两个规模为5、相距8000公里的经济体，贸易量为${(100*25/Math.pow(8, th)).toFixed(0)}单位：它们规模的乘积是两个规模为1的经济体的25倍，但距离抵消了大部分差异。`;
+}
+['ya','yb','d','th'].forEach(i => $(i).addEventListener('input', grav)); grav();
+function acr() {
+  const l = +$('l').value, e = +$('e').value;
+  $('lv').textContent = l.toFixed(2); $('ev').textContent = e % 1 ? e.toFixed(1) : e;
+  const g = Math.pow(l, -1/e) - 1, g2 = Math.pow(l, -1/2.5) - 1;
+  document.querySelectorAll('#acrbox .btn').forEach(b => b.classList.toggle('on', Math.abs(+b.dataset.l - l) < 0.005));
+  $('acrout').innerHTML = `一个把${(l*100).toFixed(0)}%的收入用于本国商品的国家，在贸易弹性为${e}时，如果完全断绝贸易，将损失<b>${(g*100).toFixed(1)}%</b>的实际收入。` +
+    `如果弹性较低，为2.5，即外国商品更难替代，损失将是${(g2*100).toFixed(1)}%。经济越开放、进口品越难替代，贸易收益就越大。`;
+}
+['l','e'].forEach(i => $(i).addEventListener('input', acr));
+document.querySelectorAll('#acrbox .btn').forEach(b => b.addEventListener('click', () => { $('l').value = b.dataset.l; acr(); }));
+acr();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>新贸易理论与经济地理学 | Lingyi Wei</title>
+  <meta name="description" content="关于新贸易理论的教学模块：产业内贸易、规模报酬递增与垄断竞争、多样性收益（含互动模型）、本地市场效应、战略性贸易政策，以及新经济地理学。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/new-trade-theory.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../new-trade-theory.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题7</p>
+  <h1>新贸易理论与经济地理学</h1>
+  <p class="lead">到1970年代，世界贸易的大部分已经不像李嘉图的呢绒换葡萄酒。技术和禀赋相似的富国在交换相似的商品：德国汽车换法国汽车，美国软件换日本软件。新贸易理论用规模报酬递增和不完全竞争解释了这种贸易，并由此重新提出了一个老问题：政府是否应当帮助本国产业胜出？</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#puzzle">产业内贸易之谜</a></li><li><a href="#krugman">规模报酬递增与垄断竞争</a></li><li><a href="#variety">多样性收益（互动）</a></li><li><a href="#hme">本地市场效应</a></li><li><a href="#strategic">战略性贸易政策</a></li><li><a href="#geo">新经济地理学</a></li><li><a href="#policy">政策含义是什么？</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="puzzle">1. 产业内贸易之谜</h2>
+  <p>赫克歇尔—俄林模型（专题6）预测，禀赋不同的国家交换不同的商品。然而第二次世界大战后，增长最快的贸易发生在西欧、北美和日本这些禀赋相似的工业国之间。其中很大一部分是<b>产业内贸易</b>：同一产业商品的双向贸易。贝拉·巴拉萨（1966）对欧洲经济共同体的研究，以及赫伯特·格鲁贝尔和彼得·劳埃德（1975）的测算表明，产业内贸易在富国之间的贸易中所占份额很大且不断上升。欧洲共同市场的形成并没有像比较优势所预测的那样，导致整个产业在一个国家关闭、在另一个国家扩张，而是使每个国家的企业专注于更窄的产品范围。</p>
+
+  <h2 id="krugman">2. 规模报酬递增与垄断竞争</h2>
+  <p>解释来自一个与亚当·斯密（专题2）一样古老的思想：分工受市场范围的限制。如果生产存在<b>规模报酬递增</b>，比如每种产品都需要大量设计、模具或营销的固定成本，那么每个企业只能有效率地生产有限的产品种类。更大的市场能支撑更多的企业和更多的品种。贸易扩大了市场。</p>
+  <p>规模报酬递增与完全竞争不相容，这使贸易理论难以形式化。突破来自阿维纳什·迪克西特和约瑟夫·斯蒂格利茨（1977）在爱德华·张伯伦1930年代研究基础上建立的垄断竞争模型。每个企业生产一个独特的品种，对价格有一定的控制力，但自由进入使利润趋于零。保罗·克鲁格曼在《规模报酬递增、垄断竞争与国际贸易》（1979）和《规模经济、产品差异与贸易模式》（1980）中把这一模型应用于贸易。埃尔赫南·赫尔普曼和克鲁格曼的《市场结构与对外贸易》（1985）把这种新方法与比较优势结合起来：禀赋解释产业间贸易，规模经济解释产业内贸易。</p>
+  <p>在这个模型中，贸易根本不依赖国家之间的差异。两个完全相同的国家也能从贸易中获益，因为它们的消费者能得到更多品种，企业也可能以更大的规模和更低的平均成本生产。哪个国家生产哪个品种是任意的，是历史和偶然的结果。</p>
+
+  <div class="box" id="varbox">
+    <h3>多样性收益</h3>
+    <p class="note">在克鲁格曼（1980）的模型中，一个国家能维持的品种数量与它的市场规模成正比，每增加一个品种，消费者都会获益。品种之间越难以相互替代，收益就越大。设定消费者在品种之间替代的难易程度，以及贸易伙伴的规模。</p>
+    <div class="grid2">
+      <div><label>品种之间的替代弹性：<b id="sgv">4.0</b></label><input type="range" id="sg" min="1.5" max="12" step="0.5" value="4"></div>
+      <div><label>贸易伙伴相对于本国的规模：<b id="szv">1.0</b></label><input type="range" id="sz" min="0.1" max="10" step="0.1" value="1"></div>
+    </div>
+    <svg id="varchart" viewBox="0 0 640 150" width="100%" role="img" aria-label="贸易前后可获得的品种数量"></svg>
+    <div class="out" id="varout"></div>
+  </div>
+
+  <h2 id="hme">3. 本地市场效应</h2>
+  <p>克鲁格曼（1980）还证明，当贸易存在成本时，企业倾向于在较大的市场设厂，并向较小的市场出口。一个国内对某种产品需求很大的国家，最终会出口这种产品，这一结论被称为<b>本地市场效应</b>。巨大的国内市场由此成为比较优势的来源。斯塔凡·伯伦斯坦·林德（1961）早先提出的观点，即各国出口的是最初为满足国内需求而开发的商品，从而获得了形式化的基础。这一效应也在一定程度上支持了“保护国内市场可以促进出口”的说法，幼稚产业保护的倡导者长期以来一直这样主张（专题9）。</p>
+
+  <h2 id="strategic">4. 战略性贸易政策</h2>
+  <p>如果某些产业只有少数几家获得巨额利润的企业，政府也许可以帮助本国企业夺取这些利润。詹姆斯·布兰德和芭芭拉·斯潘塞（1985）证明，在一个只能容纳一家企业盈利的市场上，补贴可以阻止外国竞争者进入。标准的例子是大型客机市场，由于研发成本极高，这个市场只能容纳少数几家生产商。</p>
+  <table>
+    <tr><th>利润（波音，空客）</th><th>空客生产</th><th>空客不生产</th></tr>
+    <tr><td><b>波音生产</b></td><td>（−5，−5）</td><td>（100，0）</td></tr>
+    <tr><td><b>波音不生产</b></td><td>（0，100）</td><td>（0，0）</td></tr>
+  </table>
+  <p class="note">一个示意性的博弈。如果两家企业都生产，两家都亏损；如果只有一家生产，它就能获得巨额利润。谁先立足谁就赢。现在假设欧洲承诺，如果空客生产就给它25的补贴。无论波音怎么做，生产都成为空客的最优选择（即使波音也生产，空客也能赚20），于是预见到这一点的波音不再进入。25的补贴使空客的利润从0增加到125，欧洲净得100，代价由波音承担。</p>
+  <p>这一思想颇具争议。克鲁格曼本人警告说，这一论证需要关于企业成本和策略的精确知识，而政府很少拥有这些知识；在其他关于竞争方式的假设下，结论会反转（伊顿和格罗斯曼，1986）；而且竞争对手的政府会以牙还牙，最终使所有国家都变得更糟。对空客的补贴确实在关贸总协定和世贸组织引发了旷日持久的争端。</p>
+
+  <h2 id="geo">5. 新经济地理学</h2>
+  <p>在《地理和贸易》（1991）和《规模报酬递增与经济地理》（1991）中，克鲁格曼把同样的工具应用于产业在国内和国际间的区位。当企业从靠近大市场和彼此靠近中获益、而工人迁往企业所在地时，微小的初始差异就会累积起来。一个稍稍领先的地区会吸引更多企业，从而吸引更多工人和需求，进而又吸引更多企业。即使各地区起初完全相同，经济也可能分化为工业化的<b>核心</b>和农业的<b>外围</b>。这是对冈纳·缪尔达尔和尼古拉斯·卡尔多几十年前所描述的累积因果（专题19）的形式化表述，核心与外围的说法也与普雷维什（专题18）相呼应。克鲁格曼因对贸易模式和经济活动区位的分析获得2008年诺贝尔奖。</p>
+
+  <h2 id="policy">6. 政策含义是什么？</h2>
+  <p>新贸易理论动摇了古典自由贸易论所依赖的假设：完全竞争、规模报酬不变，以及由自然决定的贸易模式。如果贸易模式是历史、规模和偶然的结果，那么一个国家的比较优势就是可以创造的，而政策或许可以创造它。克鲁格曼在《自由贸易过时了吗？》（1987）中的回答是，自由贸易在实践中仍然是最好的政策，这不是因为它在理论上最优，而是因为干预很可能被特殊利益集团俘获并招致报复。另一些人，包括发展主义者（专题11—12），则得出了相反的结论。</p>
+  <div class="think"><b>思考题：</b>如果贸易格局可以是历史偶然和规模经济的结果，自由贸易还有理由吗？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">保罗·克鲁格曼，“Increasing Returns, Monopolistic Competition, and International Trade”，<em>Journal of International Economics</em>（1979）。</p>
+  <p class="rd">保罗·克鲁格曼，“Is Free Trade Passé?”，<em>Journal of Economic Perspectives</em>（1987）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">保罗·克鲁格曼，《地理和贸易》（1991），第1章。</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第9章和第14章。</p>
+  <p><a href="index.html#topic-7">← 返回课程大纲中的专题7</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Krugman (1980): varieties ∝ market size; welfare ∝ n^(1/(σ−1))
+function variety() {
+  const s = +$('sg').value, z = +$('sz').value;
+  $('sgv').textContent = s.toFixed(1); $('szv').textContent = z.toFixed(1);
+  const n0 = 100, n1 = Math.round(n0*(1 + z)), gain = Math.pow(1 + z, 1/(s - 1)) - 1;
+  const W = 640, H = 150, L = 140, R = 70, M = 1350, X = v => L + v/M*(W-L-R);
+  let g = '';
+  [['贸易前', n0, '#9aa3ad'], ['贸易后', n1, '#023e8a']].forEach(([n, v, c], i) => {
+    const y = 22 + i*56;
+    g += `<text x="${L-10}" y="${y+20}" text-anchor="end">${n}</text><rect x="${L}" y="${y}" width="${X(v)-L}" height="30" rx="4" fill="${c}"/>`;
+    g += `<text x="${X(v)+6}" y="${y+20}" style="fill:#1f2933;font-weight:600">${v}个品种</text>`;
+  });
+  $('varchart').innerHTML = g;
+  $('varout').innerHTML = `贸易前，本国市场能维持${n0}个品种。与规模为本国${z.toFixed(1)}倍的伙伴进行贸易后，每个消费者都能得到<b>${n1}</b>个品种。` +
+    `替代弹性为${s.toFixed(1)}时，实际收入提高<b>${(gain*100).toFixed(1)}%</b>。` +
+    (s >= 8 ? '各品种是很接近的替代品，所以更多的品种增加不了多少福利。' : s <= 2.5 ? '各品种之间很难相互替代，所以能得到新品种价值很大。' : '试着降低替代弹性：品种越难以替代，消费者越看重新品种。') +
+    `这种收益并不依赖两国之间的任何差异，它完全来自更大的市场。小国与大国贸易的收益大于大国与小国贸易的收益。`;
+}
+['sg','sz'].forEach(i => $(i).addEventListener('input', variety)); variety();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

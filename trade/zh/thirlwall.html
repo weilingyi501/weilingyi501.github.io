@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>后凯恩斯主义贸易理论：累积因果与瑟尔沃尔定律 | Lingyi Wei</title>
+  <meta name="description" content="关于后凯恩斯主义贸易与增长理论的教学模块：缪尔达尔的累积因果、卡尔多增长定律与出口导向型增长、国际收支约束型增长的瑟尔沃尔定律（含互动计算器）、理论的扩展，以及出口导向型增长的局限。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/thirlwall.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../thirlwall.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题19</p>
+  <h1>后凯恩斯主义贸易理论：累积因果与瑟尔沃尔定律</h1>
+  <p class="lead">主流贸易理论解释一个国家出口哪些商品。后凯恩斯主义经济学家提出了另一个问题：贸易如何影响一个国家能够以多快的速度增长？他们的答案着眼于需求而不是供给。赢得市场的地区和国家增长更快、生产率更高，从而赢得更多市场，而失去市场的则更加落后。而且从长期看，一个国家的增长速度不可能超过它的出口所能支付其进口的速度。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#myrdal">缪尔达尔与累积因果</a></li><li><a href="#kaldor">卡尔多增长定律</a></li><li><a href="#elg">出口导向型增长</a></li><li><a href="#law">瑟尔沃尔定律（互动）</a></li><li><a href="#ext">扩展与争论</a></li><li><a href="#limits">出口导向型增长的局限</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="myrdal">1. 缪尔达尔与累积因果</h2>
+  <p>瑞典经济学家冈纳·缪尔达尔（后来在1974年与弗里德里希·哈耶克分享诺贝尔奖）在《经济理论与不发达地区》（1957）中提出了<b>循环累积因果</b>原理。标准理论假定市场趋向均衡：如果一个地区更富，资本会流向回报更高的较穷地区，劳动则流向较富地区，从而缩小差距。缪尔达尔认为，在现实中市场力量往往<em>扩大</em>地区之间和国家之间的不平等。一个取得初始优势的地区会吸引资本、熟练工人和贸易，从而进一步提高它的生产率和收入。被甩在后面的地区则遭受<b>回流效应</b>：它们失去最有进取心的人，它们的储蓄流向中心，它们的产业无法竞争。中心的扩张也可能产生<b>扩散效应</b>，例如对外围产品需求的增加，但在穷国，扩散效应通常弱于回流效应。按照这一观点，除非国家干预，贸易可能强化而不是减少不平等。</p>
+
+  <h2 id="kaldor">2. 卡尔多增长定律</h2>
+  <p>出生于匈牙利的剑桥经济学家、英国工党政府顾问尼古拉斯·卡尔多，为累积因果提供了经验形式。在就职演讲《英国经济增长缓慢的原因》（1966）中，他提出了后来所谓的<b>卡尔多增长定律</b>：</p>
+  <ul>
+    <li>制造业产出增长越快，整个经济增长越快。制造业是增长的引擎。</li>
+    <li>制造业产出增长越快，制造业生产率增长越快，原因是专业化、学习和新投资带来的规模报酬递增。这一关系最初由P. J. 凡登（1949）发现，被称为<b>凡登定律</b>。</li>
+    <li>制造业增长越快，经济其他部门的生产率提高越快，因为劳动力从低生产率活动中转移出来。</li>
+  </ul>
+  <p>既然生产率增长取决于产出增长，关键问题就变成了什么决定对制成品需求的增长。对于一个成熟的开放经济，卡尔多的回答是：出口。</p>
+
+  <h2 id="elg">3. 出口导向型增长</h2>
+  <p>卡尔多在《地区政策的理由》（1970）中认为，一个地区的增长取决于对其出口需求的增长。出口快速增长提高产出，产出通过凡登定律提高生产率，生产率使出口更具竞争力，出口又进一步加快增长。罗伯特·狄克逊和安东尼·瑟尔沃尔（1975）把这一<b>累积的出口导向型增长</b>模型形式化。一个地区或国家一旦建立起增长优势，往往就能保持下去。这与克鲁格曼后来的核心—外围模型（专题7）是同一逻辑，只是由不同的途径得出。它也有助于解释为什么在这一传统中出口的构成很重要：世界需求增长快、生产具有强烈规模报酬递增的商品，比其他商品前景更好，这呼应了普雷维什和辛格（专题18）。</p>
+
+  <h2 id="law">4. 瑟尔沃尔定律</h2>
+  <p>1979年，安东尼·瑟尔沃尔发表了一篇短文《国际收支约束作为国际增长率差异的一种解释》，它成为后凯恩斯主义经济学中被检验最多的结论之一。他的论证从一个简单的事实出发：从长期看，一个国家不可能保持不断扩大的贸易逆差，因为它无法无限期地为逆差融资。它的进口必须大致与出口同步增长。</p>
+  <p>假设相对价格在长期内变化不大，贸易主要对收入作出反应。出口随世界收入增长，增长速度由<b>出口需求的收入弹性</b>ε决定。进口随国内收入增长，增长速度由<b>进口需求的收入弹性</b>π决定。如果出口和进口必须以相同的速度增长，那么经济在逆差不扩大的情况下所能达到的最快增长率就是</p>
+  <p class="eq">y<sub>B</sub> = x / π = ε × z / π</p>
+  <p>其中x是出口增长率，z是世界收入增长率。这就是<b>瑟尔沃尔定律</b>。一个国家的出口品在世界变得更富时需求旺盛（ε高），而它的居民在每增加一单位收入时用于进口的不多（π低），它就能快速增长。具有相反特征的国家则会遇到<b>国际收支约束</b>：当它试图更快增长时，进口激增，逆差扩大，它必须放慢速度，远在达到充分就业或生产能力的极限之前。收入弹性反映了一个国家商品的非价格特征，例如质量、技术和设计，因此归根结底反映了它的经济结构。</p>
+
+  <div class="box" id="tlbox">
+    <h3>国际收支约束型增长率</h3>
+    <div class="grid2">
+      <div><label>世界收入增长率z：<b id="zv">3.0%</b></label><input type="range" id="z" min="0.5" max="6" step="0.1" value="3"></div>
+      <div><label>出口需求的收入弹性ε：<b id="epv">1.5</b></label><input type="range" id="ep" min="0.3" max="3" step="0.1" value="1.5"></div>
+      <div><label>进口需求的收入弹性π：<b id="piv">2.0</b></label><input type="range" id="pi" min="0.5" max="3.5" step="0.1" value="2"></div>
+      <div><label>该国试图达到的增长率：<b id="tgv">4.0%</b></label><input type="range" id="tg" min="0" max="8" step="0.1" value="4"></div>
+    </div>
+    <svg id="tlchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="按目标增长率计算的出口和进口随时间的变化"></svg>
+    <div class="out" id="tlout"></div>
+  </div>
+
+  <h2 id="ext">5. 扩展与争论</h2>
+  <ul>
+    <li><b>资本流动。</b>瑟尔沃尔和穆罕默德·努尔丁·侯赛因（1982）把这一定律扩展到包含资本流入的情形，资本流入使一个国家可以在一段时间内增长得更快。后来的研究加入了外债与收入之比必须保持在可持续水平的要求，这使约束又非常接近原来的定律。</li>
+    <li><b>多部门。</b>里卡多·阿劳若和吉尔贝托·利马（2007）证明，一个国家的收入弹性是它所交易的各种商品弹性的加权平均，因此向世界需求高的商品进行结构转型可以放松约束。这把瑟尔沃尔定律与产业政策直接联系起来。</li>
+    <li><b>检验。</b>许多研究发现，按这一定律预测的增长率与许多国家的实际长期增长率相当接近。瑟尔沃尔的合作者约翰·麦康比等批评者讨论了这些检验能否把这一定律与一个恒等式区分开来。</li>
+    <li><b>因果关系的方向。</b>保罗·克鲁格曼（1989）注意到了同样的经验规律，他称之为“45度规则”，但作了相反的解释：增长快的国家扩大了它们生产的商品种类，从而提高了其出口需求的测量收入弹性。按照这种观点，是增长决定弹性，而不是相反。</li>
+  </ul>
+
+  <h2 id="limits">6. 出口导向型增长的局限</h2>
+  <p>如果增长受国际收支约束，出口成功就是快速增长的关键。但不是每个国家都能同时使出口增长快于进口；一国的顺差就是另一国的逆差。这就是出口导向型增长中的<b>合成谬误</b>，凯恩斯在1930年代的以邻为壑政策中就已经指出了这一点（专题17）。如果许多发展中国家同时推行出口导向战略，它们可能会使同类产品充斥世界市场、压低价格，并在富国遭遇保护。因此，后凯恩斯主义者强调在全球范围内扩大需求、使逆差国能够增长而不被迫紧缩的政策，以及把一国生产转向需求前景更好的商品的产业政策。</p>
+  <div class="think"><b>思考题：</b>如果增长受国际收支约束，一个国家可以做些什么来放松这一约束？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">安东尼·瑟尔沃尔，“The Balance of Payments Constraint as an Explanation of International Growth Rate Differences”，<em>Banca Nazionale del Lavoro Quarterly Review</em>（1979）。</p>
+  <p class="rd">冈纳·缪尔达尔，《经济理论与不发达地区》（1957），第3章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第18章。</p>
+  <p class="rd">尼古拉斯·卡尔多，“The Case for Regional Policies”，<em>Scottish Journal of Political Economy</em>（1970）。</p>
+  <p><a href="index.html#topic-19">← 返回课程大纲中的专题19</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function tl() {
+  const z = +$('z').value/100, ep = +$('ep').value, pi = +$('pi').value, tg = +$('tg').value/100;
+  $('zv').textContent = (z*100).toFixed(1) + '%'; $('epv').textContent = ep.toFixed(1); $('piv').textContent = pi.toFixed(1); $('tgv').textContent = (tg*100).toFixed(1) + '%';
+  const x = ep*z, yB = x/pi, m = pi*tg;
+  const N = 20, X0 = [], M0 = [];
+  for (let t = 0; t <= N; t++) { X0.push(100*Math.pow(1 + x, t)); M0.push(100*Math.pow(1 + m, t)); }
+  const W = 640, H = 230, L = 44, R = 20, T = 14, B = 34, hi = Math.max(...X0, ...M0)*1.05;
+  const Xs = t => L + t/N*(W-L-R), Y = v => H-B - (v - 80)/(hi - 80)*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  const step = hi > 400 ? 100 : 50;
+  for (let v = 100; v <= hi; v += step) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  [0,5,10,15,20].forEach(t => g += `<text x="${Xs(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">年</text>`;
+  const path = a => a.map((v, t) => (t ? 'L' : 'M') + Xs(t).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ');
+  if (M0[N] > X0[N]) g += `<path d="${path(X0)} L${[...M0].reverse().map((v, i) => Xs(N - i).toFixed(1) + ',' + Y(v).toFixed(1)).join(' L')} Z" fill="#c0392b" opacity=".15"/>`;
+  g += `<path d="${path(X0)}" fill="none" stroke="#023e8a" stroke-width="2.4"/><path d="${path(M0)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/>`;
+  g += `<text x="${Xs(N)-4}" y="${Y(X0[N]) + (X0[N] >= M0[N] ? -8 : 16)}" text-anchor="end" style="fill:#023e8a">出口</text><text x="${Xs(N)-4}" y="${Y(M0[N]) + (M0[N] > X0[N] ? -8 : 16)}" text-anchor="end" style="fill:#c47a2c">目标增长率下的进口</text>`;
+  $('tlchart').innerHTML = g;
+  const p = v => (v*100).toFixed(1) + '%';
+  let msg = `出口每年增长ε × z = <b>${p(x)}</b>。国际收支约束型增长率为x / π = <b>${p(yB)}</b>。`;
+  if (tg > yB + 0.0005) msg += `以${p(tg)}的速度增长，会使进口以π × ${p(tg)} = ${p(m)}的速度增长，快于出口。贸易逆差会逐年扩大（阴影部分），因此这个国家最终必须把增长放慢到${p(yB)}，或者设法提高ε或降低π。`;
+  else if (tg < yB - 0.0005) msg += `只以${p(tg)}的速度增长，进口以${p(m)}的速度增长，慢于出口，因此这个国家的顺差不断扩大。它可以增长得更快，最高可达${p(yB)}，而不会遇到国际收支约束。`;
+  else msg += '目标增长率等于约束增长率：进口和出口同步增长。';
+  $('tlout').innerHTML = msg;
+}
+['z','ep','pi','tg'].forEach(i => $(i).addEventListener('input', tl)); tl();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>亚当·斯密：分工与绝对优势 | Lingyi Wei</title>
+  <meta name="description" content="关于亚当·斯密贸易理论的教学模块：分工与市场范围、绝对优势（含互动计算器）、剩余的出路、对重商主义体系的批判，以及斯密对自由贸易的例外。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/smith.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../smith.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题2</p>
+  <h1>亚当·斯密：分工与绝对优势</h1>
+  <p class="lead">《国富论》（1776）把自由贸易的主张从一堆小册子变成了一个体系。斯密认为，一国的财富是它每年的产品，而不是它的黄金，贸易通过扩展分工使这种财富增加。本专题追溯他的论证、他对“重商主义体系”的抨击，以及他所允许的例外。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#wealth">什么是国民财富？</a></li><li><a href="#dol">分工与市场范围</a></li><li><a href="#abs">绝对优势（互动）</a></li><li><a href="#vent">剩余的出路</a></li><li><a href="#merc">反对重商主义体系</a></li><li><a href="#except">斯密的例外</a></li><li><a href="#after">影响与局限</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="wealth">1. 什么是国民财富？</h2>
+  <p>重商主义者（专题1）用金银存量来衡量一国的财富。斯密把财富重新定义为一国劳动每年生产的“生活必需品和便利品”的流量。货币只是使这些产品流通的手段。一旦这样理解财富，贸易的目的就变了。一个国家进行贸易不是为了堆积金银，而是为了用自己的劳动换取比在国内自己生产更多的商品。贸易的收益在于进口，而不是出口；出口只是一个国家为获得进口而支付的代价。</p>
+
+  <h2 id="dol">2. 分工与市场范围</h2>
+  <p>《国富论》以制针工场开篇：十个工人各自专做制针所需的十八道工序中的几道，每天可以生产大约四万八千枚针，而一个工人独自工作，一天恐怕连二十枚也做不出来。<b>分工</b>是生产率提高的主要源泉。专业化的工人更熟练，减少了在不同工作之间转换所浪费的时间，并会为自己狭窄的工序发明合适的机器。</p>
+  <p>第一篇第3章把它与贸易联系起来：分工受<b>市场范围的限制</b>。村里的铁匠不能只做钉子，因为村子买不了那么多钉子。更大的市场能支撑更细的分工，因此任何扩大市场的东西，包括更便宜的运输和对外贸易，都会提高生产率。这是一个关于贸易的<em>动态</em>论证：贸易不只是重新配置既定的产出，它还使经济随时间推移变得更有生产力。许多后来的经济学家，从阿林·杨格（1928）到新贸易理论家（专题7），都回到了这一思想。</p>
+
+  <h2 id="abs">3. 绝对优势</h2>
+  <p>在第四篇第2章，斯密把家庭的常识推广到国家。裁缝不自己做鞋，而是向鞋匠买鞋；鞋匠也不自己做衣服。斯密写道：“在每一个私人家庭的行为中是精明的事情，在一个大国的行为中就很少是荒唐的。”如果外国能以比我们自己制造更便宜的价格供应某种商品，那么最好用我们在某方面占有优势的产业的一部分产品去购买它。</p>
+  <p>这就是<b>绝对优势</b>原理：每个国家都应当专门生产它比别国用更少劳动就能生产的商品，其余的则进口。斯密举的例子是葡萄酒：在苏格兰用玻璃温室也能种出葡萄，但成本大约是从法国进口红酒的三十倍。</p>
+
+  <div class="box" id="absbox">
+    <h3>绝对优势：谁该生产什么？</h3>
+    <p class="note">每个国家有120小时劳动。设定每个国家生产每种商品一个单位所需的小时数。计算器比较两种情况下的世界产出：每个国家用相同的时间生产两种商品（没有贸易），以及每个国家专门生产自己具有绝对优势的商品。</p>
+    <div class="grid2">
+      <div><label>英国：每码呢绒所需小时：<b id="bcv">4</b></label><input type="range" id="bc" min="1" max="12" step="1" value="4"></div>
+      <div><label>英国：每瓶葡萄酒所需小时：<b id="bwv">8</b></label><input type="range" id="bw" min="1" max="12" step="1" value="8"></div>
+      <div><label>葡萄牙：每码呢绒所需小时：<b id="pcv">6</b></label><input type="range" id="pc" min="1" max="12" step="1" value="6"></div>
+      <div><label>葡萄牙：每瓶葡萄酒所需小时：<b id="pwv">3</b></label><input type="range" id="pw" min="1" max="12" step="1" value="3"></div>
+    </div>
+    <table id="abstab"></table>
+    <div class="out" id="absout"></div>
+  </div>
+
+  <h2 id="vent">4. 剩余的出路</h2>
+  <p>斯密在第四篇第1章提出了第二个论证。对外贸易把国内没有需求的那部分土地和劳动的剩余产品运出去，换回国内有需求的其他东西。这种<b>剩余的出路</b>论把贸易看作使用原本会闲置的土地和劳动的方式。它符合许多殖民地和边疆经济的经验：开放贸易使未利用的土地投入耕种。缅甸经济学家拉敏（Hla Myint，1958）复兴了这一观点，用来解释十九世纪东南亚和西非出口农业的快速增长。比较优势（专题3）假定一切资源都已被利用，而剩余出路论则假定资源并未被充分利用。</p>
+
+  <h2 id="merc">5. 反对重商主义体系</h2>
+  <p>第四篇的大部分内容是对斯密所谓<b>重商主义体系</b>的持续抨击。他的指控如下：</p>
+  <ul>
+    <li><b>它把货币与财富混为一谈。</b>一个需要黄金的国家总可以像购买其他商品一样买到黄金。斯密追随休谟，认为积累黄金的努力会自我挫败。</li>
+    <li><b>它误导资本。</b>关税和奖励金把资本吸引到没有这些优待就不会盈利的产业，使它离开本来可以生产更多的用途。它们不能增加一国资本所能维持的总就业，只能改变资本的方向。</li>
+    <li><b>它为商人和制造商服务。</b>这一体系由从垄断中获利的人设计，也为他们服务，代价由消费者承担。斯密警告说，凡是来自商人的商业立法提议，都应当以“最多疑的注意”加以审视。</li>
+    <li><b>殖民地是代价高昂的垄断。</b>殖民地贸易垄断提高了少数商人的利润，却让英国承担保卫帝国的费用。斯密写作时美洲殖民地正在反叛，他认为英国放手让它们离开反而会获益。</li>
+  </ul>
+
+  <h2 id="except">6. 斯密的例外</h2>
+  <p>斯密并不是绝对主义者。他允许自由贸易有几个例外：</p>
+  <ul>
+    <li><b>国防。</b>他赞扬《航海法》，尽管它使贸易更昂贵，因为它为海军培养了英国的航运和水手。他写道：“国防比富裕重要得多。”</li>
+    <li><b>与国内税收同等对待。</b>如果对国内某种产品征税，对与之竞争的进口品征收类似的税是合理的。</li>
+    <li><b>报复。</b>如果对外国关税的报复性关税很可能促使对方取消关税，那么它可能是正当的。</li>
+    <li><b>渐进的自由化。</b>当受保护的产业雇用许多人时，应当缓慢而谨慎地恢复自由贸易，以免造成突然的失业。</li>
+  </ul>
+  <p>斯密并不指望自由贸易会在英国完全确立。他说，期待这一点，就像期待一个乌托邦那样荒唐，因为公众有偏见，许多个人又有私利。</p>
+
+  <h2 id="after">7. 影响与局限</h2>
+  <p>斯密的论证很快影响了政策。自称是斯密学生的首相小威廉·皮特在1786年缔结了《伊登条约》，降低了英法之间的关税。然而绝对优势有一个明显的缺口。如果一个国家在每种商品上都比另一个国家更有效率，斯密的原理似乎意味着它应当生产一切、什么也不进口。在计算器中试一试：让英国生产两种商品所需的时间都更少。斯密的理论无法回答此时贸易是否仍然值得。回答这个问题的是李嘉图（专题3）。</p>
+  <div class="think"><b>思考题：</b>斯密认为贸易扩大市场，从而深化专业分工。这与比较优势是不同的论证吗？</div>
+
+  <h2 id="read">8. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亚当·斯密，《国富论》（1776），第一篇第1—3章，第四篇第1—2章。</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第5章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第3章。</p>
+  <p class="rd">拉敏（Hla Myint），“The ‘Classical Theory’ of International Trade and the Underdeveloped Countries”，<em>Economic Journal</em>（1958）。</p>
+  <p><a href="index.html#topic-2">← 返回课程大纲中的专题2</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const L = 120; // hours of labor in each country
+function abs() {
+  const bc = +$('bc').value, bw = +$('bw').value, pc = +$('pc').value, pw = +$('pw').value;
+  $('bcv').textContent = bc; $('bwv').textContent = bw; $('pcv').textContent = pc; $('pwv').textContent = pw;
+  const f = v => Number.isInteger(v) ? v : v.toFixed(1);
+  // no trade: each country splits labor equally
+  const nb = [L/2/bc, L/2/bw], np = [L/2/pc, L/2/pw];
+  const autC = nb[0] + np[0], autW = nb[1] + np[1];
+  const bothB = bc < pc && bw < pw, bothP = pc < bc && pw < bw;
+  let rows = `<tr><th></th><th>呢绒（码）</th><th>葡萄酒（瓶）</th></tr>
+    <tr><td>英国，没有贸易</td><td>${f(nb[0])}</td><td>${f(nb[1])}</td></tr>
+    <tr><td>葡萄牙，没有贸易</td><td>${f(np[0])}</td><td>${f(np[1])}</td></tr>
+    <tr><td><b>世界，没有贸易</b></td><td><b>${f(autC)}</b></td><td><b>${f(autW)}</b></td></tr>`;
+  let msg;
+  if (bc < pc && pw < bw) {
+    const sc = L/bc, sw = L/pw;
+    rows += `<tr><td><b>世界，英国生产呢绒、葡萄牙生产葡萄酒</b></td><td><b>${f(sc)}</b></td><td><b>${f(sw)}</b></td></tr>`;
+    msg = `英国在呢绒上有绝对优势（${bc}小时对${pc}小时），葡萄牙在葡萄酒上有绝对优势（${pw}小时对${bw}小时）。各自专业化之后，用同样的劳动，世界产出增加了<b>${f(sc-autC)}码呢绒</b>和<b>${f(sw-autW)}瓶葡萄酒</b>。贸易让两国分享这部分额外产出。`;
+  } else if (pc < bc && bw < pw) {
+    const sc = L/pc, sw = L/bw;
+    rows += `<tr><td><b>世界，葡萄牙生产呢绒、英国生产葡萄酒</b></td><td><b>${f(sc)}</b></td><td><b>${f(sw)}</b></td></tr>`;
+    msg = `葡萄牙在呢绒上有绝对优势（${pc}小时对${bc}小时），英国在葡萄酒上有绝对优势（${bw}小时对${pw}小时）。各自专业化之后，世界产出增加了<b>${f(sc-autC)}码呢绒</b>和<b>${f(sw-autW)}瓶葡萄酒</b>。`;
+  } else if (bothB || bothP) {
+    const [w, l] = bothB ? ['英国','葡萄牙'] : ['葡萄牙','英国'];
+    msg = `${w}生产<b>两种</b>商品所需的时间都更少，因此在一切商品上都有绝对优势。斯密的原理给不出明确答案：难道${w}应当生产一切，而${l}什么也不生产吗？李嘉图证明，只要所需时间的<em>比率</em>不同（这里英国为${(bc/bw).toFixed(2)}，葡萄牙为${(pc/pw).toFixed(2)}），两国仍然都能获益。见专题3。`;
+  } else {
+    msg = '两国至少在一种商品上效率相同，因此在这种商品上都没有明确的绝对优势。改变所需小时数，看看专业化的理由。';
+  }
+  $('abstab').innerHTML = rows; $('absout').innerHTML = msg;
+}
+['bc','bw','pc','pw'].forEach(i => $(i).addEventListener('input', abs)); abs();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

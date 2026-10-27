@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>穆勒与贸易条件 | Lingyi Wei</title>
+  <meta name="description" content="关于约翰·斯图亚特·穆勒相互需求理论的教学模块：贸易条件如何分配贸易收益（含互动模型）、托伦斯的贸易条件关税论与互惠主张，以及穆勒的幼稚产业例外。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/mill.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../mill.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题4</p>
+  <h1>穆勒与贸易条件</h1>
+  <p class="lead">李嘉图证明了两国都能从贸易中获益，却没有回答收益如何分配。约翰·斯图亚特·穆勒用相互需求理论作出了回答。他的回答提出了两个让自由贸易者感到不安的新问题：一个国家能否用关税使贸易条件向有利于自己的方向倾斜？一个年轻的产业是否应当受到保护，直到它能够参与竞争？</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#gap">李嘉图留下的空白</a></li><li><a href="#recip">相互需求（互动）</a></li><li><a href="#torrens">托伦斯与贸易条件论</a></li><li><a href="#infant">穆勒的幼稚产业例外</a></li><li><a href="#legacy">遗产</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="gap">1. 李嘉图留下的空白</h2>
+  <p>在李嘉图的例子中（专题3），只要一单位呢绒换得0.83到1.125单位葡萄酒，两国都能获益。价格落在区间的哪一点？答案决定了收益如何分配。靠近一端，几乎全部收益归英国；靠近另一端，则归葡萄牙。李嘉图的劳动价值论无法回答这个问题，因为每种商品的劳动成本在两国之间并不相同。必须有成本以外的东西来决定国际价格。</p>
+  <p>穆勒在1829—1830年写成的论文《论国家之间的交换法则》中处理了这个问题，该文收入他的《论政治经济学的若干未定问题》（1844）。他在《政治经济学原理》（1848）第三编第18章中加以发展，这一章在半个世纪里成为古典贸易理论的标准表述。</p>
+
+  <h2 id="recip">2. 相互需求</h2>
+  <p>穆勒的回答是，国际价格既取决于成本，也取决于需求。贸易条件稳定在每个国家的出口恰好支付其进口的那一点：在这个价格上，英国愿意用来换取亚麻布的呢绒数量，正好等于德国愿意购买的数量，反之亦然。穆勒称之为<b>国际需求方程</b>，或<b>相互需求</b>。一个国家对贸易伙伴商品的需求越强，而伙伴对它的商品的需求越弱，它的贸易条件就越不利。</p>
+  <p>穆勒用了自己的例子。在英国，10码细呢绒所耗费的劳动与15码亚麻布相同；在德国，则与20码亚麻布相同。英国在细呢绒上具有比较优势，德国在亚麻布上具有比较优势，10码细呢绒换15到20码亚麻布之间的任何价格都对两国有利。</p>
+  <p>由此得出一个惊人的结论。如果一个国家比另一个国家大得多，小国的出口在区间内的任何价格上都无法满足大国的需求。于是价格停留在大国本国的成本比率上。大国继续生产两种商品，一无所获；小国得到全部收益。后来的经济学家称之为“无足轻重的好处”。</p>
+
+  <div class="box" id="rdbox">
+    <h3>相互需求如何决定贸易条件</h3>
+    <p class="note">英国专门生产细呢绒，德国专门生产亚麻布。每个国家把固定比例的收入用于购买进口商品。贸易条件稳定在英国出口的呢绒恰好支付其进口的亚麻布的那一点，并落在由两国成本决定的区间内（每码呢绒换1.5到2码亚麻布）。</p>
+    <div class="grid2">
+      <div><label>英国用于购买亚麻布的收入份额：<b id="sev">40%</b></label><input type="range" id="se" min="5" max="80" step="1" value="40"></div>
+      <div><label>德国用于购买呢绒的收入份额：<b id="sgv">40%</b></label><input type="range" id="sg" min="5" max="80" step="1" value="40"></div>
+      <div><label>德国相对于英国的规模：<b id="szv">0.9</b></label><input type="range" id="sz" min="0.2" max="4" step="0.1" value="0.9"></div>
+    </div>
+    <svg id="rdchart" viewBox="0 0 640 120" width="100%" role="img" aria-label="贸易条件在两国成本比率之间的位置"></svg>
+    <div class="out" id="rdout"></div>
+  </div>
+
+  <h2 id="torrens">3. 托伦斯与贸易条件论</h2>
+  <p>相互需求理论对自由贸易者有一个令人尴尬的含义。如果贸易条件取决于需求，那么一个国家减少对进口品的需求，例如对进口品征收关税，就可以使贸易条件向有利于自己的方向移动。它的出口能换回比以前更多的进口，关税的一部分代价落在外国人身上。</p>
+  <p>罗伯特·托伦斯在《预算》（1841—1844）中得出了这一结论。他认为，英国不应单方面削减关税，因为在其他国家保留关税的情况下，这会使英国的贸易条件恶化。英国只应以对方削减关税为交换条件来削减关税，即实行<b>互惠</b>政策。托伦斯受到自由贸易者的抨击，但穆勒接受了这一论证的逻辑。他同意关税确实能够改善一个国家的贸易条件，尽管这种收益取决于对方不进行报复，而且世界整体的损失依然存在。</p>
+  <p>这一论证有两个重要限度。它只适用于大到足以影响世界价格的国家；小国面对的是既定价格，征收关税只会受损。而且这种收益是以贸易伙伴的损失为代价的，因此会招致报复，可能使双方都变得更糟。后来的经济学家把它精确化为<b>最优关税</b>，即最充分地利用一国市场力量的关税（专题5）。</p>
+
+  <h2 id="infant">4. 穆勒的幼稚产业例外</h2>
+  <p>在《政治经济学原理》第五编第10章，穆勒又接受了自由贸易的另一个例外：</p>
+  <blockquote>从纯粹的政治经济学原理来看，保护性关税唯一可以辩护的情形，是为了移植一种本身完全适合该国条件的外国产业而暂时征收（尤其是在一个年轻而正在兴起的国家）。<cite>约翰·斯图亚特·穆勒，《政治经济学原理》（1848），第五编第10章</cite></blockquote>
+  <p>一个国家也许很适合发展某种产业，却无法起步，因为已经立足的外国生产者拥有新来者所缺乏的经验和技能。私人企业不会承担学习期间的亏损，所以暂时的关税可能是正当的，前提是一旦这个产业能够独立就取消关税。穆勒的这一思想借自关于美国和德国保护主义的作者，这段话成了自由贸易经济学史上被引用最多的让步。美国和澳大利亚的保护主义者都引用它；穆勒后来对它被如此使用感到后悔，并坚持强调“暂时”一词。弗里德里希·李斯特（专题9）在同一直觉之上建立了一个雄心大得多的发展理论。</p>
+  <p>查尔斯·巴斯塔布尔（1891）补充了一个检验标准：未来的收益必须足以连本带息地偿还保护的成本。经济学家至今仍在争论这一标准在实践中能否经常得到满足，以及政府能否选对产业并及时取消保护。</p>
+
+  <h2 id="legacy">5. 遗产</h2>
+  <p>穆勒的这一章为古典贸易理论画上了句号。它的两个薄弱环节，即贸易条件论和幼稚产业论，成为后来经济学家为偏离自由贸易辩护的两扇主要大门。阿尔弗雷德·马歇尔和弗朗西斯·埃奇沃思把穆勒的相互需求变成了<b>提供曲线</b>的几何学（专题5）。</p>
+  <div class="think"><b>思考题：</b>如果一个大国可以通过关税改善自己的贸易条件，为什么经济学家仍然推荐自由贸易？</div>
+
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">约翰·斯图亚特·穆勒，《政治经济学原理》（1848），第三编第18章。</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第7—8章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第8章。</p>
+  <p class="rd">约翰·斯图亚特·穆勒，《论国家之间的交换法则》，收入《论政治经济学的若干未定问题》（1844）。</p>
+  <p><a href="index.html#topic-4">← 返回课程大纲中的专题4</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// England: 100 workers-units → 100 yd cloth (or 150 linen). Germany: size s → 200·s linen (or 100·s cloth).
+const LO = 1.5, HI = 2.0;
+function rd() {
+  const se = +$('se').value/100, sg = +$('sg').value/100, sz = +$('sz').value;
+  $('sev').textContent = Math.round(se*100) + '%'; $('sgv').textContent = Math.round(sg*100) + '%'; $('szv').textContent = sz.toFixed(1);
+  const Qc = 100, Ql = 200*sz;
+  const raw = sg*Ql/(se*Qc);           // linen per cloth that balances trade with full specialization
+  const p = Math.min(HI, Math.max(LO, raw));
+  const shareE = (p - LO)/(HI - LO);
+  const W = 640, H = 120, L = 40, R = 40, X = v => L + (v - 1.4)/(0.7)*(W-L-R);
+  let g = `<rect x="${X(LO)}" y="44" width="${X(HI)-X(LO)}" height="18" rx="4" fill="#e7eef7"/>`;
+  g += `<rect x="${X(LO)}" y="44" width="${X(p)-X(LO)}" height="18" rx="4" fill="#023e8a" opacity=".85"/>`;
+  g += `<rect x="${X(p)}" y="44" width="${X(HI)-X(p)}" height="18" rx="4" fill="#c47a2c" opacity=".85"/>`;
+  g += `<line x1="${X(p)}" x2="${X(p)}" y1="34" y2="72" stroke="#111" stroke-width="2"/><text x="${X(p)}" y="28" text-anchor="middle" font-weight="600" style="fill:#111">${p.toFixed(2)}</text>`;
+  g += `<text x="${X(LO)}" y="88" text-anchor="middle">1.5</text><text x="${X(LO)}" y="104" text-anchor="middle">英国的成本比率</text>`;
+  g += `<text x="${X(HI)}" y="88" text-anchor="middle">2.0</text><text x="${X(HI)}" y="104" text-anchor="middle">德国的成本比率</text>`;
+  if (shareE > 0.12) g += `<text x="${(X(LO)+X(p))/2}" y="57" text-anchor="middle" style="fill:#fff" font-weight="600">英国的收益</text>`;
+  if (shareE < 0.88) g += `<text x="${(X(p)+X(HI))/2}" y="57" text-anchor="middle" style="fill:#fff" font-weight="600">德国的收益</text>`;
+  $('rdchart').innerHTML = g;
+  let msg = `10码细呢绒换得<b>${(p*10).toFixed(1)}码亚麻布</b>。英国得到约<b>${Math.round(shareE*100)}%</b>的贸易收益，德国得到<b>${Math.round((1-shareE)*100)}%</b>。`;
+  if (raw <= LO) msg += `德国对呢绒的需求太弱，或者德国太小，即使按英国自己的成本比率也吸收不了英国的全部呢绒。价格降到1.5，英国继续自己生产一些亚麻布，<b>德国得到全部收益</b>：这就是“无足轻重的好处”。`;
+  else if (raw >= HI) msg += `德国对呢绒的需求太强，或者德国太大，在低于德国成本比率的任何价格上，英国的呢绒都满足不了它。价格升到2.0，德国继续自己生产一些呢绒，<b>英国得到全部收益</b>。`;
+  else msg += `两国都完全专业化。试着提高英国对亚麻布的需求：英国的贸易条件恶化，德国分得的收益份额上升。`;
+  $('rdout').innerHTML = msg;
+}
+['se','sg','sz'].forEach(i => $(i).addEventListener('input', rd)); rd();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

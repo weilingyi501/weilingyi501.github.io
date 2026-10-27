@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>汉密尔顿、李斯特与幼稚产业 | Lingyi Wei</title>
+  <meta name="description" content="关于政治经济学国民体系的教学模块：汉密尔顿的《关于制造业的报告》、美国体系与亨利·凯里、李斯特的生产力理论和发展阶段论、关税的经济效果（含互动模型），以及幼稚产业论的互动检验。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/list.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../list.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题9</p>
+  <h1>汉密尔顿、李斯特与幼稚产业</h1>
+  <p class="lead">对自由贸易的第一次系统挑战来自试图追赶工业化英国的国家。年轻美国的亚历山大·汉密尔顿和分裂的德意志各邦的弗里德里希·李斯特认为，后来者必须先在保护的围墙后建立自己的产业，然后才能参与竞争。他们的论证影响了几乎每一个在英国之后实现工业化的国家的政策。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#hamilton">汉密尔顿的《关于制造业的报告》</a></li><li><a href="#american">美国体系与亨利·凯里</a></li><li><a href="#list">弗里德里希·李斯特</a></li><li><a href="#powers">生产力与发展阶段</a></li><li><a href="#tariff">关税的作用（互动）</a></li><li><a href="#infant">幼稚产业保护何时值得？（互动）</a></li><li><a href="#record">历史记录</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="hamilton">1. 汉密尔顿的《关于制造业的报告》</h2>
+  <p>1791年，美国第一任财政部长亚历山大·汉密尔顿向国会提交了《关于制造业的报告》。当时的美国是一个农业经济体，出口烟草、谷物和木材，从英国进口制成品。托马斯·杰斐逊等许多人认为美国应当保持这种状态：做一个由独立农民组成的共和国。汉密尔顿不同意。他认为，制造业会通过分工和机器提高生产率，雇用妇女和儿童，吸引移民，并为农产品扩大市场。依赖外国制成品的国家在战争中也很脆弱。</p>
+  <p>汉密尔顿直接回应了斯密。如果听之任之，美国人不会创办新产业，原因是习惯、对失败的恐惧，以及最重要的，已经立足的外国竞争者的优势，后者甚至可能以低于成本的价格销售来摧毁新的竞争者。国家必须提供帮助。汉密尔顿偏爱的工具是对新产业的<b>奖励金</b>（补贴），同时辅以适度的保护性关税、原料免税以及道路和运河的改善。国会当时很少采纳他的具体建议，但这份报告成了美国保护主义的奠基性文件。</p>
+
+  <h2 id="american">2. 美国体系与亨利·凯里</h2>
+  <p>1812年战争切断了英国的进口，美国制造业在这道屏障后成长起来。此后国会在1816年、1824年和1828年通过了保护性关税。参议员亨利·克莱把关税、国家银行和联邦出资修建的道路运河这一组合称为<b>美国体系</b>。关税使国家陷入分裂：北方制造商支持它，而出口棉花、进口制成品的南方种植园主反对它。南卡罗来纳州试图宣布1828年的“可憎关税”无效，在1832—1833年引发了一场宪政危机。</p>
+  <p>十九世纪中叶美国最重要的经济学家亨利·凯里为保护主义提供了更广泛的理论。在《利益的和谐》（1851）中，他认为英国的自由贸易使其他国家沦为原料供应者，耗竭了它们的土地，并把制造业集中在英国。保护会让工厂靠近农场，创造国内市场，形成平衡而多元的经济。内战之后，共和党使美国关税保持在世界最高水平之列，直到1930年代。</p>
+
+  <h2 id="list">3. 弗里德里希·李斯特</h2>
+  <p>弗里德里希·李斯特是一位德国经济学家和政治活动家。他为德意志各邦之间的关税同盟奔走，曾因政治观点被监禁和流放，并在1825—1832年间旅居美国。在那里，他读了汉密尔顿的著作，结识了宾夕法尼亚的保护主义者，并出版了《美国政治经济学大纲》（1827）。回到欧洲后，他推动修建铁路，并推动1834年成立的德意志<b>关税同盟</b>：它取消了德意志各邦之间的关税，同时对外实行统一关税。他的主要著作《政治经济学的国民体系》于1841年出版。</p>
+  <p>李斯特抨击他所谓的斯密及其追随者的“世界主义经济学”。他说，他们的理论假定世界已经实现了和平与统一，国家无关紧要。而在现实世界中，各国处于不同的发展阶段，彼此竞争。发达国家与不发达国家之间的自由贸易，会使不发达国家永远处于劣势。李斯特指出，英国本身是通过几个世纪的保护和航海法才强大起来的，然后才向别人宣扬自由贸易：</p>
+  <blockquote>一个人登上了高峰之后，就把他攀登时所用的梯子一脚踢开，这是一种极为常见的聪明手法。<cite>弗里德里希·李斯特，《政治经济学的国民体系》（1841）</cite></blockquote>
+  <p>张夏准把这句话用作他关于贸易政策史的著作的书名（专题12）。</p>
+
+  <h2 id="powers">4. 生产力与发展阶段</h2>
+  <p>李斯特的核心区分是<b>交换价值</b>与<b>生产力</b>的区分。古典经济学用一个国家现在能够得到的商品来衡量贸易收益。但李斯特认为，创造财富的力量比财富本身重要得无可比拟。对制成品征收关税在今天带来成本，因为消费者要付更高的价格。然而，如果它能建立起使国家将来更加富裕的技能、机器、制度和工业习惯，它就是一项投资。正如一个人为学一门手艺而牺牲眼前的收入，一个国家也可以为获得制造业的力量而牺牲眼前的消费。</p>
+  <p>李斯特把各国排成一个阶段序列：从野蛮状态经过畜牧和农业阶段，到农工业阶段，最后到农工商业阶段。贸易政策应当取决于所处的阶段：</p>
+  <ul>
+    <li>落后的农业国应当与较先进的国家自由贸易，以获得它们的商品、技术和资本。</li>
+    <li>一个拥有工业化所需的人口、资源和制度，却面对强大外国对手的国家，应当保护它的制造业。</li>
+    <li>一旦它的产业能够参与竞争，就应当回到自由贸易。</li>
+  </ul>
+  <p>因此，李斯特的保护是<em>暂时的</em>、<em>有选择的</em>（针对制造业，而不是农业或原料），并且以一个国家发展工业的能力为<em>条件</em>。他认为只有温带的大国才适合这样做，这种看法带有他那个时代的偏见。</p>
+
+  <h2 id="tariff">5. 关税的作用</h2>
+  <p>主流经济学用一张局部均衡图来分析关税，这种方法可以追溯到马歇尔的消费者剩余（专题5）。对于一个无法影响世界价格的小国，关税会使国内价格上涨关税的全部金额。消费者受损，国内生产者和政府获益，而损失大于收益：两者之差就是<b>无谓损失</b>，它来自以过高的成本生产和消费过少。这种静态损失正是李斯特为建立生产力而接受的“交换价值的牺牲”。</p>
+
+  <div class="box" id="tbox">
+    <h3>关税的福利效应</h3>
+    <p class="note">国内对钢铁的需求为Q = 100 − P，国内供给为Q = P − 20。没有贸易时，价格为60。这个国家是小国，可以按世界价格进口任意数量。</p>
+    <div class="grid2">
+      <div><label>世界价格：<b id="pwv">35</b></label><input type="range" id="pw" min="25" max="55" step="1" value="35"></div>
+      <div><label>每单位关税：<b id="tfv">10</b></label><input type="range" id="tf" min="0" max="30" step="1" value="10"></div>
+    </div>
+    <svg id="tchart" viewBox="0 0 640 300" width="100%" role="img" aria-label="征收关税时的供求、收益与损失"></svg>
+    <div class="out" id="tout"></div>
+  </div>
+
+  <h2 id="infant">6. 幼稚产业保护何时值得？</h2>
+  <p>如果像李斯特所说，保护能让一个产业学习，静态损失就不是故事的全部。随着企业积累经验，它们的成本会下降。如果产业能以低于世界价格生产之后的未来收益，超过它在学习期间受保护的代价，保护就是值得的。这就是穆勒和巴斯塔布尔提出的检验标准（专题4）。下面的计算器把它具体化。</p>
+
+  <div class="box" id="ibox">
+    <h3>幼稚产业检验</h3>
+    <p class="note">一个新产业起初的成本比世界价格高50%。在免受进口冲击的保护下，它不断学习，成本随时间下降，趋近世界价格的80%。在保护的每一年，消费者支付该产业成本与世界价格之间的差额。一旦成本降到世界价格以下，保护就结束，国家每年获得这一差额。未来的成本和收益按80年计算，并折现到现在。图中显示前40年。</p>
+    <div class="grid2">
+      <div><label>学习速度：<b id="lrv">中等</b></label><input type="range" id="lr" min="0.03" max="0.3" step="0.01" value="0.15"></div>
+      <div><label>贴现率：<b id="drv">3%</b></label><input type="range" id="dr" min="1" max="15" step="0.5" value="3"></div>
+    </div>
+    <svg id="ichart" viewBox="0 0 640 230" width="100%" role="img" aria-label="该产业的成本随时间的变化与世界价格的比较"></svg>
+    <div class="out" id="iout"></div>
+  </div>
+
+  <h2 id="record">7. 历史记录</h2>
+  <p>政策记录好坏参半，而且存在争议。十九世纪后期，美国和德国在保持高关税的同时增长最快，保罗·贝罗克认为在那个时代保护与增长是相伴而行的。道格拉斯·欧文等经济史学家则回应说，美国的增长主要来自人口、资本以及关税并未保护的部门的生产率，而一些受保护的产业，例如1890年代的镀锡铁皮业，即使没有保护大概也会发展起来。对二十世纪保护政策的研究既发现了取得回报的案例，也发现了许多受保护产业始终没有长大的案例。困难的问题在于实践：选择哪些产业，如何使保护成为暂时的，以及如何防止它被它所造就的利益集团俘获。东亚的发展型国家提供了一种答案（专题11）。</p>
+  <div class="think"><b>思考题：</b>穆勒在原则上接受了幼稚产业论。李斯特的观点与穆勒有什么不同？</div>
+
+  <h2 id="read">8. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">弗里德里希·李斯特，《政治经济学的国民体系》（1841），第11—12章。</p>
+  <p class="rd">亚历山大·汉密尔顿，《关于制造业的报告》（1791），选读。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">张夏准，《富国陷阱：发达国家为何踢开梯子？》（2002），第2章。</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第8章。</p>
+  <p><a href="index.html#topic-9">← 返回课程大纲中的专题9</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function tariff() {
+  const pw = +$('pw').value, tf = +$('tf').value;
+  $('pwv').textContent = pw; $('tfv').textContent = tf;
+  const pd = Math.min(60, pw + tf), d = p => 100 - p, s = p => Math.max(0, p - 20);
+  const D0 = d(pw), S0 = s(pw), D1 = d(pd), S1 = s(pd);
+  const a = (pd - pw) * (S0 + S1) / 2, bb = (pd - pw) * (S1 - S0) / 2, c = (pd - pw) * (D1 - S1), dd = (pd - pw) * (D0 - D1) / 2;
+  const W = 640, H = 300, L = 44, R = 20, T = 14, B = 34, QM = 85, PM = 112;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B - p/PM*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,20,40,60,80,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
+  [0,20,40,60,80].forEach(v => g += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`);
+  g += `<text x="${W-R}" y="${H-4}" text-anchor="end">数量</text><text x="${L+6}" y="${T+2}">价格</text>`;
+  if (pd > pw) {
+    g += `<polygon points="${X(0)},${Y(pw)} ${X(S0)},${Y(pw)} ${X(S1)},${Y(pd)} ${X(0)},${Y(pd)}" fill="#3f8f6b" opacity=".35"/>`;
+    g += `<polygon points="${X(S0)},${Y(pw)} ${X(S1)},${Y(pw)} ${X(S1)},${Y(pd)}" fill="#c0392b" opacity=".45"/>`;
+    g += `<rect x="${X(S1)}" y="${Y(pd)}" width="${X(D1)-X(S1)}" height="${Y(pw)-Y(pd)}" fill="#0077b6" opacity=".35"/>`;
+    g += `<polygon points="${X(D1)},${Y(pd)} ${X(D1)},${Y(pw)} ${X(D0)},${Y(pw)}" fill="#c0392b" opacity=".45"/>`;
+  }
+  g += `<line x1="${X(0)}" y1="${Y(100)}" x2="${X(85)}" y2="${Y(15)}" stroke="#023e8a" stroke-width="2.2"/><text x="${X(14)}" y="${Y(86)-10}" style="fill:#023e8a">需求</text>`;
+  g += `<line x1="${X(0)}" y1="${Y(20)}" x2="${X(78)}" y2="${Y(98)}" stroke="#c47a2c" stroke-width="2.2"/><text x="${X(70)}" y="${Y(90)}" text-anchor="end" style="fill:#c47a2c">国内供给</text>`;
+  g += `<line x1="${L}" x2="${W-R}" y1="${Y(pw)}" y2="${Y(pw)}" stroke="#5b6670" stroke-dasharray="5 4"/><text x="${W-R}" y="${Y(pw)+16}" text-anchor="end">世界价格 ${pw}</text>`;
+  if (pd > pw) g += `<line x1="${L}" x2="${W-R}" y1="${Y(pd)}" y2="${Y(pd)}" stroke="#111" stroke-dasharray="5 4"/><text x="${W-R}" y="${Y(pd)-6}" text-anchor="end" style="fill:#111">含关税价格 ${pd}</text>`;
+  $('tchart').innerHTML = g;
+  const f = v => v.toFixed(0);
+  let msg = `没有关税时，消费者购买${f(D0)}单位，国内企业生产${f(S0)}单位，进口${f(D0-S0)}单位。`;
+  if (tf === 0) msg += '提高关税，看看它的效果。';
+  else {
+    msg += `关税使国内价格升至${pd}${pw + tf > 60 ? '（这是禁止性关税：完全没有进口）' : ''}。国内产量增加到${f(S1)}，进口减少到${f(D1-S1)}。` +
+      `消费者损失<b>${f(a+bb+c+dd)}</b>。国内生产者获益<b>${f(a)}</b>（绿色），政府获得<b>${f(c)}</b>的关税收入（蓝色）。` +
+      `国家的净损失为<b>${f(bb+dd)}</b>（红色）：其中${f(bb)}来自以高于进口的成本生产，${f(dd)}来自消费者购买减少。`;
+  }
+  $('tout').innerHTML = msg;
+}
+['pw','tf'].forEach(i => $(i).addEventListener('input', tariff)); tariff();
+
+function infant() {
+  const g = +$('lr').value, r = +$('dr').value/100;
+  $('lrv').textContent = g < 0.08 ? '慢' : g < 0.18 ? '中等' : '快'; $('drv').textContent = (r*100).toFixed(1).replace('.0','') + '%';
+  const N = 40, cost = t => 0.8 + 0.7*Math.exp(-g*t); // relative to world price = 1
+  let pvC = 0, pvB = 0, Tend = null; const C = [];
+  for (let t = 0; t <= 80; t++) {
+    const c = cost(t); if (t <= N) C.push(c);
+    if (c > 1) pvC += (c - 1)/Math.pow(1 + r, t); else { if (Tend === null) Tend = t; pvB += (1 - c)/Math.pow(1 + r, t); }
+  }
+  const W = 640, H = 230, L = 44, R = 20, T = 14, B = 34, X = t => L + t/N*(W-L-R), Y = v => H-B - (v - 0.6)/1.0*(H-B-T);
+  let s = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0.6,0.8,1.0,1.2,1.4,1.6].forEach(v => s += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v.toFixed(1)}</text>`);
+  [0,10,20,30,40].forEach(t => s += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`);
+  s += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">年</text>`;
+  let up = `M${X(0)},${Y(1)}`, dn = '';
+  C.forEach((c, t) => { up += `L${X(t)},${Y(Math.max(c, 1))}`; });
+  up += `L${X(N)},${Y(1)}Z`;
+  s += `<path d="${up}" fill="#c0392b" opacity=".3"/>`;
+  let lo = `M${X(0)},${Y(1)}`; C.forEach((c, t) => { lo += `L${X(t)},${Y(Math.min(c, 1))}`; }); lo += `L${X(N)},${Y(1)}Z`;
+  s += `<path d="${lo}" fill="#3f8f6b" opacity=".3"/>`;
+  s += `<line x1="${L}" x2="${W-R}" y1="${Y(1)}" y2="${Y(1)}" stroke="#5b6670" stroke-dasharray="5 4"/><text x="${W-R}" y="${Y(1)-6}" text-anchor="end">世界价格</text>`;
+  s += `<path d="${C.map((c,t) => (t ? 'L' : 'M') + X(t) + ',' + Y(c)).join(' ')}" fill="none" stroke="#023e8a" stroke-width="2.4"/><text x="${X(1)}" y="${Y(C[1])-8}" style="fill:#023e8a">国内产业的成本</text>`;
+  $('ichart').innerHTML = s;
+  const pass = pvB > pvC;
+  $('iout').innerHTML = (Tend === null ? `学习太慢，这个产业在80年内都无法具备竞争力。` : `经过<b>${Tend}年</b>的保护，这个产业具备了竞争力。`) +
+    `保护成本的现值（红色）为<b>${(pvC*100).toFixed(0)}</b>，此后收益的现值（绿色）为<b>${(pvB*100).toFixed(0)}</b>，均按世界价格、以每年100单位产量计算。` +
+    (pass ? `<b>保护通过了检验</b>：收益连本带息地偿还了成本。` : `<b>保护没有通过检验</b>：未来的收益不足以偿还成本。`) +
+    `学习越快、贴现率越低，越有利于保护。在实践中，这两者都无法事先知道。`;
+}
+['lr','dr'].forEach(i => $(i).addEventListener('input', infant)); infant();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

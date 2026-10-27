@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>李嘉图与比较优势 | Lingyi Wei</title>
+  <meta name="description" content="关于大卫·李嘉图比较优势理论的教学模块：《谷物法》、第7章的四个数字、机会成本、生产可能性与贸易条件的互动模型、理论的前提假设，以及《谷物法》的废除。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/ricardo.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../ricardo.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题3</p>
+  <h1>李嘉图与比较优势</h1>
+  <p class="lead">斯密证明了，当两个国家各有所长时，双方都能从贸易中获益。大卫·李嘉图证明了一件远不那么显而易见的事：即使一个国家在每种商品上都更有效率，贸易对两国仍然都有利。本专题推演他的论证、它的前提假设，以及它在终结英国《谷物法》的运动中所起的作用。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#context">《谷物法》与这一发现</a></li><li><a href="#four">四个数字</a></li><li><a href="#oc">作为机会成本的比较优势</a></li><li><a href="#model">生产可能性与贸易条件（互动）</a></li><li><a href="#assume">前提假设</a></li><li><a href="#policy">从理论到政策</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 《谷物法》与这一发现</h2>
+  <p>拿破仑战争期间，封锁切断了英国与欧洲粮食的联系，国内粮价和地租飞涨。1815年和平到来时，议会通过了一部《谷物法》，规定国内小麦价格达到每夸特80先令之前禁止进口，以保护在议会中占主导地位的地主。李嘉图是一位富有的证券经纪人，后来成为经济学家和议员，他反对这部法律。按照他的地租理论，廉价的进口粮食会降低养活工人的成本，减少地租，提高利润和积累（见经济思想史课程<a href="/het/zh/ricardo-malthus.html">专题4</a>）。</p>
+  <p>比较优势原理几乎同时在几个地方出现。罗伯特·托伦斯在《论对外谷物贸易》（1815）中提出了它，詹姆斯·穆勒参与了它的发展，而李嘉图在《政治经济学及赋税原理》（1817）第7章“论对外贸易”中作了最完整的阐述。历史学家至今仍在争论功劳应当归谁，但进入经济学的是李嘉图的版本。</p>
+
+  <h2 id="four">2. 四个数字</h2>
+  <p>李嘉图的例子使用两个国家（英国和葡萄牙）和两种商品（呢绒和葡萄酒）。下表给出生产一定数量的每种商品需要多少工人工作一年：</p>
+  <table>
+    <tr><th></th><th>呢绒</th><th>葡萄酒</th></tr>
+    <tr><td>英国</td><td>100名工人</td><td>120名工人</td></tr>
+    <tr><td>葡萄牙</td><td>90名工人</td><td>80名工人</td></tr>
+  </table>
+  <p>葡萄牙生产<em>两种</em>商品所需的工人都更少。它在两种商品上都有绝对优势，所以按照斯密的原理（专题2），似乎葡萄牙应当两种都生产。李嘉图证明并非如此。如果英国专门生产呢绒、葡萄牙专门生产葡萄酒，英国可以用100名工人生产的呢绒，换回它原来要用120名工人生产的葡萄酒；葡萄牙可以用80名工人生产的葡萄酒，换回它原来要用90名工人生产的呢绒。两国都节省了劳动。用李嘉图的话说，尽管葡萄牙生产呢绒所需的劳动比英国少，把资本用于生产葡萄酒对它仍然更有利。</p>
+
+  <h2 id="oc">3. 作为机会成本的比较优势</h2>
+  <p>重要的不是绝对生产率，而是相对成本。在英国，生产一单位呢绒意味着放弃100/120 = 0.83单位葡萄酒；在葡萄牙，则意味着放弃90/80 = 1.125单位葡萄酒。呢绒在英国相对便宜，葡萄酒在葡萄牙相对便宜。如果一个国家生产某种商品的机会成本低于贸易伙伴，它就在这种商品上具有<b>比较优势</b>。只要这些比率不同，无论两国的绝对生产率水平如何，双方都能从贸易中获益。</p>
+  <p>收益的大小取决于<b>贸易条件</b>，即呢绒与葡萄酒的交换比率。如果一单位呢绒换得0.83到1.125单位葡萄酒，两国都能获益。在0.83时英国一无所获，因为它自己生产这些葡萄酒的成本也是一样；在1.125时则是葡萄牙一无所获。李嘉图没有解释价格会落在这个区间的哪一点。这个问题由约翰·斯图亚特·穆勒回答（专题4）。</p>
+
+  <div class="box" id="ppfbox">
+    <h3>生产可能性与贸易条件</h3>
+    <p class="note">与李嘉图的例子一样，英国有220名工人，葡萄牙有170名，足以在没有贸易时各自生产一单位的每种商品。改变每单位商品所需的劳动和贸易条件。实线是每个国家的生产可能性边界；虚线表示它通过专业化和贸易能够消费的组合。</p>
+    <div class="grid2">
+      <div><label>英国：每单位呢绒所需工人：<b id="ecv">100</b></label><input type="range" id="ec" min="40" max="160" step="5" value="100"></div>
+      <div><label>英国：每单位葡萄酒所需工人：<b id="ewv">120</b></label><input type="range" id="ew" min="40" max="160" step="5" value="120"></div>
+      <div><label>葡萄牙：每单位呢绒所需工人：<b id="pcv">90</b></label><input type="range" id="pc" min="40" max="160" step="5" value="90"></div>
+      <div><label>葡萄牙：每单位葡萄酒所需工人：<b id="pwv">80</b></label><input type="range" id="pw" min="40" max="160" step="5" value="80"></div>
+      <div><label>贸易条件（每单位呢绒换得的葡萄酒）：<b id="ptv">1.00</b></label><input type="range" id="pt" min="0.5" max="1.6" step="0.01" value="1"></div>
+    </div>
+    <div class="grid2"><svg id="ppfE" viewBox="0 0 300 250" width="100%" role="img" aria-label="英国的生产和消费可能性"></svg><svg id="ppfP" viewBox="0 0 300 250" width="100%" role="img" aria-label="葡萄牙的生产和消费可能性"></svg></div>
+    <div class="out" id="ppfout"></div>
+  </div>
+
+  <h2 id="assume">4. 前提假设</h2>
+  <p>在其前提假设下，李嘉图的结论是一个逻辑真理；后来贸易理论的历史在很大程度上就是逐一放松这些假设：</p>
+  <ul>
+    <li><b>劳动是唯一的成本，且成本不变。</b>无论生产多少，每单位呢绒所需的劳动都相同。这使完全专业化成为可能。在成本递增的情况下，各国只会部分专业化（专题5）。</li>
+    <li><b>充分就业。</b>英国葡萄酒业释放出来的工人会在呢绒业重新就业。如果没有，收益就可能变成损失，这正是凯恩斯的论点（专题17）。</li>
+    <li><b>劳动和资本在国内自由流动，但不能跨国流动。</b>李嘉图认为，由于资本所有者“天然不愿”离开自己的国家，资本会留在国内。如果资本可以流向绝对成本最低的地方，比较优势就未必再支配贸易（专题21和专题24）。</li>
+    <li><b>贸易是平衡的。</b>出口支付进口，货币流动按照休谟的机制调整物价（专题1）。</li>
+    <li><b>对生产率没有持久影响。</b>这一理论比较的是静态的配置。它不问专门生产葡萄酒而非呢绒是否会影响一个国家未来的增长，而这正是李斯特（专题9）和结构主义者（专题18）所关心的核心问题。</li>
+  </ul>
+  <p>当被要求举出社会科学中一个既正确又不平凡的命题时，经济学家保罗·萨缪尔森选择了比较优势。他解释说，它在逻辑上是正确的；而它并不平凡，这一点可以由许多从未理解或从未相信它的聪明人来证明。</p>
+
+  <h2 id="policy">5. 从理论到政策</h2>
+  <p>比较优势成为自由贸易运动的思想基础。1838年在曼彻斯特成立、由理查德·科布登和约翰·布莱特领导的反谷物法同盟，通过群众集会、小册子和请愿，为廉价面包和开放市场而奔走。1845—1846年的爱尔兰饥荒迫使问题得到解决，首相罗伯特·皮尔于1846年废除了《谷物法》，并因此分裂了他的保守党。此后几十年里，英国取消了几乎所有关税，并废除了《航海法》（1849）。英法《科布登—谢瓦利埃条约》（1860）在欧洲掀起了一波降低关税的条约浪潮，一直持续到1870年代后期。</p>
+  <div class="think"><b>思考题：</b>比较优势假定资本不能在国家之间流动。如果资本可以流动，这一论证会怎样？</div>
+
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">大卫·李嘉图，《政治经济学及赋税原理》（1817），第7章。</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide</em>（1996），第6章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第5章。</p>
+  <p class="rd">Linda Yueh，<em>What Would the Great Economists Do?</em>（2018），第2章。</p>
+  <p class="rd">罗伊·拉芬，“David Ricardo’s Discovery of Comparative Advantage”，<em>History of Political Economy</em>（2002）。</p>
+  <p><a href="index.html#topic-3">← 返回课程大纲中的专题3</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const LE = 220, LP = 170;
+function draw(id, L, ac, aw, p, spec, name, col) {
+  // axes: cloth on x, wine on y
+  const W = 300, H = 250, Lm = 36, R = 10, T = 22, B = 30;
+  const maxC = Math.max(L/ac, 1) , maxW = Math.max(L/aw, 1);
+  const cpfC = spec === 'cloth' ? L/ac : (L/aw)/p, cpfW = spec === 'cloth' ? (L/ac)*p : L/aw;
+  const M = Math.max(maxC, maxW, spec ? Math.max(cpfC, cpfW) : 0) * 1.08;
+  const X = v => Lm + v/M*(W-Lm-R), Y = v => H-B - v/M*(H-B-T);
+  let g = `<line x1="${Lm}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${Lm}" y1="${T}" x2="${Lm}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  g += `<text x="${(Lm+W-R)/2}" y="${H-6}" text-anchor="middle">呢绒</text><text x="${Lm-6}" y="${T-8}" text-anchor="start">葡萄酒</text>`;
+  [0,1,2,3,4].forEach(v => { if (v <= M) g += `<text x="${X(v)}" y="${H-B+14}" text-anchor="middle">${v}</text><text x="${Lm-5}" y="${Y(v)+4}" text-anchor="end">${v}</text>`; });
+  g += `<line x1="${X(0)}" y1="${Y(maxW)}" x2="${X(maxC)}" y2="${Y(0)}" stroke="${col}" stroke-width="2.4"/>`;
+  if (spec) g += `<line x1="${X(0)}" y1="${Y(cpfW)}" x2="${X(cpfC)}" y2="${Y(0)}" stroke="${col}" stroke-width="2" stroke-dasharray="6 4"/>`;
+  g += `<circle cx="${X(L/(ac+aw))}" cy="${Y(L/(ac+aw))}" r="4" fill="#5b6670"/>`;
+  g += `<text x="${W-R}" y="${T-8}" text-anchor="end" font-weight="600" style="fill:${col}">${name}</text>`;
+  $(id).innerHTML = g;
+}
+function ppf() {
+  const ec = +$('ec').value, ew = +$('ew').value, pc = +$('pc').value, pw = +$('pw').value, p = +$('pt').value;
+  [['ecv',ec],['ewv',ew],['pcv',pc],['pwv',pw]].forEach(([i,v]) => $(i).textContent = v); $('ptv').textContent = p.toFixed(2);
+  const oE = ec/ew, oP = pc/pw; // wine given up per unit of cloth
+  let specE = null, specP = null, msg;
+  if (Math.abs(oE - oP) < 1e-9) {
+    msg = `两国生产一单位呢绒都要放弃同样的${oE.toFixed(2)}单位葡萄酒。机会成本相同，就没有比较优势，也无法从贸易中获益。`;
+  } else {
+    const eCloth = oE < oP; specE = eCloth ? 'cloth' : 'wine'; specP = eCloth ? 'wine' : 'cloth';
+    const lo = Math.min(oE, oP), hi = Math.max(oE, oP);
+    // gain per worker: value obtained through trade relative to direct production
+    const gE = eCloth ? p*ew/ec : ec/(p*ew), gP = eCloth ? pc/(p*pw) : p*pw/pc;
+    const pct = g => Math.abs(g-1) < 0.005 ? '同样多的' : (g > 1 ? '多' : '少') + Math.abs((g-1)*100).toFixed(0) + '%的';
+    const r3 = v => (+v.toFixed(3)).toString();
+    const zw = s => s === 'cloth' ? '呢绒' : '葡萄酒';
+    msg = `一单位呢绒的机会成本：英国为<b>${r3(oE)}</b>单位葡萄酒，葡萄牙为<b>${r3(oP)}</b>单位葡萄酒。英国在<b>${zw(specE)}</b>上具有比较优势，葡萄牙在<b>${zw(specP)}</b>上具有比较优势`;
+    msg += (ec < pc && ew < pw) ? '，尽管英国在两种商品上都更有效率。' : (pc < ec && pw < ew) ? '，尽管葡萄牙在两种商品上都更有效率。' : '。';
+    msg += `如果一单位呢绒换得${r3(lo)}到${r3(hi)}单位葡萄酒，两国都能获益。在${p.toFixed(2)}的价格下，英国工人通过专业化和贸易得到的${eCloth ? '葡萄酒' : '呢绒'}比直接生产${pct(gE).replace(/的$/, '')}；葡萄牙工人得到的${eCloth ? '呢绒' : '葡萄酒'}比直接生产${pct(gP).replace(/的$/, '')}。`;
+    if (p < lo - 1e-9 || p > hi + 1e-9) msg += `<b>这个价格落在区间之外</b>，所以有一个国家会因贸易而受损，因而拒绝专业化。`;
+    else if (Math.abs(p - lo) < 0.005 || Math.abs(p - hi) < 0.005) msg += `在区间的这一端，一个国家得到全部收益，另一个国家一无所获。`;
+    else msg += `两国都变得更好：虚线表示的消费线位于各自边界之外。`;
+  }
+  draw('ppfE', LE, ec, ew, p, specE, '英国', '#023e8a');
+  draw('ppfP', LP, pc, pw, p, specP, '葡萄牙', '#3f8f6b');
+  $('ppfout').innerHTML = msg + ' <span class="note">灰点表示没有贸易时、每个国家生产等量两种商品时的消费。</span>';
+}
+['ec','ew','pc','pw','pt'].forEach(i => $(i).addEventListener('input', ppf)); ppf();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

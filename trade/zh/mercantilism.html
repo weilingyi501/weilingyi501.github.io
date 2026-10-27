@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>重商主义与重农学派 | Lingyi Wei</title>
+  <meta name="description" content="关于早期贸易理论的教学模块：重商主义的贸易差额论、《航海法》与柯尔贝尔主义、对重商主义的重新解读、休谟的物价—铸币流动机制（含互动模型），以及重农学派对谷物自由贸易的主张。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/trade/mercantilism.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/trade/zh/mercantilism.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../mercantilism.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题1</p>
+  <h1>重商主义与重农学派</h1>
+  <p class="lead">在经济学还没有名字的时候，商人和官员就把贸易看作国家之间争夺黄金、航运和制造业的竞赛。本专题讲述重商主义的贸易差额学说、建立在这一学说之上的政策、休谟关于永久顺差不可能存在的论证，以及最早呼吁自由贸易的法国重农学派。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#doctrine">贸易差额</a></li><li><a href="#policy">重商主义政策</a></li><li><a href="#reread">重新认识重商主义</a></li><li><a href="#hume">休谟的物价—铸币流动机制（互动）</a></li><li><a href="#phys">重农学派</a></li><li><a href="#legacy">遗产</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="doctrine">1. 贸易差额</h2>
+  <p><b>重商主义</b>是亚当·斯密带着批评意味给“重商主义体系”起的名字，指大约从1500年到十八世纪后期指导欧洲各国的思想和政策。它从来不是一个统一的学派。它的作者是商人、公司董事和官员，例如东印度公司的托马斯·孟、约西亚·柴尔德和让-巴蒂斯特·柯尔贝尔。他们写小册子讨论实际问题：白银为什么流出英国？是否应当允许东印度公司输出金银？怎样保护本国的航运？</p>
+  <p>把他们联系在一起的是<b>贸易差额</b>的观念。一个没有金银矿的国家，只有卖给外国人的东西多于从外国人那里买的东西，才能增加它的贵金属存量。孟把这条规则说得很直白：一国每年卖给外国人的货物，必须比消费外国人的为多（《英国得自对外贸易的财富》，写于1620年代，1664年出版）。孟的重要一步，是按全部贸易而不是按每一笔双边交易来判断贸易差额。东印度公司向亚洲输出白银，但它把亚洲商品转销欧洲换回的白银多于它花出去的，所以总的差额是有利的。</p>
+  <p>这一学说背后有几种不同的观念，值得分开来看：</p>
+  <ul>
+    <li><b>金银即财富，或金银即权力。</b>金银可以支付军队和舰队，因此国家的货币存量就是其战争实力的尺度。</li>
+    <li><b>货币与流通。</b>许多作者担心的与其说是囤积，不如说是铸币短缺，因为铸币短缺会抑制国内的贸易和就业。</li>
+    <li><b>就业。</b>出口制成品而不是原毛，可以把制造业的工作留在国内。进口制成品就等于把就业“出口”了。</li>
+    <li><b>零和竞争。</b>由于世界上的贸易和金银总量被认为大体固定，一国之所得就是另一国之所失。</li>
+  </ul>
+
+  <h2 id="policy">2. 重商主义政策</h2>
+  <p>这一学说支撑着一整套政策，各国以不同的组合加以推行：</p>
+  <table>
+    <tr><th>政策</th><th>例子</th></tr>
+    <tr><td>特许贸易垄断</td><td>英国东印度公司（1600年）和荷兰东印度公司（1602年）拥有对亚洲贸易的专营权。</td></tr>
+    <tr><td>把航运保留给本国船队</td><td>英国1651年的《航海法》及其后的法令要求货物由英国船只运输，矛头指向荷兰在转运贸易中的优势。</td></tr>
+    <tr><td>保护制造业</td><td>对进口制成品征收关税，禁止原毛出口，对出口发放奖励金。</td></tr>
+    <tr><td>殖民地作为专属市场</td><td>殖民地供应原料、购买宗主国的制成品，并被禁止与竞争对手直接贸易。</td></tr>
+    <tr><td>国家扶持工业</td><td>柯尔贝尔担任法国财政大臣期间（1665—1683年）创办皇家工场，制定质量规章，修建道路和运河，并在1664年和1667年提高关税。</td></tr>
+  </table>
+  <p>十七世纪的英荷战争和十八世纪的英法战争，在很大程度上是为争夺贸易、殖民地和航运而打的。在重商主义的世界里，贸易政策与战争紧密相连。</p>
+
+  <h2 id="reread">3. 重新认识重商主义</h2>
+  <p>斯密之后，经济学家把重商主义看作一个简单的错误：把货币与财富混为一谈。后来的学者对它的解读要宽容得多。</p>
+  <ul>
+    <li><b>国家建设。</b>德国历史学派（专题10）的古斯塔夫·施穆勒（1884）认为，重商主义的核心是一种国家建设政策：把由地方特权拼凑而成的局面改造成统一的民族国家和国民经济。伊莱·赫克歇尔的《重商主义》（1931）把它看作一种权力与统一的体系，同时对其经济观点仍持批评态度。</li>
+    <li><b>生产能力。</b>埃里克·赖纳特等人认为，最优秀的重商主义作者，包括那不勒斯的安东尼奥·塞拉（1613），已经懂得一个国家致富靠的是转向制造业这类报酬递增的活动，而不是囤积黄金。按照这种解读，重商主义是最早的产业政策理论（专题9和专题12）。</li>
+    <li><b>有效需求。</b>凯恩斯在《通论》（1936）第23章中认为重商主义者有其道理：当国内利率取决于货币存量时，带来金银的贸易顺差会降低利率，从而增加投资和就业（专题17）。</li>
+    <li><b>批评者。</b>雅各布·瓦伊纳（1937）反驳说，重商主义者常常思路混乱，他们的著作主要服务于商人的利益，而且他们并没有一以贯之的理论。</li>
+  </ul>
+
+  <h2 id="hume">4. 休谟的物价—铸币流动机制</h2>
+  <p>对贸易差额学说最有力的早期反驳来自大卫·休谟的论文《论贸易差额》（1752）。休谟把<b>货币数量论</b>（物价随流通中的货币数量涨落）与“买者会转向更便宜的国家”这一观察结合起来。假设一个国家出现顺差，黄金流入，它的货币存量增加，物价随之上涨；逆差国的货币存量和物价则下降。顺差国的商品在国外变贵，外国商品在国内变便宜，于是它的出口减少、进口增加，直到顺差消失。休谟的结论是，货币会像水一样找到自己的水平。追求永久顺差的政策会自我挫败。</p>
+  <p>这一机制依赖两个后来受到质疑的假设。第一，流入的黄金必须进入流通并推高物价；如果国家或银行把它囤积起来，物价未必上涨。第二，物价必须是有弹性的；如果物价有黏性，调整就会通过产出和就业来进行，这正是凯恩斯的观点。</p>
+
+  <div class="box" id="psf">
+    <h3>物价—铸币流动机制</h3>
+    <p class="note">英国和法国两个规模相同的国家共有100单位黄金。每个国家的物价与它流通中的黄金量成正比，当一国物价低于对手时，它的出口就会增加。先让英国持有较少的黄金，使它出现顺差，观察顺差如何自行消失。然后让英国把流入的黄金囤积一部分。</p>
+    <div class="grid2">
+      <div><label>英国最初拥有的世界黄金份额：<b id="g0v">25</b></label><input type="range" id="g0" min="10" max="90" step="1" value="25"></div>
+      <div><label>贸易对价格差异的反应强度：<b id="kv">0.25</b></label><input type="range" id="k" min="0.05" max="0.5" step="0.01" value="0.25"></div>
+      <div><label>英国囤积而不投入流通的流入黄金比例：<b id="hv">0%</b></label><input type="range" id="h" min="0" max="100" step="5" value="0"></div>
+    </div>
+    <svg id="psfchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="英国和法国流通中的黄金随时间的变化"></svg>
+    <svg id="psfbal" viewBox="0 0 640 110" width="100%" role="img" aria-label="英国的贸易差额随时间的变化"></svg>
+    <div class="out" id="psfout"></div>
+  </div>
+
+  <h2 id="phys">5. 重农学派</h2>
+  <p>在法国，对重商主义的反动来自<b>重农学派</b>（意为“自然的统治”），其领袖是路易十五宫廷的医生弗朗索瓦·魁奈。他们的出发点是农业，而不是贸易。他们认为，只有土地能生产<b>纯产品</b>，即超过生产成本的剩余。制造业和商业是“不生产的”：它们有用，但只是改变或搬运农业生产出来的东西。魁奈的《经济表》（1758）描绘了纯产品如何在农民、地主和不生产阶级之间流转，这是第一个把经济看作循环流转的模型。</p>
+  <p>由此得出的贸易政策与柯尔贝尔的政策正好相反。法国的谷物贸易受到严格管制，设有国内关卡并禁止出口，以保证城市的面包便宜。重农学派认为，放开谷物贸易会提高粮价，增加农民的收益和纯产品，从而使整个王国更加富裕。他们的口号“自由放任，自由通行”起初就是要求让谷物自由流通。王室在1763—1764年放开了谷物贸易，杜尔哥担任财政总监时又在1774年再次放开。两次尝试都在歉收、粮价高涨和骚乱之后被撤销，其中最著名的是1775年的“面粉战争”。</p>
+  <div class="vs">
+    <div><b>重商主义者</b>贸易通过出口超过进口的顺差使国家致富。保护制造业，压低原料价格，按国家利益管制贸易。</div>
+    <div><b>重农学派</b>贸易不创造新的财富，只有土地创造财富。但放开贸易，尤其是谷物贸易，能提高农业的纯产品。</div>
+  </div>
+
+  <h2 id="legacy">6. 遗产</h2>
+  <p>斯密从这两派都学到了东西。他接受了休谟对贸易差额学说的反驳和重农学派关于自然自由的主张，但拒绝了重农学派关于制造业不生产的观点（专题2）。贸易顺差是国家实力标志的重商主义观念从未消失。它重新出现在十九世纪保护工业的主张中（专题9），出现在凯恩斯对重商主义者的重新评价中（专题17），也出现在今天关于出口导向型增长和世界经济中持续顺差的争论中。</p>
+  <div class="think"><b>思考题：</b>重商主义者把财富等同于贸易顺差。这种观念已经消亡了吗？还是仍然存在于今天的贸易政治之中？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">道格拉斯·欧文，<em>Against the Tide: An Intellectual History of Free Trade</em>（1996），第2—4章。</p>
+  <p class="rd">托马斯·孟，《英国得自对外贸易的财富》（1664），第2章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">大卫·休谟，《论贸易差额》（1752）。</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第2章。</p>
+  <p class="rd">拉尔斯·马格努松，<em>The Political Economy of Mercantilism</em>（2015），第1章。</p>
+  <p><a href="index.html#topic-1">← 返回课程大纲中的专题1</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Price–specie flow: prices proportional to gold in circulation; trade balance = k·(P_F − P_B)
+function psf() {
+  const g0 = +$('g0').value, k = +$('k').value, h = +$('h').value/100;
+  $('g0v').textContent = g0; $('kv').textContent = k.toFixed(2); $('hv').textContent = Math.round(h*100) + '%';
+  const N = 40; let cb = g0, cf = 100 - g0, hoard = 0; const B = [], F = [], TB = [];
+  for (let t = 0; t <= N; t++) {
+    B.push(cb); F.push(cf);
+    const tb = k * (cf - cb) / 2; TB.push(tb);           // Britain's trade balance (gold inflow if positive)
+    const inflow = tb;                                   // gold moves with the balance
+    const kept = inflow > 0 ? inflow * h : 0;            // hoarded gold leaves circulation
+    cb += inflow - kept; hoard += kept; cf -= inflow;
+  }
+  const W = 640, H = 260, L = 44, R = 16, T = 14, Bm = 34;
+  const X = t => L + t/N*(W-L-R), Y = v => T + (1 - v/100)*(H-Bm-T);
+  const YT = v => T + (H-Bm-T)/2 - v/20*(H-Bm-T)/2;
+  let g = `<line x1="${L}" y1="${H-Bm}" x2="${W-R}" y2="${H-Bm}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-Bm}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`);
+  [0,10,20,30,40].forEach(t => g += `<text x="${X(t)}" y="${H-Bm+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">年</text>`;
+  const path = (arr, f) => arr.map((v,i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ',' + f(v).toFixed(1)).join(' ');
+  g += `<path d="${path(B, Y)}" fill="none" stroke="#023e8a" stroke-width="2.4"/><path d="${path(F, Y)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/>`;
+  const up = B[0] < F[0];
+  g += `<text x="${X(0)+8}" y="${Y(B[0]) + (up ? 16 : -8)}" style="fill:#023e8a">英国流通中的黄金</text><text x="${X(0)+8}" y="${Y(F[0]) + (up ? -8 : 16)}" style="fill:#c47a2c">法国的黄金</text>`;
+  $('psfchart').innerHTML = g;
+  // trade balance as bars below
+  const BH = 110, mid = BH/2, sc = (BH/2 - 12) / Math.max(1, ...TB.map(Math.abs));
+  let b = `<line x1="${L}" x2="${W-R}" y1="${mid}" y2="${mid}" stroke="#ccd2d8"/><text x="${L-6}" y="${mid+4}" text-anchor="end">0</text>`;
+  TB.forEach((v, i) => { const hgt = Math.abs(v)*sc; b += `<rect x="${X(i)-4}" y="${v >= 0 ? mid-hgt : mid}" width="8" height="${Math.max(hgt, 0.5)}" fill="${v >= 0 ? '#3f8f6b' : '#c0392b'}"/>`; });
+  b += `<text x="${L+24}" y="12">英国每年的贸易差额：顺差（绿色，黄金流入）或逆差（红色，黄金流出）</text>`;
+  $('psfbal').innerHTML = b;
+  const tb0 = TB[0], tbN = TB[N];
+  let msg = `第0年，英国持有${g0}单位黄金，所以它的物价${g0 > 50 ? '高于' : g0 < 50 ? '低于' : '等于'}法国，贸易${tb0 > 0.05 ? '<b>顺差</b>' : tb0 < -0.05 ? '<b>逆差</b>' : '<b>平衡</b>'}。`;
+  if (g0 === 50) msg += '什么也不会发生：货币已经处在它的水平上。';
+  else if (h === 0) msg += `黄金${tb0 < 0 ? '流出' : '流入'}英国，直到两国持有相同数量的黄金、物价相等。40年后英国持有<b>${B[N].toFixed(1)}</b>单位黄金，贸易差额${Math.abs(tbN) < 0.05 ? '基本为零' : '为' + tbN.toFixed(2)}。正如休谟所说，货币找到了自己的水平。`;
+  else if (tb0 < 0) msg += `黄金流出英国，直到两国物价相等。在这里囤积不起作用，因为英国从未得到黄金；把英国的初始份额调到50以下，才能看到囤积的效果。`;
+  else msg += `英国把流入黄金的${Math.round(h*100)}%囤积起来，这部分黄金不会推高英国的物价。现在调整主要通过法国物价的下降来进行。40年后英国囤积了<b>${hoard.toFixed(1)}</b>单位黄金，它的顺差${Math.abs(tbN) < 0.05 ? '已经消失，但比不囤积时慢得多' : '仍然每年保持在' + tbN.toFixed(2)}。囤积流入的黄金延长了顺差，这正是重商主义者想要的，代价是堆积闲置的黄金，并把通货紧缩推给贸易伙伴。`;
+  $('psfout').innerHTML = msg;
+}
+['g0','k','h'].forEach(i => $(i).addEventListener('input', psf)); psf();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

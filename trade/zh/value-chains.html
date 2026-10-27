@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>新结构主义与全球价值链 | Lingyi Wei</title>
+  <meta name="description" content="关于新结构主义与全球价值链的教学模块：拉美经委会的兼顾社会公平的生产转型、从商品链到全球价值链、价值链治理、升级与微笑曲线（含互动图）、经济复杂度，以及在碎片化世界经济中谁获得价值。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/value-chains.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../value-chains.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题20</p>
+  <h1>新结构主义与全球价值链</h1>
+  <p class="lead">1980年代的债务危机之后，拉丁美洲的结构主义者接受了他们的经济将对贸易开放这一事实，但坚持认为单靠开放并不能使经济转型。与此同时，生产被拆分到不同国家，形成全球价值链。本专题追溯这两方面的发展，以及把它们联系起来的问题：在一个商品到处都能生产的世界里，哪些国家获得了价值？</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#neo">从结构主义到新结构主义</a></li><li><a href="#chains">从商品链到全球价值链</a></li><li><a href="#gov">价值链的治理</a></li><li><a href="#smile">升级与微笑曲线（互动）</a></li><li><a href="#complex">多元化与经济复杂度</a></li><li><a href="#capture">谁获得了价值？</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="neo">1. 从结构主义到新结构主义</h2>
+  <p>1982年的债务危机结束了拉丁美洲的进口替代时代（专题18）。在债权人和国际货币基金组织的压力下，大多数国家削减关税、将国有企业私有化，并向外国资本开放，这一纲领后来被称为华盛顿共识。1980年代（拉丁美洲“失去的十年”）和1990年代大部分时间的增长令人失望。</p>
+  <p>拉美经委会（1984年在名称中加入了加勒比）以一个新纲领作出回应。它的报告《兼顾社会公平的生产转型》（1990）主要出自智利经济学家费尔南多·法因兹尔伯之手，接受了对贸易开放和宏观经济稳定。但它认为，在世界市场上的竞争力应当建立在生产率提高和吸收技术进步之上，法因兹尔伯称之为<b>真正的竞争力</b>；而不是建立在低工资、货币贬值和耗竭自然资源之上，他称之为<b>虚假的竞争力</b>。法因兹尔伯还指出了一个“空盒子”：没有一个拉丁美洲国家同时实现了快速增长和不平等的减少。由法因兹尔伯、奥斯瓦尔多·孙克尔、何塞·安东尼奥·奥坎波等人发展起来的<b>新结构主义</b>，保留了结构主义对生产结构、技术和外部约束（专题19）的关注，同时放弃了全面保护，转而采取使出口多元化、建设技术能力和更广泛地分享收益的政策。</p>
+
+  <h2 id="chains">2. 从商品链到全球价值链</h2>
+  <p>追踪一种产品经过的每个生产阶段，这一思想来自世界体系分析（专题25）。特伦斯·霍普金斯和伊曼纽尔·沃勒斯坦（1986）把<b>商品链</b>定义为以一种成品为最终结果的劳动和生产过程网络，并用它来说明世界经济如何在核心与外围之间分配剩余。社会学家加里·杰里菲在1990年代改造了这一概念，用来研究企业如何组织全球生产。在他与米格尔·科热涅维奇合编的《商品链与全球资本主义》（1994）中，他区分了：</p>
+  <ul>
+    <li><b>生产者驱动型链条</b>，例如汽车、飞机和机械，由控制技术和生产网络的大型制造商协调。</li>
+    <li><b>购买者驱动型链条</b>，例如服装、鞋类和玩具，由沃尔玛、耐克等设计和营销产品却不拥有工厂的大型零售商和品牌公司协调。</li>
+  </ul>
+  <p>到2000年代，<b>全球价值链</b>一词取代了商品链。零部件贸易的增长快于成品贸易，经济学家开始按增加值而不是出口总值来衡量贸易。经合组织—世贸组织增加值贸易数据库（2013）显示，例如中国电子产品出口的价值中很大一部分来自进口零部件。</p>
+
+  <h2 id="gov">3. 价值链的治理</h2>
+  <p>加里·杰里菲、约翰·汉弗莱和蒂莫西·斯特金（2005）根据企业之间交换的信息有多复杂、这些信息能否方便地编码，以及供应商的能力如何，提出了五种治理类型：</p>
+  <table>
+    <tr><th>类型</th><th>描述</th><th>领导企业的权力</th></tr>
+    <tr><td>市场型</td><td>简单产品、一次性交易，价格是主要信号</td><td>低</td></tr>
+    <tr><td>模块型</td><td>供应商按客户的规格、使用编码化的标准生产产品</td><td rowspan="3">渐高 ↓</td></tr>
+    <tr><td>关系型</td><td>复杂的隐性信息；建立在信任和反复互动之上的相互依赖</td></tr>
+    <tr><td>俘获型</td><td>小供应商依赖于一个严密监控它们的主导买方</td></tr>
+    <tr><td>层级型</td><td>在一家跨国公司内部生产</td><td>高</td></tr>
+  </table>
+  <p>对发展中国家来说，治理类型很重要，因为它决定了本地企业能否学习，以及领导企业会帮助它们还是阻止它们进入更有价值的活动。</p>
+
+  <h2 id="smile">4. 升级与微笑曲线</h2>
+  <p>约翰·汉弗莱和休伯特·施密茨（2002）区分了价值链中的四种<b>升级</b>：<b>工艺</b>升级（生产更有效率）、<b>产品</b>升级（转向更复杂的产品）、<b>功能</b>升级（承担设计或营销等附加值更高的新功能），以及<b>链条</b>升级（转入另一条更有价值的链条）。俘获型链条中的企业往往发现工艺和产品升级受到鼓励，而功能升级则遭到抵制。</p>
+  <p>台湾宏碁电脑公司的创始人施振荣在1990年代初用<b>微笑曲线</b>说明了其中的利害。价值链的开端（研发、设计、关键零部件）和末端（品牌、营销、服务）附加值高，中间（制造和组装）附加值低。许多观察者认为，1970年代以来微笑曲线变得更深了，因为制造业分散到许多低工资地区，而知识密集型活动仍然集中。点击一个阶段，看看专门从事这一阶段的国家能获得多少价值。</p>
+
+  <div class="box" id="smbox">
+    <h3>微笑曲线（示意）</h3>
+    <p><button type="button" class="btn" data-era="0">1970年代</button><button type="button" class="btn on" data-era="1">2000年代及以后</button></p>
+    <svg id="smchart" viewBox="0 0 640 280" width="100%" role="img" aria-label="价值链各阶段的附加值"></svg>
+    <div class="out" id="smout"></div>
+    <p class="note">这些数字是一件消费电子产品最终价值的示意性份额，用来显示文献中所描述的形状，并非实测数据。</p>
+  </div>
+
+  <h2 id="complex">5. 多元化与经济复杂度</h2>
+  <p>一项相关研究关心的不是一个国家处于哪个阶段，而是它能生产多大范围的产品。里卡多·豪斯曼、塞萨尔·伊达尔戈及其同事认为，各国通过积累生产能力而增长，而生产能力可以通过一个国家出口产品的多样性和复杂程度间接衡量。他们在《经济复杂度地图集》（2011）中发表的<b>经济复杂度</b>指数，对未来增长的预测比许多标准变量更好。由于能力很难获得，各国往往转向与它们已经生产的产品“相近”的产品。其政策含义与新结构主义和林毅夫的新结构经济学（专题12）都相契合：多元化是发展政策的核心目标，一个国家出口什么产品关系到它的未来，正如结构主义者一贯主张的那样。</p>
+
+  <h2 id="capture">6. 谁获得了价值？</h2>
+  <p>价值链使许多发展中国家，尤其是东亚国家，能够通过加入一条链条而不是建立一个完整的产业来实现工业化。批评者指出了另一面。在一项被广泛引用的对苹果产品的研究中，肯尼斯·克雷默、格雷格·林登和杰森·德德里克（2011）估计，iPhone零售价中只有很小一部分归中国的组装劳动，而苹果自己的利润占了最大的份额。威廉·米尔伯格和德博拉·温克勒（2013）认为，领导企业利用全球外包提高了它们的加成和股东回报，而劳动收入份额在富国和发展中国家都下降了。从底部进入链条的国家有被锁定在低价值组装环节的风险，它们彼此在工资上竞争，这是普雷维什针对初级产品所指出的问题的现代版本。政策的问题在于，如何在工资上涨、组装环节转移到别处之前沿着微笑曲线向上移动，以及链条的治理是否允许这样做。</p>
+  <div class="think"><b>思考题：</b>在价值链的世界里，一个国家出口什么商品还重要吗？还是只有它承担什么工序才重要？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">加里·杰里菲，<em>Global Value Chains and Development: Redefining the Contours of 21st Century Capitalism</em>（2018），第1章。</p>
+  <p class="rd">拉美经委会，《兼顾社会公平的生产转型》（1990），摘要。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">何塞·安东尼奥·奥坎波，“The Quest for Dynamic Efficiency: Structural Dynamics and Economic Growth in Developing Countries”，收入奥坎波编，<em>Beyond Reforms</em>（2005）。</p>
+  <p class="rd">约翰·汉弗莱、休伯特·施密茨，“How Does Insertion in Global Value Chains Affect Upgrading in Industrial Clusters?”，<em>Regional Studies</em>（2002）。</p>
+  <p><a href="index.html#topic-20">← 返回课程大纲中的专题20</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const S = ['研究与开发', '设计', '关键零部件', '制造', '组装', '物流与分销', '营销与品牌', '售后服务'];
+const V = [[14, 13, 14, 16, 13, 10, 11, 9], [19, 16, 15, 5, 3, 9, 20, 13]];
+let era = 1, sel = 4;
+function smile() {
+  document.querySelectorAll('#smbox .btn').forEach(b => b.classList.toggle('on', +b.dataset.era === era));
+  const v = V[era], W = 640, H = 280, L = 40, R = 20, T = 20, B = 70, n = S.length;
+  const X = i => L + (i + 0.5)/n*(W-L-R), Y = p => H-B - p/24*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,5,10,15,20].forEach(p => g += `<text x="${L-6}" y="${Y(p)+4}" text-anchor="end">${p}%</text>`);
+  const other = V[1 - era];
+  g += `<path d="${other.map((p, i) => (i ? 'L' : 'M') + X(i) + ',' + Y(p)).join(' ')}" fill="none" stroke="#ccd2d8" stroke-width="2" stroke-dasharray="5 4"/>`;
+  let d = `M${X(0)},${Y(v[0])}`; for (let i = 1; i < n; i++) { const xm = (X(i-1) + X(i))/2; d += ` C${xm},${Y(v[i-1])} ${xm},${Y(v[i])} ${X(i)},${Y(v[i])}`; }
+  g += `<path d="${d}" fill="none" stroke="#023e8a" stroke-width="3"/>`;
+  S.forEach((s, i) => {
+    g += `<g class="st" data-i="${i}" style="cursor:pointer" tabindex="0" role="button"><circle cx="${X(i)}" cy="${Y(v[i])}" r="${i === sel ? 10 : 7}" fill="${i === sel ? '#c47a2c' : '#fff'}" stroke="${i === sel ? '#c47a2c' : '#023e8a'}" stroke-width="2.5"/>`;
+    const words = s.split(' '); const lines = words.length > 2 ? [words.slice(0, 2).join(' '), words.slice(2).join(' ')] : words.length === 2 && s.length > 12 ? words : [s];
+    lines.forEach((ln, j) => g += `<text x="${X(i)}" y="${H-B+18+j*14}" text-anchor="middle" style="fill:${i === sel ? '#c47a2c' : '#5b6670'};${i === sel ? 'font-weight:600' : ''}">${ln}</text>`);
+    g += `</g>`;
+  });
+  g += `<text x="${W-R}" y="${T}" text-anchor="end">虚线：${era ? '1970年代' : '2000年代'}</text>`;
+  $('smchart').innerHTML = g;
+  document.querySelectorAll('#smchart .st').forEach(el => {
+    const act = () => { sel = +el.dataset.i; smile(); };
+    el.addEventListener('click', act); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  const mid = sel >= 3 && sel <= 4, ch = V[1][sel] - V[0][sel];
+  const when = era ? `（2000年代${ch ? `，${ch > 0 ? '高于' : '低于'}1970年代的${V[0][sel]}%` : ''}）` : '（1970年代）';
+  $('smout').innerHTML = `专门从事<b>${S[sel]}</b>的国家获得产品最终价值的约<b>${v[sel]}%</b>${when}。` +
+    (mid ? '这是微笑曲线的底部：许多国家都能从事的生产，地区之间的竞争使利润微薄。升级意味着向两端移动。' : '这一活动依赖于知识、品牌或对客户的控制，这些都难以复制，因此它保留了较大的价值份额。');
+}
+document.querySelectorAll('#smbox .btn').forEach(b => b.addEventListener('click', () => { era = +b.dataset.era; smile(); }));
+smile();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

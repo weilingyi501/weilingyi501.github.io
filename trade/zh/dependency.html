@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>依附理论 | Lingyi Wei</title>
+  <meta name="description" content="关于依附理论与贸易的教学模块：保罗·巴兰与经济剩余、安德烈·冈德·弗兰克的“不发达的发展”（含宗主中心—卫星链条的互动模型）、卡多佐与法莱托的依附性发展、多斯桑托斯、沃尔特·罗德尼、脱钩，以及批评者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/dependency.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../dependency.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题23</p>
+  <h1>依附理论</h1>
+  <p class="lead">到1960年代，非殖民化和二十年的发展计划并没有缩小富国与穷国之间的差距。主要在拉丁美洲和非洲写作的依附理论家认为，问题不在于穷国融入世界经济不够，而在于它们融入的方式。在这种观点看来，贸易和外国投资正是外围的剩余被抽向中心的渠道。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#against">反对现代化理论</a></li><li><a href="#baran">巴兰与经济剩余</a></li><li><a href="#frank">弗兰克：不发达的发展（互动）</a></li><li><a href="#cardoso">卡多佐与法莱托：依附性发展</a></li><li><a href="#dossantos">多斯桑托斯与新依附</a></li><li><a href="#rodney">罗德尼：欧洲如何使非洲欠发达</a></li><li><a href="#critics">脱钩与批评者</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="against">1. 反对现代化理论</h2>
+  <p>1950和1960年代占主导地位的发展观，通常被称为<b>现代化理论</b>，认为穷国正处于富国已经走过的道路的早期阶段。W. W. 罗斯托的《经济成长的阶段》（1960），副标题为“非共产党宣言”，描述了从传统社会到大众高消费的五个阶段。穷国需要更多的资本、技术、教育以及与西方的贸易来实现“起飞”。依附理论家拒绝了这一前提。他们认为，不发达不是一种原初状态，而是殖民主义和不平等地融入世界经济的历史的结果。富国从来不曾像今天的穷国那样“不发达”，尽管它们曾经是“未发展”的。</p>
+  <p>依附理论有两个主要来源：强调中心与外围的普雷维什和富尔塔多的拉丁美洲结构主义（专题18），以及马克思主义的帝国主义理论（专题22）。它有不同的形式，从认为社会主义革命是唯一出路的马克思主义版本，到接近结构主义的改良主义版本。</p>
+
+  <h2 id="baran">2. 巴兰与经济剩余</h2>
+  <p>斯坦福大学的马克思主义经济学家保罗·巴兰在《增长的政治经济学》（1957）中奠定了基础。他以<b>经济剩余</b>为分析中心，即一个社会的产出与维持自身所必需的消费之间的差额。巴兰认为，不发达国家生产了相当可观的潜在剩余，但没有用于发展。一部分以外国企业利润、债务利息和不利贸易的形式被拿走；一部分被地主、商人以及与外国资本结盟的买办精英消费掉；还有一部分浪费在臃肿的国家机器和军队上。巴兰以印度为例，把它在英国统治下的命运与逃脱了殖民化并实现了工业化的日本相比较。发展的障碍不是资源短缺，而是决定剩余如何使用的社会结构和国际结构。</p>
+
+  <h2 id="frank">3. 弗兰克：不发达的发展</h2>
+  <p>出生于德国、在芝加哥大学受训、曾在智利和巴西工作的经济学家安德烈·冈德·弗兰克，在《不发达的发展》（1966）和《拉丁美洲的资本主义与不发达》（1967）中最尖锐地表述了这一命题。弗兰克认为，拉丁美洲自西班牙和葡萄牙征服以来就是资本主义的，作为白银、蔗糖和其他出口品的生产者融入了世界市场。世界资本主义体系是一条由<b>宗主中心—卫星</b>关系构成的链条：世界宗主中心从各国首都榨取剩余，首都从地区中心榨取剩余，地区中心从地方城镇榨取剩余，地方城镇又从农民那里榨取剩余。在每一个环节，剩余都向上流动。</p>
+  <p>弗兰克得出了两个引起争议的结论。第一，最不发达的地区恰恰是过去与宗主中心联系最紧密的地区，例如巴西东北部和玻利维亚昔日的蔗糖和矿业地区。第二，卫星在与宗主中心联系最弱的时候发展得最快，例如在两次世界大战和大萧条期间，拉丁美洲的工业因进口中断而增长。发展需要打破这条链条。</p>
+
+  <div class="box" id="frbox">
+    <h3>宗主中心—卫星链条</h3>
+    <p class="note">一个农民生产者创造了100单位剩余。在链条的每一个环节，地方中心保留它所收到的一部分，把其余部分向上传递。改变每一环节向上传递的份额，看看每一层级还剩下多少。数字是示意性的。</p>
+    <div class="grid2">
+      <div><label>每个环节向上传递的剩余份额：<b id="pfv">60%</b></label><input type="range" id="pf" min="10" max="90" step="5" value="60"></div>
+      <div><label>链条的环节数：<b id="lkv">4</b></label><input type="range" id="lk" min="2" max="5" step="1" value="4"></div>
+    </div>
+    <svg id="frchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="链条各层级保留的剩余"></svg>
+    <div class="out" id="frout"></div>
+  </div>
+
+  <h2 id="cardoso">4. 卡多佐与法莱托：依附性发展</h2>
+  <p>巴西社会学家费尔南多·恩里克·卡多佐和智利历史学家恩佐·法莱托在圣地亚哥的拉美经委会工作期间写成了《拉丁美洲的依附与发展》（1969，英译本1979）。他们拒绝了弗兰克关于依附使发展不可能的观点。依附在不同国家有不同的形式，取决于出口部门是由本国精英还是由外国飞地控制，以及各阶级之间、它们与外国资本之间的联盟。1950年代以来，跨国公司在巴西、墨西哥和阿根廷投资于面向国内市场的制造业。结果是<b>联合依附性发展</b>：真正的工业化和增长，但由外国资本主导，技术控制在国外，不平等日益加剧。任务是分析具体的依附情境，而不是推演出一条关于停滞的普遍规律。卡多佐后来担任巴西总统（1995—2002），他的政府推行了市场导向的改革。</p>
+
+  <h2 id="dossantos">5. 多斯桑托斯与新依附</h2>
+  <p>1964年政变后流亡国外的巴西经济学家特奥托尼奥·多斯桑托斯，在一篇影响很大的文章《依附的结构》（1970）中把依附定义为这样一种状况：某些国家的经济受到它所从属的另一个经济的发展和扩张的制约。他区分了三种历史形式：建立在贸易垄断之上的殖民依附；从十九世纪后期开始、建立在对原料出口的外国投资之上的金融—工业依附；以及1945年以后建立在跨国公司对制造业投资之上的<b>新的技术—工业依附</b>。他认为，新依附受到以下因素的制约：需要外汇来进口机器、支付利润和特许权使用费；技术通过专利受到控制；高度不平等的收入结构限制了国内市场。多斯桑托斯与鲁伊·毛罗·马里尼和瓦尼娅·班比拉一起，发展了一种马克思主义的依附理论，把这些制约与外围劳动的<b>超级剥削</b>联系起来。</p>
+
+  <h2 id="rodney">6. 罗德尼：欧洲如何使非洲欠发达</h2>
+  <p>在坦桑尼亚任教的圭亚那历史学家沃尔特·罗德尼，在《欧洲如何使非洲欠发达》（1972）中把依附分析应用于非洲。罗德尼认为，大西洋奴隶贸易使非洲人口流失，破坏了它的经济和政治体系，并使它的力量从生产转向掳掠和战争。随后的殖民统治把非洲经济组织成出口少数几种经济作物和矿产的经济，交通网络从矿山和种植园通向港口，几乎没有工业，教育极少，劳动是强迫的或报酬很低的。在这样的条件下，贸易把剩余转移到欧洲。罗德尼积极参与加勒比地区的政治，1980年在圭亚那遇刺身亡。近年来对奴隶贸易长期影响的量化研究（专题15）用不同的方法得出了与他相近的结论。</p>
+
+  <h2 id="critics">7. 脱钩与批评者</h2>
+  <p>这对政策意味着什么？一些依附理论家，特别是萨米尔·阿明（专题24），呼吁<b>脱钩</b>：使对外关系服从于以本国为中心的内部发展的需要，这并不意味着自给自足，而是意味着拒绝让国家发展去适应世界市场的要求。另一些人则主张发展中国家之间的区域一体化，或者像国际经济新秩序（专题18）那样改革国际秩序。</p>
+  <p>批评来自几个方向。新古典经济学家指出，1960年以后增长最快的东亚国家正是通过融入世界市场实现增长的（专题11）。比尔·沃伦等马克思主义者在《帝国主义：资本主义的先驱》（1980）中认为，资本主义事实上正在发展第三世界，正如马克思所预期的那样。还有人批评依附理论把“依附”定义得如此宽泛，以致可以解释任何结果，并忽视了国内的阶级关系，这一点卡多佐和法莱托早已提出过警告。辩护者回应说，东亚的成功依赖于不寻常的地缘政治条件和国家能力，而依附理论对谁控制技术、金融和剩余的关注，在全球价值链时代（专题20）依然具有现实意义。</p>
+  <div class="think"><b>思考题：</b>东亚通过融入世界市场实现了发展。这是否驳倒了依附理论？</div>
+
+  <h2 id="read">8. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">安德烈·冈德·弗兰克，《不发达的发展》，<em>Monthly Review</em>（1966）。</p>
+  <p class="rd">特奥托尼奥·多斯桑托斯，“The Structure of Dependence”，<em>American Economic Review</em>（1970）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">费尔南多·恩里克·卡多佐、恩佐·法莱托，《拉丁美洲的依附与发展》（1969；英译本1979），序言。</p>
+  <p class="rd">沃尔特·罗德尼，《欧洲如何使非洲欠发达》（1972），第1章。</p>
+  <p><a href="index.html#topic-23">← 返回课程大纲中的专题23</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const LV = {2:['农民生产者','国家首都','世界宗主中心'], 3:['农民生产者','地区中心','国家首都','世界宗主中心'], 4:['农民生产者','地方城镇','地区中心','国家首都','世界宗主中心'], 5:['农民生产者','地主或商人','地方城镇','地区中心','国家首都','世界宗主中心']};
+function fr() {
+  const pf = +$('pf').value/100, lk = +$('lk').value;
+  $('pfv').textContent = Math.round(pf*100) + '%'; $('lkv').textContent = lk;
+  const levels = LV[lk];
+  let flow = 100; const kept = [];
+  for (let i = 0; i < levels.length; i++) { if (i < levels.length - 1) { kept.push(flow*(1 - pf)); flow *= pf; } else kept.push(flow); }
+  const W = 640, H = 220, L = 140, R = 70, n = levels.length, bh = (H - 20)/n - 8, X = v => L + v/100*(W-L-R);
+  let g = '';
+  levels.forEach((name, i) => {
+    const y = 10 + i*(bh + 8), c = i === n - 1 ? '#b03a2e' : i === 0 ? '#3f8f6b' : '#c47a2c';
+    g += `<text x="${L-10}" y="${y + bh/2 + 4}" text-anchor="end">${name}</text><rect x="${L}" y="${y}" width="${Math.max(1, X(kept[i]) - L)}" height="${bh}" rx="4" fill="${c}"/>`;
+    g += `<text x="${X(kept[i]) + 6}" y="${y + bh/2 + 4}" style="fill:#1f2933;font-weight:600">${kept[i].toFixed(1)}</text>`;
+  });
+  $('frchart').innerHTML = g;
+  $('frout').innerHTML = `生产者创造的100单位剩余中，只有<b>${kept[0].toFixed(1)}</b>留在链条底部，而有<b>${kept[n-1].toFixed(1)}</b>到达世界宗主中心。按照弗兰克的论证，本可以为当地投资提供资金的剩余在每一个环节向上流动，因此顶端的发展与底端的不发达是同一过程的两个方面。`;
+}
+['pf','lk'].forEach(x => $(x).addEventListener('input', fr)); fr();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

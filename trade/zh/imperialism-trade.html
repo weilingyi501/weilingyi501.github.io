@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>帝国主义理论 | Lingyi Wei</title>
+  <meta name="description" content="关于古典帝国主义理论与贸易的教学模块：争夺殖民地、霍布森的消费不足论（含互动模型）、希法亭的金融资本与保护主义、卢森堡论积累与非资本主义市场、列宁论帝国主义作为资本主义的一个阶段，以及批评者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/imperialism-trade.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../imperialism-trade.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题22</p>
+  <h1>帝国主义理论</h1>
+  <p class="lead">1880年至1914年间，列强瓜分了非洲的大部分和亚洲的许多地区，提高关税、建造海军，并以前所未有的规模输出资本。一群作者，其中一位是英国自由主义者，其余是马克思主义者，认为这些发展是相互关联的：帝国主义源于发达资本主义的经济，贸易、金融和战争无法分开。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#context">帝国的时代</a></li><li><a href="#hobson">霍布森：经济根源（互动）</a></li><li><a href="#hilferding">希法亭：金融资本与保护</a></li><li><a href="#luxemburg">卢森堡：积累与非资本主义市场</a></li><li><a href="#lenin">列宁：帝国主义作为一个阶段</a></li><li><a href="#critics">批评者与遗产</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 帝国的时代</h2>
+  <p>1860和1870年代的自由贸易时代（专题3）让位于截然不同的局面。1873年萧条之后，欧洲大陆和美国提高了关税（专题10）。1884—1885年的柏林会议为欧洲瓜分非洲制定了规则；到1914年，只有埃塞俄比亚和利比里亚仍保持独立。英国大规模输出资本，到1913年，它的海外资产已超过其年度国民收入。大企业联合成卡特尔和托拉斯，银行变得强大。问题在于，这些趋势是否有共同的原因。</p>
+
+  <h2 id="hobson">2. 霍布森：经济根源</h2>
+  <p>约翰·阿特金森·霍布森是一位曾报道布尔战争的英国自由主义经济学家和记者，他在1902年出版了《帝国主义》。他发现，英国自1870年以来获得的新殖民地在其贸易中只占微不足道的份额，对国家来说是净成本。那么，谁从帝国中获益？霍布森的回答是一小群投资者、金融家、军火商和官员，他们利用国家为自己的资本争取出路。</p>
+  <p>更深层的原因是<b>消费不足</b>，即“帝国主义的经济根源”。由于收入分配极不平等，富人的储蓄多于国内能够有利地投资的数量，而工人买不起工业生产出来的全部产品。过剩的资本到国外寻找出路，投资者迫使国家打开并保护外国市场。解决办法在国内：通过提高工资、税收和社会支出把收入重新分配给工人，使国内需求能够吸收国家的产出。霍布森的论证影响了列宁，凯恩斯后来称赞他是一位在有效需求问题上正确的异端（见专题17）。</p>
+
+  <div class="box" id="hobox">
+    <h3>霍布森的消费不足论</h3>
+    <p class="note">一个国民经济生产100单位产品。工人花掉全部工资；资本家消费一部分利润，并想把其余部分储蓄起来。国内投资只能有利地吸收有限的储蓄。国内卖不出去的产出必须到国外寻找市场，并通过输出资本来融资。</p>
+    <div class="grid2">
+      <div><label>工资在国民收入中的份额：<b id="wsv">55%</b></label><input type="range" id="ws" min="40" max="80" step="1" value="55"></div>
+      <div><label>资本家消费的利润份额：<b id="ccv">40%</b></label><input type="range" id="cc" min="10" max="90" step="5" value="40"></div>
+      <div><label>国内能够有利地吸收的投资：<b id="iv">15</b></label><input type="range" id="i" min="5" max="30" step="1" value="15"></div>
+    </div>
+    <div class="split" id="hosplit"></div>
+    <div class="out" id="hoout"></div>
+  </div>
+
+  <h2 id="hilferding">3. 希法亭：金融资本与保护</h2>
+  <p>奥地利马克思主义者、后来曾任德国财政部长的鲁道夫·希法亭于1910年出版了《金融资本》。他认为，资本主义已经进入一个新阶段：大银行和产业卡特尔融合为<b>金融资本</b>，银行持有并指挥产业的股份。对贸易而言，他的关键洞见涉及关税。在竞争资本主义时代，工业家支持自由贸易。卡特尔化的工业则需要高关税：在关税保护下，卡特尔可以在国内收取垄断价格，并用这些利润在国外廉价销售，以倾销商品来征服外国市场。关税已经从保护幼稚产业的手段（专题9）变成了成熟垄断的进攻性武器。受保护的经济领土越大，卡特尔的国内市场就越大，于是金融资本推动争夺殖民地和势力范围。希法亭的结论是，金融资本的政策就是帝国主义，它导致列强之间的冲突。</p>
+
+  <h2 id="luxemburg">4. 卢森堡：积累与非资本主义市场</h2>
+  <p>罗莎·卢森堡在《资本积累论》（1913）中回到了需求问题。她认为，在一个只有工人和资本家的封闭经济中，代表待积累的新剩余价值的那部分产出没有市场。因此，资本主义需要把商品卖给资本主义体系之外的买者：农民、手工业者，以及殖民地的前资本主义社会。帝国主义是资本争夺剩余的非资本主义环境的政治表现。资本主义通过贸易、税收、债务和赤裸裸的武力把这些社会卷入它的轨道，并在这一过程中摧毁它们的经济。一旦整个世界都成为资本主义的，积累就将不可能。卢森堡基于再生产图式的论证受到布哈林等人的批评，但她对通过贸易、贷款和殖民政策暴力吞并非资本主义经济的强调，影响了后来的依附理论和世界体系学者。</p>
+
+  <h2 id="lenin">5. 列宁：帝国主义作为一个阶段</h2>
+  <p>列宁的小册子《帝国主义是资本主义的最高阶段》（1916年写成，1917年出版）借鉴了霍布森和希法亭。列宁用五个特征来界定帝国主义：</p>
+  <ol>
+    <li>生产集中，形成垄断组织。</li>
+    <li>银行资本和工业资本融合为金融资本，由金融寡头控制。</li>
+    <li>与商品输出不同，资本输出具有特别重要的意义。</li>
+    <li>瓜分世界的资本家国际垄断同盟已经形成。</li>
+    <li>最大资本主义列强已把世界上的领土瓜分完毕。</li>
+  </ol>
+  <p>在列宁看来，帝国主义不是像霍布森所希望的那样可以扭转的一种政策，而是资本主义的一个必然阶段。由于资本主义发展不平衡，帝国主义国家之间的力量对比不断变化；而由于世界已被瓜分完毕，一个崛起的大国只能通过夺取别国的领土来扩张。结果就是战争。列宁还认为，帝国主义的超额利润使资本家能够“收买”帝国主义国家中上层的一部分工人，即<b>工人贵族</b>，这解释了为什么许多社会主义政党在1914年支持了本国政府。</p>
+
+  <h2 id="critics">6. 批评者与遗产</h2>
+  <p>批评者指出，英国的资本输出大部分不是流向非洲和亚洲的新殖民地，而是流向美国、加拿大、澳大利亚、阿根廷等欧洲移民定居地区。约瑟夫·熊彼特（1919）认为，帝国主义是一种返祖现象，是前资本主义武士贵族的残余，而资本主义本质上是和平的。约翰·加拉格尔和罗纳德·罗宾逊（1953）认为，英国早在1880年以前就推行“自由贸易的帝国主义”，在可能的地方使用非正式影响，只在必要时实行正式统治。尽管如此，古典理论为后来马克思主义的贸易与发展研究设定了议程，从依附理论（专题23）和不平等交换（专题24）到世界体系分析（专题25）。关于这些理论的更详细的历史，见经济思想史课程<a href="/het/zh/imperialism.html">专题11</a>。</p>
+  <div class="think"><b>思考题：</b>今天中美之间的贸易冲突，是列宁意义上的帝国主义国家之间的争霸吗？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">E. K. 亨特、马克·劳岑海泽，《经济思想史：一种批判性的视角》，第3版（2011），第13章。</p>
+  <p class="rd">列宁，《帝国主义是资本主义的最高阶段》（1917），第四章和第七章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">J. A. 霍布森，《帝国主义》（1902），第一部分第6章。</p>
+  <p class="rd">约翰·加拉格尔、罗纳德·罗宾逊，“The Imperialism of Free Trade”，<em>Economic History Review</em>（1953）。</p>
+  <p><a href="index.html#topic-22">← 返回课程大纲中的专题22</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function ho() {
+  const ws = +$('ws').value/100, cc = +$('cc').value/100, I = +$('i').value;
+  $('wsv').textContent = Math.round(ws*100) + '%'; $('ccv').textContent = Math.round(cc*100) + '%'; $('iv').textContent = I;
+  const Cw = 100*ws, Cc = 100*(1 - ws)*cc, S = 100*(1 - ws)*(1 - cc), gap = Math.max(0, S - I), idle = Math.max(0, I - S);
+  const parts = [['工人消费', Cw, '#0077b6'], ['资本家消费', Cc, '#7b5ea7'], ['国内投资', Math.min(I, S), '#3f8f6b'], ['到国外寻找出路的剩余', gap, '#b03a2e']];
+  $('hosplit').innerHTML = parts.filter(p => p[1] > 0.5).map(([n, v, c]) => `<div style="width:${v}%;background:${c}" title="${n}: ${v.toFixed(0)}">${v >= 9 ? v.toFixed(0) : ''}</div>`).join('');
+  let msg = `工人购买<b>${Cw.toFixed(0)}</b>，资本家消费<b>${Cc.toFixed(0)}</b>；资本家想储蓄<b>${S.toFixed(0)}</b>，但国内只有${I}能够有利地投资。`;
+  if (gap > 0.5) msg += `于是有<b>${gap.toFixed(0)}</b>的产出（红色）在国内卖不出去。按照霍布森的论证，正是这部分剩余推动了资本输出和对外国市场的寻求，投资者则迫使国家去保障这些市场。试着提高工资份额：霍布森的药方是再分配，而不是帝国。`;
+  else msg += `国内需求吸收了全部产出${idle > 0.5 ? `，甚至还有比资本家储蓄多出${idle.toFixed(0)}的投资空间` : ''}。按照这样的收入分配，霍布森所说的帝国主义“根源”就消失了。`;
+  $('hoout').innerHTML = msg + ' <span class="note">色条从左到右依次为：工人消费、资本家消费、国内投资、剩余。</span>';
+}
+['ws','cc','i'].forEach(x => $(x).addEventListener('input', ho)); ho();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>赫克歇尔—俄林模型与收益的分配 | Lingyi Wei</title>
+  <meta name="description" content="关于赫克歇尔—俄林贸易理论的教学模块：要素禀赋、斯托尔珀—萨缪尔森定理（含互动模型）、要素价格均等化与雷布津斯基定理、里昂惕夫之谜，以及关于贸易与工资的争论。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/heckscher-ohlin.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../heckscher-ohlin.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题6</p>
+  <h1>赫克歇尔—俄林模型与收益的分配</h1>
+  <p class="lead">李嘉图把国家之间的技术差异当作给定的。两位瑞典经济学家提出了另一个问题：如果所有国家都能使用相同的技术，它们为什么还要贸易？他们的答案是要素禀赋的差异。这一答案在半个世纪里成为贸易理论的核心，并表明贸易在每个国家内部既制造赢家，也制造输家。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#swedes">瑞典学者的贡献</a></li><li><a href="#ho">赫克歇尔—俄林定理</a></li><li><a href="#ss">斯托尔珀—萨缪尔森定理：贸易与收入分配（互动）</a></li><li><a href="#fpe">要素价格均等化与雷布津斯基定理</a></li><li><a href="#leontief">里昂惕夫之谜</a></li><li><a href="#wages">富国的贸易与工资</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="swedes">1. 瑞典学者的贡献</h2>
+  <p>伊莱·赫克歇尔是一位经济史学家，以其对重商主义的研究（专题1）最为知名。他在1919年用瑞典文发表了一篇论文，题为《对外贸易对收入分配的影响》。他的学生贝蒂尔·俄林先是在博士论文中，后来又在《区际贸易与国际贸易》（1933）中发展了这一思想。俄林把国际贸易看作地区之间贸易的一个特例，每个地区拥有不同的土地、劳动和资本供给。他在1977年获得诺贝尔奖，主要就是因为这项工作。</p>
+  <p>俄林写作时正值贸易萎缩的年代。第一次世界大战、金本位的崩溃和1930年代初的关税战，打碎了十九世纪的世界经济。他的理论解释了贸易起初为什么会发展起来，以及贸易崩溃时失去了什么。</p>
+
+  <h2 id="ho">2. 赫克歇尔—俄林定理</h2>
+  <p>这一理论建立在两个概念之上。<b>要素丰裕度</b>：如果一个国家的劳动相对于资本比贸易伙伴更多，它就是劳动丰裕的，因此贸易前那里的劳动相对便宜。<b>要素密集度</b>：如果在任何给定的工资和租金下，生产一种商品所用的劳动相对于资本比另一种商品更多，它就是劳动密集型商品。</p>
+  <p>在各国技术相同的情况下，成本不同的唯一原因是要素价格不同。劳动丰裕的国家劳动便宜，因而能够廉价地生产劳动密集型商品。由此得出<b>赫克歇尔—俄林定理</b>：<em>一个国家出口密集使用其丰裕要素的商品，进口密集使用其稀缺要素的商品。</em>实际上，一个国家是在出口体现在商品中的丰裕要素。中国出口劳动密集型的服装和玩具；美国出口资本和技能密集型的飞机和软件；澳大利亚和阿根廷出口土地密集型的谷物和牛肉。</p>
+
+  <h2 id="ss">3. 斯托尔珀—萨缪尔森定理：贸易与收入分配</h2>
+  <p>赫克歇尔最初关心的是分配。如果一个国家出口使用其丰裕要素的商品，贸易就会增加对这种要素的需求，减少对稀缺要素的需求。沃尔夫冈·斯托尔珀和保罗·萨缪尔森在《保护与实际工资》（1941）中把这一点精确化了。<b>斯托尔珀—萨缪尔森定理</b>指出：一种商品相对价格的上升，会提高密集用于生产该商品的要素的实际报酬，并降低另一种要素的实际报酬，而且以<em>两种</em>商品衡量都是如此。</p>
+  <p>关键在于“两种”这个词。变化是被放大的：获益要素的收入增幅大于任何一种商品价格的涨幅，受损要素的收入降幅也大于任何一种价格的降幅，所以无论受损要素购买什么，它的处境都会变坏。应用到贸易上：自由贸易降低进口商品的价格，因此损害稀缺要素、有利于丰裕要素。在资本丰裕的富国，稀缺要素是劳动，更准确地说是技能较低的劳动。贸易使国家整体获益，所以赢家在原则上可以补偿输家，但没有什么能保证他们会这样做。</p>
+
+  <div class="box" id="ssbox">
+    <h3>斯托尔珀—萨缪尔森定理</h3>
+    <p class="note">一个富国用劳动和资本生产两种商品：劳动密集型的纺织品和资本密集型的机械。两个市场都是竞争性的，所以每种商品的价格等于它的生产成本。与一个劳动丰裕的国家开放贸易，会使纺织品相对于机械的价格下降。选择它下降多少，以及纺织品的劳动密集程度。</p>
+    <div class="grid2">
+      <div><label>纺织品相对于机械的价格变化：<b id="dpv">−20%</b></label><input type="range" id="dp" min="-40" max="40" step="1" value="-20"></div>
+      <div><label>劳动在纺织品成本中的份额：<b id="atv">70%</b>（机械：<b id="amv">30%</b>）</label><input type="range" id="at" min="55" max="90" step="1" value="70"></div>
+    </div>
+    <svg id="sschart" viewBox="0 0 640 230" width="100%" role="img" aria-label="价格、工资和资本收益的百分比变化"></svg>
+    <div class="out" id="ssout"></div>
+  </div>
+
+  <h2 id="fpe">4. 要素价格均等化与雷布津斯基定理</h2>
+  <p>萨缪尔森在两篇论文（1948年和1949年）中把这一理论推进了一步。如果贸易使商品价格均等化，而两国使用相同的技术、都生产两种商品，那么贸易也会使要素价格均等化。这就是<b>要素价格均等化定理</b>：商品的自由贸易可以替代劳动和资本的自由流动，同类劳动的工资在各地都会相同。俄林曾认为贸易只会部分地使要素价格均等化；萨缪尔森证明，在模型的严格假设下，均等化是完全的。现实中，各国的工资差异巨大，这说明现实世界离这些假设有多远：各国技术不同，许多商品不可贸易，各国生产的商品也不尽相同。</p>
+  <p>塔德乌什·雷布津斯基（1955）补充了配套的结论。在商品价格不变的情况下，一种要素的增加会提高密集使用该要素的商品的产量，并<em>减少</em>另一种商品的产量。因此，一个国家资本存量的增长会使它的经济转向资本密集型商品。赫克歇尔—俄林定理、斯托尔珀—萨缪尔森定理、要素价格均等化定理和雷布津斯基定理这四个定理，共同构成了从1950年代到1970年代主导贸易理论的“赫克歇尔—俄林—萨缪尔森”模型。</p>
+
+  <h2 id="leontief">5. 里昂惕夫之谜</h2>
+  <p>第一次严肃的检验来自瓦西里·里昂惕夫，他编制了美国经济的投入产出表。1953年，他计算了生产价值一百万美元的美国出口品和与美国进口品相竞争的商品各需要多少劳动和资本。美国无疑是世界上资本最丰裕的国家，所以它应当出口资本密集型商品。里昂惕夫的发现正好相反：美国进口竞争商品的人均资本高于美国出口品。这就是<b>里昂惕夫之谜</b>。</p>
+  <p>随后出现了许多解释：</p>
+  <ul>
+    <li><b>人力资本。</b>美国工人比外国工人更熟练。如果把技能算作一种资本，美国出口的是技能密集型商品，与理论相符（凯南、基辛）。</li>
+    <li><b>生产率。</b>里昂惕夫自己提出，一个美国工人的生产率大约是外国工人的三倍，所以按有效单位计算，美国是劳动丰裕的。</li>
+    <li><b>自然资源。</b>美国的许多进口品，例如矿产，是自然资源密集型的，而开采自然资源也需要大量资本。</li>
+    <li><b>贸易壁垒与需求。</b>美国的关税保护劳动密集型产业，而美国消费者对资本密集型商品有强烈的偏好。</li>
+  </ul>
+  <p>后来用多国多要素数据进行的检验发现，这一理论预测的贸易量远少于实际发生的贸易量，丹尼尔·特雷夫勒（1995）称之为“消失的贸易之谜”。考虑到各国之间的技术差异，预测就会接近数据得多。结论是：禀赋很重要，但李嘉图所说的技术差异也不能忽视。</p>
+
+  <h2 id="wages">6. 富国的贸易与工资</h2>
+  <p>1990年代，随着美国低技能工人工资停滞、不平等加剧，而来自发展中国家的进口不断增长，斯托尔珀—萨缪尔森定理重新回到争论的中心。阿德里安·伍德（1994）认为，与南方的贸易是北方对非熟练劳动需求下降的主要原因。包括保罗·克鲁格曼和罗伯特·劳伦斯在内的大多数经济学家则认为，贸易只能解释其中一小部分，技能偏向型技术进步的解释力更大。斯托尔珀—萨缪尔森机制要求非熟练劳动密集型商品的价格下降，而这方面的证据并不充分。2001年以后关于“中国冲击”的研究（专题8）重新开启了这场争论，研究发现，受中国进口冲击最大的地方劳动力市场遭受了巨大、集中而持久的损失。</p>
+  <div class="think"><b>思考题：</b>斯托尔珀—萨缪尔森定理说，自由贸易损害稀缺要素。在富国，稀缺要素是非熟练劳动。这对贸易政治意味着什么？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">贝蒂尔·俄林，《区际贸易与国际贸易》（1933），第1—2章。</p>
+  <p class="rd">沃尔夫冈·斯托尔珀、保罗·萨缪尔森，“Protection and Real Wages”，<em>Review of Economic Studies</em>（1941）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">瓦西里·里昂惕夫，“Domestic Production and Foreign Trade: The American Capital Position Re-examined”，<em>Proceedings of the American Philosophical Society</em>（1953）。</p>
+  <p class="rd">阿德里安·伍德，“How Trade Hurt Unskilled Workers”，<em>Journal of Economic Perspectives</em>（1995）。</p>
+  <p><a href="index.html#topic-6">← 返回课程大纲中的专题6</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Zero-profit conditions with Cobb–Douglas costs: p_T = w^aT r^(1-aT), p_M = w^aM r^(1-aM); p_M fixed at 1.
+function ss() {
+  const dp = +$('dp').value/100, aT = +$('at').value/100, aM = 1 - aT;
+  $('dpv').textContent = (dp > 0 ? '+' : dp < 0 ? '−' : '') + Math.abs(Math.round(dp*100)) + '%';
+  $('atv').textContent = Math.round(aT*100) + '%'; $('amv').textContent = Math.round(aM*100) + '%';
+  const lp = Math.log(1 + dp);
+  // aT lnw + (1-aT) lnr = lp ; aM lnw + (1-aM) lnr = 0
+  const det = aT*(1-aM) - (1-aT)*aM;
+  const lw = (lp*(1-aM)) / det, lr = (-aM*lp) / det;
+  const w = Math.exp(lw) - 1, r = Math.exp(lr) - 1, pT = dp, pM = 0;
+  const wT = Math.exp(lw - lp) - 1, wM = Math.exp(lw) - 1, rT = Math.exp(lr - lp) - 1, rM = Math.exp(lr) - 1;
+  const items = [['纺织品价格', pT, '#9aa3ad'], ['机械价格', pM, '#9aa3ad'], ['工资', w, '#c47a2c'], ['资本收益', r, '#023e8a']];
+  const W = 640, H = 230, L = 150, R = 60, mid = L + (W-L-R)/2, M = Math.max(0.1, ...items.map(i => Math.abs(i[1]))) * 1.1;
+  const X = v => mid + v/M*(W-L-R)/2;
+  let g = `<line x1="${mid}" x2="${mid}" y1="8" y2="${H-20}" stroke="#ccd2d8"/>`;
+  items.forEach(([n, v, c], i) => {
+    const y = 18 + i*50;
+    g += `<text x="${L-10}" y="${y+18}" text-anchor="end">${n}</text>`;
+    g += `<rect x="${Math.min(X(0), X(v))}" y="${y}" width="${Math.max(1, Math.abs(X(v)-X(0)))}" height="26" rx="4" fill="${c}"/>`;
+    const lab = (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v*100).toFixed(1) + '%';
+    g += `<text x="${v >= 0 ? X(v)+6 : X(v)-6}" y="${y+18}" text-anchor="${v >= 0 ? 'start' : 'end'}" style="fill:#1f2933;font-weight:600">${lab}</text>`;
+  });
+  $('sschart').innerHTML = g;
+  const pc = v => (v > 0 ? '上升' : '下降') + Math.abs(v*100).toFixed(1) + '%';
+  let msg;
+  if (Math.abs(dp) < 0.005) msg = '相对价格不变，工资和资本收益也都不变。';
+  else msg = `当纺织品价格${dp < 0 ? '下降' : '上升'}${Math.abs(dp*100).toFixed(0)}%时，工资${pc(w)}，资本收益${pc(r)}。` +
+    `变化被<b>放大</b>了：工资的变化幅度超过任何一种价格。以纺织品衡量，实际工资${pc(wT)}；以机械衡量，实际工资${pc(wM)}。` +
+    (w < 0 ? `<b>无论购买什么，工人的处境都变坏了</b>，而资本的实际收益以纺织品衡量上升${(rT*100).toFixed(1)}%，以机械衡量上升${(rM*100).toFixed(1)}%。` : `<b>无论购买什么，工人的处境都变好了</b>，而资本的实际收益以纺织品衡量下降${(-rT*100).toFixed(1)}%，以机械衡量下降${(-rM*100).toFixed(1)}%。`) +
+    `两个产业的要素密集度越接近，放大效应越大。`;
+  $('ssout').innerHTML = msg;
+}
+['dp','at'].forEach(i => $(i).addEventListener('input', ss)); ss();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

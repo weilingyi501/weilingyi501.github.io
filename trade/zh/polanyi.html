@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>波兰尼与双向运动 | Lingyi Wei</title>
+  <meta name="description" content="关于卡尔·波兰尼与世界经济的教学模块：《大转型》、嵌入性与虚构商品、作为市场社会支柱的自由贸易与金本位、双向运动（含互动时间线），以及1945年后的嵌入式自由主义。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/polanyi.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../polanyi.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">国际贸易理论</a> › 专题14</p>
+  <h1>波兰尼与双向运动</h1>
+  <p class="lead">卡尔·波兰尼在第二次世界大战期间写作，他认为他那个时代的灾难有一个共同的根源：十九世纪试图围绕一个自我调节的市场来组织社会，并在国际上以自由贸易和金本位把它维系在一起。他的《大转型》（1944）没有提出比较优势理论，却成了关于全球化政治的被引用最多的著作之一。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#life">波兰尼与他的时代</a></li><li><a href="#embed">嵌入性与虚构商品</a></li><li><a href="#gold">自由贸易与金本位</a></li><li><a href="#double">双向运动（互动）</a></li><li><a href="#embedded">嵌入式自由主义</a></li><li><a href="#today">今天的波兰尼</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="life">1. 波兰尼与他的时代</h2>
+  <p>卡尔·波兰尼1886年生于维也纳，在布达佩斯长大。1920年代，他在“红色维也纳”当记者，参与了与路德维希·冯·米塞斯关于社会主义经济核算是否可能的争论。随着法西斯主义的兴起，他被迫离开奥地利，先到英国从事工人教育，后来到美国佛蒙特州的本宁顿学院，在那里写成了《大转型》。战后他在哥伦比亚大学任教，并转向经济人类学，研究古代和非西方社会如何通过互惠和再分配而不是市场交换来组织经济。</p>
+
+  <h2 id="embed">2. 嵌入性与虚构商品</h2>
+  <p>波兰尼认为，在人类历史的大部分时间里，经济是<b>嵌入</b>在社会之中的。生产和分配受亲属关系、宗教、习俗和政治支配，市场即使存在，也是有限的、受管制的。只有在十九世纪的英国，才出现了建立<b>市场社会</b>的尝试：经济被抽离出来，社会本身反而被当作市场的附属品来运转。</p>
+  <p>这一尝试需要把三样并非为出售而生产的东西当作商品：劳动，即人类活动本身；土地，即自然；货币，即由银行和国家创造的购买力的标志。波兰尼称之为<b>虚构商品</b>。他认为，把它们的供给和价格完全交给市场，会毁掉依赖于它们的人、自然环境和企业：失业与赤贫、土地和社区的退化，以及信用和价格的剧烈波动将随之而来。</p>
+  <p>自我调节的市场并不是自发产生的。用波兰尼的话说，“自由放任是计划出来的”：它是由国家的有意行动创造出来的，例如1834年迫使工人进入劳动力市场的《济贫法》改革、1846年《谷物法》的废除，以及金本位的采用。</p>
+
+  <h2 id="gold">3. 自由贸易与金本位</h2>
+  <p>波兰尼认为，十九世纪文明建立在四种制度之上：大国之间的均势、国际金本位、自我调节的市场和自由主义国家。在国际上，自我调节的市场意味着自由贸易、资本的自由流动和金本位，后者把每个国家的货币供给与它的黄金储备挂钩。</p>
+  <p>金本位使国际市场成为国内政策的主宰。一个因贸易逆差而流失黄金的国家，必须紧缩信用，让物价和工资下降，直到它的出口恢复，这就是从承受通货紧缩的工人和农民的角度看到的休谟机制（专题1）。社会进行了抵抗。工人组织工会，要求工厂法和社会保险；农民要求关税；企业组成卡特尔；中央银行试图缓冲冲击。每一项保护措施都使市场体系更加僵硬、更难调整。1920和1930年代，第一次世界大战后恢复金本位的努力，把通货紧缩强加给了不再愿意接受它的社会。这一体系崩溃了，而在一些国家，法西斯主义以摧毁民主的方式提供了出路。</p>
+
+  <h2 id="double">4. 双向运动</h2>
+  <p>波兰尼把市场社会的历史描述为一场<b>双向运动</b>。一种运动扩展市场，推动把生活的更多部分变成商品，并消除对贸易和资本的壁垒。另一种是社会的保护性<b>反向运动</b>：各种政治色彩的群体以各种形式自发地作出反应，保护人、自然和生产组织免受市场的冲击。反向运动不是反对市场的阴谋，而是社会的自我保护。点击一个时期，看看这两种运动在世界经济中是如何展开的。</p>
+
+  <div class="box" id="dmbox">
+    <h3>世界经济中的双向运动</h3>
+    <p id="dmbtns"></p>
+    <div class="vs"><div><b>市场运动</b><span id="dmm"></span></div><div><b>保护性反向运动</b><span id="dmc"></span></div></div>
+    <p class="note" id="dmn"></p>
+  </div>
+
+  <h2 id="embedded">5. 嵌入式自由主义</h2>
+  <p>《大转型》出版的那一年，正是布雷顿森林会议召开的那一年。战后形成的秩序回应了波兰尼的许多关切，尽管并不完全如他所愿。约翰·杰拉德·鲁杰在1982年一篇影响很大的文章中称之为<b>嵌入式自由主义</b>。与十九世纪的自由主义不同，战后的妥协允许各国政府在贸易逐步自由化的同时追求充分就业、建设福利国家。关贸总协定分阶段降低关税，但允许保障措施、农业例外和免责条款。国际货币基金组织向逆差国提供信贷，使它们不必实行通货紧缩，并允许对资本流动实行管制。多边开放“嵌入”在国内的社会承诺之中。</p>
+  <p>1980年代以后，随着资本流动的自由化、世贸组织更深入的规则以及自由市场政策的推广，许多学者认为这一妥协已被一种新的、这一次是全球规模的抽离市场的尝试所取代。</p>
+
+  <h2 id="today">6. 今天的波兰尼</h2>
+  <p>1990年代以及2008年之后，读者们为了理解对全球化的反弹，重新发现了波兰尼的思想。丹尼·罗德里克对全球市场与民主政治之间紧张关系的分析（专题16）明确借鉴了波兰尼。马克·布莱斯等政治学家把2016年以来民粹主义运动的兴起解读为对超级全球化的反向运动。另一些人则警告说，波兰尼的框架可以被延伸来解释几乎任何政治反应，而且正如1930年代那样，反向运动既可以采取社会民主的形式，也可以采取民族主义和威权主义的形式。</p>
+  <div class="think"><b>思考题：</b>2016年以来对全球化的反弹，是一场波兰尼意义上的双向运动吗？</div>
+
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">卡尔·波兰尼，《大转型：我们时代的政治与经济起源》（1944），第1—2章和第19章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">约翰·杰拉德·鲁杰，“International Regimes, Transactions, and Change: Embedded Liberalism in the Postwar Economic Order”，<em>International Organization</em>（1982）。</p>
+  <p class="rd">弗雷德·布洛克、玛格丽特·萨默斯，<em>The Power of Market Fundamentalism: Karl Polanyi’s Critique</em>（2014），第1章。</p>
+  <p><a href="index.html#topic-14">← 返回课程大纲中的专题14</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const P = [
+  ['1834—1873', '英国建立市场社会：新《济贫法》（1834）、废除《谷物法》（1846）和《航海法》（1849）、金本位，以及《科布登—谢瓦利埃条约》（1860），随后欧洲掀起一波降低关税的浪潮。',
+   '工厂法限制工作时间；工人组织工会和合作社；宪章派要求政治权利。',
+   '市场在英国扩张最快，英国也最早经历了反向运动。'],
+  ['1873—1914', '铁路和轮船造就了世界粮食市场；资本大规模流向国外；金本位扩展到大多数主要国家。',
+   '廉价粮食和萧条带来农业和工业关税（德国1879年，法国1892年）；俾斯麦的社会保险；为保障市场而进行的殖民扩张。',
+   '波兰尼强调，保护主义和帝国主义本身也是反向运动的形式，与劳动立法无异。'],
+  ['1914—1945', '1918年以后恢复金本位和资本自由流动的努力，把通货紧缩强加给英国、德国等国。',
+   '《斯穆特—霍利关税法》（1930）和报复性关税、放弃金本位、外汇管制、罗斯福新政，以及德国和意大利的法西斯主义。',
+   '这正是波兰尼要解释的崩溃：市场体系瓦解，反向运动既采取了民主的形式，也采取了威权的形式。'],
+  ['1945—1980', '关贸总协定在历轮谈判中削减制成品关税；贸易增长快于产出；西欧组成共同市场。',
+   '资本管制、固定但可调整的汇率、福利国家、充分就业政策和对农业的保护。发展中国家推行进口替代。',
+   '鲁杰所说的“嵌入式自由主义”：开放之所以被接受，是因为有国内的社会保护作为缓冲。'],
+  ['1980—2008', '资本管制被取消；世贸组织（1995）深化了贸易规则；北美自由贸易协定等协定；中国加入世贸组织（2001）；全球价值链扩展。',
+   '西雅图反世贸组织抗议（1999）；反全球化运动；许多国家的工会和福利国家被削弱。',
+   '许多学者把这一时期描述为第二次抽离市场的尝试，这一次是在世界范围内。'],
+  ['2008年至今', '全球金融复苏；贸易保持在高水平，但其增长相对于产出放缓。',
+   '英国脱欧（2016）；美国对中国及其盟友加征关税（2018—2019年，2025年）；产业政策回归；左翼和右翼的民粹主义运动。',
+   '这是否是一场波兰尼式的反向运动，以及它将采取什么形式，是专题16的问题。'],
+];
+let cur = 0;
+function dm() {
+  $('dmbtns').innerHTML = P.map((p, i) => `<button type="button" class="btn${i === cur ? ' on' : ''}" data-i="${i}">${p[0]}</button>`).join('');
+  $('dmm').textContent = P[cur][1]; $('dmc').textContent = P[cur][2]; $('dmn').textContent = P[cur][3];
+  document.querySelectorAll('#dmbtns .btn').forEach(b => b.addEventListener('click', () => { cur = +b.dataset.i; dm(); }));
+}
+dm();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
