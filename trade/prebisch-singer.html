@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Structuralism and the Terms of Trade | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Latin American structuralism and trade: Raúl Prebisch and ECLA, center and periphery, the Prebisch–Singer hypothesis with an interactive model of the terms of trade, import-substituting industrialization, Celso Furtado, UNCTAD and the New International Economic Order, and the evidence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/prebisch-singer.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 18</p>
+  <h1>Structuralism and the Terms of Trade</h1>
+  <p class="lead">In 1950, two economists working at the United Nations challenged the idea that trade benefits all countries in the long run. Raúl Prebisch and Hans Singer argued that the prices of primary commodities tend to fall relative to the prices of manufactures, so that countries exporting raw materials transfer part of the gains from productivity growth to the industrial countries. Their thesis became the foundation of Latin American structuralism and of the developing countries’ demands for a fairer trading system.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#prebisch">Prebisch and ECLA</a></li><li><a href="#cp">Center and periphery</a></li><li><a href="#ps">The Prebisch–Singer hypothesis (interactive)</a></li><li><a href="#isi">Import-substituting industrialization</a></li><li><a href="#furtado">Furtado and structuralism</a></li><li><a href="#unctad">UNCTAD and the New International Economic Order</a></li><li><a href="#evidence">What the evidence shows</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="prebisch">1. Prebisch and ECLA</h2>
+  <p>Raúl Prebisch was an Argentine economist who, as the first general manager of Argentina’s central bank (1935–43), watched the Great Depression devastate an economy that lived by exporting beef and wheat. Export prices collapsed, foreign capital stopped flowing, and the country could not pay for imports. In 1949 he joined the new United Nations Economic Commission for Latin America (ECLA, known in Spanish as CEPAL), based in Santiago, Chile, and wrote its first major report, <em>The Economic Development of Latin America and Its Principal Problems</em> (1950). Albert Hirschman later called it the “ECLA manifesto.” Prebisch led ECLA until 1963 and made it the center of a distinctive Latin American school of economics.</p>
+
+  <h2 id="cp">2. Center and periphery</h2>
+  <p>Prebisch divided the world economy into an industrial <b>center</b>, where technical progress originated and spread rapidly, and a <b>periphery</b> that produced food and raw materials for the center. The international division of labor based on comparative advantage, he argued, assumed that the gains from technical progress would be shared through falling prices of manufactures. That had not happened. The structures of the two regions differed in ways that systematically channeled the gains to the center:</p>
+  <ul>
+    <li>In the center, organized workers and oligopolistic firms captured productivity gains as higher wages and profits, so prices of manufactures did not fall much.</li>
+    <li>In the periphery, a large reserve of underemployed labor in agriculture kept wages low, so productivity gains in exports showed up as lower prices.</li>
+    <li>In downturns, prices of primary commodities fell more than prices of manufactures, and in upswings recovered less.</li>
+    <li>As incomes rise, people spend a smaller share on food and basic raw materials (Engel’s law), while synthetic materials replace natural ones, so demand for the periphery’s exports grows more slowly than demand for the center’s.</li>
+  </ul>
+
+  <h2 id="ps">3. The Prebisch–Singer hypothesis</h2>
+  <p>Working independently at the United Nations in New York, Hans Singer, a German-born economist trained at Cambridge, reached a similar conclusion in “The Distribution of Gains between Investing and Borrowing Countries” (1950). Singer emphasized that foreign investment in the periphery was concentrated in export enclaves (mines and plantations) whose benefits flowed abroad, and that the periphery received the gains from technical progress neither as producers nor as consumers. Both relied on a 1949 United Nations study of British trade data showing that Britain’s terms of trade, the price of its exports relative to its imports, had improved from the 1870s to the 1930s, which implied that the terms of trade of primary producers had worsened.</p>
+  <p>The <b>Prebisch–Singer hypothesis</b> holds that the <b>terms of trade</b> of primary commodities relative to manufactures tend to decline over the long run. The policy conclusion was that peripheral countries should industrialize, not out of nationalist sentiment but because specializing according to static comparative advantage condemned them to a declining share of the gains from trade.</p>
+
+  <div class="box" id="psbox">
+    <h3>Why might the terms of trade of primary exports decline?</h3>
+    <p class="note">Productivity grows in both the center’s manufacturing and the periphery’s primary exports. If productivity gains are passed on as lower prices, prices fall; if they are kept as higher wages and profits, prices hold. Demand matters too: if world demand for primary goods grows more slowly than world income, their prices face further downward pressure. The chart shows the periphery’s terms of trade over 50 years, starting at 100.</p>
+    <div class="grid2">
+      <div><label>Productivity growth in the center’s manufacturing: <b id="acv">2.0%</b> a year</label><input type="range" id="ac" min="0" max="4" step="0.1" value="2"></div>
+      <div><label>Productivity growth in the periphery’s exports: <b id="apv">2.0%</b> a year</label><input type="range" id="ap" min="0" max="4" step="0.1" value="2"></div>
+      <div><label>Share of the center’s gains kept as higher wages and profits: <b id="kv">80%</b></label><input type="range" id="k" min="0" max="100" step="5" value="80"></div>
+      <div><label>Income elasticity of world demand for primary goods: <b id="ev">0.6</b></label><input type="range" id="e" min="0.3" max="1.2" step="0.05" value="0.6"></div>
+    </div>
+    <svg id="pschart" viewBox="0 0 640 240" width="100%" role="img" aria-label="Periphery’s terms of trade over 50 years"></svg>
+    <div class="out" id="psout"></div>
+  </div>
+
+  <h2 id="isi">4. Import-substituting industrialization</h2>
+  <p>ECLA’s policy answer was <b>import-substituting industrialization</b>: protecting domestic manufacturing so that Latin American countries could produce at home the manufactures they imported. Industrialization would absorb surplus labor, raise productivity, reduce dependence on volatile commodity exports, and allow the gains from technical progress to stay at home. ECLA also supported regional integration, such as the Latin American Free Trade Association (1960) and the Central American Common Market (1960), to give new industries a larger market.</p>
+  <p>Many Latin American countries had already turned to industry during the Depression and the Second World War, when imports were unavailable. After 1950, Brazil, Mexico, Argentina, and others built substantial industrial sectors, and growth in the region was relatively fast until 1980. But import substitution also produced high-cost industries that depended on protection, a bias against exports, and recurring shortages of foreign exchange, since new industries needed imported machinery and inputs. Prebisch himself warned in the 1960s against excessive protection and argued for promoting manufactured exports. The debt crisis of 1982 brought the strategy to an end in most of the region.</p>
+
+  <h2 id="furtado">5. Furtado and structuralism</h2>
+  <p>The Brazilian economist Celso Furtado, who worked at ECLA in its early years, gave structuralism a historical depth. His <em>Economic Growth of Brazil</em> (1959) traced how successive export cycles (sugar, gold, coffee) had shaped Brazil’s economy and society, leaving behind concentrated land ownership, a vast pool of low-wage labor, and a pattern of consumption copied from the center. Underdevelopment, Furtado argued, was not a stage that all countries pass through but a specific structure created by the way the periphery was incorporated into the world economy. Structuralists also developed theories of structural inflation, in which inflation in Latin America resulted from bottlenecks in food supply and foreign exchange rather than from excess money alone. Furtado served as Brazil’s first minister of planning (1962–63) and led the development agency for the poor Northeast before going into exile after the 1964 military coup.</p>
+
+  <h2 id="unctad">6. UNCTAD and the New International Economic Order</h2>
+  <p>In 1964 Prebisch became the first secretary-general of the new United Nations Conference on Trade and Development (UNCTAD). His report to the first conference, <em>Towards a New Trade Policy for Development</em>, called for international commodity agreements to stabilize prices, preferential access to rich-country markets for developing countries’ manufactures, and more aid. The Group of 77 developing countries formed around these demands. Some were partly realized: the Generalized System of Preferences (from 1971) gave lower tariffs to developing-country exports, and a few commodity agreements were negotiated. In 1974 the UN General Assembly adopted a Declaration on the Establishment of a <b>New International Economic Order</b>, calling for fairer commodity prices, control over natural resources, and reform of international institutions. The OPEC oil price rises of 1973–74 seemed to show what producers of a primary commodity could achieve by acting together, but the program largely collapsed with the debt crisis of the 1980s.</p>
+
+  <h2 id="evidence">7. What the evidence shows</h2>
+  <p>The hypothesis has been tested repeatedly. Enzo Grilli and Maw Cheng Yang (1988) built an index of primary commodity prices relative to manufactures from 1900 and found a decline of roughly half a percent a year. Later studies, using longer series and more careful statistical methods, generally confirm a long-run decline for many, but not all, commodities, interrupted by large swings and periodic breaks. The decline is far from smooth: commodity prices move in long “super-cycles,” and the boom driven by Chinese demand in the 2000s temporarily reversed the trend. Commodity prices are also much more volatile than prices of manufactures, which may matter as much for development as their trend.</p>
+  <p>The world has also changed. Many developing countries now export manufactures rather than raw materials, so the old division between an industrial center and a primary-producing periphery no longer holds. Some economists argue that the Prebisch–Singer pattern now applies to simple manufactures produced in many countries, whose prices have fallen relative to sophisticated goods and services. That argument leads to the analysis of global value chains (Topic 20).</p>
+  <div class="think"><b>Question to think about:</b> If the terms of trade of primary exporters decline, is the answer industrialization, commodity agreements, or something else?</div>
+
+  <h2 id="read">8. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Raúl Prebisch, <em>The Economic Development of Latin America and Its Principal Problems</em> (1950), chapters 1–2.</p>
+  <p class="rd">Hans Singer, “The Distribution of Gains between Investing and Borrowing Countries,” <em>American Economic Review</em> (1950).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">John Toye and Richard Toye, “The Origins and Interpretation of the Prebisch–Singer Thesis,” <em>History of Political Economy</em> (2003).</p>
+  <p class="rd">Celso Furtado, <em>The Economic Growth of Brazil</em> (1959), selections.</p>
+  <p><a href="index.html#topic-18">← Back to Topic 18 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const G = 0.03; // world income growth
+function ps() {
+  const ac = +$('ac').value/100, ap = +$('ap').value/100, k = +$('k').value/100, e = +$('e').value;
+  $('acv').textContent = (ac*100).toFixed(1) + '%'; $('apv').textContent = (ap*100).toFixed(1) + '%'; $('kv').textContent = Math.round(k*100) + '%'; $('ev').textContent = e.toFixed(2).replace(/0$/, '');
+  const pm = -(1 - k)*ac;               // manufactures price change: only gains not kept are passed on
+  const pp = -ap - 0.5*(1 - e)*G;       // primary price change: all gains passed on, plus demand pressure
+  const r = pp - pm;                    // terms-of-trade change per year
+  const N = 50, T = [];
+  for (let t = 0; t <= N; t++) T.push(100*Math.exp(r*t));
+  const W = 640, H = 240, L = 44, R = 20, Tp = 14, B = 34, lo = Math.min(40, ...T), hi = Math.max(120, ...T);
+  const X = t => L + t/N*(W-L-R), Y = v => H-B - (v - lo)/(hi - lo)*(H-B-Tp);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${Tp}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = Math.ceil(lo/20)*20; v <= hi; v += 20) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  [0,10,20,30,40,50].forEach(t => g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">years</text>`;
+  g += `<line x1="${L}" x2="${W-R}" y1="${Y(100)}" y2="${Y(100)}" stroke="#8a929b" stroke-dasharray="5 4"/>`;
+  g += `<path d="${T.map((v, t) => (t ? 'L' : 'M') + X(t).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ')}" fill="none" stroke="#b03a2e" stroke-width="2.6"/>`;
+  g += `<text x="${X(N)-4}" y="${Y(T[N]) + (T[N] < 100 ? 18 : -8)}" text-anchor="end" style="fill:#b03a2e;font-weight:600">${T[N].toFixed(0)}</text>`;
+  $('pschart').innerHTML = g;
+  const pct = v => (v >= 0 ? '+' : '−') + Math.abs(v*100).toFixed(2) + '%';
+  let msg = `Prices of manufactures change by <b>${pct(pm)}</b> a year and prices of primary exports by <b>${pct(pp)}</b>, so the periphery’s terms of trade change by <b>${pct(r)}</b> a year. After 50 years, a unit of primary exports buys <b>${(T[N]/100*100).toFixed(0)}%</b> as many manufactures as at the start. `;
+  if (r < -0.001 && k > 0.3) msg += `The periphery passes its productivity gains on to buyers as lower prices, while the center keeps ${Math.round(k*100)}% of its own as higher wages and profits. `;
+  if (k < 0.05 && Math.abs(ap - ac) < 0.001 && e >= 0.99) msg += 'With all gains passed on as lower prices in both regions and no demand bias, the terms of trade are stable, as classical theory expected.';
+  else if (r >= 0) msg += 'Here the terms of trade do not decline: the classical expectation that the gains from technical progress are shared through prices holds.';
+  else msg += 'This is the mechanism Prebisch and Singer described.';
+  $('psout').innerHTML = msg;
+}
+['ac','ap','k','e'].forEach(i => $(i).addEventListener('input', ps)); ps();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

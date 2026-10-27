@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Post-Keynesian Trade: Cumulative Causation and Thirlwall’s Law | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on post-Keynesian approaches to trade and growth: Myrdal’s cumulative causation, Kaldor’s growth laws and export-led growth, Thirlwall’s law of balance-of-payments-constrained growth with an interactive calculator, extensions, and the limits of export-led growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/thirlwall.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 19</p>
+  <h1>Post-Keynesian Trade: Cumulative Causation and Thirlwall’s Law</h1>
+  <p class="lead">Mainstream trade theory explains which goods a country exports. Post-Keynesian economists asked a different question: how does trade affect how fast a country can grow? Their answer turned on demand rather than supply. Regions and nations that win markets grow faster, become more productive, and win more markets, while those that lose fall further behind. And in the long run, a country cannot grow faster than its exports allow it to pay for its imports.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#myrdal">Myrdal and cumulative causation</a></li><li><a href="#kaldor">Kaldor’s growth laws</a></li><li><a href="#elg">Export-led growth</a></li><li><a href="#law">Thirlwall’s law (interactive)</a></li><li><a href="#ext">Extensions and debates</a></li><li><a href="#limits">The limits of export-led growth</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="myrdal">1. Myrdal and cumulative causation</h2>
+  <p>Gunnar Myrdal, the Swedish economist who later shared the Nobel Prize with Friedrich Hayek in 1974, set out the principle of <b>circular and cumulative causation</b> in <em>Economic Theory and Underdeveloped Regions</em> (1957). Standard theory assumed that markets tend toward equilibrium: if one region is richer, capital will flow to poorer regions where returns are higher, and labor will flow to richer ones, narrowing the gap. Myrdal argued that in reality the forces of the market tend to <em>widen</em> inequalities between regions and nations. A region that gains an initial advantage attracts capital, skilled workers, and trade, which raise its productivity and incomes further. The regions left behind suffer <b>backwash effects</b>: they lose their most enterprising people, their savings flow to the center, and their industries cannot compete. Expansion in the center may also generate <b>spread effects</b>, such as rising demand for the periphery’s products, but in poor countries these are usually weaker than the backwash. Trade, on this view, can reinforce inequality rather than reduce it, unless states intervene.</p>
+
+  <h2 id="kaldor">2. Kaldor’s growth laws</h2>
+  <p>Nicholas Kaldor, a Hungarian-born Cambridge economist and adviser to British Labour governments, gave cumulative causation an empirical form. In his inaugural lecture, <em>Causes of the Slow Rate of Economic Growth of the United Kingdom</em> (1966), he proposed what became known as <b>Kaldor’s growth laws</b>:</p>
+  <ul>
+    <li>The faster the growth of manufacturing output, the faster the growth of the whole economy. Manufacturing is the engine of growth.</li>
+    <li>The faster manufacturing output grows, the faster manufacturing productivity grows, because of increasing returns from specialization, learning, and new investment. This relationship, first found by P. J. Verdoorn (1949), is called <b>Verdoorn’s law</b>.</li>
+    <li>The faster manufacturing grows, the faster productivity rises in the rest of the economy, as labor moves out of low-productivity activities.</li>
+  </ul>
+  <p>Since productivity growth depends on output growth, the key question becomes what determines the growth of demand for manufactures. For a mature open economy, Kaldor answered: exports.</p>
+
+  <h2 id="elg">3. Export-led growth</h2>
+  <p>In “The Case for Regional Policies” (1970), Kaldor argued that the growth of a region is governed by the growth of demand for its exports. Fast export growth raises output, which, through Verdoorn’s law, raises productivity, which makes exports more competitive, which raises export growth further. Robert Dixon and Anthony Thirlwall (1975) formalized this <b>cumulative export-led growth</b> model. Once a region or country establishes a growth advantage, it tends to keep it. This is the same logic as Krugman’s later model of core and periphery (Topic 7), reached by a different route. It also helps explain why, in this tradition, the composition of exports matters: goods whose world demand grows fast, and whose production enjoys strong increasing returns, offer better prospects than others, an echo of Prebisch and Singer (Topic 18).</p>
+
+  <h2 id="law">4. Thirlwall’s law</h2>
+  <p>In 1979 Anthony Thirlwall published a short paper, “The Balance of Payments Constraint as an Explanation of International Growth Rate Differences,” which became one of the most tested results in post-Keynesian economics. His argument starts from a simple fact: in the long run, a country cannot run ever-larger trade deficits, because it cannot finance them indefinitely. Its imports must grow roughly in line with its exports.</p>
+  <p>Suppose relative prices do not change much over the long run, so that trade responds mainly to income. Exports grow with world income, at a rate set by the <b>income elasticity of demand for exports</b>, ε. Imports grow with domestic income, at a rate set by the <b>income elasticity of demand for imports</b>, π. If exports and imports must grow at the same rate, the fastest rate at which the economy can grow without a growing deficit is</p>
+  <p class="eq">y<sub>B</sub> = x / π = ε × z / π</p>
+  <p>where x is the growth of exports and z is the growth of world income. This is <b>Thirlwall’s law</b>. A country whose exports are in high demand as the world grows richer (high ε), and whose residents do not spend much of each extra unit of income on imports (low π), can grow fast. A country with the opposite characteristics will hit a <b>balance-of-payments constraint</b>: when it tries to grow faster, imports surge, the deficit widens, and it must slow down, long before it reaches full employment or the limits of its productive capacity. The income elasticities reflect the non-price characteristics of a country’s goods, such as quality, technology, and design, and so ultimately the structure of its economy.</p>
+
+  <div class="box" id="tlbox">
+    <h3>The balance-of-payments-constrained growth rate</h3>
+    <div class="grid2">
+      <div><label>Growth of world income, z: <b id="zv">3.0%</b></label><input type="range" id="z" min="0.5" max="6" step="0.1" value="3"></div>
+      <div><label>Income elasticity of demand for exports, ε: <b id="epv">1.5</b></label><input type="range" id="ep" min="0.3" max="3" step="0.1" value="1.5"></div>
+      <div><label>Income elasticity of demand for imports, π: <b id="piv">2.0</b></label><input type="range" id="pi" min="0.5" max="3.5" step="0.1" value="2"></div>
+      <div><label>Growth the country is trying to achieve: <b id="tgv">4.0%</b></label><input type="range" id="tg" min="0" max="8" step="0.1" value="4"></div>
+    </div>
+    <svg id="tlchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Exports and imports over time at the target growth rate"></svg>
+    <div class="out" id="tlout"></div>
+  </div>
+
+  <h2 id="ext">5. Extensions and debates</h2>
+  <ul>
+    <li><b>Capital flows.</b> Thirlwall and Mohammed Nureldin Hussain (1982) extended the law to allow for capital inflows, which let a country grow faster for a time. Later work added the requirement that foreign debt stay at a sustainable ratio to income, which brings back a constraint very close to the original law.</li>
+    <li><b>Many sectors.</b> Ricardo Araujo and Gilberto Lima (2007) showed that a country’s income elasticities are weighted averages of the elasticities of the goods it trades, so structural change toward goods with high world demand can relax the constraint. This links Thirlwall’s law directly to industrial policy.</li>
+    <li><b>Testing.</b> Many studies have found that growth rates predicted by the law come close to actual long-run growth for a wide range of countries. Critics such as John McCombie, a collaborator of Thirlwall’s, have discussed whether these tests can distinguish the law from an identity.</li>
+    <li><b>Which way does causation run?</b> Paul Krugman (1989) noticed the same empirical regularity, which he called the 45-degree rule, but interpreted it the other way around: fast-growing countries expand the range of goods they produce, which raises the measured income elasticity of demand for their exports. On this view, growth determines elasticities, not the reverse.</li>
+  </ul>
+
+  <h2 id="limits">6. The limits of export-led growth</h2>
+  <p>If growth is constrained by the balance of payments, export success is the key to fast growth. But not every country can raise its exports faster than its imports at the same time; one country’s surplus is another’s deficit. This is the <b>fallacy of composition</b> in export-led growth, which Keynes had identified in the beggar-my-neighbour policies of the 1930s (Topic 17). If many developing countries pursue export-led strategies at once, they may flood world markets for the same products, depress their prices, and meet protection in rich countries. Post-Keynesians therefore emphasize policies that raise demand globally and that let deficit countries grow without being forced into austerity, as well as industrial policies that shift a country’s production toward goods with better demand prospects.</p>
+  <div class="think"><b>Question to think about:</b> If growth is constrained by the balance of payments, what can a country do to relax the constraint?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Anthony Thirlwall, “The Balance of Payments Constraint as an Explanation of International Growth Rate Differences,” <em>Banca Nazionale del Lavoro Quarterly Review</em> (1979).</p>
+  <p class="rd">Gunnar Myrdal, <em>Economic Theory and Underdeveloped Regions</em> (1957), chapter 3.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought</em>, 3rd ed. (2011), chapter 18.</p>
+  <p class="rd">Nicholas Kaldor, “The Case for Regional Policies,” <em>Scottish Journal of Political Economy</em> (1970).</p>
+  <p><a href="index.html#topic-19">← Back to Topic 19 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function tl() {
+  const z = +$('z').value/100, ep = +$('ep').value, pi = +$('pi').value, tg = +$('tg').value/100;
+  $('zv').textContent = (z*100).toFixed(1) + '%'; $('epv').textContent = ep.toFixed(1); $('piv').textContent = pi.toFixed(1); $('tgv').textContent = (tg*100).toFixed(1) + '%';
+  const x = ep*z, yB = x/pi, m = pi*tg;
+  const N = 20, X0 = [], M0 = [];
+  for (let t = 0; t <= N; t++) { X0.push(100*Math.pow(1 + x, t)); M0.push(100*Math.pow(1 + m, t)); }
+  const W = 640, H = 230, L = 44, R = 20, T = 14, B = 34, hi = Math.max(...X0, ...M0)*1.05;
+  const Xs = t => L + t/N*(W-L-R), Y = v => H-B - (v - 80)/(hi - 80)*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  const step = hi > 400 ? 100 : 50;
+  for (let v = 100; v <= hi; v += step) g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  [0,5,10,15,20].forEach(t => g += `<text x="${Xs(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">years</text>`;
+  const path = a => a.map((v, t) => (t ? 'L' : 'M') + Xs(t).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ');
+  if (M0[N] > X0[N]) g += `<path d="${path(X0)} L${[...M0].reverse().map((v, i) => Xs(N - i).toFixed(1) + ',' + Y(v).toFixed(1)).join(' L')} Z" fill="#c0392b" opacity=".15"/>`;
+  g += `<path d="${path(X0)}" fill="none" stroke="#023e8a" stroke-width="2.4"/><path d="${path(M0)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/>`;
+  g += `<text x="${Xs(N)-4}" y="${Y(X0[N]) + (X0[N] >= M0[N] ? -8 : 16)}" text-anchor="end" style="fill:#023e8a">exports</text><text x="${Xs(N)-4}" y="${Y(M0[N]) + (M0[N] > X0[N] ? -8 : 16)}" text-anchor="end" style="fill:#c47a2c">imports at target growth</text>`;
+  $('tlchart').innerHTML = g;
+  const p = v => (v*100).toFixed(1) + '%';
+  let msg = `Exports grow at ε × z = <b>${p(x)}</b> a year. The balance-of-payments-constrained growth rate is x / π = <b>${p(yB)}</b>. `;
+  if (tg > yB + 0.0005) msg += `Growing at ${p(tg)} would make imports grow at π × ${p(tg)} = ${p(m)}, faster than exports. The trade deficit would widen year after year (shaded), so the country must eventually slow down to ${p(yB)}, or find ways to raise ε or lower π.`;
+  else if (tg < yB - 0.0005) msg += `Growing at only ${p(tg)}, imports grow at ${p(m)}, slower than exports, so the country runs a growing surplus. It could grow faster, up to ${p(yB)}, without running into a payments constraint.`;
+  else msg += 'The target growth rate equals the constrained rate: imports and exports grow together.';
+  $('tlout').innerHTML = msg;
+}
+['z','ep','pi','tg'].forEach(i => $(i).addEventListener('input', tl)); tl();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

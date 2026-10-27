@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Neo-Structuralism and Global Value Chains | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on neo-structuralism and global value chains: ECLAC’s changing production patterns with social equity, from commodity chains to global value chains, chain governance, upgrading and the smile curve with an interactive diagram, economic complexity, and who captures value in a fragmented world economy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/value-chains.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 20</p>
+  <h1>Neo-Structuralism and Global Value Chains</h1>
+  <p class="lead">After the debt crisis of the 1980s, Latin American structuralists accepted that their economies would be open to trade, but insisted that openness alone would not transform them. At the same time, production was being split across countries into global value chains. This topic follows both developments and the question that joins them: in a world where goods are made everywhere, which countries capture the value?</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#neo">From structuralism to neo-structuralism</a></li><li><a href="#chains">From commodity chains to global value chains</a></li><li><a href="#gov">Governance of value chains</a></li><li><a href="#smile">Upgrading and the smile curve (interactive)</a></li><li><a href="#complex">Diversification and economic complexity</a></li><li><a href="#capture">Who captures the value?</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="neo">1. From structuralism to neo-structuralism</h2>
+  <p>The debt crisis of 1982 ended the era of import substitution in Latin America (Topic 18). Under pressure from creditors and the IMF, most countries cut tariffs, privatized state enterprises, and opened to foreign capital, the program later called the Washington Consensus. Growth in the 1980s, Latin America’s “lost decade,” and much of the 1990s was disappointing.</p>
+  <p>ECLAC (the commission had added the Caribbean to its name in 1984) responded with a new program. Its report <em>Changing Production Patterns with Social Equity</em> (1990), largely the work of the Chilean economist Fernando Fajnzylber, accepted openness to trade and macroeconomic stability. But it argued that competitiveness in world markets should rest on rising productivity and the incorporation of technical progress, which Fajnzylber called <b>authentic competitiveness</b>, rather than on low wages, currency devaluation, and the depletion of natural resources, which he called <b>spurious competitiveness</b>. Fajnzylber also pointed to an “empty box”: not a single Latin American country had achieved both fast growth and reduced inequality. <b>Neo-structuralism</b>, developed by Fajnzylber, Osvaldo Sunkel, José Antonio Ocampo, and others, kept the structuralist focus on productive structure, technology, and the external constraint (Topic 19), while abandoning blanket protection in favor of policies to diversify exports, build technological capabilities, and spread the gains more widely.</p>
+
+  <h2 id="chains">2. From commodity chains to global value chains</h2>
+  <p>The idea of tracing a product through every stage of production came from world-systems analysis (Topic 25). Terence Hopkins and Immanuel Wallerstein (1986) defined a <b>commodity chain</b> as the network of labor and production processes whose end result is a finished commodity, and used it to show how the world-economy distributes surplus among core and periphery. The sociologist Gary Gereffi adapted the concept in the 1990s to study how firms organize global production. In <em>Commodity Chains and Global Capitalism</em> (1994), edited with Miguel Korzeniewicz, he distinguished:</p>
+  <ul>
+    <li><b>Producer-driven chains</b>, such as automobiles, aircraft, and machinery, coordinated by large manufacturers that control technology and production networks.</li>
+    <li><b>Buyer-driven chains</b>, such as clothing, footwear, and toys, coordinated by large retailers and brand-name companies, such as Walmart or Nike, that design and market products but own no factories.</li>
+  </ul>
+  <p>By the 2000s, the term <b>global value chain</b> had replaced commodity chain. Trade in parts and components grew faster than trade in finished goods, and economists began to measure trade in value added rather than gross exports. The OECD–WTO Trade in Value Added database (2013) showed, for example, that a large part of the value of China’s exports of electronics consisted of imported components.</p>
+
+  <h2 id="gov">3. Governance of value chains</h2>
+  <p>Gary Gereffi, John Humphrey, and Timothy Sturgeon (2005) proposed five types of governance, depending on how complex the information exchanged between firms is, how easily it can be codified, and how capable suppliers are:</p>
+  <table>
+    <tr><th>Type</th><th>Description</th><th>Power of lead firm</th></tr>
+    <tr><td>Market</td><td>Simple products, arm’s-length transactions, price as the main signal</td><td>Low</td></tr>
+    <tr><td>Modular</td><td>Suppliers make products to a customer’s specification, using codified standards</td><td rowspan="3">Rising ↓</td></tr>
+    <tr><td>Relational</td><td>Complex, tacit information; mutual dependence built on trust and repeated interaction</td></tr>
+    <tr><td>Captive</td><td>Small suppliers depend on a dominant buyer that closely monitors them</td></tr>
+    <tr><td>Hierarchy</td><td>Production within a single multinational firm</td><td>High</td></tr>
+  </table>
+  <p>For a developing country, the type of governance matters because it shapes whether local firms can learn, and whether the lead firm will help them or block them from moving into more valuable activities.</p>
+
+  <h2 id="smile">4. Upgrading and the smile curve</h2>
+  <p>John Humphrey and Hubert Schmitz (2002) identified four kinds of <b>upgrading</b> in value chains: <b>process</b> upgrading (producing more efficiently), <b>product</b> upgrading (moving into more sophisticated products), <b>functional</b> upgrading (taking on new functions, such as design or marketing, that add more value), and <b>chain</b> upgrading (moving into a different, more valuable chain). Firms in captive chains often find process and product upgrading encouraged but functional upgrading resisted.</p>
+  <p>Stan Shih, founder of the Taiwanese computer company Acer, illustrated the stakes in the early 1990s with the <b>smile curve</b>. Value added is high at the beginning of the chain (research, design, key components) and at the end (branding, marketing, services), and low in the middle (manufacturing and assembly). Many observers argue that the smile has deepened since the 1970s, as manufacturing was dispersed to many low-wage locations while knowledge-intensive activities stayed concentrated. Click a stage to see what a country specializing in it would capture.</p>
+
+  <div class="box" id="smbox">
+    <h3>The smile curve (illustrative)</h3>
+    <p><button type="button" class="btn" data-era="0">1970s</button><button type="button" class="btn on" data-era="1">2000s and after</button></p>
+    <svg id="smchart" viewBox="0 0 640 280" width="100%" role="img" aria-label="Value added at each stage of a value chain"></svg>
+    <div class="out" id="smout"></div>
+    <p class="note">The numbers are illustrative shares of the final value of a consumer electronics product, chosen to show the shape described in the literature, not measurements.</p>
+  </div>
+
+  <h2 id="complex">5. Diversification and economic complexity</h2>
+  <p>A related line of research asks not which stage a country occupies but what range of products it can make. Ricardo Hausmann, César Hidalgo, and their colleagues argued that countries grow by accumulating productive capabilities, which they measure indirectly by the diversity and sophistication of the products a country exports. Their <b>economic complexity</b> index, published in <em>The Atlas of Economic Complexity</em> (2011), predicts future growth better than many standard variables. Because capabilities are hard to acquire, countries tend to move into products “close” to the ones they already make. The policy implication, which fits both neo-structuralism and Lin’s new structural economics (Topic 12), is that diversification is a central goal of development policy, and that the products a country exports matter for its future, as structuralists had always argued.</p>
+
+  <h2 id="capture">6. Who captures the value?</h2>
+  <p>Value chains allowed many developing countries, above all in East Asia, to industrialize by joining a chain rather than building a whole industry. Critics point to the other side. In a widely cited study of Apple’s products, Kenneth Kraemer, Greg Linden, and Jason Dedrick (2011) estimated that only a small fraction of the iPhone’s retail price went to Chinese assembly labor, while Apple’s own profits took the largest share. William Milberg and Deborah Winkler (2013) argued that lead firms used global outsourcing to raise their markups and returns to shareholders, while labor’s share of income fell in both rich and developing countries. Countries that enter chains at the bottom risk being locked into low-value assembly, competing with one another on wages, a modern version of the problem Prebisch identified for primary commodities. The question for policy is how to move up the smile curve before wages rise and assembly moves elsewhere, and whether the governance of the chain allows it.</p>
+  <div class="think"><b>Question to think about:</b> In a world of value chains, does it still matter which goods a country exports, or only which tasks it performs?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Gary Gereffi, <em>Global Value Chains and Development: Redefining the Contours of 21st Century Capitalism</em> (2018), chapter 1.</p>
+  <p class="rd">ECLAC, <em>Changing Production Patterns with Social Equity</em> (1990), summary.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">José Antonio Ocampo, “The Quest for Dynamic Efficiency: Structural Dynamics and Economic Growth in Developing Countries,” in <em>Beyond Reforms</em>, ed. Ocampo (2005).</p>
+  <p class="rd">John Humphrey and Hubert Schmitz, “How Does Insertion in Global Value Chains Affect Upgrading in Industrial Clusters?” <em>Regional Studies</em> (2002).</p>
+  <p><a href="index.html#topic-20">← Back to Topic 20 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const S = ['Research and development', 'Design', 'Key components', 'Manufacturing', 'Assembly', 'Logistics and distribution', 'Marketing and branding', 'After-sales services'];
+const V = [[14, 13, 14, 16, 13, 10, 11, 9], [19, 16, 15, 5, 3, 9, 20, 13]];
+let era = 1, sel = 4;
+function smile() {
+  document.querySelectorAll('#smbox .btn').forEach(b => b.classList.toggle('on', +b.dataset.era === era));
+  const v = V[era], W = 640, H = 280, L = 40, R = 20, T = 20, B = 70, n = S.length;
+  const X = i => L + (i + 0.5)/n*(W-L-R), Y = p => H-B - p/24*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,5,10,15,20].forEach(p => g += `<text x="${L-6}" y="${Y(p)+4}" text-anchor="end">${p}%</text>`);
+  const other = V[1 - era];
+  g += `<path d="${other.map((p, i) => (i ? 'L' : 'M') + X(i) + ',' + Y(p)).join(' ')}" fill="none" stroke="#ccd2d8" stroke-width="2" stroke-dasharray="5 4"/>`;
+  let d = `M${X(0)},${Y(v[0])}`; for (let i = 1; i < n; i++) { const xm = (X(i-1) + X(i))/2; d += ` C${xm},${Y(v[i-1])} ${xm},${Y(v[i])} ${X(i)},${Y(v[i])}`; }
+  g += `<path d="${d}" fill="none" stroke="#023e8a" stroke-width="3"/>`;
+  S.forEach((s, i) => {
+    g += `<g class="st" data-i="${i}" style="cursor:pointer" tabindex="0" role="button"><circle cx="${X(i)}" cy="${Y(v[i])}" r="${i === sel ? 10 : 7}" fill="${i === sel ? '#c47a2c' : '#fff'}" stroke="${i === sel ? '#c47a2c' : '#023e8a'}" stroke-width="2.5"/>`;
+    const words = s.split(' '); const lines = words.length > 2 ? [words.slice(0, 2).join(' '), words.slice(2).join(' ')] : words.length === 2 && s.length > 12 ? words : [s];
+    lines.forEach((ln, j) => g += `<text x="${X(i)}" y="${H-B+18+j*14}" text-anchor="middle" style="fill:${i === sel ? '#c47a2c' : '#5b6670'};${i === sel ? 'font-weight:600' : ''}">${ln}</text>`);
+    g += `</g>`;
+  });
+  g += `<text x="${W-R}" y="${T}" text-anchor="end">dashed: ${era ? '1970s' : '2000s'}</text>`;
+  $('smchart').innerHTML = g;
+  document.querySelectorAll('#smchart .st').forEach(el => {
+    const act = () => { sel = +el.dataset.i; smile(); };
+    el.addEventListener('click', act); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  const mid = sel >= 3 && sel <= 4, ch = V[1][sel] - V[0][sel];
+  const when = era ? `in the 2000s${ch ? `, ${ch > 0 ? 'up' : 'down'} from ${V[0][sel]}% in the 1970s` : ''}` : 'in the 1970s';
+  $('smout').innerHTML = `A country specializing in <b>${S[sel].toLowerCase()}</b> captures about <b>${v[sel]}%</b> of the product’s final value ${when}. ` +
+    (mid ? 'This is the bottom of the smile: production that many countries can do, where competition among locations keeps margins thin. Upgrading means moving toward either end.' : 'This activity depends on knowledge, brands, or control of customers, which are hard to copy, so it keeps a larger share of the value.');
+}
+document.querySelectorAll('#smbox .btn').forEach(b => b.addEventListener('click', () => { era = +b.dataset.era; smile(); }));
+smile();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

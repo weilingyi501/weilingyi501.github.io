@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Keynes on Trade and Imbalances | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Keynes and international trade: from free trader to critic, beggar-my-neighbour policies in the Depression, National Self-Sufficiency, the mercantilists reconsidered, the International Clearing Union with an interactive simulator, Bretton Woods, and global imbalances today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/keynes-trade.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 17</p>
+  <h1>Keynes on Trade and Imbalances</h1>
+  <p class="lead">Classical trade theory assumed full employment: workers who lost their jobs to imports would find new ones in export industries. The Great Depression destroyed that assumption. John Maynard Keynes, raised as a free trader, came to argue that trade surpluses and deficits affect employment, that countries can export their unemployment, and that a sound international system must make surplus countries adjust as well as deficit countries.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#free">From free trader to critic</a></li><li><a href="#beggar">Exporting unemployment</a></li><li><a href="#ns">National self-sufficiency</a></li><li><a href="#merc">The mercantilists reconsidered</a></li><li><a href="#icu">The International Clearing Union (interactive)</a></li><li><a href="#bw">Bretton Woods and after</a></li><li><a href="#today">Global imbalances today</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="free">1. From free trader to critic</h2>
+  <p>Like most British economists of his generation, Keynes grew up a convinced free trader. In 1923, when the Conservative Party proposed tariffs to reduce unemployment, he argued that protection could not cure unemployment, which was a monetary problem. By the end of the decade he had changed his mind. Britain had returned to the gold standard in 1925 at the prewar parity, which Keynes had opposed; its exports were overpriced, unemployment stayed above one million, and the government would not devalue or expand spending. In 1930–31, on the Macmillan Committee and the Economic Advisory Council, Keynes proposed a revenue tariff on imports. Under the gold standard, a tariff was a way to reduce imports and raise employment when the exchange rate could not move.</p>
+  <p>Britain left the gold standard in September 1931 and adopted a general tariff in 1932, ending eighty-six years of free trade. Other countries had already raised their tariffs, most notoriously the United States with the Smoot–Hawley tariff of 1930. Between 1929 and 1933 the value of world trade fell by about two-thirds.</p>
+
+  <h2 id="beggar">2. Exporting unemployment</h2>
+  <p>In a Keynesian economy, output is determined by effective demand, and net exports are part of demand. A country that increases its trade surplus, by raising tariffs, cutting wages, or devaluing its currency, raises its own output and employment. But one country’s surplus is another’s deficit. In a world depression, such policies merely shift unemployment from one country to another. Joan Robinson called them <b>beggar-my-neighbour</b> remedies, after a card game in which one player wins all the cards of the other. If every country pursues them, through retaliatory tariffs and competitive devaluations, world trade shrinks and no one gains. This was the experience of the early 1930s.</p>
+  <p>The Keynesian alternative was to raise domestic demand directly, through public spending and low interest rates, so that every country could expand at once. But a country that expanded alone would see its imports rise and its trade balance worsen. The international system had to be designed so that expansion was not punished.</p>
+
+  <h2 id="ns">3. National self-sufficiency</h2>
+  <p>In an essay of 1933, “National Self-Sufficiency,” Keynes went further. He no longer believed that the economic gains from the international division of labor were large enough to outweigh other considerations. Most modern manufacturing, he thought, could be carried out about as efficiently in most countries. Meanwhile, economic entanglement brought political dangers, and the free movement of capital tied each country’s interest rate and economic policy to the world’s financial markets. Ideas, knowledge, art, and travel should be international, Keynes wrote; but he would “let goods be homespun” wherever reasonably possible, and above all keep finance primarily national. Each country, he argued, needed the freedom to make its own experiments in economic organization. The essay should be read in its time, when the world economy was disintegrating, rather than as a general rule.</p>
+
+  <h2 id="merc">4. The mercantilists reconsidered</h2>
+  <p>In chapter 23 of <em>The General Theory</em> (1936), “Notes on Mercantilism,” Keynes argued that the mercantilists (Topic 1) had grasped a truth that classical economists had lost. In an economy where the domestic rate of interest depends on the quantity of money, and the quantity of money depends on the inflow of precious metals, a favorable balance of trade lowers the rate of interest and raises investment and employment. The mercantilists’ concern with the balance of trade was therefore not simply a confusion of money with wealth. Keynes added that what was rational for one country was dangerous for all: the attempt by each nation to gain a surplus at the expense of others led to the competitive struggle for markets that had so often ended in war.</p>
+
+  <h2 id="icu">5. The International Clearing Union</h2>
+  <p>During the Second World War, Keynes led Britain’s planning for the postwar monetary order. His proposal for an <b>International Clearing Union</b> (1941–43) aimed to give the world economy the expansionary bias it lacked. Countries would settle their international payments through accounts at the Clearing Union, denominated in a new international unit, the <b>bancor</b>. Each country would have a quota based on its share of world trade. Deficit countries could run overdrafts up to their quota, so they would not be forced into immediate deflation. The key innovation was <b>symmetry</b>. Under the gold standard, deficit countries had to adjust by losing gold and deflating, while surplus countries faced no pressure. Under Keynes’s plan, surplus countries would also pay charges on large credit balances and be required to take steps to reduce them, by expanding demand, revaluing their currencies, lowering tariffs, or lending abroad. Balances still in excess at the end of the year would, in the last resort, be transferred to a reserve fund.</p>
+
+  <div class="box" id="icubox">
+    <h3>A simplified Clearing Union</h3>
+    <p class="note">Two countries each have a quota of 100 bancor. One runs a persistent trade surplus and the other a matching deficit. In Keynes’s plan, a country pays a charge of 1% a year on the part of its balance, credit or debit, above a quarter of its quota, and a further 1% on the part above half. Once a balance passes half the quota, the country must take corrective measures. Compare the Clearing Union with the gold standard, where only the deficit country is pressed.</p>
+    <div class="grid2">
+      <div><label>Annual surplus of the surplus country (bancor): <b id="sv">15</b></label><input type="range" id="s" min="0" max="40" step="1" value="15"></div>
+      <div><label>Years: <b id="yv">5</b></label><input type="range" id="y" min="1" max="10" step="1" value="5"></div>
+    </div>
+    <p><button type="button" class="btn on" data-m="icu">Clearing Union</button><button type="button" class="btn" data-m="gold">Gold standard</button></p>
+    <svg id="icuchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="Accumulated balances of the surplus and deficit countries against their quotas"></svg>
+    <div class="out" id="icuout"></div>
+  </div>
+
+  <h2 id="bw">6. Bretton Woods and after</h2>
+  <p>The United States, which expected to be the world’s great surplus country, rejected the Clearing Union. Its own plan, drawn up by Harry Dexter White, prevailed at the Bretton Woods conference of 1944. The International Monetary Fund had much smaller resources than Keynes’s Clearing Union, lent to deficit countries on conditions, and put almost no pressure on surplus countries. The one concession to symmetry was the “scarce currency” clause, which allowed members to restrict imports from a country whose currency the Fund declared scarce. It was never used. The pressure to adjust continued to fall on deficit countries, often through austerity imposed as a condition of IMF loans.</p>
+  <p>Keynes did win other points. The Bretton Woods agreement allowed countries to control capital movements, and exchange rates, though fixed, could be adjusted in cases of “fundamental disequilibrium.” Postwar Western economies maintained full employment while tariffs came down in successive GATT rounds, the system that Ruggie called embedded liberalism (Topic 14).</p>
+
+  <h2 id="today">7. Global imbalances today</h2>
+  <p>The question Keynes raised returned in the 2000s. Large and persistent surpluses in China, Germany, Japan, and the oil exporters were matched by large deficits in the United States, Britain, and southern Europe. Ben Bernanke (2005) attributed the U.S. deficit to a “global saving glut” in surplus countries. In the euro area after 2010, deficit countries such as Greece, Spain, and Portugal were forced into deep austerity while Germany’s surplus continued to grow, a pattern that echoed the asymmetry Keynes had tried to prevent. Matthew Klein and Michael Pettis (2020) argued that persistent surpluses reflect domestic policies that suppress household income and consumption in the surplus countries, and that the resulting imbalances shift unemployment and debt onto deficit countries. Proposals to revive Keynes’s idea of charging surplus countries reappear in debates over the reform of the international monetary system.</p>
+  <div class="think"><b>Question to think about:</b> Should countries with persistent trade surpluses be required to adjust, as Keynes proposed?</div>
+
+  <h2 id="read">8. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">John Maynard Keynes, “National Self-Sufficiency,” <em>Yale Review</em> (1933).</p>
+  <p class="rd">John Maynard Keynes, <em>The General Theory of Employment, Interest and Money</em> (1936), chapter 23, sections 1–4.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Douglas A. Irwin, <em>Against the Tide</em> (1996), chapter 13.</p>
+  <p class="rd">Matthew Klein and Michael Pettis, <em>Trade Wars Are Class Wars</em> (2020), chapter 1.</p>
+  <p><a href="index.html#topic-17">← Back to Topic 17 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let mode = 'icu';
+const Q = 100;
+const charge = b => { const a = Math.abs(b); return 0.01*Math.max(0, a - Q/4) + 0.01*Math.max(0, a - Q/2); };
+function icu() {
+  const s = +$('s').value, Y = +$('y').value;
+  $('sv').textContent = s; $('yv').textContent = Y;
+  document.querySelectorAll('#icubox .btn').forEach(b => b.classList.toggle('on', b.dataset.m === mode));
+  let bal = 0, cS = 0, cD = 0, firstAct = null; const B = [];
+  for (let t = 1; t <= Y; t++) {
+    bal += s; B.push(bal);
+    if (mode === 'icu') { cS += charge(bal); cD += charge(bal); }
+    if (firstAct === null && bal > Q/2) firstAct = t;
+  }
+  const W = 640, H = 220, L = 150, R = 30, M = Math.max(Q*1.1, bal*1.05), X = v => L + v/M*(W-L-R);
+  let g = '';
+  [['Surplus country', '#023e8a'], ['Deficit country', '#c47a2c']].forEach(([n, c], i) => {
+    const y = 40 + i*70;
+    g += `<text x="${L-10}" y="${y+20}" text-anchor="end">${n}</text>`;
+    g += `<rect x="${L}" y="${y}" width="${X(bal)-L}" height="30" rx="4" fill="${c}"/>`;
+    g += `<text x="${X(bal)+6}" y="${y+20}" style="fill:#1f2933;font-weight:600">${i ? '−' : '+'}${bal}</text>`;
+  });
+  [[Q/4, '¼ quota'], [Q/2, '½ quota'], [Q, 'quota']].forEach(([v, lab]) => {
+    if (X(v) <= W-R) g += `<line x1="${X(v)}" x2="${X(v)}" y1="24" y2="${H-30}" stroke="#8a929b" stroke-dasharray="4 4"/><text x="${X(v)}" y="18" text-anchor="middle">${lab}</text>`;
+  });
+  g += `<text x="${L}" y="${H-8}">balance in bancor after ${Y} year${Y > 1 ? 's' : ''}</text>`;
+  $('icuchart').innerHTML = g;
+  let msg = `After ${Y} year${Y > 1 ? 's' : ''}, the surplus country holds a credit balance of <b>${bal}</b> bancor and the deficit country an overdraft of the same size. `;
+  if (s === 0) msg = 'With balanced trade, neither country accumulates a balance and nothing happens. Raise the surplus.';
+  else if (mode === 'icu') {
+    msg += `Under the Clearing Union, <b>both</b> pay charges: ${cS.toFixed(1)} bancor each over the period. `;
+    msg += firstAct ? `From year ${firstAct}, both balances exceed half the quota, so the surplus country must take steps to reduce its surplus (expand demand, revalue, cut tariffs, or lend abroad), and the deficit country may be asked to devalue or restrict capital outflows. Adjustment is shared.` : 'Neither balance has yet passed half the quota, so no corrective measures are required.';
+    if (bal > Q) msg += ' The deficit country has exhausted its overdraft facility.';
+  } else {
+    msg += `Under the gold standard, the deficit country loses ${bal} units of reserves and must contract credit, cut wages, and accept unemployment until its deficit closes. The surplus country faces <b>no pressure</b> to change anything, and can keep accumulating reserves. The burden of adjustment falls entirely on the deficit country, a deflationary bias for the world economy.`;
+  }
+  $('icuout').innerHTML = msg;
+}
+['s','y'].forEach(i => $(i).addEventListener('input', icu));
+document.querySelectorAll('#icubox .btn').forEach(b => b.addEventListener('click', () => { mode = b.dataset.m; icu(); }));
+icu();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
