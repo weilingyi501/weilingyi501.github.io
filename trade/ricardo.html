@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Ricardo and Comparative Advantage | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on David Ricardo’s theory of comparative advantage: the Corn Laws, the four numbers of chapter 7, opportunity cost, an interactive model of production possibilities and the terms of trade, the assumptions behind the theory, and the repeal of the Corn Laws.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/ricardo.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 3</p>
+  <h1>Ricardo and Comparative Advantage</h1>
+  <p class="lead">Smith showed that two countries gain when each is better at something. David Ricardo showed something far less obvious: trade benefits both countries even when one of them is more productive in every good. This topic works through his argument, its assumptions, and its place in the campaign that ended Britain’s Corn Laws.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#context">The Corn Laws and the discovery</a></li><li><a href="#four">The four numbers</a></li><li><a href="#oc">Comparative advantage as opportunity cost</a></li><li><a href="#model">Production possibilities and the terms of trade (interactive)</a></li><li><a href="#assume">Assumptions</a></li><li><a href="#policy">From theory to policy</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="context">1. The Corn Laws and the discovery</h2>
+  <p>During the Napoleonic Wars, blockades cut Britain off from European grain, and domestic grain prices and rents soared. When peace came in 1815, Parliament passed a Corn Law that barred imports of wheat until the domestic price reached 80 shillings a quarter, protecting the landlords who dominated Parliament. Ricardo, a wealthy stockbroker turned economist and later a member of Parliament, opposed the law. In his theory of rent, cheap imported grain would lower the cost of feeding workers, reduce rents, and raise profits and accumulation (see the History of Economic Thought course, <a href="/het/ricardo-malthus.html">Topic 4</a>).</p>
+  <p>The principle of comparative advantage appeared almost at once in several places. Robert Torrens stated it in <em>An Essay on the External Corn Trade</em> (1815). James Mill helped develop it, and Ricardo set it out most fully in chapter 7, “On Foreign Trade,” of <em>On the Principles of Political Economy and Taxation</em> (1817). Historians still debate who deserves the credit, but the version that entered economics is Ricardo’s.</p>
+
+  <h2 id="four">2. The four numbers</h2>
+  <p>Ricardo’s example uses two countries, England and Portugal, and two goods, cloth and wine. The numbers show how many workers it takes, for a year, to produce a given quantity of each:</p>
+  <table>
+    <tr><th></th><th>Cloth</th><th>Wine</th></tr>
+    <tr><td>England</td><td>100 workers</td><td>120 workers</td></tr>
+    <tr><td>Portugal</td><td>90 workers</td><td>80 workers</td></tr>
+  </table>
+  <p>Portugal needs fewer workers for <em>both</em> goods. It has an absolute advantage in both, so Smith’s principle (Topic 2) would seem to say that Portugal should make both. Ricardo showed otherwise. If England specializes in cloth and Portugal in wine, England can get the wine it used to make with 120 workers by exporting cloth made by 100 workers. Portugal can get the cloth it used to make with 90 workers by exporting wine made by 80. Both save labor. As Ricardo put it, Portugal may find it more advantageous to employ its capital in producing wine, “even though she could make the cloth with less labour than England.”</p>
+
+  <h2 id="oc">3. Comparative advantage as opportunity cost</h2>
+  <p>What matters is not absolute productivity but relative cost. In England, making one unit of cloth means giving up 100/120 = 0.83 units of wine. In Portugal it means giving up 90/80 = 1.125 units of wine. Cloth is relatively cheap in England, and wine relatively cheap in Portugal. A country has a <b>comparative advantage</b> in the good it produces at a lower opportunity cost than its trading partner. As long as the ratios differ, both countries can gain from trade, whatever their absolute levels of productivity.</p>
+  <p>The gains depend on the <b>terms of trade</b>, the rate at which cloth exchanges for wine. Both countries gain if one unit of cloth trades for between 0.83 and 1.125 units of wine. At 0.83, England gains nothing, since it could make that wine itself at the same cost; at 1.125, Portugal gains nothing. Ricardo did not explain where within this range the price would settle. That question was answered by John Stuart Mill (Topic 4).</p>
+
+  <div class="box" id="ppfbox">
+    <h3>Production possibilities and the terms of trade</h3>
+    <p class="note">England has 220 workers and Portugal 170, enough for each to make one unit of each good without trade, as in Ricardo’s example. Change the labor needed per unit and the terms of trade. The solid line is each country’s production possibility frontier; the dashed line shows what it can consume by specializing and trading.</p>
+    <div class="grid2">
+      <div><label>England: workers per unit of cloth: <b id="ecv">100</b></label><input type="range" id="ec" min="40" max="160" step="5" value="100"></div>
+      <div><label>England: workers per unit of wine: <b id="ewv">120</b></label><input type="range" id="ew" min="40" max="160" step="5" value="120"></div>
+      <div><label>Portugal: workers per unit of cloth: <b id="pcv">90</b></label><input type="range" id="pc" min="40" max="160" step="5" value="90"></div>
+      <div><label>Portugal: workers per unit of wine: <b id="pwv">80</b></label><input type="range" id="pw" min="40" max="160" step="5" value="80"></div>
+      <div><label>Terms of trade (units of wine per unit of cloth): <b id="ptv">1.00</b></label><input type="range" id="pt" min="0.5" max="1.6" step="0.01" value="1"></div>
+    </div>
+    <div class="grid2"><svg id="ppfE" viewBox="0 0 300 250" width="100%" role="img" aria-label="England’s production and consumption possibilities"></svg><svg id="ppfP" viewBox="0 0 300 250" width="100%" role="img" aria-label="Portugal’s production and consumption possibilities"></svg></div>
+    <div class="out" id="ppfout"></div>
+  </div>
+
+  <h2 id="assume">4. Assumptions</h2>
+  <p>Ricardo’s result is a logical truth given its assumptions, and much of the later history of trade theory consists of relaxing them one at a time:</p>
+  <ul>
+    <li><b>Labor is the only cost, and costs are constant.</b> Each unit of cloth always takes the same labor, however much is produced. This allows complete specialization. With rising costs, countries specialize only partly (Topic 5).</li>
+    <li><b>Full employment.</b> Workers released from the wine industry in England are reemployed in cloth. If they are not, the gains can turn into losses, as Keynes argued (Topic 17).</li>
+    <li><b>Labor and capital move freely within a country but not between countries.</b> Ricardo argued that capital would stay at home because of owners’ “natural disinclination” to leave their country. If capital can move to wherever absolute costs are lowest, comparative advantage may no longer govern trade (Topics 21 and 24).</li>
+    <li><b>Trade is balanced.</b> Exports pay for imports, and money flows adjust prices as in Hume’s mechanism (Topic 1).</li>
+    <li><b>No lasting effect on productivity.</b> The theory compares static allocations. It does not ask whether specializing in wine rather than cloth affects a country’s future growth, the question that List (Topic 9) and the structuralists (Topic 18) put at the center.</li>
+  </ul>
+  <p>The economist Paul Samuelson, asked to name a proposition in the social sciences that is both true and non-trivial, chose comparative advantage. It is true, he explained, as a matter of logic, and not trivial, as shown by the many intelligent people who have never grasped it or believed it.</p>
+
+  <h2 id="policy">5. From theory to policy</h2>
+  <p>Comparative advantage became the intellectual foundation of the free-trade movement. The Anti-Corn Law League, founded in Manchester in 1838 and led by Richard Cobden and John Bright, campaigned for cheap bread and open markets with mass meetings, pamphlets, and petitions. The Irish famine of 1845–46 forced the issue, and Prime Minister Robert Peel repealed the Corn Laws in 1846, splitting his Conservative Party. Over the next decades Britain removed nearly all its tariffs and repealed the Navigation Acts (1849). The Cobden–Chevalier treaty with France (1860) began a wave of tariff-cutting treaties across Europe that lasted until the late 1870s.</p>
+  <div class="think"><b>Question to think about:</b> Comparative advantage assumes that capital cannot move between countries. What happens to the argument when it can?</div>
+
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">David Ricardo, <em>On the Principles of Political Economy and Taxation</em> (1817), chapter 7.</p>
+  <p class="rd">Douglas A. Irwin, <em>Against the Tide</em> (1996), chapter 6.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought</em>, 3rd ed. (2011), chapter 5.</p>
+  <p class="rd">Linda Yueh, <em>What Would the Great Economists Do?</em> (2018), chapter 2.</p>
+  <p class="rd">Roy Ruffin, “David Ricardo’s Discovery of Comparative Advantage,” <em>History of Political Economy</em> (2002).</p>
+  <p><a href="index.html#topic-3">← Back to Topic 3 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const LE = 220, LP = 170;
+function draw(id, L, ac, aw, p, spec, name, col) {
+  // axes: cloth on x, wine on y
+  const W = 300, H = 250, Lm = 36, R = 10, T = 22, B = 30;
+  const maxC = Math.max(L/ac, 1) , maxW = Math.max(L/aw, 1);
+  const cpfC = spec === 'cloth' ? L/ac : (L/aw)/p, cpfW = spec === 'cloth' ? (L/ac)*p : L/aw;
+  const M = Math.max(maxC, maxW, spec ? Math.max(cpfC, cpfW) : 0) * 1.08;
+  const X = v => Lm + v/M*(W-Lm-R), Y = v => H-B - v/M*(H-B-T);
+  let g = `<line x1="${Lm}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${Lm}" y1="${T}" x2="${Lm}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  g += `<text x="${(Lm+W-R)/2}" y="${H-6}" text-anchor="middle">cloth</text><text x="${Lm-6}" y="${T-8}" text-anchor="start">wine</text>`;
+  [0,1,2,3,4].forEach(v => { if (v <= M) g += `<text x="${X(v)}" y="${H-B+14}" text-anchor="middle">${v}</text><text x="${Lm-5}" y="${Y(v)+4}" text-anchor="end">${v}</text>`; });
+  g += `<line x1="${X(0)}" y1="${Y(maxW)}" x2="${X(maxC)}" y2="${Y(0)}" stroke="${col}" stroke-width="2.4"/>`;
+  if (spec) g += `<line x1="${X(0)}" y1="${Y(cpfW)}" x2="${X(cpfC)}" y2="${Y(0)}" stroke="${col}" stroke-width="2" stroke-dasharray="6 4"/>`;
+  g += `<circle cx="${X(L/(ac+aw))}" cy="${Y(L/(ac+aw))}" r="4" fill="#5b6670"/>`;
+  g += `<text x="${W-R}" y="${T-8}" text-anchor="end" font-weight="600" style="fill:${col}">${name}</text>`;
+  $(id).innerHTML = g;
+}
+function ppf() {
+  const ec = +$('ec').value, ew = +$('ew').value, pc = +$('pc').value, pw = +$('pw').value, p = +$('pt').value;
+  [['ecv',ec],['ewv',ew],['pcv',pc],['pwv',pw]].forEach(([i,v]) => $(i).textContent = v); $('ptv').textContent = p.toFixed(2);
+  const oE = ec/ew, oP = pc/pw; // wine given up per unit of cloth
+  let specE = null, specP = null, msg;
+  if (Math.abs(oE - oP) < 1e-9) {
+    msg = `Both countries give up the same ${oE.toFixed(2)} units of wine for a unit of cloth. With identical opportunity costs there is no comparative advantage and nothing to gain from trade.`;
+  } else {
+    const eCloth = oE < oP; specE = eCloth ? 'cloth' : 'wine'; specP = eCloth ? 'wine' : 'cloth';
+    const lo = Math.min(oE, oP), hi = Math.max(oE, oP);
+    // gain per worker: value obtained through trade relative to direct production
+    const gE = eCloth ? p*ew/ec : ec/(p*ew), gP = eCloth ? pc/(p*pw) : p*pw/pc;
+    const pct = g => Math.abs(g-1) < 0.005 ? 'exactly as much' : Math.abs((g-1)*100).toFixed(0) + '% ' + (g > 1 ? 'more' : 'less');
+    const r3 = v => (+v.toFixed(3)).toString();
+    msg = `Opportunity cost of one unit of cloth: <b>${r3(oE)}</b> wine in England, <b>${r3(oP)}</b> wine in Portugal. England has the comparative advantage in <b>${specE}</b> and Portugal in <b>${specP}</b>`;
+    msg += (ec < pc && ew < pw) ? ', even though England is more productive in both goods. ' : (pc < ec && pw < ew) ? ', even though Portugal is more productive in both goods. ' : '. ';
+    msg += `Both gain if a unit of cloth trades for between ${r3(lo)} and ${r3(hi)} units of wine. At ${p.toFixed(2)}, a worker in England obtains ${pct(gE)} ${eCloth ? 'wine' : 'cloth'} by specializing and trading than by producing it directly; a worker in Portugal obtains ${pct(gP)} ${eCloth ? 'cloth' : 'wine'}. `;
+    if (p < lo - 1e-9 || p > hi + 1e-9) msg += `<b>This price lies outside the range</b>, so one country would lose by trading and would refuse to specialize.`;
+    else if (Math.abs(p - lo) < 0.005 || Math.abs(p - hi) < 0.005) msg += `At this edge of the range one country gets all the gains and the other none.`;
+    else msg += `Both countries are better off: the dashed consumption line lies outside each frontier.`;
+  }
+  draw('ppfE', LE, ec, ew, p, specE, 'England', '#023e8a');
+  draw('ppfP', LP, pc, pw, p, specP, 'Portugal', '#3f8f6b');
+  $('ppfout').innerHTML = msg + ' <span class="note">The grey dot marks consumption without trade, when each country makes equal amounts of both goods.</span>';
+}
+['ec','ew','pc','pw','pt'].forEach(i => $(i).addEventListener('input', ppf)); ppf();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

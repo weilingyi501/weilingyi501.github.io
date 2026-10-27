@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Adam Smith: The Division of Labor and Absolute Advantage | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Adam Smith’s theory of trade: the division of labor and the extent of the market, absolute advantage with an interactive calculator, the vent for surplus, the critique of the mercantile system, and Smith’s exceptions to free trade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/smith.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 2</p>
+  <h1>Adam Smith: The Division of Labor and Absolute Advantage</h1>
+  <p class="lead"><em>The Wealth of Nations</em> (1776) turned the case for free trade from a set of pamphlets into a system. Smith argued that a nation’s wealth is its annual produce, not its gold, and that trade makes it larger by extending the division of labor. This topic follows his argument, his attack on the “mercantile system,” and the exceptions he allowed.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#wealth">What is the wealth of a nation?</a></li><li><a href="#dol">The division of labor and the extent of the market</a></li><li><a href="#abs">Absolute advantage (interactive)</a></li><li><a href="#vent">The vent for surplus</a></li><li><a href="#merc">Against the mercantile system</a></li><li><a href="#except">Smith’s exceptions</a></li><li><a href="#after">Influence and limits</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="wealth">1. What is the wealth of a nation?</h2>
+  <p>The mercantilists (Topic 1) measured a nation’s wealth by its stock of gold and silver. Smith redefined it as the annual flow of “necessaries and conveniences of life” that a nation’s labor produces. Money is only a means of circulating that produce. Once wealth is understood this way, the purpose of trade changes. A country does not trade to pile up bullion; it trades to obtain more goods for its labor than it could produce at home. Imports, not exports, are the gain from trade. Exports are the price a country pays for them.</p>
+
+  <h2 id="dol">2. The division of labor and the extent of the market</h2>
+  <p>The <em>Wealth of Nations</em> opens with the pin factory: ten workers, each specializing in a few of the eighteen operations needed to make a pin, could produce about 48,000 pins a day, where one worker alone might make scarcely twenty. The <b>division of labor</b> is the main source of rising productivity. Specialized workers become more skilled, waste less time switching between tasks, and invent machines suited to their narrow operations.</p>
+  <p>Chapter 3 of Book I adds the crucial link to trade: the division of labor is <b>limited by the extent of the market</b>. A village blacksmith cannot specialize in nails alone, because the village does not buy enough nails. A larger market supports a finer division of labor, so anything that widens the market, including cheaper transport and foreign trade, raises productivity. This is a <em>dynamic</em> argument for trade: trade does not just reallocate a given output; it makes the economy more productive over time. Many later economists, from Allyn Young (1928) to the new trade theorists (Topic 7), would return to it.</p>
+
+  <h2 id="abs">3. Absolute advantage</h2>
+  <p>In Book IV, chapter 2, Smith extended a household’s good sense to the nation. The tailor does not make his own shoes but buys them from the shoemaker; the shoemaker does not make his own clothes. “What is prudence in the conduct of every private family,” Smith wrote, “can scarce be folly in that of a great kingdom.” If a foreign country can supply a good more cheaply than we can make it ourselves, it is better to buy it with part of the produce of our own industry, employed in a way in which we have some advantage.</p>
+  <p>This is the principle of <b>absolute advantage</b>: each country should specialize in the goods it produces with less labor than other countries, and import the rest. Smith’s example was wine. Grapes could be grown in Scotland under glass, but at about thirty times the cost of importing claret from France.</p>
+
+  <div class="box" id="absbox">
+    <h3>Absolute advantage: who should make what?</h3>
+    <p class="note">Each country has 120 hours of labor. Set how many hours each country needs to make one unit of each good. The calculator compares world output when each country makes both goods with equal hours (no trade) and when each specializes in the good where it has the absolute advantage.</p>
+    <div class="grid2">
+      <div><label>Britain: hours per yard of cloth: <b id="bcv">4</b></label><input type="range" id="bc" min="1" max="12" step="1" value="4"></div>
+      <div><label>Britain: hours per bottle of wine: <b id="bwv">8</b></label><input type="range" id="bw" min="1" max="12" step="1" value="8"></div>
+      <div><label>Portugal: hours per yard of cloth: <b id="pcv">6</b></label><input type="range" id="pc" min="1" max="12" step="1" value="6"></div>
+      <div><label>Portugal: hours per bottle of wine: <b id="pwv">3</b></label><input type="range" id="pw" min="1" max="12" step="1" value="3"></div>
+    </div>
+    <table id="abstab"></table>
+    <div class="out" id="absout"></div>
+  </div>
+
+  <h2 id="vent">4. The vent for surplus</h2>
+  <p>Smith offered a second argument in Book IV, chapter 1. Foreign trade “carries out that surplus part of the produce of their land and labour for which there is no demand among them, and brings back in return for it something else for which there is a demand.” This <b>vent for surplus</b> sees trade as a way of employing land and labor that would otherwise lie idle. It fits the experience of many colonies and frontier economies, where opening to trade brought unused land into cultivation. Hla Myint (1958) revived the idea to explain the rapid growth of export agriculture in Southeast Asia and West Africa in the nineteenth century. Unlike comparative advantage (Topic 3), which assumes that all resources are already employed, the vent for surplus assumes that they are not.</p>
+
+  <h2 id="merc">5. Against the mercantile system</h2>
+  <p>Most of Book IV is a sustained attack on what Smith called the <b>mercantile system</b>. His charges were these:</p>
+  <ul>
+    <li><b>It confuses money with wealth.</b> A country that needs gold can always buy it, like any other commodity. Following Hume, Smith held that attempts to accumulate it are self-defeating.</li>
+    <li><b>It misdirects capital.</b> Tariffs and bounties pull capital into industries that would not be profitable without them, out of uses where it would produce more. They cannot increase the total employment that a country’s capital can support; they can only change its direction.</li>
+    <li><b>It serves merchants and manufacturers.</b> The system was designed by and for those who profit from monopoly, at the expense of consumers. Smith warned that any proposal for a new law of commerce coming from merchants should be examined “with the most suspicious attention.”</li>
+    <li><b>Colonies are a costly monopoly.</b> The colonial trade monopoly raised the profits of a few merchants while burdening Britain with the cost of defending an empire. Smith wrote as the American colonies were in revolt and suggested that Britain would gain by letting them go.</li>
+  </ul>
+
+  <h2 id="except">6. Smith’s exceptions</h2>
+  <p>Smith was not an absolutist. He allowed several exceptions to free trade:</p>
+  <ul>
+    <li><b>Defense.</b> He praised the Navigation Acts, even though they made trade more expensive, because they built up British shipping and sailors for the navy. “Defence,” he wrote, “is of much more importance than opulence.”</li>
+    <li><b>Equal treatment of domestic taxes.</b> If a domestic product is taxed, a similar tax on the competing import is reasonable.</li>
+    <li><b>Retaliation.</b> A tariff in response to a foreign tariff may be justified if it is likely to get the other country to remove its own.</li>
+    <li><b>Gradual liberalization.</b> When protected industries employ many people, free trade should be restored slowly and with caution, to avoid sudden unemployment.</li>
+  </ul>
+  <p>Smith did not expect free trade ever to be fully established in Britain. Expecting it, he said, was as absurd as expecting a utopia, because of the prejudices of the public and the private interests of many individuals.</p>
+
+  <h2 id="after">7. Influence and limits</h2>
+  <p>Smith’s argument quickly reached policy. Prime Minister William Pitt the Younger, who called himself Smith’s pupil, concluded the Eden Treaty of 1786, which cut tariffs between Britain and France. Yet absolute advantage has a clear gap. If one country is more productive than another in every good, Smith’s principle seems to say it should make everything and import nothing. Try it in the calculator: give Britain fewer hours per unit in both goods. Smith’s theory does not say whether trade is still worthwhile. Answering that question was Ricardo’s contribution (Topic 3).</p>
+  <div class="think"><b>Question to think about:</b> Smith argued that trade enlarges the market and so deepens specialization. Is that a different argument from comparative advantage?</div>
+
+  <h2 id="read">8. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Adam Smith, <em>The Wealth of Nations</em> (1776), Book I, chapters 1–3, and Book IV, chapters 1–2.</p>
+  <p class="rd">Douglas A. Irwin, <em>Against the Tide</em> (1996), chapter 5.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought</em>, 3rd ed. (2011), chapter 3.</p>
+  <p class="rd">Hla Myint, “The ‘Classical Theory’ of International Trade and the Underdeveloped Countries,” <em>Economic Journal</em> (1958).</p>
+  <p><a href="index.html#topic-2">← Back to Topic 2 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const L = 120; // hours of labor in each country
+function abs() {
+  const bc = +$('bc').value, bw = +$('bw').value, pc = +$('pc').value, pw = +$('pw').value;
+  $('bcv').textContent = bc; $('bwv').textContent = bw; $('pcv').textContent = pc; $('pwv').textContent = pw;
+  const f = v => Number.isInteger(v) ? v : v.toFixed(1);
+  // no trade: each country splits labor equally
+  const nb = [L/2/bc, L/2/bw], np = [L/2/pc, L/2/pw];
+  const autC = nb[0] + np[0], autW = nb[1] + np[1];
+  const bothB = bc < pc && bw < pw, bothP = pc < bc && pw < bw;
+  let rows = `<tr><th></th><th>Cloth (yards)</th><th>Wine (bottles)</th></tr>
+    <tr><td>Britain, no trade</td><td>${f(nb[0])}</td><td>${f(nb[1])}</td></tr>
+    <tr><td>Portugal, no trade</td><td>${f(np[0])}</td><td>${f(np[1])}</td></tr>
+    <tr><td><b>World, no trade</b></td><td><b>${f(autC)}</b></td><td><b>${f(autW)}</b></td></tr>`;
+  let msg;
+  if (bc < pc && pw < bw) {
+    const sc = L/bc, sw = L/pw;
+    rows += `<tr><td><b>World, Britain makes cloth and Portugal makes wine</b></td><td><b>${f(sc)}</b></td><td><b>${f(sw)}</b></td></tr>`;
+    msg = `Britain has the absolute advantage in cloth (${bc} hours against ${pc}) and Portugal in wine (${pw} hours against ${bw}). When each specializes, world output rises by <b>${f(sc-autC)} yards of cloth</b> and <b>${f(sw-autW)} bottles of wine</b> with the same labor. Trade lets both countries share the extra output.`;
+  } else if (pc < bc && bw < pw) {
+    const sc = L/pc, sw = L/bw;
+    rows += `<tr><td><b>World, Portugal makes cloth and Britain makes wine</b></td><td><b>${f(sc)}</b></td><td><b>${f(sw)}</b></td></tr>`;
+    msg = `Portugal has the absolute advantage in cloth (${pc} hours against ${bc}) and Britain in wine (${bw} hours against ${pw}). When each specializes, world output rises by <b>${f(sc-autC)} yards of cloth</b> and <b>${f(sw-autW)} bottles of wine</b>.`;
+  } else if (bothB || bothP) {
+    const [w, l] = bothB ? ['Britain','Portugal'] : ['Portugal','Britain'];
+    msg = `${w} needs fewer hours for <b>both</b> goods, so it has the absolute advantage in everything. Smith’s principle gives no clear answer: should ${w} make everything and ${l} nothing? Ricardo showed that both can still gain, as long as the <em>ratios</em> of hours differ (here ${(bc/bw).toFixed(2)} for Britain and ${(pc/pw).toFixed(2)} for Portugal). See Topic 3.`;
+  } else {
+    msg = 'The two countries are equally productive in at least one good, so neither has a clear absolute advantage in it. Change the hours to see the case for specialization.';
+  }
+  $('abstab').innerHTML = rows; $('absout').innerHTML = msg;
+}
+['bc','bw','pc','pw'].forEach(i => $(i).addEventListener('input', abs)); abs();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

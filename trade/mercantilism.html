@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Mercantilism and the Physiocrats | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on early theories of trade: the mercantilist balance of trade, the Navigation Acts and Colbertism, rereadings of mercantilism, Hume’s price–specie-flow mechanism with an interactive model, and the physiocrats’ case for free trade in grain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/mercantilism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 1</p>
+  <h1>Mercantilism and the Physiocrats</h1>
+  <p class="lead">Before economics had a name, merchants and officials wrote about trade as a contest between nations for gold, shipping, and manufactures. This topic covers the mercantilist doctrine of the balance of trade, the policies built on it, Hume’s argument that a permanent surplus is impossible, and the French physiocrats who first called for free trade.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#doctrine">The balance of trade</a></li><li><a href="#policy">Mercantilist policy</a></li><li><a href="#reread">Mercantilism reconsidered</a></li><li><a href="#hume">Hume’s price–specie-flow mechanism (interactive)</a></li><li><a href="#phys">The physiocrats</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="doctrine">1. The balance of trade</h2>
+  <p><b>Mercantilism</b> is the name Adam Smith gave, critically, to the “mercantile system”: the ideas and policies that guided European states from roughly 1500 to the late eighteenth century. It was never a single school. Its writers were merchants, company directors, and officials such as Thomas Mun of the East India Company, Josiah Child, and Jean-Baptiste Colbert, who wrote pamphlets on practical questions: why was silver flowing out of England, should the East India Company be allowed to export bullion, and how could the nation’s shipping be protected?</p>
+  <p>What united them was the idea of the <b>balance of trade</b>. A nation without gold or silver mines could increase its stock of precious metals only by selling more to foreigners than it bought from them. Mun put the rule plainly: a nation must “sell more to strangers yearly than wee consume of theirs in value” (<em>England’s Treasure by Forraign Trade</em>, written in the 1620s and published in 1664). Mun’s important step was to judge the balance for trade as a whole rather than for each bilateral exchange. The East India Company exported silver to Asia, but it re-exported Asian goods to Europe for more silver than it had spent, so the overall balance was favorable.</p>
+  <p>Behind the doctrine were several distinct ideas that are worth separating:</p>
+  <ul>
+    <li><b>Bullion as wealth or as power.</b> Gold and silver paid armies and fleets, so a state’s stock of money was a measure of its strength in war.</li>
+    <li><b>Money and circulation.</b> Many writers worried less about hoarding than about a shortage of coin, which depressed trade and employment at home.</li>
+    <li><b>Employment.</b> Exporting finished goods rather than raw wool kept the work of manufacturing at home. Imports of manufactures “exported” jobs.</li>
+    <li><b>Zero-sum competition.</b> Because the world’s stock of trade and bullion was thought to be roughly fixed, one nation’s gain was another’s loss.</li>
+  </ul>
+
+  <h2 id="policy">2. Mercantilist policy</h2>
+  <p>The doctrine supported a coherent set of policies, which states pursued in different combinations:</p>
+  <table>
+    <tr><th>Policy</th><th>Example</th></tr>
+    <tr><td>Chartered trading monopolies</td><td>The English East India Company (1600) and the Dutch East India Company (VOC, 1602) held exclusive rights to trade with Asia.</td></tr>
+    <tr><td>Reserving shipping for national fleets</td><td>England’s Navigation Act of 1651 and later acts required goods to be carried in English ships, aimed at Dutch dominance of the carrying trade.</td></tr>
+    <tr><td>Protecting manufactures</td><td>Tariffs on imported manufactures, bans on exporting raw wool, and bounties on exports.</td></tr>
+    <tr><td>Colonies as captive markets</td><td>Colonies supplied raw materials and bought the mother country’s manufactures, and were barred from trading directly with rivals.</td></tr>
+    <tr><td>State promotion of industry</td><td>As French finance minister (1665–83), Colbert founded royal manufactures, set quality regulations, built roads and canals, and raised tariffs in 1664 and 1667.</td></tr>
+  </table>
+  <p>The Anglo-Dutch wars of the seventeenth century and the Anglo-French wars of the eighteenth were fought in large part over trade, colonies, and shipping. In the mercantilist world, trade policy and war were closely tied.</p>
+
+  <h2 id="reread">3. Mercantilism reconsidered</h2>
+  <p>After Smith, economists treated mercantilism as a simple error: the confusion of money with wealth. Later scholars have read it more generously.</p>
+  <ul>
+    <li><b>State-building.</b> Gustav Schmoller (1884) of the German historical school (Topic 10) argued that mercantilism was at heart a policy of building a unified national state and economy out of a patchwork of local privileges. Eli Heckscher’s <em>Mercantilism</em> (1931) treated it as a system of power and unification, while remaining critical of its economics.</li>
+    <li><b>Productive capacity.</b> Erik Reinert and others argue that the best mercantilist writers, including the Neapolitan Antonio Serra (1613), understood that a nation grows rich by moving into activities with increasing returns, such as manufacturing, rather than by hoarding gold. On this reading, mercantilism was the first theory of industrial policy (Topics 9 and 12).</li>
+    <li><b>Effective demand.</b> In chapter 23 of the <em>General Theory</em> (1936), Keynes argued that the mercantilists had a point: when the domestic interest rate depends on the stock of money, a trade surplus that brings in bullion lowers interest rates and raises investment and employment (Topic 17).</li>
+    <li><b>The critics.</b> Jacob Viner (1937) replied that the mercantilists were often confused, that their writings largely served merchants’ interests, and that they had no consistent theory.</li>
+  </ul>
+
+  <h2 id="hume">4. Hume’s price–specie-flow mechanism</h2>
+  <p>The most powerful early argument against the balance-of-trade doctrine came from David Hume’s essay “Of the Balance of Trade” (1752). Hume combined the <b>quantity theory of money</b>, the idea that prices rise and fall with the quantity of money in circulation, with the observation that buyers turn to whichever country is cheaper. Suppose a country runs a surplus and gold flows in. Its money stock rises, so its prices rise; the deficit country’s money stock and prices fall. The surplus country’s goods become dearer abroad and foreign goods become cheaper at home, so its exports fall and imports rise until the surplus disappears. Money, Hume concluded, finds its own level, like water. A policy of permanent surplus defeats itself.</p>
+  <p>The mechanism rests on two assumptions that later writers questioned. The incoming gold has to enter circulation and raise prices; if the state or banks hoard it, prices need not rise. And prices have to be flexible; if they are sticky, the adjustment comes through output and employment instead, which was Keynes’s point.</p>
+
+  <div class="box" id="psf">
+    <h3>The price–specie-flow mechanism</h3>
+    <p class="note">Two countries of equal size, Britain and France, share 100 units of gold. Prices in each are proportional to its stock of gold in circulation, and each country’s exports rise when its prices are lower than its rival’s. Start Britain with little gold, so that it runs a surplus, and watch the surplus correct itself. Then let Britain hoard part of the gold it earns.</p>
+    <div class="grid2">
+      <div><label>Britain’s initial share of the world’s gold: <b id="g0v">25</b></label><input type="range" id="g0" min="10" max="90" step="1" value="25"></div>
+      <div><label>How strongly trade responds to price differences: <b id="kv">0.25</b></label><input type="range" id="k" min="0.05" max="0.5" step="0.01" value="0.25"></div>
+      <div><label>Share of incoming gold Britain hoards instead of circulating: <b id="hv">0%</b></label><input type="range" id="h" min="0" max="100" step="5" value="0"></div>
+    </div>
+    <svg id="psfchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Gold in circulation in Britain and France over time"></svg>
+    <svg id="psfbal" viewBox="0 0 640 110" width="100%" role="img" aria-label="Britain’s trade balance over time"></svg>
+    <div class="out" id="psfout"></div>
+  </div>
+
+  <h2 id="phys">5. The physiocrats</h2>
+  <p>In France, the reaction against mercantilism came from the <b>physiocrats</b> (“rule of nature”), led by François Quesnay, a physician at the court of Louis XV. Their starting point was agriculture, not trade. Only the land, they argued, produces a <b>net product</b> (<em>produit net</em>), a surplus over the costs of production. Manufacturing and commerce are “sterile”: useful, but they only transform or move what agriculture has produced. Quesnay’s <em>Tableau économique</em> (1758) traced how the net product circulates among farmers, landlords, and the sterile class, the first model of the economy as a circular flow.</p>
+  <p>The trade policy that followed was the reverse of Colbert’s. France’s grain trade was tightly controlled, with internal tolls and bans on exports, to keep bread cheap in the towns. The physiocrats argued that freeing the grain trade would raise grain prices, increase the farmers’ returns and the net product, and so make the whole kingdom richer. Their slogan, <em>laissez faire, laissez passer</em>, was first a demand to let grain move freely. The crown freed the grain trade in 1763–64, and A. R. J. Turgot, as controller-general, freed it again in 1774. Both experiments were reversed after bad harvests, high prices, and riots, most famously the “Flour War” of 1775.</p>
+  <div class="vs">
+    <div><b>Mercantilists</b>Trade enriches a nation through a surplus of exports over imports. Protect manufactures, keep raw materials cheap, regulate trade in the national interest.</div>
+    <div><b>Physiocrats</b>Trade creates no new wealth; only land does. But freeing trade, especially in grain, raises the net product of agriculture.</div>
+  </div>
+
+  <h2 id="legacy">6. Legacy</h2>
+  <p>Smith learned from both groups. He took Hume’s argument against the balance-of-trade doctrine and the physiocrats’ case for natural liberty, but rejected the physiocrats’ view that manufacturing is sterile (Topic 2). The mercantilist idea that a trade surplus is a sign of national strength never disappeared. It returns in nineteenth-century arguments for protecting industry (Topic 9), in Keynes’s reconsideration of the mercantilists (Topic 17), and in debates over export-led growth and persistent surpluses in the world economy today.</p>
+  <div class="think"><b>Question to think about:</b> Mercantilists equated wealth with a trade surplus. Is that idea dead, or does it survive in today’s politics of trade?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Douglas A. Irwin, <em>Against the Tide: An Intellectual History of Free Trade</em> (1996), chapters 2–4.</p>
+  <p class="rd">Thomas Mun, <em>England’s Treasure by Forraign Trade</em> (1664), chapter 2.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">David Hume, “Of the Balance of Trade” (1752).</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought: A Critical Perspective</em>, 3rd ed. (2011), chapter 2.</p>
+  <p class="rd">Lars Magnusson, <em>The Political Economy of Mercantilism</em> (2015), chapter 1.</p>
+  <p><a href="index.html#topic-1">← Back to Topic 1 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Price–specie flow: prices proportional to gold in circulation; trade balance = k·(P_F − P_B)
+function psf() {
+  const g0 = +$('g0').value, k = +$('k').value, h = +$('h').value/100;
+  $('g0v').textContent = g0; $('kv').textContent = k.toFixed(2); $('hv').textContent = Math.round(h*100) + '%';
+  const N = 40; let cb = g0, cf = 100 - g0, hoard = 0; const B = [], F = [], TB = [];
+  for (let t = 0; t <= N; t++) {
+    B.push(cb); F.push(cf);
+    const tb = k * (cf - cb) / 2; TB.push(tb);           // Britain's trade balance (gold inflow if positive)
+    const inflow = tb;                                   // gold moves with the balance
+    const kept = inflow > 0 ? inflow * h : 0;            // hoarded gold leaves circulation
+    cb += inflow - kept; hoard += kept; cf -= inflow;
+  }
+  const W = 640, H = 260, L = 44, R = 16, T = 14, Bm = 34;
+  const X = t => L + t/N*(W-L-R), Y = v => T + (1 - v/100)*(H-Bm-T);
+  const YT = v => T + (H-Bm-T)/2 - v/20*(H-Bm-T)/2;
+  let g = `<line x1="${L}" y1="${H-Bm}" x2="${W-R}" y2="${H-Bm}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-Bm}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`);
+  [0,10,20,30,40].forEach(t => g += `<text x="${X(t)}" y="${H-Bm+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">years</text>`;
+  const path = (arr, f) => arr.map((v,i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ',' + f(v).toFixed(1)).join(' ');
+  g += `<path d="${path(B, Y)}" fill="none" stroke="#023e8a" stroke-width="2.4"/><path d="${path(F, Y)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/>`;
+  const up = B[0] < F[0];
+  g += `<text x="${X(0)+8}" y="${Y(B[0]) + (up ? 16 : -8)}" style="fill:#023e8a">Britain’s gold in circulation</text><text x="${X(0)+8}" y="${Y(F[0]) + (up ? -8 : 16)}" style="fill:#c47a2c">France’s gold</text>`;
+  $('psfchart').innerHTML = g;
+  // trade balance as bars below
+  const BH = 110, mid = BH/2, sc = (BH/2 - 12) / Math.max(1, ...TB.map(Math.abs));
+  let b = `<line x1="${L}" x2="${W-R}" y1="${mid}" y2="${mid}" stroke="#ccd2d8"/><text x="${L-6}" y="${mid+4}" text-anchor="end">0</text>`;
+  TB.forEach((v, i) => { const hgt = Math.abs(v)*sc; b += `<rect x="${X(i)-4}" y="${v >= 0 ? mid-hgt : mid}" width="8" height="${Math.max(hgt, 0.5)}" fill="${v >= 0 ? '#3f8f6b' : '#c0392b'}"/>`; });
+  b += `<text x="${L+24}" y="12">Britain’s trade balance each year: surplus (green, gold flows in) or deficit (red, gold flows out)</text>`;
+  $('psfbal').innerHTML = b;
+  const tb0 = TB[0], tbN = TB[N];
+  let msg = `In year 0, Britain holds ${g0} units of gold, so its prices are ${g0 > 50 ? 'higher' : g0 < 50 ? 'lower' : 'the same as'}${g0 === 50 ? ' France’s' : ' than France’s'} and its trade balance is ${tb0 > 0.05 ? '<b>in surplus</b>' : tb0 < -0.05 ? '<b>in deficit</b>' : '<b>balanced</b>'}. `;
+  if (g0 === 50) msg += 'Nothing moves: money is already at its level.';
+  else if (h === 0) msg += `Gold flows ${tb0 < 0 ? 'out of' : 'into'} Britain until both countries hold the same amount and prices are equal. After 40 years Britain holds <b>${B[N].toFixed(1)}</b> units and its trade balance is ${Math.abs(tbN) < 0.05 ? 'essentially zero' : tbN.toFixed(2)}. Money finds its level, as Hume said.`;
+  else if (tb0 < 0) msg += `Gold flows out of Britain until prices are equal. Hoarding makes no difference here, because Britain never receives gold; start Britain below 50 to see what hoarding does.`;
+  else msg += `Britain hoards ${Math.round(h*100)}% of the gold that flows in, so that part never raises British prices. Adjustment now runs mainly through falling prices in France. After 40 years Britain has hoarded <b>${hoard.toFixed(1)}</b> units, and its surplus ${Math.abs(tbN) < 0.05 ? 'has vanished, but much more slowly than without hoarding' : 'still runs at ' + tbN.toFixed(2) + ' a year'}. Hoarding the inflow prolongs the surplus, which is what a mercantilist wants, at the cost of piling up idle gold and pushing deflation onto the trading partner.`;
+  $('psfout').innerHTML = msg;
+}
+['g0','k','h'].forEach(i => $(i).addEventListener('input', psf)); psf();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

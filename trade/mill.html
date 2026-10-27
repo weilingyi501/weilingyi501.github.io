@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Mill and the Terms of Trade | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on John Stuart Mill’s theory of reciprocal demand: how the terms of trade divide the gains from trade, with an interactive model, Torrens’s terms-of-trade argument for tariffs and reciprocity, and Mill’s infant-industry exception.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/mill.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 4</p>
+  <h1>Mill and the Terms of Trade</h1>
+  <p class="lead">Ricardo proved that both countries can gain from trade but left open how the gains are shared. John Stuart Mill answered with the theory of reciprocal demand. His answer opened two new questions that free traders found uncomfortable: can a country use a tariff to tilt the terms of trade in its favor, and should a young industry be protected until it can compete?</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#gap">The gap in Ricardo</a></li><li><a href="#recip">Reciprocal demand (interactive)</a></li><li><a href="#torrens">Torrens and the terms-of-trade argument</a></li><li><a href="#infant">Mill’s infant-industry exception</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="gap">1. The gap in Ricardo</h2>
+  <p>In Ricardo’s example (Topic 3), both countries gain if a unit of cloth exchanges for between 0.83 and 1.125 units of wine. Where in that range does the price settle? The answer decides how the gains are divided. Near one end, England takes almost all of them; near the other, Portugal does. Ricardo’s labor theory of value could not answer the question, because the labor costs of each good differ between the two countries. Something other than cost had to fix international prices.</p>
+  <p>Mill took up the problem in an essay, “Of the Laws of Interchange between Nations,” written in 1829–30 and published in his <em>Essays on Some Unsettled Questions of Political Economy</em> (1844). He developed it in his <em>Principles of Political Economy</em> (1848), Book III, chapter 18, which became the standard statement of classical trade theory for half a century.</p>
+
+  <h2 id="recip">2. Reciprocal demand</h2>
+  <p>Mill’s answer was that international prices depend on demand as well as cost. The terms of trade settle at the point where each country’s exports exactly pay for its imports: where the quantity of cloth England wishes to sell for linen at that price equals the quantity Germany wishes to buy, and the reverse. Mill called this the <b>equation of international demand</b>, or <b>reciprocal demand</b>. The stronger a country’s demand for its partner’s goods, and the weaker the partner’s demand for its own, the less favorable its terms of trade.</p>
+  <p>Mill used his own example. In England, 10 yards of broadcloth cost as much labor as 15 yards of linen; in Germany, as much as 20 yards of linen. England has the comparative advantage in broadcloth and Germany in linen, and any price between 15 and 20 yards of linen for 10 yards of broadcloth benefits both.</p>
+  <p>One striking result follows. If one country is much larger than the other, the large country’s demand cannot be satisfied by the small country’s exports at any price within the range. The price then settles at the large country’s own domestic cost ratio. The large country keeps producing both goods and gains nothing; the small country takes all the gains. Later economists called this “the importance of being unimportant.”</p>
+
+  <div class="box" id="rdbox">
+    <h3>How reciprocal demand sets the terms of trade</h3>
+    <p class="note">England specializes in broadcloth and Germany in linen. Each country spends a fixed share of its income on the imported good. The terms of trade settle where England’s exports of cloth pay for its imports of linen, within the range set by the two countries’ costs (1.5 to 2 yards of linen per yard of cloth).</p>
+    <div class="grid2">
+      <div><label>Share of England’s income spent on linen: <b id="sev">40%</b></label><input type="range" id="se" min="5" max="80" step="1" value="40"></div>
+      <div><label>Share of Germany’s income spent on cloth: <b id="sgv">40%</b></label><input type="range" id="sg" min="5" max="80" step="1" value="40"></div>
+      <div><label>Size of Germany relative to England: <b id="szv">0.9</b></label><input type="range" id="sz" min="0.2" max="4" step="0.1" value="0.9"></div>
+    </div>
+    <svg id="rdchart" viewBox="0 0 640 120" width="100%" role="img" aria-label="Where the terms of trade fall between the two countries’ cost ratios"></svg>
+    <div class="out" id="rdout"></div>
+  </div>
+
+  <h2 id="torrens">3. Torrens and the terms-of-trade argument</h2>
+  <p>Reciprocal demand had an awkward implication for free traders. If the terms of trade depend on demand, then a country that reduces its demand for imports, for instance by putting a tariff on them, can push the terms of trade in its own favor. Its exports buy more imports than before, and part of the cost of the tariff falls on foreigners.</p>
+  <p>Robert Torrens drew this conclusion in <em>The Budget</em> (1841–44). Britain, he argued, should not cut its tariffs unilaterally, because that would worsen its terms of trade while other countries kept theirs. It should cut tariffs only in exchange for reductions abroad, a policy of <b>reciprocity</b>. Torrens was attacked by free traders, but Mill accepted the logic of the argument. A tariff can indeed improve a country’s terms of trade, he agreed, although the gain depends on the other country not retaliating, and the loss to the world as a whole remains.</p>
+  <p>The argument has two important limits. It works only for a country large enough to affect world prices; a small country faces given prices and simply loses from a tariff. And the gain is at the expense of the trading partner, so it invites retaliation that can leave both worse off. Later economists made it precise as the <b>optimum tariff</b>, the tariff that best exploits a country’s market power (Topic 5).</p>
+
+  <h2 id="infant">4. Mill’s infant-industry exception</h2>
+  <p>In Book V, chapter 10, of the <em>Principles</em>, Mill accepted one more exception to free trade:</p>
+  <blockquote>The only case in which, on mere principles of political economy, protecting duties can be defensible, is when they are imposed temporarily (especially in a young and rising nation) in hopes of naturalizing a foreign industry, in itself perfectly suitable to the circumstances of the country.<cite>John Stuart Mill, <em>Principles of Political Economy</em> (1848), Book V, chapter 10</cite></blockquote>
+  <p>A country may be well suited to an industry and yet be unable to start it, because the established foreign producers have experience and skill that newcomers lack. Private firms will not bear the losses of the learning period, so a temporary tariff may be justified, provided it is removed once the industry can stand alone. Mill borrowed the idea from writers on American and German protection, and the passage became the most quoted concession in the history of free-trade economics. Protectionists in the United States and Australia cited it; Mill later regretted how it was used and insisted on the word “temporarily.” Friedrich List (Topic 9) built a far more ambitious theory of development on the same intuition.</p>
+  <p>Charles Bastable (1891) added a test: the future gains must be large enough to repay the costs of protection, with interest. Economists still argue about how often the test can be met in practice, and about whether governments can pick the right industries and remove protection on time.</p>
+
+  <h2 id="legacy">5. Legacy</h2>
+  <p>Mill’s chapter closed the classical theory of trade. Its two weak points, the terms-of-trade argument and the infant-industry argument, became the two main doors through which economists later justified departures from free trade. Alfred Marshall and Francis Edgeworth turned Mill’s reciprocal demand into the geometry of <b>offer curves</b> (Topic 5).</p>
+  <div class="think"><b>Question to think about:</b> If a large country can improve its terms of trade with a tariff, why do economists still recommend free trade?</div>
+
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">John Stuart Mill, <em>Principles of Political Economy</em> (1848), Book III, chapter 18.</p>
+  <p class="rd">Douglas A. Irwin, <em>Against the Tide</em> (1996), chapters 7–8.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought</em>, 3rd ed. (2011), chapter 8.</p>
+  <p class="rd">John Stuart Mill, “Of the Laws of Interchange between Nations,” in <em>Essays on Some Unsettled Questions of Political Economy</em> (1844).</p>
+  <p><a href="index.html#topic-4">← Back to Topic 4 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// England: 100 workers-units → 100 yd cloth (or 150 linen). Germany: size s → 200·s linen (or 100·s cloth).
+const LO = 1.5, HI = 2.0;
+function rd() {
+  const se = +$('se').value/100, sg = +$('sg').value/100, sz = +$('sz').value;
+  $('sev').textContent = Math.round(se*100) + '%'; $('sgv').textContent = Math.round(sg*100) + '%'; $('szv').textContent = sz.toFixed(1);
+  const Qc = 100, Ql = 200*sz;
+  const raw = sg*Ql/(se*Qc);           // linen per cloth that balances trade with full specialization
+  const p = Math.min(HI, Math.max(LO, raw));
+  const shareE = (p - LO)/(HI - LO);
+  const W = 640, H = 120, L = 40, R = 40, X = v => L + (v - 1.4)/(0.7)*(W-L-R);
+  let g = `<rect x="${X(LO)}" y="44" width="${X(HI)-X(LO)}" height="18" rx="4" fill="#e7eef7"/>`;
+  g += `<rect x="${X(LO)}" y="44" width="${X(p)-X(LO)}" height="18" rx="4" fill="#023e8a" opacity=".85"/>`;
+  g += `<rect x="${X(p)}" y="44" width="${X(HI)-X(p)}" height="18" rx="4" fill="#c47a2c" opacity=".85"/>`;
+  g += `<line x1="${X(p)}" x2="${X(p)}" y1="34" y2="72" stroke="#111" stroke-width="2"/><text x="${X(p)}" y="28" text-anchor="middle" font-weight="600" style="fill:#111">${p.toFixed(2)}</text>`;
+  g += `<text x="${X(LO)}" y="88" text-anchor="middle">1.5</text><text x="${X(LO)}" y="104" text-anchor="middle">England’s cost ratio</text>`;
+  g += `<text x="${X(HI)}" y="88" text-anchor="middle">2.0</text><text x="${X(HI)}" y="104" text-anchor="middle">Germany’s cost ratio</text>`;
+  if (shareE > 0.12) g += `<text x="${(X(LO)+X(p))/2}" y="57" text-anchor="middle" style="fill:#fff" font-weight="600">England’s gain</text>`;
+  if (shareE < 0.88) g += `<text x="${(X(p)+X(HI))/2}" y="57" text-anchor="middle" style="fill:#fff" font-weight="600">Germany’s gain</text>`;
+  $('rdchart').innerHTML = g;
+  let msg = `Ten yards of broadcloth exchange for <b>${(p*10).toFixed(1)} yards of linen</b>. England receives about <b>${Math.round(shareE*100)}%</b> of the gains from trade and Germany <b>${Math.round((1-shareE)*100)}%</b>. `;
+  if (raw <= LO) msg += `Germany’s demand for cloth is too weak, or Germany too small, to absorb all of England’s cloth even at England’s own cost ratio. The price falls to 1.5, England keeps making some linen itself, and <b>Germany takes all the gains</b>: the importance of being unimportant.`;
+  else if (raw >= HI) msg += `Germany’s demand for cloth is so strong, or Germany so large, that England’s cloth cannot satisfy it at any price below Germany’s cost ratio. The price rises to 2.0, Germany keeps making some cloth, and <b>England takes all the gains</b>.`;
+  else msg += `Both countries specialize completely. Try raising England’s demand for linen: its terms of trade worsen, and Germany’s share of the gains rises.`;
+  $('rdout').innerHTML = msg;
+}
+['se','sg','sz'].forEach(i => $(i).addEventListener('input', rd)); rd();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
