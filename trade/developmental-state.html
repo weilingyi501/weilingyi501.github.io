@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>The Developmental State | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the developmental state and trade: import substitution versus export orientation, Japan’s MITI, South Korea and Taiwan, Amsden’s reciprocity and getting prices wrong, Wade’s governed market, the World Bank’s East Asian Miracle report, and the debate over what explains East Asian growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/developmental-state.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 11</p>
+  <h1>The Developmental State</h1>
+  <p class="lead">Between the 1950s and the 1990s, Japan, South Korea, and Taiwan grew faster than any economies had grown before, moving from poverty to high income within two generations. All three became great exporters. Were they proof of the benefits of free trade and open markets, or of the opposite? The debate over the “East Asian miracle” became the central argument about trade and development in the late twentieth century.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#two">Two strategies</a></li><li><a href="#japan">Japan and MITI</a></li><li><a href="#korea">South Korea and Taiwan</a></li><li><a href="#theory">Theories of the developmental state</a></li><li><a href="#miracle">The East Asian Miracle debate</a></li><li><a href="#limits">Limits and lessons</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="two">1. Two strategies</h2>
+  <p>After 1945, most developing countries set out to industrialize. Many, especially in Latin America and South Asia, followed a strategy of <b>import-substituting industrialization</b> (ISI): high tariffs and quotas on manufactured imports, so that domestic firms would produce for the home market goods that had been imported. The strategy drew on structuralist ideas (Topic 18) and built substantial industries, but by the 1970s it often faced high costs, small markets, and recurrent shortages of foreign exchange.</p>
+  <p>The East Asian economies took a different path from the 1960s. They kept many import controls but pushed their firms to export manufactured goods to world markets. Neoclassical economists such as Bela Balassa and Anne Krueger called this <b>export-oriented industrialization</b> and attributed its success to openness and realistic prices.</p>
+  <table>
+    <tr><th></th><th>Import substitution (typical Latin American case)</th><th>Export orientation (typical East Asian case)</th></tr>
+    <tr><td>Main market</td><td>Protected domestic market</td><td>World market, alongside a protected home market</td></tr>
+    <tr><td>Protection</td><td>High and long-lasting, across many industries</td><td>Selective, and conditional on performance</td></tr>
+    <tr><td>Discipline on firms</td><td>Weak; protection rarely withdrawn</td><td>Export targets and international competition</td></tr>
+    <tr><td>Foreign exchange</td><td>Recurrent shortages limit growth</td><td>Exports finance imports of machinery</td></tr>
+  </table>
+
+  <h2 id="japan">2. Japan and MITI</h2>
+  <p>Chalmers Johnson’s <em>MITI and the Japanese Miracle</em> (1982) gave the concept its name. Johnson traced Japan’s industrial policy to the Ministry of International Trade and Industry (MITI) and its predecessors from the 1920s. He distinguished the <b>plan-rational</b> state, which sets substantive goals for the structure of industry, from the <b>market-rational</b> state of the United States, which sets rules and leaves outcomes to the market. In the 1950s and 1960s, MITI controlled foreign exchange and the import of technology, guided investment through the banking system and the government’s postal savings, organized cartels in declining industries, and steered firms toward steel, shipbuilding, chemicals, automobiles, and electronics. Its main tool was “administrative guidance,” informal pressure backed by the state’s power to grant licenses and credit. Johnson argued that the key was an elite bureaucracy with real authority, insulated from short-term political pressures.</p>
+
+  <h2 id="korea">3. South Korea and Taiwan</h2>
+  <p>After a military coup in 1961, the South Korean government of Park Chung-hee nationalized the banks and used directed, subsidized credit to channel investment to favored firms, the large family conglomerates called <b>chaebol</b>. Firms received cheap loans, tax breaks, and protection at home, but had to meet export targets. Park chaired monthly export promotion meetings at which officials and business leaders reviewed performance. From 1973 the Heavy and Chemical Industry drive pushed firms into steel, shipbuilding, petrochemicals, machinery, and electronics, industries in which Korea had no comparative advantage at the time. The steel maker POSCO, a state enterprise established in 1968, became one of the world’s most efficient producers.</p>
+  <p>Taiwan relied more on state-owned enterprises in upstream industries and on small and medium private firms downstream. Its government created public research institutes, such as the Industrial Technology Research Institute (1973), which helped launch the semiconductor industry, including the Taiwan Semiconductor Manufacturing Company in 1987.</p>
+
+  <h2 id="theory">4. Theories of the developmental state</h2>
+  <ul>
+    <li><b>Getting prices “wrong.”</b> In <em>Asia’s Next Giant</em> (1989), Alice Amsden argued that South Korea succeeded not by getting prices right, as neoclassical economists advised, but by deliberately distorting them through subsidies and protection to make new industries profitable. The key was <b>reciprocity</b>: the state gave subsidies only in exchange for performance standards, especially export targets. Firms that failed lost their support. Late industrializers, Amsden argued, grew by learning, not by inventing, and learning required this kind of disciplined support.</li>
+    <li><b>Governing the market.</b> Robert Wade’s <em>Governing the Market</em> (1990), a study of Taiwan, argued that the state sometimes <em>followed</em> the market, helping industries that firms were already entering, and sometimes <em>led</em> it, pushing firms into industries they would not have chosen. Both forms of intervention mattered.</li>
+    <li><b>Embedded autonomy.</b> Peter Evans (1995) explained why some states could do this and others could not. Effective developmental states had a coherent, meritocratic bureaucracy that was autonomous from particular interests, yet embedded in dense networks of contact with business. States with autonomy but no embeddedness lacked information; states with embeddedness but no autonomy were captured.</li>
+  </ul>
+
+  <h2 id="miracle">5. The East Asian Miracle debate</h2>
+  <p>In 1993, under pressure from the Japanese government, the World Bank published <em>The East Asian Miracle</em>. The report credited the region’s success mainly to “getting the fundamentals right”: macroeconomic stability, high saving and investment, broad-based education, and openness to trade. It accepted that some interventions, especially export promotion and directed credit in Japan and Korea, had worked, but concluded that selective industrial policy had generally not changed the structure of industry much and would be hard to copy elsewhere. Its preferred term was a <b>market-friendly</b> approach.</p>
+  <p>Critics on both sides were unsatisfied. Amsden, Wade, and others argued that the report understated the role of the state. Paul Krugman (1994) argued from the other direction that much of East Asian growth came from accumulating capital and labor rather than from rising productivity, so the “miracle” was less miraculous than it seemed. Dani Rodrik (1995) argued that the crucial interventions in Korea and Taiwan were those that raised the profitability of investment at a time when coordination problems held it back. The Asian financial crisis of 1997–98 led some to blame cozy ties between states, banks, and conglomerates, while others blamed premature liberalization of finance.</p>
+
+  <h2 id="limits">6. Limits and lessons</h2>
+  <p>Several features of the East Asian experience may be hard to reproduce. The three economies carried out sweeping land reforms after 1945, which reduced inequality and broke the power of landlords. They received large amounts of U.S. aid and enjoyed access to the U.S. market during the Cold War. Their states were authoritarian for much of the period. And the rules of the world economy have since changed: the WTO’s agreements on subsidies, investment measures, and intellectual property (1995) prohibit many of the tools they used. Whether other countries can follow the same path, and under what rules, is the subject of Topic 12. China, which combined export orientation with a large state sector and extensive industrial policy after 1978, is the largest test case.</p>
+  <div class="think"><b>Question to think about:</b> Was East Asia’s success a case for free trade or against it?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Alice Amsden, <em>Asia’s Next Giant: South Korea and Late Industrialization</em> (1989), chapter 1.</p>
+  <p class="rd">Robert Wade, <em>Governing the Market: Economic Theory and the Role of Government in East Asian Industrialization</em> (1990), chapter 1.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Ha-Joon Chang, <em>Economics: The User’s Guide</em> (2014), chapter 4 (the Developmentalist tradition).</p>
+  <p class="rd">World Bank, <em>The East Asian Miracle: Economic Growth and Public Policy</em> (1993), overview.</p>
+  <p><a href="index.html#topic-11">← Back to Topic 11 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

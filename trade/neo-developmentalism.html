@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Neo-Developmentalism: Kicking Away the Ladder | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on neo-developmentalism and trade: the WTO and policy space, Ha-Joon Chang’s Kicking Away the Ladder, Erik Reinert and the Other Canon, Justin Yifu Lin’s new structural economics, an interactive guide to the Lin–Chang debate, and the return of industrial policy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/neo-developmentalism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 12</p>
+  <h1>Neo-Developmentalism: Kicking Away the Ladder</h1>
+  <p class="lead">In the 1980s and 1990s, the Washington Consensus urged developing countries to liberalize trade, and the new World Trade Organization wrote many of those prescriptions into binding rules. A new generation of development economists replied that today’s rich countries had followed very different policies when they were developing. This topic covers their historical argument, the debate over how far a country should depart from its comparative advantage, and the recent return of industrial policy in rich countries themselves.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#wto">The WTO and policy space</a></li><li><a href="#ladder">Kicking away the ladder</a></li><li><a href="#reinert">Reinert and the Other Canon</a></li><li><a href="#lin">Lin’s new structural economics</a></li><li><a href="#debate">The Lin–Chang debate (interactive)</a></li><li><a href="#return">The return of industrial policy</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="wto">1. The WTO and policy space</h2>
+  <p>The Uruguay Round of trade negotiations (1986–94) created the World Trade Organization in 1995. Unlike the GATT, which had dealt mainly with tariffs on goods, the WTO’s agreements reached deep into domestic policy:</p>
+  <ul>
+    <li>The <b>Agreement on Subsidies and Countervailing Measures</b> prohibited subsidies conditional on exporting or on using domestic rather than imported inputs, the kind of export subsidies South Korea had used (Topic 11). The least developed countries received exemptions or transition periods.</li>
+    <li>The <b>Agreement on Trade-Related Investment Measures</b> (TRIMs) prohibited requirements that foreign investors use a certain share of local inputs or balance their imports with exports.</li>
+    <li>The <b>Agreement on Trade-Related Aspects of Intellectual Property Rights</b> (TRIPS) required all members to enforce patents and copyrights at standards close to those of rich countries, raising the cost of copying foreign technology.</li>
+  </ul>
+  <p>Robert Wade (2003) argued that these rules were “shrinking the development space,” the room for policies that developing countries could use to build new industries. Bilateral and regional trade agreements often went further. Defenders replied that the rules still allowed tariffs within agreed limits, subsidies for research and regional development, and many other forms of support, and that they protected developing countries from the far larger subsidies of the rich.</p>
+
+  <h2 id="ladder">2. Kicking away the ladder</h2>
+  <p>Ha-Joon Chang’s <em>Kicking Away the Ladder: Development Strategy in Historical Perspective</em> (2002) took its title from Friedrich List (Topic 9). Chang surveyed the economic history of Britain, the United States, Germany, France, Sweden, Japan, and others, and argued that almost all of today’s rich countries used tariffs, subsidies, and other forms of industrial promotion when they were catching up:</p>
+  <ul>
+    <li>Britain protected its woolen industry from the fifteenth century and, under Robert Walpole’s reforms of 1721, adopted a comprehensive program of tariffs, export subsidies, and duty drawbacks to promote manufactures. It turned to free trade only in the 1840s, once its industrial lead was secure.</li>
+    <li>The United States, which Chang called “the mother country and bastion of modern protectionism,” had among the highest tariffs on manufactures in the world from the 1820s until after the Second World War.</li>
+    <li>Germany, Japan, and the East Asian economies combined protection with active state support for industry and technology.</li>
+  </ul>
+  <p>Chang also examined institutions. Rich countries had adopted democracy, independent central banks, modern patent laws, and limits on child labor only gradually and late in their development. Asking poor countries to adopt “global standard” policies and institutions at once, he argued, was asking them to climb a ladder the rich had kicked away. Critics, including Douglas Irwin, questioned whether protection had caused growth in these cases or merely accompanied it.</p>
+
+  <h2 id="reinert">3. Reinert and the Other Canon</h2>
+  <p>Erik Reinert’s <em>How Rich Countries Got Rich … and Why Poor Countries Stay Poor</em> (2007) drew a sharp line between two traditions. The standard canon, from Smith and Ricardo to neoclassical economics, treats all economic activities as qualitatively alike and focuses on exchange. The “Other Canon,” running from Antonio Serra and the mercantilists through List and the historical school (Topic 10) to Schumpeter, focuses on production, learning, and innovation. It holds that economic activities differ in quality. Manufacturing and other activities with increasing returns, rapid technical progress, and imperfect competition generate rising wages and spread knowledge; raw-material production subject to diminishing returns does not. A country that specializes by comparative advantage in low-quality activities may specialize in being poor. Reinert pointed to Serra’s observation in 1613 that Venice, with no natural resources but many crafts, was rich, while resource-rich Naples was poor.</p>
+
+  <h2 id="lin">4. Lin’s new structural economics</h2>
+  <p>Justin Yifu Lin, chief economist of the World Bank from 2008 to 2012, proposed what he called <b>new structural economics</b>. Lin agreed that the state has a central role in development, but argued that it should help a country exploit its comparative advantage, not defy it. A country’s comparative advantage is determined by its endowments of labor, capital, and natural resources, which change as the economy grows. A poor, labor-abundant country should begin with labor-intensive industries and move up step by step as it accumulates capital.</p>
+  <p>The state’s task is to <b>facilitate</b>: to identify industries consistent with the country’s <b>latent comparative advantage</b>, for instance by looking at industries that have succeeded in dynamically growing countries with somewhat higher incomes and similar endowments, and then to remove the constraints on those industries by providing infrastructure, special economic zones, and help for pioneering firms. Lin argued that import substitution in Latin America and the Soviet Union failed because it pushed capital-intensive heavy industry far beyond what endowments could support, while China after 1978 succeeded once it moved toward labor-intensive exports.</p>
+
+  <h2 id="debate">5. The Lin–Chang debate</h2>
+  <p>In 2009, Lin and Chang debated in the journal <em>Development Policy Review</em> under the title “Should Industrial Policy in Developing Countries Conform to Comparative Advantage or Defy It?” Choose a question to compare their positions.</p>
+  <div class="box" id="lcbox">
+    <h3>Follow or defy comparative advantage?</h3>
+    <p id="lcbtns"></p>
+    <div class="vs"><div><b>Justin Yifu Lin</b><span id="lcl"></span></div><div><b>Ha-Joon Chang</b><span id="lcc"></span></div></div>
+    <p class="note" id="lcn"></p>
+  </div>
+
+  <h2 id="return">6. The return of industrial policy</h2>
+  <p>For decades after 1980, “industrial policy” was widely treated as a discredited idea. Since the 2008 financial crisis, and especially since the late 2010s, it has returned, now in the rich countries. China’s “Made in China 2025” plan (2015) set targets for advanced industries. The United States passed the CHIPS and Science Act and the Inflation Reduction Act in 2022, with large subsidies for semiconductors and clean energy, some tied to domestic production. The European Union and Japan responded with their own programs. The motives include national security, resilient supply chains, competition with China, and the energy transition, rather than catching up.</p>
+  <p>Research on the subject has also revived. Réka Juhász, Nathan Lane, and Dani Rodrik (2024) surveyed a new generation of studies that use better data and methods. Some find that targeted industrial policies had lasting effects, for example Nathan Lane’s study of South Korea’s Heavy and Chemical Industry drive. The debate is no longer only about whether developing countries may use such policies, but about which rules should govern a world in which every major economy uses them.</p>
+  <div class="think"><b>Question to think about:</b> Lin says a country should climb the ladder of comparative advantage step by step; Chang says it must sometimes jump. Which do the cases support?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Ha-Joon Chang, <em>Kicking Away the Ladder: Development Strategy in Historical Perspective</em> (2002), chapter 2.</p>
+  <p class="rd">Justin Yifu Lin and Ha-Joon Chang, “Should Industrial Policy in Developing Countries Conform to Comparative Advantage or Defy It? A Debate between Justin Lin and Ha-Joon Chang,” <em>Development Policy Review</em> (2009).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Erik Reinert, <em>How Rich Countries Got Rich … and Why Poor Countries Stay Poor</em> (2007), chapter 1.</p>
+  <p class="rd">Réka Juhász, Nathan Lane, and Dani Rodrik, “The New Economics of Industrial Policy,” <em>Annual Review of Economics</em> (2024).</p>
+  <p><a href="index.html#topic-12">← Back to Topic 12 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const Q = [
+  ['What determines comparative advantage?',
+   'A country’s endowments of labor, capital, and natural resources at a given time. They change as the country saves and invests.',
+   'Endowments matter, but capabilities matter more: the skills, organizations, and technologies that firms acquire by producing. These can be built deliberately.',
+   'Both accept that comparative advantage changes over time. They disagree on whether policy should wait for it to change or should change it.'],
+  ['How far should a country move beyond its current advantage?',
+   'Only slightly. Target industries that are just beyond the current frontier, in line with latent comparative advantage. Large leaps waste capital and require heavy subsidies that cannot be sustained.',
+   'Often a long way. Korea entered steel and shipbuilding, and Japan entered automobiles, when their comparative advantage lay in textiles and toys. Successful catch-up has always required defying comparative advantage to some degree.',
+   'Lin calls Korea’s leaps modest, since Korea followed Japan; Chang replies that Korea’s capital per worker was far below what the industries required.'],
+  ['What explains the failures of import substitution?',
+   'Strategies that defied comparative advantage by pushing capital-intensive heavy industry in capital-scarce economies. The firms were not viable without permanent protection.',
+   'Not the ambition but the execution: protection without discipline, export targets, or a plan to make firms competitive. Growth under import substitution was in fact faster than after liberalization in many countries.',
+   'The disagreement is partly empirical, about growth before and after 1980 in Latin America and Africa.'],
+  ['What should the state do?',
+   'Facilitate: identify promising industries, provide infrastructure and industrial zones, attract foreign investors, and compensate pioneer firms for the information they generate.',
+   'Lead when needed: protect, subsidize, coordinate investment, build state enterprises, and discipline firms with performance requirements.',
+   'Both reject the Washington Consensus view that the state should only get prices right.'],
+  ['What is the main risk?',
+   'Overambitious targets that create unviable firms, rent-seeking, and macroeconomic crises.',
+   'Timidity: a country that only follows its current comparative advantage may never move out of low-productivity activities.',
+   'Each sees the other’s preferred policy as the riskier one.'],
+];
+let cur = 0;
+function lc() {
+  $('lcbtns').innerHTML = Q.map((q, i) => `<button type="button" class="btn${i === cur ? ' on' : ''}" data-i="${i}">${q[0]}</button>`).join('');
+  $('lcl').textContent = Q[cur][1]; $('lcc').textContent = Q[cur][2]; $('lcn').textContent = Q[cur][3];
+  document.querySelectorAll('#lcbtns .btn').forEach(b => b.addEventListener('click', () => { cur = +b.dataset.i; lc(); }));
+}
+lc();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
