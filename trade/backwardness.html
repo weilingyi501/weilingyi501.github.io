@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Old Institutionalism and the Advantages of Backwardness | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on institutionalist approaches to trade and catching up: Veblen on Imperial Germany and the penalty of taking the lead, Commons on institutions, Gerschenkron’s advantages of backwardness, Abramovitz’s social capability, and an interactive catch-up growth model.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/backwardness.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 13</p>
+  <h1>Old Institutionalism and the Advantages of Backwardness</h1>
+  <p class="lead">Before 1914, Germany and the United States overtook Britain, the first industrial nation. Institutional economists asked how this was possible. Their answer turned on the borrowing of technology across borders, and on the institutions that allowed some latecomers to borrow successfully while others fell further behind. This topic follows the argument from Thorstein Veblen to Alexander Gerschenkron and Moses Abramovitz.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#inst">Institutionalism and trade</a></li><li><a href="#veblen">Veblen on Imperial Germany</a></li><li><a href="#commons">Commons and the rules of exchange</a></li><li><a href="#gersch">Gerschenkron’s advantages of backwardness</a></li><li><a href="#abram">Social capability and convergence</a></li><li><a href="#model">Catching up, forging ahead, falling behind (interactive)</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="inst">1. Institutionalism and trade</h2>
+  <p>American institutional economics, which grew out of the German historical school (Topic 10) and the American reform movements of the late nineteenth century, never produced a distinct theory of international trade comparable to Ricardo’s or Heckscher–Ohlin’s. Its founders, Thorstein Veblen, John R. Commons, and Wesley Mitchell, objected to the whole method of such theories. Markets, they argued, are not natural mechanisms that allocate given resources but evolving institutions: sets of habits, laws, and organizations that change over time. Technology develops cumulatively and spreads across borders. To understand trade and development, one has to study how technology and institutions interact in particular countries and periods. The institutionalists’ contribution to trade theory came through this historical and comparative approach, above all in the study of latecomers.</p>
+
+  <h2 id="veblen">2. Veblen on Imperial Germany</h2>
+  <p>In <em>Imperial Germany and the Industrial Revolution</em> (1915), written during the First World War, Veblen asked how Germany had become an industrial power within a few decades. His answer was that Germany had <b>borrowed</b> the industrial technology that Britain had developed over a century, without also inheriting the British institutions and habits that had grown up around it.</p>
+  <p>Britain, Veblen argued, suffered a <b>penalty of taking the lead</b>. Its railways had been built with small wagons and narrow tunnels that later could not be changed without enormous cost; its factories, towns, and business practices had grown up around older techniques; and its business class had acquired the habits of a leisured gentry. Germany could adopt the newest technology at once, on a large scale, without the dead weight of earlier investments and conventions. But Germany combined modern technology with an older, dynastic state that put it to military uses, and Veblen thought the combination unstable and dangerous. He applied a similar argument to Japan.</p>
+  <p>The idea that the latecomer can skip stages by borrowing the leader’s technology, and that the leader can become locked into outdated arrangements, became a lasting theme in the study of trade, technology, and growth.</p>
+
+  <h2 id="commons">3. Commons and the rules of exchange</h2>
+  <p>John R. Commons, at the University of Wisconsin, made the <b>transaction</b>, rather than the commodity, the basic unit of economics. Every exchange, he argued, rests on working rules that define property rights, enforce contracts, and settle disputes, rules made by courts, legislatures, and organizations through collective action. In <em>Legal Foundations of Capitalism</em> (1924) and <em>Institutional Economics</em> (1934), he traced how American courts had redefined property and contract as the economy changed. Applied to trade, the point is that markets, national or international, do not exist before the rules that constitute them. Each trade agreement, from the commercial treaties of the nineteenth century to the WTO (Topic 12), is a set of working rules about what may be traded and on what terms. This view anticipates both Polanyi (Topic 14) and new institutional economics (Topic 15), though the latter would develop it with very different tools.</p>
+
+  <h2 id="gersch">4. Gerschenkron’s advantages of backwardness</h2>
+  <p>Alexander Gerschenkron, an economic historian born in Odessa who taught at Harvard, generalized Veblen’s insight in his essay “Economic Backwardness in Historical Perspective” (first published in 1952 and reprinted as the title essay of his 1962 book). Comparing Britain, France, Germany, Italy, Austria, and Russia, he argued that the more backward a country was when it began to industrialize, the more its industrialization differed from Britain’s:</p>
+  <ul>
+    <li>It came as a sudden <b>great spurt</b> rather than a gradual process, because the gap between what was possible and what existed was larger.</li>
+    <li>It emphasized <b>large plants and enterprises</b>, using the latest technology, and <b>producer goods</b> such as iron, steel, and machinery rather than consumer goods.</li>
+    <li>It put more pressure on the consumption of the population and relied less on agriculture as a growing market.</li>
+    <li>It required <b>special institutions</b> to mobilize capital that the market alone could not provide. In moderately backward Germany, these were the large investment banks; in very backward Russia, where even banks could not raise enough capital, the state itself took the lead.</li>
+    <li>It needed a powerful <b>ideology</b> to inspire the effort, such as Saint-Simonianism in France or nationalism in Germany.</li>
+  </ul>
+  <p>Backwardness was therefore an opportunity as well as a handicap. The latecomer could import technology, capital, and skilled workers from abroad. Gerschenkron’s approach was explicitly a criticism of stage theories (Topic 10), which held that every country had to pass through the same stages as Britain. Latecomers did not repeat the leader’s history; they substituted new institutions for the prerequisites they lacked. This idea shaped later analyses of state-led development, including those of the developmental state (Topic 11).</p>
+
+  <h2 id="abram">5. Social capability and convergence</h2>
+  <p>If backwardness offers an advantage, why don’t all poor countries catch up? Moses Abramovitz, in “Catching Up, Forging Ahead, and Falling Behind” (1986), answered that the potential for rapid growth from borrowing technology is realized only by countries with sufficient <b>social capability</b>: education, technical competence, financial and commercial institutions able to mobilize capital, and political stability. A country that is technologically backward but socially advanced is in a strong position to catch up. One that is backward in both is not. Abramovitz also noted that technology developed in the leading country is suited to its conditions, such as its large markets and abundant capital, and may fit followers poorly. Economists later called this <b>conditional convergence</b>: poor countries tend to grow faster than rich ones only once their institutions and human capital are accounted for.</p>
+
+  <div class="box" id="cbox">
+    <h3>Catching up, forging ahead, falling behind</h3>
+    <p class="note">The leader’s income grows 2% a year. A follower starts at one-fifth of the leader’s income. Its growth has two parts: a base rate, and a catch-up bonus proportional to the technology gap that it can borrow from, scaled by its social capability. Without social capability, the gap is just a gap.</p>
+    <div class="grid2">
+      <div><label>Follower’s social capability: <b id="scv">0.6</b></label><input type="range" id="sc" min="0" max="1" step="0.05" value="0.6"></div>
+      <div><label>Follower’s base growth rate: <b id="bgv">1.5%</b></label><input type="range" id="bg" min="0" max="3" step="0.1" value="1.5"></div>
+    </div>
+    <svg id="cchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Income of the leader and the follower over 100 years"></svg>
+    <div class="out" id="cout"></div>
+  </div>
+  <div class="think"><b>Question to think about:</b> Is being a latecomer an advantage or a disadvantage? What decides?</div>
+
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Thorstein Veblen, <em>Imperial Germany and the Industrial Revolution</em> (1915), selections.</p>
+  <p class="rd">Alexander Gerschenkron, <em>Economic Backwardness in Historical Perspective</em> (1962), chapter 1.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought</em>, 3rd ed. (2011), chapter 12.</p>
+  <p class="rd">Moses Abramovitz, “Catching Up, Forging Ahead, and Falling Behind,” <em>Journal of Economic History</em> (1986).</p>
+  <p><a href="index.html#topic-13">← Back to Topic 13 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function catchup() {
+  const sc = +$('sc').value, bg = +$('bg').value/100;
+  $('scv').textContent = sc.toFixed(2).replace(/0$/, ''); $('bgv').textContent = (bg*100).toFixed(1) + '%';
+  const N = 100, gL = 0.02, beta = 0.04; let yL = 100, yF = 20; const L = [], F = [];
+  for (let t = 0; t <= N; t++) {
+    L.push(yL); F.push(yF);
+    const gap = Math.max(0, Math.log(yL/yF));
+    yL *= 1 + gL; yF *= 1 + bg + beta*sc*gap;
+  }
+  const W = 640, H = 260, Lm = 50, R = 20, T = 14, B = 34, M = Math.max(...L, ...F)*1.05;
+  const X = t => Lm + t/N*(W-Lm-R), Y = v => H-B - v/M*(H-B-T);
+  let g = `<line x1="${Lm}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${Lm}" y1="${T}" x2="${Lm}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  const step = M > 1200 ? 500 : M > 600 ? 200 : 100;
+  for (let v = 0; v <= M; v += step) g += `<text x="${Lm-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`;
+  [0,25,50,75,100].forEach(t => g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`);
+  g += `<text x="${(Lm+W-R)/2}" y="${H-4}" text-anchor="middle">years</text>`;
+  const path = arr => arr.map((v, i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ');
+  g += `<path d="${path(L)}" fill="none" stroke="#023e8a" stroke-width="2.4"/><path d="${path(F)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/>`;
+  g += `<text x="${X(N)-4}" y="${Y(L[N])-8}" text-anchor="end" style="fill:#023e8a">leader</text><text x="${X(N)-4}" y="${Y(F[N]) + (F[N] > L[N]*0.93 ? 16 : -8)}" text-anchor="end" style="fill:#c47a2c">follower</text>`;
+  $('cchart').innerHTML = g;
+  const r0 = F[0]/L[0], r50 = F[50]/L[50], r100 = F[N]/L[N];
+  let msg = `Relative to the leader, the follower’s income moves from ${Math.round(r0*100)}% to <b>${Math.round(r50*100)}%</b> after 50 years and <b>${Math.round(r100*100)}%</b> after 100 years. `;
+  if (r100 > r0 + 0.3) msg += 'Its social capability lets it exploit the advantages of backwardness: the wider the gap, the faster it grows, so it converges toward the leader.';
+  else if (r100 > r0 + 0.02) msg += 'It catches up, but slowly: its limited social capability leaves most of the potential of borrowed technology unused.';
+  else if (r100 >= r0 - 0.02) msg += 'The gap stays roughly where it is.';
+  else msg += '<b>It falls further behind</b>: without the capability to borrow technology, the gap offers no advantage, and the leader’s faster growth widens it.';
+  $('cout').innerHTML = msg;
+}
+['sc','bg'].forEach(i => $(i).addEventListener('input', catchup)); catchup();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

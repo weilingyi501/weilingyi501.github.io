@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Rodrik’s Globalization Trilemma | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Dani Rodrik’s analysis of the political limits of globalization: Has Globalization Gone Too Far?, openness and the size of government, the political trilemma of the world economy with an interactive triangle, and the case for a smarter globalization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/trilemma.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 16</p>
+  <h1>Rodrik’s Globalization Trilemma</h1>
+  <p class="lead">Dani Rodrik is a mainstream trade economist who has spent three decades warning his profession that it underrated the political costs of deep economic integration. His trilemma, which says that a country cannot have hyperglobalization, democracy, and national sovereignty all at once, is one of the most widely used frameworks for understanding the backlash against globalization.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#far">Has globalization gone too far?</a></li><li><a href="#gov">Open economies and big governments</a></li><li><a href="#tri">The political trilemma (interactive)</a></li><li><a href="#deep">From shallow to deep integration</a></li><li><a href="#smart">A smarter globalization</a></li><li><a href="#critics">Critics and the backlash</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="far">1. Has globalization gone too far?</h2>
+  <p>In 1997, at the height of enthusiasm for globalization, Rodrik published a short book with a provocative title, <em>Has Globalization Gone Too Far?</em> He accepted that trade raises national income, but identified three sources of tension that economists tended to ignore:</p>
+  <ul>
+    <li><b>Bargaining power.</b> When firms can move production abroad, or credibly threaten to, workers become easier to replace. Labor’s bargaining power falls, and workers bear more of the cost of improving working conditions and benefits.</li>
+    <li><b>Conflicting social norms.</b> Trade with countries that have very different labor, environmental, or social standards can undermine domestic norms and arrangements that people regard as legitimate, as in disputes over child labor or the ability to strike.</li>
+    <li><b>Social insurance.</b> Openness increases economic insecurity, so it raises the demand for social insurance at the very time that capital mobility makes it harder for governments to tax capital to pay for it.</li>
+  </ul>
+  <p>Rodrik warned that if these tensions were ignored, the social consensus in favor of open markets could break down, as it had in the 1930s.</p>
+
+  <h2 id="gov">2. Open economies and big governments</h2>
+  <p>In a 1998 article, “Why Do More Open Economies Have Bigger Governments?”, Rodrik documented a striking pattern: across countries, those more exposed to trade tend to have larger governments. Small, open European economies such as Sweden, the Netherlands, and Austria had some of the largest welfare states in the world. His explanation was that governments in open economies provide social insurance against the risks of external shocks. This is the <b>compensation hypothesis</b>, and it fits the bargain that Ruggie called embedded liberalism (Topic 14): citizens accept openness because the state protects them from its worst effects.</p>
+
+  <h2 id="tri">3. The political trilemma</h2>
+  <p>In <em>The Globalization Paradox</em> (2011), Rodrik generalized the argument as a trilemma. Of three things, a country can have at most two at once:</p>
+  <ul>
+    <li><b>Hyperglobalization:</b> deep economic integration, in which national differences in regulation, taxes, and standards are removed so that markets operate across borders as within them.</li>
+    <li><b>The nation-state:</b> national sovereignty, with policy made by and for the national community.</li>
+    <li><b>Democratic politics:</b> policy that responds to the preferences of citizens, including demands for social protection.</li>
+  </ul>
+  <p>Click two corners of the triangle to see the world they make possible.</p>
+
+  <div class="box" id="tribox">
+    <h3>Pick two</h3>
+    <svg id="trisvg" viewBox="0 0 640 345" width="100%" role="img" aria-label="The trilemma triangle with clickable corners"></svg>
+    <div class="out" id="triout"></div>
+  </div>
+
+  <h2 id="deep">4. From shallow to deep integration</h2>
+  <p>Rodrik’s argument rests on a distinction between two kinds of trade agreement. The GATT era (1947–94) was one of <b>shallow integration</b>: countries cut tariffs on manufactured goods but kept wide latitude over agriculture, services, investment, capital flows, and domestic regulation. Since the 1990s, agreements have pursued <b>deep integration</b>, reaching into intellectual property, health and safety standards, investment rules with their own dispute courts, subsidies, and financial regulation. The gains from removing the remaining tariffs are small, Rodrik notes, because tariffs are already low. The new rules mainly redistribute, often toward capital and large firms, while constraining democratic choices at home.</p>
+  <p>Financial globalization was, in his view, the clearest case of hyperglobalization outrunning its political foundations. Free capital movement exposed countries to sudden stops and crises, from Mexico (1994–95) and East Asia (1997–98) to Argentina (2001) and the euro area after 2010, without the global institutions that might manage them.</p>
+
+  <h2 id="smart">5. A smarter globalization</h2>
+  <p>Rodrik’s own preference is the Bretton Woods corner, updated for the twenty-first century. Among the principles he proposed for a “sane” globalization are these:</p>
+  <ul>
+    <li>Markets must be embedded in systems of governance; there is no market without rules, and the rules are mostly national.</li>
+    <li>Democratic governance and political communities are organized largely within nation-states, and will remain so for the foreseeable future.</li>
+    <li>Countries have the right to protect their own social arrangements, regulations, and institutions, and should not impose theirs on others.</li>
+    <li>The purpose of international economic arrangements is to set traffic rules for managing the interface between national institutions, not to override them.</li>
+    <li>Non-democratic countries cannot count on the same rights and privileges in the international economic order as democracies.</li>
+  </ul>
+  <p>In practice, this would allow countries to use safeguards when trade threatens domestic norms, restrict capital flows, and pursue industrial policies, within agreed limits.</p>
+
+  <h2 id="critics">6. Critics and the backlash</h2>
+  <p>Critics have raised several objections. Free traders argue that Rodrik overstates the constraints that trade agreements impose and understates the protectionist risks of loosening them. Some political scientists treat the trilemma as a spectrum of trade-offs rather than a strict impossibility. Supporters of supranational governance point to the European Union as an imperfect attempt at the global-federalism corner, while critics on the left argue that the nation-state is too weak to tame global capital, which requires international labor and social standards.</p>
+  <p>Events since 2016, including Brexit, the U.S.–China tariff war, and the return of industrial policy (Topic 12), have been widely read as the political reaction Rodrik predicted. Whether the resulting order will look more like his smart globalization or like the fragmented, protectionist world of the 1930s is an open question.</p>
+  <div class="think"><b>Question to think about:</b> Which corner of the trilemma should a country give up, and who should decide?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Dani Rodrik, <em>The Globalization Paradox: Democracy and the Future of the World Economy</em> (2011), chapters 9 and 12.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Dani Rodrik, <em>Has Globalization Gone Too Far?</em> (1997), chapter 1.</p>
+  <p class="rd">Dani Rodrik, “Why Do More Open Economies Have Bigger Governments?” <em>Journal of Political Economy</em> (1998).</p>
+  <p><a href="index.html#topic-16">← Back to Topic 16 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const V = {g:{x:320, y:46, name:'Hyperglobalization'}, n:{x:120, y:282, name:'Nation-state'}, d:{x:520, y:282, name:'Democratic politics'}};
+const R = {
+  'g+n': ['The golden straitjacket', 'Keep hyperglobalization and the nation-state, and give up democratic politics. Governments remain sovereign but must follow the policies that global markets reward: low taxes on capital, flexible labor markets, balanced budgets, independent central banks. Thomas Friedman called this the “golden straitjacket”: the economy grows, and politics shrinks. The gold standard era before 1914, when few workers could vote, came close to it.'],
+  'g+d': ['Global federalism', 'Keep hyperglobalization and democracy, and give up the nation-state. Rules and social protection are made democratically at the global level, as they are within the United States for its fifty states. Markets and democracy are matched in scope. It is the logical answer, but the world lacks the shared political community it would require. The European Union is a partial, regional attempt, and its difficulties show how hard this is.'],
+  'n+d': ['The Bretton Woods compromise', 'Keep the nation-state and democracy, and give up hyperglobalization. Countries accept limited, shallow integration: tariffs come down in stages, but capital flows are controlled and each country keeps room for its own social arrangements, industrial policy, and safeguards. This was the postwar order from 1945 to the 1970s, and it is the corner Rodrik prefers.'],
+};
+let pick = [];
+function tri() {
+  let g = '';
+  const on = (a, b) => pick.includes(a) && pick.includes(b);
+  [['g','n'],['g','d'],['n','d']].forEach(([a, b]) => {
+    const A = V[a], B = V[b], k = [a, b].sort().join('+'), sel = on(a, b);
+    g += `<line x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" stroke="${sel ? '#023e8a' : '#ccd2d8'}" stroke-width="${sel ? 5 : 2}"/>`;
+    const key = k === 'd+g' ? 'g+d' : k === 'd+n' ? 'n+d' : k;
+    g += `<text x="${(A.x+B.x)/2 + (a === 'n' && b === 'd' ? 0 : a === 'g' && b === 'n' ? -62 : 62)}" y="${(A.y+B.y)/2 + (a === 'n' && b === 'd' ? 26 : 0)}" text-anchor="middle" style="fill:${sel ? '#023e8a' : '#8a929b'};font-weight:600;font-size:13px">${R[key][0]}</text>`;
+  });
+  Object.entries(V).forEach(([k, v]) => {
+    const sel = pick.includes(k);
+    g += `<g class="vtx" data-k="${k}" style="cursor:pointer" tabindex="0" role="button" aria-pressed="${sel}"><circle cx="${v.x}" cy="${v.y}" r="26" fill="${sel ? '#023e8a' : '#fff'}" stroke="#023e8a" stroke-width="2.5"/>`;
+    g += `<text x="${v.x}" y="${v.y + (k === 'g' ? -36 : 48)}" text-anchor="middle" style="fill:#1f2933;font-weight:600;font-size:14px">${v.name}</text></g>`;
+  });
+  $('trisvg').innerHTML = g;
+  document.querySelectorAll('#trisvg .vtx').forEach(el => {
+    const act = () => { const k = el.dataset.k; if (pick.includes(k)) pick = pick.filter(p => p !== k); else { pick.push(k); if (pick.length > 2) pick.shift(); } tri(); };
+    el.addEventListener('click', act); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  if (pick.length < 2) { $('triout').innerHTML = pick.length ? `You chose <b>${V[pick[0]].name}</b>. Choose a second corner.` : 'Click two corners of the triangle.'; return; }
+  const k = [...pick].sort((a, b) => 'gnd'.indexOf(a) - 'gnd'.indexOf(b)).join('+');
+  const left = Object.keys(V).find(x => !pick.includes(x));
+  $('triout').innerHTML = `<b>${R[k][0]}.</b> ${R[k][1]} <span class="note">Given up: ${V[left].name.toLowerCase()}.</span>`;
+}
+pick = ['n','d']; tri();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
