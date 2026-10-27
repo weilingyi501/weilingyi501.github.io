@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Unequal Exchange | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on unequal exchange: Arghiri Emmanuel’s theory of international prices of production with mobile capital and immobile labor, the strict and broad senses of unequal exchange with an interactive model, the Bettelheim debate, Samir Amin, Samuelson’s critique, ecologically unequal exchange, and the contrast with Prebisch–Singer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/unequal-exchange.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 24</p>
+  <h1>Unequal Exchange</h1>
+  <p class="lead">In 1969, the Greek-born economist Arghiri Emmanuel published <em>L’échange inégal</em> (translated as <em>Unequal Exchange</em>, 1972). Applying Marx’s theory of prices of production to the world economy, he argued that trade between high-wage and low-wage countries transfers value from the poor to the rich even when goods exchange at their market prices and no one cheats. The theory provoked one of the most intense debates in radical economics.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#setting">Emmanuel and his question</a></li><li><a href="#premises">Mobile capital, immobile labor</a></li><li><a href="#model">Strict and broad senses (interactive)</a></li><li><a href="#wages">Wages as the independent variable</a></li><li><a href="#bettelheim">The Bettelheim debate</a></li><li><a href="#amin">Samir Amin</a></li><li><a href="#critics">Samuelson and other critics</a></li><li><a href="#eco">Ecologically unequal exchange</a></li><li><a href="#ps">Unequal exchange and Prebisch–Singer</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="setting">1. Emmanuel and his question</h2>
+  <p>Arghiri Emmanuel was born in Greece in 1911, worked as a merchant in the Belgian Congo, fought with the Greek forces in the Middle East during the Second World War, and later taught in Paris. His question was why poor countries remained poor despite decades of trade, and why the gap between rich and poor nations was so wide when the same goods, made with similar techniques, were produced in both. He rejected the explanation that poor countries simply specialized in the wrong products. Even when rich and poor countries made the same kinds of goods, he argued, trade between them was unequal because of the gap in wages.</p>
+
+  <h2 id="premises">2. Mobile capital, immobile labor</h2>
+  <p>Emmanuel’s theory rests on Marx’s analysis of <b>prices of production</b> in volume 3 of <em>Capital</em>. Within a country, competition among capitals equalizes the rate of profit across industries, so goods do not sell at their labor values but at prices of production: cost of production plus the average rate of profit on the capital advanced. Industries with relatively more capital per worker sell above value, and those with less sell below value, so value is redistributed among capitals (see the History of Economic Thought course, <a href="/het/marx-profit-rate.html">Topic 7</a>).</p>
+  <p>Emmanuel transferred this analysis to the world economy, with two premises:</p>
+  <ul>
+    <li><b>Capital is internationally mobile</b>, so rates of profit tend to equalize across countries. Ricardo’s theory of comparative advantage (Topic 3) had assumed the opposite.</li>
+    <li><b>Labor is internationally immobile</b>, so wages do not equalize. Wages in rich countries are many times those in poor countries, a gap far larger than any gap in the rate of profit.</li>
+  </ul>
+  <p>Under these conditions, international prices of production embody the wage gap. The high-wage country sells its goods at prices above their values, and the low-wage country sells below value. Exchange at these prices transfers value from the low-wage to the high-wage country. Emmanuel called this <b>unequal exchange</b>.</p>
+
+  <h2 id="model">3. The strict and broad senses</h2>
+  <p>Emmanuel distinguished two sources of non-equivalent exchange:</p>
+  <ul>
+    <li><b>Unequal exchange in the broad sense</b> arises from differences in the <b>organic composition of capital</b> (capital relative to labor) between countries, even when wages are equal. This is simply Marx’s transformation of values into prices of production, applied across borders. It happens within any country as well, and Emmanuel did not regard it as specific to international trade.</li>
+    <li><b>Unequal exchange in the strict sense</b> arises from differences in <b>wages</b>, with equal organic compositions. This, Emmanuel argued, was the specifically international phenomenon, because only between nations do wages for comparable work differ so much and so persistently.</li>
+  </ul>
+
+  <div class="box" id="uebox">
+    <h3>Emmanuel’s model of international prices of production</h3>
+    <p class="note">Each country employs 100 hours of labor, which creates 100 units of new value, and uses up some constant capital (machinery and materials). The value of each country’s output is its constant capital plus 100. Workers are paid a wage per hour, in units of value; the rest of the new value is surplus value. Capital moves freely, so both countries earn the same rate of profit on the capital they advance (constant capital plus wages). Compare each country’s price of production with the value of its output.</p>
+    <div class="grid2">
+      <div><label>Wage per hour, center: <b id="wcv">0.80</b></label><input type="range" id="wc" min="0.1" max="0.95" step="0.05" value="0.8"></div>
+      <div><label>Wage per hour, periphery: <b id="wpv">0.20</b></label><input type="range" id="wp" min="0.05" max="0.95" step="0.05" value="0.2"></div>
+      <div><label>Constant capital, center: <b id="ccv">100</b></label><input type="range" id="cc" min="20" max="300" step="10" value="100"></div>
+      <div><label>Constant capital, periphery: <b id="cpv">100</b></label><input type="range" id="cp" min="20" max="300" step="10" value="100"></div>
+    </div>
+    <table id="uetab"></table>
+    <div class="out" id="ueout"></div>
+  </div>
+
+  <h2 id="wages">4. Wages as the independent variable</h2>
+  <p>Emmanuel’s most controversial claim concerned causation. In classical and Marxian theory, the wage was usually treated as given by historical and institutional conditions, the “moral and historical element” Marx mentioned. Emmanuel took this seriously: wages are the <b>independent variable</b> of the system. They are set in each country by the history of class struggle, social norms, and institutions, and prices then adjust to them. It is not because their products are cheap that poor countries have low wages, he argued; it is because their wages are low that their products are cheap. Rich countries are not rich because they are productive; they became productive in part because high wages, by raising prices and incomes, created markets and induced investment.</p>
+  <p>A further implication caused bitter controversy on the left. If workers in rich countries receive wages inflated by unequal exchange, then they too share in the transfer from poor countries. Emmanuel concluded that international working-class solidarity faced a material obstacle, a conclusion that many Marxists rejected.</p>
+
+  <h2 id="bettelheim">5. The Bettelheim debate</h2>
+  <p>The French edition of <em>Unequal Exchange</em> was published together with a critique by the French Marxist economist Charles Bettelheim and Emmanuel’s reply. Bettelheim made several objections:</p>
+  <ul>
+    <li><b>Wages reflect productivity.</b> Higher wages in rich countries reflect higher productivity of labor and more developed productive forces, so they are not an independent variable. If productivity differences are taken into account, the “transfer” may disappear.</li>
+    <li><b>Exploitation happens in production.</b> Workers in poor countries are exploited by capital in production, not by workers of rich countries through exchange. Emmanuel’s focus on exchange obscured relations of production.</li>
+    <li><b>Solidarity.</b> Bettelheim rejected the idea that workers of rich countries exploit those of poor countries.</li>
+  </ul>
+  <p>Emmanuel replied that, for goods produced with similar techniques, productivity differences cannot account for wage differences of ten or twenty to one, and that the question was what happens to the value created when goods are exchanged at prices that embody those wage differences.</p>
+
+  <h2 id="amin">6. Samir Amin</h2>
+  <p>The Egyptian-French economist Samir Amin, in <em>Accumulation on a World Scale</em> (1970) and <em>Unequal Development</em> (1973), built unequal exchange into a broader theory of the world economy. Amin defined unequal exchange more narrowly than Emmanuel: it exists when the difference in wages between center and periphery is greater than the difference in productivity. He argued that modern export industries in the periphery, such as mines, plantations, and later factories, often have productivity close to that of the center, while wages are far lower. Unequal exchange was one mechanism of a wider process of <b>accumulation on a world scale</b>, in which the periphery’s economy is shaped to serve accumulation in the center. Amin’s answer was <b>delinking</b> (Topic 23): subordinating external relations to the requirements of self-centered national development.</p>
+
+  <h2 id="critics">7. Samuelson and other critics</h2>
+  <p>Paul Samuelson, in “Illogic of Neo-Marxian Doctrine of Unequal Exchange” (1976), argued that Emmanuel’s results could be restated in ordinary price theory without reference to labor values. In a model with exogenously given wages, a country with lower wages simply has lower prices and a lower standard of living; calling this a “transfer of value” added nothing, and the poor country could still gain from trade relative to autarky. Other critics, from both Marxian and mainstream perspectives, questioned whether rates of profit really are equalized internationally, whether the labor values used to measure the transfer can be compared across countries with very different productivity, and whether the theory could explain change over time. Defenders responded that the theory’s point was not that the periphery loses compared with autarky, but that the international price system systematically distributes the gains in favor of high-wage countries.</p>
+
+  <h2 id="eco">8. Ecologically unequal exchange</h2>
+  <p>From the 1980s, sociologists and anthropologists extended the idea to nature. Stephen Bunker’s study of the Amazon, <em>Underdeveloping the Amazon</em> (1985), argued that extractive economies export energy and matter that are lost to the region, while the industrial centers that receive them build up complexity. Alf Hornborg argued that the exchange of goods at market prices conceals an asymmetric flow of embodied land, energy, and materials from the periphery to the center, so that the technological progress of the core depends on appropriating the biophysical resources of the periphery. This <b>ecologically unequal exchange</b> connects the theory to ecological economics.</p>
+
+  <h2 id="ps">9. Unequal exchange and Prebisch–Singer</h2>
+  <p>Unequal exchange is often confused with the Prebisch–Singer hypothesis (Topic 18), but the two are distinct:</p>
+  <table>
+    <tr><th></th><th>Prebisch–Singer</th><th>Emmanuel’s unequal exchange</th></tr>
+    <tr><td>Claim</td><td>The relative price of primary commodities tends to <em>decline over time</em></td><td>At any moment, prices embody wage differences, so exchange is <em>non-equivalent in value</em></td></tr>
+    <tr><td>Goods</td><td>Primary commodities versus manufactures</td><td>Any goods traded between high-wage and low-wage countries</td></tr>
+    <tr><td>Mechanism</td><td>Different market structures and demand elasticities</td><td>International equalization of the profit rate with unequal wages</td></tr>
+    <tr><td>Framework</td><td>Structuralist; market prices</td><td>Marxian; values and prices of production</td></tr>
+  </table>
+  <div class="think"><b>Question to think about:</b> If wage differences reflect productivity differences, is there still a transfer of value?</div>
+
+  <h2 id="read">10. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Arghiri Emmanuel, <em>Unequal Exchange: A Study of the Imperialism of Trade</em> (1972), introduction.</p>
+  <p class="rd">Samir Amin, <em>Unequal Development</em> (1976), selections.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Alf Hornborg, <em>Global Ecology and Unequal Exchange: Fetishism in a Zero-Sum World</em> (2011), chapter 1.</p>
+  <p class="rd">Paul Samuelson, “Illogic of Neo-Marxian Doctrine of Unequal Exchange,” in <em>Inflation, Trade and Taxes</em>, ed. D. A. Belsley et al. (1976).</p>
+  <p><a href="index.html#topic-24">← Back to Topic 24 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const L = 100;
+function prices(wc, wp, cc, cp) {
+  const s = [L*(1 - wc), L*(1 - wp)], K = [cc + wc*L, cp + wp*L], v = [cc + L, cp + L];
+  const r = (s[0] + s[1])/(K[0] + K[1]);
+  const p = K.map(k => k*(1 + r));
+  return {s, K, v, r, p, t: p[0] - v[0]};
+}
+function ue() {
+  const wc = +$('wc').value, wp = +$('wp').value, cc = +$('cc').value, cp = +$('cp').value;
+  $('wcv').textContent = wc.toFixed(2); $('wpv').textContent = wp.toFixed(2); $('ccv').textContent = cc; $('cpv').textContent = cp;
+  const R = prices(wc, wp, cc, cp);
+  const f = x => x.toFixed(1);
+  $('uetab').innerHTML = `<tr><th></th><th>Constant capital</th><th>Wages</th><th>Surplus value</th><th>Value of output</th><th>Price of production</th><th>Price − value</th></tr>` +
+    ['Center', 'Periphery'].map((n, i) => `<tr><td>${n}</td><td>${[cc, cp][i]}</td><td>${f([wc, wp][i]*L)}</td><td>${f(R.s[i])}</td><td>${f(R.v[i])}</td><td>${f(R.p[i])}</td><td><b>${(R.p[i] - R.v[i] >= 0 ? '+' : '') + f(R.p[i] - R.v[i])}</b></td></tr>`).join('');
+  // decomposition: broad sense = transfer with equal wages (average wage); strict = remainder
+  const wa = (wc + wp)/2, broad = prices(wa, wa, cc, cp).t, total = R.t, strict = total - broad;
+  let msg = `With capital mobile, both countries earn a profit rate of <b>${(R.r*100).toFixed(1)}%</b> on capital advanced. `;
+  if (Math.abs(total) < 0.05) msg += 'Prices of production equal values: exchange is equivalent. This happens when wages and the organic composition of capital are the same in both countries.';
+  else {
+    msg += `At these prices, <b>${f(Math.abs(total))}</b> units of value are transferred from the ${total > 0 ? 'periphery to the center' : 'center to the periphery'}, although goods trade at their market prices. `;
+    msg += `Of this, about ${f(Math.abs(strict))} is due to the difference in wages (unequal exchange in the <b>strict</b> sense) and about ${f(Math.abs(broad))} to the difference in constant capital per worker (the <b>broad</b> sense). `;
+    if (cc === cp) msg += 'Since both countries use the same constant capital, the whole transfer here is unequal exchange in the strict sense, the case Emmanuel emphasized.';
+    else if (Math.abs(wc - wp) < 0.001) msg += 'Since wages are equal, the whole transfer here is in the broad sense: the ordinary transformation of values into prices, which also occurs within a country.';
+  }
+  $('ueout').innerHTML = msg + ' <span class="note">The split between the two senses is approximate: it compares the actual case with one in which both countries pay the average wage.</span>';
+}
+['wc','wp','cc','cp'].forEach(x => $(x).addEventListener('input', ue)); ue();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

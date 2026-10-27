@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Dependency Theory | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on dependency theory and trade: Paul Baran and the economic surplus, Andre Gunder Frank’s development of underdevelopment with an interactive surplus-drain chain, Cardoso and Faletto’s dependent development, Theotonio dos Santos, Walter Rodney, delinking, and the critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/dependency.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 23</p>
+  <h1>Dependency Theory</h1>
+  <p class="lead">By the 1960s, decolonization and two decades of development programs had not closed the gap between rich and poor countries. Dependency theorists, mostly writing from Latin America and Africa, argued that the problem was not that poor countries were insufficiently integrated into the world economy, but the way they were integrated. Trade and foreign investment, on this view, were the channels through which the periphery’s surplus was drained to the center.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#against">Against modernization theory</a></li><li><a href="#baran">Baran and the economic surplus</a></li><li><a href="#frank">Frank: the development of underdevelopment (interactive)</a></li><li><a href="#cardoso">Cardoso and Faletto: dependent development</a></li><li><a href="#dossantos">Dos Santos and the new dependence</a></li><li><a href="#rodney">Rodney: how Europe underdeveloped Africa</a></li><li><a href="#critics">Delinking and the critics</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="against">1. Against modernization theory</h2>
+  <p>The dominant view of development in the 1950s and 1960s, often called <b>modernization theory</b>, held that poor countries were at an early stage of a path that rich countries had already traveled. W. W. Rostow’s <em>The Stages of Economic Growth</em> (1960), subtitled “A Non-Communist Manifesto,” described five stages from traditional society to high mass consumption. Poor countries needed more capital, technology, education, and trade with the West to “take off.” Dependency theorists rejected the premise. Underdevelopment, they argued, was not an original state but the result of a history of colonialism and unequal integration into the world economy. The rich countries had never been underdeveloped in the way today’s poor countries were, though they had once been undeveloped.</p>
+  <p>Dependency theory had two main sources: the Latin American structuralism of Prebisch and Furtado (Topic 18), which emphasized center and periphery, and the Marxist theory of imperialism (Topic 22). It took different forms, from Marxist versions that saw socialist revolution as the only exit to reformist versions close to structuralism.</p>
+
+  <h2 id="baran">2. Baran and the economic surplus</h2>
+  <p>Paul Baran, a Marxist economist at Stanford, laid the foundation in <em>The Political Economy of Growth</em> (1957). He centered his analysis on the <b>economic surplus</b>, the difference between what a society produces and what it must consume to sustain itself. Underdeveloped countries produce a substantial potential surplus, Baran argued, but it is not used for development. Part is taken abroad as profits by foreign firms, interest on debt, and unfavorable trade. Part is consumed by landlords, merchants, and a comprador elite allied with foreign capital. Part is wasted in a bloated state apparatus and the military. Baran used the example of India, comparing its fate under British rule with Japan, which escaped colonization and industrialized. The obstacle to development was not a shortage of resources but the social and international structures that determined how the surplus was used.</p>
+
+  <h2 id="frank">3. Frank: the development of underdevelopment</h2>
+  <p>Andre Gunder Frank, a German-born economist trained at the University of Chicago who worked in Chile and Brazil, put the thesis most sharply in “The Development of Underdevelopment” (1966) and <em>Capitalism and Underdevelopment in Latin America</em> (1967). Frank argued that Latin America had been capitalist since the Spanish and Portuguese conquest, integrated into the world market as a producer of silver, sugar, and other exports. The world capitalist system was a chain of <b>metropolis–satellite</b> relations: the world metropolis extracted surplus from national capitals, which extracted it from regional centers, which extracted it from local towns, which extracted it from peasants. At each link, surplus flowed upward.</p>
+  <p>Frank drew two provocative conclusions. First, the regions that were most underdeveloped were those that had been most closely tied to the metropolis in the past, such as the former sugar and mining regions of northeast Brazil and Bolivia. Second, satellites developed most when their ties to the metropolis were weakest, as during the world wars and the Depression, when Latin American industry grew because imports were cut off. Development required breaking the chain.</p>
+
+  <div class="box" id="frbox">
+    <h3>The metropolis–satellite chain</h3>
+    <p class="note">A peasant producer creates 100 units of surplus. At each link of the chain, the local center keeps part of what it receives and passes the rest up the chain. Change the share passed upward to see how much remains at each level. The figures are illustrative.</p>
+    <div class="grid2">
+      <div><label>Share of surplus passed up at each link: <b id="pfv">60%</b></label><input type="range" id="pf" min="10" max="90" step="5" value="60"></div>
+      <div><label>Links in the chain: <b id="lkv">4</b></label><input type="range" id="lk" min="2" max="5" step="1" value="4"></div>
+    </div>
+    <svg id="frchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="Surplus retained at each level of the chain"></svg>
+    <div class="out" id="frout"></div>
+  </div>
+
+  <h2 id="cardoso">4. Cardoso and Faletto: dependent development</h2>
+  <p>Fernando Henrique Cardoso, a Brazilian sociologist, and Enzo Faletto, a Chilean historian, wrote <em>Dependency and Development in Latin America</em> (1969, English translation 1979) while working at ECLA in Santiago. They rejected Frank’s view that dependency made development impossible. Dependence took different forms in different countries, depending on whether export sectors were controlled by national elites or foreign enclaves, and on the alliances among classes and with foreign capital. Since the 1950s, multinational corporations had invested in manufacturing for the domestic markets of Brazil, Mexico, and Argentina. The result was <b>associated dependent development</b>: genuine industrialization and growth, but under the direction of foreign capital, with technology controlled abroad, and with growing inequality. The task was to analyze concrete situations of dependency rather than to deduce a general law of stagnation. Cardoso later became president of Brazil (1995–2002), where his government pursued market-oriented reforms.</p>
+
+  <h2 id="dossantos">5. Dos Santos and the new dependence</h2>
+  <p>Theotonio dos Santos, a Brazilian economist exiled after the 1964 coup, defined dependence in an influential article, “The Structure of Dependence” (1970), as a situation in which the economy of certain countries is conditioned by the development and expansion of another economy to which their own is subjected. He distinguished three historical forms: colonial dependence, based on trade monopolies; financial-industrial dependence, from the late nineteenth century, based on foreign investment in raw-material exports; and a <b>new technological-industrial dependence</b> after 1945, based on multinational investment in manufacturing. The new dependence, he argued, was constrained by the need for foreign exchange to import machinery and pay profits and royalties, by the control of technology through patents, and by a highly unequal income structure that limited the domestic market. With Ruy Mauro Marini and Vânia Bambirra, dos Santos developed a Marxist theory of dependency that linked these constraints to the <b>superexploitation</b> of labor in the periphery.</p>
+
+  <h2 id="rodney">6. Rodney: how Europe underdeveloped Africa</h2>
+  <p>Walter Rodney, a Guyanese historian who taught in Tanzania, applied dependency analysis to Africa in <em>How Europe Underdeveloped Africa</em> (1972). Rodney argued that the Atlantic slave trade had drained Africa of people, disrupted its economies and political systems, and diverted its energies from production to capture and war. Colonial rule then organized African economies around the export of a few cash crops and minerals, with transport networks running from mines and plantations to the ports, little industry, minimal education, and forced or poorly paid labor. Trade under these conditions transferred surplus to Europe. Rodney was active in the politics of the Caribbean and was assassinated in Guyana in 1980. Recent quantitative work on the long-run effects of the slave trades (Topic 15) has reached conclusions close to his, by different methods.</p>
+
+  <h2 id="critics">7. Delinking and the critics</h2>
+  <p>What followed for policy? Some dependency writers, notably Samir Amin (Topic 24), called for <b>delinking</b>: subordinating external relations to the needs of internal, self-centered development, which did not mean autarky but meant refusing to adjust national development to the demands of the world market. Others favored regional integration among developing countries, or reform of the international order, as in the New International Economic Order (Topic 18).</p>
+  <p>Critics came from several directions. Neoclassical economists pointed out that the countries that grew fastest after 1960, in East Asia, did so by integrating into world markets (Topic 11). Marxists such as Bill Warren argued in <em>Imperialism, Pioneer of Capitalism</em> (1980) that capitalism was in fact developing the Third World, as Marx had expected. Others criticized dependency theory for treating “dependency” so broadly that it could explain every outcome, and for neglecting internal class relations, as Cardoso and Faletto had warned. Defenders reply that East Asia’s success depended on unusual geopolitical conditions and state capacities, and that dependency theory’s concern with who controls technology, finance, and the surplus remains relevant in the age of global value chains (Topic 20).</p>
+  <div class="think"><b>Question to think about:</b> East Asia developed through integration into world markets. Does that refute dependency theory?</div>
+
+  <h2 id="read">8. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Andre Gunder Frank, “The Development of Underdevelopment,” <em>Monthly Review</em> (1966).</p>
+  <p class="rd">Theotonio dos Santos, “The Structure of Dependence,” <em>American Economic Review</em> (1970).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Fernando Henrique Cardoso and Enzo Faletto, <em>Dependency and Development in Latin America</em> (1969; English translation 1979), preface.</p>
+  <p class="rd">Walter Rodney, <em>How Europe Underdeveloped Africa</em> (1972), chapter 1.</p>
+  <p><a href="index.html#topic-23">← Back to Topic 23 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const LV = {2:['Peasant producer','National capital','World metropolis'], 3:['Peasant producer','Regional center','National capital','World metropolis'], 4:['Peasant producer','Local town','Regional center','National capital','World metropolis'], 5:['Peasant producer','Landlord or merchant','Local town','Regional center','National capital','World metropolis']};
+function fr() {
+  const pf = +$('pf').value/100, lk = +$('lk').value;
+  $('pfv').textContent = Math.round(pf*100) + '%'; $('lkv').textContent = lk;
+  const levels = LV[lk];
+  let flow = 100; const kept = [];
+  for (let i = 0; i < levels.length; i++) { if (i < levels.length - 1) { kept.push(flow*(1 - pf)); flow *= pf; } else kept.push(flow); }
+  const W = 640, H = 220, L = 140, R = 70, n = levels.length, bh = (H - 20)/n - 8, X = v => L + v/100*(W-L-R);
+  let g = '';
+  levels.forEach((name, i) => {
+    const y = 10 + i*(bh + 8), c = i === n - 1 ? '#b03a2e' : i === 0 ? '#3f8f6b' : '#c47a2c';
+    g += `<text x="${L-10}" y="${y + bh/2 + 4}" text-anchor="end">${name}</text><rect x="${L}" y="${y}" width="${Math.max(1, X(kept[i]) - L)}" height="${bh}" rx="4" fill="${c}"/>`;
+    g += `<text x="${X(kept[i]) + 6}" y="${y + bh/2 + 4}" style="fill:#1f2933;font-weight:600">${kept[i].toFixed(1)}</text>`;
+  });
+  $('frchart').innerHTML = g;
+  $('frout').innerHTML = `Of the 100 units of surplus created by the producer, only <b>${kept[0].toFixed(1)}</b> stay at the bottom of the chain, while <b>${kept[n-1].toFixed(1)}</b> reach the world metropolis. In Frank’s argument, the surplus that could finance local investment flows upward at each link, so development at the top and underdevelopment at the bottom are two sides of the same process.`;
+}
+['pf','lk'].forEach(x => $(x).addEventListener('input', fr)); fr();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

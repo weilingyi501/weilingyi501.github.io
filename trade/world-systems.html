@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>World-Systems Analysis | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on world-systems analysis and trade: Wallerstein’s modern world-system, core, semi-periphery, and periphery, the axial division of labor, commodity chains, hegemonic cycles, Arrighi’s systemic cycles of accumulation with an interactive timeline, and the rise of China.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/world-systems.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 25</p>
+  <h1>World-Systems Analysis</h1>
+  <p class="lead">Most theories of trade begin with nations and ask how they trade with one another. World-systems analysis reverses the order. It begins with the capitalist world-economy as a whole, a single system with one division of labor, and asks how nations come to occupy different positions within it. Trade, in this view, is how the world-economy organizes a hierarchy among regions.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#unit">The world-system as the unit of analysis</a></li><li><a href="#zones">Core, semi-periphery, and periphery</a></li><li><a href="#chains">Commodity chains and unequal exchange</a></li><li><a href="#hegemony">Hegemony and its cycles</a></li><li><a href="#arrighi">Arrighi’s systemic cycles of accumulation (interactive)</a></li><li><a href="#china">The rise of China</a></li><li><a href="#critics">Critics</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="unit">1. The world-system as the unit of analysis</h2>
+  <p>Immanuel Wallerstein, an American sociologist who began his career studying postcolonial Africa, published the first volume of <em>The Modern World-System</em> in 1974. He argued that social change could not be understood country by country, as modernization theory and much of Marxism assumed. The proper unit of analysis was the <b>world-system</b>: a social system with a single division of labor and multiple cultures. Historically there had been two kinds: world-empires, unified politically, such as Rome or imperial China, and world-economies, which have one division of labor but many states. The modern world-system, which emerged in Europe during the “long sixteenth century” (about 1450–1640), is a capitalist world-economy. Its distinctive feature is that no single state controls it, so capital can move among states, playing them against one another.</p>
+  <p>Wallerstein drew on the French historian Fernand Braudel, on Marx, and on dependency theory (Topic 23). In 1976 he founded the Fernand Braudel Center at the State University of New York at Binghamton, which became the hub of world-systems research. Later volumes traced the system through mercantilism, the age of revolutions, and the nineteenth century.</p>
+
+  <h2 id="zones">2. Core, semi-periphery, and periphery</h2>
+  <p>The world-economy has an <b>axial division of labor</b> between core-like and peripheral production processes. Wallerstein defined them not by the goods involved but by their degree of profitability and monopolization:</p>
+  <table>
+    <tr><th>Zone</th><th>Production</th><th>Labor and states</th><th>Examples in the sixteenth century</th></tr>
+    <tr><td><b>Core</b></td><td>Relatively monopolized, high-profit, capital- and skill-intensive processes</td><td>Wage labor, relatively high wages; strong states</td><td>Northwestern Europe: the Netherlands, England, northern France</td></tr>
+    <tr><td><b>Semi-periphery</b></td><td>A mix of core and peripheral processes</td><td>Intermediate; often states with strong ambitions</td><td>Mediterranean Europe: Spain, Portugal, northern Italy</td></tr>
+    <tr><td><b>Periphery</b></td><td>Highly competitive, low-profit processes</td><td>Coerced labor (slavery, “second serfdom”); weak states</td><td>Eastern Europe (grain) and the Americas (silver, sugar)</td></tr>
+  </table>
+  <p>Trade between the zones transfers surplus from periphery to core. The <b>semi-periphery</b> is Wallerstein’s distinctive contribution: it is both exploited and exploiting, and it stabilizes the system politically by preventing a simple polarization between rich and poor. Countries can move between zones. The Netherlands and England rose to the core, Spain and Portugal fell to the semi-periphery, and in the twentieth century Japan and South Korea rose. But the hierarchy itself persists: not every country can be in the core at once, because the core is defined by its relation to the periphery.</p>
+
+  <h2 id="chains">3. Commodity chains and unequal exchange</h2>
+  <p>To trace how surplus moves through the world-economy, Terence Hopkins and Wallerstein (1977, 1986) introduced the concept of the <b>commodity chain</b>: the network of labor and production processes whose end result is a finished commodity. Following a chain, such as the shipbuilding or flour chains of the sixteenth century, shows that core and periphery are linked within a single production process, with the most profitable nodes located in the core. The concept was later adapted by Gary Gereffi into the analysis of global value chains (Topic 20). Wallerstein also accepted Emmanuel’s theory of unequal exchange (Topic 24) as one of the mechanisms through which surplus is transferred from periphery to core.</p>
+
+  <h2 id="hegemony">4. Hegemony and its cycles</h2>
+  <p>Because no state controls the world-economy, its political structure is an interstate system. At rare moments, one state achieves <b>hegemony</b>: a simultaneous lead in production, commerce, and finance, which lets it shape the rules of the system. Wallerstein identified three hegemonies: the United Provinces (the Netherlands) in the mid-seventeenth century, Britain in the mid-nineteenth century, and the United States after 1945. Each hegemony was brief. The hegemon’s lead in production erodes first, then in commerce, and last in finance. Each hegemonic power championed free trade at the height of its strength, since open markets favored its efficient producers, a pattern that echoes List’s “kicking away the ladder” (Topic 9).</p>
+  <p>The world-economy also moves in long waves of expansion and stagnation, which world-systems writers link to Kondratieff cycles of about fifty years.</p>
+
+  <h2 id="arrighi">5. Arrighi’s systemic cycles of accumulation</h2>
+  <p>Giovanni Arrighi, an Italian economist who worked in Rhodesia and Tanzania before joining the Braudel Center, developed the theory of hegemony in <em>The Long Twentieth Century</em> (1994). Following Braudel, he identified four <b>systemic cycles of accumulation</b>, each led by a different agency. Each cycle has two phases, following Marx’s formula for capital, M–C–M′. In the first phase (M–C), capital invests in trade and production, and the leading agency expands material output. In the second phase (C–M′), when competition squeezes profits in trade and production, capital shifts to finance. These <b>financial expansions</b> are periods of apparent prosperity for the declining leader, but Arrighi called them “signals of autumn”: they announce the end of a cycle and the emergence of a new center. Click a cycle to explore it.</p>
+
+  <div class="box" id="arbox">
+    <h3>Systemic cycles of accumulation</h3>
+    <svg id="archart" viewBox="0 0 640 170" width="100%" role="img" aria-label="Four overlapping systemic cycles of accumulation"></svg>
+    <div class="out" id="arout"></div>
+    <p class="note">Dates are Arrighi’s approximate periodization. Each bar shows a cycle; the lighter end marks its financial expansion.</p>
+  </div>
+
+  <h2 id="china">6. The rise of China</h2>
+  <p>In his last major book, <em>Adam Smith in Beijing</em> (2007), Arrighi argued that the center of the world-economy was shifting to East Asia, and that China’s rise followed a path of market-based development closer to Smith’s “natural” progress of opulence than to the capital-intensive Western model. He read the U.S. financial expansion since the 1970s, and its wars in the Middle East, as signs of the terminal crisis of American hegemony. Others in the tradition, including Christopher Chase-Dunn, have studied whether China is moving from the semi-periphery into the core, and whether a new hegemony, a multipolar order, or a prolonged period of systemic chaos lies ahead. Wallerstein himself argued that the capitalist world-system as a whole had entered a structural crisis from which it would not recover in its present form.</p>
+
+  <h2 id="critics">7. Critics</h2>
+  <p>World-systems analysis has been criticized from several sides. Robert Brenner (1977) argued that it located the origins of capitalism in trade and exchange rather than in class relations of production, a “neo-Smithian” error that it shared with Frank. Theda Skocpol and others argued that it reduced states to their position in the world-economy and neglected their independent role. Economic historians questioned whether trade with the periphery was large enough to have financed European development, as Patrick O’Brien argued in 1982. Others noted that the theory’s categories are flexible enough to accommodate almost any outcome. Defenders respond that world-systems analysis is a perspective rather than a closed theory, and that its long-term, global view captures patterns, such as the rise and fall of hegemonic powers and the persistence of the core–periphery hierarchy, that country-by-country analysis misses.</p>
+  <div class="think"><b>Question to think about:</b> Is China moving from the semi-periphery into the core, and what would that mean for the world-system?</div>
+
+  <h2 id="read">8. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Immanuel Wallerstein, <em>The Modern World-System</em>, vol. 1 (1974), introduction.</p>
+  <p class="rd">Terence Hopkins and Immanuel Wallerstein, “Commodity Chains in the World-Economy Prior to 1800,” <em>Review</em> (1986).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Giovanni Arrighi, <em>The Long Twentieth Century: Money, Power, and the Origins of Our Times</em> (1994), introduction.</p>
+  <p class="rd">Immanuel Wallerstein, <em>World-Systems Analysis: An Introduction</em> (2004), chapter 2.</p>
+  <p><a href="index.html#topic-25">← Back to Topic 25 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const C = [
+  ['Genoese', 1450, 1560, 1630, '#7b5ea7', 'Genoese merchant bankers, allied with the Iberian monarchies, financed Spain’s empire and organized long-distance trade in the Mediterranean and Atlantic. Their financial expansion came through lending to the Spanish crown, which collapsed in repeated defaults.'],
+  ['Dutch', 1560, 1740, 1790, '#c47a2c', 'The United Provinces built the first great commercial and maritime system of the capitalist era, with the Dutch East India Company, the Amsterdam exchange, and dominance of the Baltic and Asian trades. In the eighteenth century, Dutch capital shifted into lending to other states, especially Britain.'],
+  ['British', 1740, 1870, 1930, '#023e8a', 'Britain combined the Industrial Revolution, a global empire, and the City of London. It led the world toward free trade and the gold standard in the nineteenth century. From the 1870s, British capital flowed abroad on a vast scale while its industrial lead passed to Germany and the United States.'],
+  ['American', 1870, 1970, 2025, '#b03a2e', 'The United States built a system based on vertically integrated corporations, a continental market, and, after 1945, the Bretton Woods order and the GATT. From the 1970s, profits shifted toward finance, which Arrighi read as the signal of a new financial expansion and of the autumn of U.S. hegemony.'],
+];
+let sel = 3;
+function ar() {
+  const W = 640, H = 170, L = 80, R = 20, X = y => L + (y - 1400)/(2050 - 1400)*(W-L-R);
+  let g = '';
+  [1400, 1500, 1600, 1700, 1800, 1900, 2000].forEach(y => g += `<line x1="${X(y)}" x2="${X(y)}" y1="16" y2="${H-10}" stroke="#eef0f3"/><text x="${X(y)}" y="12" text-anchor="middle">${y}</text>`);
+  C.forEach(([n, a, f, b, c], i) => {
+    const y = 24 + i*36, on = i === sel;
+    g += `<g class="cy" data-i="${i}" style="cursor:pointer" tabindex="0" role="button">`;
+    g += `<text x="${L-8}" y="${y+18}" text-anchor="end" style="${on ? 'font-weight:600;fill:#1f2933' : ''}">${n}</text>`;
+    g += `<rect x="${X(a)}" y="${y}" width="${X(f)-X(a)}" height="26" rx="4" fill="${c}" opacity="${on ? 1 : 0.55}"/>`;
+    g += `<rect x="${X(f)}" y="${y}" width="${X(b)-X(f)}" height="26" rx="4" fill="${c}" opacity="${on ? 0.45 : 0.25}"/>`;
+    if (on) g += `<rect x="${X(a)}" y="${y}" width="${X(b)-X(a)}" height="26" rx="4" fill="none" stroke="#111" stroke-width="2"/>`;
+    g += `</g>`;
+  });
+  $('archart').innerHTML = g;
+  document.querySelectorAll('#archart .cy').forEach(el => {
+    const act = () => { sel = +el.dataset.i; ar(); };
+    el.addEventListener('click', act); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  const [n, a, f, b, , t] = C[sel];
+  $('arout').innerHTML = `<b>The ${n} cycle</b> (about ${a}–${b === 2025 ? 'present' : b}). Material expansion until about ${f}, then financial expansion. ${t}`;
+}
+ar();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Theories of Imperialism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on classical theories of imperialism and trade: the scramble for colonies, Hobson’s underconsumption theory with an interactive model, Hilferding’s finance capital and protectionism, Luxemburg on accumulation and noncapitalist markets, Lenin’s imperialism as a stage of capitalism, and the critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/imperialism-trade.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 22</p>
+  <h1>Theories of Imperialism</h1>
+  <p class="lead">Between 1880 and 1914, the great powers divided most of Africa and much of Asia among themselves, raised tariffs, built navies, and exported capital on an unprecedented scale. A group of writers, one English liberal and several Marxists, argued that these developments were connected: that imperialism grew out of the economics of advanced capitalism, and that trade, finance, and war could not be separated.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#context">The age of empire</a></li><li><a href="#hobson">Hobson: the economic taproot (interactive)</a></li><li><a href="#hilferding">Hilferding: finance capital and protection</a></li><li><a href="#luxemburg">Luxemburg: accumulation and noncapitalist markets</a></li><li><a href="#lenin">Lenin: imperialism as a stage</a></li><li><a href="#critics">Critics and legacy</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="context">1. The age of empire</h2>
+  <p>The free-trade era of the 1860s and 1870s (Topic 3) gave way to something very different. After the depression of 1873, continental Europe and the United States raised tariffs (Topic 10). The Berlin Conference of 1884–85 set rules for the European partition of Africa; by 1914, only Ethiopia and Liberia remained independent. Britain exported capital on a vast scale, and by 1913 its overseas assets exceeded its annual national income. Large firms combined into cartels and trusts, and banks grew powerful. The question was whether these trends had a common cause.</p>
+
+  <h2 id="hobson">2. Hobson: the economic taproot</h2>
+  <p>John Atkinson Hobson, an English liberal economist and journalist who had reported on the Boer War, published <em>Imperialism: A Study</em> in 1902. He found that the new colonies acquired by Britain since 1870 accounted for a tiny share of its trade and were a net cost to the nation. Who, then, gained from empire? Hobson’s answer was a small group of investors, financiers, arms makers, and officials, who used the state to secure outlets for their capital.</p>
+  <p>The deeper cause was <b>underconsumption</b>, the “economic taproot of imperialism.” Because income was distributed so unequally, the rich saved more than could be profitably invested at home, while workers could not afford to buy all that industry produced. The surplus capital sought outlets abroad, and investors pressed the state to open and protect foreign markets. The cure was at home: redistribute income to workers through higher wages, taxation, and social spending, so that domestic demand would absorb the nation’s output. Hobson’s argument influenced Lenin, and Keynes later praised him as a heretic who had been right about effective demand (see Topic 17).</p>
+
+  <div class="box" id="hobox">
+    <h3>Hobson’s underconsumption</h3>
+    <p class="note">A national economy produces 100. Workers spend all their wages; capitalists consume a share of their profits and want to save the rest. Domestic investment can profitably absorb only a limited amount of saving. Whatever output is left unsold at home must find a market abroad, financed by exporting capital.</p>
+    <div class="grid2">
+      <div><label>Wage share of national income: <b id="wsv">55%</b></label><input type="range" id="ws" min="40" max="80" step="1" value="55"></div>
+      <div><label>Share of profits that capitalists consume: <b id="ccv">40%</b></label><input type="range" id="cc" min="10" max="90" step="5" value="40"></div>
+      <div><label>Domestic investment that can be profitably absorbed: <b id="iv">15</b></label><input type="range" id="i" min="5" max="30" step="1" value="15"></div>
+    </div>
+    <div class="split" id="hosplit"></div>
+    <div class="out" id="hoout"></div>
+  </div>
+
+  <h2 id="hilferding">3. Hilferding: finance capital and protection</h2>
+  <p>Rudolf Hilferding, an Austrian Marxist and later German finance minister, published <em>Finance Capital</em> in 1910. He argued that capitalism had entered a new phase in which large banks and industrial cartels had merged into <b>finance capital</b>, with banks owning shares in and directing industry. For trade, his key insight concerned tariffs. In the era of competitive capitalism, industrialists had favored free trade. Cartelized industry wanted high tariffs: protected by them, a cartel could charge monopoly prices at home and use the profits to sell cheaply abroad, dumping its goods to conquer foreign markets. The tariff had changed from a defense of infant industries (Topic 9) into an offensive weapon of mature monopolies. And the larger the protected economic territory, the bigger the cartel’s home market, so finance capital pressed for colonies and spheres of influence. Hilferding concluded that finance capital’s policy was imperialism, and that it led toward conflict among the great powers.</p>
+
+  <h2 id="luxemburg">4. Luxemburg: accumulation and noncapitalist markets</h2>
+  <p>Rosa Luxemburg, in <em>The Accumulation of Capital</em> (1913), returned to the question of demand. In a closed economy of only workers and capitalists, she argued, there was no market for the part of output that represented new surplus value to be accumulated. Capitalism therefore needed to sell to buyers outside the capitalist system: peasants, artisans, and precapitalist societies in the colonies. Imperialism was the political expression of capital’s struggle for the remaining noncapitalist environments. Through trade, taxation, debt, and outright force, capitalism drew these societies into its orbit, destroying their economies in the process. Once the whole world was capitalist, accumulation would become impossible. Luxemburg’s reproduction-scheme argument was criticized by Bukharin and others, but her emphasis on the violent absorption of noncapitalist economies through trade, loans, and colonial policy influenced later dependency and world-systems writers.</p>
+
+  <h2 id="lenin">5. Lenin: imperialism as a stage</h2>
+  <p>Vladimir Lenin’s pamphlet <em>Imperialism, the Highest Stage of Capitalism</em> (written 1916, published 1917) drew on Hobson and Hilferding. Lenin defined imperialism by five features:</p>
+  <ol>
+    <li>The concentration of production into monopolies.</li>
+    <li>The merging of bank capital with industrial capital into finance capital, controlled by a financial oligarchy.</li>
+    <li>The export of capital, as distinct from the export of goods, becoming especially important.</li>
+    <li>The formation of international monopolist associations that divide the world among themselves.</li>
+    <li>The completion of the territorial division of the world among the great powers.</li>
+  </ol>
+  <p>For Lenin, imperialism was not a policy that could be reversed, as Hobson hoped, but a necessary stage of capitalism. Because capitalism develops unevenly, the balance of power among the imperial states keeps changing, and since the world was already divided, a rising power could expand only by taking territory from others. War was the result. Lenin also argued that the superprofits of imperialism allowed capitalists to “bribe” an upper stratum of workers in the imperial countries, a <b>labor aristocracy</b>, which explained why many socialist parties had supported their governments in 1914.</p>
+
+  <h2 id="critics">6. Critics and legacy</h2>
+  <p>Critics noted that most British capital exports went not to the new colonies of Africa and Asia but to the United States, Canada, Australia, Argentina, and other areas of European settlement. Joseph Schumpeter (1919) argued that imperialism was an atavism, a survival of precapitalist warrior aristocracies, and that capitalism itself was essentially peaceful. John Gallagher and Ronald Robinson (1953) argued that Britain had pursued an “imperialism of free trade” long before 1880, using informal influence where possible and formal rule only when necessary. The classical theories nonetheless set the agenda for later Marxian work on trade and development, from dependency theory (Topic 23) and unequal exchange (Topic 24) to world-systems analysis (Topic 25). On the history of these theories in more detail, see the History of Economic Thought course, <a href="/het/imperialism.html">Topic 11</a>.</p>
+  <div class="think"><b>Question to think about:</b> Is the trade conflict between the United States and China today an inter-imperialist rivalry in Lenin’s sense?</div>
+
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">E. K. Hunt and Mark Lautzenheiser, <em>History of Economic Thought</em>, 3rd ed. (2011), chapter 13.</p>
+  <p class="rd">Vladimir Lenin, <em>Imperialism, the Highest Stage of Capitalism</em> (1917), chapters 4 and 7.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">J. A. Hobson, <em>Imperialism: A Study</em> (1902), part 1, chapter 6.</p>
+  <p class="rd">John Gallagher and Ronald Robinson, “The Imperialism of Free Trade,” <em>Economic History Review</em> (1953).</p>
+  <p><a href="index.html#topic-22">← Back to Topic 22 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function ho() {
+  const ws = +$('ws').value/100, cc = +$('cc').value/100, I = +$('i').value;
+  $('wsv').textContent = Math.round(ws*100) + '%'; $('ccv').textContent = Math.round(cc*100) + '%'; $('iv').textContent = I;
+  const Cw = 100*ws, Cc = 100*(1 - ws)*cc, S = 100*(1 - ws)*(1 - cc), gap = Math.max(0, S - I), idle = Math.max(0, I - S);
+  const parts = [['Workers’ consumption', Cw, '#0077b6'], ['Capitalists’ consumption', Cc, '#7b5ea7'], ['Domestic investment', Math.min(I, S), '#3f8f6b'], ['Surplus seeking outlets abroad', gap, '#b03a2e']];
+  $('hosplit').innerHTML = parts.filter(p => p[1] > 0.5).map(([n, v, c]) => `<div style="width:${v}%;background:${c}" title="${n}: ${v.toFixed(0)}">${v >= 9 ? v.toFixed(0) : ''}</div>`).join('');
+  let msg = `Workers buy <b>${Cw.toFixed(0)}</b> and capitalists consume <b>${Cc.toFixed(0)}</b>; capitalists want to save <b>${S.toFixed(0)}</b>, but only ${I} can be profitably invested at home. `;
+  if (gap > 0.5) msg += `That leaves <b>${gap.toFixed(0)}</b> of output (red) that cannot be sold at home. In Hobson’s argument, this surplus drives the export of capital and the search for foreign markets, which investors press the state to secure. Try raising the wage share: Hobson’s remedy was redistribution, not empire.`;
+  else msg += `Domestic demand absorbs all of output${idle > 0.5 ? `, and there is even room for ${idle.toFixed(0)} more investment than capitalists save` : ''}. With income distributed this way, Hobson’s “taproot” of imperialism disappears.`;
+  $('hoout').innerHTML = msg + ' <span class="note">Bars, left to right: workers’ consumption, capitalists’ consumption, domestic investment, surplus.</span>';
+}
+['ws','cc','i'].forEach(x => $(x).addEventListener('input', ho)); ho();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

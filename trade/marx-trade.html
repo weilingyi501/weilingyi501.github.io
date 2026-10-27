@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Marx and the World Market | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Marx and international trade: the world market as capital’s arena, Marx’s 1848 speech on free trade, colonialism and the international division of labor, the law of value between nations, and Anwar Shaikh’s theory of absolute advantage with an interactive model of persistent trade imbalances.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/trade/marx-trade.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Theories of International Trade</a> › Topic 21</p>
+  <h1>Marx and the World Market</h1>
+  <p class="lead">Marx never wrote the volume on the world market that he planned for his critique of political economy. But trade, colonies, and the world market run through his work, from the <em>Communist Manifesto</em> to the third volume of <em>Capital</em>. This topic reconstructs his view and follows its most developed modern form, Anwar Shaikh’s argument that trade is governed by absolute, not comparative, advantage.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#world">The world market as capital’s arena</a></li><li><a href="#free">Marx on free trade (1848)</a></li><li><a href="#colonies">Colonies and the international division of labor</a></li><li><a href="#value">The law of value between nations</a></li><li><a href="#shaikh">Shaikh: absolute advantage and persistent imbalances (interactive)</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="world">1. The world market as capital’s arena</h2>
+  <p>For Marx, capital is value that must keep growing, and it therefore pushes beyond every boundary. The <em>Communist Manifesto</em> (1848) describes how the need for a constantly expanding market “chases the bourgeoisie over the whole surface of the globe.” Cheap commodities, Marx and Engels wrote, are the heavy artillery that batters down all walls: every nation is compelled to adopt the bourgeois mode of production or perish. The world market is not an addition to national economies but the natural ground of capitalism. In the <em>Grundrisse</em> (1857–58), Marx wrote that the tendency to create the world market is directly given in the concept of capital itself.</p>
+  <p>Trade also plays a role in Marx’s theory of profit. In volume 3 of <em>Capital</em>, foreign trade appears among the “counteracting factors” to the falling rate of profit: it cheapens the elements of constant capital and the necessities that workers consume, and capital invested in foreign trade, especially colonial trade, can earn higher profits. But by expanding the scale of production, trade also accelerates accumulation and the forces that drive the rate of profit down (see the History of Economic Thought course, <a href="/het/marx-profit-rate.html">Topic 7</a>).</p>
+
+  <h2 id="free">2. Marx on free trade (1848)</h2>
+  <p>In January 1848, at the Democratic Association in Brussels, Marx gave a speech “On the Question of Free Trade,” shortly after the repeal of the Corn Laws (Topic 3). He mocked the free traders’ promise that cheaper bread would benefit workers: if bread became cheaper, he argued, wages would soon fall to match, and the main beneficiaries would be the manufacturers, who wanted cheap bread so that they could pay lower wages. Free trade was the freedom of capital. Yet Marx did not support protection either. Protection, he argued, was a means of building large-scale industry within a nation, and so was conservative, while free trade dissolved old nationalities and pushed the antagonism between capital and labor to the extreme. He ended by voting for free trade “in this revolutionary sense alone,” because it would hasten the social revolution.</p>
+  <p>Engels later added nuance. In an 1888 preface to the speech, he noted that for a country like the United States, protection might be the right policy for developing industry, and that the choice between free trade and protection was a question of each country’s stage and circumstances, not of principle.</p>
+
+  <h2 id="colonies">3. Colonies and the international division of labor</h2>
+  <p>In volume 1 of <em>Capital</em>, Marx described how machine industry created a new international division of labor that converted one part of the globe into a chiefly agricultural field of production for the other, which remained chiefly industrial. His examples included the destruction of Indian hand-weaving by British machine-made cotton, and Ireland’s transformation into a pasture supplying wool and meat to England. In his articles on India for the <em>New York Daily Tribune</em> (1853), Marx condemned the brutality of British rule while arguing, controversially, that it was destroying the old Indian village economy and so laying the material foundations of a new society. In his later writings on Ireland and on the Russian village commune, he became more skeptical that colonial capitalism would develop the colonies at all, a doubt that later Marxists developed into theories of imperialism and dependency (Topics 22–23).</p>
+  <p>Marx also treated the colonial plunder of the Americas, Africa, and Asia as a central part of the <b>primitive accumulation</b> of capital: “the turning of Africa into a warren for the commercial hunting of black-skins” signaled, in his words, the dawn of capitalist production.</p>
+
+  <h2 id="value">4. The law of value between nations</h2>
+  <p>How does Marx’s labor theory of value apply to trade between countries? In chapter 20 of volume 1, he noted that the law of value is “modified” in its international application. On the world market, the more productive national labor counts as more intensive labor: an hour of work in a country with higher productivity produces more value, in international terms, than an hour in a less productive country. So a richer country can obtain, in exchange, the product of more hours of foreign labor than it gives. In volume 3, discussing foreign trade, Marx wrote that a more advanced country may sell its goods above their value but below the cost of producing them in the less advanced country, so that it receives more labor in kind than it gives, while the less advanced country still obtains the goods more cheaply than it could make them.</p>
+  <p>Marx left these remarks undeveloped. They became the starting point for later Marxist debates over whether trade between rich and poor countries involves a transfer of value, the subject of Topic 24.</p>
+
+  <h2 id="shaikh">5. Shaikh: absolute advantage and persistent imbalances</h2>
+  <p>The most systematic Marxian theory of trade comes from Anwar Shaikh, an economist at the New School for Social Research, who developed it from the late 1970s and set it out fully in chapter 11 of <em>Capitalism: Competition, Conflict, Crises</em> (2016). Shaikh rejects comparative advantage. Ricardo’s theory, he argues, depends on Hume’s price–specie-flow mechanism (Topic 1): a country with a trade deficit loses money, its prices fall, and it becomes competitive in the goods in which it has a comparative advantage, until trade balances. But money flows do not work that way in modern economies. A deficit country loses reserves, credit tightens, and interest rates <em>rise</em>, which attracts capital inflows that finance the deficit. Prices do not fall enough to restore balance.</p>
+  <p>Instead, Shaikh argues, international trade is governed by <b>absolute advantage</b>, just like competition between firms within a country. The real exchange rate is anchored by the relative real unit labor costs of the countries’ tradable goods. A country whose producers have lower real costs, because of higher productivity relative to real wages, tends to run persistent trade surpluses, while a country with higher costs runs persistent deficits, financed by borrowing. Free trade does not equalize: it reinforces the advantages of the strong and leads to chronic deficits and rising foreign debt for the weak. This conclusion is close to that of the developmentalists and post-Keynesians (Topics 9 and 19), reached from a classical and Marxian foundation. Shaikh supports it with evidence that real exchange rates track relative real unit labor costs over long periods.</p>
+
+  <div class="box" id="shbox">
+    <h3>Comparative advantage versus absolute advantage</h3>
+    <p class="note">Two countries trade manufactures. Set the real unit labor cost of country B relative to country A. Under the classical mechanism, a deficit drains money, prices fall, and trade balances. Under Shaikh’s mechanism, the deficit country’s interest rate rises and it borrows abroad, so the imbalance persists and its foreign debt grows. The figures are illustrative.</p>
+    <div class="grid2">
+      <div><label>B’s real unit labor cost relative to A’s: <b id="rcv">1.20</b></label><input type="range" id="rc" min="0.7" max="1.5" step="0.01" value="1.2"></div>
+      <div><label>Years: <b id="nyv">20</b></label><input type="range" id="ny" min="5" max="40" step="1" value="20"></div>
+    </div>
+    <p><button type="button" class="btn on" data-m="shaikh">Shaikh: absolute advantage</button><button type="button" class="btn" data-m="hume">Classical: self-correcting</button></p>
+    <svg id="shchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Country B’s trade balance and foreign debt over time"></svg>
+    <div class="out" id="shout"></div>
+  </div>
+  <div class="think"><b>Question to think about:</b> Marx supported free trade in 1848 because it would hasten capitalism’s crisis. Is that a defense of free trade?</div>
+
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Karl Marx, “On the Question of Free Trade,” speech to the Democratic Association of Brussels (1848).</p>
+  <p class="rd">Karl Marx and Friedrich Engels, <em>Manifesto of the Communist Party</em> (1848), section 1.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Anwar Shaikh, <em>Capitalism: Competition, Conflict, Crises</em> (2016), chapter 11.</p>
+  <p class="rd">Karl Marx, <em>Capital</em>, vol. 1 (1867), chapter 15, section 7, and chapter 20.</p>
+  <p><a href="index.html#topic-21">← Back to Topic 21 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let mode = 'shaikh';
+function sh() {
+  const rc = +$('rc').value, N = +$('ny').value;
+  $('rcv').textContent = rc.toFixed(2); $('nyv').textContent = N;
+  document.querySelectorAll('#shbox .btn').forEach(b => b.classList.toggle('on', b.dataset.m === mode));
+  const tb0 = -10*(rc - 1); // B's trade balance, % of GDP
+  const TB = [], D = []; let debt = 0, gap = rc - 1;
+  for (let t = 0; t <= N; t++) {
+    const tb = mode === 'hume' ? -10*gap : tb0;
+    TB.push(tb); D.push(debt);
+    debt = debt*1.03 - tb; // interest on debt plus new borrowing
+    if (mode === 'hume') gap *= 0.8; // prices fall in the deficit country until costs equalize
+  }
+  const W = 640, H = 230, L = 50, R = 20, T = 14, B = 34, X = t => L + t/N*(W-L-R);
+  const hi = Math.max(10, ...D.map(Math.abs), ...TB.map(Math.abs)) * 1.1, Y = v => (H-B+T)/2 - v/hi*(H-B-T)/2;
+  let g = `<line x1="${L}" y1="${Y(0)}" x2="${W-R}" y2="${Y(0)}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [-1, -0.5, 0, 0.5, 1].forEach(f => g += `<text x="${L-6}" y="${Y(f*hi/1.1)+4}" text-anchor="end">${(f*hi/1.1).toFixed(0)}</text>`);
+  for (let t = 0; t <= N; t += N > 20 ? 10 : 5) g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">years (values in % of B’s annual GDP)</text>`;
+  const path = a => a.map((v, t) => (t ? 'L' : 'M') + X(t).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ');
+  g += `<path d="${path(TB)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/><path d="${path(D)}" fill="none" stroke="#b03a2e" stroke-width="2.4" stroke-dasharray="6 4"/>`;
+  g += `<text x="${X(N)-4}" y="${Y(TB[N]) + (TB[N] < 0 ? 16 : -8)}" text-anchor="end" style="fill:#c47a2c">B’s trade balance</text><text x="${X(N)-4}" y="${Y(D[N]) + (D[N] > 0 ? -8 : 16)}" text-anchor="end" style="fill:#b03a2e">B’s foreign debt</text>`;
+  $('shchart').innerHTML = g;
+  const f = v => v.toFixed(1);
+  let msg;
+  if (Math.abs(rc - 1) < 0.005) msg = 'With equal real unit labor costs, neither country has an absolute advantage and trade is balanced.';
+  else if (mode === 'hume') msg = `B starts with a trade ${tb0 < 0 ? 'deficit' : 'surplus'} of ${f(Math.abs(tb0))}% of GDP. In the classical story, money ${tb0 < 0 ? 'flows out of' : 'flows into'} B, its prices ${tb0 < 0 ? 'fall' : 'rise'}, and the imbalance disappears within a few years. Accumulated debt stays small (${f(D[N])}%), and each country ends up exporting the goods in which it has a comparative advantage.`;
+  else msg = `B’s real costs are ${rc > 1 ? 'higher' : 'lower'} than A’s, so B runs a persistent trade ${tb0 < 0 ? 'deficit' : 'surplus'} of ${f(Math.abs(tb0))}% of GDP. ${tb0 < 0 ? 'Its interest rate rises and it borrows abroad; nothing automatically restores balance. After ' + N + ' years its foreign debt reaches <b>' + f(D[N]) + '% of GDP</b>.' : 'It accumulates claims on A of <b>' + f(-D[N]) + '% of GDP</b> after ' + N + ' years.'} Under absolute advantage, free trade reinforces the position of the low-cost country.`;
+  $('shout').innerHTML = msg;
+}
+['rc','ny'].forEach(i => $(i).addEventListener('input', sh));
+document.querySelectorAll('#shbox .btn').forEach(b => b.addEventListener('click', () => { mode = b.dataset.m; sh(); }));
+sh();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
