@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>新凯恩斯主义经济学 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：新凯恩斯主义经济学，包括价格和工资黏性、不完全信息（含柠檬市场互动模型）、效率工资与信贷配给、新贸易理论、新新古典综合与通胀目标制，以及2008年之后的流动性陷阱。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/new-keynesian.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/new-keynesian.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/new-keynesian.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/new-keynesian.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../new-keynesian.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题16</p>
+  <h1>新凯恩斯主义经济学：不完全的市场</h1>
+  <p class="lead">在1970年代的新古典革命之后，一批经济学家着手在批评者所要求的基础之上，即最优化的个人和理性预期之上，重建凯恩斯主义的结论。他们的回答是：现实中的市场是不完全的，在价格、信息和竞争上都是如此，而这些不完全性使需求和政策有了用武之地。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#context">1970年代的挑战</a></li><li><a href="#sticky">价格与工资黏性</a></li><li><a href="#info">不完全信息（互动）</a></li><li><a href="#labor">效率工资与信贷配给</a></li><li><a href="#trade">新贸易理论</a></li><li><a href="#synthesis">新新古典综合</a></li><li><a href="#crisis">2008年之后</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 1970年代的挑战</h2>
+  <p>1970年代的滞胀使新古典综合的简单菲利普斯曲线失去了信誉。罗伯特·卢卡斯和新古典宏观经济学家认为，如果人们理性地形成预期，可预见的货币政策就无法影响产出，而且没有“微观基础”的模型不能用来评价政策（专题14）。以芬恩·基德兰德和爱德华·普雷斯科特（1982）为首的真实经济周期理论家走得更远：经济波动是最优化的家庭和企业对技术冲击的有效率的反应，政策没有什么需要纠正的。</p>
+  <p>许多经济学家认为，这些结论很难与大萧条或1981—1982年的沃尔克衰退相吻合，当时紧缩的货币政策明显造成了大规模失业。<b>新凯恩斯主义者</b>接受了批评者的方法，即最优化的行为者和理性预期，但认为市场并不会立即出清。这个名称在1980年代流行开来；N. 格里高利·曼昆和戴维·罗默编辑的两卷本文集《新凯恩斯主义经济学》（1991）界定了这一研究纲领。</p>
+
+  <h2 id="sticky">2. 价格与工资黏性</h2>
+  <ul>
+    <li><b>交错合同。</b>斯坦利·费希尔（1977）和约翰·泰勒（1980）证明，如果工资是在持续若干时期、并在不同时间续签的合同中确定的，那么即使每个人都有理性预期，货币政策也能影响产出，因为在任何时刻，许多工资都是在最新消息到来之前确定的。吉列尔莫·卡尔沃（1983）提供了一种简单的方法来刻画只偶尔调整价格的企业。</li>
+    <li><b>菜单成本。</b>曼昆（1985）以及乔治·阿克洛夫和珍妮特·耶伦（1985）证明，调整价格的小成本，例如重印菜单或做决定所花的时间，可能产生大的影响。对一家有一定市场势力的企业来说，不调整价格的代价很小，但如果所有企业都不调整，总需求和总产出就会发生很大的变化。</li>
+    <li><b>垄断竞争。</b>大多数新凯恩斯主义模型假定企业自己定价，这沿袭了爱德华·张伯伦和琼·罗宾逊（1933）的思路，而不是完全竞争中的价格接受者。价格高于边际成本，因此当需求上升时，企业愿意卖得更多。</li>
+  </ul>
+
+  <h2 id="info">3. 不完全信息</h2>
+  <p>另一条研究路线追问：当买者和卖者所知道的东西不同时会发生什么。乔治·阿克洛夫的《“柠檬”市场》（1970）在发表前曾被几家期刊拒稿，它证明当卖者比买者更了解质量时，市场可能瓦解。迈克尔·斯宾塞（1973）说明了教育如何可以作为能力的一种代价高昂的<b>信号</b>，约瑟夫·斯蒂格利茨与迈克尔·罗斯柴尔德（1976）则说明了保险公司如何<b>筛选</b>它们无法观察其风险的客户。阿克洛夫、斯宾塞和斯蒂格利茨共同获得了2001年的诺贝尔奖。</p>
+  <div class="box" id="lem">
+    <h3>柠檬市场</h3>
+    <p class="note" style="margin-top:0">二手车的质量从0美元到100美元不等（即每辆车对其车主的价值）。卖者知道自己车的质量；买者只知道在售车辆的平均质量。买者对任何一辆车的估价都高于它对卖者的价值。</p>
+    <div class="grid2">
+      <div><label>买者估价相对于质量的倍数：<b id="bpv">1.5</b></label><input type="range" id="bp" min="1" max="2.5" step="0.1" value="1.5"></div>
+      <div><label>买者最初的出价：<b id="p0v">$75</b></label><input type="range" id="p0" min="20" max="100" step="5" value="75"></div>
+    </div>
+    <svg id="lchart" viewBox="0 0 640 210" width="100%" role="img" aria-label="二手车价格的逐轮变化"></svg>
+    <div class="out" id="lout"></div>
+  </div>
+  <p>柠檬市场的逻辑解释了为什么二手车、健康保险和信贷市场可能萎缩甚至消失，也解释了为什么会有保修、品牌、声誉和监管来克服这一问题。</p>
+
+  <h2 id="labor">4. 效率工资与信贷配给</h2>
+  <p>信息问题也解释了为什么有些市场即使在长期中也不会出清。</p>
+  <ul>
+    <li><b>效率工资。</b>卡尔·夏皮罗和约瑟夫·斯蒂格利茨（1984）认为，雇主无法完全监督工作努力，因此会支付高于市场出清水平的工资，使失去工作的代价变高，从而防止偷懒。结果是持续存在的非自愿失业，它起着“约束工人的手段”的作用。阿克洛夫（1982）基于礼物交换和公平给出了一个相关的解释。马克思的产业后备军（专题7）用不同的语言表达了类似的观点。</li>
+    <li><b>信贷配给。</b>斯蒂格利茨和安德鲁·韦斯（1981）证明，银行可能拒绝向某些借款人贷款，而不是提高利率，因为更高的利率会赶走安全的借款人、吸引有风险的借款人。信贷被配给，因此对经济来说，重要的不仅是信贷的价格，还有信贷的供给。</li>
+  </ul>
+
+  <h2 id="trade">5. 新贸易理论</h2>
+  <p>保罗·克鲁格曼把垄断竞争应用于国际贸易。李嘉图和赫克歇尔—俄林用国家之间的差异来解释贸易（专题4）。克鲁格曼（1979、1980）证明，在规模报酬递增和消费者喜欢多样性的条件下，相似的国家也能从交换相似的产品中获益，例如用汽车换汽车，而且大的国内市场会吸引生产。在《地理与贸易》（1991）中，他把这一模型扩展到解释产业为什么在特定地区集聚。他获得了2008年的诺贝尔奖。新贸易理论还意味着，政府在原则上可以帮助本国企业在集中的行业中获取利润，这是发展主义者早就提出的观点（专题19），尽管克鲁格曼本人警告不要把它当作保护主义的理由。</p>
+
+  <h2 id="synthesis">6. 新新古典综合</h2>
+  <p>1990年代，新凯恩斯主义模型和真实经济周期模型融合为一种“新新古典综合”（马文·古德弗兰德和罗伯特·金，1997）：具有最优化的家庭和企业、理性预期和价格黏性的动态随机一般均衡（DSGE）模型。在教科书版本中，经济由三个方程描述：一条把产出与实际利率联系起来的需求曲线，一条把通胀与预期通胀和产出缺口联系起来的新凯恩斯主义菲利普斯曲线，以及一条中央银行的利率规则。</p>
+  <p class="eq">泰勒规则（1993）：利率 = 2% + 通胀率 + 0.5 ×（通胀率 − 2%）+ 0.5 × 产出缺口</p>
+  <p>其政策含义是<b>通胀目标制</b>，新西兰于1990年首先采用，后来大多数中央银行也采用了：一个独立的中央银行调整利率，使通胀保持在目标附近，并以此同时稳定产出。财政政策几乎不起作用。从1980年代中期到2007年的“大缓和”时期的平稳，似乎证实了这一方法。</p>
+
+  <h2 id="crisis">7. 2008年之后</h2>
+  <p>金融危机暴露了那些没有有意义的银行部门、也不可能发生违约的模型的局限。当中央银行把利率降到零时，经济陷入了凯恩斯所说的流动性陷阱（专题12），克鲁格曼曾在1998年针对日本分析过这一问题。中央银行转向“量化宽松”，大规模购买长期债券。包括克鲁格曼、斯蒂格利茨和奥利维尔·布兰查德（2008—2015年任国际货币基金组织首席经济学家）在内的新凯恩斯主义者成为财政紧缩的主要批评者，他们认为，当利率为零时，政府支出乘数很大。曾参与菜单成本和效率工资研究的珍妮特·耶伦担任了美联储主席（2014—2018），后来又出任财政部长。</p>
+  <p>此后，这些模型加入了金融摩擦、异质性家庭（“HANK”模型）和零利率下限。来自后凯恩斯主义一方的批评者（专题15）回应说，在均衡模型中加入摩擦并不能把握根本的不确定性或货币的内生创造，新凯恩斯主义者离新古典综合仍然比离凯恩斯更近。</p>
+  <div class="think"><b>讨论：</b>新凯恩斯主义者为了赢得与新古典宏观经济学家的争论，接受了理性预期和最优化。他们得到了什么，又放弃了什么？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">乔治·A. 阿克洛夫，《“柠檬”市场：质量不确定性与市场机制》，<em>Quarterly Journal of Economics</em> 第84卷第3期（1970）。</p>
+  <p class="rd">N. 格里高利·曼昆，《凯恩斯主义经济学的再生》（“The Reincarnation of Keynesian Economics”），<em>European Economic Review</em> 第36卷（1992）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第6章（凯恩斯）和第10章（弗里德曼），关于凯恩斯主义者与货币主义者之间的争论。</p>
+  <p class="rd">约瑟夫·E. 斯蒂格利茨，《全球化及其不满》（2002），第1章。</p>
+
+  <p><a href="index.html#topic-16">← 返回课程大纲专题16</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// lemons: qualities uniform on [0,100]; at price p, cars with quality <= p are offered; average quality p/2; buyers pay b * average
+function lem() {
+  const b = +$('bp').value, p0 = +$('p0').value;
+  $('bpv').textContent = b.toFixed(1); $('p0v').textContent = '$' + p0;
+  const ps = [p0]; for (let i = 1; i <= 10; i++) ps.push(Math.min(100, b * Math.min(ps[i-1], 100) / 2));
+  const W = 640, H = 210, L = 46, R = 14, T = 12, B = 30;
+  const X = i => L + i/10*(W-L-R), Y = v => H-B - v/100*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">$${v}</text>`);
+  for (let i = 0; i <= 10; i += 2) g += `<text x="${X(i)}" y="${H-B+15}" text-anchor="middle">${i}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">交易轮次</text>`;
+  g += `<polyline fill="none" stroke="#c47a2c" stroke-width="2.6" points="${ps.map((p,i)=>X(i)+','+Y(p)).join(' ')}"/>`;
+  ps.forEach((p,i) => g += `<circle cx="${X(i)}" cy="${Y(p)}" r="3.5" fill="#c47a2c"/>`);
+  $('lchart').innerHTML = g;
+  const end = ps[10];
+  $('lout').innerHTML = `在 $${p0} 的价格下，只有车辆价值低于 $${Math.min(p0,100)} 的车主才会出售，因此在售车辆对车主的平均价值是 $${(Math.min(p0,100)/2).toFixed(0)}，对买者的价值是 $${(b*Math.min(p0,100)/2).toFixed(0)}。买者调整出价，如此反复。十轮之后，价格为 <b>$${end.toFixed(1)}</b>。` +
+    (b < 2 ? '<b>市场瓦解了：</b>价格每下降一次，剩下的最好的车就被挤出市场，直到几乎没有交易，尽管每个买者对每辆车的估价都高于车主。' : b > 2 ? '买者对车的估价如此之高，以至于市场得以存续，所有的车都成交了。' : '价格保持在起始水平：这是一个刀刃上的情形。');
+}
+['bp','p0'].forEach(i => $(i).addEventListener('input', lem)); lem();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

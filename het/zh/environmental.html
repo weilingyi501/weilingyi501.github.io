@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>环境经济学 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：环境经济学，包括外部性与庇古税（互动模型）、科斯定理、可交易许可证、资源经济学、估值、贴现与气候政策（互动计算器），以及批评者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/environmental.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/environmental.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/environmental.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/environmental.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../environmental.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题21</p>
+  <h1>环境经济学</h1>
+  <p class="lead">把新古典经济学应用于自然：污染和资源枯竭是市场失灵，正确的价格、产权或许可证可以纠正它们。本专题追溯这一领域从庇古到碳定价的发展，以及关于如何为未来贴现的争论。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#what">什么是环境经济学</a></li><li><a href="#origins">起源</a></li><li><a href="#tools">三种工具（互动）</a></li><li><a href="#valuation">资源、估值与贴现（互动）</a></li><li><a href="#critics">批评者</a></li></ol>
+  </div>
+
+  <h2 id="what">1. 什么是环境经济学</h2>
+
+  <p><b>环境经济学</b>是新古典的应用微观经济学。它把污染和自然资源的枯竭看作<b>市场失灵</b>：这些成本落在交易之外的人身上，因此市场会生产过多。药方是让污染者承担其行为的全部成本。目标不是零污染，而是<em>有效率的</em>污染水平，即多生产一单位所带来的收益恰好等于它造成的损害。</p>
+  
+  <h2 id="origins">2. 起源</h2>
+  <p>这一领域的根源比它的名称更古老。A. C. 庇古的《福利经济学》（1920）提出了私人成本与社会成本之间的差距（专题9），哈罗德·霍特林的《可耗竭资源的经济学》（1931）奠定了资源经济学的基础。现代的环境经济学形成于1960年代，当时蕾切尔·卡森的《寂静的春天》（1962）和显而易见的空气与水污染使环境成为一个政治问题。艾伦·克尼斯和罗伯特·艾尔斯的“物质平衡”方法（1969）指出，经济从自然中取得的一切最终都会以废物的形式回到自然，因此污染是生产的正常副产品，而不是例外。威廉·鲍莫尔和华莱士·奥茨的《环境政策理论》（1975）为这一领域提供了标准教科书。美国于1970年通过了《清洁空气法》，同年成立了环境保护署，《环境经济学与管理杂志》于1974年创刊。</p>
+<h2 id="tools">3. 三种工具</h2>
+  <ul>
+    <li><b>税收。</b>A. C. 庇古（专题9）主张对社会成本超过私人成本的活动征税。税额等于有效率水平上的边际损害时，污染者就会恰好削减到这一水平。</li>
+    <li><b>产权与谈判。</b>罗纳德·科斯（1960）认为，如果产权界定清楚、谈判成本低廉，那么无论权利归谁，污染者和受害者都能自行达成有效率的结果。科斯本人强调交易成本很少是低廉的，这就是政府常常必须采取行动的原因。</li>
+    <li><b>可交易许可证。</b>政府为排放总量设定上限，并允许企业买卖排放许可证，使减排发生在成本最低的地方。美国1990年针对二氧化硫的酸雨计划是第一个大规模的例子，欧盟碳市场（2005）是最大的例子。</li>
+  </ul>
+  <div class="box" id="pigou">
+    <h3>有效率的污染水平与庇古税</h3>
+    <div class="grid2">
+      <div><label>每多排放一吨造成的损害（边际损害的斜率）：<b id="mdv">1.0</b></label><input type="range" id="md" min="0.2" max="3" step="0.1" value="1"></div>
+      <div><label>实际征收的碳税（美元/吨）：<b id="txv">$0</b></label><input type="range" id="tx" min="0" max="90" step="1" value="0"></div>
+    </div>
+    <svg id="pchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="排放的边际收益与边际损害"></svg>
+    <div class="out" id="pout"></div>
+    <p class="note">企业从排放中获得的边际收益从第一吨的100美元下降到第100吨的0美元；对他人造成的边际损害随每一吨而上升。没有税收时，企业会一直排放到其收益为零。</p>
+  </div>
+  <h2 id="valuation">4. 资源、估值与贴现</h2>
+  <p>哈罗德·霍特林（1931）证明，石油等可耗竭资源的所有者应当这样开采：使资源的净价格以利率的速度上涨，从而使把资源留在地下与把它卖掉同样是好的投资。环境经济学家还发展出一些方法，为清洁空气或一个物种等没有市场价格的东西赋予货币价值，例如询问人们愿意为此支付多少（“条件价值评估法”），或从房价和旅行成本中推断价值。这些价值被用于对管制措施进行<b>成本—收益分析</b>。</p>
+  <p>气候变化提高了赌注。威廉·诺德豪斯建立了第一批把经济与气候联系起来的“综合评估模型”，主张征收一种起点较低、逐步提高的碳税；他于2018年获得诺贝尔奖。《斯特恩报告》（2006）称气候变化是“世界上前所未有的最大的市场失灵”，主张采取快得多的行动。两者的分歧大部分来自一个数字：用来比较遥远未来的损害与今天成本的<b>贴现率</b>。</p>
+  <div class="box" id="disc">
+    <h3>未来的气候损害在今天值多少钱？</h3>
+    <div class="grid2">
+      <div><label>贴现率：<b id="drv">1.4%</b></label><input type="range" id="dr" min="0" max="6" step="0.1" value="1.4"></div>
+      <div><label>距离损害发生的年数：<b id="dyv">100</b></label><input type="range" id="dy" min="10" max="200" step="10" value="100"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" data-r="1.4">斯特恩（约1.4%）</button><button class="btn" type="button" data-r="4.5">诺德豪斯（约4%—5%）</button></div>
+    <div class="out" id="dout"></div>
+  </div>
+
+  <h2 id="critics">5. 批评者</h2>
+  <p>包括生态经济学家在内的批评者认为，这一框架把自然看作可以用金钱替代的东西；贴现率是一个关于后代的伦理选择，却被包装成技术问题；而支付意愿取决于支付能力，这使富人的偏好获得了更大的权重。</p>
+
+    <p>辩护者回应说，每一项政策都隐含着某种估值，因此把数字明确地写出来更好；而且碳定价和可交易许可证以比僵硬的管制更低的成本减少了污染。环境经济学与生态经济学（专题22）之间的分歧，与其说在于工具，不如说在于目标：是在一个不断增长的经济中追求效率，还是限制经济本身的规模。</p>
+  <div class="think"><b>讨论：</b>有效率的污染水平不是零。这是一个有用的洞见，还是一个危险的洞见？由谁来决定什么算作“损害”，谁的支付意愿算数？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">罗伯特·N. 斯塔文斯，《环境经济学》（“Environmental Economics”），载《新帕尔格雷夫经济学大辞典》（第2版，2008）。</p>
+  <p class="rd">罗纳德·H. 科斯，《社会成本问题》，<em>Journal of Law and Economics</em> 第3卷（1960），第1—5节。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">威廉·诺德豪斯，《气候赌场》（<em>The Climate Casino</em>，2013），选读。</p>
+  <p class="rd">尼古拉斯·斯特恩，《气候变化经济学：斯特恩报告》（2006），结论摘要。</p>
+  <p><a href="index.html#topic-21">← 返回课程大纲专题21</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Pigouvian tax: MB = 100 - Q, MD = d·Q
+function pigou() {
+  const d = +$('md').value, t = +$('tx').value;
+  $('mdv').textContent = d.toFixed(1); $('txv').textContent = '$' + t;
+  const qs = 100/(1 + d), ts = d*qs, qt = Math.max(0, 100 - t);
+  const W = 640, H = 250, L = 46, R = 14, T = 12, B = 30, QM = 105, PM = 110;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B - Math.min(p, PM)/PM*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">$${v}</text><text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">排放吨数</text>`;
+  g += `<line x1="${X(0)}" y1="${Y(100)}" x2="${X(100)}" y2="${Y(0)}" stroke="#0077b6" stroke-width="2.4"/><text x="${X(6)}" y="${Y(100)+16}" fill="#0077b6">企业的边际收益</text>`;
+  const qe = Math.min(QM, PM/d);
+  g += `<line x1="${X(0)}" y1="${Y(0)}" x2="${X(qe)}" y2="${Y(d*qe)}" stroke="#c0392b" stroke-width="2.4"/><text x="${X(qe)-4}" y="${Y(d*qe)+16}" text-anchor="end" fill="#c0392b">边际损害</text>`;
+  if (t > 0) g += `<line x1="${L}" y1="${Y(t)}" x2="${W-R}" y2="${Y(t)}" stroke="#3f8f6b" stroke-dasharray="6 4"/><text x="${W-R-4}" y="${Y(t)-6}" text-anchor="end" fill="#3f8f6b">税额 $${t}</text>`;
+  g += `<circle cx="${X(qs)}" cy="${Y(ts)}" r="6" fill="#023e8a"/><circle cx="${X(qt)}" cy="${Y(100-qt)}" r="5" fill="#3f8f6b"/>`;
+  $('pchart').innerHTML = g;
+  const gap = Math.abs(qt - qs) < 0.5;
+  $('pout').innerHTML = `有效率的排放量：<b>${qs.toFixed(0)} 吨</b>，此时边际收益等于边际损害；有效率的庇古税为每吨 <b>$${ts.toFixed(0)}</b>。在 $${t} 的税额下，企业排放 <b>${qt.toFixed(0)} 吨</b>。` +
+    (gap ? '税额设定得恰当：企业自己就会选择有效率的水平。' : qt > qs ? '税额太低（或为零）：排放超过有效率的水平，额外的损害超过了企业的收益。' : '税额太高：排放被削减到有效率的水平以下，企业放弃的收益超过了避免的损害。');
+}
+['md','tx'].forEach(i => $(i).addEventListener('input', pigou)); pigou();
+
+// discounting future damage
+function disc() {
+  const r = +$('dr').value/100, n = +$('dy').value;
+  $('drv').textContent = (r*100).toFixed(1) + '%'; $('dyv').textContent = n;
+  const pv = 1e12 / Math.pow(1 + r, n), f = v => v >= 1e9 ? (v/1e8).toFixed(0) + ' 亿美元' : (v/1e4).toFixed(0) + ' 万美元';
+  $('dout').innerHTML = `在 ${(r*100).toFixed(1)}% 的贴现率下，${n} 年后1万亿美元的损害在今天值 <b>${f(pv)}</b>。今天为防止这一损害最多值得花这么多钱。按1.4%计算是 ${f(1e12/Math.pow(1.014, n))}；按4.5%计算是 ${f(1e12/Math.pow(1.045, n))}。`;
+}
+['dr','dy'].forEach(i => $(i).addEventListener('input', disc));
+document.querySelectorAll('#disc .btn').forEach(b => b.addEventListener('click', () => { $('dr').value = b.dataset.r; disc(); }));
+disc();
+
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

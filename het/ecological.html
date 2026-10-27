@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Ecological Economics | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on ecological economics: the economy as a subsystem of the biosphere, the limits to growth with an interactive reserve index, Boulding, Georgescu-Roegen, and Daly, strong sustainability, degrowth, ecological distribution conflicts, and decoupling with an interactive calculator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/ecological.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/ecological.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/ecological.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 22</p>
+  <h1>Ecological Economics</h1>
+  <p class="lead">Ecological economics treats the economy as a subsystem of a finite biosphere. It gives ecology priority over market efficiency and questions the goal of endless economic growth, at least in rich countries.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#what">What ecological economics is</a></li><li><a href="#limits">The limits to growth (interactive)</a></li><li><a href="#founders">Founders</a></li><li><a href="#ideas">Key ideas</a></li><li><a href="#decoupling">Decoupling (interactive)</a></li><li><a href="#today">Ecological economics today</a></li></ol>
+  </div>
+
+  <h2 id="what">1. What ecological economics is</h2>
+
+  <p><b>Ecological economics</b> reverses the relation. Where environmental economics treats the environment as part of the economy, to be priced correctly, ecological economics treats the economy as a <b>subsystem of the biosphere</b>, which is finite and does not grow. It gives priority to ecology over market efficiency, and it questions the objective of economic growth itself, at least in rich countries.</p>
+  
+  <h2 id="limits">2. The limits to growth (interactive)</h2>
+
+  <p>In 1972, a team at MIT led by Donella Meadows, Dennis Meadows, Jørgen Randers, and William Behrens published <em>The Limits to Growth</em> for the Club of Rome. Their computer model projected that if population, industrial output, and pollution kept growing exponentially, the world would overshoot its physical limits within roughly a century. Economists such as William Nordhaus criticized the model for ignoring prices and technical change. Yet the book’s central point about exponential growth is arithmetic. A resource that would last 100 years at today’s rate of use lasts far less if use grows each year:</p>
+  <div class="box" id="lbox">
+    <h3>The exponential reserve index</h3>
+    <div class="grid2">
+      <div><label>Reserves at today’s rate of use (static index): <b id="sv">100 years</b></label><input type="range" id="s" min="20" max="500" step="10" value="100"></div>
+      <div><label>Growth of use per year: <b id="gv">3%</b></label><input type="range" id="g" min="0" max="7" step="0.5" value="3"></div>
+    </div>
+    <div style="margin-top:6px"><button class="btn" type="button" id="x5">Discover five times more reserves</button></div>
+    <svg id="lchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Cumulative use of a resource compared with reserves"></svg>
+    <div class="out" id="lout"></div>
+    <p class="note">Formula: with continuous growth g, reserves equal to s years of current use last ln(1 + g·s) / g years. The Limits to Growth tabulated this “exponential index” for many minerals.</p>
+  </div>
+  <p>The debate has since moved from mineral exhaustion to the capacity of the atmosphere to absorb carbon. The Stern Review (2006) argued that the costs of climate change far exceed the costs of preventing it; Nordhaus, who received the Nobel Prize in 2018, recommended a gradually rising carbon tax, a Pigouvian remedy (Topic 9). Randers’s <em>2052</em> (2012) forecasts that slower growth and political short-termism will leave the world well short of what is needed.</p>
+
+  
+<h2 id="founders">3. Founders</h2>
+  <ul>
+    <li><b>Kenneth Boulding</b>, in “The Economics of the Coming Spaceship Earth” (1966), contrasted the “cowboy economy” of an open frontier, in which success is measured by throughput, with the “spaceman economy” of a closed system, in which the aim is to maintain the stock of resources with as little throughput as possible.</li>
+    <li><b>Nicholas Georgescu-Roegen</b>, in <em>The Entropy Law and the Economic Process</em> (1971), argued that production is governed by the second law of thermodynamics: it turns low-entropy energy and materials into high-entropy waste, irreversibly. Economics, he complained, had modeled itself on mechanics, in which every process can run backward.</li>
+    <li><b>Herman Daly</b>, his student, proposed the <b>steady-state economy</b> (1977): constant stocks of people and capital, maintained by a throughput of energy and materials kept within what ecosystems can regenerate and absorb. Like John Stuart Mill (Topic 5), he argued that a stationary economy need not mean a stationary culture.</li>
+  </ul>
+  <h2 id="ideas">4. Key ideas</h2>
+  <ul>
+    <li><b>Scale before allocation.</b> Markets can allocate resources efficiently, but they cannot tell us how large the economy should be relative to the ecosystem. That must be decided first, politically, as a ceiling on throughput.</li>
+    <li><b>Strong versus weak sustainability.</b> Robert Solow and other neoclassical economists argued that produced capital and technology can substitute for natural resources, so an economy is sustainable as long as its total capital does not fall (“weak sustainability”). Ecological economists reply that natural capital, such as a stable climate or fertile soil, is a complement to produced capital, not a substitute, and must be preserved in its own right (“strong sustainability”).</li>
+    <li><b>The rebound effect.</b> W. S. Jevons (Topic 8) observed in <em>The Coal Question</em> (1865) that more efficient steam engines increased Britain’s total coal use, because they made coal cheaper to use. Efficiency alone does not guarantee lower resource use.</li>
+    <li><b>Planetary boundaries and degrowth.</b> Johan Rockström and colleagues (2009) proposed limits for nine Earth systems, from climate to nitrogen cycles. Writers on <b>degrowth</b> and post-growth economics, such as Giorgos Kallis and Jason Hickel, and Kate Raworth’s <em>Doughnut Economics</em> (2017), argue that rich countries should aim at well-being within those limits rather than at growth.</li>
+    <li><b>Ecological distribution conflicts.</b> Joan Martínez-Alier’s <em>The Environmentalism of the Poor</em> (2002) studied conflicts over mining, dams, and pollution in the global South. Theories of ecologically unequal exchange extend the idea of unequal exchange (Topic 11) from labor to land, energy, and materials.</li>
+  </ul>
+  <h2 id="decoupling">5. Decoupling (interactive)</h2>
+  <p>The central empirical question is <b>decoupling</b>: can output keep growing while resource use and emissions fall? Relative decoupling, less carbon per dollar of output, is common. Absolute decoupling, falling emissions with rising output, has occurred in a number of rich countries, but ecological economists doubt it can be fast enough. The arithmetic follows from a simple identity: emissions = output × emissions per unit of output.</p>
+  <div class="box" id="dcp">
+    <h3>How fast must the economy decouple?</h3>
+    <div class="grid2">
+      <div><label>Cut in emissions to reach by the target year: <b id="ctv">90%</b></label><input type="range" id="ct" min="20" max="100" step="5" value="90"></div>
+      <div><label>Years to get there: <b id="tyv">25</b></label><input type="range" id="ty" min="10" max="50" step="5" value="25"></div>
+      <div><label>Growth of output per year: <b id="ggv">3.0%</b></label><input type="range" id="gg" min="0" max="6" step="0.5" value="3"></div>
+    </div>
+    <div class="out" id="dcout"></div>
+  </div>
+  <h2 id="today">6. Ecological economics today</h2>
+  <p>The International Society for Ecological Economics was founded in 1989, and its journal, <em>Ecological Economics</em>, the same year. The field links economists with ecologists and physicists, and it has grown alongside the climate crisis. Its ideas run through the “wellbeing economy” and “beyond GDP” movements, the doughnut framework adopted by some city governments, and debates over “green growth” versus degrowth in the reports of the Intergovernmental Panel on Climate Change. Its critics, from environmental economists to developmentalists (Topic 19), reply that poor countries need growth, that technology has repeatedly loosened resource limits, and that degrowth in rich countries lacks a convincing account of how to maintain employment and welfare without growth.</p>
+  <div class="think"><b>Discussion:</b> Environmental economists ask what level of pollution is efficient; ecological economists ask how large the economy can be. Can both questions be answered with prices? Which question would you ask first?</div>
+
+  
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Kenneth E. Boulding, “The Economics of the Coming Spaceship Earth” (1966).</p>
+  <p class="rd">Herman E. Daly, <em>Steady-State Economics</em> (1977), ch. 1–2.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Donella Meadows, Dennis Meadows, Jørgen Randers, and William Behrens, <em>The Limits to Growth</em> (1972), ch. 1.</p>
+  <p class="rd">Randers, <em>2052: A Global Forecast for the Next Forty Years</em> (2012), selections.</p>
+  <p class="rd">Kate Raworth, <em>Doughnut Economics</em> (2017), ch. 1.</p>
+  <p><a href="index.html#topic-22">← Back to Topic 22 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function limits() {
+  const s = +$('s').value, g = +$('g').value/100;
+  $('sv').textContent = s + ' years'; $('gv').textContent = (g*100).toFixed(1).replace('.0','') + '%';
+  const life = g ? Math.log(1 + g*s)/g : s;
+  const W = 640, H = 230, L = 46, T = 12, B = 30, XM = Math.max(60, Math.ceil(Math.min(s, 400)/50)*50);
+  const X = t => L + t/XM*(W - L - 14), Y = v => H - B - Math.min(v, s*1.15)/(s*1.15)*(H - B - T);
+  const cum = t => g ? (Math.exp(g*t) - 1)/g : t;
+  let g2 = `<line x1="${L}" y1="${H-B}" x2="${W-14}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let t = 0; t <= XM; t += XM/5) g2 += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g2 += `<text x="${(L+W)/2}" y="${H-2}" text-anchor="middle">years from today</text>`;
+  g2 += `<line x1="${L}" y1="${Y(s)}" x2="${W-14}" y2="${Y(s)}" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/><text x="${W-18}" y="${Y(s)-6}" text-anchor="end" fill="#c47a2c">total reserves</text>`;
+  let p = '', q = ''; for (let t = 0; t <= XM; t += XM/200) { p += (p ? 'L' : 'M') + X(t) + ' ' + Y(cum(t)); q += (q ? 'L' : 'M') + X(t) + ' ' + Y(t); }
+  g2 += `<path d="${q}" fill="none" stroke="#9fc4e6" stroke-width="2" stroke-dasharray="4 3"/><path d="${p}" fill="none" stroke="#0077b6" stroke-width="2.6"/>`;
+  if (life <= XM) g2 += `<circle cx="${X(life)}" cy="${Y(s)}" r="6" fill="#023e8a"/>`;
+  g2 += `<text x="${L+6}" y="${T+10}">cumulative use</text>`;
+  $('lchart').innerHTML = g2;
+  const life5 = g ? Math.log(1 + g*5*s)/g : 5*s;
+  $('lout').innerHTML = `Reserves last <b>${life.toFixed(0)} years</b>, not ${s}. ` + (g ? `Use doubles every ${(Math.log(2)/g).toFixed(0)} years. Discovering five times more reserves extends their life only to <b>${life5.toFixed(0)} years</b>.` : 'With no growth in use, the static index is exact.');
+}
+['s','g'].forEach(i => $(i).addEventListener('input', limits));
+$('x5').addEventListener('click', () => { const s = $('s'); s.value = Math.min(500, +s.value*5); limits(); });
+limits();
+// decoupling: emissions = output × intensity
+function dcp() {
+  const c = +$('ct').value/100, n = +$('ty').value, g = +$('gg').value/100;
+  $('ctv').textContent = Math.round(c*100) + '%'; $('tyv').textContent = n; $('ggv').textContent = (g*100).toFixed(1) + '%';
+  const e = c >= 1 ? null : Math.pow(1 - c, 1/n) - 1, i = c >= 1 ? null : (1 + e)/(1 + g) - 1;
+  $('dcout').innerHTML = c >= 1 ? 'A 100% cut means emissions per unit of output must fall to zero: no amount of growth can be offset by efficiency alone; the energy system itself must change.' :
+    `Emissions must fall <b>${(-e*100).toFixed(1)}%</b> a year. With output growing ${(g*100).toFixed(1)}% a year, emissions per unit of output must fall <b>${(-i*100).toFixed(1)}%</b> a year, every year for ${n} years. For comparison, the world’s carbon intensity of output has fallen by roughly 1–2% a year in recent decades. ` +
+    (g > 0 ? `With zero growth, the required fall would be ${(-e*100).toFixed(1)}% a year.` : 'With zero growth, all the work falls on cutting emissions directly.');
+}
+['ct','ty','gg'].forEach(i => $(i).addEventListener('input', dcp)); dcp();
+
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

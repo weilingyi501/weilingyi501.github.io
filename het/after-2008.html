@@ -6,11 +6,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
-  <title>Economics After 2008 | Lingyi Wei</title>
-  <meta name="description" content="A teaching module on economics after 2008: Minsky's financial instability hypothesis with an interactive model, behavioral economics, institutions and development, Schumpeter and innovation, ecological limits with an interactive exponential reserve index, deglobalization, and the revival of political economy.">
+  <title>Economics After 2008: The Revival of Political Economy | Lingyi Wei</title>
+  <meta name="description" content="The closing topic of the course: how the 2008 crisis changed economics, Piketty and the return of inequality with an interactive model of his two laws, the critical traditions that kept classical questions alive, pluralism, and a map of all the schools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/after-2008.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/after-2008.html">
   <link rel="stylesheet" href="../style.css">
 <style>
 .vt { --soft:#f5f6f8; --faint:#8a929b; }
@@ -19,6 +21,7 @@
 .vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
 .vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
 .vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
 .vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
 .vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
@@ -40,10 +43,17 @@
 .vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
 .vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
 .vt .btn.on { background: var(--link); color: #fff; }
-.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
 .vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
 .vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
-.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -62,313 +72,91 @@
 </header>
 
 <main class="page vt">
-  <p class="crumb"><a class="langbtn" href="zh/after-2008.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Week 14</p>
-  <h1>Economics After 2008: Instability, Institutions, and the Planet</h1>
-  <p class="lead">The financial crisis of 2008 sent economists back to thinkers the textbooks had set aside. This last module surveys the questions that now shape the field, and traces each to the traditions we have studied.</p>
+  <p class="crumb"><a class="langbtn" href="zh/after-2008.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 24</p>
+  <h1>Economics After 2008: The Revival of Political Economy</h1>
+  <p class="lead">The financial crisis of 2008 sent economists back to questions that the textbooks had set aside: instability, inequality, power, and the limits of the planet. This closing topic looks at how the profession responded, at the return of distribution to the center of debate, and at what the history of economic thought offers for the problems of today.</p>
 
-  <div class="toc"><b>In this module</b>
-    <ol><li><a href="#minsky">2008 and the return of Minsky (interactive)</a></li><li><a href="#behavior">Behavioral economics</a></li><li><a href="#info">Information, imperfect markets, and new trade theory</a></li><li><a href="#institutions">Institutions, development, and the state</a></li><li><a href="#innovation">Schumpeter and innovation</a></li><li><a href="#planet">Limits to growth (interactive)</a></li><li><a href="#environmental">Environmental economics (interactive)</a></li><li><a href="#ecological">Ecological economics (interactive)</a></li><li><a href="#feminist">Feminist economics (interactive)</a></li><li><a href="#global">Globalization and its discontents</a></li><li><a href="#revival">The revival of political economy</a></li></ol>
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#crisis">The crisis and the profession</a></li><li><a href="#piketty">The return of inequality (interactive)</a></li><li><a href="#critical">The critical traditions today</a></li><li><a href="#pluralism">Pluralism and the teaching of economics</a></li><li><a href="#map">A map of the schools</a></li></ol>
   </div>
 
-  <h2 id="minsky">1. 2008 and the return of Minsky</h2>
-  <p>In September 2008, the investment bank Lehman Brothers failed and the world financial system came close to collapse. Output and trade fell faster than at any time since the Great Depression. Visiting the London School of Economics that November, Queen Elizabeth II reportedly asked why nobody had seen the crisis coming. The dominant macroeconomic models of the time had little room for banks, debt, or default.</p>
-  <p>One economist had built a theory around exactly these. Hyman Minsky (1919–1996), a post-Keynesian, argued in <em>Stabilizing an Unstable Economy</em> (1986) that financial fragility grows out of stability itself. After years of good times, lenders and borrowers grow confident and take on more debt relative to income. Minsky classified borrowers into three types:</p>
-  <ul>
-    <li><b>Hedge</b> finance: income covers both interest and repayment of principal.</li>
-    <li><b>Speculative</b> finance: income covers interest, but debts must be rolled over (refinanced) as they come due.</li>
-    <li><b>Ponzi</b> finance: income does not even cover interest; the borrower must borrow more, or sell assets, to pay, and depends on asset prices continuing to rise.</li>
-  </ul>
-  <p>As a boom continues, the share of speculative and Ponzi units rises. Then a rise in interest rates or a fall in income pushes speculative units into Ponzi positions, forced asset sales drive prices down, and the boom turns into a crash, the “Minsky moment.” Commentators in 2007–08 revived the phrase.</p>
-  <div class="box" id="fbox">
-    <h3>Hedge, speculative, or Ponzi?</h3>
-    <p class="note" style="margin-top:0">Five borrowers, each with annual income and a loan repaid in equal installments. Raise the interest rate, or let incomes fall in a recession.</p>
+  <h2 id="crisis">1. The crisis and the profession</h2>
+  <p>In September 2008 the investment bank Lehman Brothers failed, and the world financial system came close to collapse. Output and trade fell faster than at any time since the Great Depression. Visiting the London School of Economics that November, Queen Elizabeth II reportedly asked why nobody had seen the crisis coming. A group of British economists replied in a letter in 2009 that it had been a failure of “the collective imagination of many bright people” to understand the risks to the system as a whole.</p>
+  <p>The crisis exposed the limits of the dominant macroeconomic models, which had little room for banks, debt, or default, and of the belief that financial markets price risk efficiently (Topics 14 and 16). It revived interest in thinkers who had stressed instability: Keynes, Kalecki, Minsky, and Godley (Topics 12 and 15), and, from a different direction, the Austrians (Topic 14). In the following decade, the slow recovery, the debate over austerity, the eurozone crisis, the COVID-19 recession of 2020, the inflation of 2021–23, and climate change kept those questions open.</p>
+  <p>Mainstream economics also changed. It became far more empirical, using large administrative datasets and natural experiments; it added financial frictions and unequal households to its macroeconomic models; and it took inequality, market power, and behavioral evidence more seriously. Critics argue that these changes leave the core of the neoclassical framework untouched.</p>
+
+  <h2 id="piketty">2. The return of inequality</h2>
+  <p>The crisis also revived questions of distribution that the classical economists had placed at the center of the discipline. Thomas Piketty’s <em>Capital in the Twenty-First Century</em> (2013), built on work with Anthony Atkinson, Emmanuel Saez, and Gabriel Zucman, assembled two centuries of tax records to show that inequality of income and wealth fell between 1914 and the 1970s and has risen since in most rich countries. This challenged the optimism of Simon Kuznets, who had suggested in 1955 that inequality falls naturally in the later stages of growth (Topic 13); for Piketty, the mid-century decline was the product of wars, depression, and policy, such as progressive taxation and strong unions.</p>
+  <p>Piketty summarized his argument in two “laws.” The first is an accounting identity: capital’s share of income α equals the rate of return on capital r times the ratio of capital to income β. The second says that in the long run β tends toward the net saving rate s divided by the growth rate g. When growth slows while saving does not, capital accumulates relative to income; and when r exceeds g, inherited wealth grows faster than the economy, and the past tends to “devour the future.”</p>
+  <p class="eq">first law: α = r × β &nbsp;&nbsp;&nbsp; second law: β = s / g</p>
+  <div class="box" id="pk">
+    <h3>Piketty’s two laws</h3>
     <div class="grid2">
-      <div><label>Interest rate: <b id="rv">4%</b></label><input type="range" id="r" min="1" max="12" step="0.5" value="4"></div>
-      <div><label>Fall in income: <b id="yv">0%</b></label><input type="range" id="y" min="0" max="40" step="5" value="0"></div>
+      <div><label>Net saving rate (s): <b id="sv">10%</b></label><input type="range" id="s" min="4" max="15" step="0.5" value="10"></div>
+      <div><label>Growth rate (g): <b id="gv">1.5%</b></label><input type="range" id="g" min="0.5" max="6" step="0.1" value="1.5"></div>
+      <div><label>Return on capital (r): <b id="rv">5.0%</b></label><input type="range" id="r" min="2" max="8" step="0.1" value="5"></div>
     </div>
-    <svg id="fchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="Income versus debt payments for five borrowers"></svg>
-    <div class="out" id="fout"></div>
+    <div style="margin-top:8px"><button class="btn" type="button" data-p="10,4">Postwar golden age (fast growth)</button><button class="btn" type="button" data-p="10,1.5">Slow growth, as Piketty projects</button></div>
+    <div class="out" id="pkout"></div>
   </div>
-  <p>Minsky drew on Keynes and on Michał Kalecki. Kalecki’s profit equation shows why government deficits stabilized the economy in 2008–09: in a simplified accounting, aggregate profits equal investment plus the government deficit plus net exports, minus household saving. When private investment collapses, a larger deficit keeps profits, and with them firms’ ability to service debt, from collapsing too. Minsky called this the role of “big government,” together with a central bank acting as lender of last resort.</p>
-  <div class="think"><b>Discussion:</b> Minsky thought stability breeds instability. Does this imply that regulation must keep changing as finance innovates around it?</div>
+  <p>The book became a bestseller and brought the language of Ricardo and Marx, of rent, capital, and class shares, back into public debate. Critics questioned whether the return on capital stays high as capital accumulates, whether housing explains most of the rise in capital, and whether r &gt; g is the main mechanism. Post-Keynesians and Marxists added that distribution is set by power and institutions, not by a law of accumulation.</p>
 
-  <h2 id="behavior">2. Behavioral economics</h2>
-  <p>Neoclassical theory (Weeks 8–9) assumed that people maximize utility with full information. Herbert Simon argued in “A Behavioral Model of Rational Choice” (1955) that real people have <b>bounded rationality</b>: limited information and limited ability to compute. They <b>satisfice</b>, choosing the first option that is good enough, rather than optimize. Simon received the Nobel Prize in 1978.</p>
-  <p>Daniel Kahneman and Amos Tversky documented systematic departures from rational choice. Their “Prospect Theory” (<em>Econometrica</em>, 1979) showed that people judge outcomes as gains and losses relative to a reference point, and that losses hurt more than equal gains please (<b>loss aversion</b>). Richard Thaler carried these findings into economics proper; with Cass Sunstein he wrote <em>Nudge</em> (2008), which proposed changing default options, such as automatic enrollment in pension plans, to improve choices without forbidding any. Kahneman received the Nobel Prize in 2002, Thaler in 2017.</p>
-  <p>Critics note that behavioral economics mostly corrects the individual in the model and leaves the theory of markets and distribution untouched. Veblen (Week 10) had already argued in 1898 that the “lightning calculator of pleasures and pains” was a poor model of human beings shaped by habits and institutions.</p>
-
-  <h2 id="info">3. Information, imperfect markets, and new trade theory</h2>
-  <p>A second line of work kept the assumption that people pursue their interests but dropped the assumption of perfect markets. George Akerlof’s “The Market for ‘Lemons’” (1970) showed that when sellers of used cars know more about quality than buyers, buyers offer only an average price, owners of good cars withdraw, and the market can unravel. Joseph Stiglitz showed how imperfect information explains why banks ration credit instead of raising interest rates and why firms pay wages above the market-clearing level, so that unemployment can persist. Akerlof, Stiglitz, and Michael Spence shared the Nobel Prize in 2001. Their work supplied much of the microeconomic foundation of <b>new Keynesian</b> economics.</p>
-  <p>Both carried the argument into policy. Stiglitz, chief economist of the World Bank from 1997 to 2000, criticized the IMF’s handling of the Asian financial crisis in <em>Globalization and Its Discontents</em> (2002), and argued in <em>The Price of Inequality</em> (2012) that inequality slows growth. Akerlof and Robert Shiller revived Keynes’s “animal spirits” to explain the 2008 crisis (2009).</p>
-  <p>Paul Krugman changed trade theory. Ricardo explained trade by differences between countries (Week 4). Krugman (1979) showed that with increasing returns to scale and differentiated products, similar countries also gain from trading similar goods, such as cars for cars; this <b>new trade theory</b>, later extended to economic geography, earned him the Nobel Prize in 2008. After the crisis, Krugman argued that the rich economies were in a Keynesian liquidity trap, where cutting interest rates no longer works and government spending must fill the gap, and he became a leading critic of austerity.</p>
-
-  <h2 id="institutions">4. Institutions, development, and the state</h2>
-  <p>Why are so few countries rich? Douglass North answered that institutions matter most:</p>
-  <blockquote>Institutions are the rules of the game in a society or, more formally, are the humanly devised constraints that shape human interaction.<cite>Douglass North, <em>Institutions, Institutional Change and Economic Performance</em> (1990), p. 3</cite></blockquote>
-  <p>Secure property rights and the rule of law, North argued, lower the costs of transacting and allow markets to grow. Daron Acemoglu, Simon Johnson, and James Robinson extended this work, contrasting “inclusive” with “extractive” institutions and tracing the difference back to colonial history; they received the Nobel Prize in 2024.</p>
-  <p>A different tradition stresses the state. Alexander Hamilton’s <em>Report on Manufactures</em> (1791) and Friedrich List’s <em>National System of Political Economy</em> (1841) argued that young industries need protection before they can face free trade. Studies of Japan, South Korea, and Taiwan, such as Chalmers Johnson’s <em>MITI and the Japanese Miracle</em> (1982), Alice Amsden’s <em>Asia’s Next Giant</em> (1989), and Robert Wade’s <em>Governing the Market</em> (1990), showed that the <b>developmental state</b> used credit, tariffs, and export targets to build industries. Ha-Joon Chang’s <em>Kicking Away the Ladder</em> (2002) argued that today’s rich countries used these very policies before recommending free trade to others. China’s rise has made this debate central once again.</p>
-
-  <h2 id="innovation">5. Schumpeter and innovation</h2>
-  <p>Joseph Schumpeter (1883–1950) argued that capitalism is never in equilibrium. Its engine is the entrepreneur who introduces new products, methods, and forms of organization, which destroy old industries as they create new ones. In <em>Capitalism, Socialism and Democracy</em> (1942), he called this process of “creative destruction” the essential fact about capitalism.</p>
-  <p>Robert Solow’s growth model (1956) and his growth accounting (1957) found that most of the rise in output per worker in the United States came not from more capital but from a residual, “technical progress,” left unexplained by the model. Later endogenous growth theory sought to explain that residual with investment in research and ideas. Philippe Aghion and Peter Howitt built a formal model of Schumpeterian creative destruction, and Joel Mokyr studied the cultural and historical sources of innovation; the three shared the Nobel Prize in 2025. Debates about digital platforms, artificial intelligence, and market concentration revisit Schumpeter’s question of whether large firms promote or suppress innovation.</p>
-
-  <h2 id="planet">6. Limits to growth</h2>
-  <p>In 1972, a team at MIT led by Donella Meadows, Dennis Meadows, Jørgen Randers, and William Behrens published <em>The Limits to Growth</em> for the Club of Rome. Their computer model projected that if population, industrial output, and pollution kept growing exponentially, the world would overshoot its physical limits within roughly a century. Economists such as William Nordhaus criticized the model for ignoring prices and technical change. Yet the book’s central point about exponential growth is arithmetic. A resource that would last 100 years at today’s rate of use lasts far less if use grows each year:</p>
-  <div class="box" id="lbox">
-    <h3>The exponential reserve index</h3>
-    <div class="grid2">
-      <div><label>Reserves at today’s rate of use (static index): <b id="sv">100 years</b></label><input type="range" id="s" min="20" max="500" step="10" value="100"></div>
-      <div><label>Growth of use per year: <b id="gv">3%</b></label><input type="range" id="g" min="0" max="7" step="0.5" value="3"></div>
-    </div>
-    <div style="margin-top:6px"><button class="btn" type="button" id="x5">Discover five times more reserves</button></div>
-    <svg id="lchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Cumulative use of a resource compared with reserves"></svg>
-    <div class="out" id="lout"></div>
-    <p class="note">Formula: with continuous growth g, reserves equal to s years of current use last ln(1 + g·s) / g years. The Limits to Growth tabulated this “exponential index” for many minerals.</p>
-  </div>
-  <p>The debate has since moved from mineral exhaustion to the capacity of the atmosphere to absorb carbon. The Stern Review (2006) argued that the costs of climate change far exceed the costs of preventing it; Nordhaus, who received the Nobel Prize in 2018, recommended a gradually rising carbon tax, a Pigouvian remedy (Week 9). Randers’s <em>2052</em> (2012) forecasts that slower growth and political short-termism will leave the world well short of what is needed.</p>
-
-  <h2 id="environmental">7. Environmental economics</h2>
-  <p><b>Environmental economics</b> is neoclassical applied microeconomics. It treats pollution and the depletion of natural resources as <b>market failures</b>: costs that fall on people who are not party to a transaction, so that markets produce too much of them. The remedy is to make polluters face the full cost of what they do. The goal is not zero pollution but the <em>efficient</em> level of pollution, where the benefit of one more unit of production just equals the damage it causes.</p>
-  <h3 class="sub">Three tools</h3>
+  <h2 id="critical">3. The critical traditions today</h2>
+  <p>The final chapters of Hunt and Lautzenheiser trace the traditions that kept classical questions alive. Clarence Ayres (Topic 10) saw economic progress as a struggle between technology and “ceremonial” institutions. Post-Keynesians built on Keynes, Kalecki, and Joan Robinson (Topic 15), and Sraffians on Sraffa’s revival of classical price theory (Topic 13). Harry Braverman’s <em>Labor and Monopoly Capital</em> (1974) revived Marx’s analysis of the labor process, arguing that twentieth-century management, from Frederick Taylor’s “scientific management” onward, deskilled work to increase control over workers. Hunt and Lautzenheiser’s last chapter surveys a wider revival of research since the 1960s:</p>
   <ul>
-    <li><b>Taxes.</b> A. C. Pigou (Week 9) proposed taxing activities whose social cost exceeds their private cost. A tax equal to the marginal damage at the efficient level makes the polluter cut back exactly to that level.</li>
-    <li><b>Property rights and bargaining.</b> Ronald Coase (1960) argued that if property rights are clearly defined and bargaining is cheap, the polluter and the people harmed can reach the efficient outcome by themselves, whoever holds the right. Coase himself stressed that transaction costs are rarely low, which is why the government often has to act.</li>
-    <li><b>Tradable permits.</b> The government caps total emissions and lets firms buy and sell permits, so that cuts are made where they are cheapest. The U.S. acid-rain program of 1990 for sulfur dioxide was the first large example, and the European Union’s carbon market (2005) the largest.</li>
-  </ul>
-  <div class="box" id="pigou">
-    <h3>The efficient level of pollution and the Pigouvian tax</h3>
-    <div class="grid2">
-      <div><label>Damage caused by each extra ton (slope of marginal damage): <b id="mdv">1.0</b></label><input type="range" id="md" min="0.2" max="3" step="0.1" value="1"></div>
-      <div><label>Carbon tax actually imposed ($ per ton): <b id="txv">$0</b></label><input type="range" id="tx" min="0" max="90" step="1" value="0"></div>
-    </div>
-    <svg id="pchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="Marginal benefit and marginal damage of emissions"></svg>
-    <div class="out" id="pout"></div>
-    <p class="note">The firm’s marginal benefit from emitting falls from $100 for the first ton to $0 at 100 tons; marginal damage to others rises with each ton. Without a tax, the firm emits until its benefit is zero.</p>
-  </div>
-  <h3 class="sub">Resources, valuation, and discounting</h3>
-  <p>Harold Hotelling (1931) showed that the owner of an exhaustible resource such as oil should extract it so that its net price rises at the rate of interest, which makes leaving it in the ground as good an investment as selling it. Environmental economists also developed ways to put money values on things that have no market price, such as clean air or a species, by asking people what they would pay (“contingent valuation”) or by inferring values from house prices and travel costs. These values feed into <b>cost–benefit analysis</b> of regulations.</p>
-  <p>Climate change raised the stakes. William Nordhaus built the first “integrated assessment models,” which link the economy to the climate, and recommended a carbon tax that starts modest and rises over time; he shared the Nobel Prize in 2018. The Stern Review (2006) called climate change “the greatest market failure the world has ever seen” and recommended much faster action. Most of the difference between them came from one number: the <b>discount rate</b> used to compare damages in the distant future with costs today.</p>
-  <div class="box" id="disc">
-    <h3>How much is future climate damage worth today?</h3>
-    <div class="grid2">
-      <div><label>Discount rate: <b id="drv">1.4%</b></label><input type="range" id="dr" min="0" max="6" step="0.1" value="1.4"></div>
-      <div><label>Years until the damage occurs: <b id="dyv">100</b></label><input type="range" id="dy" min="10" max="200" step="10" value="100"></div>
-    </div>
-    <div style="margin-top:8px"><button class="btn" type="button" data-r="1.4">Stern (about 1.4%)</button><button class="btn" type="button" data-r="4.5">Nordhaus (about 4–5%)</button></div>
-    <div class="out" id="dout"></div>
-  </div>
-  <p>Critics, including ecological economists, argue that this framework treats nature as substitutable by money, that the discount rate is an ethical choice about future generations disguised as a technical one, and that willingness to pay depends on the ability to pay, which gives the preferences of the rich more weight.</p>
-
-  <h2 id="ecological">8. Ecological economics</h2>
-  <p><b>Ecological economics</b> reverses the relation. Where environmental economics treats the environment as part of the economy, to be priced correctly, ecological economics treats the economy as a <b>subsystem of the biosphere</b>, which is finite and does not grow. It gives priority to ecology over market efficiency, and it questions the objective of economic growth itself, at least in rich countries.</p>
-  <h3 class="sub">Founders</h3>
-  <ul>
-    <li><b>Kenneth Boulding</b>, in “The Economics of the Coming Spaceship Earth” (1966), contrasted the “cowboy economy” of an open frontier, in which success is measured by throughput, with the “spaceman economy” of a closed system, in which the aim is to maintain the stock of resources with as little throughput as possible.</li>
-    <li><b>Nicholas Georgescu-Roegen</b>, in <em>The Entropy Law and the Economic Process</em> (1971), argued that production is governed by the second law of thermodynamics: it turns low-entropy energy and materials into high-entropy waste, irreversibly. Economics, he complained, had modeled itself on mechanics, in which every process can run backward.</li>
-    <li><b>Herman Daly</b>, his student, proposed the <b>steady-state economy</b> (1977): constant stocks of people and capital, maintained by a throughput of energy and materials kept within what ecosystems can regenerate and absorb. Like John Stuart Mill (Week 5), he argued that a stationary economy need not mean a stationary culture.</li>
-  </ul>
-  <h3 class="sub">Key ideas</h3>
-  <ul>
-    <li><b>Scale before allocation.</b> Markets can allocate resources efficiently, but they cannot tell us how large the economy should be relative to the ecosystem. That must be decided first, politically, as a ceiling on throughput.</li>
-    <li><b>Strong versus weak sustainability.</b> Robert Solow and other neoclassical economists argued that produced capital and technology can substitute for natural resources, so an economy is sustainable as long as its total capital does not fall (“weak sustainability”). Ecological economists reply that natural capital, such as a stable climate or fertile soil, is a complement to produced capital, not a substitute, and must be preserved in its own right (“strong sustainability”).</li>
-    <li><b>The rebound effect.</b> W. S. Jevons (Week 8) observed in <em>The Coal Question</em> (1865) that more efficient steam engines increased Britain’s total coal use, because they made coal cheaper to use. Efficiency alone does not guarantee lower resource use.</li>
-    <li><b>Planetary boundaries and degrowth.</b> Johan Rockström and colleagues (2009) proposed limits for nine Earth systems, from climate to nitrogen cycles. Writers on <b>degrowth</b> and post-growth economics, such as Giorgos Kallis and Jason Hickel, and Kate Raworth’s <em>Doughnut Economics</em> (2017), argue that rich countries should aim at well-being within those limits rather than at growth.</li>
-    <li><b>Ecological distribution conflicts.</b> Joan Martínez-Alier’s <em>The Environmentalism of the Poor</em> (2002) studied conflicts over mining, dams, and pollution in the global South. Theories of ecologically unequal exchange extend the idea of unequal exchange (Week 10) from labor to land, energy, and materials.</li>
-  </ul>
-  <p>The central empirical question is <b>decoupling</b>: can output keep growing while resource use and emissions fall? Relative decoupling, less carbon per dollar of output, is common. Absolute decoupling, falling emissions with rising output, has occurred in a number of rich countries, but ecological economists doubt it can be fast enough. The arithmetic follows from a simple identity: emissions = output × emissions per unit of output.</p>
-  <div class="box" id="dcp">
-    <h3>How fast must the economy decouple?</h3>
-    <div class="grid2">
-      <div><label>Cut in emissions to reach by the target year: <b id="ctv">90%</b></label><input type="range" id="ct" min="20" max="100" step="5" value="90"></div>
-      <div><label>Years to get there: <b id="tyv">25</b></label><input type="range" id="ty" min="10" max="50" step="5" value="25"></div>
-      <div><label>Growth of output per year: <b id="ggv">3.0%</b></label><input type="range" id="gg" min="0" max="6" step="0.5" value="3"></div>
-    </div>
-    <div class="out" id="dcout"></div>
-  </div>
-  <div class="think"><b>Discussion:</b> Environmental economists ask what level of pollution is efficient; ecological economists ask how large the economy can be. Can both questions be answered with prices? Which question would you ask first?</div>
-
-  <h2 id="feminist">9. Feminist economics</h2>
-  <p><b>Feminist economics</b> starts from a simple observation: a large part of the work that keeps a society going, such as cooking, cleaning, and caring for children, the sick, and the old, is unpaid, is done mostly by women, and is left out of both national accounts and most economic theory. Feminist economists argue that leaving it out distorts how the economy is measured and how it is explained.</p>
-  <h3 class="sub">Forerunners</h3>
-  <p>William Thompson and Anna Wheeler’s <em>Appeal of One Half the Human Race</em> (1825) and John Stuart Mill’s <em>The Subjection of Women</em> (1869), shaped by Harriet Taylor Mill, argued for women’s legal and economic equality (Week 5). Charlotte Perkins Gilman’s <em>Women and Economics</em> (1898) argued that women’s economic dependence on husbands distorted both women’s lives and society. Margaret Reid’s <em>Economics of Household Production</em> (1934) defined household production as unpaid work that could in principle be done by a paid third party, a test still used to measure it. Ester Boserup’s <em>Woman’s Role in Economic Development</em> (1970) showed that development projects often ignored, and sometimes worsened, women’s work in agriculture.</p>
-  <h3 class="sub">Two founding debates</h3>
-  <ul>
-    <li><b>The domestic labor debate.</b> Marxist feminists asked how unpaid housework fits into Marx’s theory of value. Margaret Benston (1969) argued that women’s household labor produces use values outside the market; Mariarosa Dalla Costa and Selma James (1972) argued that housework reproduces labor power, the commodity on which profit depends, and launched the Wages for Housework campaign. Silvia Federici’s <em>Caliban and the Witch</em> (2004) traced the subordination of women’s labor back to primitive accumulation (Week 6). This line of work developed into <b>social reproduction theory</b>.</li>
-    <li><b>The household as a unit.</b> Gary Becker’s <em>A Treatise on the Family</em> (1981) applied rational choice to marriage, fertility, and the division of labor, explaining specialization by comparative advantage within a household that maximizes a single joint utility (Week 13). Feminist economists replied that this takes gender norms and unequal power as given. Bargaining models of the household (Manser and Brown, 1980; McElroy and Horney, 1981) and Amartya Sen’s idea of “cooperative conflicts” (1990) treated the family as a site of negotiation, where each member’s outside options shape the outcome.</li>
-  </ul>
-  <h3 class="sub">The field today</h3>
-  <ul>
-    <li><b>Measurement.</b> Marilyn Waring’s <em>If Women Counted</em> (1988) showed how the United Nations System of National Accounts excludes most unpaid work. Time-use surveys now measure it. The International Labour Organization (2018) estimated that people perform about 16.4 billion hours of unpaid care work every day, three-quarters of it by women, worth about 9 percent of world GDP if paid at the minimum wage.</li>
-    <li><b>Care and the critique of economic man.</b> Nancy Folbre (<em>The Invisible Heart</em>, 2001) and Julie Nelson argued that care work does not fit the model of self-interested exchange, and that markets depend on it without paying for it.</li>
-    <li><b>Development and macroeconomics.</b> Diane Elson showed how structural adjustment programs of the 1980s assumed that unpaid household labor could absorb any cut in public services, a “male bias” in macroeconomic policy. Bina Agarwal’s <em>A Field of One’s Own</em> (1994) showed that women’s land rights in South Asia shape their bargaining power and welfare. Sen’s estimate (1990) that more than 100 million women were “missing” from the population of Asia and North Africa exposed the consequences of discrimination for survival itself.</li>
-    <li><b>Mainstream recognition.</b> Claudia Goldin received the Nobel Prize in 2023 for her history of women’s work and pay, including the U-shaped path of women’s labor force participation over economic development and the role of “greedy jobs” in today’s gender pay gap.</li>
-  </ul>
-  <p>The International Association for Feminist Economics was founded in 1992 and its journal, <em>Feminist Economics</em>, in 1995. Like ecological economics, feminist economics draws on several traditions at once: Marxian, institutionalist, and neoclassical.</p>
-  <div class="box" id="care">
-    <h3>What is unpaid work worth?</h3>
-    <div class="grid2">
-      <div><label>Unpaid household and care work per adult per week: <b id="uhv">20 hours</b></label><input type="range" id="uh" min="5" max="40" step="1" value="20"></div>
-      <div><label>Hourly wage of a paid replacement: <b id="uwv">$15</b></label><input type="range" id="uw" min="5" max="40" step="1" value="15"></div>
-      <div><label>GDP per adult: <b id="ugv">$80,000</b></label><input type="range" id="ug" min="5000" max="120000" step="5000" value="80000"></div>
-      <div><label>Share of unpaid work done by women: <b id="usv">65%</b></label><input type="range" id="us" min="50" max="85" step="1" value="65"></div>
-    </div>
-    <div class="split" id="csplit"><div id="cw" style="background:#b8577e"></div><div id="cm" style="background:#7d8790"></div></div>
-    <div class="out" id="cout"></div>
-    <p class="note">This uses the “replacement cost” method: unpaid hours are valued at the wage of someone hired to do the same work, following Reid’s third-party test. Other methods value the hours at what the person could have earned in paid work.</p>
-  </div>
-  <div class="think"><b>Discussion:</b> If unpaid care work were counted in GDP, how would our picture of economic growth over the last century change, as women moved from household work into paid work?</div>
-
-  <h2 id="global">10. Globalization and its discontents</h2>
-  <p>From the 1990s to 2008, world trade grew much faster than world output, and production was spread across global supply chains. Since then, that growth has stalled. Dani Rodrik’s <em>The Globalization Paradox</em> (2011) argued that a country cannot have deep economic integration, national sovereignty, and democracy all at once; it must give up one of the three. The trade war between the United States and China from 2018, the supply disruptions of the COVID-19 pandemic, and the return of broad tariffs in the 2020s turned the old debate between Ricardo’s case for free trade (Week 4) and List’s case for protection into front-page news. Peter Zeihan’s <em>The End of the World Is Just the Beginning</em> (2022) predicts that aging populations and a retreating United States will break global trade into regional blocs.</p>
-
-  <h2 id="revival">11. The revival of political economy</h2>
-  <p>The crisis also revived questions of distribution that the classical economists had placed at the center of the discipline. Thomas Piketty’s <em>Capital in the Twenty-First Century</em> (2013) assembled two centuries of tax data to show that inequality of wealth fell between 1914 and the 1970s and has risen since, and argued that when the return on capital (r) exceeds the growth rate (g), inherited wealth grows in importance. This challenged the optimism of Simon Kuznets, who had suggested in 1955 that inequality falls naturally in the later stages of growth (Week 12); for Piketty, the mid-century decline was the product of wars, depression, and policy. The book became a bestseller and brought the language of Ricardo and Marx, of rent, capital, and class shares, back into public debate.</p>
-  <p>The final chapters of Hunt and Lautzenheiser trace several traditions that kept classical questions alive. Clarence Ayres (1891–1972), the leading American institutionalist of the mid-twentieth century, saw economic progress as a struggle between technology and “ceremonial” institutions that protect status and privilege. Post-Keynesians built on Keynes, Kalecki, and Joan Robinson, and Sraffians on Sraffa’s revival of classical price theory (Week 12). Harry Braverman’s <em>Labor and Monopoly Capital</em> (1974) revived Marx’s analysis of the labor process, arguing that twentieth-century management, from Frederick Taylor’s “scientific management” onward, deskilled work to increase control over workers.</p>
-  <p>Hunt and Lautzenheiser’s last chapter surveys a wider revival of research in the classical and Marxian traditions since the 1960s:</p>
-  <ul>
-    <li><b>Value and profit.</b> Anwar Shaikh’s work on the transformation problem and on how closely labor values track prices, and his national accounts in Marxian categories with E. Ahmet Tonak (1994); the “new interpretation” of value of Gérard Duménil and Duncan Foley; studies of the profit rate by Duménil and Dominique Lévy (1993) and Robert Brenner (1998). See the Week 7 module.</li>
-    <li><b>Stagnation and empire.</b> Paul Baran and Paul Sweezy’s <em>Monopoly Capital</em> (1966) and Harry Magdoff’s <em>The Age of Imperialism</em> (1969). See the Week 12 module.</li>
+    <li><b>Value and profit.</b> Anwar Shaikh’s work on the transformation problem and on how closely labor values track prices, and his national accounts in Marxian categories with E. Ahmet Tonak (1994); the “new interpretation” of value of Gérard Duménil and Duncan Foley; studies of the profit rate by Duménil and Dominique Lévy (1993) and Robert Brenner (1998). See Topic 7.</li>
+    <li><b>Stagnation and empire.</b> Paul Baran and Paul Sweezy’s <em>Monopoly Capital</em> (1966) and Harry Magdoff’s <em>The Age of Imperialism</em> (1969). See Topics 11 and 13.</li>
     <li><b>Work, schooling, and the media.</b> Braverman on the labor process; Samuel Bowles and Herbert Gintis’s <em>Schooling in Capitalist America</em> (1976); Edward Herman and Noam Chomsky’s <em>Manufacturing Consent</em> (1988).</li>
-    <li><b>Long waves and growth.</b> The social structures of accumulation framework, which links long waves of growth to the institutions that support them; Edward Nell’s “transformational growth”; Heinz Kurz and Neri Salvadori’s Sraffian <em>Theory of Production</em> (1995); and Duncan Foley and Thomas Michl’s <em>Growth and Distribution</em> (1999), which compares classical–Marxian, neoclassical, and post-Keynesian growth theories.</li>
+    <li><b>Long waves and growth.</b> The social structures of accumulation framework, which links long waves of growth to the institutions that support them; Edward Nell’s “transformational growth”; Heinz Kurz and Neri Salvadori’s Sraffian <em>Theory of Production</em> (1995); and Duncan Foley and Thomas Michl’s <em>Growth and Distribution</em> (1999).</li>
     <li><b>Alternatives to capitalism.</b> John Roemer’s <em>A Future for Socialism</em> (1994), a model of market socialism, and Michael Albert and Robin Hahnel’s <em>The Political Economy of Participatory Economics</em> (1991), a model of socialism without markets.</li>
   </ul>
-  <p>Students, too, pushed for change. After 2008, groups such as Rethinking Economics and the International Student Initiative for Pluralism in Economics (2014) called for teaching that includes the history of economic thought, competing schools, and the real economy.</p>
+
+  <h2 id="pluralism">4. Pluralism and the teaching of economics</h2>
+  <p>Students, too, pushed for change. After 2008, groups such as Rethinking Economics (founded in 2012) and the International Student Initiative for Pluralism in Economics (2014), whose open letter was signed by student groups from some thirty countries, called for teaching that includes the history of economic thought, competing schools, and the real economy. Within the mainstream, the CORE project’s free textbook <em>The Economy</em> (2017) began with inequality, history, and institutions rather than with the supply-and-demand diagram. Ha-Joon Chang’s <em>Economics: The User’s Guide</em> (2014) argues that there are at least nine schools of economics, each with its strengths and blind spots, and that students should know them all. That is also the argument of this course.</p>
+
+  <h2 id="map">5. A map of the schools</h2>
   <table>
-    <tr><th>Question after 2008</th><th>Traditions it draws on</th><th>Course weeks</th></tr>
-    <tr><td>Why do financial crises happen?</td><td>Keynes, Kalecki, Minsky; Austrian business-cycle theory</td><td>11, 13</td></tr>
-    <tr><td>Why are some countries rich?</td><td>Smith, List, institutionalism, developmentalism, world-systems</td><td>2, 10</td></tr>
-    <tr><td>Who gets what, and why?</td><td>Ricardo, Marx, Clark, the Cambridge controversy, Kuznets, Piketty</td><td>4, 6–7, 9, 12</td></tr>
-    <tr><td>Can growth go on forever?</td><td>Malthus, Schumpeter, Pigou, environmental and ecological economics</td><td>4, 9, 14</td></tr>
-    <tr><td>Who does the work that sustains society?</td><td>Thompson and Wheeler, Mill, Marx on reproduction, feminist economics</td><td>5, 6, 14</td></tr>
+    <thead><tr><th>Question</th><th>Traditions that answer it</th><th>Topics</th></tr></thead>
+    <tbody>
+      <tr><td>What determines value and prices?</td><td>Classical labor theories; Marx; marginalism; Sraffa</td><td>3, 6–8, 13</td></tr>
+      <tr><td>Who gets what, and why?</td><td>Ricardo, Marx, Clark, the Cambridge controversy, Kuznets, Piketty</td><td>4, 6–7, 9, 13, 24</td></tr>
+      <tr><td>Why do financial crises happen?</td><td>Keynes, Kalecki, Minsky; Austrian business-cycle theory; new Keynesian frictions</td><td>12, 14, 15, 16</td></tr>
+      <tr><td>Why are some countries rich and others poor?</td><td>Smith, List, imperialism, dependency, world-systems, new institutionalism, developmentalism</td><td>2, 11, 18, 19</td></tr>
+      <tr><td>How do people actually decide?</td><td>Veblen, behavioral economics</td><td>10, 17</td></tr>
+      <tr><td>Where does growth come from?</td><td>Smith, Schumpeter, Solow, endogenous growth</td><td>2, 13, 20</td></tr>
+      <tr><td>Can growth go on forever?</td><td>Malthus, Mill’s stationary state, environmental and ecological economics</td><td>4, 5, 21, 22</td></tr>
+      <tr><td>Who does the work that sustains society?</td><td>Thompson and Wheeler, Mill, Marx on reproduction, feminist economics</td><td>5, 6, 23</td></tr>
+    </tbody>
   </table>
   <div class="think"><b>Final discussion:</b> Which of the schools we studied best explains the world since 2008, and which explains it worst? Pick one event, such as the 2008 crisis, the rise of China, or climate change, and compare how two schools would explain it.</div>
 
   <h2>Readings</h2>
   <p class="rl">Core reading</p>
-  <p class="rd">Hunt and Lautzenheiser, ch. 18–19.</p>
+  <p class="rd">Hunt and Lautzenheiser, ch. 19.</p>
+  <p class="rd">Thomas Piketty, <em>Capital in the Twenty-First Century</em> (2014), introduction.</p>
   <p class="rl">Companion reading</p>
-  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 10.</p>
-  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 7 (Schumpeter), ch. 11 (North), ch. 12 (Solow), and epilogue.</p>
-  <p class="rd">Chang, <em>Economics: The User’s Guide</em>, ch. 4.</p>
-  <p class="rd">Herman E. Daly, <em>Steady-State Economics</em> (1977), ch. 1–2.</p>
-  <p class="rd">Nancy Folbre, <em>The Invisible Heart: Economics and Family Values</em> (2001).</p>
-  <p class="rd">Randers, <em>2052: A Global Forecast for the Next Forty Years</em> (2012).</p>
-  <p class="rd">Zeihan, <em>The End of the World Is Just the Beginning</em> (2022).</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 11 (“The End of the Worldly Philosophy?”).</p>
+  <p class="rd">Chang, <em>Economics: The User’s Guide</em>, ch. 4 (“Let a Hundred Flowers Bloom”).</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, epilogue.</p>
 
-  <p><a href="index.html#week-14">← Back to Week 14 in the course outline</a></p>
+  <p><a href="index.html#topic-24">← Back to Topic 24 in the course outline</a></p>
 </main>
 
 <footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
 
 <script>
 const $ = id => document.getElementById(id);
-// borrowers: name, income, debt, years to repay
-const F = [['A',14,60,10],['B',12,100,20],['C',10,120,25],['D',9,150,30],['E',8,180,30]];
-const COL = {Hedge:'#2a9d8f', Speculative:'#e9a23b', Ponzi:'#d1495b'};
-function minsky() {
-  const r = +$('r').value/100, cut = +$('y').value/100;
-  $('rv').textContent = (r*100).toFixed(1).replace('.0','') + '%'; $('yv').textContent = Math.round(cut*100) + '%';
-  const W = 640, H = 250, L = 40, T = 14, B = 34, MX = 24, bw = 44, gap = (W - L - 10) / F.length;
-  const Y = v => H - B - Math.min(v, MX)/MX*(H - B - T);
-  let g = `<line x1="${L}" y1="${H-B}" x2="${W-10}" y2="${H-B}" stroke="#ccd2d8"/>`;
-  [0,8,16,24].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
-  const cnt = {Hedge:0, Speculative:0, Ponzi:0};
-  F.forEach(([n, inc, D, T2], i) => {
-    const y = inc*(1 - cut), int = r*D, pr = D/T2;
-    const type = y >= int + pr ? 'Hedge' : y >= int ? 'Speculative' : 'Ponzi'; cnt[type]++;
-    const x = L + 14 + i*gap;
-    g += `<rect x="${x}" y="${Y(y)}" width="${bw}" height="${H-B-Y(y)}" fill="#0077b6" opacity=".85"/>`;
-    g += `<rect x="${x+bw+4}" y="${Y(int)}" width="${bw}" height="${H-B-Y(int)}" fill="#7d8790"/>`;
-    g += `<rect x="${x+bw+4}" y="${Y(int+pr)}" width="${bw}" height="${Y(int)-Y(int+pr)}" fill="#c3c9cf"/>`;
-    g += `<text x="${x+bw+2}" y="${H-B+14}" text-anchor="middle">Borrower ${n}</text>`;
-    g += `<text x="${x+bw+2}" y="${H-B+28}" text-anchor="middle" style="fill:${COL[type]};font-weight:600">${type}</text>`;
-  });
-  g += `<rect x="${W-250}" y="2" width="10" height="10" fill="#0077b6"/><text x="${W-236}" y="11">income</text><rect x="${W-186}" y="2" width="10" height="10" fill="#7d8790"/><text x="${W-172}" y="11">interest</text><rect x="${W-118}" y="2" width="10" height="10" fill="#c3c9cf"/><text x="${W-104}" y="11">principal due</text>`;
-  $('fchart').innerHTML = g;
-  $('fout').innerHTML = Object.keys(cnt).map(k => `<span class="tag" style="background:${COL[k]}">${k}: ${cnt[k]}</span>`).join(' ') +
-    (cnt.Ponzi ? ` &nbsp;${cnt.Ponzi} borrower${cnt.Ponzi>1?'s':''} must borrow more or sell assets just to pay interest. If many sell at once, asset prices fall and lenders stop rolling over the speculative borrowers’ debts too.` :
-     cnt.Speculative ? ` &nbsp;Speculative borrowers are fine as long as lenders keep refinancing them at today’s rate.` : ` &nbsp;Every borrower can pay off its debts from income: a robust financial structure.`);
+function pk() {
+  const s = +$('s').value/100, g = +$('g').value/100, r = +$('r').value/100;
+  $('sv').textContent = (s*100).toFixed(1).replace('.0','') + '%'; $('gv').textContent = (g*100).toFixed(1) + '%'; $('rv').textContent = (r*100).toFixed(1) + '%';
+  const beta = s/g, alpha = r*beta;
+  $('pkout').innerHTML = `Capital–income ratio β = ${(s*100).toFixed(1)}% ÷ ${(g*100).toFixed(1)}% = <b>${(beta*100).toFixed(0)}%</b> of national income (${beta.toFixed(1)} years of income). Capital’s share α = ${(r*100).toFixed(1)}% × ${beta.toFixed(2)} = <b>${(alpha*100).toFixed(0)}%</b> of national income. ` +
+    (alpha > 0.9 ? 'This is impossible in practice: the return on capital would have to fall as capital piles up, which is exactly what Piketty’s critics argue. ' : '') +
+    (r > g ? `Because r (${(r*100).toFixed(1)}%) exceeds g (${(g*100).toFixed(1)}%), wealth that is saved grows faster than income: inherited fortunes gain weight.` : 'Because g is at least as large as r, new income grows as fast as old wealth.');
 }
-['r','y'].forEach(i => $(i).addEventListener('input', minsky)); minsky();
-
-function limits() {
-  const s = +$('s').value, g = +$('g').value/100;
-  $('sv').textContent = s + ' years'; $('gv').textContent = (g*100).toFixed(1).replace('.0','') + '%';
-  const life = g ? Math.log(1 + g*s)/g : s;
-  const W = 640, H = 230, L = 46, T = 12, B = 30, XM = Math.max(60, Math.ceil(Math.min(s, 400)/50)*50);
-  const X = t => L + t/XM*(W - L - 14), Y = v => H - B - Math.min(v, s*1.15)/(s*1.15)*(H - B - T);
-  const cum = t => g ? (Math.exp(g*t) - 1)/g : t;
-  let g2 = `<line x1="${L}" y1="${H-B}" x2="${W-14}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
-  for (let t = 0; t <= XM; t += XM/5) g2 += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
-  g2 += `<text x="${(L+W)/2}" y="${H-2}" text-anchor="middle">years from today</text>`;
-  g2 += `<line x1="${L}" y1="${Y(s)}" x2="${W-14}" y2="${Y(s)}" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/><text x="${W-18}" y="${Y(s)-6}" text-anchor="end" fill="#c47a2c">total reserves</text>`;
-  let p = '', q = ''; for (let t = 0; t <= XM; t += XM/200) { p += (p ? 'L' : 'M') + X(t) + ' ' + Y(cum(t)); q += (q ? 'L' : 'M') + X(t) + ' ' + Y(t); }
-  g2 += `<path d="${q}" fill="none" stroke="#9fc4e6" stroke-width="2" stroke-dasharray="4 3"/><path d="${p}" fill="none" stroke="#0077b6" stroke-width="2.6"/>`;
-  if (life <= XM) g2 += `<circle cx="${X(life)}" cy="${Y(s)}" r="6" fill="#023e8a"/>`;
-  g2 += `<text x="${L+6}" y="${T+10}">cumulative use</text>`;
-  $('lchart').innerHTML = g2;
-  const life5 = g ? Math.log(1 + g*5*s)/g : 5*s;
-  $('lout').innerHTML = `Reserves last <b>${life.toFixed(0)} years</b>, not ${s}. ` + (g ? `Use doubles every ${(Math.log(2)/g).toFixed(0)} years. Discovering five times more reserves extends their life only to <b>${life5.toFixed(0)} years</b>.` : 'With no growth in use, the static index is exact.');
-}
-['s','g'].forEach(i => $(i).addEventListener('input', limits));
-$('x5').addEventListener('click', () => { const s = $('s'); s.value = Math.min(500, +s.value*5); limits(); });
-limits();
-
-// Pigouvian tax: MB = 100 - Q, MD = d·Q
-function pigou() {
-  const d = +$('md').value, t = +$('tx').value;
-  $('mdv').textContent = d.toFixed(1); $('txv').textContent = '$' + t;
-  const qs = 100/(1 + d), ts = d*qs, qt = Math.max(0, 100 - t);
-  const W = 640, H = 250, L = 46, R = 14, T = 12, B = 30, QM = 105, PM = 110;
-  const X = q => L + q/QM*(W-L-R), Y = p => H-B - Math.min(p, PM)/PM*(H-B-T);
-  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
-  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">$${v}</text><text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`);
-  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">tons emitted</text>`;
-  g += `<line x1="${X(0)}" y1="${Y(100)}" x2="${X(100)}" y2="${Y(0)}" stroke="#0077b6" stroke-width="2.4"/><text x="${X(74)}" y="${Y(26)+18}" fill="#0077b6">firm’s marginal benefit</text>`;
-  const qe = Math.min(QM, PM/d);
-  g += `<line x1="${X(0)}" y1="${Y(0)}" x2="${X(qe)}" y2="${Y(d*qe)}" stroke="#c0392b" stroke-width="2.4"/><text x="${X(qe)-12}" y="${Y(d*qe)-8}" text-anchor="end" fill="#c0392b">marginal damage</text>`;
-  if (t > 0) g += `<line x1="${L}" y1="${Y(t)}" x2="${W-R}" y2="${Y(t)}" stroke="#3f8f6b" stroke-dasharray="6 4"/><text x="${W-R-4}" y="${Y(t)-6}" text-anchor="end" fill="#3f8f6b">tax $${t}</text>`;
-  g += `<circle cx="${X(qs)}" cy="${Y(ts)}" r="6" fill="#023e8a"/><circle cx="${X(qt)}" cy="${Y(100-qt)}" r="5" fill="#3f8f6b"/>`;
-  $('pchart').innerHTML = g;
-  const gap = Math.abs(qt - qs) < 0.5;
-  $('pout').innerHTML = `Efficient emissions: <b>${qs.toFixed(0)} tons</b>, where marginal benefit equals marginal damage; the efficient Pigouvian tax is <b>$${ts.toFixed(0)}</b> a ton. With a tax of $${t}, the firm emits <b>${qt.toFixed(0)} tons</b>. ` +
-    (gap ? 'The tax is set right: the firm chooses the efficient level by itself.' : qt > qs ? 'The tax is too low (or zero): emissions exceed the efficient level, and the extra damage outweighs the firm’s gain.' : 'The tax is too high: emissions are cut below the efficient level, and the firm gives up more benefit than the damage avoided.');
-}
-['md','tx'].forEach(i => $(i).addEventListener('input', pigou)); pigou();
-
-// discounting future damage
-function disc() {
-  const r = +$('dr').value/100, n = +$('dy').value;
-  $('drv').textContent = (r*100).toFixed(1) + '%'; $('dyv').textContent = n;
-  const pv = 1e12 / Math.pow(1 + r, n), f = v => v >= 1e9 ? '$' + (v/1e9).toFixed(1) + ' billion' : '$' + (v/1e6).toFixed(0) + ' million';
-  $('dout').innerHTML = `$1 trillion of damage ${n} years from now is worth <b>${f(pv)}</b> today at a ${(r*100).toFixed(1)}% discount rate. ` +
-    `It is worth spending up to that amount today to prevent it. At 1.4% the figure is ${f(1e12/Math.pow(1.014, n))}; at 4.5% it is ${f(1e12/Math.pow(1.045, n))}.`;
-}
-['dr','dy'].forEach(i => $(i).addEventListener('input', disc));
-document.querySelectorAll('#disc .btn').forEach(b => b.addEventListener('click', () => { $('dr').value = b.dataset.r; disc(); }));
-disc();
-
-// decoupling: emissions = output × intensity
-function dcp() {
-  const c = +$('ct').value/100, n = +$('ty').value, g = +$('gg').value/100;
-  $('ctv').textContent = Math.round(c*100) + '%'; $('tyv').textContent = n; $('ggv').textContent = (g*100).toFixed(1) + '%';
-  const e = c >= 1 ? null : Math.pow(1 - c, 1/n) - 1, i = c >= 1 ? null : (1 + e)/(1 + g) - 1;
-  $('dcout').innerHTML = c >= 1 ? 'A 100% cut means emissions per unit of output must fall to zero: no amount of growth can be offset by efficiency alone; the energy system itself must change.' :
-    `Emissions must fall <b>${(-e*100).toFixed(1)}%</b> a year. With output growing ${(g*100).toFixed(1)}% a year, emissions per unit of output must fall <b>${(-i*100).toFixed(1)}%</b> a year, every year for ${n} years. For comparison, the world’s carbon intensity of output has fallen by roughly 1–2% a year in recent decades. ` +
-    (g > 0 ? `With zero growth, the required fall would be ${(-e*100).toFixed(1)}% a year.` : 'With zero growth, all the work falls on cutting emissions directly.');
-}
-['ct','ty','gg'].forEach(i => $(i).addEventListener('input', dcp)); dcp();
-
-// value of unpaid work
-function care() {
-  const h = +$('uh').value, w = +$('uw').value, gdp = +$('ug').value, s = +$('us').value/100;
-  $('uhv').textContent = h + ' hours'; $('uwv').textContent = '$' + w; $('ugv').textContent = '$' + gdp.toLocaleString(); $('usv').textContent = Math.round(s*100) + '%';
-  const v = h*52*w, share = v/gdp;
-  $('cw').style.width = (s*100) + '%'; $('cm').style.width = ((1-s)*100) + '%';
-  $('cw').textContent = `women ${Math.round(s*100)}%`; $('cm').textContent = `men ${Math.round((1-s)*100)}%`;
-  $('cout').innerHTML = `Unpaid work per adult is worth about <b>$${Math.round(v).toLocaleString()}</b> a year at replacement cost, or <b>${(share*100).toFixed(0)}% of GDP</b>. None of it appears in GDP. Women do ${Math.round(s*100)}% of it, about $${Math.round(v*2*s).toLocaleString()} a year per woman if adults are split evenly by sex.`;
-}
-['uh','uw','ug','us'].forEach(i => $(i).addEventListener('input', care)); care();
+['s','g','r'].forEach(i => $(i).addEventListener('input', pk));
+document.querySelectorAll('#pk .btn').forEach(b => b.addEventListener('click', () => { const [s, g] = b.dataset.p.split(','); $('s').value = s; $('g').value = g; pk(); }));
+pk();
 </script>
 <button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
 <script>

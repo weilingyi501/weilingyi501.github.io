@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>熊彼特与创新经济学 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：熊彼特与创新经济学，包括企业家与创造性破坏、长波、索洛残差（含增长核算互动练习）、演化经济学、内生增长、技术革命，以及企业家型国家。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/innovation.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/innovation.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/innovation.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/innovation.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../innovation.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题20</p>
+  <h1>熊彼特与创新经济学</h1>
+  <p class="lead">对大多数经济学家来说，资本主义是一个配置既定资源的体系。对约瑟夫·熊彼特来说，它是一个永不停歇的体系：它的本质是创新，创新在创造新产业的同时摧毁旧产业。本专题追溯他的思想，从维也纳一直到今天关于技术、增长和国家的争论。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#schumpeter">熊彼特</a></li><li><a href="#entrepreneur">企业家与经济发展</a></li><li><a href="#waves">经济周期与长波</a></li><li><a href="#csd">创造性破坏与资本主义的未来</a></li><li><a href="#residual">索洛残差（互动）</a></li><li><a href="#evolution">演化经济学与技术革命</a></li><li><a href="#endogenous">内生增长与2025年诺贝尔奖</a></li><li><a href="#state">企业家型国家与今天的争论</a></li></ol>
+  </div>
+
+  <h2 id="schumpeter">1. 熊彼特</h2>
+  <p>约瑟夫·熊彼特（1883—1950）出生于当时属于奥匈帝国的摩拉维亚，在维也纳师从欧根·冯·庞巴维克和弗里德里希·冯·维塞尔，在同一个研讨班里争论的还有路德维希·冯·米塞斯和马克思主义者鲁道夫·希法亭（专题11）。他在1919年短暂担任过奥地利财政部长，后来担任一家维也纳银行的行长，这家银行于1924年倒闭；此后他先后在波恩大学和（从1932年起）哈佛大学任教。他推崇瓦尔拉斯的一般均衡，认为那是经济理论最伟大的成就；他也推崇马克思，认为马克思是看到资本主义是一个变化过程的经济学家。他自己的工作试图把两者结合起来。</p>
+
+  <h2 id="entrepreneur">2. 企业家与经济发展</h2>
+  <p>在《经济发展理论》（1911；英译本1934）中，熊彼特从瓦尔拉斯的均衡出发，他称之为“循环流转”：一个年复一年自我再生产的经济，利润在其中被竞争所消除。他认为，发展并不来自人口或储蓄的逐渐增长。它来自内部，来自<b>创新</b>，即五种“新组合”：</p>
+  <ul>
+    <li>一种新产品或产品的一种新特性；</li>
+    <li>一种新的生产方法；</li>
+    <li>开辟一个新市场；</li>
+    <li>获得原料或半成品的一种新来源；</li>
+    <li>实现一种新的产业组织，例如造成或打破一种垄断地位。</li>
+  </ul>
+  <p>变革的主体是<b>企业家</b>，他不同于拥有生产资料的资本家，也不同于经营企业的经理。企业家实现新组合，克服阻力和习惯，并由银行<b>信贷</b>提供资金，信贷为新的用途创造购买力。利润是对创新的暂时报酬，随着模仿者跟进而被竞争掉。利息之所以存在，是因为企业家的利润能够支付它。</p>
+
+  <h2 id="waves">3. 经济周期与长波</h2>
+  <p>熊彼特认为，创新是成群出现的，因为一旦先驱者成功，大批模仿者就会跟进。繁荣来自对新组合的投资浪潮；萧条则来自旧经济对新组合的调整。在《经济周期》（1939）中，他把苏联经济学家尼古拉·康德拉季耶夫（1925）发现的约五十年的长波与重大的技术变革联系起来：纺织和蒸汽的工业革命、铁路时代，以及电力、化工和汽车时代。</p>
+
+  <h2 id="csd">4. 创造性破坏与资本主义的未来</h2>
+  <p>在《资本主义、社会主义与民主》（1942）中，熊彼特认为，教科书中许多小企业以同一价格出售产品的那种竞争，并不是重要的竞争。重要的是来自新产品、新技术、新供应来源和新组织形式的竞争，它威胁的不仅是现有企业的利润率，而是它们的生存。他把这称为“创造性破坏的过程”，并认为这是资本主义的本质性事实。由此他为拥有暂时垄断力量的大企业进行辩护：它们的利润为研究提供资金，而下一次创新的威胁对它们的约束比价格竞争更有效。</p>
+  <p>同一本书提出了“资本主义能生存下去吗？”的问题，并出人意料地给出了否定的回答。它的成功本身会削弱它。创新将变成例行公事，由大公司中的专家团队来完成，因此英雄式的企业家将变得过时。与此同时，一个不断扩大的知识分子阶层会使公众舆论转而反对商业，保护财产的制度也会逐渐削弱。结果将是向社会主义的逐渐过渡，不是通过革命，而是通过官僚化。后来的经济学家区分了“熊彼特 I 型”，即新的企业家型企业推动创新，与“熊彼特 II 型”，即大型老牌企业推动创新。</p>
+
+  <h2 id="residual">5. 索洛残差</h2>
+  <p>主流增长理论从另一个方向触及了同一个问题。罗伯特·索洛的增长模型（1956）意味着，在长期中，人均产出只能通过技术进步来增长（专题13）。在《技术变革与总量生产函数》（1957）中，索洛测量了1909年到1949年美国的增长中有多少可以由人均资本的增加来解释，发现大约八分之七无法解释。这一无法解释的部分，即<b>残差</b>，被归因于“最广义的技术变革”。摩西·阿布拉莫维茨称之为“我们无知的量度”。</p>
+  <div class="box" id="ga">
+    <h3>增长核算</h3>
+    <div class="grid2">
+      <div><label>产出的年增长率：<b id="gyv">3.0%</b></label><input type="range" id="gy" min="0" max="10" step="0.1" value="3"></div>
+      <div><label>资本存量的年增长率：<b id="gkv">3.0%</b></label><input type="range" id="gk" min="0" max="15" step="0.1" value="3"></div>
+      <div><label>劳动（工作小时）的年增长率：<b id="glv">1.0%</b></label><input type="range" id="gl" min="-1" max="5" step="0.1" value="1"></div>
+      <div><label>资本在收入中的份额（α）：<b id="gav">0.30</b></label><input type="range" id="ga" min="0.2" max="0.5" step="0.01" value="0.3"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" data-p="3,3,1">二十世纪中叶的美国（大致）</button><button class="btn" type="button" data-p="9.5,12,1">大量投资推动的快速赶超</button></div>
+    <div class="split" id="gsplit"><div id="sk" style="background:#3d5a80"></div><div id="sl" style="background:#8a929b"></div><div id="sa" style="background:#c47a2c"></div></div>
+    <div class="out" id="gaout"></div>
+    <p class="note">产出增长率 = α × 资本增长率 +（1 − α）× 劳动增长率 + 全要素生产率增长率（残差）。示意数字。</p>
+  </div>
+  <p>当增长核算被应用于东亚经济体时，阿尔温·扬（1995）和保罗·克鲁格曼（1994）发现，它们的增长有很大一部分来自更多的资本和更多的劳动，而不是来自较高的残差，这一发现引发了一场关于东亚增长是由积累驱动还是由学习驱动的长期争论（专题19）。</p>
+
+  <h2 id="evolution">6. 演化经济学与技术革命</h2>
+  <p>理查德·纳尔逊和悉尼·温特的《经济变迁的演化理论》（1982）把熊彼特与赫伯特·西蒙的有限理性（专题17）结合起来。企业并不最优化；它们遵循<b>惯例</b>，惯例所起的作用就像生物学中的基因。创新是对更好惯例的搜寻，竞争则选择出那些惯例行之有效的企业。这一方法催生了<b>新熊彼特主义</b>或演化经济学领域，以及对“国家创新体系”的研究（克里斯托弗·弗里曼、本特-奥克·伦德瓦尔）。</p>
+  <p>卡洛塔·佩雷斯在《技术革命与金融资本》（2002）中复兴了长波的思想。每一次技术革命（她认为1770年代以来有五次，最近的一次是1970年代以来的信息与通信技术）都要经过一个由金融投机驱动、以泡沫和崩溃告终的<b>导入期</b>，然后是一个新技术在新制度之下扩散到整个经济的<b>展开期</b>。她的框架被广泛用于解释2000年的互联网泡沫破裂和2008年的金融危机。</p>
+
+  <h2 id="endogenous">7. 内生增长与2025年诺贝尔奖</h2>
+  <p>在1980年代和1990年代，主流理论试图解释残差，而不是把它留在模型之外。保罗·罗默（1990）把思想看作一种特殊的物品：一个思想一旦被发现，任何人都可以使用而不会把它用掉，因此它是“非竞争性的”；企业之所以投资于研究，是因为专利和保密使它们能够获取部分回报。增长来自一个经济投入到生产思想中的资源。罗默与威廉·诺德豪斯共同获得了2018年的诺贝尔奖。</p>
+  <p>菲利普·阿吉翁和彼得·豪伊特（1992）建立了第一个熊彼特式创造性破坏的正式模型：企业投资于研究以取代在位者，每一次创新都会摧毁前一次创新的租金。经济史学家乔尔·莫基尔研究了1700年以后使持续创新在欧洲成为可能的文化和思想条件（《增长的文化》，2016）。莫基尔、阿吉翁和豪伊特因解释了创新驱动的经济增长而共同获得了2025年的诺贝尔奖。</p>
+
+  <h2 id="state">8. 企业家型国家与今天的争论</h2>
+  <p>玛丽安娜·马祖卡托的《企业家型国家》（2013）认为，英雄式的私人企业家只是故事的一部分：互联网、GPS、触摸屏以及现代生物技术的大部分，都来自政府资助的研究，在美国尤其是通过国防和卫生机构资助的研究。私人企业随后把这些技术商业化，而这些技术早期阶段的风险是由公众承担的。这一论证把熊彼特与发展主义传统（专题19）以及2020年代产业政策的回归联系起来。</p>
+  <p>熊彼特的问题重新回到了争论的中心。谷歌、亚马逊和Meta等数字平台，以及今天人工智能领域的领先者，代表的是奖励创新的暂时垄断，还是压制创新的根深蒂固的在位者？创新创造的就业是否仍然多于它摧毁的就业？2000年代中期以来测得的生产率增长放缓，是意味着创新变得更难了，还是意味着创新被测量得很糟糕？</p>
+  <div class="think"><b>讨论：</b>熊彼特预言资本主义将通过创新的官僚化而走向社会主义。他是错了，还是说得太早了？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">约瑟夫·A. 熊彼特，《资本主义、社会主义与民主》（1942），第7章（“创造性破坏的过程”）。</p>
+  <p class="rd">海尔布罗纳，《俗世哲人》，第10章（“约瑟夫·熊彼特的矛盾”）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第7章（熊彼特：什么推动创新？）和第12章（索洛：我们面临低增长的未来吗？）。</p>
+  <p class="rd">张夏准，<em>Economics: The User’s Guide</em>，第4章（熊彼特学派）。</p>
+  <p class="rd">卡洛塔·佩雷斯，《技术革命与金融资本》（2002），第1—2章。</p>
+
+  <p><a href="index.html#topic-20">← 返回课程大纲专题20</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function ga() {
+  const gy = +$('gy').value, gk = +$('gk').value, gl = +$('gl').value, a = +$('ga').value;
+  $('gyv').textContent = gy.toFixed(1) + '%'; $('gkv').textContent = gk.toFixed(1) + '%'; $('glv').textContent = gl.toFixed(1) + '%'; $('gav').textContent = a.toFixed(2);
+  const ck = a*gk, cl = (1-a)*gl, tfp = gy - ck - cl;
+  const tot = [ck, cl, tfp].reduce((x,y)=>x+Math.max(0,y),0) || 1;
+  [['sk', ck, '资本'], ['sl', cl, '劳动'], ['sa', tfp, '残差']].forEach(([id, v, lab]) => { const w = Math.max(0, v)/tot*100; $(id).style.width = w + '%'; $(id).textContent = w > 12 ? `${lab} ${(v/gy*100).toFixed(0)}%` : ''; });
+  $('gaout').innerHTML = `在 ${gy.toFixed(1)}% 的增长中，资本贡献 ${ck.toFixed(2)} 个百分点，劳动贡献 ${cl.toFixed(2)} 个百分点，残差（全要素生产率）贡献 <b>${tfp.toFixed(2)} 个百分点</b>。` +
+    (gy > 0 ? `残差解释了产出增长的 <b>${(tfp/gy*100).toFixed(0)}%</b>。` : '') +
+    (tfp < 0 ? '残差为负意味着投入的增长快于产出：只有积累，没有效率的提高。' : tfp/gy > 0.5 ? '大部分增长无法由投入解释：这正是熊彼特所说的创新的领域。' : '大部分增长来自投入的积累。');
+}
+['gy','gk','gl','ga'].forEach(i => $(i).addEventListener('input', ga));
+document.querySelectorAll('#ga .btn').forEach(b => b.addEventListener('click', () => { const [y,k,l] = b.dataset.p.split(','); $('gy').value = y; $('gk').value = k; $('gl').value = l; ga(); }));
+ga();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

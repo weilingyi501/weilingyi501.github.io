@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>新制度经济学 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：新制度经济学，包括科斯与交易成本、威廉姆森、诺斯论制度与发展、奥斯特罗姆与公地治理（含渔场互动模型）、阿西莫格鲁、约翰逊和罗宾逊，以及批评者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/institutions.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/institutions.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/institutions.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/institutions.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../institutions.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题18</p>
+  <h1>新制度经济学</h1>
+  <p class="lead">企业为什么存在？为什么有些国家富裕，有些国家贫穷？为什么有些社区能够几百年来很好地管理共享资源，而另一些社区却毁掉了它们？新制度经济学的回答是：制度，即游戏规则，是重要的；它用主流经济学的工具来解释制度。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#old">旧制度主义与新制度主义</a></li><li><a href="#coase">科斯：企业为什么存在</a></li><li><a href="#williamson">威廉姆森：市场与层级</a></li><li><a href="#north">诺斯：制度与经济绩效</a></li><li><a href="#ostrom">奥斯特罗姆：公地治理（互动）</a></li><li><a href="#ajr">殖民起源与国家为什么失败</a></li><li><a href="#critics">批评者</a></li></ol>
+  </div>
+
+  <h2 id="old">1. 旧制度主义与新制度主义</h2>
+  <p>“旧”制度主义者，凡勃伦、康芒斯、米切尔和艾尔斯（专题10），把制度看作由技术、权力和地位塑造的、不断演化的思想习惯来研究，并拒绝新古典经济学。1970年代形成的“新”制度经济学同意制度很重要，但对制度的解释不同：制度是人们在稀缺和自利的约束下，为降低交易成本而创造的规则。这一名称由奥利弗·威廉姆森在1975年提出。它的核心是把新古典的选择理论应用于新古典理论所忽视的一个问题：市场在什么样的规则之内运行，这些规则又是从哪里来的？</p>
+
+  <h2 id="coase">2. 科斯：企业为什么存在</h2>
+  <p>罗纳德·科斯二十多岁时写成的《企业的性质》（1937）提出了一个价格理论从未回答过的问题。如果市场能有效率地配置资源，为什么如此多的经济活动是在企业内部通过命令而不是通过价格组织起来的？他的回答是，使用市场是有成本的：寻找交易伙伴、谈判、订立和执行合同。把活动纳入企业内部，由经理直接指挥工人，就可以避免这些<b>交易成本</b>。企业不断扩大，直到在企业内部多组织一笔交易的成本等于在市场上完成这笔交易的成本为止。</p>
+  <p>他的第二篇经典之作《社会成本问题》（1960）把同样的思想应用于外部性，成为科斯定理的基础（专题14和21）：当交易成本为零时，产权的配置不影响效率；因此在交易成本不为零的现实世界中，产权和制度的设计就非常重要。科斯于1991年获得诺贝尔奖。</p>
+
+  <h2 id="williamson">3. 威廉姆森：市场与层级</h2>
+  <p>奥利弗·威廉姆森（《市场与层级制》，1975；《资本主义经济制度》，1985）把科斯的思想发展成一种关于企业何时自己生产、何时向外购买的理论。需要<b>专用性投资</b>的交易，例如在单一客户旁边建造的工厂，一旦投资沉没，就会使交易双方面临机会主义的风险：对方可以“敲竹杠”。这类交易最好在一家企业内部（“层级”）或通过长期合同来组织，而不是在现货市场上进行。威廉姆森与埃莉诺·奥斯特罗姆共同获得了2009年的诺贝尔奖。</p>
+
+  <h2 id="north">4. 诺斯：制度与经济绩效</h2>
+  <p>经济史学家道格拉斯·诺斯把新制度经济学变成了一种长期发展理论。</p>
+  <blockquote>制度是一个社会的游戏规则，或者更正式地说，是人为设计的、塑造人们相互关系的约束。<cite>道格拉斯·诺斯，《制度、制度变迁与经济绩效》（1990），第3页</cite></blockquote>
+  <p>制度包括<b>正式规则</b>（宪法、法律、产权）和<b>非正式约束</b>（习俗、规范、行为准则），以及它们的实施方式。有保障的产权和公正的法院降低了交易成本，使市场得以超越熟人之间的人格化交换而扩展。诺斯和巴里·温加斯特（1989）认为，英国1688年的光荣革命限制了王室没收财富的权力，从而对贷款人做出了可信的承诺，帮助英国的崛起成为可能。</p>
+  <p>为什么低效率的制度会持续存在？诺斯后来的著作强调<b>路径依赖</b>：制度创造了从中获益的组织和利益集团，而共同的信念变化缓慢。历史是重要的，这一点旧制度主义者也会认同。诺斯与罗伯特·福格尔共同获得了1993年的诺贝尔奖。</p>
+
+  <h2 id="ostrom">5. 奥斯特罗姆：公地治理</h2>
+  <p>在《公地的悲剧》（1968）中，生态学家加勒特·哈丁认为，任何向所有人开放的资源，例如公共牧场或渔场，都会被过度使用，因为每个使用者都能得到多取一些的全部好处，而代价却由所有人分担。通常的结论是私有化或国家控制。政治学家埃莉诺·奥斯特罗姆（1933—2012）研究了数百个真实案例，从瑞士的高山草场和日本的森林，到西班牙和尼泊尔的灌溉系统，再到土耳其和缅因州的渔场。她在《公共事物的治理之道》（1990）中证明，许多社区通过自己制定和执行的规则，世世代代可持续地管理着共享资源。她总结了成功的公共资源治理的<b>设计原则</b>，包括清晰的边界、与当地条件相适应的规则、使用者参与制定规则、由对使用者负责的人进行监督、分级制裁，以及低成本的冲突解决机制。2009年，她成为第一位获得诺贝尔经济学奖的女性。</p>
+  <div class="box" id="fish">
+    <h3>三十年间的一个渔场</h3>
+    <div class="grid2">
+      <div><label>渔船数量：<b id="nbv">10</b></label><input type="range" id="nb" min="2" max="30" step="1" value="10"></div>
+      <div><label>每条船每年的捕捞量（吨）：<b id="cbv">20</b></label><input type="range" id="cb" min="5" max="60" step="1" value="20"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" id="open">开放进入：每条船能捕多少就捕多少</button><button class="btn" type="button" id="rule">社区规则：总捕捞量以鱼群的再生量为限</button></div>
+    <svg id="fishchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="三十年间的鱼群存量"></svg>
+    <div class="out" id="fishout"></div>
+    <p class="note">鱼群较小时每年再生30%，接近1,000吨的承载能力时再生得较少（逻辑斯谛增长）。最大可持续捕捞量为每年75吨，此时的存量为500吨。</p>
+  </div>
+
+  <h2 id="ajr">6. 殖民起源与国家为什么失败</h2>
+  <p>达龙·阿西莫格鲁、西蒙·约翰逊和詹姆斯·罗宾逊（2001）利用殖民历史来检验制度是否导致繁荣。在欧洲殖民者面临很高的疾病死亡率的地方，例如热带非洲的大部分地区，他们建立了旨在把资源转移给一小撮精英的<b>攫取性</b>制度；在他们能够定居的地方，例如北美和澳大利亚，他们建立了保护财产、限制统治者权力的制度。他们认为，这些差异延续了下来，解释了今天收入差距的很大一部分。阿西莫格鲁和罗宾逊的《国家为什么会失败》（2012）把这一论证推而广之，对比了广泛分配权力和机会的<b>包容性</b>制度与攫取性制度。三人于2024年获得诺贝尔奖。</p>
+
+  <h2 id="critics">7. 批评者</h2>
+  <ul>
+    <li><b>孰先孰后？</b>张夏准等人认为，良好的制度既是发展的原因，也同样是发展的结果：今天的富国大多是在变富之后，而不是之前，才实现了民主、独立的法院和有保障的产权（专题19）。</li>
+    <li><b>地理与政策。</b>杰弗里·萨克斯等人认为，疾病、气候和出海通道解释了殖民起源论归因于制度的很大一部分，而殖民者死亡率的数据也受到了质疑。</li>
+    <li><b>效率与权力。</b>旧制度主义者和马克思主义者回应说，新制度主义过于经常地把制度看作对交易成本的有效率的解决方案，而制度往往是冲突的结果，并为有权势者服务。诺斯后来对路径依赖的强调，以及阿西莫格鲁和罗宾逊对精英和权力的强调，在一定程度上向这种观点靠拢了。</li>
+    <li><b>奥斯特罗姆的挑战。</b>奥斯特罗姆的研究既反对把市场、也反对把国家当作唯一的解决办法，并被解读为对社区和合作管理的支持，这与科斯和诺斯对产权的强调并不完全相容。</li>
+  </ul>
+  <div class="think"><b>讨论：</b>奥斯特罗姆发现，社区可以在既没有私有产权也没有国家的情况下治理共享资源。是什么条件使之成为可能？这些条件对大气这样的全球公共资源存在吗？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">道格拉斯·C. 诺斯，《制度》（“Institutions”），<em>Journal of Economic Perspectives</em> 第5卷第1期（1991）。</p>
+  <p class="rd">埃莉诺·奥斯特罗姆，《公共事物的治理之道》（1990），第1章和第3章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Yueh，<em>What Would the Great Economists Do?</em>，第11章（道格拉斯·诺斯：为什么富裕的国家如此之少？）。</p>
+  <p class="rd">罗纳德·H. 科斯，《企业的性质》，<em>Economica</em> 第4卷第16期（1937）。</p>
+
+  <p><a href="index.html#topic-18">← 返回课程大纲专题18</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const K = 1000, GR = 0.3, MSY = GR*K/4;
+let mode = 'free';
+function fish() {
+  const nb = +$('nb').value, cb = +$('cb').value;
+  $('nbv').textContent = nb; $('cbv').textContent = cb;
+  const want = nb*cb, cap = mode === 'rule' ? MSY : Infinity;
+  const st = [500], catches = [];
+  for (let t = 1; t <= 30; t++) { const s = st[t-1], grown = s + GR*s*(1 - s/K), c = Math.min(want, cap, grown); catches.push(c); st.push(Math.max(0, grown - c)); }
+  const W = 640, H = 220, L = 50, R = 14, T = 12, B = 30;
+  const X = t => L + t/30*(W-L-R), Y = v => H-B - v/K*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,250,500,750,1000].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
+  for (let t = 0; t <= 30; t += 5) g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">年</text><text x="${L+6}" y="${T+10}">鱼群存量（吨）</text>`;
+  g += `<polyline fill="none" stroke="${st[30] < 50 ? '#c0392b' : '#2a9d8f'}" stroke-width="2.6" points="${st.map((v,t)=>X(t)+','+Y(v)).join(' ')}"/>`;
+  $('fishchart').innerHTML = g;
+  const total = catches.reduce((a,b)=>a+b,0), last = catches.slice(-5).reduce((a,b)=>a+b,0)/5;
+  $('fishout').innerHTML = `${mode === 'rule' ? '在社区规则下，总捕捞量以每年 ' + MSY.toFixed(0) + ' 吨为上限。' : ''}渔船希望每年捕捞 ${want} 吨。30年后，鱼群存量为 <b>${st[30].toFixed(0)} 吨</b>；最后五年的平均捕捞量为每年 <b>${last.toFixed(0)} 吨</b>；30年的总捕捞量为 ${total.toFixed(0)} 吨。` +
+    (st[30] < 50 ? '<b>渔场崩溃了。</b>每条船都做了对自己合理的事，这就是哈丁的悲剧。' : last >= MSY*0.95 ? '渔场维持在接近最大产量的水平。' : '渔场得以存续，尽管低于最大可持续产量。');
+}
+['nb','cb'].forEach(i => $(i).addEventListener('input', fish));
+$('open').addEventListener('click', () => { mode = 'free'; $('nb').value = 20; $('cb').value = 40; fish(); });
+$('rule').addEventListener('click', () => { mode = 'rule'; fish(); });
+fish();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

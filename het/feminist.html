@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Feminist Economics | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on feminist economics: unpaid care work, the domestic labor debate and social reproduction, the critique of the unitary household, measurement, care, gender and development, and an interactive estimate of the value of unpaid work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/feminist.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/feminist.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/feminist.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 23</p>
+  <h1>Feminist Economics</h1>
+  <p class="lead">A large part of the work that sustains any society is unpaid, done mostly by women, and left out of national accounts and most economic theory. Feminist economics brings that work, and the relations of power around it, into view.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#what">What feminist economics is</a></li><li><a href="#forerunners">Forerunners</a></li><li><a href="#debates">Two founding debates</a></li><li><a href="#today">The field today</a></li><li><a href="#value">Valuing unpaid work (interactive)</a></li></ol>
+  </div>
+
+  <h2 id="what">1. What feminist economics is</h2>
+
+  <p><b>Feminist economics</b> starts from a simple observation: a large part of the work that keeps a society going, such as cooking, cleaning, and caring for children, the sick, and the old, is unpaid, is done mostly by women, and is left out of both national accounts and most economic theory. Feminist economists argue that leaving it out distorts how the economy is measured and how it is explained.</p>
+  <h2 id="forerunners">2. Forerunners</h2>
+  <p>William Thompson and Anna Wheeler’s <em>Appeal of One Half the Human Race</em> (1825) and John Stuart Mill’s <em>The Subjection of Women</em> (1869), shaped by Harriet Taylor Mill, argued for women’s legal and economic equality (Topic 5). Charlotte Perkins Gilman’s <em>Women and Economics</em> (1898) argued that women’s economic dependence on husbands distorted both women’s lives and society. Margaret Reid’s <em>Economics of Household Production</em> (1934) defined household production as unpaid work that could in principle be done by a paid third party, a test still used to measure it. Ester Boserup’s <em>Woman’s Role in Economic Development</em> (1970) showed that development projects often ignored, and sometimes worsened, women’s work in agriculture.</p>
+  <h2 id="debates">3. Two founding debates</h2>
+  <ul>
+    <li><b>The domestic labor debate.</b> Marxist feminists asked how unpaid housework fits into Marx’s theory of value. Margaret Benston (1969) argued that women’s household labor produces use values outside the market; Mariarosa Dalla Costa and Selma James (1972) argued that housework reproduces labor power, the commodity on which profit depends, and launched the Wages for Housework campaign. Silvia Federici’s <em>Caliban and the Witch</em> (2004) traced the subordination of women’s labor back to primitive accumulation (Topic 6). This line of work developed into <b>social reproduction theory</b>.</li>
+    <li><b>The household as a unit.</b> Gary Becker’s <em>A Treatise on the Family</em> (1981) applied rational choice to marriage, fertility, and the division of labor, explaining specialization by comparative advantage within a household that maximizes a single joint utility (Topic 14). Feminist economists replied that this takes gender norms and unequal power as given. Bargaining models of the household (Manser and Brown, 1980; McElroy and Horney, 1981) and Amartya Sen’s idea of “cooperative conflicts” (1990) treated the family as a site of negotiation, where each member’s outside options shape the outcome.</li>
+  </ul>
+  <h2 id="today">4. The field today</h2>
+  <ul>
+    <li><b>Measurement.</b> Marilyn Waring’s <em>If Women Counted</em> (1988) showed how the United Nations System of National Accounts excludes most unpaid work. Time-use surveys now measure it. The International Labour Organization (2018) estimated that people perform about 16.4 billion hours of unpaid care work every day, three-quarters of it by women, worth about 9 percent of world GDP if paid at the minimum wage.</li>
+    <li><b>Care and the critique of economic man.</b> Nancy Folbre (<em>The Invisible Heart</em>, 2001) and Julie Nelson argued that care work does not fit the model of self-interested exchange, and that markets depend on it without paying for it.</li>
+    <li><b>Development and macroeconomics.</b> Diane Elson showed how structural adjustment programs of the 1980s assumed that unpaid household labor could absorb any cut in public services, a “male bias” in macroeconomic policy. Bina Agarwal’s <em>A Field of One’s Own</em> (1994) showed that women’s land rights in South Asia shape their bargaining power and welfare. Sen’s estimate (1990) that more than 100 million women were “missing” from the population of Asia and North Africa exposed the consequences of discrimination for survival itself.</li>
+    <li><b>Mainstream recognition.</b> Claudia Goldin received the Nobel Prize in 2023 for her history of women’s work and pay, including the U-shaped path of women’s labor force participation over economic development and the role of “greedy jobs” in today’s gender pay gap.</li>
+  </ul>
+  <p>The International Association for Feminist Economics was founded in 1992 and its journal, <em>Feminist Economics</em>, in 1995. Like ecological economics, feminist economics draws on several traditions at once: Marxian, institutionalist, and neoclassical.</p>
+  <h2 id="value">5. Valuing unpaid work (interactive)</h2>
+  <div class="box" id="care">
+    <h3>What is unpaid work worth?</h3>
+    <div class="grid2">
+      <div><label>Unpaid household and care work per adult per week: <b id="uhv">20 hours</b></label><input type="range" id="uh" min="5" max="40" step="1" value="20"></div>
+      <div><label>Hourly wage of a paid replacement: <b id="uwv">$15</b></label><input type="range" id="uw" min="5" max="40" step="1" value="15"></div>
+      <div><label>GDP per adult: <b id="ugv">$80,000</b></label><input type="range" id="ug" min="5000" max="120000" step="5000" value="80000"></div>
+      <div><label>Share of unpaid work done by women: <b id="usv">65%</b></label><input type="range" id="us" min="50" max="85" step="1" value="65"></div>
+    </div>
+    <div class="split" id="csplit"><div id="cw" style="background:#b8577e"></div><div id="cm" style="background:#7d8790"></div></div>
+    <div class="out" id="cout"></div>
+    <p class="note">This uses the “replacement cost” method: unpaid hours are valued at the wage of someone hired to do the same work, following Reid’s third-party test. Other methods value the hours at what the person could have earned in paid work.</p>
+  </div>
+  <div class="think"><b>Discussion:</b> If unpaid care work were counted in GDP, how would our picture of economic growth over the last century change, as women moved from household work into paid work?</div>
+
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Marilyn Waring, <em>If Women Counted: A New Feminist Economics</em> (1988), introduction.</p>
+  <p class="rd">Nancy Folbre, <em>The Invisible Heart: Economics and Family Values</em> (2001), ch. 1–2.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Silvia Federici, <em>Caliban and the Witch</em> (2004), introduction.</p>
+  <p class="rd">Claudia Goldin, <em>Career and Family</em> (2021), ch. 1.</p>
+  <p><a href="index.html#topic-23">← Back to Topic 23 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// value of unpaid work
+function care() {
+  const h = +$('uh').value, w = +$('uw').value, gdp = +$('ug').value, s = +$('us').value/100;
+  $('uhv').textContent = h + ' hours'; $('uwv').textContent = '$' + w; $('ugv').textContent = '$' + gdp.toLocaleString(); $('usv').textContent = Math.round(s*100) + '%';
+  const v = h*52*w, share = v/gdp;
+  $('cw').style.width = (s*100) + '%'; $('cm').style.width = ((1-s)*100) + '%';
+  $('cw').textContent = `women ${Math.round(s*100)}%`; $('cm').textContent = `men ${Math.round((1-s)*100)}%`;
+  $('cout').innerHTML = `Unpaid work per adult is worth about <b>$${Math.round(v).toLocaleString()}</b> a year at replacement cost, or <b>${(share*100).toFixed(0)}% of GDP</b>. None of it appears in GDP. Women do ${Math.round(s*100)}% of it, about $${Math.round(v*2*s).toLocaleString()} a year per woman if adults are split evenly by sex.`;
+}
+['uh','uw','ug','us'].forEach(i => $(i).addEventListener('input', care)); care();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

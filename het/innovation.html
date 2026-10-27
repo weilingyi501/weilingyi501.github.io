@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Schumpeter and the Economics of Innovation | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Schumpeter and the economics of innovation: the entrepreneur and creative destruction, long waves, Solow's residual with an interactive growth-accounting exercise, evolutionary economics, endogenous growth, technological revolutions, and the entrepreneurial state.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/innovation.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/innovation.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/innovation.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 20</p>
+  <h1>Schumpeter and the Economics of Innovation</h1>
+  <p class="lead">For most economists, capitalism is a system that allocates given resources. For Joseph Schumpeter, it is a system that never stands still: its essence is innovation, which creates new industries and destroys old ones. This topic follows his ideas from Vienna to today’s debates about technology, growth, and the state.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#schumpeter">Schumpeter</a></li><li><a href="#entrepreneur">The entrepreneur and economic development</a></li><li><a href="#waves">Business cycles and long waves</a></li><li><a href="#csd">Creative destruction and the future of capitalism</a></li><li><a href="#residual">Solow’s residual (interactive)</a></li><li><a href="#evolution">Evolutionary economics and technological revolutions</a></li><li><a href="#endogenous">Endogenous growth and the 2025 Nobel Prize</a></li><li><a href="#state">The entrepreneurial state and today’s debates</a></li></ol>
+  </div>
+
+  <h2 id="schumpeter">1. Schumpeter</h2>
+  <p>Joseph Schumpeter (1883–1950) was born in Moravia, then part of the Austro-Hungarian Empire, and studied in Vienna under Eugen von Böhm-Bawerk and Friedrich von Wieser, in the seminar where Ludwig von Mises and the Marxist Rudolf Hilferding (Topic 11) also argued. He was briefly Austria’s finance minister in 1919 and president of a Viennese bank that failed in 1924, then professor at Bonn and, from 1932, at Harvard. He admired Walras’s general equilibrium as the greatest achievement of economic theory, and Marx as the economist who saw that capitalism is a process of change. His own work tried to combine the two.</p>
+
+  <h2 id="entrepreneur">2. The entrepreneur and economic development</h2>
+  <p>In <em>The Theory of Economic Development</em> (1911; English translation 1934), Schumpeter began from Walras’s equilibrium, which he called the “circular flow”: an economy that reproduces itself year after year, in which profits are competed away. Development, he argued, does not come from gradual growth of population or saving. It comes from within, through <b>innovation</b>, “new combinations” of five kinds:</p>
+  <ul>
+    <li>a new good or a new quality of a good;</li>
+    <li>a new method of production;</li>
+    <li>the opening of a new market;</li>
+    <li>a new source of raw materials or components;</li>
+    <li>a new organization of an industry, such as creating or breaking a monopoly.</li>
+  </ul>
+  <p>The agent of change is the <b>entrepreneur</b>, who is not the same as the capitalist who owns the means of production or the manager who runs a firm. The entrepreneur carries out new combinations, overcoming resistance and habit, and is financed by bank <b>credit</b>, which creates purchasing power for the new uses. Profit is the temporary reward for innovation, competed away as imitators follow. Interest exists because entrepreneurs’ profits can pay it.</p>
+
+  <h2 id="waves">3. Business cycles and long waves</h2>
+  <p>Innovations come in clusters, Schumpeter argued, because once a pioneer succeeds, swarms of imitators follow. Booms come from the wave of investment in the new combinations; depressions from the adjustment of the old economy to them. In <em>Business Cycles</em> (1939) he linked the long waves of about fifty years identified by the Soviet economist Nikolai Kondratiev (1925) to great technological transformations: the Industrial Revolution of textiles and steam, the age of railways, and the age of electricity, chemicals, and the automobile.</p>
+
+  <h2 id="csd">4. Creative destruction and the future of capitalism</h2>
+  <p>In <em>Capitalism, Socialism and Democracy</em> (1942), Schumpeter argued that textbook competition between many small firms setting the same price is not the competition that matters. What matters is competition from new products, technologies, sources of supply, and forms of organization, which threatens the survival of existing firms, not just their profit margins. He called this the “process of Creative Destruction” and the essential fact about capitalism. From this he drew a defense of large firms with temporary monopoly power: their profits finance research, and the threat of the next innovation disciplines them better than price competition would.</p>
+  <p>The same book asked “Can capitalism survive?” and answered, unexpectedly, no. Its very success would undermine it. Innovation would become routine, carried out by teams of specialists in large corporations, so the heroic entrepreneur would become obsolete. Meanwhile, an expanding class of intellectuals would turn public opinion against business, and the institutions that protected property would erode. The result would be a gradual drift into socialism, not through revolution but through bureaucratization. Later economists distinguish “Schumpeter Mark I,” in which new entrepreneurial firms drive innovation, from “Schumpeter Mark II,” in which large established firms do.</p>
+
+  <h2 id="residual">5. Solow’s residual</h2>
+  <p>Mainstream growth theory came to the same question from a different direction. Robert Solow’s growth model (1956) implied that, in the long run, output per worker can grow only through technological progress (Topic 13). In “Technical Change and the Aggregate Production Function” (1957), Solow measured how much of U.S. growth from 1909 to 1949 could be explained by more capital per worker, and found that about seven-eighths could not. The unexplained part, the <b>residual</b>, was attributed to “technical change in the broadest sense.” Moses Abramovitz called it “a measure of our ignorance.”</p>
+  <div class="box" id="ga">
+    <h3>Growth accounting</h3>
+    <div class="grid2">
+      <div><label>Growth of output per year: <b id="gyv">3.0%</b></label><input type="range" id="gy" min="0" max="10" step="0.1" value="3"></div>
+      <div><label>Growth of the capital stock per year: <b id="gkv">3.0%</b></label><input type="range" id="gk" min="0" max="15" step="0.1" value="3"></div>
+      <div><label>Growth of labor (hours worked) per year: <b id="glv">1.0%</b></label><input type="range" id="gl" min="-1" max="5" step="0.1" value="1"></div>
+      <div><label>Capital’s share of income (α): <b id="gav">0.30</b></label><input type="range" id="ga" min="0.2" max="0.5" step="0.01" value="0.3"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" data-p="3,3,1">United States, mid-century (roughly)</button><button class="btn" type="button" data-p="9.5,12,1">Rapid catch-up with heavy investment</button></div>
+    <div class="split" id="gsplit"><div id="sk" style="background:#3d5a80"></div><div id="sl" style="background:#8a929b"></div><div id="sa" style="background:#c47a2c"></div></div>
+    <div class="out" id="gaout"></div>
+    <p class="note">Growth of output = α × growth of capital + (1 − α) × growth of labor + growth of total factor productivity (the residual). Illustrative numbers.</p>
+  </div>
+  <p>When growth accounting was applied to the East Asian economies, Alwyn Young (1995) and Paul Krugman (1994) found that much of their growth came from more capital and more labor rather than from a high residual, a finding that started a long debate over whether East Asian growth was driven by accumulation or by learning (Topic 19).</p>
+
+  <h2 id="evolution">6. Evolutionary economics and technological revolutions</h2>
+  <p>Richard Nelson and Sidney Winter’s <em>An Evolutionary Theory of Economic Change</em> (1982) combined Schumpeter with Herbert Simon’s bounded rationality (Topic 17). Firms do not optimize; they follow <b>routines</b>, which play the role that genes play in biology. Innovation is a search for better routines, and competition selects the firms with routines that work. The approach gave rise to the field of <b>neo-Schumpeterian</b> or evolutionary economics, and to the study of “national systems of innovation” (Christopher Freeman, Bengt-Åke Lundvall).</p>
+  <p>Carlota Perez, in <em>Technological Revolutions and Financial Capital</em> (2002), revived the long-wave idea. Each technological revolution (she counts five since the 1770s, the latest being information and communications technology from the 1970s) passes through an <b>installation period</b>, driven by financial speculation and ending in a bubble and crash, followed by a <b>deployment period</b> in which the new technology spreads through the whole economy under new institutions. Her framework has been widely used to interpret the dot-com crash of 2000 and the financial crisis of 2008.</p>
+
+  <h2 id="endogenous">7. Endogenous growth and the 2025 Nobel Prize</h2>
+  <p>In the 1980s and 1990s, mainstream theory tried to explain the residual instead of leaving it outside the model. Paul Romer (1990) treated ideas as a special kind of good: once discovered, an idea can be used by anyone without being used up, so it is “nonrival,” and firms invest in research because patents and secrecy let them capture some of the returns. Growth comes from the resources an economy devotes to producing ideas. Romer shared the Nobel Prize in 2018 with William Nordhaus.</p>
+  <p>Philippe Aghion and Peter Howitt (1992) built the first formal model of Schumpeterian creative destruction: firms invest in research to replace incumbents, and each innovation destroys the rents of the one before. Joel Mokyr, an economic historian, studied the cultural and intellectual conditions that made sustained innovation possible in Europe after 1700 (<em>A Culture of Growth</em>, 2016). Mokyr, Aghion, and Howitt shared the Nobel Prize in 2025 for explaining innovation-driven economic growth.</p>
+
+  <h2 id="state">8. The entrepreneurial state and today’s debates</h2>
+  <p>Mariana Mazzucato’s <em>The Entrepreneurial State</em> (2013) argued that the heroic private entrepreneur is only part of the story: the internet, GPS, touch screens, and much of modern biotechnology grew out of research funded by governments, especially in the United States through defense and health agencies. Private firms then commercialized technologies whose risky early stages the public had paid for. The argument connects Schumpeter to the developmentalist tradition (Topic 19) and to the return of industrial policy in the 2020s.</p>
+  <p>Schumpeter’s questions are back at the center of debate. Do digital platforms such as Google, Amazon, and Meta, and today’s leaders in artificial intelligence, represent the temporary monopolies that reward innovation, or entrenched incumbents that suppress it? Does innovation still create more jobs than it destroys? And does the slowdown in measured productivity growth since the mid-2000s mean that innovation has become harder, or that it is measured badly?</p>
+  <div class="think"><b>Discussion:</b> Schumpeter predicted that capitalism would drift toward socialism through the bureaucratization of innovation. Was he wrong, or early?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Joseph A. Schumpeter, <em>Capitalism, Socialism and Democracy</em> (1942), ch. 7 (“The Process of Creative Destruction”).</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 10 (“The Contradictions of Joseph Schumpeter”).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 7 (Schumpeter: what drives innovation?) and ch. 12 (Solow: do we face a slow-growth future?).</p>
+  <p class="rd">Chang, <em>Economics: The User’s Guide</em>, ch. 4 (the Schumpeterian school).</p>
+  <p class="rd">Carlota Perez, <em>Technological Revolutions and Financial Capital</em> (2002), ch. 1–2.</p>
+
+  <p><a href="index.html#topic-20">← Back to Topic 20 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function ga() {
+  const gy = +$('gy').value, gk = +$('gk').value, gl = +$('gl').value, a = +$('ga').value;
+  $('gyv').textContent = gy.toFixed(1) + '%'; $('gkv').textContent = gk.toFixed(1) + '%'; $('glv').textContent = gl.toFixed(1) + '%'; $('gav').textContent = a.toFixed(2);
+  const ck = a*gk, cl = (1-a)*gl, tfp = gy - ck - cl;
+  const parts = [ck, cl, Math.max(0, tfp)], tot = parts.reduce((x,y)=>x+Math.max(0,y),0) || 1;
+  [['sk', ck, 'capital'], ['sl', cl, 'labor'], ['sa', tfp, 'residual']].forEach(([id, v, lab]) => { const w = Math.max(0, v)/tot*100; $(id).style.width = w + '%'; $(id).textContent = w > 12 ? `${lab} ${(v/gy*100).toFixed(0)}%` : ''; });
+  $('gaout').innerHTML = `Capital contributes ${ck.toFixed(2)} points, labor ${cl.toFixed(2)} points, and the residual (total factor productivity) <b>${tfp.toFixed(2)} points</b> of the ${gy.toFixed(1)}% growth. ` +
+    (gy > 0 ? `The residual explains <b>${(tfp/gy*100).toFixed(0)}%</b> of output growth. ` : '') +
+    (tfp < 0 ? 'A negative residual means inputs grew faster than output: accumulation without efficiency gains.' : tfp/gy > 0.5 ? 'Most growth is unexplained by inputs: the territory of Schumpeter’s innovation.' : 'Most growth comes from accumulating more inputs.');
+}
+['gy','gk','gl','ga'].forEach(i => $(i).addEventListener('input', ga));
+document.querySelectorAll('#ga .btn').forEach(b => b.addEventListener('click', () => { const [y,k,l] = b.dataset.p.split(','); $('gy').value = y; $('gk').value = k; $('gl').value = l; ga(); }));
+ga();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

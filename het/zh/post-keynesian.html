@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>后凯恩斯主义经济学与金融不稳定 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：后凯恩斯主义经济学，包括根本的不确定性、卡莱茨基、内生货币、明斯基的金融不稳定假说（互动模型）、戈德利的部门收支（互动计算器），以及工资主导型增长。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/post-keynesian.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/post-keynesian.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/post-keynesian.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/post-keynesian.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../post-keynesian.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题15</p>
+  <h1>后凯恩斯主义经济学与金融不稳定</h1>
+  <p class="lead">凯恩斯的另一批继承人。新古典综合把凯恩斯归结为一个在其他方面能够自我纠正的经济中的工资黏性，而后凯恩斯主义者则以不确定性、货币和金融为基础，认为资本主义没有自动趋向充分就业的倾向。2008年的金融危机使他们的思想重新受到公众关注。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#heirs">凯恩斯的另一批继承人</a></li><li><a href="#uncertainty">不确定性与历史时间</a></li><li><a href="#kalecki">卡莱茨基：加成、利润与政治</a></li><li><a href="#money">内生货币</a></li><li><a href="#minsky">明斯基与2008年危机（互动）</a></li><li><a href="#godley">戈德利与部门收支（互动）</a></li><li><a href="#growth">工资主导型增长与政策</a></li></ol>
+  </div>
+
+  <h2 id="heirs">1. 凯恩斯的另一批继承人</h2>
+  <p>凯恩斯在剑桥最亲密的合作者，琼·罗宾逊、理查德·卡恩和尼古拉斯·卡尔多，以及皮耶罗·斯拉法和波兰经济学家米哈尔·卡莱茨基，从未接受美国的剑桥在战后建立的新古典综合（专题13）。罗宾逊称之为“冒牌凯恩斯主义”。在他们看来，这一综合保留了凯恩斯的政策结论，却抛弃了他的理论：它用工资刚性来解释失业，而凯恩斯曾经论证，灵活的工资会使情况更糟（专题12）。</p>
+  <p>在1950年代和1960年代，英国的剑桥发展了增长与分配理论（剑桥方程），并批判了新古典的资本理论（专题13）。“后凯恩斯主义”这个名称在1970年代流行开来，当时新古典综合在滞胀危机中失势。保罗·戴维森和西德尼·温特劳布于1978年创办了《后凯恩斯主义经济学杂志》。这一学派有几个分支，凯恩斯派、卡莱茨基派和斯拉法派，它们共同拒绝新古典的观点，即市场趋向于充分就业。</p>
+  <table>
+    <thead><tr><th></th><th>新古典综合与新凯恩斯主义者</th><th>后凯恩斯主义者</th></tr></thead>
+    <tbody>
+      <tr><td>失业的原因</td><td>工资和价格调整缓慢</td><td>有效需求不足，在长期和短期都是如此</td></tr>
+      <tr><td>不确定性</td><td>可计算的风险；理性预期</td><td>根本的不确定性；惯例与动物精神</td></tr>
+      <tr><td>货币</td><td>由中央银行供给；长期中是中性的</td><td>由银行贷款创造；从来不是中性的</td></tr>
+      <tr><td>分配</td><td>边际产品</td><td>权力、成本加成与积累的速度</td></tr>
+      <tr><td>方法</td><td>最优化行为者的均衡</td><td>历史时间；制度；会计一致性</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="uncertainty">2. 不确定性与历史时间</h2>
+  <p>后凯恩斯主义者从凯恩斯《通论》第12章（专题12）以及他的文章《就业通论》（1937）出发。凯恩斯在那篇文章中区分了可计算的<b>风险</b>，例如轮盘赌的概率，与真正的<b>不确定性</b>，例如二十年后的铜价或利率，对于后者，“我们根本不知道”。投资决策是在不确定性下做出的，因此它们取决于惯例和动物精神，并可能突然改变。货币之所以有价值，恰恰是因为它让人们在未来未知时可以推迟决策。保罗·戴维森认为，经济过程是“非遍历的”：过去不是未来的可靠样本，因此再多的数据也无法把不确定性变成风险。</p>
+  <p>琼·罗宾逊补充说，经济是在<b>历史时间</b>中运动的。对机器和建筑物的投资无法撤销，因此经济不可能好像历史无关紧要那样在均衡之间来回移动。这就是为什么后凯恩斯主义者不信任那些经济总是回到预定路径的模型。</p>
+
+  <h2 id="kalecki">3. 卡莱茨基：加成、利润与政治</h2>
+  <p>米哈尔·卡莱茨基（1899—1970）在1933年用波兰文写成的论文中，从马克思主义的出发点，独立于凯恩斯得出了有效需求原理。他的三个思想是后凯恩斯主义经济学的核心：</p>
+  <ul>
+    <li><b>成本加成定价。</b>在大多数行业中，企业以劳动和原料成本加上一个加成来定价。加成的大小反映“垄断程度”（1938）：工业集中度、广告以及工会的力量。加成决定了工资和利润的份额。</li>
+    <li><b>利润方程。</b>在简化的核算中，总利润等于投资加政府赤字加净出口加资本家的消费，减去工人的储蓄。俗话说，资本家赚得他们所花的，工人花掉他们所赚的。当私人投资崩溃时，更大的政府赤字可以防止利润也随之崩溃。</li>
+    <li><b>政治性经济周期。</b>在《充分就业的政治方面》（1943）中，卡莱茨基认为，即使充分就业能提高利润，企业界领袖也可能反对持久的充分就业，因为它会增强工人的议价能力和政府的作用。政府会在选举之前刺激经济，然后再收缩。</li>
+  </ul>
+
+  <h2 id="money">4. 内生货币</h2>
+  <p>教科书长期教导说，中央银行控制货币供给，银行把储户存入的存款贷放出去。后凯恩斯主义者，从卡尔多对货币主义的抨击（《货币主义的祸害》，1982）到巴西尔·穆尔的《水平主义者与垂直主义者》（1988），论证的却恰恰相反：银行在发放贷款时创造货币，中央银行设定利率并提供所需的任何准备金。因此，货币数量由信贷需求决定，而信贷需求取决于经济活动：货币是<b>内生的</b>。2014年，英格兰银行的《季度公报》发表了《现代经济中的货币创造》一文，基本上就是这样描述这一过程的。这一观点对政策很重要：中央银行不能像弗里德曼的货币增长规则所假定的那样，简单地确定货币供给（专题14）。</p>
+
+  <h2 id="minsky">5. 明斯基与2008年危机</h2>
+  <p>海曼·明斯基（1919—1996）把凯恩斯、卡莱茨基和对银行业的细致研究结合起来。在《稳定不稳定的经济》（1986）中，他认为金融脆弱性正是从稳定本身中产生的。经过多年的好光景，贷款人和借款人变得自信起来，相对于收入背负了更多的债务。明斯基把借款人分为三种类型：</p>
+  <ul>
+    <li><b>对冲</b>融资：收入既能支付利息，也能偿还本金。</li>
+    <li><b>投机</b>融资：收入能支付利息，但债务到期时必须展期（再融资）。</li>
+    <li><b>庞氏</b>融资：收入连利息都支付不了；借款人必须借更多的钱或出售资产来还债，并依赖于资产价格持续上涨。</li>
+  </ul>
+  <p>随着繁荣的持续，投机型和庞氏型单位的比重上升。然后，利率上升或收入下降把投机型单位推入庞氏状态，被迫出售资产使价格下跌，繁荣转为崩溃，即“明斯基时刻”。明斯基的概括是：稳定本身就是不稳定的根源。</p>
+  <div class="box" id="fbox">
+    <h3>对冲、投机还是庞氏？</h3>
+    <p class="note" style="margin-top:0">五个借款人，每人都有年收入和一笔分期等额偿还的贷款。提高利率，或者让收入在衰退中下降。</p>
+    <div class="grid2">
+      <div><label>利率：<b id="rv">4%</b></label><input type="range" id="r" min="1" max="12" step="0.5" value="4"></div>
+      <div><label>收入下降：<b id="yv">0%</b></label><input type="range" id="y" min="0" max="40" step="5" value="0"></div>
+    </div>
+    <svg id="fchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="五个借款人的收入与偿债支出"></svg>
+    <div class="out" id="fout"></div>
+  </div>
+  <p>2008年9月，投资银行雷曼兄弟倒闭，在家庭以不断上涨的房价为抵押、债务持续上升了十年之后，世界金融体系濒临崩溃。据报道，那年11月英国女王伊丽莎白二世访问伦敦政治经济学院时问道，为什么没有人预见到这场危机。当时主流的宏观经济模型几乎没有给银行、债务或违约留下位置；而明斯基的模型几乎全是这些东西。明斯基也解释了这场危机为什么没有变成第二次大萧条：“大政府”的赤字通过卡莱茨基的方程维持了利润，作为最后贷款人的中央银行也发挥了作用。但他警告说，只救助金融而不改革金融，会鼓励下一轮冒险。</p>
+  <div class="think"><b>讨论：</b>明斯基认为稳定孕育着不稳定。这是否意味着，随着金融不断创新以绕开监管，监管也必须不断改变？</div>
+
+  <h2 id="godley">6. 戈德利与部门收支</h2>
+  <p>温·戈德利（1926—2010）先后在英国财政部、剑桥大学和利维经济研究所工作，他建立的模型中，每一笔货币流量都有来处和去处，每一项金融资产都是另一个人的负债：这就是<b>存量—流量一致</b>模型（戈德利和拉沃，《货币经济学》，2007）。其核心是一个会计恒等式：私人部门、政府和世界其他地区的收支差额之和必须为零。</p>
+  <p class="eq">私人部门盈余 = 政府赤字 + 经常账户盈余</p>
+  <p>1990年代后期，戈德利利用这一恒等式警告说，美国的繁荣建立在家庭靠借债维持支出大于收入的基础上，他称这一过程是不可持续的（《七个不可持续的过程》，1999）。当家庭试图重新储蓄时，除非政府出现大规模赤字，否则需求就会崩溃。2008年以后发生的事情大致如此。</p>
+  <div class="box" id="sb">
+    <h3>三个部门的收支差额</h3>
+    <div class="grid2">
+      <div><label>政府赤字（占GDP的%）：<b id="gdv">3.0%</b></label><input type="range" id="gd" min="-4" max="12" step="0.5" value="2"></div>
+      <div><label>经常账户差额（占GDP的%；负数 = 逆差）：<b id="cav">−3.0%</b></label><input type="range" id="ca" min="-8" max="8" step="0.5" value="-5"></div>
+    </div>
+    <svg id="sbchart" viewBox="0 0 640 170" width="100%" role="img" aria-label="私人部门、政府和外国部门的收支差额"></svg>
+    <div class="out" id="sbout"></div>
+  </div>
+
+  <h2 id="growth">7. 工资主导型增长与政策</h2>
+  <p>卡莱茨基模型追问一个经济的增长是<b>工资主导型</b>还是<b>利润主导型</b>（巴杜里和马格林，1990）。更高的工资份额会增加消费，因为工人比资本家花掉更多的收入，但它可能通过挤压利润而减少投资和净出口。哪一种效应占主导是一个经验问题；后凯恩斯主义的研究发现许多大经济体是工资主导型的，这意味着1980年代以来劳动份额的下降抑制了需求，并把家庭推向了债务。</p>
+  <p>后凯恩斯主义的政策主张由此而来：以充分就业而不是预算平衡为目标的财政政策、低利率、限制投机和庞氏融资的金融监管、抑制通胀的收入政策，以及提高工资份额的政策。较新的一个分支，即<b>现代货币理论</b>（L. 兰德尔·雷、斯蒂芬妮·凯尔顿），认为发行本国货币的政府不会没钱可花，因此支出的限制是通胀，而不是赤字。其他后凯恩斯主义者则认为现代货币理论的政策主张过于激进。</p>
+  <div class="think"><b>讨论：</b>后凯恩斯主义者和新凯恩斯主义者（专题16）都自称继承凯恩斯。对2008年危机的哪一种解读，是价格黏性的问题，还是金融和需求的问题，你觉得更有说服力？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亨特，第18章（关于后凯恩斯主义经济学的部分）。</p>
+  <p class="rd">海曼·P. 明斯基，《稳定不稳定的经济》（1986），第9章（“金融不稳定”）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">米哈尔·卡莱茨基，《充分就业的政治方面》（“Political Aspects of Full Employment”），<em>Political Quarterly</em> 第14卷第4期（1943）。</p>
+  <p class="rd">迈克尔·麦克莱、阿马尔·拉迪亚、赖兰·托马斯，《现代经济中的货币创造》（“Money Creation in the Modern Economy”），英格兰银行《季度公报》（2014年第一季度）。</p>
+  <p class="rd">马克·拉沃，<em>Post-Keynesian Economics: New Foundations</em>（2014），第1章。</p>
+
+  <p><a href="index.html#topic-15">← 返回课程大纲专题15</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// borrowers: name, income, debt, years to repay
+const F = [['A',14,60,10],['B',12,100,20],['C',10,120,25],['D',9,150,30],['E',8,180,30]];
+const COL = {Hedge:'#2a9d8f', Speculative:'#e9a23b', Ponzi:'#d1495b'};
+const ZHT = {Hedge:'对冲', Speculative:'投机', Ponzi:'庞氏'};
+function minsky() {
+  const r = +$('r').value/100, cut = +$('y').value/100;
+  $('rv').textContent = (r*100).toFixed(1).replace('.0','') + '%'; $('yv').textContent = Math.round(cut*100) + '%';
+  const W = 640, H = 250, L = 40, T = 14, B = 34, MX = 24, bw = 44, gap = (W - L - 10) / F.length;
+  const Y = v => H - B - Math.min(v, MX)/MX*(H - B - T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-10}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,8,16,24].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
+  const cnt = {Hedge:0, Speculative:0, Ponzi:0};
+  F.forEach(([n, inc, D, T2], i) => {
+    const y = inc*(1 - cut), int = r*D, pr = D/T2;
+    const type = y >= int + pr ? 'Hedge' : y >= int ? 'Speculative' : 'Ponzi'; cnt[type]++;
+    const x = L + 14 + i*gap;
+    g += `<rect x="${x}" y="${Y(y)}" width="${bw}" height="${H-B-Y(y)}" fill="#0077b6" opacity=".85"/>`;
+    g += `<rect x="${x+bw+4}" y="${Y(int)}" width="${bw}" height="${H-B-Y(int)}" fill="#7d8790"/>`;
+    g += `<rect x="${x+bw+4}" y="${Y(int+pr)}" width="${bw}" height="${Y(int)-Y(int+pr)}" fill="#c3c9cf"/>`;
+    g += `<text x="${x+bw+2}" y="${H-B+14}" text-anchor="middle">借款人 ${n}</text>`;
+    g += `<text x="${x+bw+2}" y="${H-B+28}" text-anchor="middle" style="fill:${COL[type]};font-weight:600">${ZHT[type]}</text>`;
+  });
+  g += `<rect x="${W-250}" y="2" width="10" height="10" fill="#0077b6"/><text x="${W-236}" y="11">收入</text><rect x="${W-186}" y="2" width="10" height="10" fill="#7d8790"/><text x="${W-172}" y="11">利息</text><rect x="${W-118}" y="2" width="10" height="10" fill="#c3c9cf"/><text x="${W-104}" y="11">到期本金</text>`;
+  $('fchart').innerHTML = g;
+  $('fout').innerHTML = Object.keys(cnt).map(k => `<span class="tag" style="background:${COL[k]}">${ZHT[k]}：${cnt[k]}</span>`).join(' ') +
+    (cnt.Ponzi ? ` &nbsp;有 ${cnt.Ponzi} 个借款人必须借更多的钱或出售资产才能支付利息。如果许多人同时出售，资产价格就会下跌，贷款人也会停止为投机型借款人的债务展期。` :
+     cnt.Speculative ? ` &nbsp;只要贷款人继续按今天的利率为投机型借款人再融资，他们就没有问题。` : ` &nbsp;每个借款人都能用收入还清债务：这是一个稳健的金融结构。`);
+}
+['r','y'].forEach(i => $(i).addEventListener('input', minsky)); minsky();
+
+// sectoral balances: private surplus = government deficit + current-account surplus
+function sb() {
+  const gd = +$('gd').value, ca = +$('ca').value, pr = gd + ca;
+  const f = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1) + '%';
+  $('gdv').textContent = f(gd).replace('+',''); $('cav').textContent = f(ca);
+  const W = 640, H = 170, L = 200, R = 20, M = 14, mid = L + (W-L-R)/2, s = (W-L-R)/2/M;
+  const rows = [['私人部门收支差额', pr, '#0077b6'], ['政府收支差额', -gd, '#c47a2c'], ['外国部门收支差额', -ca, '#7d8790']];
+  let g = `<line x1="${mid}" y1="10" x2="${mid}" y2="${H-20}" stroke="#ccd2d8"/><text x="${mid}" y="${H-4}" text-anchor="middle">0</text><text x="${mid - 6*s}" y="${H-4}" text-anchor="middle">赤字</text><text x="${mid + 6*s}" y="${H-4}" text-anchor="middle">盈余</text>`;
+  rows.forEach(([lab, v, c], i) => { const y = 18 + i*44, w = Math.min(M, Math.abs(v))*s; g += `<text x="${L-10}" y="${y+17}" text-anchor="end">${lab}</text><rect x="${v >= 0 ? mid : mid - w}" y="${y}" width="${w}" height="24" rx="4" fill="${c}"/><text x="${v >= 0 ? mid + w + 6 : mid - w - 6}" y="${y+17}" text-anchor="${v >= 0 ? 'start' : 'end'}">${f(v)}</text>`; });
+  $('sbchart').innerHTML = g;
+  $('sbout').innerHTML = `三个收支差额之和为零。在政府赤字为 ${Math.abs(gd).toFixed(1)}%${gd < 0 ? '（即盈余）' : ''}、经常账户${ca >= 0 ? '盈余' : '逆差'}为 ${Math.abs(ca).toFixed(1)}% 的情况下，私人部门必然有 <b>相当于GDP ${Math.abs(pr).toFixed(1)}% 的${pr >= 0 ? '盈余' : '赤字'}</b>。` +
+    (Math.abs(pr) < 0.05 ? '家庭和企业合在一起的支出恰好等于收入。' : pr < 0 ? '家庭和企业合在一起支出大于收入，债务不断增加，这正是戈德利在1990年代后期发出的警告信号。' : '家庭和企业合在一起储蓄多于投资，这是由政府赤字或出口顺差使之成为可能的。');
+}
+['gd','ca'].forEach(i => $(i).addEventListener('input', sb)); sb();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

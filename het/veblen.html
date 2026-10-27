@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Veblen and Institutionalism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Thorstein Veblen and American institutional economics: evolutionary economics, conspicuous consumption with an interactive Veblen-goods model, business versus industry, Veblen and Marx, Commons, Mitchell, Ayres, and Galbraith.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/veblen.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/veblen.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/veblen.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 10</p>
+  <h1>Veblen and Institutionalism</h1>
+  <p class="lead">While the marginalists built a theory of rational individuals in competitive markets, Thorstein Veblen asked how habits, status, and corporate power actually shape economic life. The tradition he founded, American institutionalism, shaped the New Deal and still runs through the study of consumption, corporations, and economic history.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#context">The Gilded Age</a></li><li><a href="#evolution">An evolutionary economics</a></li><li><a href="#leisure">The leisure class and conspicuous consumption (interactive)</a></li><li><a href="#business">Business versus industry</a></li><li><a href="#marx">Veblen and Marx</a></li><li><a href="#roots">Roots: the historical school, Darwin, and pragmatism</a></li><li><a href="#americans">American institutionalism</a></li><li><a href="#legacy">Old and new institutionalism</a></li></ol>
+  </div>
+
+  <h2 id="context">1. The Gilded Age</h2>
+  <p>Between the Civil War and the First World War, the United States became the world’s largest industrial economy. Railways, steel, oil, and electricity were organized by giant corporations and trusts, and fortunes such as those of Rockefeller, Carnegie, Vanderbilt, and Morgan dwarfed anything seen before. Mark Twain’s phrase “the Gilded Age” captured the glitter on the surface and the corruption beneath it. Farmers’ movements and the Populist Party attacked railways and bankers; strikes such as Homestead (1892) and Pullman (1894) were broken by private guards and federal troops. Economics in the United States was becoming a profession, and many of its founders had studied in Germany.</p>
+  <p>Thorstein Veblen (1857–1929), the son of Norwegian immigrant farmers in Wisconsin and Minnesota, grew up speaking Norwegian in a community that remained apart from Yankee society. He earned a doctorate in philosophy at Yale, could not find an academic job for years, and then taught at Chicago, Stanford, and Missouri, often in junior posts and amid scandal. He wrote in a dry, ironic style that made his books widely read outside the profession.</p>
+
+  <h2 id="evolution">2. An evolutionary economics</h2>
+  <p>In “Why Is Economics Not an Evolutionary Science?” (1898), Veblen argued that economics should study how economic institutions change over time, as biology studies the evolution of species after Darwin. Mainstream economics instead assumed a fixed human nature and looked for timeless equilibrium. He mocked its picture of human beings:</p>
+  <blockquote>The hedonistic conception of man is that of a lightning calculator of pleasures and pains, who oscillates like a homogeneous globule of desire of happiness under the impulse of stimuli that shift him about the area, but leave him intact.<cite>Thorstein Veblen, “Why Is Economics Not an Evolutionary Science?” (1898)</cite></blockquote>
+  <p>Two years later, in “The Preconceptions of Economic Science” (1900), Veblen coined the word <b>“neoclassical”</b> to describe Marshall’s economics, which he saw as classical economics with a new coat of utility theory. For Veblen, people act from <b>instincts</b>, such as the instinct of workmanship, the parental bent, and idle curiosity, which are channeled by <b>habits of thought</b>. Institutions are “settled habits of thought common to the generality of men,” and they change slowly as technology and material conditions change. Because they lag behind technology, institutions are often out of date: ceremonial survivals of an earlier age.</p>
+
+  <h2 id="leisure">3. The leisure class and conspicuous consumption</h2>
+  <p><em>The Theory of the Leisure Class</em> (1899) was Veblen’s most famous book. He traced the origin of property and status to a barbarian stage of society in which honor came from seizing goods by force rather than from productive work. In modern society, status still comes from showing that one does not need to work. The rich display it through <b>conspicuous leisure</b> (sports, classical learning, servants) and <b>conspicuous consumption</b>: buying goods that are valued partly <em>because</em> they are expensive and visibly wasteful. Other classes emulate the class above them, so the standard of decent consumption keeps rising and no one ever has enough. Veblen called this <b>pecuniary emulation</b>.</p>
+  <p>This turns ordinary demand theory upside down. Harvey Leibenstein (1950) later formalized “Veblen effects”: for some goods, a higher price raises demand, because the price is part of what is bought.</p>
+  <div class="box" id="vg">
+    <h3>A Veblen good</h3>
+    <div class="grid2">
+      <div><label>How much buyers dislike paying more (ordinary price effect): <b id="pev">1.0</b></label><input type="range" id="pe" min="0.2" max="2" step="0.1" value="1"></div>
+      <div><label>How much buyers value the display of a high price (Veblen effect): <b id="vev">0.4</b></label><input type="range" id="ve" min="0" max="2" step="0.1" value="0.4"></div>
+    </div>
+    <svg id="vchart" viewBox="0 0 640 240" width="100%" role="img" aria-label="Demand curve for a status good"></svg>
+    <div class="out" id="vout"></div>
+    <p class="note">Quantity demanded = 100 − (ordinary price effect − Veblen effect) × price, for prices from $10 to $90. An illustrative model.</p>
+  </div>
+  <div class="think"><b>Try this:</b> raise the Veblen effect above the ordinary price effect. What happens to the demand curve? Can you think of goods for which this is plausible, and of firms that price to exploit it?</div>
+
+  <h2 id="business">4. Business versus industry</h2>
+  <p>In <em>The Theory of Business Enterprise</em> (1904) and later in <em>The Engineers and the Price System</em> (1921), Veblen drew a sharp line between two kinds of activity. <b>Industry</b> is the work of engineers and workers who produce useful goods, guided by the instinct of workmanship and the logic of the machine process. <b>Business</b> is the pursuit of money gains through ownership, finance, and control. Businessmen profit by buying and selling, by restricting output to keep prices up, by merging firms, and by inflating the value of capital through credit and stock issues. Veblen called this “sabotage”: the conscientious withdrawal of efficiency. Absentee owners, in his view, were not the organizers of production but its parasites. Business cycles came from the swelling and shrinking of credit and capitalized values, not from anything in the machines themselves.</p>
+  <p>The same logic ran through his view of the state, which in a business culture serves business interests, and of imperialism and war, which he analyzed in <em>Imperial Germany and the Industrial Revolution</em> (1915) and <em>The Nature of Peace</em> (1917).</p>
+
+  <h2 id="marx">5. Veblen and Marx</h2>
+  <p>Hunt concludes that “Veblen cannot properly be considered a disciple of Marx,” but that “the parallels between the two great thinkers are striking.”</p>
+  <table>
+    <thead><tr><th></th><th>Where Veblen and Marx agree</th><th>Where they differ</th></tr></thead>
+    <tbody>
+      <tr><td>Method</td><td>Both see capitalism as a historical stage, not a natural order, and economics as the study of its evolution.</td><td>Marx kept equilibrium analysis for some purposes; Veblen rejected it, and with it any concrete theory of wages and profits.</td></tr>
+      <tr><td>Class</td><td>Both see a fundamental conflict between those who own and those who produce: capital and labor, business and industry.</td><td>Veblen thought workers absorb the values of the leisure class through emulation, so revolution was not close; Marx expected workers to become revolutionary.</td></tr>
+      <tr><td>Value</td><td>Both rejected the utility theory of value.</td><td>Veblen also rejected the labor theory of value as resting on a pre-Darwinian philosophy of “natural rights.”</td></tr>
+      <tr><td>History</td><td>Both trace institutions to the material conditions of life.</td><td>Veblen criticized Marx’s Hegelian view that history moves toward a known goal; for him evolution had no end point.</td></tr>
+    </tbody>
+  </table>
+  <p>Veblen set out his critique in “The Socialist Economics of Karl Marx and His Followers” (1906–07). Hunt argues that each saw what the other missed: Marx’s labor theory explained profit and crises more concretely, while Veblen’s attention to culture and habit explained why workers often accept the system.</p>
+
+  <h2 id="roots">6. Roots: the historical school, Darwin, and pragmatism</h2>
+  <ul>
+    <li><b>The German historical school.</b> Gustav Schmoller and his colleagues rejected deductive theory and studied the history of institutions and economic policy in detail. Many founders of the American Economic Association (1885), including Richard Ely, had studied in Germany and brought its methods home.</li>
+    <li><b>Darwin.</b> Evolution by variation and selection, with no predetermined goal, gave Veblen his model of institutional change.</li>
+    <li><b>Pragmatism.</b> The American philosophers Charles Peirce, William James, and John Dewey treated ideas as tools that are tested in practice and change with circumstances. Dewey’s influence was strongest on the second generation of institutionalists.</li>
+  </ul>
+
+  <h2 id="americans">7. American institutionalism</h2>
+  <p>The name “institutional economics” was popularized by Walton Hamilton in 1919. Between the wars, institutionalism was a major force in American economics, especially in labor economics, public utility regulation, and the measurement of the economy.</p>
+  <ul>
+    <li><b>John R. Commons</b> (1862–1945), at the University of Wisconsin, studied how courts and laws define property and bargaining power (<em>Legal Foundations of Capitalism</em>, 1924). He and his students drafted workers’ compensation laws, Wisconsin’s pioneering unemployment insurance law (1932), and much of the thinking behind the Social Security Act of 1935.</li>
+    <li><b>Wesley Clair Mitchell</b> (1874–1948), a student of Veblen’s, studied business cycles statistically (<em>Business Cycles</em>, 1913) and founded the National Bureau of Economic Research in 1920, where Simon Kuznets built the first U.S. national income accounts (Topic 13).</li>
+    <li><b>The New Deal.</b> Institutionalists such as Rexford Tugwell and Gardiner Means worked in Roosevelt’s administration. Adolf Berle and Means’s <em>The Modern Corporation and Private Property</em> (1932) documented the separation of ownership from control in large corporations, a theme close to Veblen’s.</li>
+    <li><b>Clarence Ayres</b> (1891–1972), at the University of Texas, combined Veblen and Dewey: economic progress comes from technology, which is held back by “ceremonial” institutions that protect status and privilege.</li>
+    <li><b>John Kenneth Galbraith</b> (1908–2006) carried the tradition to a wide public: <em>American Capitalism</em> (1952) on “countervailing power,” <em>The Affluent Society</em> (1958) on private affluence and public squalor, and <em>The New Industrial State</em> (1967) on the planning power of large corporations.</li>
+  </ul>
+  <p>After 1945, as economics became mathematical and the neoclassical synthesis took over (Topic 13), institutionalism moved to the margins. Its members founded the Association for Evolutionary Economics in 1965 and the <em>Journal of Economic Issues</em> in 1967.</p>
+
+  <h2 id="legacy">8. Old and new institutionalism</h2>
+  <p>From the 1970s, a “new institutional economics” grew up around Ronald Coase, Oliver Williamson, and Douglass North (Topic 18). It shares the old institutionalists’ conviction that institutions matter, but it explains them with neoclassical tools, as efficient responses to transaction costs, rather than as evolving habits shaped by power and status. Old institutionalists are skeptical of that move; the two traditions use the same word for different projects. Veblen’s influence also runs through behavioral economics (Topic 17), the economics of status and positional goods, and studies of corporate power and financialization.</p>
+  <div class="think"><b>Discussion:</b> Veblen wrote at the height of the Gilded Age. Which of his ideas, conspicuous consumption, business versus industry, or the lag of institutions behind technology, seems most useful for understanding the economy today?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 12 (Thorstein Veblen).</p>
+  <p class="rd">Veblen, <em>The Theory of the Leisure Class</em> (1899), ch. 4 (“Conspicuous Consumption”).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Heilbroner, <em>The Worldly Philosophers</em>, ch. 8 (“The Savage Society of Thorstein Veblen”).</p>
+  <p class="rd">Veblen, “Why Is Economics Not an Evolutionary Science?” <em>Quarterly Journal of Economics</em> 12, no. 4 (1898).</p>
+
+  <p><a href="index.html#topic-10">← Back to Topic 10 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function vg() {
+  const pe = +$('pe').value, ve = +$('ve').value;
+  $('pev').textContent = pe.toFixed(1); $('vev').textContent = ve.toFixed(1);
+  const net = pe - ve, Q = p => Math.max(0, 100 - net*p);
+  const W = 640, H = 240, L = 46, R = 14, T = 12, B = 30, QM = 200, PM = 100;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B - p/PM*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(p => g += `<text x="${L-6}" y="${Y(p)+4}" text-anchor="end">$${p}</text>`);
+  [0,50,100,150,200].forEach(q => g += `<text x="${X(q)}" y="${H-B+15}" text-anchor="middle">${q}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">quantity demanded</text><text x="${L+6}" y="${T+10}">price</text>`;
+  let pts = []; for (let p = 10; p <= 90; p += 2) pts.push(X(Math.min(QM, Q(p))) + ',' + Y(p));
+  g += `<polyline fill="none" stroke="${net < 0 ? '#c47a2c' : '#0077b6'}" stroke-width="2.8" points="${pts.join(' ')}"/>`;
+  [20, 80].forEach(p => g += `<circle cx="${X(Math.min(QM, Q(p)))}" cy="${Y(p)}" r="5" fill="#023e8a"/>`);
+  $('vchart').innerHTML = g;
+  const q20 = Q(20), q80 = Q(80);
+  $('vout').innerHTML = `At $20 buyers want <b>${q20.toFixed(0)}</b> units; at $80 they want <b>${q80.toFixed(0)}</b>. ` +
+    (net > 0.05 ? 'The ordinary price effect dominates: demand slopes down, as in Marshall (Topic 9).' : net < -0.05 ? '<b>The Veblen effect dominates: demand slopes up.</b> A higher price makes the good more desirable, because the price itself is what is displayed.' : 'The two effects cancel: price does not affect quantity at all.');
+}
+['pe','ve'].forEach(i => $(i).addEventListener('input', vg)); vg();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

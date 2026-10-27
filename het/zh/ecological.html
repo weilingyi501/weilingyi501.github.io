@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>生态经济学 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：生态经济学，包括作为生物圈子系统的经济、增长的极限（含储量指数互动）、博尔丁、乔治斯库-罗根与戴利、强可持续性、去增长、生态分配冲突，以及脱钩（含互动计算器）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/ecological.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/ecological.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/ecological.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/ecological.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../ecological.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题22</p>
+  <h1>生态经济学</h1>
+  <p class="lead">生态经济学把经济看作有限生物圈的一个子系统。它把生态置于市场效率之上，并质疑无止境的经济增长这一目标，至少在富裕国家是如此。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#what">什么是生态经济学</a></li><li><a href="#limits">增长的极限（互动）</a></li><li><a href="#founders">奠基者</a></li><li><a href="#ideas">核心思想</a></li><li><a href="#decoupling">脱钩（互动）</a></li><li><a href="#today">今天的生态经济学</a></li></ol>
+  </div>
+
+  <h2 id="what">1. 什么是生态经济学</h2>
+
+  <p><b>生态经济学</b>颠倒了这种关系。环境经济学把环境看作经济的一部分，需要正确定价；生态经济学则把经济看作<b>生物圈的一个子系统</b>，而生物圈是有限的、不会增长的。它把生态置于市场效率之上，并质疑经济增长这一目标本身，至少在富裕国家是如此。</p>
+  
+  <h2 id="limits">2. 增长的极限（互动）</h2>
+
+  <p>1972年，由多内拉·梅多斯、丹尼斯·梅多斯、乔根·兰德斯和威廉·贝伦斯领导的麻省理工学院团队为罗马俱乐部出版了《增长的极限》。他们的计算机模型预测，如果人口、工业产出和污染继续呈指数增长，世界将在大约一个世纪内超出其物理极限。威廉·诺德豪斯等经济学家批评这一模型忽视了价格和技术变革。然而，这本书关于指数增长的核心观点不过是算术。一种按今天的使用速度可以用100年的资源，如果使用量每年增长，能用的时间就会少得多：</p>
+  <div class="box" id="lbox">
+    <h3>指数储量指数</h3>
+    <div class="grid2">
+      <div><label>按今天的使用速度计算的储量（静态指数）：<b id="sv">100年</b></label><input type="range" id="s" min="20" max="500" step="10" value="100"></div>
+      <div><label>使用量的年增长率：<b id="gv">3%</b></label><input type="range" id="g" min="0" max="7" step="0.5" value="3"></div>
+    </div>
+    <div style="margin-top:6px"><button class="btn" type="button" id="x5">发现五倍的储量</button></div>
+    <svg id="lchart" viewBox="0 0 640 230" width="100%" role="img" aria-label="资源的累计使用量与储量的比较"></svg>
+    <div class="out" id="lout"></div>
+    <p class="note">公式：在连续增长率 g 下，相当于当前使用量 s 年的储量可以使用 ln(1 + g·s) / g 年。《增长的极限》为许多矿产列出了这一“指数储量指数”。</p>
+  </div>
+  <p>此后，争论的焦点已经从矿产枯竭转移到大气吸收碳的能力。《斯特恩报告》（2006）认为，气候变化的代价远远超过防止它的代价；2018年获得诺贝尔奖的诺德豪斯主张征收逐步提高的碳税，这是一种庇古式的方案（专题9）。兰德斯的《2052》（2012）预测，增长放缓和政治上的短视将使世界远远达不到所需的目标。</p>
+
+  
+<h2 id="founders">3. 奠基者</h2>
+  <ul>
+    <li><b>肯尼斯·博尔丁</b>在《即将到来的宇宙飞船地球经济学》（1966）中，把开放边疆上的“牛仔经济”与封闭系统中的“宇航员经济”加以对比：前者以吞吐量衡量成功，后者的目标是以尽可能少的吞吐量维持资源存量。</li>
+    <li><b>尼古拉斯·乔治斯库-罗根</b>在《熵定律与经济过程》（1971）中认为，生产受热力学第二定律支配：它把低熵的能量和物质不可逆转地变成高熵的废物。他抱怨说，经济学以力学为榜样塑造自己，而在力学中，每个过程都可以倒过来进行。</li>
+    <li><b>赫尔曼·戴利</b>是他的学生，提出了<b>稳态经济</b>（1977）：人口和资本存量保持不变，由一个保持在生态系统再生和吸收能力范围之内的能量和物质吞吐量来维持。他像约翰·斯图亚特·穆勒（专题5）一样认为，静止的经济并不意味着静止的文化。</li>
+  </ul>
+  <h2 id="ideas">4. 核心思想</h2>
+  <ul>
+    <li><b>规模先于配置。</b>市场可以有效率地配置资源，但无法告诉我们经济相对于生态系统应当有多大。这必须首先通过政治来决定，作为吞吐量的上限。</li>
+    <li><b>强可持续性与弱可持续性。</b>罗伯特·索洛等新古典经济学家认为，人造资本和技术可以替代自然资源，因此只要总资本不减少，经济就是可持续的（“弱可持续性”）。生态经济学家回应说，稳定的气候或肥沃的土壤等自然资本与人造资本是互补的，而不是可以相互替代的，必须为其本身而加以保护（“强可持续性”）。</li>
+    <li><b>反弹效应。</b>W. S. 杰文斯（专题8）在《煤炭问题》（1865）中观察到，更有效率的蒸汽机反而增加了英国的煤炭总消耗量，因为它们使用煤变得更便宜了。仅靠提高效率并不能保证资源使用的减少。</li>
+    <li><b>地球边界与去增长。</b>约翰·罗克斯特伦及其同事（2009）为气候、氮循环等九个地球系统提出了界限。乔戈斯·卡利斯、杰森·希克尔等<b>去增长</b>与后增长经济学的作者，以及凯特·拉沃斯的《甜甜圈经济学》（2017），认为富裕国家应当以在这些界限之内的福祉为目标，而不是以增长为目标。</li>
+    <li><b>生态分配冲突。</b>胡安·马丁内斯-阿列尔的《穷人的环境主义》（2002）研究了全球南方围绕采矿、水坝和污染的冲突。生态不平等交换理论把不平等交换的思想（专题11）从劳动扩展到土地、能源和物质。</li>
+  </ul>
+  <h2 id="decoupling">5. 脱钩（互动）</h2>
+  <p>核心的经验问题是<b>脱钩</b>：产出能否在资源使用和排放下降的同时继续增长？相对脱钩，即每一美元产出的碳排放减少，是常见的。绝对脱钩，即排放下降而产出上升，已经在一些富裕国家发生，但生态经济学家怀疑它能否足够快。其中的算术来自一个简单的恒等式：排放 = 产出 × 单位产出的排放。</p>
+  <div class="box" id="dcp">
+    <h3>经济必须以多快的速度脱钩？</h3>
+    <div class="grid2">
+      <div><label>到目标年份要实现的减排幅度：<b id="ctv">90%</b></label><input type="range" id="ct" min="20" max="100" step="5" value="90"></div>
+      <div><label>所需年数：<b id="tyv">25</b></label><input type="range" id="ty" min="10" max="50" step="5" value="25"></div>
+      <div><label>产出的年增长率：<b id="ggv">3.0%</b></label><input type="range" id="gg" min="0" max="6" step="0.5" value="3"></div>
+    </div>
+    <div class="out" id="dcout"></div>
+  </div>
+  <h2 id="today">6. 今天的生态经济学</h2>
+  <p>国际生态经济学会成立于1989年，其期刊《生态经济学》也创刊于同年。这一领域把经济学家与生态学家和物理学家联系在一起，并随着气候危机而不断发展。它的思想贯穿于“福祉经济”和“超越GDP”运动、一些城市政府采用的甜甜圈框架，以及政府间气候变化专门委员会报告中关于“绿色增长”与去增长的争论。它的批评者，从环境经济学家到发展主义者（专题19），回应说穷国需要增长，技术一再放宽了资源的限制，而富裕国家的去增长缺乏一个令人信服的说明，即如何在没有增长的情况下维持就业和福利。</p>
+  <div class="think"><b>讨论：</b>环境经济学家问的是什么样的污染水平是有效率的；生态经济学家问的是经济可以有多大。这两个问题都能用价格来回答吗？你会先问哪一个？</div>
+
+  
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">肯尼斯·E. 博尔丁，《即将到来的宇宙飞船地球经济学》（1966）。</p>
+  <p class="rd">赫尔曼·E. 戴利，<em>Steady-State Economics</em>（1977），第1—2章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">多内拉·梅多斯、丹尼斯·梅多斯、乔根·兰德斯、威廉·贝伦斯，《增长的极限》（1972），第1章。</p>
+  <p class="rd">兰德斯，<em>2052: A Global Forecast for the Next Forty Years</em>（2012），选读。</p>
+  <p class="rd">凯特·拉沃斯，《甜甜圈经济学》（2017），第1章。</p>
+  <p><a href="index.html#topic-22">← 返回课程大纲专题22</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function limits() {
+  const s = +$('s').value, g = +$('g').value/100;
+  $('sv').textContent = s + '年'; $('gv').textContent = (g*100).toFixed(1).replace('.0','') + '%';
+  const life = g ? Math.log(1 + g*s)/g : s;
+  const W = 640, H = 230, L = 46, T = 12, B = 30, XM = Math.max(60, Math.ceil(Math.min(s, 400)/50)*50);
+  const X = t => L + t/XM*(W - L - 14), Y = v => H - B - Math.min(v, s*1.15)/(s*1.15)*(H - B - T);
+  const cum = t => g ? (Math.exp(g*t) - 1)/g : t;
+  let g2 = `<line x1="${L}" y1="${H-B}" x2="${W-14}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let t = 0; t <= XM; t += XM/5) g2 += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g2 += `<text x="${(L+W)/2}" y="${H-2}" text-anchor="middle">从今天起的年数</text>`;
+  g2 += `<line x1="${L}" y1="${Y(s)}" x2="${W-14}" y2="${Y(s)}" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/><text x="${W-18}" y="${Y(s)-6}" text-anchor="end" fill="#c47a2c">总储量</text>`;
+  let p = '', q = ''; for (let t = 0; t <= XM; t += XM/200) { p += (p ? 'L' : 'M') + X(t) + ' ' + Y(cum(t)); q += (q ? 'L' : 'M') + X(t) + ' ' + Y(t); }
+  g2 += `<path d="${q}" fill="none" stroke="#9fc4e6" stroke-width="2" stroke-dasharray="4 3"/><path d="${p}" fill="none" stroke="#0077b6" stroke-width="2.6"/>`;
+  if (life <= XM) g2 += `<circle cx="${X(life)}" cy="${Y(s)}" r="6" fill="#023e8a"/>`;
+  g2 += `<text x="${L+6}" y="${T+10}">累计使用量</text>`;
+  $('lchart').innerHTML = g2;
+  const life5 = g ? Math.log(1 + g*5*s)/g : 5*s;
+  $('lout').innerHTML = `储量可以使用 <b>${life.toFixed(0)}年</b>，而不是 ${s} 年。` + (g ? `使用量每 ${(Math.log(2)/g).toFixed(0)} 年翻一番。即使发现五倍的储量，也只能使用 <b>${life5.toFixed(0)}年</b>。` : '使用量没有增长时，静态指数就是准确的。');
+}
+['s','g'].forEach(i => $(i).addEventListener('input', limits));
+$('x5').addEventListener('click', () => { const s = $('s'); s.value = Math.min(500, +s.value*5); limits(); });
+limits();
+// decoupling: emissions = output × intensity
+function dcp() {
+  const c = +$('ct').value/100, n = +$('ty').value, g = +$('gg').value/100;
+  $('ctv').textContent = Math.round(c*100) + '%'; $('tyv').textContent = n; $('ggv').textContent = (g*100).toFixed(1) + '%';
+  const e = c >= 1 ? null : Math.pow(1 - c, 1/n) - 1, i = c >= 1 ? null : (1 + e)/(1 + g) - 1;
+  $('dcout').innerHTML = c >= 1 ? '100%的减排意味着单位产出的排放必须降到零：仅靠效率无法抵消任何增长；能源体系本身必须改变。' :
+    `排放每年必须下降 <b>${(-e*100).toFixed(1)}%</b>。在产出每年增长 ${(g*100).toFixed(1)}% 的情况下，单位产出的排放每年必须下降 <b>${(-i*100).toFixed(1)}%</b>，连续 ${n} 年。作为对比，近几十年来世界产出的碳强度每年大约下降1%—2%。` +
+    (g > 0 ? `如果增长为零，所需的下降幅度将是每年 ${(-e*100).toFixed(1)}%。` : '增长为零时，全部任务就落在直接减排上。');
+}
+['ct','ty','gg'].forEach(i => $(i).addEventListener('input', dcp)); dcp();
+
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

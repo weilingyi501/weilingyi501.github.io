@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>New Institutional Economics | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on the new institutional economics: Coase and transaction costs, Williamson, North on institutions and development, Ostrom and the governance of the commons with an interactive fishery, Acemoglu, Johnson, and Robinson, and the critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/institutions.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/institutions.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/institutions.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 18</p>
+  <h1>New Institutional Economics</h1>
+  <p class="lead">Why do firms exist? Why are some countries rich and others poor? Why do some communities manage shared resources well for centuries while others destroy them? The new institutional economics answers that institutions, the rules of the game, matter, and explains them with the tools of mainstream economics.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#old">Old and new institutionalism</a></li><li><a href="#coase">Coase: why firms exist</a></li><li><a href="#williamson">Williamson: markets and hierarchies</a></li><li><a href="#north">North: institutions and economic performance</a></li><li><a href="#ostrom">Ostrom: governing the commons (interactive)</a></li><li><a href="#ajr">Colonial origins and why nations fail</a></li><li><a href="#critics">Critics</a></li></ol>
+  </div>
+
+  <h2 id="old">1. Old and new institutionalism</h2>
+  <p>The “old” institutionalists, Veblen, Commons, Mitchell, and Ayres (Topic 10), studied institutions as evolving habits of thought shaped by technology, power, and status, and they rejected neoclassical economics. The “new” institutional economics, which took shape in the 1970s, agreed that institutions matter but explained them differently: as rules that people create, within the constraints of scarcity and self-interest, to reduce the costs of transacting. The term was coined by Oliver Williamson in 1975. Its core is neoclassical choice theory applied to a question neoclassical theory had ignored: what are the rules within which markets operate, and where do they come from?</p>
+
+  <h2 id="coase">2. Coase: why firms exist</h2>
+  <p>In “The Nature of the Firm” (1937), written when he was in his twenties, Ronald Coase asked a question that price theory had never answered. If markets allocate resources efficiently, why is so much economic activity organized inside firms, by command rather than by prices? His answer was that using the market has costs: finding a partner, negotiating, writing and enforcing contracts. These <b>transaction costs</b> can be avoided by bringing activities inside a firm, where a manager simply directs workers. Firms grow until the cost of organizing one more transaction inside the firm equals the cost of carrying it out in the market.</p>
+  <p>His second classic, “The Problem of Social Cost” (1960), applied the same idea to externalities and became the basis of the Coase theorem (Topics 14 and 21): when transaction costs are zero, the allocation of property rights does not affect efficiency, so in the real world, where they are not zero, the design of rights and institutions matters a great deal. Coase received the Nobel Prize in 1991.</p>
+
+  <h2 id="williamson">3. Williamson: markets and hierarchies</h2>
+  <p>Oliver Williamson (<em>Markets and Hierarchies</em>, 1975; <em>The Economic Institutions of Capitalism</em>, 1985) developed Coase’s idea into a theory of when firms make things themselves and when they buy them. Transactions that require <b>specific investments</b>, such as a plant built next to a single customer, expose the parties to opportunism once the investment is sunk: the other side can “hold up” the investor. Such transactions are better organized inside one firm (“hierarchy”) or under long-term contracts than in spot markets. Williamson shared the Nobel Prize in 2009 with Elinor Ostrom.</p>
+
+  <h2 id="north">4. North: institutions and economic performance</h2>
+  <p>Douglass North, an economic historian, turned the new institutional economics into a theory of long-run development.</p>
+  <blockquote>Institutions are the rules of the game in a society or, more formally, are the humanly devised constraints that shape human interaction.<cite>Douglass North, <em>Institutions, Institutional Change and Economic Performance</em> (1990), p. 3</cite></blockquote>
+  <p>Institutions include <b>formal rules</b> (constitutions, laws, property rights) and <b>informal constraints</b> (customs, norms, codes of conduct), together with how they are enforced. Secure property rights and impartial courts lower the costs of transacting and allow markets to extend beyond personal exchange among people who know each other. North and Barry Weingast (1989) argued that England’s Glorious Revolution of 1688, by limiting the crown’s power to seize wealth, made credible commitments to lenders and helped make Britain’s rise possible.</p>
+  <p>Why do inefficient institutions persist? North’s later work stressed <b>path dependence</b>: institutions create organizations and interests that benefit from them, and shared beliefs change slowly. History matters, a point the old institutionalists would have recognized. North shared the Nobel Prize in 1993 with Robert Fogel.</p>
+
+  <h2 id="ostrom">5. Ostrom: governing the commons</h2>
+  <p>In “The Tragedy of the Commons” (1968), the ecologist Garrett Hardin argued that any resource open to all, such as a common pasture or fishery, will be overused, because each user gains the full benefit of taking more while the cost is shared by everyone. The usual conclusions were privatization or state control. Elinor Ostrom (1933–2012), a political scientist, studied hundreds of real cases, from Swiss alpine meadows and Japanese forests to irrigation systems in Spain and Nepal and fisheries in Turkey and Maine. In <em>Governing the Commons</em> (1990) she showed that many communities had managed shared resources sustainably for generations, through rules they made and enforced themselves. She identified <b>design principles</b> of successful commons, including clear boundaries, rules matched to local conditions, participation of users in making the rules, monitoring by people accountable to the users, graduated sanctions, and cheap ways to resolve conflicts. In 2009 she became the first woman to receive the Nobel Prize in economics.</p>
+  <div class="box" id="fish">
+    <h3>A fishery over thirty years</h3>
+    <div class="grid2">
+      <div><label>Number of boats: <b id="nbv">10</b></label><input type="range" id="nb" min="2" max="30" step="1" value="10"></div>
+      <div><label>Catch per boat per year (tons): <b id="cbv">20</b></label><input type="range" id="cb" min="5" max="60" step="1" value="20"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" id="open">Open access: each boat takes as much as it can</button><button class="btn" type="button" id="rule">Community rule: total catch limited to the stock’s regrowth</button></div>
+    <svg id="fishchart" viewBox="0 0 640 220" width="100%" role="img" aria-label="Fish stock over thirty years"></svg>
+    <div class="out" id="fishout"></div>
+    <p class="note">The stock regrows by 30% a year when it is small, less as it nears the carrying capacity of 1,000 tons (logistic growth). The largest sustainable catch is 75 tons a year, at a stock of 500 tons.</p>
+  </div>
+
+  <h2 id="ajr">6. Colonial origins and why nations fail</h2>
+  <p>Daron Acemoglu, Simon Johnson, and James Robinson (2001) used the history of colonization to test whether institutions cause prosperity. Where European settlers faced high death rates from disease, as in much of tropical Africa, they set up <b>extractive</b> institutions designed to transfer resources to a small elite; where they could settle, as in North America and Australia, they built institutions that protected property and limited rulers. Those differences, they argued, persisted and explain much of the gap in incomes today. Acemoglu and Robinson’s <em>Why Nations Fail</em> (2012) generalized the argument, contrasting <b>inclusive</b> institutions, which spread power and opportunity widely, with extractive ones. The three received the Nobel Prize in 2024.</p>
+
+  <h2 id="critics">7. Critics</h2>
+  <ul>
+    <li><b>Which comes first?</b> Ha-Joon Chang and others argue that good institutions are as much a result of development as a cause: today’s rich countries acquired democracy, independent courts, and secure property rights mostly after they grew rich, not before (Topic 19).</li>
+    <li><b>Geography and policy.</b> Jeffrey Sachs and others argued that disease, climate, and access to the sea explain much of what the colonial-origins argument attributes to institutions, and the settler-mortality data have been disputed.</li>
+    <li><b>Efficiency and power.</b> Old institutionalists and Marxists reply that the new institutionalism too often treats institutions as efficient solutions to transaction costs, when they are frequently the result of conflict and serve the powerful. North’s later emphasis on path dependence, and Acemoglu and Robinson’s on elites and power, moved some way toward that view.</li>
+    <li><b>Ostrom’s challenge.</b> Ostrom’s work cut against both the market and the state as the only solutions, and is read as support for community and cooperative management, which sits uneasily with the property-rights emphasis of Coase and North.</li>
+  </ul>
+  <div class="think"><b>Discussion:</b> Ostrom found that communities can govern shared resources without either private property or the state. What conditions made that possible, and do they exist for global commons such as the atmosphere?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Douglass C. North, “Institutions,” <em>Journal of Economic Perspectives</em> 5, no. 1 (1991).</p>
+  <p class="rd">Elinor Ostrom, <em>Governing the Commons</em> (1990), ch. 1 and 3.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 11 (Douglass North: why are so few countries prosperous?).</p>
+  <p class="rd">Ronald H. Coase, “The Nature of the Firm,” <em>Economica</em> 4, no. 16 (1937).</p>
+
+  <p><a href="index.html#topic-18">← Back to Topic 18 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const K = 1000, GR = 0.3, MSY = GR*K/4;
+let mode = 'free';
+function fish() {
+  const nb = +$('nb').value, cb = +$('cb').value;
+  $('nbv').textContent = nb; $('cbv').textContent = cb;
+  const want = nb*cb, cap = mode === 'rule' ? MSY : Infinity;
+  const st = [500], catches = [];
+  for (let t = 1; t <= 30; t++) { const s = st[t-1], grown = s + GR*s*(1 - s/K), c = Math.min(want, cap, grown); catches.push(c); st.push(Math.max(0, grown - c)); }
+  const W = 640, H = 220, L = 50, R = 14, T = 12, B = 30;
+  const X = t => L + t/30*(W-L-R), Y = v => H-B - v/K*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,250,500,750,1000].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
+  for (let t = 0; t <= 30; t += 5) g += `<text x="${X(t)}" y="${H-B+15}" text-anchor="middle">${t}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">years</text><text x="${L+6}" y="${T+10}">fish stock (tons)</text>`;
+  g += `<polyline fill="none" stroke="${st[30] < 50 ? '#c0392b' : '#2a9d8f'}" stroke-width="2.6" points="${st.map((v,t)=>X(t)+','+Y(v)).join(' ')}"/>`;
+  $('fishchart').innerHTML = g;
+  const total = catches.reduce((a,b)=>a+b,0), last = catches.slice(-5).reduce((a,b)=>a+b,0)/5;
+  $('fishout').innerHTML = `${mode === 'rule' ? 'Under the community rule, the total catch is capped at ' + MSY.toFixed(0) + ' tons a year. ' : ''}The boats want ${want} tons a year. After 30 years the stock is <b>${st[30].toFixed(0)} tons</b>; the catch in the last five years averaged <b>${last.toFixed(0)} tons</b> a year; total catch over 30 years: ${total.toFixed(0)} tons. ` +
+    (st[30] < 50 ? '<b>The fishery has collapsed.</b> Each boat did what was individually rational, Hardin’s tragedy.' : last >= MSY*0.95 ? 'The fishery is sustained near its maximum yield.' : 'The fishery survives, though below its maximum sustainable yield.');
+}
+['nb','cb'].forEach(i => $(i).addEventListener('input', fish));
+$('open').addEventListener('click', () => { mode = 'free'; $('nb').value = 20; $('cb').value = 40; fish(); });
+$('rule').addEventListener('click', () => { mode = 'rule'; fish(); });
+fish();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

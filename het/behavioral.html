@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Behavioral Economics | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on behavioral economics: Simon's bounded rationality, the Allais paradox, Kahneman and Tversky's heuristics and prospect theory with an interactive value function, Thaler, nudges, behavioral finance, experimental economics, and the critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/behavioral.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/behavioral.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/behavioral.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 17</p>
+  <h1>Behavioral Economics</h1>
+  <p class="lead">Neoclassical theory assumed that people maximize utility with stable preferences and the ability to process all relevant information. Behavioral economics asks how people actually decide, using psychology and experiments, and finds systematic departures from that ideal.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#simon">Simon: bounded rationality</a></li><li><a href="#anomalies">Early anomalies</a></li><li><a href="#kt">Kahneman and Tversky: heuristics and biases</a></li><li><a href="#prospect">Prospect theory (interactive)</a></li><li><a href="#thaler">Thaler and the economics of everyday life</a></li><li><a href="#nudge">Nudges and policy</a></li><li><a href="#markets">Behavioral finance and experiments</a></li><li><a href="#critics">Critics and limits</a></li></ol>
+  </div>
+
+  <h2 id="simon">1. Simon: bounded rationality</h2>
+  <p>Herbert Simon (1916–2001) was a political scientist, psychologist, computer scientist, and economist at Carnegie Mellon University. In <em>Administrative Behavior</em> (1947) and “A Behavioral Model of Rational Choice” (1955), he argued that real decision makers have <b>bounded rationality</b>: limited information, limited time, and limited ability to compute. Instead of optimizing, they <b>satisfice</b>, a word he coined from “satisfy” and “suffice”: they search until they find an option that is good enough, then stop. Organizations, rules of thumb, and routines exist partly to economize on scarce attention. Simon received the Nobel Prize in 1978. His work was more influential in management, organization theory, and artificial intelligence than in economics, where the optimizing model remained dominant for decades.</p>
+  <p>Simon’s skepticism about “economic man” echoed Veblen’s mockery of the “lightning calculator of pleasures and pains” (Topic 10), and his attention to organizations and routines influenced Nelson and Winter’s evolutionary economics (Topic 20).</p>
+
+  <h2 id="anomalies">2. Early anomalies</h2>
+  <p>John von Neumann and Oskar Morgenstern’s <em>Theory of Games and Economic Behavior</em> (1944) gave economics a precise theory of choice under risk: <b>expected utility</b>. A rational person weighs each outcome’s utility by its probability. Almost at once, experiments found people violating it. In the <b>Allais paradox</b> (1953), the French economist Maurice Allais showed that most people prefer a certain $1 million to a gamble with a small chance of nothing, yet reverse their preference when both options are made less likely by the same proportion, which expected utility theory does not allow. Daniel Ellsberg (1961) showed that people dislike ambiguity, unknown probabilities, as distinct from risk.</p>
+
+  <h2 id="kt">3. Kahneman and Tversky: heuristics and biases</h2>
+  <p>The Israeli psychologists Daniel Kahneman (1934–2024) and Amos Tversky (1937–1996) began working together in 1969. In “Judgment under Uncertainty: Heuristics and Biases” (<em>Science</em>, 1974), they showed that people judge probabilities with mental shortcuts that work well most of the time but lead to systematic errors:</p>
+  <ul>
+    <li><b>Representativeness:</b> judging how likely something is by how much it resembles a stereotype, while ignoring base rates.</li>
+    <li><b>Availability:</b> judging frequency by how easily examples come to mind, so vivid events such as plane crashes seem more common than they are.</li>
+    <li><b>Anchoring:</b> estimates are pulled toward an arbitrary starting number, even one known to be random.</li>
+  </ul>
+  <p>The point was not that people are stupid, but that their errors are predictable, and predictable errors can be built into economic models.</p>
+
+  <h2 id="prospect">4. Prospect theory</h2>
+  <p>“Prospect Theory: An Analysis of Decision under Risk” (<em>Econometrica</em>, 1979) became one of the most cited papers in economics. It replaced expected utility with three ideas:</p>
+  <ul>
+    <li><b>Reference dependence:</b> people evaluate outcomes as gains or losses relative to a reference point, usually the status quo, not as final levels of wealth.</li>
+    <li><b>Loss aversion:</b> losses hurt more than equal gains please, by a factor of roughly two.</li>
+    <li><b>Diminishing sensitivity:</b> the difference between $100 and $200 feels larger than between $1,100 and $1,200, for both gains and losses. People are therefore risk-averse for gains and risk-seeking for losses.</li>
+  </ul>
+  <div class="box" id="pt">
+    <h3>Would you take this bet?</h3>
+    <p class="note" style="margin-top:0">A coin is flipped. Heads, you win the first amount; tails, you lose the second.</p>
+    <div class="grid2">
+      <div><label>Amount you win on heads: <b id="wv">$150</b></label><input type="range" id="w" min="10" max="400" step="10" value="150"></div>
+      <div><label>Amount you lose on tails: <b id="lv">$100</b></label><input type="range" id="l" min="10" max="400" step="10" value="100"></div>
+      <div><label>Loss aversion (λ): <b id="lamv">2.25</b></label><input type="range" id="lam" min="1" max="3.5" step="0.05" value="2.25"></div>
+    </div>
+    <svg id="ptchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Prospect theory value function"></svg>
+    <div class="out" id="ptout"></div>
+    <p class="note">Value function from Tversky and Kahneman (1992): v(x) = x<sup>0.88</sup> for gains and −λ(−x)<sup>0.88</sup> for losses, with their estimate λ = 2.25. Probability weighting is left out for simplicity.</p>
+  </div>
+  <p>Kahneman received the Nobel Prize in 2002, shared with Vernon Smith; Tversky had died in 1996, and the prize is not awarded posthumously. Kahneman’s <em>Thinking, Fast and Slow</em> (2011) popularized the distinction between fast, intuitive “System 1” and slow, deliberate “System 2” thinking.</p>
+
+  <h2 id="thaler">5. Thaler and the economics of everyday life</h2>
+  <p>Richard Thaler, who began as a skeptic among Chicago-trained economists, collected “anomalies” in a column he began in the <em>Journal of Economic Perspectives</em> in 1987. His contributions include <b>mental accounting</b>, the habit of treating money differently depending on which mental account it belongs to; the <b>endowment effect</b>, the tendency to value something more once we own it (Kahneman, Knetsch, and Thaler, 1990, using coffee mugs); and work on <b>self-control</b> and present bias, which explains why people save too little for retirement even when they intend to save more. Thaler received the Nobel Prize in 2017.</p>
+
+  <h2 id="nudge">6. Nudges and policy</h2>
+  <p>Thaler and the legal scholar Cass Sunstein’s <em>Nudge</em> (2008) argued for “libertarian paternalism”: designing the setting in which people choose, the “choice architecture,” so that they are more likely to choose well, without forbidding any option. The best-known example is automatic enrollment in workplace pension plans, which raised participation dramatically because few people opt out of a default. Britain created a Behavioural Insights Team, the “nudge unit,” in 2010, and many governments followed. The World Bank devoted its <em>World Development Report 2015</em> to “Mind, Society, and Behavior.”</p>
+
+  <h2 id="markets">7. Behavioral finance and experiments</h2>
+  <p>Robert Shiller showed that stock prices move far more than the dividends they are supposed to forecast (1981), and his <em>Irrational Exuberance</em> (2000) warned of the dot-com bubble and, in its second edition (2005), of the housing bubble. He shared the Nobel Prize in 2013 with Lars Peter Hansen and with Eugene Fama, whose efficient markets hypothesis (Topic 14) he challenged. Vernon Smith pioneered <b>experimental economics</b>, testing market institutions in the laboratory, and found, somewhat in tension with the behavioral program, that competitive markets often reach equilibrium even when individual traders are far from perfectly rational.</p>
+
+  <h2 id="critics">8. Critics and limits</h2>
+  <ul>
+    <li><b>Ecological rationality.</b> The psychologist Gerd Gigerenzer argues that simple heuristics are often smart, not biased: in an uncertain world, a rule of thumb can outperform complex optimization.</li>
+    <li><b>The individual, not the system.</b> Critics from institutionalist, post-Keynesian, and Marxian traditions note that behavioral economics mostly corrects the individual in the model and leaves the theory of markets, power, and distribution untouched. Nudges ask individuals to choose better within existing institutions rather than changing the institutions.</li>
+    <li><b>Replication.</b> Some well-known findings in social psychology have failed to replicate, and the size of nudge effects in published studies has turned out to be smaller once unpublished trials are counted.</li>
+    <li><b>Absorption.</b> Behavioral ideas such as present bias and loss aversion have been absorbed into mainstream models as extra parameters, which some see as success and others as domestication.</li>
+  </ul>
+  <div class="think"><b>Discussion:</b> If people’s choices are shaped by defaults and framing, who should decide how choices are framed? Is a nudge more or less respectful of people than a rule or a tax?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Amos Tversky and Daniel Kahneman, “Judgment under Uncertainty: Heuristics and Biases,” <em>Science</em> 185 (1974).</p>
+  <p class="rd">Herbert A. Simon, “A Behavioral Model of Rational Choice,” <em>Quarterly Journal of Economics</em> 69, no. 1 (1955).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Richard H. Thaler, <em>Misbehaving: The Making of Behavioral Economics</em> (2015), selected chapters.</p>
+  <p class="rd">Chang, <em>Economics: The User’s Guide</em>, ch. 4 (the Behaviouralist school).</p>
+
+  <p><a href="index.html#topic-17">← Back to Topic 17 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function pt() {
+  const w = +$('w').value, l = +$('l').value, lam = +$('lam').value;
+  $('wv').textContent = '$' + w; $('lv').textContent = '$' + l; $('lamv').textContent = lam.toFixed(2);
+  const v = x => x >= 0 ? Math.pow(x, 0.88) : -lam*Math.pow(-x, 0.88);
+  const W = 640, H = 260, L = 40, R = 14, T = 12, B = 22, XM = 400, VM = v(XM)*Math.max(1.2, lam*0.9);
+  const X = x => L + (x + XM)/(2*XM)*(W-L-R), Y = y => T + (VM - y)/(2*VM)*(H-T-B);
+  let g = `<line x1="${L}" y1="${Y(0)}" x2="${W-R}" y2="${Y(0)}" stroke="#ccd2d8"/><line x1="${X(0)}" y1="${T}" x2="${X(0)}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [-400,-200,200,400].forEach(x => g += `<text x="${X(x)}" y="${Y(0)+15}" text-anchor="middle">${x<0?'−':''}$${Math.abs(x)}</text>`);
+  g += `<text x="${W-R}" y="${Y(0)-6}" text-anchor="end">gains</text><text x="${L+4}" y="${Y(0)-6}">losses</text><text x="${X(0)+6}" y="${T+10}">value</text>`;
+  let pts = []; for (let x = -XM; x <= XM; x += 8) pts.push(X(x)+','+Y(v(x)));
+  g += `<polyline fill="none" stroke="#6a994e" stroke-width="2.6" points="${pts.join(' ')}"/>`;
+  g += `<circle cx="${X(w)}" cy="${Y(v(w))}" r="6" fill="#0077b6"/><circle cx="${X(-l)}" cy="${Y(v(-l))}" r="6" fill="#c0392b"/>`;
+  $('ptchart').innerHTML = g;
+  const ev = 0.5*w - 0.5*l, pv = 0.5*v(w) + 0.5*v(-l), need = l*Math.pow(lam, 1/0.88);
+  $('ptout').innerHTML = `Expected money value: <b>${ev >= 0 ? '+' : '−'}$${Math.abs(ev).toFixed(0)}</b>, so an expected-value maximizer ${ev > 0 ? 'takes' : ev < 0 ? 'refuses' : 'is indifferent to'} the bet. Prospect-theory value: <b>${pv.toFixed(1)}</b>, so a loss-averse person ${pv > 0 ? '<b>takes</b>' : '<b>refuses</b>'} it. ` +
+    `With λ = ${lam.toFixed(2)}, the win must be at least about <b>$${need.toFixed(0)}</b> to make a $${l} loss acceptable.` + (ev > 0 && pv < 0 ? ' This is loss aversion at work: a bet with a positive expected value is turned down.' : '');
+}
+['w','l','lam'].forEach(i => $(i).addEventListener('input', pt)); pt();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

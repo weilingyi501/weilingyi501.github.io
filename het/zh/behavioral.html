@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>行为经济学 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：行为经济学，包括西蒙的有限理性、阿莱悖论、卡尼曼和特沃斯基的启发式与前景理论（含价值函数互动）、塞勒、助推、行为金融学、实验经济学，以及批评者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/behavioral.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/behavioral.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/behavioral.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/behavioral.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../behavioral.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题17</p>
+  <h1>行为经济学</h1>
+  <p class="lead">新古典理论假定人们在偏好稳定、能够处理一切相关信息的条件下使效用最大化。行为经济学借助心理学和实验，追问人们实际上如何做决定，并发现了对这一理想状态的系统性偏离。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#simon">西蒙：有限理性</a></li><li><a href="#anomalies">早期的异常现象</a></li><li><a href="#kt">卡尼曼与特沃斯基：启发式与偏差</a></li><li><a href="#prospect">前景理论（互动）</a></li><li><a href="#thaler">塞勒与日常生活的经济学</a></li><li><a href="#nudge">助推与政策</a></li><li><a href="#markets">行为金融学与实验</a></li><li><a href="#critics">批评与局限</a></li></ol>
+  </div>
+
+  <h2 id="simon">1. 西蒙：有限理性</h2>
+  <p>赫伯特·西蒙（1916—2001）是卡内基梅隆大学的政治学家、心理学家、计算机科学家和经济学家。在《管理行为》（1947）和《理性选择的行为模型》（1955）中，他认为现实中的决策者具有<b>有限理性</b>：信息有限、时间有限、计算能力也有限。他们不是去最优化，而是<b>追求满意</b>，这是他用“满足”和“足够”两个词合成的新词：他们一直搜寻，直到找到一个足够好的选项，然后停止。组织、经验法则和惯例之所以存在，部分是为了节约稀缺的注意力。西蒙于1978年获得诺贝尔奖。他的工作在管理学、组织理论和人工智能领域的影响比在经济学中更大，因为在经济学中，最优化模型在几十年里一直占据主导地位。</p>
+  <p>西蒙对“经济人”的怀疑，呼应了凡勃伦对“快乐与痛苦的闪电计算器”的嘲讽（专题10），而他对组织和惯例的关注影响了纳尔逊和温特的演化经济学（专题20）。</p>
+
+  <h2 id="anomalies">2. 早期的异常现象</h2>
+  <p>约翰·冯·诺依曼和奥斯卡·摩根斯特恩的《博弈论与经济行为》（1944）为经济学提供了一种精确的风险选择理论：<b>期望效用</b>。一个理性的人用每种结果的概率对其效用加权。几乎与此同时，实验就发现人们违背了它。在<b>阿莱悖论</b>（1953）中，法国经济学家莫里斯·阿莱证明，大多数人宁愿要确定的100万美元，也不要一个有小概率一无所获的赌局，但当两个选项都按同样的比例变得不那么可能时，他们却颠倒了偏好，而期望效用理论不允许出现这种情况。丹尼尔·埃尔斯伯格（1961）证明，人们厌恶模糊性，即未知的概率，这不同于风险。</p>
+
+  <h2 id="kt">3. 卡尼曼与特沃斯基：启发式与偏差</h2>
+  <p>以色列心理学家丹尼尔·卡尼曼（1934—2024）和阿莫斯·特沃斯基（1937—1996）从1969年开始合作。在《不确定条件下的判断：启发式与偏差》（<em>Science</em>，1974）中，他们证明人们用一些思维捷径来判断概率，这些捷径大多数时候都很好用，但会导致系统性的错误：</p>
+  <ul>
+    <li><b>代表性：</b>根据某事与刻板印象的相似程度来判断其可能性，而忽视基础比率。</li>
+    <li><b>可得性：</b>根据例子出现在脑海中的容易程度来判断频率，因此空难等生动的事件显得比实际更常见。</li>
+    <li><b>锚定：</b>估计值会被一个任意的起始数字所牵引，即使明知这个数字是随机的。</li>
+  </ul>
+  <p>要点不在于人们愚蠢，而在于他们的错误是可以预测的，而可以预测的错误能够被纳入经济模型。</p>
+
+  <h2 id="prospect">4. 前景理论</h2>
+  <p>《前景理论：风险条件下的决策分析》（<em>Econometrica</em>，1979）成为经济学中被引用最多的论文之一。它用三个思想取代了期望效用：</p>
+  <ul>
+    <li><b>参照依赖：</b>人们相对于一个参照点（通常是现状）把结果评价为收益或损失，而不是评价最终的财富水平。</li>
+    <li><b>损失厌恶：</b>损失带来的痛苦大于同等收益带来的快乐，大约是两倍。</li>
+    <li><b>敏感性递减：</b>100美元与200美元之间的差别，感觉上大于1,100美元与1,200美元之间的差别，收益和损失都是如此。因此，人们在面对收益时厌恶风险，在面对损失时寻求风险。</li>
+  </ul>
+  <div class="box" id="pt">
+    <h3>你会接受这个赌局吗？</h3>
+    <p class="note" style="margin-top:0">抛一枚硬币。正面，你赢得第一个金额；反面，你输掉第二个金额。</p>
+    <div class="grid2">
+      <div><label>正面时赢得的金额：<b id="wv">$150</b></label><input type="range" id="w" min="10" max="400" step="10" value="150"></div>
+      <div><label>反面时输掉的金额：<b id="lv">$100</b></label><input type="range" id="l" min="10" max="400" step="10" value="100"></div>
+      <div><label>损失厌恶系数（λ）：<b id="lamv">2.25</b></label><input type="range" id="lam" min="1" max="3.5" step="0.05" value="2.25"></div>
+    </div>
+    <svg id="ptchart" viewBox="0 0 640 260" width="100%" role="img" aria-label="前景理论的价值函数"></svg>
+    <div class="out" id="ptout"></div>
+    <p class="note">价值函数来自特沃斯基和卡尼曼（1992）：收益时 v(x) = x<sup>0.88</sup>，损失时 v(x) = −λ(−x)<sup>0.88</sup>，采用他们估计的 λ = 2.25。为简单起见，省略了概率权重。</p>
+  </div>
+  <p>卡尼曼于2002年获得诺贝尔奖，与弗农·史密斯分享；特沃斯基已于1996年去世，而诺贝尔奖不授予已故者。卡尼曼的《思考，快与慢》（2011）使快速、直觉的“系统1”与缓慢、审慎的“系统2”这一区分广为人知。</p>
+
+  <h2 id="thaler">5. 塞勒与日常生活的经济学</h2>
+  <p>理查德·塞勒起初在接受芝加哥学派训练的经济学家中是一个怀疑者，他在1987年开始在《经济学展望杂志》上开设的专栏中收集“异常现象”。他的贡献包括<b>心理账户</b>，即根据钱属于哪个心理账户而区别对待它的习惯；<b>禀赋效应</b>，即一旦拥有某物就会更看重它的倾向（卡尼曼、克内奇和塞勒，1990，用咖啡杯做的实验）；以及关于<b>自我控制</b>和当下偏差的研究，这解释了为什么人们即使打算多储蓄，也还是为退休储蓄得太少。塞勒于2017年获得诺贝尔奖。</p>
+
+  <h2 id="nudge">6. 助推与政策</h2>
+  <p>塞勒和法学家卡斯·桑斯坦的《助推》（2008）主张“自由意志家长主义”：设计人们做选择的情境，即“选择架构”，使他们更有可能做出好的选择，而不禁止任何选项。最著名的例子是自动加入工作场所的养老金计划，由于很少有人选择退出默认选项，参与率大幅提高。英国于2010年设立了行为洞察小组，即“助推小组”，许多国家政府随后效仿。世界银行把《2015年世界发展报告》的主题定为“思维、社会与行为”。</p>
+
+  <h2 id="markets">7. 行为金融学与实验</h2>
+  <p>罗伯特·席勒证明，股票价格的波动远大于它们理应预测的股息的波动（1981），他的《非理性繁荣》（2000）对互联网泡沫发出了警告，第二版（2005）又对房地产泡沫发出了警告。他于2013年与拉尔斯·彼得·汉森以及尤金·法玛共同获得诺贝尔奖，而他挑战的正是法玛的有效市场假说（专题14）。弗农·史密斯开创了<b>实验经济学</b>，在实验室中检验市场制度，他发现，即使个别交易者远非完全理性，竞争性市场也常常能达到均衡，这与行为经济学的研究纲领有些张力。</p>
+
+  <h2 id="critics">8. 批评与局限</h2>
+  <ul>
+    <li><b>生态理性。</b>心理学家格尔德·吉仁泽认为，简单的启发式往往是聪明的，而不是有偏差的：在一个不确定的世界里，经验法则可能胜过复杂的最优化。</li>
+    <li><b>个人，而不是体系。</b>来自制度主义、后凯恩斯主义和马克思主义传统的批评者指出，行为经济学主要是修正模型中的个人，而对市场、权力和分配的理论没有触动。助推要求个人在现有制度之内做出更好的选择，而不是改变制度。</li>
+    <li><b>可重复性。</b>社会心理学中一些著名的发现未能得到重复，而一旦把未发表的试验计算在内，已发表研究中的助推效应也变小了。</li>
+    <li><b>被吸收。</b>当下偏差和损失厌恶等行为经济学思想已经作为额外的参数被吸收进主流模型，有人视之为成功，也有人视之为被驯化。</li>
+  </ul>
+  <div class="think"><b>讨论：</b>如果人们的选择受到默认选项和表述框架的影响，那么应该由谁来决定如何表述选择？与规则或税收相比，助推是更尊重人，还是更不尊重人？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">阿莫斯·特沃斯基、丹尼尔·卡尼曼，《不确定条件下的判断：启发式与偏差》，<em>Science</em> 第185卷（1974）。</p>
+  <p class="rd">赫伯特·A. 西蒙，《理性选择的行为模型》，<em>Quarterly Journal of Economics</em> 第69卷第1期（1955）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">理查德·H. 塞勒，《“错误”的行为：行为经济学的形成》（<em>Misbehaving</em>，2015），选读。</p>
+  <p class="rd">张夏准，<em>Economics: The User’s Guide</em>，第4章（行为主义学派）。</p>
+
+  <p><a href="index.html#topic-17">← 返回课程大纲专题17</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function pt() {
+  const w = +$('w').value, l = +$('l').value, lam = +$('lam').value;
+  $('wv').textContent = '$' + w; $('lv').textContent = '$' + l; $('lamv').textContent = lam.toFixed(2);
+  const v = x => x >= 0 ? Math.pow(x, 0.88) : -lam*Math.pow(-x, 0.88);
+  const W = 640, H = 260, L = 40, R = 14, T = 12, B = 22, XM = 400, VM = v(XM)*Math.max(1.2, lam*0.9);
+  const X = x => L + (x + XM)/(2*XM)*(W-L-R), Y = y => T + (VM - y)/(2*VM)*(H-T-B);
+  let g = `<line x1="${L}" y1="${Y(0)}" x2="${W-R}" y2="${Y(0)}" stroke="#ccd2d8"/><line x1="${X(0)}" y1="${T}" x2="${X(0)}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [-400,-200,200,400].forEach(x => g += `<text x="${X(x)}" y="${Y(0)+15}" text-anchor="middle">${x<0?'−':''}$${Math.abs(x)}</text>`);
+  g += `<text x="${W-R}" y="${Y(0)-6}" text-anchor="end">收益</text><text x="${L+4}" y="${Y(0)-6}">损失</text><text x="${X(0)+6}" y="${T+10}">价值</text>`;
+  let pts = []; for (let x = -XM; x <= XM; x += 8) pts.push(X(x)+','+Y(v(x)));
+  g += `<polyline fill="none" stroke="#6a994e" stroke-width="2.6" points="${pts.join(' ')}"/>`;
+  g += `<circle cx="${X(w)}" cy="${Y(v(w))}" r="6" fill="#0077b6"/><circle cx="${X(-l)}" cy="${Y(v(-l))}" r="6" fill="#c0392b"/>`;
+  $('ptchart').innerHTML = g;
+  const ev = 0.5*w - 0.5*l, pv = 0.5*v(w) + 0.5*v(-l), need = l*Math.pow(lam, 1/0.88);
+  $('ptout').innerHTML = `货币的期望值：<b>${ev >= 0 ? '+' : '−'}$${Math.abs(ev).toFixed(0)}</b>，因此一个期望值最大化者会${ev > 0 ? '接受' : ev < 0 ? '拒绝' : '对这个赌局无所谓'}${ev !== 0 ? '这个赌局' : ''}。前景理论的价值：<b>${pv.toFixed(1)}</b>，因此一个厌恶损失的人会${pv > 0 ? '<b>接受</b>' : '<b>拒绝</b>'}它。` +
+    `在 λ = ${lam.toFixed(2)} 时，赢的金额至少要达到约 <b>$${need.toFixed(0)}</b>，才能让人接受 $${l} 的损失。` + (ev > 0 && pv < 0 ? '这就是损失厌恶在起作用：一个期望值为正的赌局被拒绝了。' : '');
+}
+['w','l','lam'].forEach(i => $(i).addEventListener('input', pt)); pt();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

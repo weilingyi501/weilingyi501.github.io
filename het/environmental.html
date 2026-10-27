@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Environmental Economics | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on environmental economics: externalities and the Pigouvian tax with an interactive model, the Coase theorem, tradable permits, resource economics, valuation, discounting and climate policy with an interactive calculator, and the critics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/environmental.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/environmental.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/environmental.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 21</p>
+  <h1>Environmental Economics</h1>
+  <p class="lead">Neoclassical economics applied to nature: pollution and resource depletion are market failures, and the right prices, property rights, or permits can correct them. This topic follows the field from Pigou to carbon pricing and the debate over discounting the future.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#what">What environmental economics is</a></li><li><a href="#origins">Origins</a></li><li><a href="#tools">Three tools (interactive)</a></li><li><a href="#valuation">Resources, valuation, and discounting (interactive)</a></li><li><a href="#critics">Critics</a></li></ol>
+  </div>
+
+  <h2 id="what">1. What environmental economics is</h2>
+
+  <p><b>Environmental economics</b> is neoclassical applied microeconomics. It treats pollution and the depletion of natural resources as <b>market failures</b>: costs that fall on people who are not party to a transaction, so that markets produce too much of them. The remedy is to make polluters face the full cost of what they do. The goal is not zero pollution but the <em>efficient</em> level of pollution, where the benefit of one more unit of production just equals the damage it causes.</p>
+  
+  <h2 id="origins">2. Origins</h2>
+  <p>The field has older roots than its name. A. C. Pigou’s <em>The Economics of Welfare</em> (1920) introduced the gap between private and social cost (Topic 9), and Harold Hotelling’s “The Economics of Exhaustible Resources” (1931) founded resource economics. The modern field took shape in the 1960s, when Rachel Carson’s <em>Silent Spring</em> (1962) and visible air and water pollution made the environment a political issue. Allen Kneese and Robert Ayres’s “materials balance” approach (1969) pointed out that everything an economy takes from nature eventually returns to it as waste, so pollution is a normal by-product of production, not an exception. William Baumol and Wallace Oates’s <em>The Theory of Environmental Policy</em> (1975) gave the field its standard textbook. The United States passed the Clean Air Act (1970) and created the Environmental Protection Agency the same year, and the <em>Journal of Environmental Economics and Management</em> began publishing in 1974.</p>
+<h2 id="tools">3. Three tools</h2>
+  <ul>
+    <li><b>Taxes.</b> A. C. Pigou (Topic 9) proposed taxing activities whose social cost exceeds their private cost. A tax equal to the marginal damage at the efficient level makes the polluter cut back exactly to that level.</li>
+    <li><b>Property rights and bargaining.</b> Ronald Coase (1960) argued that if property rights are clearly defined and bargaining is cheap, the polluter and the people harmed can reach the efficient outcome by themselves, whoever holds the right. Coase himself stressed that transaction costs are rarely low, which is why the government often has to act.</li>
+    <li><b>Tradable permits.</b> The government caps total emissions and lets firms buy and sell permits, so that cuts are made where they are cheapest. The U.S. acid-rain program of 1990 for sulfur dioxide was the first large example, and the European Union’s carbon market (2005) the largest.</li>
+  </ul>
+  <div class="box" id="pigou">
+    <h3>The efficient level of pollution and the Pigouvian tax</h3>
+    <div class="grid2">
+      <div><label>Damage caused by each extra ton (slope of marginal damage): <b id="mdv">1.0</b></label><input type="range" id="md" min="0.2" max="3" step="0.1" value="1"></div>
+      <div><label>Carbon tax actually imposed ($ per ton): <b id="txv">$0</b></label><input type="range" id="tx" min="0" max="90" step="1" value="0"></div>
+    </div>
+    <svg id="pchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="Marginal benefit and marginal damage of emissions"></svg>
+    <div class="out" id="pout"></div>
+    <p class="note">The firm’s marginal benefit from emitting falls from $100 for the first ton to $0 at 100 tons; marginal damage to others rises with each ton. Without a tax, the firm emits until its benefit is zero.</p>
+  </div>
+  <h2 id="valuation">4. Resources, valuation, and discounting</h2>
+  <p>Harold Hotelling (1931) showed that the owner of an exhaustible resource such as oil should extract it so that its net price rises at the rate of interest, which makes leaving it in the ground as good an investment as selling it. Environmental economists also developed ways to put money values on things that have no market price, such as clean air or a species, by asking people what they would pay (“contingent valuation”) or by inferring values from house prices and travel costs. These values feed into <b>cost–benefit analysis</b> of regulations.</p>
+  <p>Climate change raised the stakes. William Nordhaus built the first “integrated assessment models,” which link the economy to the climate, and recommended a carbon tax that starts modest and rises over time; he shared the Nobel Prize in 2018. The Stern Review (2006) called climate change “the greatest market failure the world has ever seen” and recommended much faster action. Most of the difference between them came from one number: the <b>discount rate</b> used to compare damages in the distant future with costs today.</p>
+  <div class="box" id="disc">
+    <h3>How much is future climate damage worth today?</h3>
+    <div class="grid2">
+      <div><label>Discount rate: <b id="drv">1.4%</b></label><input type="range" id="dr" min="0" max="6" step="0.1" value="1.4"></div>
+      <div><label>Years until the damage occurs: <b id="dyv">100</b></label><input type="range" id="dy" min="10" max="200" step="10" value="100"></div>
+    </div>
+    <div style="margin-top:8px"><button class="btn" type="button" data-r="1.4">Stern (about 1.4%)</button><button class="btn" type="button" data-r="4.5">Nordhaus (about 4–5%)</button></div>
+    <div class="out" id="dout"></div>
+  </div>
+
+  <h2 id="critics">5. Critics</h2>
+  <p>Critics, including ecological economists, argue that this framework treats nature as substitutable by money, that the discount rate is an ethical choice about future generations disguised as a technical one, and that willingness to pay depends on the ability to pay, which gives the preferences of the rich more weight.</p>
+
+    <p>Defenders reply that every policy implies some valuation, so it is better to make the numbers explicit, and that carbon pricing and tradable permits have cut pollution at lower cost than rigid regulation. The disagreement with ecological economics (Topic 22) is less about tools than about goals: efficiency within a growing economy, or limits on the scale of the economy itself.</p>
+  <div class="think"><b>Discussion:</b> The efficient level of pollution is not zero. Is that a useful insight or a dangerous one? Who decides what counts as “damage,” and whose willingness to pay counts?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Robert N. Stavins, “Environmental Economics,” in <em>The New Palgrave Dictionary of Economics</em> (2nd ed., 2008).</p>
+  <p class="rd">Ronald H. Coase, “The Problem of Social Cost,” <em>Journal of Law and Economics</em> 3 (1960), sections 1–5.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">William Nordhaus, <em>The Climate Casino</em> (2013), selected chapters.</p>
+  <p class="rd">Nicholas Stern, <em>The Economics of Climate Change: The Stern Review</em> (2006), summary of conclusions.</p>
+  <p><a href="index.html#topic-21">← Back to Topic 21 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Pigouvian tax: MB = 100 - Q, MD = d·Q
+function pigou() {
+  const d = +$('md').value, t = +$('tx').value;
+  $('mdv').textContent = d.toFixed(1); $('txv').textContent = '$' + t;
+  const qs = 100/(1 + d), ts = d*qs, qt = Math.max(0, 100 - t);
+  const W = 640, H = 250, L = 46, R = 14, T = 12, B = 30, QM = 105, PM = 110;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B - Math.min(p, PM)/PM*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">$${v}</text><text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">tons emitted</text>`;
+  g += `<line x1="${X(0)}" y1="${Y(100)}" x2="${X(100)}" y2="${Y(0)}" stroke="#0077b6" stroke-width="2.4"/><text x="${X(6)}" y="${Y(100)+16}" fill="#0077b6">firm’s marginal benefit</text>`;
+  const qe = Math.min(QM, PM/d);
+  g += `<line x1="${X(0)}" y1="${Y(0)}" x2="${X(qe)}" y2="${Y(d*qe)}" stroke="#c0392b" stroke-width="2.4"/><text x="${X(qe)-4}" y="${Y(d*qe)+16}" text-anchor="end" fill="#c0392b">marginal damage</text>`;
+  if (t > 0) g += `<line x1="${L}" y1="${Y(t)}" x2="${W-R}" y2="${Y(t)}" stroke="#3f8f6b" stroke-dasharray="6 4"/><text x="${W-R-4}" y="${Y(t)-6}" text-anchor="end" fill="#3f8f6b">tax $${t}</text>`;
+  g += `<circle cx="${X(qs)}" cy="${Y(ts)}" r="6" fill="#023e8a"/><circle cx="${X(qt)}" cy="${Y(100-qt)}" r="5" fill="#3f8f6b"/>`;
+  $('pchart').innerHTML = g;
+  const gap = Math.abs(qt - qs) < 0.5;
+  $('pout').innerHTML = `Efficient emissions: <b>${qs.toFixed(0)} tons</b>, where marginal benefit equals marginal damage; the efficient Pigouvian tax is <b>$${ts.toFixed(0)}</b> a ton. With a tax of $${t}, the firm emits <b>${qt.toFixed(0)} tons</b>. ` +
+    (gap ? 'The tax is set right: the firm chooses the efficient level by itself.' : qt > qs ? 'The tax is too low (or zero): emissions exceed the efficient level, and the extra damage outweighs the firm’s gain.' : 'The tax is too high: emissions are cut below the efficient level, and the firm gives up more benefit than the damage avoided.');
+}
+['md','tx'].forEach(i => $(i).addEventListener('input', pigou)); pigou();
+
+// discounting future damage
+function disc() {
+  const r = +$('dr').value/100, n = +$('dy').value;
+  $('drv').textContent = (r*100).toFixed(1) + '%'; $('dyv').textContent = n;
+  const pv = 1e12 / Math.pow(1 + r, n), f = v => v >= 1e9 ? '$' + (v/1e9).toFixed(1) + ' billion' : '$' + (v/1e6).toFixed(0) + ' million';
+  $('dout').innerHTML = `$1 trillion of damage ${n} years from now is worth <b>${f(pv)}</b> today at a ${(r*100).toFixed(1)}% discount rate. ` +
+    `It is worth spending up to that amount today to prevent it. At 1.4% the figure is ${f(1e12/Math.pow(1.014, n))}; at 4.5% it is ${f(1e12/Math.pow(1.045, n))}.`;
+}
+['dr','dy'].forEach(i => $(i).addEventListener('input', disc));
+document.querySelectorAll('#disc .btn').forEach(b => b.addEventListener('click', () => { $('dr').value = b.dataset.r; disc(); }));
+disc();
+
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

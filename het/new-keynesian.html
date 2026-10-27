@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>New Keynesian Economics | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on new Keynesian economics: sticky prices and wages, imperfect information with an interactive market for lemons, efficiency wages and credit rationing, new trade theory, the new neoclassical synthesis and inflation targeting, and the liquidity trap after 2008.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/new-keynesian.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/new-keynesian.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/new-keynesian.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 16</p>
+  <h1>New Keynesian Economics: Imperfect Markets</h1>
+  <p class="lead">After the new classical revolution of the 1970s, a group of economists set out to rebuild Keynesian conclusions on the foundations their critics demanded: optimizing individuals and rational expectations. Their answer was that real markets are imperfect, in prices, in information, and in competition, and that these imperfections give demand and policy a role.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#context">The challenge of the 1970s</a></li><li><a href="#sticky">Sticky prices and wages</a></li><li><a href="#info">Imperfect information (interactive)</a></li><li><a href="#labor">Efficiency wages and credit rationing</a></li><li><a href="#trade">New trade theory</a></li><li><a href="#synthesis">The new neoclassical synthesis</a></li><li><a href="#crisis">After 2008</a></li></ol>
+  </div>
+
+  <h2 id="context">1. The challenge of the 1970s</h2>
+  <p>Stagflation in the 1970s discredited the simple Phillips curve of the neoclassical synthesis. Robert Lucas and the new classical economists argued that if people form expectations rationally, predictable monetary policy cannot affect output, and that models without “microfoundations” could not be used to evaluate policy (Topic 14). Real business cycle theorists, led by Finn Kydland and Edward Prescott (1982), went further: fluctuations were the efficient response of optimizing households and firms to shocks in technology, and there was nothing for policy to fix.</p>
+  <p>Many economists found these conclusions hard to square with the Great Depression or the Volcker recession of 1981–82, when tight money clearly caused mass unemployment. The <b>new Keynesians</b> accepted the method of their critics, optimizing agents and rational expectations, but argued that markets do not clear instantly. The label spread in the 1980s; N. Gregory Mankiw and David Romer’s two-volume collection <em>New Keynesian Economics</em> (1991) defined the program.</p>
+
+  <h2 id="sticky">2. Sticky prices and wages</h2>
+  <ul>
+    <li><b>Staggered contracts.</b> Stanley Fischer (1977) and John Taylor (1980) showed that if wages are set in contracts that last several periods and are renewed at different times, monetary policy can affect output even when everyone has rational expectations, because at any moment many wages were set before the latest news arrived. Guillermo Calvo (1983) gave a simple way of modeling firms that change prices only occasionally.</li>
+    <li><b>Menu costs.</b> Mankiw (1985) and George Akerlof and Janet Yellen (1985) showed that small costs of changing prices, such as reprinting menus or the time spent deciding, can have large effects. For a firm with some market power, failing to adjust its price costs it very little, but if all firms fail to adjust, total demand and output change a lot.</li>
+    <li><b>Monopolistic competition.</b> Most new Keynesian models assume firms that set their own prices, following Edward Chamberlin and Joan Robinson (1933), rather than price-taking firms in perfect competition. Prices are above marginal cost, so firms are willing to sell more when demand rises.</li>
+  </ul>
+
+  <h2 id="info">3. Imperfect information</h2>
+  <p>A second line of work asked what happens when buyers and sellers know different things. George Akerlof’s “The Market for ‘Lemons’” (1970), rejected by several journals before publication, showed that a market can unravel when sellers know more about quality than buyers. Michael Spence (1973) showed how education can serve as a costly <b>signal</b> of ability, and Joseph Stiglitz, with Michael Rothschild (1976), showed how insurers <b>screen</b> customers whose risks they cannot observe. Akerlof, Spence, and Stiglitz shared the Nobel Prize in 2001.</p>
+  <div class="box" id="lem">
+    <h3>The market for lemons</h3>
+    <p class="note" style="margin-top:0">Used cars vary in quality from $0 to $100 (what each car is worth to its owner). Sellers know their car’s quality; buyers only know the average quality of cars on offer. Buyers value any car at a premium over what it is worth to its seller.</p>
+    <div class="grid2">
+      <div><label>Buyers’ valuation as a multiple of quality: <b id="bpv">1.5</b></label><input type="range" id="bp" min="1" max="2.5" step="0.1" value="1.5"></div>
+      <div><label>Starting price buyers offer: <b id="p0v">$75</b></label><input type="range" id="p0" min="20" max="100" step="5" value="75"></div>
+    </div>
+    <svg id="lchart" viewBox="0 0 640 210" width="100%" role="img" aria-label="Price of used cars round by round"></svg>
+    <div class="out" id="lout"></div>
+  </div>
+  <p>The lemons logic explains why markets for used cars, health insurance, and credit can shrink or disappear, and why warranties, brands, reputations, and regulation exist to overcome it.</p>
+
+  <h2 id="labor">4. Efficiency wages and credit rationing</h2>
+  <p>Information problems also explain why some markets do not clear even in the long run.</p>
+  <ul>
+    <li><b>Efficiency wages.</b> Carl Shapiro and Joseph Stiglitz (1984) argued that employers cannot perfectly monitor effort, so they pay more than the market-clearing wage to make losing the job costly and deter shirking. The result is persistent involuntary unemployment, which acts as a “worker discipline device.” Akerlof (1982) gave a related account based on gift exchange and fairness. Marx’s reserve army of labor (Topic 7) makes a similar point in a different language.</li>
+    <li><b>Credit rationing.</b> Stiglitz and Andrew Weiss (1981) showed that banks may refuse to lend to some borrowers rather than raise interest rates, because higher rates drive away safe borrowers and attract risky ones. Credit is rationed, and the supply of credit, not just its price, matters for the economy.</li>
+  </ul>
+
+  <h2 id="trade">5. New trade theory</h2>
+  <p>Paul Krugman applied monopolistic competition to international trade. Ricardo and Heckscher–Ohlin explained trade by differences between countries (Topic 4). Krugman (1979, 1980) showed that with increasing returns to scale and consumers who like variety, similar countries also gain from trading similar goods, such as cars for cars, and that large home markets attract production. In <em>Geography and Trade</em> (1991) he extended the model to explain why industries cluster in particular regions. He received the Nobel Prize in 2008. The new trade theory also implied that a government could, in principle, help domestic firms capture profits in concentrated industries, a point developmentalists had long made (Topic 19), though Krugman himself warned against using it as a case for protection.</p>
+
+  <h2 id="synthesis">6. The new neoclassical synthesis</h2>
+  <p>In the 1990s, new Keynesian and real business cycle models merged into a “new neoclassical synthesis” (Marvin Goodfriend and Robert King, 1997): dynamic stochastic general equilibrium (DSGE) models with optimizing households and firms, rational expectations, and sticky prices. In the textbook version, the economy is described by three equations, a demand curve linking output to the real interest rate, a new Keynesian Phillips curve linking inflation to expected inflation and the output gap, and a rule for the central bank’s interest rate.</p>
+  <p class="eq">Taylor rule (1993): interest rate = 2% + inflation + 0.5 × (inflation − 2%) + 0.5 × output gap</p>
+  <p>The policy implication was <b>inflation targeting</b>, first adopted by New Zealand in 1990 and later by most central banks: an independent central bank adjusts the interest rate to keep inflation near a target, and in doing so also stabilizes output. Fiscal policy played little role. The calm of the “Great Moderation,” from the mid-1980s to 2007, seemed to confirm the approach.</p>
+
+  <h2 id="crisis">7. After 2008</h2>
+  <p>The financial crisis exposed the limits of models with no meaningful banking sector, and in which default could not occur. As central banks cut interest rates to zero, the economy entered what Keynes had called a liquidity trap (Topic 12), which Krugman had analyzed for Japan in 1998. Central banks turned to “quantitative easing,” buying long-term bonds on a large scale. New Keynesians, including Krugman, Stiglitz, and Olivier Blanchard (chief economist of the IMF, 2008–15), became leading critics of fiscal austerity, arguing that government spending multipliers are large when interest rates are at zero. Janet Yellen, who had co-authored the menu-cost and efficiency-wage work, chaired the Federal Reserve (2014–18) and later served as Treasury Secretary.</p>
+  <p>The models have since been extended with financial frictions, heterogeneous households (“HANK” models), and the zero lower bound. Critics from the post-Keynesian side (Topic 15) reply that adding frictions to an equilibrium model does not capture fundamental uncertainty or the endogenous creation of money, and that the new Keynesians remain closer to the neoclassical synthesis than to Keynes.</p>
+  <div class="think"><b>Discussion:</b> New Keynesians accepted rational expectations and optimization in order to win the argument with the new classicals. What did they gain, and what did they give up?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">George A. Akerlof, “The Market for ‘Lemons’: Quality Uncertainty and the Market Mechanism,” <em>Quarterly Journal of Economics</em> 84, no. 3 (1970).</p>
+  <p class="rd">N. Gregory Mankiw, “The Reincarnation of Keynesian Economics,” <em>European Economic Review</em> 36 (1992).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Yueh, <em>What Would the Great Economists Do?</em>, ch. 6 (Keynes) and ch. 10 (Friedman), for the debate between Keynesians and monetarists.</p>
+  <p class="rd">Joseph E. Stiglitz, <em>Globalization and Its Discontents</em> (2002), ch. 1.</p>
+
+  <p><a href="index.html#topic-16">← Back to Topic 16 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// lemons: qualities uniform on [0,100]; at price p, cars with quality <= p are offered; average quality p/2; buyers pay b * average
+function lem() {
+  const b = +$('bp').value, p0 = +$('p0').value;
+  $('bpv').textContent = b.toFixed(1); $('p0v').textContent = '$' + p0;
+  const ps = [p0]; for (let i = 1; i <= 10; i++) ps.push(Math.min(100, b * Math.min(ps[i-1], 100) / 2));
+  const W = 640, H = 210, L = 46, R = 14, T = 12, B = 30;
+  const X = i => L + i/10*(W-L-R), Y = v => H-B - v/100*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">$${v}</text>`);
+  for (let i = 0; i <= 10; i += 2) g += `<text x="${X(i)}" y="${H-B+15}" text-anchor="middle">${i}</text>`;
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">round of trading</text>`;
+  g += `<polyline fill="none" stroke="#c47a2c" stroke-width="2.6" points="${ps.map((p,i)=>X(i)+','+Y(p)).join(' ')}"/>`;
+  ps.forEach((p,i) => g += `<circle cx="${X(i)}" cy="${Y(p)}" r="3.5" fill="#c47a2c"/>`);
+  $('lchart').innerHTML = g;
+  const end = ps[10];
+  $('lout').innerHTML = `At a price of $${p0}, only owners of cars worth less than $${Math.min(p0,100)} sell, so the average car on offer is worth $${(Math.min(p0,100)/2).toFixed(0)} to its owner and $${(b*Math.min(p0,100)/2).toFixed(0)} to a buyer. Buyers adjust their offer, and so on. After ten rounds the price is <b>$${end.toFixed(1)}</b>. ` +
+    (b < 2 ? '<b>The market unravels:</b> each fall in price drives the best remaining cars out, until almost nothing is traded, even though every buyer values every car more than its owner does.' : b > 2 ? 'Buyers value cars so highly that the market survives and all cars are traded.' : 'The price stays where it started: a knife-edge case.');
+}
+['bp','p0'].forEach(i => $(i).addEventListener('input', lem)); lem();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

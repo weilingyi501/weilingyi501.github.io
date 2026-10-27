@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Post-Keynesian Economics and Financial Instability | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on post-Keynesian economics: fundamental uncertainty, Kalecki, endogenous money, Minsky's financial instability hypothesis with an interactive model, Godley's sectoral balances with an interactive calculator, and wage-led growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/post-keynesian.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/post-keynesian.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/post-keynesian.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 15</p>
+  <h1>Post-Keynesian Economics and Financial Instability</h1>
+  <p class="lead">Keynes’s other heirs. Where the neoclassical synthesis reduced Keynes to sticky wages in an otherwise self-correcting economy, post-Keynesians built on uncertainty, money, and finance, and argued that capitalism has no automatic tendency toward full employment. The financial crisis of 2008 brought their ideas back to public attention.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#heirs">Keynes’s other heirs</a></li><li><a href="#uncertainty">Uncertainty and historical time</a></li><li><a href="#kalecki">Kalecki: markups, profits, and politics</a></li><li><a href="#money">Endogenous money</a></li><li><a href="#minsky">Minsky and the crisis of 2008 (interactive)</a></li><li><a href="#godley">Godley and sectoral balances (interactive)</a></li><li><a href="#growth">Wage-led growth and policy</a></li></ol>
+  </div>
+
+  <h2 id="heirs">1. Keynes’s other heirs</h2>
+  <p>Keynes’s closest collaborators in Cambridge, Joan Robinson, Richard Kahn, and Nicholas Kaldor, together with Piero Sraffa and the Polish economist Michał Kalecki, never accepted the neoclassical synthesis that the American Cambridge built after the war (Topic 13). Robinson called it “bastard Keynesianism.” In their view, the synthesis kept Keynes’s policy conclusions while throwing away his theory: it explained unemployment by rigid wages, when Keynes had argued that flexible wages would make things worse (Topic 12).</p>
+  <p>Through the 1950s and 1960s the English Cambridge developed theories of growth and distribution (the Cambridge equation) and attacked the neoclassical theory of capital (Topic 13). The label “post-Keynesian” spread in the 1970s, when the synthesis lost ground in the stagflation crisis. Paul Davidson and Sidney Weintraub founded the <em>Journal of Post Keynesian Economics</em> in 1978. The school has several strands, Keynesian, Kaleckian, and Sraffian, united by a rejection of the neoclassical view that markets tend toward full employment.</p>
+  <table>
+    <thead><tr><th></th><th>Neoclassical synthesis and new Keynesians</th><th>Post-Keynesians</th></tr></thead>
+    <tbody>
+      <tr><td>Cause of unemployment</td><td>Wages and prices adjust slowly</td><td>Insufficient effective demand, in the long run as well as the short</td></tr>
+      <tr><td>Uncertainty</td><td>Calculable risk; rational expectations</td><td>Fundamental uncertainty; conventions and animal spirits</td></tr>
+      <tr><td>Money</td><td>Supplied by the central bank; neutral in the long run</td><td>Created by bank lending; never neutral</td></tr>
+      <tr><td>Distribution</td><td>Marginal products</td><td>Power, markups, and the pace of accumulation</td></tr>
+      <tr><td>Method</td><td>Equilibrium of optimizing agents</td><td>Historical time; institutions; accounting consistency</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="uncertainty">2. Uncertainty and historical time</h2>
+  <p>Post-Keynesians start from Keynes’s chapter 12 (Topic 12) and his article “The General Theory of Employment” (1937), in which he distinguished calculable <b>risk</b>, like the odds in roulette, from genuine <b>uncertainty</b>, like the price of copper or the interest rate twenty years from now, about which “we simply do not know.” Investment decisions are made under uncertainty, so they depend on conventions and on animal spirits, and they can change suddenly. Money is valuable precisely because it lets people postpone decisions when the future is unknown. Paul Davidson argued that economic processes are “nonergodic”: the past is not a reliable sample of the future, so no amount of data can turn uncertainty into risk.</p>
+  <p>Joan Robinson added that economies move through <b>historical time</b>. Investments in machines and buildings cannot be undone, so the economy cannot move back and forth between equilibria as if history did not matter. This is why post-Keynesians distrust models in which the economy always returns to a predetermined path.</p>
+
+  <h2 id="kalecki">3. Kalecki: markups, profits, and politics</h2>
+  <p>Michał Kalecki (1899–1970) reached the principle of effective demand independently of Keynes, from a Marxian starting point, in papers of 1933 written in Polish. Three of his ideas are central to post-Keynesian economics:</p>
+  <ul>
+    <li><b>Markup pricing.</b> In most industries, firms set prices as a markup over their costs of labor and materials. The size of the markup reflects the “degree of monopoly” (1938): industrial concentration, advertising, and the strength of unions. The markup determines the shares of wages and profits.</li>
+    <li><b>The profit equation.</b> In a simplified accounting, aggregate profits equal investment plus the government deficit plus net exports plus capitalists’ consumption, minus workers’ saving. Capitalists, as the saying goes, earn what they spend, while workers spend what they earn. When private investment collapses, a larger government deficit keeps profits from collapsing too.</li>
+    <li><b>The political business cycle.</b> In “Political Aspects of Full Employment” (1943), Kalecki argued that business leaders may oppose lasting full employment even though it raises profits, because it strengthens workers’ bargaining power and the government’s role. Governments would stimulate the economy before elections and then retreat.</li>
+  </ul>
+
+  <h2 id="money">4. Endogenous money</h2>
+  <p>Textbooks long taught that the central bank controls the money supply and that banks lend out deposits that savers have placed with them. Post-Keynesians, from Kaldor’s attacks on monetarism (<em>The Scourge of Monetarism</em>, 1982) to Basil Moore’s <em>Horizontalists and Verticalists</em> (1988), argued the reverse: banks create money when they make loans, and the central bank sets the interest rate and supplies whatever reserves are needed. The quantity of money is therefore determined by the demand for credit, which depends on economic activity: it is <b>endogenous</b>. In 2014 the Bank of England’s <em>Quarterly Bulletin</em> published “Money Creation in the Modern Economy,” which described the process in essentially these terms. The view matters for policy: a central bank cannot simply fix the money supply, as Friedman’s money-growth rule assumed (Topic 14).</p>
+
+  <h2 id="minsky">5. Minsky and the crisis of 2008</h2>
+  <p>Hyman Minsky (1919–1996) combined Keynes, Kalecki, and close study of banking. In <em>Stabilizing an Unstable Economy</em> (1986), he argued that financial fragility grows out of stability itself. After years of good times, lenders and borrowers grow confident and take on more debt relative to income. Minsky classified borrowers into three types:</p>
+  <ul>
+    <li><b>Hedge</b> finance: income covers both interest and repayment of principal.</li>
+    <li><b>Speculative</b> finance: income covers interest, but debts must be rolled over (refinanced) as they come due.</li>
+    <li><b>Ponzi</b> finance: income does not even cover interest; the borrower must borrow more, or sell assets, to pay, and depends on asset prices continuing to rise.</li>
+  </ul>
+  <p>As a boom continues, the share of speculative and Ponzi units rises. Then a rise in interest rates or a fall in income pushes speculative units into Ponzi positions, forced asset sales drive prices down, and the boom turns into a crash, the “Minsky moment.” Minsky’s summary: stability is destabilizing.</p>
+  <div class="box" id="fbox">
+    <h3>Hedge, speculative, or Ponzi?</h3>
+    <p class="note" style="margin-top:0">Five borrowers, each with annual income and a loan repaid in equal installments. Raise the interest rate, or let incomes fall in a recession.</p>
+    <div class="grid2">
+      <div><label>Interest rate: <b id="rv">4%</b></label><input type="range" id="r" min="1" max="12" step="0.5" value="4"></div>
+      <div><label>Fall in income: <b id="yv">0%</b></label><input type="range" id="y" min="0" max="40" step="5" value="0"></div>
+    </div>
+    <svg id="fchart" viewBox="0 0 640 250" width="100%" role="img" aria-label="Income versus debt payments for five borrowers"></svg>
+    <div class="out" id="fout"></div>
+  </div>
+  <p>In September 2008 the investment bank Lehman Brothers failed, and the world financial system came close to collapse after a decade of rising household debt secured on rising house prices. Visiting the London School of Economics that November, Queen Elizabeth II reportedly asked why nobody had seen the crisis coming. The dominant macroeconomic models of the time had little room for banks, debt, or default; Minsky’s had little else. Minsky also explained why the crisis did not become a second Great Depression: “big government,” whose deficits sustained profits through Kalecki’s equation, and a central bank acting as lender of last resort. But he warned that rescuing finance without reforming it encourages the next round of risk-taking.</p>
+  <div class="think"><b>Discussion:</b> Minsky thought stability breeds instability. Does this imply that regulation must keep changing as finance innovates around it?</div>
+
+  <h2 id="godley">6. Godley and sectoral balances</h2>
+  <p>Wynne Godley (1926–2010), at the British Treasury and later at Cambridge and the Levy Economics Institute, built models in which every flow of money comes from somewhere and goes somewhere, and every financial asset is someone else’s liability: <b>stock–flow consistent</b> models (Godley and Lavoie, <em>Monetary Economics</em>, 2007). At their core is an accounting identity: the balances of the private sector, the government, and the rest of the world must sum to zero.</p>
+  <p class="eq">private surplus = government deficit + current-account surplus</p>
+  <p>In the late 1990s, Godley used this identity to warn that the U.S. boom rested on households spending more than their incomes, financed by debt, a process he called unsustainable (“Seven Unsustainable Processes,” 1999). When households tried to save again, demand would collapse unless the government ran large deficits. That is roughly what happened after 2008.</p>
+  <div class="box" id="sb">
+    <h3>The three sectoral balances</h3>
+    <div class="grid2">
+      <div><label>Government deficit (% of GDP): <b id="gdv">3.0%</b></label><input type="range" id="gd" min="-4" max="12" step="0.5" value="2"></div>
+      <div><label>Current-account balance (% of GDP; negative = deficit): <b id="cav">−3.0%</b></label><input type="range" id="ca" min="-8" max="8" step="0.5" value="-5"></div>
+    </div>
+    <svg id="sbchart" viewBox="0 0 640 170" width="100%" role="img" aria-label="Private, government, and foreign balances"></svg>
+    <div class="out" id="sbout"></div>
+  </div>
+
+  <h2 id="growth">7. Wage-led growth and policy</h2>
+  <p>Kaleckian models ask whether an economy’s growth is <b>wage-led</b> or <b>profit-led</b> (Bhaduri and Marglin, 1990). A higher wage share raises consumption, because workers spend more of their income than capitalists, but it may lower investment and net exports by squeezing profits. Which effect dominates is an empirical question; post-Keynesian studies have found many large economies to be wage-led, which would mean that the fall in labor’s share since the 1980s held back demand and pushed households into debt.</p>
+  <p>Post-Keynesian policy follows: fiscal policy aimed at full employment rather than balanced budgets, low interest rates, financial regulation to limit speculative and Ponzi finance, incomes policies to restrain inflation, and policies to raise the wage share. A more recent offshoot, <b>Modern Monetary Theory</b> (L. Randall Wray, Stephanie Kelton), argues that a government that issues its own currency cannot run out of money, so the limit on spending is inflation, not the deficit. Other post-Keynesians find MMT’s policy claims too strong.</p>
+  <div class="think"><b>Discussion:</b> Post-Keynesians and new Keynesians (Topic 16) both claim Keynes. Which reading of the 2008 crisis, a problem of sticky prices or a problem of finance and demand, do you find more convincing?</div>
+
+  <h2>Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Hunt, ch. 18 (the section on post-Keynesian economics).</p>
+  <p class="rd">Hyman P. Minsky, <em>Stabilizing an Unstable Economy</em> (1986), ch. 9 (“Financial Instability”).</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Michał Kalecki, “Political Aspects of Full Employment,” <em>Political Quarterly</em> 14, no. 4 (1943).</p>
+  <p class="rd">Michael McLeay, Amar Radia, and Ryland Thomas, “Money Creation in the Modern Economy,” Bank of England <em>Quarterly Bulletin</em> (2014 Q1).</p>
+  <p class="rd">Marc Lavoie, <em>Post-Keynesian Economics: New Foundations</em> (2014), ch. 1.</p>
+
+  <p><a href="index.html#topic-15">← Back to Topic 15 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// borrowers: name, income, debt, years to repay
+const F = [['A',14,60,10],['B',12,100,20],['C',10,120,25],['D',9,150,30],['E',8,180,30]];
+const COL = {Hedge:'#2a9d8f', Speculative:'#e9a23b', Ponzi:'#d1495b'};
+function minsky() {
+  const r = +$('r').value/100, cut = +$('y').value/100;
+  $('rv').textContent = (r*100).toFixed(1).replace('.0','') + '%'; $('yv').textContent = Math.round(cut*100) + '%';
+  const W = 640, H = 250, L = 40, T = 14, B = 34, MX = 24, bw = 44, gap = (W - L - 10) / F.length;
+  const Y = v => H - B - Math.min(v, MX)/MX*(H - B - T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-10}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,8,16,24].forEach(v => g += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}</text>`);
+  const cnt = {Hedge:0, Speculative:0, Ponzi:0};
+  F.forEach(([n, inc, D, T2], i) => {
+    const y = inc*(1 - cut), int = r*D, pr = D/T2;
+    const type = y >= int + pr ? 'Hedge' : y >= int ? 'Speculative' : 'Ponzi'; cnt[type]++;
+    const x = L + 14 + i*gap;
+    g += `<rect x="${x}" y="${Y(y)}" width="${bw}" height="${H-B-Y(y)}" fill="#0077b6" opacity=".85"/>`;
+    g += `<rect x="${x+bw+4}" y="${Y(int)}" width="${bw}" height="${H-B-Y(int)}" fill="#7d8790"/>`;
+    g += `<rect x="${x+bw+4}" y="${Y(int+pr)}" width="${bw}" height="${Y(int)-Y(int+pr)}" fill="#c3c9cf"/>`;
+    g += `<text x="${x+bw+2}" y="${H-B+14}" text-anchor="middle">Borrower ${n}</text>`;
+    g += `<text x="${x+bw+2}" y="${H-B+28}" text-anchor="middle" style="fill:${COL[type]};font-weight:600">${type}</text>`;
+  });
+  g += `<rect x="${W-250}" y="2" width="10" height="10" fill="#0077b6"/><text x="${W-236}" y="11">income</text><rect x="${W-186}" y="2" width="10" height="10" fill="#7d8790"/><text x="${W-172}" y="11">interest</text><rect x="${W-118}" y="2" width="10" height="10" fill="#c3c9cf"/><text x="${W-104}" y="11">principal due</text>`;
+  $('fchart').innerHTML = g;
+  $('fout').innerHTML = Object.keys(cnt).map(k => `<span class="tag" style="background:${COL[k]}">${k}: ${cnt[k]}</span>`).join(' ') +
+    (cnt.Ponzi ? ` &nbsp;${cnt.Ponzi} borrower${cnt.Ponzi>1?'s':''} must borrow more or sell assets just to pay interest. If many sell at once, asset prices fall and lenders stop rolling over the speculative borrowers’ debts too.` :
+     cnt.Speculative ? ` &nbsp;Speculative borrowers are fine as long as lenders keep refinancing them at today’s rate.` : ` &nbsp;Every borrower can pay off its debts from income: a robust financial structure.`);
+}
+['r','y'].forEach(i => $(i).addEventListener('input', minsky)); minsky();
+
+// sectoral balances: private surplus = government deficit + current-account surplus
+function sb() {
+  const gd = +$('gd').value, ca = +$('ca').value, pr = gd + ca;
+  const f = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1) + '%';
+  $('gdv').textContent = f(gd).replace('+',''); $('cav').textContent = f(ca);
+  const W = 640, H = 170, L = 200, R = 20, M = 14, mid = L + (W-L-R)/2, s = (W-L-R)/2/M;
+  const rows = [['Private sector balance', pr, '#0077b6'], ['Government balance', -gd, '#c47a2c'], ['Foreign sector balance', -ca, '#7d8790']];
+  let g = `<line x1="${mid}" y1="10" x2="${mid}" y2="${H-20}" stroke="#ccd2d8"/><text x="${mid}" y="${H-4}" text-anchor="middle">0</text><text x="${mid - 6*s}" y="${H-4}" text-anchor="middle">deficit</text><text x="${mid + 6*s}" y="${H-4}" text-anchor="middle">surplus</text>`;
+  rows.forEach(([lab, v, c], i) => { const y = 18 + i*44, w = Math.min(M, Math.abs(v))*s; g += `<text x="${L-10}" y="${y+17}" text-anchor="end">${lab}</text><rect x="${v >= 0 ? mid : mid - w}" y="${y}" width="${w}" height="24" rx="4" fill="${c}"/><text x="${v >= 0 ? mid + w + 6 : mid - w - 6}" y="${y+17}" text-anchor="${v >= 0 ? 'start' : 'end'}">${f(v)}</text>`; });
+  $('sbchart').innerHTML = g;
+  $('sbout').innerHTML = `The three balances sum to zero. With a government deficit of ${Math.abs(gd).toFixed(1)}% ${gd < 0 ? '(a surplus)' : ''} and a current-account ${ca >= 0 ? 'surplus' : 'deficit'} of ${Math.abs(ca).toFixed(1)}%, the private sector must have a ${pr >= 0 ? 'surplus' : 'deficit'} of <b>${Math.abs(pr).toFixed(1)}% of GDP</b>. ` +
+    (Math.abs(pr) < 0.05 ? 'Households and firms together spend exactly what they earn.' : pr < 0 ? 'Households and firms together are spending more than their income and adding to their debts, Godley’s warning sign of the late 1990s.' : 'Households and firms together are saving more than they invest, which a government deficit or an export surplus makes possible.');
+}
+['gd','ca'].forEach(i => $(i).addEventListener('input', sb)); sb();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

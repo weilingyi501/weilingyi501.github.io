@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>凡勃伦与制度主义 | Lingyi Wei</title>
+  <meta name="description" content="经济思想史教学模块：托斯丹·凡勃伦与美国制度经济学，包括演化经济学、炫耀性消费（含凡勃伦商品的互动模型）、企业与工业的对立、凡勃伦与马克思、康芒斯、米切尔、艾尔斯与加尔布雷思。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/veblen.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/veblen.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/veblen.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/veblen.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../veblen.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题10</p>
+  <h1>凡勃伦与制度主义</h1>
+  <p class="lead">当边际主义者构建一种关于竞争性市场中理性个人的理论时，托斯丹·凡勃伦追问的是：习惯、地位和公司权力实际上如何塑造经济生活。他开创的传统，即美国制度主义，影响了罗斯福新政，并且至今仍贯穿于对消费、公司和经济史的研究之中。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#context">镀金时代</a></li><li><a href="#evolution">一种演化的经济学</a></li><li><a href="#leisure">有闲阶级与炫耀性消费（互动）</a></li><li><a href="#business">企业与工业的对立</a></li><li><a href="#marx">凡勃伦与马克思</a></li><li><a href="#roots">根源：历史学派、达尔文与实用主义</a></li><li><a href="#americans">美国制度主义</a></li><li><a href="#legacy">旧制度主义与新制度主义</a></li></ol>
+  </div>
+
+  <h2 id="context">1. 镀金时代</h2>
+  <p>从南北战争到第一次世界大战，美国成为世界上最大的工业经济体。铁路、钢铁、石油和电力由巨型公司和托拉斯组织起来，洛克菲勒、卡内基、范德比尔特和摩根等人的财富远超以往的任何财富。马克·吐温的“镀金时代”一语，既概括了表面的光鲜，也道出了底下的腐败。农民运动和人民党抨击铁路公司和银行家；霍姆斯特德（1892）和普尔曼（1894）等罢工被私人武装和联邦军队镇压。美国的经济学正在成为一门职业，它的许多创始人曾在德国求学。</p>
+  <p>托斯丹·凡勃伦（1857—1929）是威斯康星州和明尼苏达州挪威移民农民的儿子，他在一个与美国主流社会隔绝的社区里说着挪威语长大。他在耶鲁大学获得哲学博士学位，多年找不到学术职位，后来在芝加哥大学、斯坦福大学和密苏里大学任教，常常身居低职并伴随着丑闻。他以冷峻而反讽的文风写作，这使他的著作在经济学界之外也广为流传。</p>
+
+  <h2 id="evolution">2. 一种演化的经济学</h2>
+  <p>在《为什么经济学不是一门演化的科学？》（1898）中，凡勃伦认为，经济学应当研究经济制度如何随时间变化，就像达尔文之后的生物学研究物种的演化一样。而主流经济学却假定人性是固定不变的，并寻求永恒的均衡。他这样嘲讽主流经济学对人的描绘：</p>
+  <blockquote>享乐主义的人的概念，是一个快乐与痛苦的闪电计算器，他像一个由追求幸福的欲望构成的均质小球一样，在刺激的推动下来回摆动，刺激使他在这个区域里移来移去，却使他保持原样。<cite>托斯丹·凡勃伦，《为什么经济学不是一门演化的科学？》（1898）</cite></blockquote>
+  <p>两年后，凡勃伦在《经济科学的先入之见》（1900）中创造了<b>“新古典”</b>一词，用来描述马歇尔的经济学，在他看来，那是披上了一层效用理论新外衣的古典经济学。凡勃伦认为，人们出于<b>本能</b>而行动，例如工作本能、亲子倾向和闲散的好奇心，而这些本能受到<b>思想习惯</b>的引导。制度是“为一般人所共有的固定的思想习惯”，它随着技术和物质条件的变化而缓慢地变化。由于制度落后于技术，它们常常是过时的：是更早时代的礼仪性残余。</p>
+
+  <h2 id="leisure">3. 有闲阶级与炫耀性消费</h2>
+  <p>《有闲阶级论》（1899）是凡勃伦最著名的著作。他把财产和地位的起源追溯到一个野蛮的社会阶段，在那时，荣誉来自以武力夺取财物，而不是来自生产性劳动。在现代社会，地位仍然来自表明自己不需要工作。富人通过<b>炫耀性闲暇</b>（运动、古典学问、仆人）和<b>炫耀性消费</b>来显示地位：购买的物品之所以受到珍视，部分正是<em>因为</em>它们昂贵且明显地浪费。其他阶级效仿比自己高的阶级，因此体面消费的标准不断提高，没有人会觉得拥有的足够多。凡勃伦称之为<b>金钱上的竞赛</b>。</p>
+  <p>这把普通的需求理论颠倒了过来。哈维·莱宾斯坦（1950）后来把“凡勃伦效应”形式化了：对于某些物品，价格越高，需求越大，因为价格本身就是所购买的东西的一部分。</p>
+  <div class="box" id="vg">
+    <h3>凡勃伦商品</h3>
+    <div class="grid2">
+      <div><label>买者不愿多付钱的程度（普通的价格效应）：<b id="pev">1.0</b></label><input type="range" id="pe" min="0.2" max="2" step="0.1" value="1"></div>
+      <div><label>买者对展示高价的重视程度（凡勃伦效应）：<b id="vev">0.4</b></label><input type="range" id="ve" min="0" max="2" step="0.1" value="0.4"></div>
+    </div>
+    <svg id="vchart" viewBox="0 0 640 240" width="100%" role="img" aria-label="一种地位商品的需求曲线"></svg>
+    <div class="out" id="vout"></div>
+    <p class="note">需求量 = 100 −（普通价格效应 − 凡勃伦效应）× 价格，价格范围为10美元至90美元。一个示意模型。</p>
+  </div>
+  <div class="think"><b>试一试：</b>把凡勃伦效应调到高于普通价格效应。需求曲线会怎样变化？你能想到哪些商品可能如此，以及哪些企业会利用这一点来定价吗？</div>
+
+  <h2 id="business">4. 企业与工业的对立</h2>
+  <p>在《企业论》（1904）以及后来的《工程师与价格体系》（1921）中，凡勃伦在两种活动之间划出了一条鲜明的界线。<b>工业</b>是工程师和工人生产有用物品的工作，受工作本能和机器过程的逻辑引导。<b>企业</b>则是通过所有权、金融和控制来追求金钱收益。商人通过买卖、通过限制产量以维持高价、通过兼并企业，以及通过信贷和发行股票来抬高资本价值而获利。凡勃伦称之为“怠工”：有意识地撤回效率。在他看来，不在场的所有者不是生产的组织者，而是生产的寄生者。经济周期来自信贷和资本化价值的膨胀与收缩，而不是来自机器本身的任何东西。</p>
+  <p>同样的逻辑也贯穿于他对国家的看法，在一种商业文化中，国家为商业利益服务；也贯穿于他对帝国主义和战争的分析，见于《德意志帝国与工业革命》（1915）和《和平的本质》（1917）。</p>
+
+  <h2 id="marx">5. 凡勃伦与马克思</h2>
+  <p>亨特的结论是，凡勃伦“不能被恰当地看作马克思的门徒”，但“这两位伟大思想家之间的相似之处是惊人的”。</p>
+  <table>
+    <thead><tr><th></th><th>凡勃伦与马克思的一致之处</th><th>两者的分歧</th></tr></thead>
+    <tbody>
+      <tr><td>方法</td><td>两人都把资本主义看作一个历史阶段，而不是自然秩序，并把经济学看作对其演化的研究。</td><td>马克思在某些目的上保留了均衡分析；凡勃伦拒绝均衡分析，也因此缺少一个关于工资和利润的具体理论。</td></tr>
+      <tr><td>阶级</td><td>两人都看到了所有者与生产者之间的根本冲突：资本与劳动，企业与工业。</td><td>凡勃伦认为工人通过效仿吸收了有闲阶级的价值观，因此革命并不临近；马克思则预期工人会变得具有革命性。</td></tr>
+      <tr><td>价值</td><td>两人都拒绝效用价值论。</td><td>凡勃伦也拒绝劳动价值论，认为它建立在一种前达尔文的“自然权利”哲学之上。</td></tr>
+      <tr><td>历史</td><td>两人都把制度追溯到物质生活条件。</td><td>凡勃伦批评马克思的黑格尔式观点，即历史朝着一个已知的目标前进；在他看来，演化没有终点。</td></tr>
+    </tbody>
+  </table>
+  <p>凡勃伦在《卡尔·马克思及其追随者的社会主义经济学》（1906—1907）中阐述了他的批评。亨特认为，两人各自看到了对方所忽略的东西：马克思的劳动价值论更具体地解释了利润和危机，而凡勃伦对文化和习惯的关注则解释了工人为什么常常接受这一制度。</p>
+
+  <h2 id="roots">6. 根源：历史学派、达尔文与实用主义</h2>
+  <ul>
+    <li><b>德国历史学派。</b>古斯塔夫·施穆勒及其同事拒绝演绎理论，详细研究制度和经济政策的历史。美国经济学会（1885）的许多创始人，包括理查德·伊利，都曾在德国求学，并把这种方法带回了美国。</li>
+    <li><b>达尔文。</b>通过变异和选择、没有预定目标的演化，为凡勃伦提供了制度变迁的模型。</li>
+    <li><b>实用主义。</b>美国哲学家查尔斯·皮尔士、威廉·詹姆斯和约翰·杜威把思想看作在实践中接受检验、随环境而变化的工具。杜威对第二代制度主义者的影响最大。</li>
+  </ul>
+
+  <h2 id="americans">7. 美国制度主义</h2>
+  <p>“制度经济学”这个名称由沃尔顿·汉密尔顿在1919年推广开来。在两次世界大战之间，制度主义是美国经济学中的一支重要力量，尤其是在劳动经济学、公用事业规制和经济测量方面。</p>
+  <ul>
+    <li><b>约翰·R. 康芒斯</b>（1862—1945）在威斯康星大学研究法院和法律如何界定财产和议价能力（《资本主义的法律基础》，1924）。他和他的学生起草了工伤赔偿法、威斯康星州开创性的失业保险法（1932），以及1935年《社会保障法》背后的许多思想。</li>
+    <li><b>韦斯利·克莱尔·米切尔</b>（1874—1948）是凡勃伦的学生，他用统计方法研究经济周期（《经济周期》，1913），并于1920年创立了美国国家经济研究局，西蒙·库兹涅茨在那里编制了美国的第一批国民收入账户（专题13）。</li>
+    <li><b>罗斯福新政。</b>雷克斯福德·特格韦尔和加德纳·米恩斯等制度主义者在罗斯福政府中任职。阿道夫·伯利和米恩斯的《现代公司与私有财产》（1932）记录了大公司中所有权与控制权的分离，这一主题与凡勃伦的思想相近。</li>
+    <li><b>克拉伦斯·艾尔斯</b>（1891—1972）在得克萨斯大学把凡勃伦与杜威结合起来：经济进步来自技术，而技术受到保护地位和特权的“礼仪性”制度的阻碍。</li>
+    <li><b>约翰·肯尼斯·加尔布雷思</b>（1908—2006）把这一传统带给了广大公众：《美国资本主义》（1952）论“抗衡力量”，《丰裕社会》（1958）论私人丰裕与公共贫乏，《新工业国》（1967）论大公司的计划权力。</li>
+  </ul>
+  <p>1945年以后，随着经济学的数学化和新古典综合占据主导地位（专题13），制度主义退到了边缘。其成员于1965年创立了演化经济学会，并于1967年创办了《经济问题杂志》。</p>
+
+  <h2 id="legacy">8. 旧制度主义与新制度主义</h2>
+  <p>从1970年代起，围绕罗纳德·科斯、奥利弗·威廉姆森和道格拉斯·诺斯形成了一种“新制度经济学”（专题18）。它与旧制度主义者一样相信制度很重要，但它用新古典的工具来解释制度，把制度看作对交易成本的有效率的回应，而不是由权力和地位塑造的、不断演化的习惯。旧制度主义者对这种做法持怀疑态度；两个传统用同一个词指称不同的研究计划。凡勃伦的影响还贯穿于行为经济学（专题17）、关于地位和位置性商品的经济学，以及对公司权力和金融化的研究之中。</p>
+  <div class="think"><b>讨论：</b>凡勃伦写作于镀金时代的鼎盛时期。他的哪一个思想，炫耀性消费、企业与工业的对立，还是制度落后于技术，对理解今天的经济最有用？</div>
+
+  <h2>阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">亨特，第12章（托斯丹·凡勃伦）。</p>
+  <p class="rd">凡勃伦，《有闲阶级论》（1899），第4章（“炫耀性消费”）。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">海尔布罗纳，《俗世哲人》，第8章（“托斯丹·凡勃伦的野蛮社会”）。</p>
+  <p class="rd">凡勃伦，《为什么经济学不是一门演化的科学？》，<em>Quarterly Journal of Economics</em> 第12卷第4期（1898）。</p>
+
+  <p><a href="index.html#topic-10">← 返回课程大纲专题10</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+function vg() {
+  const pe = +$('pe').value, ve = +$('ve').value;
+  $('pev').textContent = pe.toFixed(1); $('vev').textContent = ve.toFixed(1);
+  const net = pe - ve, Q = p => Math.max(0, 100 - net*p);
+  const W = 640, H = 240, L = 46, R = 14, T = 12, B = 30, QM = 200, PM = 100;
+  const X = q => L + q/QM*(W-L-R), Y = p => H-B - p/PM*(H-B-T);
+  let g = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  [0,25,50,75,100].forEach(p => g += `<text x="${L-6}" y="${Y(p)+4}" text-anchor="end">$${p}</text>`);
+  [0,50,100,150,200].forEach(q => g += `<text x="${X(q)}" y="${H-B+15}" text-anchor="middle">${q}</text>`);
+  g += `<text x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">需求量</text><text x="${L+6}" y="${T+10}">价格</text>`;
+  let pts = []; for (let p = 10; p <= 90; p += 2) pts.push(X(Math.min(QM, Q(p))) + ',' + Y(p));
+  g += `<polyline fill="none" stroke="${net < 0 ? '#c47a2c' : '#0077b6'}" stroke-width="2.8" points="${pts.join(' ')}"/>`;
+  [20, 80].forEach(p => g += `<circle cx="${X(Math.min(QM, Q(p)))}" cy="${Y(p)}" r="5" fill="#023e8a"/>`);
+  $('vchart').innerHTML = g;
+  const q20 = Q(20), q80 = Q(80);
+  $('vout').innerHTML = `价格为20美元时，买者想要 <b>${q20.toFixed(0)}</b> 单位；价格为80美元时，他们想要 <b>${q80.toFixed(0)}</b> 单位。` +
+    (net > 0.05 ? '普通的价格效应占主导：需求曲线向下倾斜，就像在马歇尔那里一样（专题9）。' : net < -0.05 ? '<b>凡勃伦效应占主导：需求曲线向上倾斜。</b>更高的价格使这种商品更令人向往，因为所展示的正是价格本身。' : '两种效应相互抵消：价格完全不影响需求量。');
+}
+['pe','ve'].forEach(i => $(i).addEventListener('input', vg)); vg();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
