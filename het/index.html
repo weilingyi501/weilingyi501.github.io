@@ -43,7 +43,8 @@
 .het svg .bar text { font-size: 12px; font-weight: 600; fill: #fff; pointer-events: none; }
 .het svg .bar:hover rect, .het svg .bar:focus rect { filter: brightness(1.08); }
 .het svg .bar.on rect { stroke: #111; stroke-width: 2; }
-.het svg .link { fill: none; stroke: #7d8794; stroke-width: 1.4; }
+.het svg .link { fill: none; stroke: #4a5560; stroke-width: 1.6; opacity: 0; transition: opacity .15s; pointer-events: none; }
+.het svg .link.on { opacity: 1; }
 .het svg .link.react { stroke-dasharray: 4 3; }
 .het svg .ev circle { fill: #023e8a; }
 .het svg .ev text { font-size: 10.5px; fill: #023e8a; }
@@ -153,7 +154,7 @@
   <div class="tip" id="tip" hidden></div>
   <div class="scroll" id="tlwrap"><svg id="tl" role="img" aria-label="Timeline of schools of economic thought from 1550 to 2025"></svg></div>
   <p class="hint">On a small screen, scroll the timeline sideways.</p>
-  <div class="legend"><span><i></i>continuity: builds on</span><span><i class="d"></i>reaction: argues against</span></div>
+  <div class="legend"><span>Point to a school to see its links:</span><span><i></i>builds on</span><span><i class="d"></i>argues against</span></div>
   <div class="panel" id="panel" aria-live="polite"></div>
 
   <h2>Course outline</h2>
@@ -396,8 +397,10 @@ const links = el('g', {}, svg);
 LINKS.forEach(([a,b,yr,type]) => {
   const A = byId[a], B = byId[b]; const xa = x(Math.min(yr, A.to)), xb = x(Math.max(yr, B.from));
   const ya = yLane(A.lane)+13, yb = yLane(B.lane)+13;
-  el('path', {d:`M${xa},${ya} C${xa+28},${ya} ${xb-28},${yb} ${xb},${yb}`, class:'link'+(type==='react'?' react':'')}, links);
+  el('path', {d:`M${xa},${ya} C${xa+28},${ya} ${xb-28},${yb} ${xb},${yb}`, class:'link'+(type==='react'?' react':''), 'data-a':a, 'data-b':b}, links);
 });
+let selected = null;
+function showLinks(id) { links.querySelectorAll('.link').forEach(l => l.classList.toggle('on', !!id && (l.dataset.a === id || l.dataset.b === id))); }
 const bars = el('g', {}, svg);
 SCHOOLS.forEach(s => {
   const g = el('g', {class:'bar', tabindex:0, role:'button', 'aria-label':s.name, 'data-id':s.id}, bars);
@@ -407,6 +410,8 @@ SCHOOLS.forEach(s => {
   t.textContent = w > s.name.length*6.6 ? s.name : (w > 70 ? s.name.split(/[ &]/)[0] : '');
   const tt = el('title', {}, g); tt.textContent = s.name;
   g.addEventListener('click', () => show(s.id, true));
+  g.addEventListener('mouseenter', () => showLinks(s.id)); g.addEventListener('focus', () => showLinks(s.id));
+  g.addEventListener('mouseleave', () => showLinks(selected)); g.addEventListener('blur', () => showLinks(selected));
   g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(s.id, true); } });
 });
 
@@ -437,6 +442,7 @@ const panel = document.getElementById('panel');
 function show(id, scroll) {
   const s = byId[id];
   document.querySelectorAll('.het svg .bar').forEach(b => b.classList.toggle('on', b.dataset.id === id));
+  selected = scroll ? id : null; showLinks(selected); // links stay visible only for a school the visitor clicked
   const wk = s.weeks.map(n => `<a href="#week-${n}" data-wk="${n}">Week ${n}</a>`).join(', ');
   panel.innerHTML = `<h3>${s.name}</h3><div class="yrs">${s.from}${s.to >= 2025 ? '–present' : '–' + s.to}</div>
     <p class="one">${s.one}</p>
