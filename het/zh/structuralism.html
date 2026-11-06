@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>结构主义 | Lingyi Wei</title>
+  <meta name="description" content="关于拉丁美洲结构主义的教学模块：普雷维什与拉美经委会、中心与外围、结构性通货膨胀（含互动模型）、富尔塔多与结构异质性、进口替代、结构主义宏观经济学，以及新结构主义。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/structuralism.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/structuralism.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/structuralism.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/structuralism.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../structuralism.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济思想史</a> › 专题20</p>
+  <h1>结构主义</h1>
+  <p class="lead">结构主义大约于1949年诞生在智利圣地亚哥。当时，联合国的经济学家追问：为什么在工业国家建立起来的经济理论与拉丁美洲的现实如此不符？他们的回答是，穷国经济并不是处于较早阶段的富国经济。它们的结构不同，而单靠市场无法改变这种结构。</p>
+
+  <div class="toc"><b>本专题内容</b>
+    <ol><li><a href="#what">什么是结构主义</a></li><li><a href="#origins">普雷维什与拉美经委会</a></li><li><a href="#cp">中心与外围</a></li><li><a href="#inflation">结构性通货膨胀（互动）</a></li><li><a href="#furtado">富尔塔多与结构异质性</a></li><li><a href="#isi">进口替代及其局限</a></li><li><a href="#macro">结构主义宏观经济学</a></li><li><a href="#neo">新结构主义</a></li><li><a href="#read">阅读材料</a></li></ol>
+  </div>
+
+  <h2 id="what">1. 什么是结构主义</h2>
+  <p>在发展经济学中，<b>结构主义</b>认为，一个经济的运行取决于它的生产结构、制度以及它在世界经济中的位置。新古典理论假定价格会调整，资源会顺畅地从一种用途转向另一种用途。结构主义者认为，在发展中国家，这些调整被种种刚性所阻碍：土地集中在大庄园手中，出口品种狭窄，外汇短缺，还有大量就业不足的劳动力。由于这些刚性是经济本身的组成部分，单靠价格信号无法消除它们，国家必须改变结构本身。</p>
+  <p>这个学派与发展主义传统（专题19）一样相信国家主导的工业化，但它还提出了一套关于世界经济以及不发达如何自我再生产的独特理论。它也有先驱。1929年，罗马尼亚经济学家米哈伊尔·马诺伊列斯库认为，农业国专门从事低生产率的农业会受损，而大萧条使这类观点在拉丁美洲获得了新的力量。</p>
+
+  <h2 id="origins">2. 普雷维什与拉美经委会</h2>
+  <p>劳尔·普雷维什在1935年至1943年间执掌阿根廷中央银行。他目睹大萧条使牛肉和小麦价格崩溃，切断了阿根廷所依赖的进口。1949年，他加入新成立的、总部设在圣地亚哥的联合国拉丁美洲经济委员会（拉美经委会，西班牙文缩写CEPAL），他的报告《拉丁美洲的经济发展及其主要问题》成为这个学派的奠基文本。阿尔伯特·赫希曼后来称之为“拉美经委会宣言”。普雷维什领导该委员会直到1963年，在此期间，拉美经委会汇聚了来自整个地区的经济学家，包括巴西的塞尔索·富尔塔多、智利的阿尼瓦尔·平托和奥斯瓦尔多·孙克尔，以及墨西哥的胡安·诺约拉。</p>
+
+  <h2 id="cp">3. 中心与外围</h2>
+  <p>核心观念是，世界经济是一个单一的体系，分为工业化的<b>中心</b>和出口初级产品的<b>外围</b>。技术进步发源于中心，并在那里扩散到整个经济。在外围，它只到达出口部门。因此两个地区的结构不同，它们也不会通过贸易趋同。</p>
+  <p>普雷维什和汉斯·辛格在1950年分别得出了一个引人注目的结论：初级产品的相对价格从长期看有下降的趋势。在中心，工会和大企业把生产率收益保留为更高的工资和利润。在外围，剩余劳动力压低了工资，因此收益以更低价格的形式转让给买方。随着收入提高，用于食物和原料的支出增长也慢于用于制成品的支出。这一<b>普雷维什—辛格命题</b>挑战了比较优势会平均分配贸易收益的观点。国际贸易理论课程对它作了详细推演，并配有互动模型（<a href="/trade/zh/prebisch-singer.html">该课程专题18</a>）。</p>
+
+  <h2 id="inflation">4. 结构性通货膨胀</h2>
+  <p>这个学派对宏观经济学最著名的贡献来自一场关于通货膨胀的争论。1950年代，智利、巴西和阿根廷长期受通货膨胀困扰。货币主义者，包括赴智利的克莱因—萨克斯代表团（1955—1958）和国际货币基金组织，把问题归咎于货币过多和预算赤字。胡安·诺约拉（1956）和奥斯瓦尔多·孙克尔（1958）回应说，货币只是渠道，根本原因是结构性的。</p>
+  <ul>
+    <li><b>基本压力。</b>随着城市和工业的发展，对粮食的需求上升。但大庄园效率低下、反应迟缓，于是粮价攀升。外汇短缺也以同样的方式推高进口品价格。</li>
+    <li><b>传导机制。</b>工人要求提高工资以维护生活水平，企业转嫁成本，政府则以信贷加以迁就。相对价格的一次性上涨变成了持续的通货膨胀。</li>
+  </ul>
+  <p>两派的政策结论截然不同。对货币主义者来说，稳定意味着紧缩货币。对结构主义者来说，紧缩货币会使增长停止，瓶颈却依然存在。持久的办法是通过土地改革、农业投资和出口多元化来消除瓶颈。</p>
+
+  <div class="box" id="sibox">
+    <h3>结构性通货膨胀的简单模型</h3>
+    <p class="note">食品占家庭预算的40%。食品需求随收入增长，当需求超过供给时，食品价格上涨。工资随后把部分涨幅传导到所有其他价格。设定增长率、食品供给的刚性和工资反应的强度。</p>
+    <div class="grid2">
+      <div><label>收入增长率：每年<b id="gv">6.0%</b></label><input type="range" id="g" min="0" max="10" step="0.1" value="6"></div>
+      <div><label>食品供给增长率：每年<b id="sv">2.5%</b></label><input type="range" id="s" min="0" max="6" step="0.1" value="2.5"></div>
+      <div><label>食品需求的收入弹性：<b id="ev">0.70</b></label><input type="range" id="e" min="0.3" max="1" step="0.05" value="0.7"></div>
+      <div><label>通过工资和价格的传导：<b id="pv">80%</b></label><input type="range" id="p" min="0" max="100" step="5" value="80"></div>
+    </div>
+    <svg id="sichart" viewBox="0 0 640 260" width="100%" role="img" aria-label="各收入增长率下的通货膨胀率"></svg>
+    <div class="out" id="siout"></div>
+    <p class="note">这一模型是示意性的。需求增长每超过供给一个百分点，食品价格上涨四个百分点，并假定货币予以迁就。</p>
+  </div>
+
+  <h2 id="furtado">5. 富尔塔多与结构异质性</h2>
+  <p>塞尔索·富尔塔多为结构主义提供了历史方法。他的《巴西经济的形成》（1959）追溯了蔗糖、黄金和咖啡的周期如何塑造巴西的经济和社会。他的《发展与不发达》（1961）认为，不发达并不是每个国家都要经历的一个阶段，而是资本主义扩展到外围时形成的一种特定的历史结构。现代飞地依附在较旧的经济之上，却没有改造它们。</p>
+  <p>阿尼瓦尔·平托（1970）把这一格局称为<b>结构异质性</b>：在一个国家内部，高生产率的现代部门与庞大的低生产率部门并存，差距持续存在。W. 阿瑟·刘易斯的二元经济（1954）描述了类似的分裂，但刘易斯预期现代部门会逐渐吸收剩余劳动力。结构主义者对此表示怀疑，因为进口技术创造的就业很少，而精英又模仿中心的消费模式。</p>
+
+  <h2 id="isi">6. 进口替代及其局限</h2>
+  <p>结构主义的主要政策是<b>进口替代工业化</b>，并辅以计划和区域一体化。许多拉丁美洲国家在大萧条和战争期间进口中断时，就已经转向工业，该地区在1980年以前增长相当快。到1960年代，局限已经显现。新产业需要进口机器，于是外汇短缺卷土重来；国内市场狭小而不平等；受保护的企业往往效率低下。普雷维什本人警告不要过度保护，并敦促出口制成品；从1964年起，他作为联合国贸发会议的领导人把这一主张带到了国际舞台。</p>
+  <p>这种失望使这个学派的继承者分道扬镳。弗兰克和多斯桑托斯等作者断定，在世界市场内部的改革行不通，并发展出依附理论（专题11）。另一些人则坚持改良纲领。贝拉·巴拉萨和安妮·克鲁格等新古典批评者把责任归于进口替代本身，1982年的债务危机使这一战略在该地区大部分国家走到了尽头。</p>
+
+  <h2 id="macro">7. 结构主义宏观经济学</h2>
+  <p>结构主义思想也进入了形式化建模。<b>双缺口模型</b>（钱纳里和斯特劳特，1966）表明，增长可能受外汇而不是储蓄的限制，这是以主流形式表达的结构主义论点。兰斯·泰勒的《结构主义宏观经济学》（1983）借鉴卡莱茨基和拉丁美洲的争论，建立了分配、部门失衡和制度共同塑造宏观经济结果的模型。埃德马尔·巴沙（1990）增加了第三个缺口，即政府的财政约束。这些研究与后凯恩斯主义传统（专题15）有所重叠，并影响了阿根廷和巴西的奥斯特拉尔计划和克鲁扎多计划（1985—1986），这些计划把通货膨胀看作惯性现象，而不是纯粹的货币现象。</p>
+
+  <h2 id="neo">8. 新结构主义</h2>
+  <p>在1980年代“失去的十年”之后，拉美经委会（其名称此时已加入加勒比）重新表述了它的纲领。费尔南多·法因兹尔伯主持的《兼顾社会公平的生产转型》（1990）和孙克尔的《由内而外的发展》（1993）接受了开放贸易和宏观经济稳定。它们保留了结构主义的坚持：发展意味着改变一个国家生产什么；竞争力必须建立在生产率提高之上，而不是建立在低工资或自然资源之上。何塞·安东尼奥·奥坎波等人进一步发展了这种<b>新结构主义</b>，强调多元化、技术学习和逆周期政策。全球价值链分析在新的环境中体现了同样的关切（国际贸易理论课程，<a href="/trade/zh/value-chains.html">该课程专题20</a>）。</p>
+  <div class="think"><b>思考题：</b>结构主义者说，穷国经济与富国经济有性质上的不同。这是否意味着经济学在不同地方需要不同的理论？</div>
+
+  <h2 id="read">9. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">劳尔·普雷维什，《拉丁美洲的经济发展及其主要问题》（1950），第1—2章。</p>
+  <p class="rd">塞尔索·富尔塔多，《巴西经济的形成》（1959），选读。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">约翰·托伊、理查德·托伊，“The Origins and Interpretation of the Prebisch–Singer Thesis”，<em>History of Political Economy</em>（2003）。</p>
+  <p class="rd">兰斯·泰勒，《结构主义宏观经济学》（<em>Structuralist Macroeconomics</em>，1983），选读。</p>
+  <p><a href="index.html#topic-20">← 返回课程大纲中的专题20</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年10月</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Food prices rise with excess demand; wages pass part of the rise on to other prices.
+const A = 0.4, K = 4; // food budget share; food price response to excess demand
+function si() {
+  const g = +$('g').value, s = +$('s').value, e = +$('e').value, p = +$('p').value/100;
+  $('gv').textContent = g.toFixed(1) + '%'; $('sv').textContent = s.toFixed(1) + '%'; $('ev').textContent = e.toFixed(2); $('pv').textContent = Math.round(p*100) + '%';
+  const food = x => Math.max(0, e*x - s)*K, mult = 1/(1 - (1 - A)*p), infl = x => A*food(x)*mult, direct = x => A*food(x);
+  const W = 640, H = 260, L = 44, R = 20, T = 14, B = 34, M = Math.max(10, Math.ceil(infl(10)/5)*5);
+  const X = v => L + v/10*(W-L-R), Y = v => H-B - Math.min(v, M)/M*(H-B-T);
+  let c = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= M; v += M/5) c += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}%</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  [0,2,4,6,8,10].forEach(v => c += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}%</text>`);
+  c += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">收入增长率</text>`;
+  const line = f => Array.from({length:101}, (_, i) => (i ? 'L' : 'M') + X(i/10).toFixed(1) + ',' + Y(f(i/10)).toFixed(1)).join(' ');
+  c += `<path d="${line(direct)}" fill="none" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/><path d="${line(infl)}" fill="none" stroke="#023e8a" stroke-width="2.6"/>`;
+  c += `<circle cx="${X(g)}" cy="${Y(infl(g))}" r="6" fill="#b03a2e"/>`;
+  c += `<text x="${L+10}" y="${T+12}" style="fill:#023e8a">含传导效应的通货膨胀</text><text x="${L+10}" y="${T+28}" style="fill:#c47a2c">仅食品价格的直接效应</text>`;
+  $('sichart').innerHTML = c;
+  const f = v => v.toFixed(1) + '%', gs = s/e, pi = infl(g);
+  $('siout').innerHTML = (pi < 0.05 ? `食品供给跟上了需求，因此价格没有结构性压力。每年最高<b>${f(gs)}</b>的增长不会带来通货膨胀。` :
+    `食品需求每年增长${f(e*g)}，而供给只增长${f(s)}，所以食品价格每年上涨<b>${f(food(g))}</b>。工资和价格的传导把这一效应放大${mult.toFixed(1)}倍，总体通货膨胀率达到<b>${f(pi)}</b>。` +
+    `货币主义的稳定政策必须把增长压低到${f(gs)}才能制止通货膨胀，而瓶颈依然存在。结构主义的办法是增加食品供给：要实现${f(g)}的增长，食品供给每年必须增长${f(e*g)}。`);
+}
+['g','s','e','p'].forEach(i => $(i).addEventListener('input', si)); si();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

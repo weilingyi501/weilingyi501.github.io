@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Structuralism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module on Latin American structuralism: Prebisch and ECLA, center and periphery, structural inflation with an interactive model, Furtado and structural heterogeneity, import substitution, structuralist macroeconomics, and neo-structuralism.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/het/structuralism.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/het/zh/structuralism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/structuralism.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">History of Economic Thought</a> › Topic 20</p>
+  <h1>Structuralism</h1>
+  <p class="lead">Structuralism began in Santiago, Chile, around 1949, when economists at the United Nations asked why economic theories built in the industrial countries so poorly fit Latin America. Their answer was that poor economies are not rich economies at an earlier stage. They have a different structure, and markets alone will not change it.</p>
+
+  <div class="toc"><b>In this topic</b>
+    <ol><li><a href="#what">What structuralism is</a></li><li><a href="#origins">Prebisch and ECLA</a></li><li><a href="#cp">Center and periphery</a></li><li><a href="#inflation">Structural inflation (interactive)</a></li><li><a href="#furtado">Furtado and structural heterogeneity</a></li><li><a href="#isi">Import substitution and its limits</a></li><li><a href="#macro">Structuralist macroeconomics</a></li><li><a href="#neo">Neo-structuralism</a></li><li><a href="#read">Readings</a></li></ol>
+  </div>
+
+  <h2 id="what">1. What structuralism is</h2>
+  <p>In development economics, <b>structuralism</b> is the view that an economy’s behavior depends on its productive structure, its institutions, and its place in the world economy. Neoclassical theory assumes that prices adjust and resources move smoothly from one use to another. Structuralists argue that in developing countries these adjustments are blocked by rigidities: land held in large estates, a narrow range of exports, a shortage of foreign exchange, and a large pool of underemployed labor. Because the rigidities are built into the economy, price signals alone do not remove them, and the state has to change the structure itself.</p>
+  <p>The school shares with the developmentalist tradition (Topic 19) a belief in state-led industrialization, but it adds a distinct theory of the world economy and of how underdevelopment reproduces itself. It also has precursors. In 1929 the Romanian economist Mihail Manoilescu argued that agrarian countries lose by specializing in low-productivity farming, and the Great Depression gave such arguments new force in Latin America.</p>
+
+  <h2 id="origins">2. Prebisch and ECLA</h2>
+  <p>Raúl Prebisch ran Argentina’s central bank from 1935 to 1943. He watched the Depression collapse the prices of beef and wheat and cut off the imports that Argentina depended on. In 1949 he joined the new United Nations Economic Commission for Latin America (ECLA, or CEPAL in Spanish) in Santiago, and his report <em>The Economic Development of Latin America and Its Principal Problems</em> became the school’s founding text. Albert Hirschman later called it the “ECLA manifesto.” Under Prebisch, who led the commission until 1963, ECLA brought together economists from across the region, including Celso Furtado of Brazil, Aníbal Pinto and Osvaldo Sunkel of Chile, and Juan Noyola of Mexico.</p>
+
+  <h2 id="cp">3. Center and periphery</h2>
+  <p>The central idea is that the world economy is a single system divided into an industrial <b>center</b> and a primary-exporting <b>periphery</b>. Technical progress starts in the center and spreads there across the whole economy. In the periphery, it reaches only the export sector. The two regions therefore have different structures, and they do not converge through trade.</p>
+  <p>Prebisch and Hans Singer, working separately in 1950, drew a striking conclusion: the relative price of primary commodities tends to fall over the long run. In the center, unions and large firms keep productivity gains as higher wages and profits. In the periphery, surplus labor holds wages down, so gains pass to buyers as lower prices. As incomes rise, spending on food and raw materials also grows more slowly than spending on manufactures. This <b>Prebisch–Singer thesis</b> challenged the view that comparative advantage shares the gains from trade evenly. The Theories of International Trade course works through it in detail, with an interactive model (<a href="/trade/prebisch-singer.html">Topic 18 of that course</a>).</p>
+
+  <h2 id="inflation">4. Structural inflation</h2>
+  <p>The school’s best-known contribution to macroeconomics came from a debate over inflation, which was chronic in Chile, Brazil, and Argentina in the 1950s. Monetarists, including the Klein-Saks mission to Chile (1955–58) and the International Monetary Fund, blamed excess money and budget deficits. Juan Noyola (1956) and Osvaldo Sunkel (1958) replied that money was only the channel. The basic causes were structural.</p>
+  <ul>
+    <li><b>Basic pressures.</b> As cities and industry grow, the demand for food rises. But large, inefficient estates respond slowly, so food prices climb. A shortage of foreign exchange raises the price of imports in the same way.</li>
+    <li><b>Propagating mechanisms.</b> Workers defend their living standards by demanding higher wages, firms pass on the costs, and governments accommodate with credit. A one-time rise in relative prices becomes a continuing inflation.</li>
+  </ul>
+  <p>The policy conclusions differed sharply. For monetarists, stabilization meant tight money. For structuralists, tight money would stop growth while leaving the bottleneck in place. The lasting remedy was to remove the bottleneck through land reform, investment in agriculture, and export diversification.</p>
+
+  <div class="box" id="sibox">
+    <h3>A simple model of structural inflation</h3>
+    <p class="note">Food takes 40% of household budgets. Food demand grows with income, and food prices rise when demand outruns supply. Wages then pass part of the increase on to all other prices. Set the growth rate, the rigidity of food supply, and the strength of the wage response.</p>
+    <div class="grid2">
+      <div><label>Growth of income: <b id="gv">6.0%</b> a year</label><input type="range" id="g" min="0" max="10" step="0.1" value="6"></div>
+      <div><label>Growth of food supply: <b id="sv">2.5%</b> a year</label><input type="range" id="s" min="0" max="6" step="0.1" value="2.5"></div>
+      <div><label>Income elasticity of food demand: <b id="ev">0.70</b></label><input type="range" id="e" min="0.3" max="1" step="0.05" value="0.7"></div>
+      <div><label>Propagation through wages and prices: <b id="pv">80%</b></label><input type="range" id="p" min="0" max="100" step="5" value="80"></div>
+    </div>
+    <svg id="sichart" viewBox="0 0 640 260" width="100%" role="img" aria-label="Inflation at each rate of income growth"></svg>
+    <div class="out" id="siout"></div>
+    <p class="note">The model is illustrative. Food prices rise four percentage points for each point of excess demand growth, and money is assumed to accommodate.</p>
+  </div>
+
+  <h2 id="furtado">5. Furtado and structural heterogeneity</h2>
+  <p>Celso Furtado gave structuralism its historical method. His <em>Economic Growth of Brazil</em> (1959) traced how the cycles of sugar, gold, and coffee shaped Brazil’s economy and society. His <em>Development and Underdevelopment</em> (1961) argued that underdevelopment is not a stage that every country passes through, but a specific historical formation created when capitalism spread to the periphery. Modern enclaves were attached to older economies without transforming them.</p>
+  <p>Aníbal Pinto (1970) named this pattern <b>structural heterogeneity</b>: within one country, a high-productivity modern sector coexists with a vast low-productivity sector, and the gap persists. W. Arthur Lewis’s dual economy (1954) describes a similar split, but Lewis expected the modern sector to absorb surplus labor over time. The structuralists doubted it, because imported technology created few jobs and elites copied the consumption patterns of the center.</p>
+
+  <h2 id="isi">6. Import substitution and its limits</h2>
+  <p>Structuralism’s main policy was <b>import-substituting industrialization</b>, along with planning and regional integration. Many Latin American countries had already turned to industry when imports dried up in the Depression and the war, and the region grew fairly quickly until 1980. By the 1960s the limits were visible. New industries needed imported machinery, so foreign-exchange shortages returned; home markets were small and unequal; and protected firms often stayed inefficient. Prebisch himself warned against excessive protection and urged exports of manufactures, and as head of UNCTAD from 1964 he took the argument to the international stage.</p>
+  <p>The disappointment divided the school’s heirs. Writers such as Frank and dos Santos concluded that reform within the world market could not work, and developed dependency theory (Topic 11). Others kept the reformist program. Neoclassical critics such as Bela Balassa and Anne Krueger blamed import substitution itself, and the debt crisis of 1982 brought the strategy to an end across most of the region.</p>
+
+  <h2 id="macro">7. Structuralist macroeconomics</h2>
+  <p>Structuralist ideas also entered formal modeling. <b>Two-gap models</b> (Chenery and Strout, 1966) showed that growth may be limited by foreign exchange rather than by saving, a structuralist argument in mainstream form. Lance Taylor’s <em>Structuralist Macroeconomics</em> (1983) built models in which distribution, sectoral imbalances, and institutions shape macroeconomic outcomes, drawing on Kalecki and on Latin American debates. Edmar Bacha (1990) added a third gap, the government’s fiscal constraint. This work overlaps with the post-Keynesian tradition (Topic 15), and in the 1980s it informed the Austral and Cruzado stabilization plans of Argentina and Brazil (1985–86), which treated inflation as inertial rather than purely monetary.</p>
+
+  <h2 id="neo">8. Neo-structuralism</h2>
+  <p>After the lost decade of the 1980s, ECLAC (the commission had added the Caribbean to its name) reformulated its program. <em>Changing Production Patterns with Social Equity</em> (1990), led by Fernando Fajnzylber, and Sunkel’s <em>Development from Within</em> (1993) accepted open trade and macroeconomic stability. They kept the structuralist insistence that development means changing what a country produces, and argued that competitiveness must rest on rising productivity, not on low wages or natural resources. José Antonio Ocampo and others developed this <b>neo-structuralism</b> further, stressing diversification, technological learning, and countercyclical policy. The analysis of global value chains shows the same concern in a new setting (Theories of International Trade, <a href="/trade/value-chains.html">Topic 20 of that course</a>).</p>
+  <div class="think"><b>Question to think about:</b> Structuralists said that poor economies differ in kind from rich ones. Does that mean economics needs different theories for different places?</div>
+
+  <h2 id="read">9. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Raúl Prebisch, <em>The Economic Development of Latin America and Its Principal Problems</em> (1950), chapters 1–2.</p>
+  <p class="rd">Celso Furtado, <em>The Economic Growth of Brazil</em> (1959), selections.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">John Toye and Richard Toye, “The Origins and Interpretation of the Prebisch–Singer Thesis,” <em>History of Political Economy</em> (2003).</p>
+  <p class="rd">Lance Taylor, <em>Structuralist Macroeconomics</em> (1983), selections.</p>
+  <p><a href="index.html#topic-20">← Back to Topic 20 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated October 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+// Food prices rise with excess demand; wages pass part of the rise on to other prices.
+const A = 0.4, K = 4; // food budget share; food price response to excess demand
+function si() {
+  const g = +$('g').value, s = +$('s').value, e = +$('e').value, p = +$('p').value/100;
+  $('gv').textContent = g.toFixed(1) + '%'; $('sv').textContent = s.toFixed(1) + '%'; $('ev').textContent = e.toFixed(2); $('pv').textContent = Math.round(p*100) + '%';
+  const food = x => Math.max(0, e*x - s)*K, mult = 1/(1 - (1 - A)*p), infl = x => A*food(x)*mult, direct = x => A*food(x);
+  const W = 640, H = 260, L = 44, R = 20, T = 14, B = 34, M = Math.max(10, Math.ceil(infl(10)/5)*5);
+  const X = v => L + v/10*(W-L-R), Y = v => H-B - Math.min(v, M)/M*(H-B-T);
+  let c = `<line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#ccd2d8"/>`;
+  for (let v = 0; v <= M; v += M/5) c += `<text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${v}%</text><line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/>`;
+  [0,2,4,6,8,10].forEach(v => c += `<text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v}%</text>`);
+  c += `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle">growth of income</text>`;
+  const line = f => Array.from({length:101}, (_, i) => (i ? 'L' : 'M') + X(i/10).toFixed(1) + ',' + Y(f(i/10)).toFixed(1)).join(' ');
+  c += `<path d="${line(direct)}" fill="none" stroke="#c47a2c" stroke-width="2" stroke-dasharray="6 4"/><path d="${line(infl)}" fill="none" stroke="#023e8a" stroke-width="2.6"/>`;
+  c += `<circle cx="${X(g)}" cy="${Y(infl(g))}" r="6" fill="#b03a2e"/>`;
+  c += `<text x="${L+10}" y="${T+12}" style="fill:#023e8a">inflation with propagation</text><text x="${L+10}" y="${T+28}" style="fill:#c47a2c">direct effect of food prices only</text>`;
+  $('sichart').innerHTML = c;
+  const f = v => v.toFixed(1) + '%', gs = s/e, pi = infl(g);
+  $('siout').innerHTML = (pi < 0.05 ? `Food supply keeps up with demand, so there is no structural pressure on prices. Inflation-free growth is possible up to <b>${f(gs)}</b> a year.` :
+    `Food demand grows ${f(e*g)} a year against ${f(s)} for supply, so food prices rise <b>${f(food(g))}</b> a year. Propagation through wages and prices multiplies the effect ${mult.toFixed(1)} times, and overall inflation reaches <b>${f(pi)}</b>. ` +
+    `A monetarist stabilization would have to cut growth to ${f(gs)} to stop it, and the bottleneck would remain. The structuralist remedy is to raise food supply: at ${f(g)} growth, food supply must grow ${f(e*g)} a year.`);
+}
+['g','s','e','p'].forEach(i => $(i).addEventListener('input', si)); si();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
