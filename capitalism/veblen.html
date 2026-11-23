@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Monopoly Power and the Writings of Veblen | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: Industrial warfare, the Sherman Act and federal regulation, and Thorstein Veblen on business and industry, absentee ownership, sabotage, imperialism, and the leisure class, with an interactive model.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/veblen.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 9</p>
+  <h1>Monopoly Power and the Writings of Veblen</h1>
+  <p class="lead">The robber barons fought, then made peace, and then learned to live with regulation. Thorstein Veblen watched them with irony and detachment and produced the most original American account of corporate capitalism.</p>
+
+  <div class="map"><div><b>Institutions</b>Trusts, regulation, scientific management, absentee ownership</div><div><b>Dominant ideas</b>Free competition in theory; respect for wealth in daily life</div><div><b>Opposition and critics</b>Veblen; Populists, Progressives, and muckrakers</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#war">Competition as warfare</a></li><li><a href="#reg">Regulation</a></li><li><a href="#two">Veblen: business and industry</a></li><li><a href="#state">Government, class, and imperialism</a></li><li><a href="#leis">Pecuniary culture</a></li><li><a href="#debate">Beyond Hunt</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="war">1. Competition as warfare</h2>
+  <p>Hunt describes the competition of the decades after the Civil War as industrial warfare. Rockefeller won secret railroad rebates, even on his competitors’ shipments, and used them against rival refiners. By 1879 Standard Oil controlled 90 to 95 percent of American refining. Railroad promoters cut rates to ruin rivals and demanded subsidies from towns that feared being bypassed. Some fortunes had begun with fraudulent contracts in the Civil War. Fighting was costly for the survivors too, and they turned to pools, trusts, and mergers.</p>
+  <h2 id="reg">2. Regulation</h2>
+  <p>Public anger produced the Interstate Commerce Act (1887) and the Sherman Act (1890). Hunt argues that the first effect of the Sherman Act was to weaken unions, against whom courts applied it readily, while mergers went on. On railroads he argues, as Gabriel Kolko did, that the companies had been unable to stop their own price wars and came to favor a federal commission that could do it for them. He quotes Richard Olney’s advice to a railroad president that the commission could be of great use, since supervision would be “almost entirely nominal.” Regulation, in this view, often gave industries the stable cooperation they could not arrange by themselves.</p>
+  <h2 id="two">3. Veblen: business and industry</h2>
+  <p>Veblen (1857–1929), the son of Norwegian immigrants in the Midwest, built his theory on a contrast between two sets of habits. The <b>instinct of workmanship</b> values useful work, skill, and knowledge. The <b>predatory</b> disposition values prowess, rank, and taking from others. The institution of private property began, he thought, in seizure, and habit turned it into right.</p><p>In modern capitalism the two dispositions are embodied in different classes. Engineers and workers deal with machines and cause and effect. Owners and financiers deal with prices, bargains, and claims. The aim of <b>industry</b> is to produce goods. The aim of <b>business</b> is to make money, and one way to make money is to withhold goods. Veblen called this “sabotage”: a conscientious withdrawal of efficiency to keep up prices. He expected capitalism to be chronically depressed except when war, waste, or new combinations relieved it.</p><div class="box"><h3>Sabotage in Veblen’s sense</h3><p class="note">An industry can produce at a constant unit cost. Demand is linear: at a price of 100 nothing sells, and each unit more sold lowers the price by one. Engineers would run the plant until price falls to unit cost. Businessmen restrict output to the level they choose.</p><div class="grid2"><div><label>Unit cost: <b id="cv"></b></label><input type="range" id="c" data-suf="" min="10" max="60" step="1" value="30"></div><div><label>Output, as % of the engineers’ output: <b id="rv"></b></label><input type="range" id="r" data-suf="%" min="20" max="100" step="1" value="50"></div></div><svg id="ch" viewBox="0 0 640 260" width="100%" role="img" aria-label="Output restriction and profit"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="state">4. Government, class, and imperialism</h2>
+  <p>For Veblen, government in a business society serves business. The rights of property come first, and class conflict is settled in favor of owners. He found imperialism useful to them in two ways. It brought profits. More important, it spread patriotism and military habits. The machine process teaches people to ask for reasons, and that is dangerous to inherited privilege; war teaches them to obey.</p>
+  <h2 id="leis">5. Pecuniary culture</h2>
+  <p>In <em>The Theory of the Leisure Class</em> (1899), status in a predatory society belongs to those who do not work. It has to be displayed, through <b>conspicuous leisure</b> and <b>conspicuous consumption</b>. Each class imitates the one above. This <b>emulation</b> has political consequences: people who want to join the leisure class will not overthrow it. Hunt sees here Veblen’s explanation for the stability of capitalism. With patriotism, it is one of two means of emotional control in his account, and it leaves people with a “chronic dissatisfaction” that no income can cure. Veblen also traced the origin of ownership to the seizure of women, a point later feminists took up. Hunt ends on Veblen’s hope that the workers in whom workmanship was strongest might one day transform the system, a hope his own theory made look remote.</p>
+  <h2 id="debate">6. Beyond Hunt</h2>
+  <ul><li><b>Predatory pricing.</b> John McGee (1958) argued that Standard Oil grew mainly by buying rivals on fair terms. Elizabeth Granitz and Benjamin Klein (1996) emphasize its role in policing a railroad cartel.</li><li><b>Regulatory capture.</b> Kolko’s thesis on the left resembles George Stigler’s (1971) on the right. Others, including Elizabeth Sanders, show how farmers and workers pressed for regulation and shaped it.</li><li><b>Veblen and Marx.</b> Hunt’s Veblen, with his two classes and his government of owners, stands close to Marx. Other institutionalists stress his evolutionary method and his rejection of Hegelian ideas of progress. See the HET module on <a href="/het/veblen.html">Veblen</a>.</li><li><b>Conspicuous consumption</b> has become a field of empirical research, from positional goods (Fred Hirsch, Robert Frank) to studies of visible spending (Charles, Hurst, and Roussanov 2009).</li></ul><h3 class="sub">Slips to watch for in the book</h3><p>Hunt dates the passage of the Sherman Act to December 1889. Congress passed it in the spring of 1890 (51–1 in the Senate, 242–0 in the House), and it was signed on July 2, 1890. He calls Olney attorney general at the time of the letter; Olney wrote it in 1892, as a railroad lawyer, before taking that office.</p><div class="think"><b>Question to think about:</b> Veblen thought people imitate the class above them rather than oppose it. What would have to change for emulation to turn into opposition?</div>
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 9.</p><p class="rd">Thorstein Veblen, <em>The Theory of the Leisure Class</em> (1899), chapters 3–4.</p><p class="rl">Companion reading</p><p class="rd">Thorstein Veblen, <em>The Engineers and the Price System</em> (1921), chapter 1.</p><p class="rd">Gabriel Kolko, <em>The Triumph of Conservatism</em> (1963), introduction.</p><p class="rd">Geoffrey Hodgson, <em>The Evolution of Institutional Economics</em> (2004), selections.</p>
+  <p class="pn"><a href="corporate-capitalism.html">← Topic 8: Corporate Capitalism and Its Ideological Defenses</a><a href="evolutionary-socialism.html">Topic 10: Prosperity and Evolutionary Socialism →</a></p>
+  <p><a href="index.html#topic-9">← Back to Topic 9 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const c=V('c'),q0=100-c,q=q0*V('r')/100,p=100-q,pr=(p-c)*q,dwl=.5*(p-c)*(q0-q);const L=44,W=420,H=260,B=32,X=v=>L+v/100*(W-L),Y=v=>12+(1-v/100)*(H-B-12);let g=`<rect x="${X(0)}" y="${Y(p)}" width="${X(q)-X(0)}" height="${Y(c)-Y(p)}" fill="#c47a2c" opacity=".35"/><polygon points="${X(q)},${Y(p)} ${X(q)},${Y(c)} ${X(q0)},${Y(c)}" fill="#4a5560" opacity=".35"/><line x1="${L}" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" stroke="#ccd2d8"/><line x1="${L}" x2="${L}" y1="12" y2="${Y(0)}" stroke="#ccd2d8"/><line x1="${X(0)}" y1="${Y(100)}" x2="${X(100)}" y2="${Y(0)}" stroke="#023e8a" stroke-width="2.4"/><line x1="${X(0)}" x2="${X(100)}" y1="${Y(c)}" y2="${Y(c)}" stroke="#3f8f6b" stroke-width="2"/><circle cx="${X(q)}" cy="${Y(p)}" r="5" fill="#c47a2c"/><circle cx="${X(q0)}" cy="${Y(c)}" r="5" fill="#3f8f6b"/><text x="${X(0)-6}" y="${Y(100)+6}" text-anchor="end">100</text><text x="${W}" y="${H-12}" text-anchor="end">quantity</text><text x="450" y="60" style="fill:#023e8a">demand (blue line)</text><text x="450" y="82" style="fill:#3f8f6b">unit cost (green line)</text><text x="450" y="104" style="fill:#9a5a17">profit (orange area)</text><text x="450" y="126">lost output value (gray)</text>`;$('ch').innerHTML=g;
+const idle=100-V('r');$('out').innerHTML=`Output is <b>${q.toFixed(0)}</b> of a possible ${q0}, so <b>${idle}%</b> of useful capacity stands idle. The price is ${p.toFixed(0)}, profit is <b>${pr.toFixed(0)}</b>, and the value lost to the community is ${dwl.toFixed(0)}. `+(idle===0?'At the engineers’ output, profit is zero.':idle===50?'This is the most profitable choice for a monopolist with linear demand: leave half the capacity idle.':idle>50?'Restricting further than half lowers profit as well as output.':'Profit would rise if output were cut closer to half. Veblen’s “conscientious withdrawal of efficiency” pays.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

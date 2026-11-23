@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>The Industrial Revolution and Classical Liberalism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: The Industrial Revolution in England and the psychological, economic, and political creeds of classical liberalism, from Smith and Bentham to Malthus, with an interactive Malthusian model.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/classical-liberalism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 4</p>
+  <h1>The Industrial Revolution and Classical Liberalism</h1>
+  <p class="lead">Between 1760 and 1830 England became the first industrial nation, and a new ideology became dominant with it. Classical liberalism told a coherent story about human nature, the market, and the state, and it won the argument against the paternalism that had guided policy for centuries.</p>
+
+  <div class="map"><div><b>Institutions</b>The factory, the steam engine, and the industrial town</div><div><b>Dominant ideas</b>Classical liberalism: self-interest, the invisible hand, and the minimal state</div><div><b>Opposition and critics</b>Luddites, early trade unions, Tory radicals, and the first socialists (Topic 5)</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#ir">The Industrial Revolution</a></li><li><a href="#psych">The psychological creed</a></li><li><a href="#econ">The economic creed</a></li><li><a href="#pol">The political creed</a></li><li><a href="#classical">Appendix: Smith and Ricardo</a></li><li><a href="#debate">Beyond Hunt</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="ir">1. The Industrial Revolution</h2>
+  <p>Hunt emphasizes demand. He calls rising foreign demand the most important single cause of the Industrial Revolution: export industries grew by 76 percent in 1700–1750 and home industries by 7. The rising market was protected, too, since Indian calicoes had been banned in 1700. Manufacturers who could produce more cheaply stood to gain a great deal. In cotton, a bottleneck in spinning called forth the jenny, the water frame, and the mule. In iron, coke smelting replaced scarce charcoal. James Watt’s improvements made the steam engine a general source of power, freeing factories from rivers. Patents, a rough guide to inventive activity, rose from an average of about 200 per decade in the 1760s to almost 500 in the 1780s.</p><p>Manchester grew from 17,000 people in 1760 to 400,000 in 1851. By 1831 more than 40 percent of the English workforce was in manufacturing and mining.</p>
+  <h2 id="psych">2. The psychological creed</h2>
+  <p>Hunt takes classical liberalism apart into its assumptions, beginning with four about human nature:</p><div class="tw"><table><tr><th>Assumption</th><th>Meaning</th><th>Use</th></tr><tr><td><b>Egoistic</b></td><td>People seek their own pleasure and avoid pain (Bentham).</td><td>Self-interest is a fact to be used, not a sin.</td></tr><tr><td><b>Calculating</b></td><td>They weigh alternatives coolly.</td><td>Incentives can guide them.</td></tr><tr><td><b>Inert</b></td><td>Without the promise of pleasure or the fear of pain, they do nothing.</td><td>The poor must be driven by need; generous relief makes them idle.</td></tr><tr><td><b>Atomistic</b></td><td>Individuals are more real than society, which is just their sum.</td><td>Social arrangements are contracts, to be judged by individual benefit.</td></tr></table></div><p>Notice the double standard that Hunt points to in the third assumption. Fear of hunger was thought to move the laborer, and ambition and the hope of reward the “higher ranks.”</p>
+  <h2 id="econ">3. The economic creed</h2>
+  <p>Hobbes’s egoists needed a sovereign to keep the peace. Adam Smith’s <em>Wealth of Nations</em> (1776) replaced the sovereign with a market. A man of property seeking only his own gain is led “by an invisible hand to promote an end which was no part of his intention.” Competition directs capital and labor to their best uses, the division of labor raises productivity, and accumulation extends it. Any interference, however well meant, makes matters worse. To this Say added that production creates its own demand, so general gluts are impossible.</p><p>Malthus supplied the theory of poverty. In the <em>Essay on Population</em> (1798) he argued that population tends to grow geometrically and food only arithmetically. Population is held down by <b>preventive checks</b> such as late marriage, or by <b>positive checks</b>: famine, disease, and war. Relief for the poor was self-defeating, because it would only increase their numbers.</p><div class="box"><h3>Malthus’s ratios</h3><p class="note">Population grows by a fixed percentage each year unless food runs short; food grows by a fixed amount each year. Start with twice the food the population needs. When population reaches the food limit, the positive checks hold it there.</p><div class="grid2"><div><label>Unchecked population growth per year: <b id="gv"></b></label><input type="range" id="g" data-suf="%" min="0.2" max="3" step="0.1" value="2"></div><div><label>Food added each year, as % of initial need: <b id="av"></b></label><input type="range" id="a" data-suf="%" min="0" max="10" step="0.5" value="3"></div><div><label>Preventive check: reduction in growth rate: <b id="mv"></b></label><input type="range" id="m" data-suf="%" min="0" max="90" step="5" value="0"></div><div><label>Technical progress: compound growth of food: <b id="tv"></b></label><input type="range" id="t" data-suf="%" min="0" max="3" step="0.1" value="0"></div></div><svg id="ch" viewBox="0 0 640 256" width="100%" role="img" aria-label="Population and food over 100 years"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="pol">4. The political creed</h2>
+  <p>Smith gave the state three duties: defense, justice, and public works that private profit would not supply. Hunt looks at how these were interpreted. Justice came to mean above all the protection of property and contract; defense was extended to the protection of foreign markets; public works meant the institutions commerce needed, such as sound money, standard weights, and roads. The same liberals who denounced paternalism toward the poor welcomed help for enterprise. He concludes that <em>laissez-faire</em> in practice opposed the interventions that limited capitalists, and not those that served them. Smith himself distrusted capitalists, as Hunt stresses, but it was his reasoning that quieted their consciences.</p>
+  <h2 id="classical">5. Appendix: Smith and Ricardo</h2>
+  <p>In an appendix, Hunt shows that classical economics held more than the invisible hand. <b>Smith</b> saw history as four stages (hunting, pasturage, agriculture, commerce). In all but the first, property brings government, and he wrote that government, so far as it secures property, is “in reality instituted for the defense of the rich against the poor.” He regarded labor as the source of wealth, but once capital and land are owned he explained price by adding up wages, profits, and rents, because profit depends on the amount of capital rather than on labor.</p><p><b>Ricardo</b> kept the labor theory, as a law whose results are modified by differences in capital per worker. He needed it against Malthus to show that the Corn Laws hurt profits. Hunt’s example: an acre of land yields 100 bushels, each worker needs 20 bushels, and poorer land needs more workers.</p><div class="tw"><table><tr><th>Land in use</th><th>Workers on the worst land</th><th>Wages there</th><th>Profit per acre</th><th>Rent on A</th><th>Rent on B</th></tr><tr><td>A only</td><td>2</td><td>40</td><td>60</td><td>0</td><td>–</td></tr><tr><td>A and B</td><td>3</td><td>60</td><td>40</td><td>20</td><td>0</td></tr><tr><td>A, B, and C</td><td>4</td><td>80</td><td>20</td><td>40</td><td>20</td></tr></table></div><p>As cultivation spreads, rent squeezes profit. Hunt’s criticism is that Ricardo treated capital simply as tools and so saw capitalism as eternal. Hodgskin (Topic 5) and Marx (Topic 6) would treat capital as a social relation.</p>
+  <h2 id="debate">6. Beyond Hunt</h2>
+  <ul><li><b>Why Britain?</b> Robert Allen (2009) stresses high wages and cheap coal, which made it profitable to invent labor-saving machines. Joel Mokyr stresses ideas and an “industrial Enlightenment.” Kenneth Pomeranz (2000) points to coal and New World land as what separated England from the Yangzi delta. Eric Williams (1944) and more recent work by Heblich, Redding, and Voth argue that slavery and the Atlantic trade mattered for industrial growth.</li><li><b>Was it a revolution?</b> Crafts and Harley lowered estimates of growth before 1830. Change was concentrated in a few sectors.</li><li><b>Which Smith?</b> Readers such as Emma Rothschild and Amartya Sen stress <em>The Theory of Moral Sentiments</em> and Smith’s concern for the poor. Hunt’s text is mixed here. He lists Smith among those who saw motives as purely selfish, and also says that Smith was less conservative than the liberals who used him.</li><li><b>Was Malthus right?</b> His model describes many pre-industrial economies fairly well, but he wrote as the world was leaving it: food output grew, and from the late nineteenth century birth rates fell as incomes rose.</li></ul><p>For the theory, see the HET modules on <a href="/het/adam-smith.html">Adam Smith</a> and <a href="/het/ricardo-malthus.html">Ricardo and Malthus</a>.</p><div class="think"><b>Question to think about:</b> Classical liberals held that self-interest guides the rich through ambition and the poor through fear of want. Is this double standard still visible in debates over taxes and welfare?</div>
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 4.</p><p class="rd">Adam Smith, <em>The Wealth of Nations</em> (1776), book 1, chapters 1–2, and book 4, chapter 2.</p><p class="rl">Companion reading</p><p class="rd">Thomas Malthus, <em>An Essay on the Principle of Population</em> (1798), chapters 1–5.</p><p class="rd">Eric Hobsbawm, <em>Industry and Empire</em> (1968), chapters 2–3.</p><p class="rd">Robert C. Allen, <em>The British Industrial Revolution in Global Perspective</em> (2009), chapter 6.</p>
+  <p class="pn"><a href="mercantilist-conflict.html">← Topic 3: The Conflict in Mercantilist Thought</a><a href="socialist-protest.html">Topic 5: Socialist Protest Amid the Industrial Revolution →</a></p>
+  <p><a href="index.html#topic-4">← Back to Topic 4 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const g=V('g')/100*(1-V('m')/100),a=V('a')/100,t=V('t')/100;const N=100,P=[1],F=[2];let hit=null;for(let i=1;i<=N;i++){const f=(F[i-1]+a)*(1+t);let p=P[i-1]*(1+g);if(p>f){p=f;if(hit===null)hit=i;}P.push(p);F.push(f);}
+const L=44,W=640,H=250,B=30,mx=Math.max(...F,...P)*1.05,X=i=>L+i/N*(W-L-14),Y=v=>12+(1-v/mx)*(H-B-12);const path=A=>A.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ');let s=`<line x1="${L}" x2="${W-14}" y1="${H-B}" y2="${H-B}" stroke="#ccd2d8"/><line x1="${L}" x2="${L}" y1="12" y2="${H-B}" stroke="#ccd2d8"/>`;[0,25,50,75,100].forEach(i=>s+=`<text x="${X(i)}" y="${H-12}" text-anchor="middle">${i}</text>`);s+=`<text x="${(L+W)/2}" y="${H}" text-anchor="middle">years</text><path d="${path(F)}" fill="none" stroke="#3f8f6b" stroke-width="2.4"/><path d="${path(P)}" fill="none" stroke="#023e8a" stroke-width="2.4" stroke-dasharray="6 3"/><text x="${L+10}" y="22" style="fill:#3f8f6b">food (people it can feed), solid</text><text x="${L+10}" y="38" style="fill:#023e8a">population, dashed</text>`;$('ch').innerHTML=s;
+$('out').innerHTML=hit!==null?`Population reaches the food limit in year <b>${hit}</b>. From then on it grows only as fast as food, and the gap is closed by Malthus’s positive checks. Try a stronger preventive check, or let food grow by compound technical progress.`:`Over 100 years population never reaches the food limit; food per head ends at <b>${(F[N]/P[N]).toFixed(1)}</b> times subsistence, compared with 2.0 at the start. `+(t>0?'Compound growth in food breaks Malthus’s premise that food can grow only by fixed amounts.':'Here preventive checks, slow population growth, or rapid additions to food keep hunger away for a century.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

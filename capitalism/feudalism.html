@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Slavery, Feudalism, and the Christian Paternalist Ethic | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: The manor, the guild, and the ideology that justified them: the Christian paternalist ethic, the just price, and the ban on usury, with an interactive model of the manorial surplus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/feudalism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 1</p>
+  <h1>Slavery, Feudalism, and the Christian Paternalist Ethic</h1>
+  <p class="lead">Every society that produces a surplus has to explain why some people work to produce it and others receive it. This topic introduces the idea of ideology and applies it to the slave societies of antiquity and the feudal order of medieval Europe, whose moral code condemned the very motives on which capitalism would later rest.</p>
+
+  <div class="map"><div><b>Institutions</b>Slavery in antiquity; the manor and the guild in the Middle Ages</div><div><b>Dominant ideas</b>The Christian paternalist ethic: a divinely ordered hierarchy in which the rich must care for the poor</div><div><b>Opposition and critics</b>The Hebrew prophets, Luke’s gospel, and recurring peasant and religious movements for equality</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#ideology">Surplus, class, and ideology</a></li><li><a href="#slavery">Slavery in the ancient world</a></li><li><a href="#manor">The manor and the guild</a></li><li><a href="#ethic">The Christian paternalist ethic</a></li><li><a href="#debate">Beyond Hunt: what later scholarship says</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="ideology">1. Surplus, class, and ideology</h2>
+  <p>Hunt begins with a question that returns in every chapter of the book. When people produce barely enough to survive, everyone has to work. Once they can produce more than they need, some can live from the labor of others, and society divides into classes. Such an arrangement cannot rest on force alone for long. It also needs shared beliefs that make it seem right. Hunt calls these beliefs an <b>ideology</b>: ideas that give moral justification to a society’s economic and social relations.</p><p>This is a broader use of the word than the everyday one. An ideology in this sense need not be a lie, and the people who hold it are usually sincere. The question to ask is what work the idea does: which relations does it present as natural, and whose position does it protect?</p>
+  <h2 id="slavery">2. Slavery in the ancient world</h2>
+  <p>Much of the wealth of Greece and Rome was produced by slaves, who worked in mines, on great estates, in workshops, and in households. Hunt notes that even Plato and Aristotle took slavery to be natural, believing that some people are born to it. Aristotle’s argument is in the <em>Politics</em>, and Roman writers on agriculture such as Cato and Varro discussed how to manage slaves as they discussed how to manage oxen. Hunt stresses the economic limits of the system: slaves could not be trusted with complicated equipment, which they might break or turn into weapons; farming was kept crude and exhausted the soil; and because all work came to seem demeaning, invention suffered.</p>
+  <h2 id="manor">3. The manor and the guild</h2>
+  <p>After the western Roman Empire collapsed, protection became local. A chain of obligations ran from king to great lord to lesser lord to serf. The basic economic unit was the <b>manor</b>. Serfs were not chattels who could be sold apart from their families and land, but they were bound to the manor and owed the lord labor on his own land (the <b>demesne</b>), along with dues in kind and in money. In return the lord owed protection and justice. In practice, as Hunt notes, the lord’s court judged disputes in which the lord was a party, and the exchange of obligations was far from equal.</p><p>In the towns, production was organized by <b>guilds</b>, which regulated quality, training, prices, and the conduct of their members. The Church was the largest landowner in western Europe and the closest thing it had to a common government.</p><div class="box"><h3>The manorial surplus</h3><p class="note">A serf household works six days a week. Some of those days belong to the lord’s demesne. From the harvest of its own strips, the household pays a tithe to the Church and dues to the lord. The numbers are illustrative, since obligations varied widely.</p><div class="grid2"><div><label>Days of week-work owed to the lord: <b id="wv"></b></label><input type="range" id="w" data-suf="" min="0" max="5" step="1" value="3"></div><div><label>Tithe on the household’s own harvest: <b id="tiv"></b></label><input type="range" id="ti" data-suf="%" min="0" max="20" step="1" value="10"></div><div><label>Dues and fees on the household’s own harvest: <b id="duv"></b></label><input type="range" id="du" data-suf="%" min="0" max="40" step="1" value="10"></div><div><label>Subsistence need, in days of labor per week: <b id="subv"></b></label><input type="range" id="sub" data-suf="" min="0.5" max="4" step="0.5" value="2"></div></div><svg id="ch" viewBox="0 0 640 70" width="100%" role="img" aria-label="Division of the serf’s week"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="ethic">4. The Christian paternalist ethic</h2>
+  <p>The ideology of this order was the <b>Christian paternalist ethic</b>. Society was imagined as a family. God had assigned each member a station; the rich were like a father, with duties to protect and provide for the poor, and the poor owed obedience. Hunt traces the ethic from the Mosaic law, with its many rules on debt and poverty, through the gospels and the Church Fathers. Luke’s gospel condemns the rich as such. The other gospels, he argues, warn that wealth is an obstacle without condemning it. Clement of Alexandria did not condemn wealth itself. What mattered was how it was used: the rich were stewards of God’s gifts. In the thirteenth century Thomas Aquinas defended private property on the same condition, that owners be ready to share it with those in need. The medieval addition, for Hunt, was the claim that the manorial order itself, with its classes and stations, was natural, eternal, and ordained by God.</p><p>Two doctrines brought the ethic into daily economic life:</p><ul><li><b>The just price.</b> A seller should charge a price that compensates honest labor and expense and keeps the seller in his customary station, no more. To exploit a buyer’s need was a sin.</li><li><b>The ban on usury.</b> Lending at interest was condemned because the typical borrower was a poor person after a bad harvest, and interest was a profit drawn from a neighbor’s misfortune.</li></ul><p>The ethic had two faces. It limited greed and gave the poor a moral claim on the rich. It also taught them to accept their place. Above all, it condemned buying cheap and selling dear, accumulating without limit, and climbing out of one’s station. Those are the ordinary motives of a capitalist economy, so capitalism would need a different ideology.</p>
+  <h2 id="debate">5. Beyond Hunt: what later scholarship says</h2>
+  <ul><li><b>How many slaves?</b> Hunt writes that up to 80 percent of the people of Greece and Rome were slaves. Most historians today give much lower figures. Walter Scheidel (2005) puts the number of slaves in Roman Italy at no more than about 1.5 million, roughly 20 to 30 percent of its people, and around 10 percent is a common estimate for the empire as a whole. Figures for classical Athens are very uncertain. M. I. Finley’s point stands at the lower figures too: these were “slave societies” because the elite drew its surplus from slaves.</li><li><b>Was there a feudal “system”?</b> Elizabeth Brown (1974) and Susan Reynolds (1994) argued that a tidy pyramid of lords and vassals is largely a construction of later lawyers. Historians still speak of serfdom and lordship, with large regional differences.</li><li><b>Was the just price anti-market?</b> Raymond de Roover (1958) argued that for most scholastics the just price was simply the current market price, free of fraud and monopoly. Scholastic writers also came to allow compensation for loss and risk on loans, which narrowed the usury ban.</li></ul><div class="think"><b>Question to think about:</b> Hunt says the sins most condemned by medieval morality became the normal behavior assumed by capitalism. Which of these older moral rules survive today, and in what form?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">E. K. Hunt, <em>Property and Prophets</em>, updated 7th ed., chapter 1.</p><p class="rd">Thomas Aquinas, <em>Summa Theologica</em>, II–II, questions 66 (on property), 77 (on fraud in buying and selling), and 78 (on usury), selections.</p><p class="rl">Companion reading</p><p class="rd">Marc Bloch, <em>Feudal Society</em> (1939–40), selections.</p><p class="rd">M. I. Finley, <em>Ancient Slavery and Modern Ideology</em> (1980), selections.</p><p class="rd">Raymond de Roover, “The Concept of the Just Price” (1958).</p>
+  <p class="pn"><span></span><a href="transition.html">Topic 2: The Transition to Early Capitalism →</a></p>
+  <p><a href="index.html#topic-1">← Back to Topic 1 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const w=V('w'),h=6-w,ti=V('ti')/100,du=V('du')/100,sub=V('sub');const tithe=h*ti,dues=h*du,keep=h-tithe-dues;
+const parts=[['Lord’s demesne',w,'#8c6d46'],['Dues',dues,'#c47a2c'],['Tithe',tithe,'#7b5ea7'],['Household',keep,'#023e8a']];let x=10,g='';parts.forEach(p=>{const wd=p[1]/6*620;if(wd>0){g+=`<rect x="${x}" y="8" width="${wd}" height="36" fill="${p[2]}"/>`;if(wd>64)g+=`<text x="${x+wd/2}" y="31" text-anchor="middle" style="fill:#fff;font-weight:600">${p[0]}</text>`;}x+=wd;});g+=`<text x="10" y="62">six working days</text>`;$('ch').innerHTML=g;
+const s=6-keep;$('out').innerHTML=`The household keeps the product of <b>${keep.toFixed(1)}</b> days of labor and gives up <b>${s.toFixed(1)}</b> (${Math.round(s/6*100)}% of the week). `+(keep>sub+.01?`It has ${(keep-sub).toFixed(1)} days’ product above subsistence, which it could sell at a local market. Small surpluses like this later helped serfs buy their freedom from labor services (Topic 2).`:Math.abs(keep-sub)<=.01?'It is exactly at subsistence.':'It falls short of subsistence, so the household must borrow, rely on alms or the commons, or flee. This is where the ban on usury and the duty of charity mattered.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

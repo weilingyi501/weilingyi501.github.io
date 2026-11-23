@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>The Transition to Early Capitalism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: What capitalism is, and how it emerged in Europe: agricultural change, long-distance trade, putting-out, enclosure, and the price revolution, with the Dobb–Sweezy and Brenner debates and an interactive model.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/transition.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 2</p>
+  <h1>The Transition to Early Capitalism</h1>
+  <p class="lead">Capitalism is so familiar that it can seem to have no beginning. This topic defines it, follows the long breakup of the manorial economy from the eleventh century to the seventeenth, and introduces one of the great debates in economic history: what caused the transition from feudalism to capitalism?</p>
+
+  <div class="map"><div><b>Institutions</b>Merchant capital, putting-out, enclosure, a class of wage earners</div><div><b>Dominant ideas</b>Feudal ideas under strain; the first mercantilist doctrines of national wealth</div><div><b>Opposition and critics</b>Peasant revolts in defense of custom and against new burdens</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#def">What is capitalism?</a></li><li><a href="#farm">Fields, towns, and trade</a></li><li><a href="#crisis">The crisis of the manor</a></li><li><a href="#class">The making of a working class</a></li><li><a href="#merc">The first mercantilism</a></li><li><a href="#debate">Beyond Hunt: the transition debate</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="def">1. What is capitalism?</h2>
+  <p>Hunt defines capitalism by three features found together, so that eighteenth-century England, early twentieth-century Japan, and the United States today, for all their differences, share one economic system:</p><ol><li><b>Market exchange is everywhere.</b> Most people get what they need by buying it with money. They depend on a vast number of strangers, but the dependence appears to them only as prices.</li><li><b>Classes are divided by ownership.</b> A small class owns the means of production. A large class owns little but its ability to work and must sell it for a wage. Between them stands a middle class of small owners and independent professionals, and beneath them those who have neither property nor work.</li><li><b>Profit decides what is produced</b>, how, where, and for whom.</li></ol><p>Each feature existed somewhere before capitalism. Markets, hired labor, and profit seeking are ancient. What is new is a society organized by all three.</p>
+  <h2 id="farm">2. Fields, towns, and trade</h2>
+  <p>Hunt starts the story in the fields. From about the eighth century, and widely by the eleventh and twelfth, the <b>three-field system</b> began to replace the two-field system in northern Europe. Instead of leaving half the land fallow each year, farmers left one third. With the same arable land, the area sown rose from one half to two thirds, an increase of a third. (Hunt, citing Lynn White, gives a gain of up to 50 percent. White’s own argument is that output could rise by a third or by a half, depending on how the fallow was plowed and whether wasteland could be brought under cultivation.) Oats fed horses, which plowed and hauled faster than oxen. More food supported more people, and more of them lived in towns.</p><p>Towns brought trade. Hunt insists that trade was not an outside force that happened to strike Europe. Farming had first produced the surplus and the towns that made it possible. Long-distance commerce, quickened by the Crusades and by contact with the Arab world, fed the great fairs of Champagne and then permanent commercial cities. Merchants developed bills of exchange, bookkeeping, and commercial law. To secure supplies for distant markets, they began to advance materials and then tools to craftsmen. In this <b>putting-out system</b>, the worker at the end of the process no longer sold cloth to the merchant. He or she sold labor power. Capitalist textile industries in Flanders and Florence were torn by class conflict in the towns; England’s industry, Hunt argues, avoided it by scattering its workers through the countryside.</p>
+  <h2 id="crisis">3. The crisis of the manor</h2>
+  <p>Markets entered the manor as well. Lords wanted cash, and peasants who could sell small surpluses paid money in place of labor services (<b>commutation</b>). Then came catastrophe. The Black Death of 1348–49 and its recurrences cut England’s population from perhaps 4 million to 2.5 million by the early fifteenth century, on Hunt’s figures. Labor became scarce and wages rose. Lords and parliaments tried to force the old terms back, as in the English Statute of Labourers (1351), and peasants fought back: the Jacquerie in France (1358), the English rising of 1381, and the German Peasants’ War of 1524–25, in which as many as 100,000 may have been killed.</p>
+  <h2 id="class">4. The making of a working class</h2>
+  <p>After 1500 population grew again, and several forces separated people from the land. English lords <b>enclosed</b> common fields and turned them to sheep. Rents rose, and debts ruined smallholders. Guilds closed their ranks. In some areas, Hunt writes, three-fourths to nine-tenths of tenants were forced off the land. Those who lost their livelihood faced harsh laws against vagrancy. Marx called this process <b>primitive accumulation</b> (Topic 7), and Hunt follows him in stressing that a class of people with nothing to sell but their labor was made, often by force. He names four main sources of the first accumulations of capital: trade, putting-out, enclosure, and the price inflation. To these he adds colonial plunder, piracy, and the slave trade.</p><p>Silver from the Americas added the <b>price revolution</b>. Prices rose by 150 to 400 percent in the sixteenth century, depending on the region. Rents and wages lagged behind, so the gains went to those who sold goods and paid wages and fixed rents.</p><div class="box"><h3>The price revolution</h3><p class="note">A farmer or manufacturer sells output worth 100 and begins by paying 45 in wages and 30 in rent, leaving 25 as profit. All prices then rise, but wages and rents rise more slowly. Output and employment stay the same.</p><div class="grid2"><div><label>Rise in output prices over the century: <b id="pv"></b></label><input type="range" id="p" data-suf="%" min="0" max="400" step="10" value="200"></div><div><label>Rise in money wages: <b id="wv"></b></label><input type="range" id="w" data-suf="%" min="0" max="400" step="10" value="120"></div><div><label>Rise in money rents: <b id="rv"></b></label><input type="range" id="r" data-suf="%" min="0" max="400" step="10" value="100"></div></div><svg id="ch" viewBox="0 0 640 120" width="100%" role="img" aria-label="Shares of wages, rents and profits before and after"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="merc">5. The first mercantilism</h2>
+  <p>The new monarchies that unified England, France, and Spain drew on merchants for money and support. Their early economic policy, <b>bullionism</b>, tried to keep gold and silver inside the country. Later mercantilists aimed instead at a favorable balance of trade, with trading monopolies, navigation laws, and regulation of industry. Hunt’s point is that this was not simply a policy of merchants. It carried the paternalist idea that authority is responsible for the general welfare into a new age, and that created the conflict taken up in Topic 3. (For the trade theory, see <a href="/trade/mercantilism.html">Mercantilism and the Physiocrats</a>.)</p>
+  <h2 id="debate">6. Beyond Hunt: the transition debate</h2>
+  <div class="tw"><table><tr><th>Position</th><th>Argument</th></tr><tr><td>Trade dissolved feudalism</td><td>Paul Sweezy (1950), drawing on Henri Pirenne: feudalism was conservative, and long-distance trade broke it from outside.</td></tr><tr><td>Feudalism broke from within</td><td>Maurice Dobb (1946): lords squeezed peasants too hard, and peasants fled or resisted. In eastern Europe, trade strengthened serfdom instead.</td></tr><tr><td>Population</td><td>M. M. Postan and Emmanuel Le Roy Ladurie: long waves of population growth and decline drove rents, wages, and tenure.</td></tr><tr><td>Class structure</td><td>Robert Brenner (1976): the same plague had opposite effects in England and eastern Europe. What mattered was the balance of power between lords and peasants. In England it produced capitalist tenants who had to compete to keep their leases.</td></tr><tr><td>World economy</td><td>Immanuel Wallerstein (1974): capitalism began as a European world-economy in the long sixteenth century, with coerced labor in its periphery.</td></tr></table></div><p>Hunt calls improvements in farming the original force behind the whole chain of events, and he rejects accounts that begin with trade. On property and class he relies on Dobb.</p><p>On enclosure, J. R. Wordie (1983) estimated that about 45 percent of England was already enclosed by 1500, only about 2 percent was enclosed in the sixteenth century, and about 24 percent in the seventeenth, with the parliamentary enclosures coming later. His figures are debated, but they cast doubt on a sixteenth-century peak, where Hunt places it.</p><h3 class="sub">Slips to watch for in the book</h3><p>Hunt dates Dutch independence to 1690; Spain recognized it in 1648. He lists the telescope among the instruments of the Age of Exploration, but it appeared only in 1608.</p><div class="think"><b>Question to think about:</b> The Black Death made labor scarce across Europe. Why did serfdom fade in the West and harden in the East?</div>
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 2.</p><p class="rd">Robert Brenner, “Agrarian Class Structure and Economic Development in Pre-Industrial Europe” (1976).</p><p class="rl">Companion reading</p><p class="rd">Rodney Hilton, ed., <em>The Transition from Feudalism to Capitalism</em> (1976), selections by Sweezy and Dobb.</p><p class="rd">Ellen Meiksins Wood, <em>The Origin of Capitalism</em> (2002), part 1.</p><p class="rd">Immanuel Wallerstein, <em>The Modern World-System</em>, vol. 1 (1974), selections.</p>
+  <p class="pn"><a href="feudalism.html">← Topic 1: Slavery, Feudalism, and the Christian Paternalist Ethic</a><a href="mercantilist-conflict.html">Topic 3: The Conflict in Mercantilist Thought →</a></p>
+  <p><a href="index.html#topic-2">← Back to Topic 2 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const p=V('p')/100,w=V('w')/100,r=V('r')/100;const Y=100*(1+p),W=45*(1+w),R=30*(1+r),P=Y-W-R;
+const bar=(y,arr,tot)=>{let x=90,g='';arr.forEach(a=>{const wd=Math.max(0,a[1])/tot*530;g+=`<rect x="${x}" y="${y}" width="${wd}" height="32" fill="${a[2]}"/>`;if(wd>52)g+=`<text x="${x+wd/2}" y="${y+21}" text-anchor="middle" style="fill:#fff;font-weight:600">${a[0]} ${Math.round(a[1]/tot*100)}%</text>`;x+=wd;});return g;};
+const tot=Math.max(Y,W+R);$('ch').innerHTML='<text x="4" y="31">Before</text><text x="4" y="86">After</text>'+bar(10,[['Wages',45,'#023e8a'],['Rent',30,'#8c6d46'],['Profit',25,'#3f8f6b']],100)+bar(65,[['Wages',W,'#023e8a'],['Rent',R,'#8c6d46'],['Profit',P,'#3f8f6b']],tot);
+const rw=((1+w)/(1+p)-1)*100,rr=((1+r)/(1+p)-1)*100,rp=(P/25/(1+p)-1)*100;const f=v=>(v>=0?'+':'−')+Math.abs(v).toFixed(0)+'%';
+$('out').innerHTML=`Measured in what they can buy, wages change by <b>${f(rw)}</b>, rents by <b>${f(rr)}</b>, and profits by <b>${P<0?'a loss':f(rp)}</b>. `+(P<0?'Costs have outrun sales, so producers make losses.':rp>1?'Because wages and rents lag behind prices, income moves from workers and landlords to those who sell goods. Earl Hamilton (1929) and Keynes saw this “profit inflation” as a source of early accumulation. Later historians have questioned how long and how widely wages lagged.':rp<-1?'Costs rose faster than prices, so profits are squeezed, as happened to lords and employers after the Black Death.':'Distribution is unchanged: inflation redistributes only when some incomes lag.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

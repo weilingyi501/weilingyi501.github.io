@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Keynesian Economics and the Great Depression | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: The Great Depression, Keynes’s circular flow of leakages and injections, the neoclassical synthesis, and Hunt’s critique of military Keynesianism, with an interactive multiplier model.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/keynes.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 12</p>
+  <h1>Keynesian Economics and the Great Depression</h1>
+  <p class="lead">The Depression discredited the belief that markets restore full employment by themselves. Keynes explained why and offered a remedy that kept capitalism in place. Hunt asks what the remedy looked like in practice, and what it cost.</p>
+
+  <div class="map"><div><b>Institutions</b>Collapse of output and employment, 1929–33; war; postwar boom</div><div><b>Dominant ideas</b>Keynesian management joined to neoclassical theory</div><div><b>Opposition and critics</b>Socialists and communists in the 1930s; later critics of militarism</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#dep">The collapse</a></li><li><a href="#key">Keynes’s answer</a></li><li><a href="#ideol">From theory to ideology</a></li><li><a href="#war">The warfare economy</a></li><li><a href="#debate">Beyond Hunt</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="dep">1. The collapse</h2>
+  <p>The United States came out of the 1920s as the world’s leading manufacturer and lender. After October 1929 the decline fed on itself. By 1932, Hunt reports, there had been over 85,000 business failures and more than 5,000 bank suspensions; stocks on the New York Exchange had fallen from $87 billion to $19 billion; and 12 million people were out of work. Black workers were hit hardest. The factories, the land, and the skills were all still there. What had happened?</p>
+  <h2 id="key">2. Keynes’s answer</h2>
+  <p>Every dollar of production is a dollar of someone’s income, so there is always enough income to buy the product. But not all income returns to firms as spending. Hunt explains Keynes through a <b>circular flow</b> with three <b>leakages</b> (saving, imports, taxes) and three <b>injections</b> (investment, exports, government spending). If planned injections fall short, goods go unsold, firms cut production, and income falls until leakages shrink to match. The economy can rest there with mass unemployment.</p><p>(The three-leakage diagram is the textbook version; the <em>General Theory</em> itself works mainly with saving and investment.) Investment is the problem. Rich societies save more, so more investment is needed to fill the gap, and yet every investment adds capacity that requires still more demand. Hunt holds that in essentials this diagnosis was shared by Marx, Hobson, and Keynes. Keynes’s own contribution was to show how an economy could settle in a stable depression. His solution was government spending. He preferred houses and schools. In a famous passage of the <em>General Theory</em> he remarked that even burying banknotes in old coal mines and letting private enterprise dig them up would be better than nothing.</p><div class="box"><h3>Leakages and injections</h3><p class="note">Equilibrium income is where leakages equal injections. Full-employment income is 100.</p><div class="grid2"><div><label>Investment: <b id="Iv"></b></label><input type="range" id="I" data-suf="" min="2" max="30" step="1" value="10"></div><div><label>Government spending: <b id="Gv"></b></label><input type="range" id="G" data-suf="" min="0" max="40" step="1" value="12"></div><div><label>Exports: <b id="Xv"></b></label><input type="range" id="X" data-suf="" min="0" max="25" step="1" value="8"></div><div><label>Saving rate: <b id="sv"></b></label><input type="range" id="s" data-suf="%" min="2" max="30" step="1" value="14"></div><div><label>Tax rate: <b id="tv"></b></label><input type="range" id="t" data-suf="%" min="0" max="35" step="1" value="13"></div><div><label>Import rate: <b id="mv"></b></label><input type="range" id="m" data-suf="%" min="0" max="25" step="1" value="10"></div></div><svg id="ch" viewBox="0 0 640 130" width="100%" role="img" aria-label="Leakages, injections, and income"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="ideol">3. From theory to ideology</h2>
+  <p>In the 1930s the Soviet economy grew rapidly while the West was in depression, so a purely negative defense of capitalism was not enough. After the war Paul Samuelson’s <b>neoclassical synthesis</b> combined the two bodies of theory. Government would manage total demand, and within a fully employed economy the neoclassical case for markets would hold again. The Employment Act of 1946 made high employment an official goal. Hunt’s reading is that Keynes’s theory let the older ideology come to terms with the Depression.</p>
+  <h2 id="war">4. The warfare economy</h2>
+  <p>Did the policies work? There was no second Great Depression, though Hunt counts ten recessions after the war and points to persistent inflation. He asks what the government spent the money on. Full employment had come with World War II, when military spending reached almost 40 percent of GNP. In the Cold War it stayed high, and in 1987 it was still 6.3 percent of GNP, with 6.5 percent of nonfarm jobs. In Hunt’s account arms work as Keynes’s pyramids did. They keep the capital-goods industries busy and raise demand without raising the economy’s capacity to produce, and they create a military-industrial complex of officers, corporations, and politicians with a stake in their growth. He links the slow recovery after 1991 to the small cuts that followed the Cold War.</p><p>A related argument, which Hunt does not cite, is Michał Kalecki’s of 1943: business leaders oppose full employment by public spending for political reasons, because without the threat of dismissal discipline in the factories would weaken. Arms are the exception they accept.</p>
+  <h2 id="debate">5. Beyond Hunt</h2>
+  <ul><li><b>Causes of the Depression.</b> Friedman and Schwartz (1963) blame the Federal Reserve for letting the money stock fall. Bernanke stresses bank failures and credit, Eichengreen the gold standard. Keynesians and Marxists stress demand and profitability.</li><li><b>What ended it?</b> Christina Romer (1992) argues that monetary expansion explains much of the recovery before 1942. War spending finished the job.</li><li><b>Military Keynesianism.</b> U.S. defense spending fell from roughly 9 percent of GDP in 1968 to about 3 percent around 2000, and was about 3.5 percent in 2023. The strong growth of the later 1990s came as the share was falling, which is hard to square with Hunt’s view that prosperity in 2002 depended on arms as much as ever. Scholars still debate its role in technology, from computers to the internet.</li><li><b>Was Keynes Hunt’s Keynes?</b> Post-Keynesians such as Joan Robinson and Minsky stressed uncertainty and finance and rejected the synthesis as “bastard Keynesianism.” See the HET modules on <a href="/het/keynes.html">Keynes</a> and <a href="/het/post-keynesian.html">post-Keynesian economics</a>.</li></ul><div class="think"><b>Question to think about:</b> Why might business leaders prefer military spending to equal spending on housing or schools? Is the argument still convincing?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 12.</p><p class="rd">John Maynard Keynes, <em>The General Theory</em> (1936), chapters 1–3 and 24.</p><p class="rl">Companion reading</p><p class="rd">Michał Kalecki, “Political Aspects of Full Employment” (1943).</p><p class="rd">Paul Baran and Paul Sweezy, <em>Monopoly Capital</em> (1966), chapters 6–7.</p><p class="rd">Christina Romer, “What Ended the Great Depression?” (1992).</p>
+  <p class="pn"><a href="imperialism.html">← Topic 11: Imperialism and Revolutionary Socialism</a><a href="defenders.html">Topic 13: Contemporary American Capitalism and Its Defenders →</a></p>
+  <p><a href="index.html#topic-12">← Back to Topic 12 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const I=V('I'),G=V('G'),X=V('X'),z=(V('s')+V('t')+V('m'))/100,J=I+G+X,Y=J/z,M=1/z,top=Math.max(J,z*100,1);const sc=440/top;const seg=(y,arr)=>{let x=110,g='';arr.forEach(a=>{const w=a[1]*sc;g+=`<rect x="${x}" y="${y}" width="${w}" height="34" fill="${a[2]}"/>`;if(w>48)g+=`<text x="${x+w/2}" y="${y+22}" text-anchor="middle" style="fill:#fff;font-weight:600">${a[0]}</text>`;x+=w;});return g;};
+$('ch').innerHTML='<text x="4" y="30">Injections</text><text x="4" y="84">Leakages at 100</text>'+seg(8,[['Investment',I,'#023e8a'],['Gov.',G,'#3f8f6b'],['Exports',X,'#7b5ea7']])+seg(62,[['Saving',V('s'),'#4a7fa7'],['Taxes',V('t'),'#6fa886'],['Imports',V('m'),'#a38fc4']])+'<text x="110" y="118">Full employment requires the two bars to be equal.</text>';
+const gap=100-Y,dG=gap/M;$('out').innerHTML=`Equilibrium income is <b>${Y.toFixed(0)}</b> and the multiplier is <b>${M.toFixed(2)}</b>. `+(gap>.5?`That is ${gap.toFixed(0)} below full employment. Raising government spending by <b>${dG.toFixed(1)}</b> would close the gap. The arithmetic is the same whether the money goes to schools or to bombs, which is Hunt’s point: the choice is political.`:gap<-.5?`Spending exceeds full-employment output by ${(-gap).toFixed(0)}, so the pressure falls on prices. The model says inflation, or higher taxes, or imports.`:'The economy is at full employment.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

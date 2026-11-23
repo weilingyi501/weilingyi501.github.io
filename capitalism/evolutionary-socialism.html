@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Prosperity and Evolutionary Socialism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: Rising living standards, the vote, and the case for peaceful socialism: the Fabian Society, Eduard Bernstein, and the revisionist controversy, with an interactive model of the electoral dilemma.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/evolutionary-socialism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 10</p>
+  <h1>Prosperity and Evolutionary Socialism</h1>
+  <p class="lead">By 1900 workers in western Europe earned more than their grandparents, belonged to legal unions, and could vote. Must socialism still come by revolution? The Fabians in England and the revisionists in Germany answered no.</p>
+
+  <div class="map"><div><b>Institutions</b>Rising real wages, unions, and wider suffrage, 1850–1914</div><div><b>Dominant ideas</b>A neutral democratic state that can be won by votes</div><div><b>Opposition and critics</b>Orthodox Marxists: Kautsky, Luxemburg, Lenin</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#gains">Gains and limits</a></li><li><a href="#fab">The Fabians</a></li><li><a href="#bern">Bernstein and revisionism</a></li><li><a href="#reply">The reply</a></li><li><a href="#debate">Beyond Hunt: what happened?</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="gains">1. Gains and limits</h2>
+  <p>Real wages in England, by Hunt’s figures, were 84 percent higher in 1900 than in 1850, and workers won the vote and the right to organize. He adds a warning about averages. Two surveys found about 40 percent of the working class in London and York still in poverty. (These are the studies of Charles Booth and Seebohm Rowntree; Rowntree’s figure for the whole population of York in 1899 was about 28 percent.)</p><p>In Germany the followers of Ferdinand Lassalle, who looked to the state, and the Marxists joined in 1875 to form what became the <b>Social Democratic Party</b> (SPD). Marx attacked the terms of the union in his <em>Critique of the Gotha Program</em>. Bismarck outlawed the party’s activities from 1878 to 1890, and its vote grew anyway, from about half a million in 1877 to 1.4 million in 1890. It became the largest party in votes, and in 1912 won about 4.25 million.</p>
+  <h2 id="fab">2. The Fabians</h2>
+  <p>The Fabian Society, founded in London in 1884, took its name from a Roman general who wore down the enemy by patience. Its members, among them George Bernard Shaw, Sidney and Beatrice Webb, Graham Wallas, and H. G. Wells, rejected Marx’s economics, class struggle, and his view of the state. Their economics, Hunt notes, was neoclassical. They accepted that labor and capital each receive what they produce; the injustice was that income from ownership went to so few. Social ownership would let everyone share it. Government was an instrument that could be used for good if the public were educated. They worked by <b>permeation</b>, persuading officials and politicians of every party, and supplied ideas to the Labour Party, whose 1918 constitution committed it to common ownership. The Webbs designed a detailed socialist commonwealth, with industry run by professional managers answerable to elected bodies and with separate political and social parliaments. They also helped to found the London School of Economics.</p><p>Hunt admires their learning and is severe about Shaw, who distrusted democracy and defended the British Empire (Topic 11).</p>
+  <h2 id="bern">3. Bernstein and revisionism</h2>
+  <p>Eduard Bernstein, who had lived in London and known Engels, published <em>Evolutionary Socialism</em> in 1899. He argued that the facts had gone against Marx. Small firms survived, shares were more widely held, crises grew milder, the middle classes were not vanishing, and workers were better off. He gave up the labor theory of value as a foundation, and held that ethics and ideas gain more independence from economics as society grows richer. With universal suffrage the state becomes a partnership of all. Socialism would be reached by the extension of democracy, step by step, and the daily movement mattered more to him than the final goal.</p>
+  <h2 id="reply">4. The reply</h2>
+  <p>Rosa Luxemburg’s <em>Reform or Revolution</em> (1899) answered that credit and cartels delay crises and make them worse, and that a class will not let its property be legislated away. Reforms are worth fighting for because the fight educates and organizes workers. As a separate road to socialism, reform leads to a different place: an improved capitalism. Hunt states the Marxist conclusion in a similar way: once reforms seriously threaten property, owners will abandon democracy. He adds a second argument from history: the need to win majorities pushed both the Labour Party and the SPD steadily to the right, until in the 1950s they gave up social ownership.</p><div class="box"><h3>The electoral socialist’s dilemma</h3><p class="note">Adam Przeworski and John Sprague (1986) observed that workers were nowhere a large majority of voters, so socialists needed allies. Appealing to allies weakens the appeal to workers as a class. Move the strategy slider to find the best result.</p><div class="grid2"><div><label>Workers as a share of voters: <b id="wv"></b></label><input type="range" id="w" data-suf="%" min="25" max="70" step="1" value="42"></div><div><label>Support among workers with a pure class appeal: <b id="sv"></b></label><input type="range" id="s" data-suf="%" min="40" max="90" step="1" value="70"></div><div><label>How many workers are lost by a broad appeal: <b id="dv"></b></label><input type="range" id="d" data-suf="%" min="0" max="60" step="1" value="20"></div><div><label>How many others are won by a broad appeal: <b id="gv"></b></label><input type="range" id="g" data-suf="%" min="0" max="60" step="1" value="30"></div><div><label>Strategy: from class appeal (0) to broad appeal (100): <b id="av"></b></label><input type="range" id="a" data-suf="" min="0" max="100" step="5" value="0"></div></div><svg id="ch" viewBox="0 0 640 220" width="100%" role="img" aria-label="Vote share by strategy"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="debate">5. Beyond Hunt: what happened?</h2>
+  <ul><li><b>The success of reform.</b> Social democracy built welfare states that Marxists of 1900 would have thought impossible under capitalism. Sheri Berman (2006) calls it the most successful ideology of the twentieth century.</li><li><b>Its limits.</b> No social democratic party has used elections to replace capitalist property. Sweden’s Meidner plan of the 1970s, to transfer shares to wage-earner funds, was cut down. In Chile a government elected on a socialist program in 1970 was overthrown in 1973.</li><li><b>Structural power.</b> Fred Block (1977) and Przeworski argue that even a neutral state must keep up business confidence, because investment is in private hands. No conspiracy is required.</li><li><b>Decline.</b> With deindustrialization and the rise of educated left voters (Piketty’s “Brahmin left”), the link between workers and left parties has weakened.</li></ul><h3 class="sub">Slips to watch for in the book</h3><p>The SPD did drop the goal in its Godesberg Program of 1959. Labour did not: Hugh Gaitskell’s attempt to amend Clause IV failed in 1959–60, and the commitment to common ownership stayed until Tony Blair replaced it in 1995. On votes, the socialists received 493,447 in 1877, slightly fewer than the “more than 500,000” Hunt reports.</p><div class="think"><b>Question to think about:</b> A century of evidence is now in. Who was closer to the truth, Bernstein or Luxemburg?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 10.</p><p class="rd">Eduard Bernstein, <em>Evolutionary Socialism</em> (1899), selections from chapter 3.</p><p class="rl">Companion reading</p><p class="rd">Rosa Luxemburg, <em>Reform or Revolution</em> (1899), part 1.</p><p class="rd"><em>Fabian Essays in Socialism</em> (1889), selections.</p><p class="rd">Adam Przeworski, <em>Capitalism and Social Democracy</em> (1985), selections.</p>
+  <p class="pn"><a href="veblen.html">← Topic 9: Monopoly Power and the Writings of Veblen</a><a href="imperialism.html">Topic 11: Imperialism and Revolutionary Socialism →</a></p>
+  <p><a href="index.html#topic-10">← Back to Topic 10 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const w=V('w')/100,s=V('s')/100,d=V('d')/100,G=V('g')/100;const vt=a=>w*Math.max(0,s-d*a)+(1-w)*G*Math.sqrt(a);const a0=V('a')/100;let best=0;for(let i=0;i<=100;i++)if(vt(i/100)>vt(best/100))best=i;const L=44,W=640,H=220,B=32,X=a=>L+a*(W-L-14),Y=v=>12+(1-v/.8)*(H-B-12);let g='';[0,.2,.4,.6,.8].forEach(v=>g+=`<line x1="${L}" x2="${W-14}" y1="${Y(v)}" y2="${Y(v)}" stroke="#f0f2f4"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end">${Math.round(v*100)}%</text>`);g+=`<line x1="${L}" x2="${W-14}" y1="${Y(.5)}" y2="${Y(.5)}" stroke="#c0392b" stroke-dasharray="4 3"/><text x="${W-16}" y="${Y(.5)-5}" text-anchor="end" style="fill:#c0392b">majority</text>`;let p='';for(let i=0;i<=100;i++)p+=(i?'L':'M')+X(i/100).toFixed(1)+','+Y(vt(i/100)).toFixed(1);g+=`<path d="${p}" fill="none" stroke="#023e8a" stroke-width="2.4"/><circle cx="${X(a0)}" cy="${Y(vt(a0))}" r="5.5" fill="#c47a2c"/><text x="${L}" y="${H-6}">class appeal</text><text x="${W-14}" y="${H-6}" text-anchor="end">broad appeal</text>`;$('ch').innerHTML=g;
+const v=vt(a0),vb=vt(best/100);$('out').innerHTML=`Vote share: <b>${(v*100).toFixed(1)}%</b>. The best available strategy is ${best} on the scale, with <b>${(vb*100).toFixed(1)}%</b>. `+(vb>.5?'A majority is possible here, but look at how far from a pure class appeal it lies.':'With these numbers no strategy wins a majority alone, which is the dilemma most socialist parties faced. They had to govern in coalition or wait.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

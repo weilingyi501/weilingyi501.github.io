@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Marx’s Social and Economic Theories | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: Alienation, the labor theory of value, surplus value, accumulation, crises, concentration, and the capitalist state in Marx, with an interactive Goodwin model of the reserve army.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/marx-economics.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 7</p>
+  <h1>Marx’s Social and Economic Theories</h1>
+  <p class="lead">Marx’s criticism of capitalism rested on more than poverty. He argued that it cuts people off from what is most human in them, that profit comes from unpaid labor, and that accumulation is driven by competition through recurring crises.</p>
+
+  <div class="map"><div><b>Institutions</b>Accumulation, business cycles, concentration of capital</div><div><b>Dominant ideas</b>Classical harmony of interests; Say’s law</div><div><b>Opposition and critics</b>Marx’s Capital; working-class parties after 1864</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#alien">Alienation</a></li><li><a href="#sv">Surplus value</a></li><li><a href="#acc">Primitive accumulation and the drive to accumulate</a></li><li><a href="#crisis">Wages, the reserve army, and crisis</a></li><li><a href="#long">Concentration, immiserization, and the state</a></li><li><a href="#debate">Beyond Hunt</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="alien">1. Alienation</h2>
+  <p>Many socialists condemned capitalism for making workers poor. Hunt insists that this was not Marx’s main charge. A well-fed slave is still a slave. Human beings develop themselves through work: they change nature, and in doing so they develop their own senses, skills, and relations. Under capitalism the product, the process, and the purpose of work belong to someone else. Workers are estranged from what they make, from the activity of making it, from their own capacities, and from each other. The manuscript of 1844 says that the worker feels at home only when not working. Higher wages can ease the condition but cannot remove it.</p>
+  <h2 id="sv">2. Surplus value</h2>
+  <p>If commodities exchange at their values, where does profit come from? Marx’s answer turns on one special commodity. The capitalist buys <b>labor power</b>, the capacity to work, at its value: the labor needed to produce the worker’s means of living. In use, labor power creates more value than it costs. In Hunt’s example, if six hours of an eight-hour day produce the value of the worker’s wage goods, the other two are <b>surplus labor</b>, the source of profit, interest, and rent.</p><div class="eq">value of output = c + v + s &nbsp;&nbsp; rate of surplus value = s / v &nbsp;&nbsp; rate of profit = s / (c + v)</div><p>For a full treatment with interactive models, see the HET modules on <a href="/het/marx-value.html">Marx’s theory of value</a> and <a href="/het/marx-profit-rate.html">the rate of profit</a>.</p>
+  <h2 id="acc">3. Primitive accumulation and the drive to accumulate</h2>
+  <p>Political economists explained the first capital as the savings of the frugal. Marx ridiculed this as a fable like original sin, and pointed instead to enclosure, colonial plunder, and slavery (Topic 2). Once capitalism exists, accumulation needs no greed. Competition forces each capitalist to expand and mechanize or be destroyed.</p>
+  <h2 id="crisis">4. Wages, the reserve army, and crisis</h2>
+  <p>Rapid accumulation absorbs unemployed workers, and wages rise. Higher wages cut profits and encourage labor-saving machines, so workers are laid off and the <b>reserve army of labor</b> fills again. Mechanization also creates a second problem: if output grows while wages are held down, who will buy the consumer goods? Hunt explains crises in Marx through the balance between two sectors, one producing consumer goods and the other producing capital goods. An imbalance in one spreads to the other in a cumulative collapse. In the slump wages fall, but output falls faster, so supply drops below consumer demand and recovery begins. Marx, Hunt adds, was no stagnationist: he expected growth in bursts, with periodic mass unemployment.</p><div class="box"><h3>The reserve army cycle</h3><p class="note">Richard Goodwin (1967) turned Marx’s account into a model. Profits are invested. When employment is high, wages rise faster than productivity and squeeze profits; when profits fall, growth slows and employment drops. The chart follows the employment rate and the wage share over 60 years.</p><div class="grid2"><div><label>Starting wage share: <b id="u0v"></b></label><input type="range" id="u0" data-suf="%" min="70" max="88" step="1" value="76"></div><div><label>Starting employment rate: <b id="v0v"></b></label><input type="range" id="v0" data-suf="%" min="84" max="97" step="0.5" value="90"></div><div><label>How strongly wages respond to employment: <b id="bv"></b></label><input type="range" id="b" data-suf="" min="0.3" max="1.5" step="0.1" value="0.6"></div></div><svg id="ch" viewBox="0 0 640 258" width="100%" role="img" aria-label="Employment rate and wage share over time"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="long">5. Concentration, immiserization, and the state</h2>
+  <p>Marx expected capital to <b>concentrate</b>, because large firms beat small ones and because technology raises the smallest workable scale. He expected the working class to grow and its condition to worsen. Hunt reads this claim carefully. Marx wrote that the laborer’s lot grows worse “be his payment high or low,” so the claim is about relative position and degradation at work rather than falling wages. Marx also expected the rate of profit to fall in the long run, which Hunt mentions only briefly.</p><p>The <b>state</b>, in this view, protects the property relations on which class power rests, and settles rivalries among capitalists, so that it may act against some of them but not against all. Hence Marx’s skepticism that elections alone could bring socialism, which becomes the great dispute of Topics 10 and 11.</p>
+  <h2 id="debate">6. Beyond Hunt</h2>
+  <ul><li><b>Value and price.</b> The “transformation problem” has been debated since 1894: Böhm-Bawerk called it a fatal contradiction, and solutions have been proposed by Bortkiewicz, Sraffian economists, the “New Interpretation,” and the temporal single-system school.</li><li><b>Crises.</b> Marxists disagree over whether crises stem from underconsumption, disproportion between sectors, a profit squeeze, or a falling rate of profit. Hunt here stresses sectoral imbalance and demand.</li><li><b>Immiserization.</b> Real wages in rich countries rose greatly after Marx. Defenders point to relative shares, conditions of work, and the world scale. Critics count it as a failed prediction.</li><li><b>Concentration</b> is often counted as his most successful prediction (Topic 8).</li></ul><div class="think"><b>Question to think about:</b> Suppose wages rise steadily and workers live comfortably. What, if anything, is left of Marx’s criticism of capitalism?</div>
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 7.</p><p class="rd">Karl Marx, “Estranged Labour,” in the <em>Economic and Philosophic Manuscripts of 1844</em>.</p><p class="rl">Companion reading</p><p class="rd">Karl Marx, <em>Capital</em>, vol. 1 (1867), chapters 7, 25, and 26.</p><p class="rd">Paul Sweezy, <em>The Theory of Capitalist Development</em> (1942), the chapters on crises.</p><p class="rd">Richard Goodwin, “A Growth Cycle” (1967).</p>
+  <p class="pn"><a href="marx-capitalism.html">← Topic 6: Marx’s Conception of Capitalism</a><a href="corporate-capitalism.html">Topic 8: Corporate Capitalism and Its Ideological Defenses →</a></p>
+  <p><a href="index.html#topic-7">← Back to Topic 7 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const al=.025,be=.015,k=5;let u=V('u0')/100,v=V('v0')/100;const rho=V('b'),vs=.93,ga=rho*vs-al;const us=1-k*(al+be);const f=(u,v)=>[u*(rho*v-ga-al),v*((1-u)/k-al-be)];const dt=.05,N=1200,U=[],E=[];for(let i=0;i<=N;i++){if(i%4===0){U.push(u);E.push(v);}const a=f(u,v),b=f(u+dt/2*a[0],v+dt/2*a[1]),c=f(u+dt/2*b[0],v+dt/2*b[1]),d=f(u+dt*c[0],v+dt*c[1]);u+=dt/6*(a[0]+2*b[0]+2*c[0]+d[0]);v+=dt/6*(a[1]+2*b[1]+2*c[1]+d[1]);}
+const L=44,W=640,H=250,B=32,all=U.concat(E,[.6,1]),lo=Math.floor(Math.min(...all)*10)/10,hi=Math.ceil(Math.max(...all)*10-1e-9)/10,n=U.length-1,X=i=>L+i/n*(W-L-14),Y=z=>12+(1-(z-lo)/(hi-lo))*(H-B-12),p=A=>A.map((z,i)=>(i?'L':'M')+X(i).toFixed(1)+','+Y(z).toFixed(1)).join(' ');let g='';for(let z=lo;z<=hi+.001;z+=.1)g+=`<line x1="${L}" x2="${W-14}" y1="${Y(z)}" y2="${Y(z)}" stroke="#f0f2f4"/><text x="${L-6}" y="${Y(z)+4}" text-anchor="end">${Math.round(z*100)}%</text>`;[0,20,40,60].forEach(y=>g+=`<text x="${X(y/60*n)}" y="${H-16}" text-anchor="middle">${y}</text>`);g+=`<path d="${p(U)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/><path d="${p(E)}" fill="none" stroke="#023e8a" stroke-width="2.4" stroke-dasharray="6 3"/><text x="${L+8}" y="${H-1}" style="fill:#023e8a">employment rate (dashed)</text><text x="${L+170}" y="${H-1}" style="fill:#c47a2c">wage share (solid)</text><text x="${W-14}" y="${H-1}" text-anchor="end">years</text>`;$('ch').innerHTML=g;
+$('out').innerHTML=`Both series circle around their averages, a wage share of <b>${Math.round(us*100)}%</b> and employment of <b>93%</b>. Over the 60 years the wage share moves between ${Math.round(Math.min(...U)*100)}% and ${Math.round(Math.max(...U)*100)}%, and employment between ${Math.round(Math.min(...E)*100)}% and ${Math.round(Math.max(...E)*100)}%. `+(Math.max(...E)>1?'Employment above 100% is impossible; the simple model has no ceiling, so choose a milder starting point.':'Employment peaks first and wages follow. High employment raises wages, the squeeze on profits slows accumulation, and unemployment then disciplines wages.');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

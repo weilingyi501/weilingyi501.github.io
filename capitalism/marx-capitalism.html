@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Marx’s Conception of Capitalism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: Historical materialism, the market as a social relation, the class structure of capitalism, and Marx’s view of private property and capital, with an interactive classifier of class position.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/marx-capitalism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 6</p>
+  <h1>Marx’s Conception of Capitalism</h1>
+  <p class="lead">Marx learned from the earlier socialists but thought they misunderstood their opponent. Before asking what is wrong with capitalism, he asked what kind of society it is. This topic covers his theory of history, the market, class, and property. Topic 7 covers his economics.</p>
+
+  <div class="map"><div><b>Institutions</b>Mature competitive capitalism in mid-nineteenth-century Britain</div><div><b>Dominant ideas</b>Profit as the reward of abstinence and risk; capital as a thing</div><div><b>Opposition and critics</b>Marx and Engels; the First International</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#hm">Historical materialism</a></li><li><a href="#market">The market as a social relation</a></li><li><a href="#class">The class structure</a></li><li><a href="#prop">Private property</a></li><li><a href="#capital">What is capital?</a></li><li><a href="#debate">Beyond Hunt</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="hm">1. Historical materialism</h2>
+  <p>Marx began from the fact that people must produce in order to live, and that in producing they enter relations with one another. The <b>forces of production</b> are tools, skills, knowledge, and labor. The <b>relations of production</b> are class relations, above all the relations of property. Together they make up a <b>mode of production</b>, the base on which law, politics, religion, and ideas arise. Marx put it in a sentence in the 1859 Preface: it is not consciousness that determines existence, but “social existence determines their consciousness.”</p><p>The base does not determine ideas mechanically, and Hunt stresses that influence runs both ways. Economic relations are the more fundamental in the long run. History moves when the forces of production outgrow the relations that once encouraged them. Classes then struggle over the form society will take. Hunt lists four modes of production through which Europe had passed: primitive communal, slave, feudal, and capitalist. Marx expected capitalism to be the last one divided into classes.</p><p>This idea is the background of the whole book. Hunt’s claim that ideologies defend property relations is a version of historical materialism, though the preface says he leaves readers to draw their own conclusions about cause and effect.</p>
+  <h2 id="market">2. The market as a social relation</h2>
+  <p>In every society, production is social: no one lives from his or her own labor alone. What is peculiar to capitalism is that producers work privately and find out only in the market whether their labor was needed. Their relations with one another appear as relations among things, as prices. Marx called this <b>commodity fetishism</b>. Wheat and cloth have nothing physical in common that could explain why a certain amount of one exchanges for the other. What they share is that both are products of social labor.</p>
+  <h2 id="class">3. The class structure</h2>
+  <p>Hunt presents four classes:</p><ul><li><b>Capitalists</b> own enough means of production to live from income on property: profit, interest, and rent.</li><li><b>The middle class</b> of small owners and independent professionals own some means of production but must also work.</li><li><b>Workers</b> own no means of production and live by selling labor power.</li><li><b>The poorest</b> have little income from owning or working. Some cannot work; others are willing but unemployed. The second group weakens the bargaining power of those in work and is drawn in and thrown out with the business cycle.</li></ul><p>Class here is a relation to production and not a level of income. Hunt makes an ironic observation. The very rich and the very poor both receive income without producing, and conservative writers usually direct their anger at the poor, while those influenced by Marx direct it at the rich.</p><div class="box"><h3>Where does income come from?</h3><p class="note">Set a household’s yearly income from each source. The classification uses Hunt’s criterion, the source of income, and the thresholds are chosen for illustration.</p><div class="grid2"><div><label>Wages and salaries ($ thousands): <b id="wv"></b></label><input type="range" id="w" data-suf="" min="0" max="300" step="5" value="50"></div><div><label>Own small business or practice: <b id="sev"></b></label><input type="range" id="se" data-suf="" min="0" max="300" step="5" value="0"></div><div><label>Profit, interest, dividends, and rent: <b id="prv"></b></label><input type="range" id="pr" data-suf="" min="0" max="1000" step="10" value="2"></div><div><label>Public transfers and charity: <b id="trv"></b></label><input type="range" id="tr" data-suf="" min="0" max="60" step="2" value="0"></div></div><svg id="ch" viewBox="0 0 640 60" width="100%" role="img" aria-label="Income by source"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="prop">4. Private property</h2>
+  <p>Property, in Hunt’s definition, is a relation among people rather than between a person and a thing: a set of privileges and sanctions attached to objects, set up and kept up by an agency whose use of force is thought proper. Most people hear “private property” and think of a house or a coat. Marx had no quarrel with that. His target was private ownership of the <b>means of production</b> used by many people working together. Defenders of property often pictured an independent craftsman or farmer entitled to the fruits of his own work. Marx thought this had the matter backward: capitalist property grew by dispossessing such producers, and it entitles the owner to the fruits of other people’s labor. With the joint-stock company, the owner need not even manage. Management becomes a kind of skilled labor, and profit is a payment for ownership alone.</p><p>To the argument that profit rewards abstinence or sacrifice, Marx replied that sacrifice alone creates nothing for society; that any ruling class could use the same excuse (in the American South it was also hard to become a slave owner); and that most capitalists inherit their wealth or get it by shrewdness and luck.</p>
+  <h2 id="capital">5. What is capital?</h2>
+  <p>If capital is tools and materials, it has existed in every society, and capitalism seems eternal. For Marx, Hunt explains, capital exists only when three conditions hold: tools are produced as commodities; they are owned by a class other than the one that uses them; and the users may work only if they give up the product and accept a wage worth less than what they make. In the language of <em>Capital</em>, money is then used to make more money (M–C–M′) in place of simple exchange (C–M–C). Capital is a <b>social relation</b> that takes the form of things. This is Hodgskin’s insight (Topic 5), developed into a theory.</p>
+  <h2 id="debate">6. Beyond Hunt</h2>
+  <ul><li><b>Primacy.</b> G. A. Cohen (1978) defended a strict reading in which the forces of production explain the relations. E. P. Thompson and Ellen Meiksins Wood gave priority to class struggle. Max Weber accepted the importance of class but held that status and ideas have independent force.</li><li><b>Managers and professionals.</b> Erik Olin Wright analyzed “contradictory class locations” such as managers, who both sell labor power and control the labor of others.</li><li><b>Workers with pensions and stocks.</b> Many workers now own some financial assets. The slider exercise shows why small property income does not by itself change a class position, and where the boundary becomes unclear.</li><li><b>Analytical alternatives.</b> John Roemer (1982) derived exploitation from unequal ownership of assets, with no need for a labor theory of value.</li></ul><div class="think"><b>Question to think about:</b> Marx defined class by the source of income and the relation to production. What would be gained or lost by defining it by income level, education, or occupation?</div>
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 6.</p><p class="rd">Karl Marx, preface to <em>A Contribution to the Critique of Political Economy</em> (1859).</p><p class="rl">Companion reading</p><p class="rd">Karl Marx and Friedrich Engels, <em>Manifesto of the Communist Party</em> (1848), sections 1–2.</p><p class="rd">Karl Marx, <em>Capital</em>, vol. 1 (1867), chapter 1, section 4, and chapters 4–6.</p><p class="rd">Erik Olin Wright, <em>Understanding Class</em> (2015), selections.</p>
+  <p class="pn"><a href="socialist-protest.html">← Topic 5: Socialist Protest Amid the Industrial Revolution</a><a href="marx-economics.html">Topic 7: Marx’s Social and Economic Theories →</a></p>
+  <p><a href="index.html#topic-6">← Back to Topic 6 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const a=[['Wages',V('w'),'#023e8a'],['Own business',V('se'),'#3f8f6b'],['Property',V('pr'),'#c47a2c'],['Transfers',V('tr'),'#7b5ea7']],t=a.reduce((s,x)=>s+x[1],0);if(!t){$('ch').innerHTML='';$('out').textContent='Set at least one source of income.';return;}
+let x=10,g='';a.forEach(p=>{const wd=p[1]/t*620;if(wd>0)g+=`<rect x="${x}" y="8" width="${wd}" height="36" fill="${p[2]}"/>`;if(wd>84)g+=`<text x="${x+wd/2}" y="31" text-anchor="middle" style="fill:#fff;font-weight:600">${p[0]} ${Math.round(p[1]/t*100)}%</text>`;x+=wd;});$('ch').innerHTML=g;
+const pr=a[2][1],sh=a.map(p=>p[1]/t);let m;if(pr>=150&&sh[2]>=.5)m='<b>Capitalist class.</b> Property income alone is enough to live on, and it dominates. Any wage or salary is optional.';else if(sh[3]>.5)m='<b>The poorest group</b> in Hunt’s scheme: neither property nor regular work provides the main income. (Retired workers on public pensions also fall here by this rule, which shows a limit of classifying by current income.)';else if(sh[1]>=.4)m='<b>Middle class</b> in Hunt’s sense: a small owner or independent professional who both owns and works.';else if(pr>=100||sh[2]>=.4)m='<b>A contested location.</b> Substantial property income alongside other income. Is this a highly paid manager, a small rentier, or a capitalist? Wright’s “contradictory class locations” address such cases.';else m='<b>Working class.</b> The household lives mainly by selling labor power. Some property income does not change its need to work.';$('out').innerHTML=`Total income: $${t} thousand. `+m;}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

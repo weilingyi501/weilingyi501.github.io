@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Imperialism and Revolutionary Socialism | Lingyi Wei</title>
+  <meta name="description" content="A teaching module: The conquest of Asia and Africa, American expansion, and the theories of imperialism of Hobson, Luxemburg, and Lenin, with an interactive model of underconsumption and capital export.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/imperialism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a href="/resources.html">Resources</a> › <a href="index.html">Capitalism: Institutions and Ideologies</a> › Topic 11</p>
+  <h1>Imperialism and Revolutionary Socialism</h1>
+  <p class="lead">Between 1875 and 1914 a handful of powers took control of most of the world. Imperialism split the socialist movement more deeply than any question of theory. This topic covers the record and the three most influential explanations of it.</p>
+
+  <div class="map"><div><b>Institutions</b>Colonial conquest, capital export, rival great powers</div><div><b>Dominant ideas</b>The civilizing mission; national greatness</div><div><b>Opposition and critics</b>Hobson, Luxemburg, Lenin; anticolonial movements</div></div>
+
+  <div class="toc"><b>In this topic</b><ol><li><a href="#rec">The record</a></li><li><a href="#hob">Hobson</a></li><li><a href="#split">Imperialism divides the socialists</a></li><li><a href="#lux">Luxemburg</a></li><li><a href="#len">Lenin</a></li><li><a href="#debate">Beyond Hunt</a></li><li><a href="#read">Readings</a></li></ol></div>
+
+  <h2 id="rec">1. The record</h2>
+  <p><b>India.</b> Hunt begins with the East India Company’s conquest of Bengal in 1757. He cites estimates that Britain took between £500 million and £1,000 million out of India by 1815. Officials made fortunes quickly, and over the longer run British policy discouraged Indian manufactures and encouraged raw-material exports. Railways built after the 1850s, with a 5 percent return guaranteed to British investors by Indian taxpayers, opened the interior.</p><p><b>Africa.</b> In 1800 Europeans held little beyond the coast. By the First World War they controlled about 93 percent of the continent, by Hunt’s count. He singles out Leopold II’s Congo, where rubber was collected by terror, and the British South Africa Company of Cecil Rhodes, whose expansion he blames for the Boer War (1899–1902).</p><p><b>Asia and the Pacific.</b> France took Indochina, the Dutch completed their control of the East Indies, and Britain took Burma, Malaya, and much else. China was forced open by the Opium Wars and divided into spheres of influence.</p><p><b>The United States</b> conquered a continent from its native peoples, then took Hawaii, Puerto Rico, Guam, and the Philippines, where a long war for independence was suppressed. It secured the Panama Canal Zone in 1903, and sent marines to Nicaragua, Haiti, and the Dominican Republic.</p>
+  <h2 id="hob">2. Hobson</h2>
+  <p>J. A. Hobson’s <em>Imperialism</em> (1902), written after he reported on the Boer War, located the “taproot” of imperialism in <b>underconsumption</b>. Income was so unequally divided that the rich saved more than could be invested profitably at home. The surplus sought outlets abroad, and investors called on the state to protect them. Empire did not pay the nation as a whole; it paid a small group. Hobson’s remedy was reform. If income were distributed more equally, home demand would absorb the product and the motive for empire would fade.</p><div class="box"><h3>Hobson’s taproot</h3><p class="note">National income is 100. The top tenth saves a large part of its share, everyone else very little. Home investment depends on the growth of consumption. Saving that finds no outlet at home must go abroad or cause a slump.</p><div class="grid2"><div><label>Income share of the top tenth: <b id="tv"></b></label><input type="range" id="t" data-suf="%" min="20" max="60" step="1" value="46"></div><div><label>Saving rate of the top tenth: <b id="srv"></b></label><input type="range" id="sr" data-suf="%" min="10" max="60" step="1" value="35"></div><div><label>Saving rate of everyone else: <b id="spv"></b></label><input type="range" id="sp" data-suf="%" min="0" max="15" step="1" value="3"></div><div><label>Home investment, as % of consumption: <b id="iv"></b></label><input type="range" id="i" data-suf="%" min="4" max="30" step="1" value="13"></div></div><svg id="ch" viewBox="0 0 640 120" width="100%" role="img" aria-label="Saving and its outlets"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="split">3. Imperialism divides the socialists</h2>
+  <p>The Fabians split over the Boer War. Shaw’s faction argued that advanced powers were entitled to manage peoples who could not manage themselves. In a vote of the membership 45 percent wished to condemn imperialism and 55 percent to approve or ignore it, and eighteen members resigned. Many German revisionists approved of colonies or took no position; Hunt quotes Bernstein on the higher right of the higher civilization. To revolutionary socialists, this showed where evolutionary socialism led.</p>
+  <h2 id="lux">4. Luxemburg</h2>
+  <p>In <em>The Accumulation of Capital</em> (1913), Rosa Luxemburg asked where the demand comes from that allows capitalists to realize surplus value they intend to accumulate. Workers spend their wages, and capitalists consume a part. She found the missing buyers in noncapitalist societies. Capitalism needs them and destroys them, so it uses up the conditions of its own growth. She wrote with power about how natural economies were broken, and about military spending, which both protects empires and supplies a steady, state-guaranteed demand.</p><p>Hunt praises her insight into military spending, decades ahead of its time, but finds the theory faulty: to sell abroad a society must also buy, so noncapitalist trade does not by itself add net demand. Her mistake, he thinks, was to focus on underconsumption when the real force was the search for investment outlets, and he credits Lenin with the correction.</p>
+  <h2 id="len">5. Lenin</h2>
+  <p>Lenin’s <em>Imperialism, the Highest Stage of Capitalism</em>, written in 1916, drew on Hobson and Hilferding. He listed five features: monopoly; the merger of bank and industrial capital into finance capital; export of capital; division of the world among cartels; and division of territory among powers. Because capitalist countries grow at unequal rates, any division becomes outdated and leads to war. Hunt stresses Lenin’s difference from Hobson: the driving force is the export of capital, not of goods. Lenin added a political argument. Extra profits from the colonies raise wages at home and blunt the workers’ revolutionary will.</p><div class="tw"><table><tr><th></th><th>Hobson</th><th>Luxemburg</th><th>Lenin</th></tr><tr><td>Driving force</td><td>Unequal income and weak home demand</td><td>Realizing surplus value</td><td>Monopoly and finance capital</td></tr><tr><td>What is sought</td><td>Markets for goods and capital</td><td>Noncapitalist markets</td><td>Investment, materials, territory</td></tr><tr><td>Remedy</td><td>Redistribution</td><td>Revolution</td><td>Revolution</td></tr></table></div>
+  <h2 id="debate">6. Beyond Hunt</h2>
+  <ul><li><b>Where did capital go?</b> A large part of British capital before 1914 went to the United States, the settler dominions, and Latin America; the new African colonies received little. Critics such as D. K. Fieldhouse use this against Hobson and Lenin. Defenders reply that Lenin’s theory concerned rivalry over the whole world, formal colonies being one part.</li><li><b>Did empire pay?</b> Davis and Huttenback (1986) find that taxpayers lost while a small group of investors gained, close to Hobson’s view.</li><li><b>Other explanations.</b> Schumpeter (1919) blamed precapitalist elites, and Gallagher and Robinson (1953) the “imperialism of free trade,” informal where possible, formal where needed. Cain and Hopkins stress the “gentlemanly capitalism” of the City of London.</li><li><b>Colonial voices.</b> Dadabhai Naoroji’s theory of the drain (1901) came before Hobson’s book. W. E. B. Du Bois’s “The African Roots of War” (1915) preceded Lenin’s.</li></ul><h3 class="sub">Slips to watch for in the book</h3><p>Hunt says the British South Africa Company came to control South Africa completely. Its territory was to the north, in what became Rhodesia (Zimbabwe and Zambia). He says Afghanistan was put under the Indian government; after the war of 1878–80 Britain controlled its foreign affairs. His remark on the suppression of Black South Africans “today” was written before the end of apartheid in 1994.</p><p>See also the HET module on <a href="/het/imperialism.html">imperialism</a> and the trade module on <a href="/trade/imperialism-trade.html">theories of imperialism</a>.</p><div class="think"><b>Question to think about:</b> Hobson thought redistribution at home would end imperialism; Lenin thought it impossible under capitalism. What evidence from the twentieth century bears on this dispute?</div>
+  <h2 id="read">7. Readings</h2>
+  <p class="rl">Core reading</p><p class="rd">Hunt, <em>Property and Prophets</em>, chapter 11.</p><p class="rd">V. I. Lenin, <em>Imperialism, the Highest Stage of Capitalism</em> (1917), chapters 4–7.</p><p class="rl">Companion reading</p><p class="rd">J. A. Hobson, <em>Imperialism: A Study</em> (1902), part 1, chapter 6.</p><p class="rd">Rosa Luxemburg, <em>The Accumulation of Capital</em> (1913), chapters 26–29.</p><p class="rd">W. E. B. Du Bois, “The African Roots of War” (1915).</p>
+  <p class="pn"><a href="evolutionary-socialism.html">← Topic 10: Prosperity and Evolutionary Socialism</a><a href="keynes.html">Topic 12: Keynesian Economics and the Great Depression →</a></p>
+  <p><a href="index.html#topic-11">← Back to Topic 11 in the course outline</a></p>
+</main>
+
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const t=V('t')/100,S=100*(t*V('sr')/100+(1-t)*V('sp')/100),C=100-S,I=C*V('i')/100,X=S-I;const bar=(y,l,v,c)=>`<text x="4" y="${y+20}">${l}</text><rect x="150" y="${y}" width="${Math.max(0,v)*11}" height="30" fill="${c}"/><text x="${156+Math.max(0,v)*11}" y="${y+20}">${v.toFixed(1)}</text>`;$('ch').innerHTML=bar(8,'Total saving',S,'#c47a2c')+bar(46,'Invested at home',I,'#023e8a')+bar(84,X>=0?'Surplus for export':'Shortage',Math.abs(X),X>=0?'#9b2c2c':'#3f8f6b');
+const ts=((V('i')/100)/(1+V('i')/100)-V('sp')/100)/((V('sr')-V('sp'))/100)*100;$('out').innerHTML=X>0.05?`Saving exceeds home investment by <b>${X.toFixed(1)}</b>. In Hobson’s account this surplus goes abroad and takes the flag with it. `+(V('sr')>V('sp')&&ts>0&&ts<V('t')?`If the top tenth received about <b>${ts.toFixed(0)}%</b> of income, home investment would absorb all saving.`:'With these rates, redistribution alone would not absorb it.'):X<-0.05?`Home investment exceeds saving by ${(-X).toFixed(1)}; the country would import capital, as the United States did for most of the nineteenth century.`:'Saving and home investment balance. There is no pressure to export capital.';}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
