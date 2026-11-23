@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>经济学导论：历史、理论与政策 | Lingyi Wei</title>
+  <meta name="description" content="三十四个专题的经济学导论：经济制度与思想的历史、微观经济学、宏观经济学和世界经济。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+/* Theories of International Trade course page (shares the HET course styles). */
+.het { --soft:#f5f6f8; --line:#b9bfc7; --faint:#8a929b; }
+.page.het { max-width: 1000px; padding-top: 40px; }
+.het .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.het > h1 { margin-bottom: 6px; }
+.het .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--bar); background: var(--blue-soft); border-radius: 999px; padding: 2px 12px; margin-bottom: 12px; }
+.het p, .het li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.het .qs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 6px; }
+.het .qs div { background: var(--blue-soft); border-radius: 10px; padding: 14px 16px; }
+.het .qs b { display: block; color: var(--bar); margin-bottom: 4px; }
+.het .qs span { font-size: 16px; }
+@media (max-width: 760px) { .het .qs { grid-template-columns: 1fr; } }
+.het ol.goals li { margin-bottom: 6px; }
+
+/* Timeline */
+.het .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: 12px; background: #fff; }
+.het svg { display: block; }
+.het .hint { font-size: 14px; color: var(--faint); margin: 6px 0 0; }
+.het svg .era rect { stroke: #fff; stroke-width: 1; }
+.het svg .era text { font-size: 11px; fill: #33404d; }
+.het svg .yr { font-size: 11px; fill: var(--faint); }
+.het svg .grid { stroke: #eef0f3; }
+.het svg .lane-label { font-size: 12.5px; font-weight: 600; fill: #3a4450; }
+.het svg .bar { cursor: pointer; }
+.het svg .bar rect { rx: 7; }
+.het svg .bar text { font-size: 12px; font-weight: 600; fill: #fff; pointer-events: none; }
+.het svg .bar:hover rect, .het svg .bar:focus rect { filter: brightness(1.08); }
+.het svg .bar.on rect { stroke: #111; stroke-width: 2; }
+.het svg .link { fill: none; stroke: #4a5560; stroke-width: 1.6; opacity: 0; transition: opacity .15s; pointer-events: none; }
+.het svg .link.on { opacity: 1; }
+.het svg .link.react { stroke-dasharray: 4 3; }
+.het svg .ev circle { fill: #023e8a; }
+.het svg .hev { cursor: default; }
+.het svg .hev:hover text, .het svg .hev:focus text { text-decoration: underline; }
+.het svg .ev text { font-size: 10.5px; fill: #023e8a; }
+.het .tip { position: fixed; z-index: 50; pointer-events: none; background: #1f2933; color: #fff; font-size: 13.5px; padding: 5px 10px; border-radius: 6px; max-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.het svg .eg { cursor: default; }
+.het svg .eg:hover rect, .het svg .eg:focus rect { filter: brightness(.95); stroke: #8a929b; stroke-width: 1; }
+.het .views { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 4px 0 10px; font-size: 15px; color: var(--muted); }
+.het .vbtn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.het .vbtn.on { background: var(--link); color: #fff; }
+.het .vlegend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--text); margin: 0 0 10px; }
+.het .vlegend[hidden], .het .tip[hidden] { display: none; }
+.het .vlegend span { display: inline-flex; align-items: center; gap: 6px; }
+.het .vlegend i, .het .vchip { display: inline-block; border-radius: 4px; }
+.het .vlegend i { width: 14px; height: 14px; }
+.het .vchip { color: #fff; font-size: 13px; font-weight: 600; padding: 1px 9px; margin-right: 4px; }
+.het .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.het .legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid #7d8794; vertical-align: middle; margin-right: 6px; }
+.het .legend i.d { border-top-style: dashed; }
+
+.het .panel { border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; margin-top: 16px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.het .panel h3 { font-size: 22px; margin: 0; color: var(--text); font-weight: 600; }
+.het .panel .yrs { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.het .one { margin: 12px 0 0; padding: 10px 14px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; }
+.het .row { display: flex; gap: 14px; margin-top: 12px; }
+.het .row .lb { flex: 0 0 104px; font-size: 14px; color: var(--faint); padding-top: 3px; }
+.het .row .tx { flex: 1; }
+@media (max-width: 560px) { .het .row { flex-direction: column; gap: 2px; } .het .row .lb { flex: none; } }
+
+/* Portraits */
+.het .people { display: flex; flex-wrap: wrap; gap: 12px 14px; }
+.het .person { display: flex; flex-direction: column; align-items: center; width: 86px; text-align: center; font-size: 13px; line-height: 1.25; color: var(--text); }
+.het .person img, .het .person .ini { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--blue-line); background: var(--blue-soft); margin-bottom: 5px; }
+.het .person .ini { display: grid; place-items: center; font-weight: 600; color: var(--bar); font-size: 18px; }
+.het .person small { color: var(--faint); font-size: 12px; }
+
+/* Topics */
+.het .part { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bar); margin: 30px 0 8px; }
+.het details.wk { border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 10px; background: #fff; }
+.het details.wk > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; gap: 14px; align-items: baseline; }
+.het details.wk > summary::-webkit-details-marker { display: none; }
+.het details.wk > summary::before { content: none; }
+.het .wn { flex: 0 0 64px; font-size: 13px; font-weight: 600; color: var(--bar); }
+.het .wt { flex: 1; font-weight: 600; font-size: 17.5px; color: var(--text); }
+.het .wt small { display: block; font-weight: 400; color: var(--muted); font-size: 14.5px; }
+.het .chev { color: var(--link); font-size: 14px; }
+.het details.wk[open] .chev { transform: rotate(90deg); }
+.het .wb { padding: 2px 18px 18px 94px; }
+@media (max-width: 640px) { .het .wb { padding: 2px 16px 16px; } .het .wn { flex-basis: 52px; } }
+.het .ctx { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin: 6px 0 4px; }
+.het .ctx b { color: var(--bar); }
+.het .ctx ul { margin: 6px 0 0; padding-left: 18px; }
+.het .wb h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin: 16px 0 8px; }
+.het .wb ul.ideas { padding-left: 20px; margin: 0; }
+.het .wb ul.ideas li { margin-bottom: 5px; }
+.het p.rl, .het .wb p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.het p.rd, .het .wb p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
+.het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
+.het .books li { margin-bottom: 6px; }
+.het .credits { font-size: 13px; color: var(--faint); }
+.het .credits p { text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner"><a class="brand" href="/">Lingyi Wei</a><ul><li><a href="/">首页</a></li><li><a href="/research.html">研究</a></li><li><a href="/teaching.html">教学</a></li><li><a href="/food.html">食物</a></li><li><a href="/resources.html" class="on">资源</a></li><li><a href="/cv.html">简历</a></li></ul></div></header>
+<main class="page het">
+  <p class="crumb"><a class="langbtn" href="../index.html" lang="en" onclick="this.href += location.hash">English</a><a href="/resources.html">资源</a> › 经济学导论：历史、理论与政策</p>
+  <span class="tag">课程建设中</span>
+  <h1>经济学导论：历史、理论与政策</h1>
+  <p class="lead">经济为何以今天的方式组织起来，经济学家如何解释它们，这些解释又对政策意味着什么。</p>
+  <h2>关于本课程</h2>
+  <p>这是一门面向初学者的经济学导论。它先讲经济制度和经济思想的历史，再讲微观经济学、宏观经济学和世界经济。对每个主要问题，课程都把标准模型与其他解释放在一起，请学生用证据和论证来比较它们。</p>
+  <p>课程沿用主要教材的四个部分和章节顺序，把五十六章组合为三十四个专题。第一、二部分和第三、四部分可以分为两个学期讲授。教材出版于2008年，因此后来的事件，例如2008年的金融危机，由讨论题补充。</p>
+  <p>三个问题贯穿全课：</p>
+  <div class="qs"><div><b>历史</b><span>经济制度是怎样产生和变化的？</span></div><div><b>分配</b><span>收入由什么决定，又如何分配？</span></div><div><b>稳定</b><span>经济为什么会有繁荣与衰退，政策能做什么？</span></div></div>
+  <h2>学习目标</h2>
+  <p>学完本课程后，学生能够：</p>
+  <ol class="goals"><li>描述从早期社会到全球经济的主要经济制度。</li><li>运用供求、成本、市场结构、乘数和比较优势等基本模型。</li><li>比较不同传统对同一经济问题的回答。</li><li>用这些工具分析关于不平等、就业、通货膨胀、贸易和发展的公共讨论。</li></ol>
+  <h2>课程大纲</h2>
+  <p>三十四个专题，分为四个部分。点击专题可以查看背景、核心思想、阅读材料和思考题。</p>
+  <div class="part">第一部分 · 历史与思想</div>
+  <details class="wk" id="topic-1"><summary><span class="wn">专题1</span><span class="wt">早期经济<small>公社社会与古代奴隶制</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>在人类历史的大部分时间里，人们生活在采集、狩猎、共享的小群体中。农业和畜牧业使稳定的剩余成为可能，随之出现了私有财产、战俘和最早的阶级社会。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>任何社会都可以用四个特征来描述：技术、经济制度、社会制度和意识形态。</li><li>变革来自这四个特征之间的张力。</li><li>持久的剩余提出了一个问题：谁生产剩余，谁支配剩余？</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第1—2章。</p>
+    <div class="think"><b>思考题：</b> 为什么更富裕的社会可能更不平等？</div></div></details>
+  <details class="wk" id="topic-2"><summary><span class="wn">专题2</span><span class="wt">西欧封建制度<small>领主、农奴与基督教父权伦理</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>随着罗马奴隶制的衰落，昔日的奴隶、自由农民和日耳曼部落成员成为依附于庄园的农奴。中世纪教会教导说，地位意味着义务，追逐财富则是危险的。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>农奴承担劳役和实物，领主提供保护。</li><li>技术进步缓慢，部分原因是劳动者从改进中得益甚少。</li><li>基督教父权伦理谴责高利贷和不加节制的牟利。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第3—4章。</p>
+    <div class="think"><b>思考题：</b> 当很少有东西被买卖时，是什么维系着一个经济？</div></div></details>
+  <details class="wk" id="topic-3"><summary><span class="wn">专题3</span><span class="wt">从封建主义到资本主义<small>圈地、革命与英国重商主义</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>在大约三个世纪里，英国农民从劳役转向租佃，贸易和城镇发展起来，政治革命限制了王权。重商主义者争论国家应在多大程度上管理贸易，同时一种新的个人主义逐渐扎根。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>租佃和商品化农业把农村家庭带入市场。</li><li>新教和个人主义哲学为逐利提供了道德辩护。</li><li>工业革命提高了产出，也带来沉重的社会代价。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第5—6章。</p><p class="rd">Thomas Mun, <em>England’s Treasure by Forraign Trade</em> (1664), chapters 1–4.</p>
+    <div class="think"><b>思考题：</b> 在向资本主义的转变中，先出现的是新技术、新制度还是新思想？</div></div></details>
+  <details class="wk" id="topic-4"><summary><span class="wn">专题4</span><span class="wt">美国，1776—1865<small>从农场和种植园到早期工业</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>1776年的美国是一个由独立农民、商人和使用奴隶劳动的种植园构成的国家。到1860年，东北部正在工业化，而围绕奴隶制的冲突导致了内战。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>一个国家内部并存着几种经济制度。</li><li>法律、土地政策以及对美洲原住民的剥夺塑造了发展道路。</li><li>奴隶制对种植园主有利可图，它对南方增长的影响长期存在争论。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第7章。</p>
+    <div class="think"><b>思考题：</b> 奴隶制能否既有利可图，又阻碍经济发展？</div></div></details>
+  <details class="wk" id="topic-5"><summary><span class="wn">专题5</span><span class="wt">古典自由主义<small>自由市场的理由</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>亚当·斯密及其后继者写作时，工厂制度正在英国扩展。他们认为，个人在竞争市场中追求自身利益会促进公共利益，政府应当只承担少数几项任务。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>“看不见的手”通过竞争把自利与社会利益联系起来。</li><li>马尔萨斯提出了人口理论，怀疑济贫的价值。</li><li>政府应当提供国防、司法和某些公共工程。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第8章。</p><p class="rd">Adam Smith, <em>The Wealth of Nations</em> (1776), book I, chapters 1–3 and 7.</p>
+    <div class="think"><b>思考题：</b> “看不见的手”要发挥作用，需要哪些条件？</div></div></details>
+  <details class="wk" id="topic-6"><summary><span class="wn">专题6</span><span class="wt">早期工业的批评者<small>霍吉斯金、汤普森、欧文与马克思</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>工业增长带来了漫长的工时、童工和生活的不安定。改革者提出了合作和新的所有制形式，卡尔·马克思则建立了关于资本主义如何运行和变化的理论。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>霍吉斯金、汤普森和欧文对竞争本身是否是问题意见不一。</li><li>马克思的历史唯物主义把社会变迁归因于生产力与阶级关系之间的张力。</li><li>马克思用劳动力的价值与工人创造的价值之间的差额来解释利润。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第9—10章。</p><p class="rd">Karl Marx and Friedrich Engels, <em>The Communist Manifesto</em> (1848), part I.</p>
+    <div class="think"><b>思考题：</b> 这些批评者关心的问题，哪些后来得到了回应？是怎样回应的？</div></div></details>
+  <details class="wk" id="topic-7"><summary><span class="wn">专题7</span><span class="wt">公司与新古典经济学<small>1865—1900</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>内战之后，铁路、钢铁和石油落入巨型企业的控制，反托拉斯法随之出现。同一时期，经济学家以效用和边际分析重建了支持市场的论证。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>公司制度汇集了资本，限制了投资者的风险。</li><li>边际效用和边际生产率成为价格和收入理论的基础。</li><li>新古典经济学家对政府应当纠正多少问题意见不同。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第11—12章。</p><p class="rd">Alfred Marshall, <em>Principles of Economics</em> (1890), book V, chapter 3.</p>
+    <div class="think"><b>思考题：</b> 一种关于众多小企业的理论，能在多大程度上描述由大企业构成的经济？</div></div></details>
+  <details class="wk" id="topic-8"><summary><span class="wn">专题8</span><span class="wt">凡勃伦与制度<small>产业、商业与消费</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>索尔斯坦·凡勃伦目睹大公司及其所有者改变了美国人的生活。他把经济作为一套不断演化的习惯和制度来研究。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>产业生产有用的物品，商业追求利润，两者可能发生冲突。</li><li>炫耀性消费显示地位，并被社会各阶层逐级模仿。</li><li>制度的变化慢于技术。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第13章。</p><p class="rd">Thorstein Veblen, <em>The Theory of the Leisure Class</em> (1899), chapter 4.</p>
+    <div class="think"><b>思考题：</b> 我们购买的东西有多少是出于对他人看法的考虑？</div></div></details>
+  <details class="wk" id="topic-9"><summary><span class="wn">专题9</span><span class="wt">增长、萧条与凯恩斯<small>1900—1940</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>快速增长、一场世界大战和1920年代的繁荣，最终以大萧条告终。约翰·梅纳德·凯恩斯认为，经济可能停留在高失业状态，因此需要管理需求。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>凯恩斯否定了供给自行创造需求的说法。</li><li>总需求由四部分组成：消费、投资、政府支出和净出口。</li><li>战时支出结束了美国的大规模失业。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第14—15章。</p><p class="rd">John Maynard Keynes, <em>The General Theory of Employment, Interest and Money</em> (1936), chapters 1–3.</p>
+    <div class="think"><b>思考题：</b> 1930年代的失业为什么持续那么久？</div></div></details>
+  <details class="wk" id="topic-10"><summary><span class="wn">专题10</span><span class="wt">全球经济中的美国<small>1940年至今</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>1945年以后，美国主导世界经济。后来竞争者迎头赶上，贸易由顺差转为逆差，生产跨越国界。本书的叙述止于2006年，正值金融危机前夕。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>美国资本主义经历了工业、公司和全球三个阶段。</li><li>公司、贸易规则和通信技术把各国经济联结起来。</li><li>各国政府仍有权力，但面临新的限制。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第16章。</p>
+    <div class="think"><b>思考题：</b> 2008年以后的时期属于同一阶段，还是一个新阶段？</div></div></details>
+  <div class="part">第二部分 · 市场、收入与权力</div>
+  <details class="wk" id="topic-11"><summary><span class="wn">专题11</span><span class="wt">经济学的两种起点<small>个人还是制度</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>人们常用鲁滨逊的故事，从一个人的选择引入经济学。另一些人则从人们实际工作和交易的制度开始。本专题比较这两种起点。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>一种方法从稀缺条件下的个人选择出发进行推理。</li><li>另一种方法从制度、历史和社会群体出发。</li><li>微观经济学研究经济的各个部分，宏观经济学研究整体。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第17章。</p>
+    <div class="think"><b>思考题：</b> 鲁滨逊的故事遗漏了什么？这重要吗？</div></div></details>
+  <details class="wk" id="topic-12"><summary><span class="wn">专题12</span><span class="wt">收入、财富与阶级<small>衡量不平等</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>理论之前先看事实：美国的收入和财富如何分配，分配又发生了怎样的变化。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>收入是流量，财富是存量，而财富更为集中。</li><li>五等分份额和基尼系数概括了分配状况。</li><li>劳动收入与财产收入的走势不同。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第18章。</p>
+    <div class="think"><b>思考题：</b> 哪种不平等指标最能说明问题？每种指标又掩盖了什么？</div></div></details>
+  <details class="wk" id="topic-13"><summary><span class="wn">专题13</span><span class="wt">劳动、价格与利润<small>古典与马克思的观点</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>斯密和李嘉图把价格与劳动联系起来，马克思用这一思想解释利润。这些章节阐述了该理论以及对它的反对意见，包括来自同情者的批评。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>工作日可以分为必要劳动时间和剩余劳动时间。</li><li>工资取决于生产率、谈判和社会标准。</li><li>后来的经济学家提出了其他价格理论，转形问题至今仍有争论。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第19—20章。</p>
+    <div class="think"><b>思考题：</b> 没有劳动价值论，利润理论能否成立？</div></div></details>
+  <details class="wk" id="topic-14"><summary><span class="wn">专题14</span><span class="wt">市场势力与大企业<small>并购、集中与监管</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>1890年代以来的多次并购浪潮造就了由少数企业主导的行业，政府以反托拉斯法和监管作为回应。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>集中可能源于规模、技术、金融或合谋。</li><li>拥有市场势力的企业既选择产量，也选择价格。</li><li>反托拉斯和监管机构的成绩好坏参半。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第21章。</p>
+    <div class="think"><b>思考题：</b> 大企业何时是有效率的，何时只是有权势？</div></div></details>
+  <details class="wk" id="topic-15"><summary><span class="wn">专题15</span><span class="wt">歧视<small>种族、性别与劳动力市场</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>不同群体之间在工资、就业、教育和住房方面的差距持续存在。本专题考察证据和相互竞争的解释。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>职业隔离和同工不同酬有不同的衡量方法。</li><li>解释从个人偏见到制度和历史不一而足。</li><li>经济学家对竞争是否会减少歧视意见不一。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第22章。</p>
+    <div class="think"><b>思考题：</b> 谁从歧视中得益，谁受损？</div></div></details>
+  <details class="wk" id="topic-16"><summary><span class="wn">专题16</span><span class="wt">环境<small>污染、价格与限度</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>生产消耗资源并产生废物，而市场价格往往忽略它们。本专题比较从可交易许可证、管制到更深层制度变革的各种方案。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>污染是由交易之外的人承担的成本。</li><li>市场、管制和制度性的办法建立在不同的假设之上。</li><li>马尔萨斯的人口论以新的形式再次出现。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第23章。</p>
+    <div class="think"><b>思考题：</b> 清洁的空气应该有价格吗？</div></div></details>
+  <details class="wk" id="topic-17"><summary><span class="wn">专题17</span><span class="wt">政府、民主与经济<small>影响力、政策与参与</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>经济资源影响选举、游说、法律和媒体，政策又反过来影响收入分配。本专题最后讨论经济参与的各种实践。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>税收、教育和医疗政策可能缩小也可能扩大不平等。</li><li>形式上的政治权利与实际的影响力可能不同。</li><li>合作社和公共企业是扩大经济决策参与的两种形式。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第24—25章。</p>
+    <div class="think"><b>思考题：</b> 民主决策应当止于何处，市场决策又应当始于何处？</div></div></details>
+  <details class="wk" id="topic-18"><summary><span class="wn">专题18</span><span class="wt">稀缺、选择、供给与需求<small>核心市场模型</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>标准模型从稀缺和机会成本出发，引出供给与需求。这些章节先介绍模型，再介绍对它的批评。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>生产可能性曲线显示机会成本。</li><li>价格变化使人沿曲线移动，其他变化使曲线移动。</li><li>弹性衡量买者和卖者反应的强弱。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第26—27章。</p>
+    <div class="think"><b>思考题：</b> 供求分析能很好地解释什么，又不能解释什么？</div></div></details>
+  <details class="wk" id="topic-19"><summary><span class="wn">专题19</span><span class="wt">消费者选择<small>效用与需求</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>新古典理论从消费者在预算内追求效用最大化推导出需求。批评者则追问偏好从何而来。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>边际效用递减有助于解释向下倾斜的需求曲线。</li><li>当花在每种商品上的最后一美元带来相同的效用时，消费者的效用达到最大。</li><li>批评者认为，广告和社会环境会塑造偏好。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第28章。</p>
+    <div class="think"><b>思考题：</b> 我们的欲望真的是自己的吗？</div></div></details>
+  <details class="wk" id="topic-20"><summary><span class="wn">专题20</span><span class="wt">生产与成本<small>企业的供给面</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>企业的供给取决于技术和成本。本专题从生产函数讲到短期和长期的成本曲线。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>短期内至少有一种投入固定不变，其他投入的报酬最终递减。</li><li>边际成本曲线在平均可变成本和平均总成本的最低点与之相交。</li><li>规模报酬决定长期成本。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第29—30章。</p>
+    <div class="think"><b>思考题：</b> 现实中的企业面临递增的边际成本吗？</div></div></details>
+  <details class="wk" id="topic-21"><summary><span class="wn">专题21</span><span class="wt">工作与工资<small>边际生产率及其批评</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>按照新古典的解释，每种投入得到它所增加的价值。本章将其与工资也反映谈判和权力的观点并列。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>劳动需求由边际收益产品决定。</li><li>替代效应和收入效应可能使劳动供给曲线向后弯曲。</li><li>人力资本、工作条件和歧视有助于解释工资差距。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第31章。</p>
+    <div class="think"><b>思考题：</b> 人们的报酬等于他们的产出吗？</div></div></details>
+  <details class="wk" id="topic-22"><summary><span class="wn">专题22</span><span class="wt">市场结构<small>从完全竞争到垄断</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>企业理论以四种市场结构为框架：完全竞争、垄断竞争、寡头和垄断。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>每个企业都在边际收益等于边际成本处实现利润最大化。</li><li>竞争性企业接受既定价格，垄断者则限制产量以抬高价格。</li><li>寡头必须预测彼此的行为，通过价格领导、合谋或对抗。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第32—34章。</p>
+    <div class="think"><b>思考题：</b> 哪种市场结构最符合你每天打交道的企业？</div></div></details>
+  <details class="wk" id="topic-23"><summary><span class="wn">专题23</span><span class="wt">市场失灵<small>公共物品、外部性与税收</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>即使在标准理论中，市场也可能失灵。本专题讨论市场何时失灵，政府又能做些什么。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>公共物品具有非竞争性和非排他性，因此会有搭便车问题。</li><li>税收和补贴可以使外部成本和收益进入价格。</li><li>税制需要兼顾效率、支付能力和受益原则。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第35章。</p>
+    <div class="think"><b>思考题：</b> 市场失灵是例外还是常态？</div></div></details>
+  <div class="part">第三部分 · 增长与稳定</div>
+  <details class="wk" id="topic-24"><summary><span class="wn">专题24</span><span class="wt">经济周期与国民账户<small>记录繁荣与衰退</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>自19世纪初以来，市场经济在扩张与收缩之间交替。国民账户使我们能够衡量什么在上升、什么在下降。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>失业既有私人成本，也有社会成本。</li><li>GDP可以从支出或收入两方面加总，结果相同。</li><li>GDP没有计入家务劳动和环境损害。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第36—37章。</p>
+    <div class="think"><b>思考题：</b> 比GDP更好的指标应当包括什么？</div></div></details>
+  <details class="wk" id="topic-25"><summary><span class="wn">专题25</span><span class="wt">总供给与总需求<small>萨伊、新古典经济学家与凯恩斯</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>市场经济会自行恢复充分就业吗？萨伊和新古典经济学家给出了三个理由，凯恩斯逐一作了回答。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>萨伊定律认为总需求会自行适应总供给。</li><li>新古典的论证通过商品价格、工资和利率展开。</li><li>凯恩斯回答说，工资下降会削减支出，而推动投资的是预期利润。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第38—40章。</p><p class="rd">John Maynard Keynes, <em>The General Theory</em> (1936), chapter 18.</p>
+    <div class="think"><b>思考题：</b> 你认为凯恩斯的三个回答中哪一个最有力？</div></div></details>
+  <details class="wk" id="topic-26"><summary><span class="wn">专题26</span><span class="wt">消费与投资<small>什么推动需求</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>消费是支出中最大的部分，投资则波动最大。本专题说明如何在周期中衡量二者，以及推动它们的因素。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>平均倾向和边际倾向描述家庭如何支出收入。</li><li>收入分配、债务和财富影响总消费。</li><li>投资滞后于利润的变化。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第41—43章。</p>
+    <div class="think"><b>思考题：</b> 家庭债务上升怎样改变了工资与支出之间的联系？</div></div></details>
+  <details class="wk" id="topic-27"><summary><span class="wn">专题27</span><span class="wt">乘数与周期理论<small>扩张为什么结束</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>支出的变化会引发一轮又一轮的支出。经济学家对衰退来自外部冲击还是来自扩张自身意见不一。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>简单乘数等于 1/(1 − MPC)。</li><li>加速数把投资与需求的变化联系起来。</li><li>消费不足论、工资成本论和冲击论对衰退作出不同的解释。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第44—45章。</p>
+    <div class="think"><b>思考题：</b> 哪种理论符合2008年的衰退，哪种符合2020年的衰退？</div></div></details>
+  <details class="wk" id="topic-28"><summary><span class="wn">专题28</span><span class="wt">增长及其代价<small>来源、分享与浪费</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>增长取决于储蓄、投资和生产率，也取决于需求是否充足。本专题讨论增长如何分享以及付出了什么代价。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>古典公式把增长与储蓄和投资的生产率联系起来。</li><li>大约1970年以后，美国增长放缓，收入更加不平等。</li><li>部分增长来自对福祉贡献甚微的支出。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第46章。</p>
+    <div class="think"><b>思考题：</b> 增长越快就一定越好吗？</div></div></details>
+  <details class="wk" id="topic-29"><summary><span class="wn">专题29</span><span class="wt">财政政策<small>支出、税收与赤字</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>政府支出和税收影响需求，有时自动发生，有时出于选择。争论在于是否应当用它们来稳定经济。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>自动稳定器在衰退中扩大赤字，在扩张中缩小赤字。</li><li>批评者指出了挤出效应、时滞和政治因素。</li><li>战争和军费是美国财政史的重要组成部分。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第47—48章。</p>
+    <div class="think"><b>思考题：</b> 政府应当每年平衡预算吗？</div></div></details>
+  <details class="wk" id="topic-30"><summary><span class="wn">专题30</span><span class="wt">货币、银行与信用<small>银行如何创造货币</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>货币经历了从物物交换到铸币、纸币、信用和电子记账的演变。银行在放贷时创造货币，信用可能放大繁荣与衰退。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>货币是交换媒介、计价单位和价值储藏手段。</li><li>新的贷款创造新的存款。</li><li>信用在扩张中上升，在衰退中下降。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第49章。</p>
+    <div class="think"><b>思考题：</b> 如果银行创造货币，是什么限制了创造的数量？</div></div></details>
+  <details class="wk" id="topic-31"><summary><span class="wn">专题31</span><span class="wt">通货膨胀与货币政策<small>物价与美联储</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>通货膨胀曾源于强劲的需求、上升的成本和战争。中央银行主要通过利率应对，经济学家对其效果看法不一。本书写作于量化宽松和2021—2023年通胀之前。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>需求拉动型和成本推动型通胀需要不同的对策。</li><li>滞胀是物价上涨与高失业并存。</li><li>美联储使用过法定准备金、公开市场操作和贴现率。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第50—51章。</p>
+    <div class="think"><b>思考题：</b> 中央银行对抗通胀时，谁得益，谁受损？</div></div></details>
+  <div class="part">第四部分 · 世界经济</div>
+  <details class="wk" id="topic-32"><summary><span class="wn">专题32</span><span class="wt">贸易、金融与世界周期<small>不稳定如何传播</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>贸易、投资和金融把各国的周期联系在一起，繁荣与衰退由此从一国传到另一国。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>进口随国民收入涨落。</li><li>贸易逆差减少对国内产品的需求。</li><li>外国投资和贷款可以加速增长，也可以传播危机。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第52—53章。</p>
+    <div class="think"><b>思考题：</b> 美国住房市场的问题怎样在2008年演变为世界危机？</div></div></details>
+  <details class="wk" id="topic-33"><summary><span class="wn">专题33</span><span class="wt">全球化与自由贸易<small>两场长期的争论</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>比较优势是支持自由贸易的经典理由，幼稚产业论是经典的回应。全球化的争论又加入了劳工、环境和分配问题。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>比较优势取决于相对成本，而不是绝对成本。</li><li>幼稚产业论主张暂时的保护，普雷维什和辛格则追问谁从专业化中得益。</li><li>全球化带来了增长和创新，也带来了冲击。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第54—55章。</p><p class="rd">David Ricardo, <em>On the Principles of Political Economy and Taxation</em> (1817), chapter 7.</p>
+    <div class="think"><b>思考题：</b> 有没有公平的办法来分担贸易的得失？</div></div></details>
+  <details class="wk" id="topic-34"><summary><span class="wn">专题34</span><span class="wt">发展<small>为什么有些国家更贫穷</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>背景</b><br>国家之间的收入差距依然很大。本专题比较以人口、政府和市场为基础的解释，以及以殖民历史和剩余的使用为基础的解释。</div>
+    <h4>核心思想</h4><ul class="ideas"><li>发展不仅仅是人均收入的增长。</li><li>殖民时期的贸易格局留下了持久的影响。</li><li>剩余概念追问：一国超出基本需要的产出由谁支配，又如何使用。</li></ul>
+    <h4>阅读材料</h4><p class="rd">谢尔曼等，第56章。</p>
+    <div class="think"><b>思考题：</b> 哪些发展障碍来自内部，哪些来自世界经济？</div></div></details>
+
+  <h2>教材</h2>
+  <p class="rd">Howard J. Sherman, E. K. Hunt, Reynold F. Nesiba, Phillip A. O’Hara, and Barbara Wiens-Tuers, <em>Economics: An Introduction to Traditional and Progressive Views</em>, 7th ed. (M. E. Sharpe, 2008; Routledge, 2015).</p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  function openHash() { const d = /^#topic-\d+$/.test(location.hash) && document.querySelector(location.hash); if (d) { d.open = true; d.scrollIntoView(); } }
+  window.addEventListener('hashchange', openHash); openHash();
+})();
+</script>
+</body>
+</html>

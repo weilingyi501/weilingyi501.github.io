@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Introduction to Economics: History, Theory, and Policy | Lingyi Wei</title>
+  <meta name="description" content="A first course in economics in thirty-four topics: the history of economic systems and ideas, microeconomics, macroeconomics, and the world economy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/">
+  <link rel="stylesheet" href="../style.css">
+<style>
+/* Theories of International Trade course page (shares the HET course styles). */
+.het { --soft:#f5f6f8; --line:#b9bfc7; --faint:#8a929b; }
+.page.het { max-width: 1000px; padding-top: 40px; }
+.het .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.het > h1 { margin-bottom: 6px; }
+.het .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--bar); background: var(--blue-soft); border-radius: 999px; padding: 2px 12px; margin-bottom: 12px; }
+.het p, .het li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.het .qs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 8px 0 6px; }
+.het .qs div { background: var(--blue-soft); border-radius: 10px; padding: 14px 16px; }
+.het .qs b { display: block; color: var(--bar); margin-bottom: 4px; }
+.het .qs span { font-size: 16px; }
+@media (max-width: 760px) { .het .qs { grid-template-columns: 1fr; } }
+.het ol.goals li { margin-bottom: 6px; }
+
+/* Timeline */
+.het .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: 12px; background: #fff; }
+.het svg { display: block; }
+.het .hint { font-size: 14px; color: var(--faint); margin: 6px 0 0; }
+.het svg .era rect { stroke: #fff; stroke-width: 1; }
+.het svg .era text { font-size: 11px; fill: #33404d; }
+.het svg .yr { font-size: 11px; fill: var(--faint); }
+.het svg .grid { stroke: #eef0f3; }
+.het svg .lane-label { font-size: 12.5px; font-weight: 600; fill: #3a4450; }
+.het svg .bar { cursor: pointer; }
+.het svg .bar rect { rx: 7; }
+.het svg .bar text { font-size: 12px; font-weight: 600; fill: #fff; pointer-events: none; }
+.het svg .bar:hover rect, .het svg .bar:focus rect { filter: brightness(1.08); }
+.het svg .bar.on rect { stroke: #111; stroke-width: 2; }
+.het svg .link { fill: none; stroke: #4a5560; stroke-width: 1.6; opacity: 0; transition: opacity .15s; pointer-events: none; }
+.het svg .link.on { opacity: 1; }
+.het svg .link.react { stroke-dasharray: 4 3; }
+.het svg .ev circle { fill: #023e8a; }
+.het svg .hev { cursor: default; }
+.het svg .hev:hover text, .het svg .hev:focus text { text-decoration: underline; }
+.het svg .ev text { font-size: 10.5px; fill: #023e8a; }
+.het .tip { position: fixed; z-index: 50; pointer-events: none; background: #1f2933; color: #fff; font-size: 13.5px; padding: 5px 10px; border-radius: 6px; max-width: 260px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.het svg .eg { cursor: default; }
+.het svg .eg:hover rect, .het svg .eg:focus rect { filter: brightness(.95); stroke: #8a929b; stroke-width: 1; }
+.het .views { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 4px 0 10px; font-size: 15px; color: var(--muted); }
+.het .vbtn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; }
+.het .vbtn.on { background: var(--link); color: #fff; }
+.het .vlegend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--text); margin: 0 0 10px; }
+.het .vlegend[hidden], .het .tip[hidden] { display: none; }
+.het .vlegend span { display: inline-flex; align-items: center; gap: 6px; }
+.het .vlegend i, .het .vchip { display: inline-block; border-radius: 4px; }
+.het .vlegend i { width: 14px; height: 14px; }
+.het .vchip { color: #fff; font-size: 13px; font-weight: 600; padding: 1px 9px; margin-right: 4px; }
+.het .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.het .legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid #7d8794; vertical-align: middle; margin-right: 6px; }
+.het .legend i.d { border-top-style: dashed; }
+
+.het .panel { border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; margin-top: 16px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.het .panel h3 { font-size: 22px; margin: 0; color: var(--text); font-weight: 600; }
+.het .panel .yrs { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.het .one { margin: 12px 0 0; padding: 10px 14px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; }
+.het .row { display: flex; gap: 14px; margin-top: 12px; }
+.het .row .lb { flex: 0 0 104px; font-size: 14px; color: var(--faint); padding-top: 3px; }
+.het .row .tx { flex: 1; }
+@media (max-width: 560px) { .het .row { flex-direction: column; gap: 2px; } .het .row .lb { flex: none; } }
+
+/* Portraits */
+.het .people { display: flex; flex-wrap: wrap; gap: 12px 14px; }
+.het .person { display: flex; flex-direction: column; align-items: center; width: 86px; text-align: center; font-size: 13px; line-height: 1.25; color: var(--text); }
+.het .person img, .het .person .ini { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--blue-line); background: var(--blue-soft); margin-bottom: 5px; }
+.het .person .ini { display: grid; place-items: center; font-weight: 600; color: var(--bar); font-size: 18px; }
+.het .person small { color: var(--faint); font-size: 12px; }
+
+/* Topics */
+.het .part { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--bar); margin: 30px 0 8px; }
+.het details.wk { border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 10px; background: #fff; }
+.het details.wk > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; gap: 14px; align-items: baseline; }
+.het details.wk > summary::-webkit-details-marker { display: none; }
+.het details.wk > summary::before { content: none; }
+.het .wn { flex: 0 0 64px; font-size: 13px; font-weight: 600; color: var(--bar); }
+.het .wt { flex: 1; font-weight: 600; font-size: 17.5px; color: var(--text); }
+.het .wt small { display: block; font-weight: 400; color: var(--muted); font-size: 14.5px; }
+.het .chev { color: var(--link); font-size: 14px; }
+.het details.wk[open] .chev { transform: rotate(90deg); }
+.het .wb { padding: 2px 18px 18px 94px; }
+@media (max-width: 640px) { .het .wb { padding: 2px 16px 16px; } .het .wn { flex-basis: 52px; } }
+.het .ctx { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin: 6px 0 4px; }
+.het .ctx b { color: var(--bar); }
+.het .ctx ul { margin: 6px 0 0; padding-left: 18px; }
+.het .wb h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin: 16px 0 8px; }
+.het .wb ul.ideas { padding-left: 20px; margin: 0; }
+.het .wb ul.ideas li { margin-bottom: 5px; }
+.het p.rl, .het .wb p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.het p.rd, .het .wb p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.het .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; }
+.het .mod { display: inline-block; margin-top: 12px; font-weight: 600; }
+.het .books li { margin-bottom: 6px; }
+.het .credits { font-size: 13px; color: var(--faint); }
+.het .credits p { text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner"><a class="brand" href="/">Lingyi Wei</a><ul><li><a href="/">Home</a></li><li><a href="/research.html">Research</a></li><li><a href="/teaching.html">Teaching</a></li><li><a href="/food.html">Food</a></li><li><a href="/resources.html" class="on">Resources</a></li><li><a href="/cv.html">CV</a></li></ul></div></header>
+<main class="page het">
+  <p class="crumb"><a class="langbtn" href="zh/index.html" lang="zh-CN" onclick="this.href += location.hash">中文</a><a href="/resources.html">Resources</a> › Introduction to Economics: History, Theory, and Policy</p>
+  <span class="tag">Course in development</span>
+  <h1>Introduction to Economics: History, Theory, and Policy</h1>
+  <p class="lead">How economies came to be organized as they are, how economists explain them, and what the explanations mean for policy.</p>
+  <h2>About the course</h2>
+  <p>This is a first course in economics. It begins with the history of economic systems and economic ideas, and then turns to microeconomics, macroeconomics, and the world economy. On each main question it sets the standard model beside other explanations and asks students to compare them by evidence and argument.</p>
+  <p>The course follows the four parts and the chapter order of its main text, grouping fifty-six chapters into thirty-four topics. Parts I and II, and Parts III and IV, can be taught as two semesters. The text was published in 2008, so later events such as the financial crisis of 2008 enter through the discussion questions.</p>
+  <p>Three questions run through the whole course:</p>
+  <div class="qs"><div><b>History</b><span>How do economic systems arise and change?</span></div><div><b>Distribution</b><span>What determines incomes, and how are they shared?</span></div><div><b>Stability</b><span>Why do economies boom and slump, and what can policy do?</span></div></div>
+  <h2>Learning goals</h2>
+  <p>By the end of the course, students will be able to:</p>
+  <ol class="goals"><li>Describe the main economic systems from early societies to the global economy.</li><li>Use basic models, including supply and demand, costs, market structure, the multiplier, and comparative advantage.</li><li>Compare how different traditions answer the same economic question.</li><li>Apply these tools to public debates over inequality, employment, inflation, trade, and development.</li></ol>
+  <h2>Course outline</h2>
+  <p>Thirty-four topics in four parts. Click a topic to see its context, core ideas, readings, and a question to think about.</p>
+  <div class="part">Part I · History and Ideas</div>
+  <details class="wk" id="topic-1"><summary><span class="wn">Topic 1</span><span class="wt">Early Economies<small>Communal societies and ancient slavery</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>For most of human history people lived in small bands that gathered, hunted, and shared. Farming and herding made a regular surplus possible, and with it private property, war captives, and the first class societies.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Four features describe any society: its technology, its economic institutions, its social institutions, and its ideology.</li><li>Change comes from tension among the four features.</li><li>A lasting surplus raises the question of who produces it and who controls it.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 1–2.</p>
+    <div class="think"><b>Question to think about:</b> Why might a richer society be a less equal one?</div></div></details>
+  <details class="wk" id="topic-2"><summary><span class="wn">Topic 2</span><span class="wt">Feudalism in Western Europe<small>Lords, serfs, and the Christian paternalist ethic</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>As Roman slavery declined, former slaves, free farmers, and members of the Germanic tribes became serfs bound to a manor. The medieval Church taught that rank carried obligations and that the pursuit of wealth was dangerous.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Serfs owed labor and produce; lords owed protection.</li><li>Technology improved only slowly, partly because those who worked gained little from improvement.</li><li>The Christian paternalist ethic condemned usury and unrestrained gain.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 3–4.</p>
+    <div class="think"><b>Question to think about:</b> What holds an economy together when few things are bought and sold?</div></div></details>
+  <details class="wk" id="topic-3"><summary><span class="wn">Topic 3</span><span class="wt">From Feudalism to Capitalism<small>Enclosure, revolution, and mercantilism in England</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Over about three centuries English peasants moved from labor services to leases, trade and towns grew, and political revolution limited the power of the crown. Mercantilist writers debated how far the state should direct trade, while a new individualism took hold.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Leases and commercial farming drew rural households into the market.</li><li>Protestantism and individualist philosophy gave profit seeking a moral defense.</li><li>The Industrial Revolution raised output and imposed heavy social costs.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 5–6.</p><p class="rd">Thomas Mun, <em>England’s Treasure by Forraign Trade</em> (1664), chapters 1–4.</p>
+    <div class="think"><b>Question to think about:</b> Which came first in the change to capitalism: new technology, new institutions, or new ideas?</div></div></details>
+  <details class="wk" id="topic-4"><summary><span class="wn">Topic 4</span><span class="wt">The United States, 1776–1865<small>From farms and plantations to early industry</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>In 1776 the United States was a country of independent farmers, merchants, and plantations worked by enslaved people. By 1860 the Northeast was industrializing, and the conflict over slavery led to civil war.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Several economic systems existed side by side in one country.</li><li>Law, land policy, and the dispossession of Native Americans shaped development.</li><li>Slavery was profitable for planters, and its effect on Southern growth has long been debated.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 7.</p>
+    <div class="think"><b>Question to think about:</b> Can slavery be profitable and still hold back economic development?</div></div></details>
+  <details class="wk" id="topic-5"><summary><span class="wn">Topic 5</span><span class="wt">Classical Liberalism<small>The case for free markets</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Adam Smith and his successors wrote as the factory system spread in Britain. They argued that individuals pursuing their own interest in competitive markets would promote the general good, and that government should keep to a few tasks.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>The invisible hand links self-interest to social benefit through competition.</li><li>Malthus added a theory of population that doubted the value of poor relief.</li><li>Government should provide defense, justice, and some public works.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 8.</p><p class="rd">Adam Smith, <em>The Wealth of Nations</em> (1776), book I, chapters 1–3 and 7.</p>
+    <div class="think"><b>Question to think about:</b> What conditions does the invisible hand need in order to work?</div></div></details>
+  <details class="wk" id="topic-6"><summary><span class="wn">Topic 6</span><span class="wt">Critics of Early Industry<small>Hodgskin, Thompson, Owen, and Marx</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Industrial growth brought long hours, child labor, and insecurity. Reformers proposed cooperation and new forms of ownership, and Karl Marx developed a theory of how capitalism works and changes.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Hodgskin, Thompson, and Owen disagreed about whether competition itself was the problem.</li><li>Marx’s historical materialism traces social change to tension between productive forces and class relations.</li><li>Marx explained profit by the difference between the value of labor power and the value workers create.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 9–10.</p><p class="rd">Karl Marx and Friedrich Engels, <em>The Communist Manifesto</em> (1848), part I.</p>
+    <div class="think"><b>Question to think about:</b> Which of these critics’ concerns have been answered since, and how?</div></div></details>
+  <details class="wk" id="topic-7"><summary><span class="wn">Topic 7</span><span class="wt">The Corporation and Neoclassical Economics<small>1865–1900</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>After the Civil War railroads, steel, and oil came under the control of giant firms, and antitrust law appeared. In the same decades economists rebuilt the case for markets on utility and marginal analysis.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Incorporation pooled capital and limited investors’ risk.</li><li>Marginal utility and marginal productivity became the basis of price and income theory.</li><li>Neoclassical economists differed over how much government should correct.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 11–12.</p><p class="rd">Alfred Marshall, <em>Principles of Economics</em> (1890), book V, chapter 3.</p>
+    <div class="think"><b>Question to think about:</b> How well does a theory of many small firms describe an economy of large ones?</div></div></details>
+  <details class="wk" id="topic-8"><summary><span class="wn">Topic 8</span><span class="wt">Veblen and Institutions<small>Industry, business, and consumption</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Thorstein Veblen watched large corporations and their owners reshape American life. He studied the economy as a set of evolving habits and institutions.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Industry makes useful goods; business seeks profit, and the two can conflict.</li><li>Conspicuous consumption displays status and is imitated down the social scale.</li><li>Institutions change more slowly than technology.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 13.</p><p class="rd">Thorstein Veblen, <em>The Theory of the Leisure Class</em> (1899), chapter 4.</p>
+    <div class="think"><b>Question to think about:</b> How much of what we buy is about what other people will think?</div></div></details>
+  <details class="wk" id="topic-9"><summary><span class="wn">Topic 9</span><span class="wt">Growth, Depression, and Keynes<small>1900–1940</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Rapid growth, a world war, and the boom of the 1920s ended in the Great Depression. John Maynard Keynes argued that an economy could settle at high unemployment and that demand had to be managed.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Keynes rejected the claim that supply creates its own demand.</li><li>Aggregate demand has four parts: consumption, investment, government spending, and net exports.</li><li>Wartime spending ended mass unemployment in the United States.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 14–15.</p><p class="rd">John Maynard Keynes, <em>The General Theory of Employment, Interest and Money</em> (1936), chapters 1–3.</p>
+    <div class="think"><b>Question to think about:</b> Why did unemployment in the 1930s last so long?</div></div></details>
+  <details class="wk" id="topic-10"><summary><span class="wn">Topic 10</span><span class="wt">The United States in the Global Economy<small>1940 to the present</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>After 1945 the United States led the world economy. Later, rivals caught up, trade moved from surplus to deficit, and production spread across borders. The book’s account ends in 2006, just before the financial crisis.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>American capitalism passed through industrial, corporate, and global stages.</li><li>Corporations, trade rules, and communication technology linked national economies.</li><li>National governments kept power but faced new limits.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 16.</p>
+    <div class="think"><b>Question to think about:</b> Does the period since 2008 belong to the same stage, or to a new one?</div></div></details>
+  <div class="part">Part II · Markets, Income, and Power</div>
+  <details class="wk" id="topic-11"><summary><span class="wn">Topic 11</span><span class="wt">Two Ways to Start Economics<small>Individuals or institutions</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>The story of Robinson Crusoe is often used to introduce economics through one person’s choices. Others begin with the institutions in which people actually work and trade. This topic compares the two starting points.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>One approach reasons from individual choice under scarcity.</li><li>The other reasons from institutions, history, and social groups.</li><li>Microeconomics studies parts of the economy, and macroeconomics studies the whole.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 17.</p>
+    <div class="think"><b>Question to think about:</b> What does the Crusoe story leave out, and does it matter?</div></div></details>
+  <details class="wk" id="topic-12"><summary><span class="wn">Topic 12</span><span class="wt">Income, Wealth, and Class<small>Measuring inequality</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Before theory come facts: how income and wealth are distributed in the United States, and how the distribution has changed.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Income is a flow; wealth is a stock, and wealth is more concentrated.</li><li>Quintile shares and the Gini coefficient summarize a distribution.</li><li>Income from work and income from property follow different paths.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 18.</p>
+    <div class="think"><b>Question to think about:</b> Which measure of inequality tells you most, and what does each one hide?</div></div></details>
+  <details class="wk" id="topic-13"><summary><span class="wn">Topic 13</span><span class="wt">Labor, Prices, and Profits<small>The classical and Marxian view</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Smith and Ricardo linked prices to labor, and Marx used the idea to explain profit. The chapters set out that theory and the objections to it, including those of sympathetic economists.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>The working day can be divided into necessary and surplus labor time.</li><li>Wages depend on productivity, bargaining, and social standards.</li><li>Later economists proposed other price theories, and the transformation problem remains debated.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 19–20.</p>
+    <div class="think"><b>Question to think about:</b> Can a theory of profit stand without the labor theory of value?</div></div></details>
+  <details class="wk" id="topic-14"><summary><span class="wn">Topic 14</span><span class="wt">Market Power and the Large Firm<small>Mergers, concentration, and regulation</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Waves of mergers since the 1890s produced industries dominated by a few firms, and governments answered with antitrust law and regulation.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Concentration can come from scale, technology, finance, or collusion.</li><li>Firms with market power choose prices as well as output.</li><li>Antitrust and regulatory agencies have a mixed record.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 21.</p>
+    <div class="think"><b>Question to think about:</b> When is a large firm efficient, and when is it merely powerful?</div></div></details>
+  <details class="wk" id="topic-15"><summary><span class="wn">Topic 15</span><span class="wt">Discrimination<small>Race, gender, and the labor market</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Gaps in pay, jobs, schooling, and housing persist between groups. This topic examines the evidence and the competing explanations.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Occupational segregation and unequal pay are measured in different ways.</li><li>Explanations range from individual prejudice to institutions and history.</li><li>Economists disagree about whether competition reduces discrimination.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 22.</p>
+    <div class="think"><b>Question to think about:</b> Who gains from discrimination, and who loses?</div></div></details>
+  <details class="wk" id="topic-16"><summary><span class="wn">Topic 16</span><span class="wt">The Environment<small>Pollution, prices, and limits</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Production uses up resources and creates waste that market prices often ignore. The topic compares proposals from tradable permits to regulation to deeper institutional change.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Pollution is a cost borne by people outside the transaction.</li><li>Market, regulatory, and institutional remedies rest on different assumptions.</li><li>The Malthusian argument about population has returned in new forms.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 23.</p>
+    <div class="think"><b>Question to think about:</b> Should clean air have a price?</div></div></details>
+  <details class="wk" id="topic-17"><summary><span class="wn">Topic 17</span><span class="wt">Government, Democracy, and the Economy<small>Influence, policy, and participation</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Economic resources affect elections, lobbying, law, and the media, and policy in turn affects the distribution of income. The topic ends with experiments in economic participation.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Taxes, education, and health policy can narrow or widen inequality.</li><li>Formal political rights and effective influence can differ.</li><li>Cooperatives and public enterprises are two forms of wider participation in economic decisions.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 24–25.</p>
+    <div class="think"><b>Question to think about:</b> Where should democratic decisions end and market decisions begin?</div></div></details>
+  <details class="wk" id="topic-18"><summary><span class="wn">Topic 18</span><span class="wt">Scarcity, Choice, Supply, and Demand<small>The core market model</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>The standard model begins with scarcity and opportunity cost and leads to supply and demand. The chapters present the model first and then its critics.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>A production possibility curve shows opportunity cost.</li><li>Price changes move along a curve; other changes shift it.</li><li>Elasticity measures how strongly buyers and sellers respond.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 26–27.</p>
+    <div class="think"><b>Question to think about:</b> What can supply and demand explain well, and what can it not?</div></div></details>
+  <details class="wk" id="topic-19"><summary><span class="wn">Topic 19</span><span class="wt">Consumer Choice<small>Utility and demand</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Neoclassical theory derives demand from consumers who maximize utility within a budget. Critics ask where preferences come from.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Diminishing marginal utility helps explain downward-sloping demand.</li><li>A consumer maximizes utility when the last dollar spent on each good adds the same utility.</li><li>Critics argue that advertising and social setting shape preferences.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 28.</p>
+    <div class="think"><b>Question to think about:</b> Are our wants our own?</div></div></details>
+  <details class="wk" id="topic-20"><summary><span class="wn">Topic 20</span><span class="wt">Production and Costs<small>The supply side of the firm</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>A firm’s supply rests on its technology and its costs. The topic works from the production function to cost curves in the short and the long run.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>In the short run at least one input is fixed, and returns to the others eventually diminish.</li><li>Marginal cost cuts average variable and average total cost at their lowest points.</li><li>Returns to scale shape long-run costs.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 29–30.</p>
+    <div class="think"><b>Question to think about:</b> Do real firms face rising marginal costs?</div></div></details>
+  <details class="wk" id="topic-21"><summary><span class="wn">Topic 21</span><span class="wt">Work and Wages<small>Marginal productivity and its critics</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>In the neoclassical account each input earns the value of what it adds. The chapter sets this beside the view that wages also reflect bargaining and power.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Labor demand follows the marginal revenue product.</li><li>Substitution and income effects can make labor supply bend backward.</li><li>Human capital, working conditions, and discrimination help explain wage gaps.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 31.</p>
+    <div class="think"><b>Question to think about:</b> Are people paid what they produce?</div></div></details>
+  <details class="wk" id="topic-22"><summary><span class="wn">Topic 22</span><span class="wt">Market Structures<small>From perfect competition to monopoly</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Four market structures organize the theory of the firm: perfect competition, monopolistic competition, oligopoly, and monopoly.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Every firm maximizes profit where marginal revenue equals marginal cost.</li><li>A competitive firm takes price as given; a monopolist restricts output to raise it.</li><li>Oligopolists must anticipate one another, through price leadership, collusion, or rivalry.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 32–34.</p>
+    <div class="think"><b>Question to think about:</b> Which market structure best describes the firms you deal with every day?</div></div></details>
+  <details class="wk" id="topic-23"><summary><span class="wn">Topic 23</span><span class="wt">Market Failure<small>Public goods, externalities, and taxes</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Even in standard theory markets can fail. The topic asks when they do and what governments can do about it.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Public goods are nonrival and nonexcludable, so free riding is a problem.</li><li>Taxes and subsidies can bring external costs and benefits into prices.</li><li>Tax systems balance efficiency, ability to pay, and benefits received.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 35.</p>
+    <div class="think"><b>Question to think about:</b> Are market failures exceptions, or the normal case?</div></div></details>
+  <div class="part">Part III · Growth and Stability</div>
+  <details class="wk" id="topic-24"><summary><span class="wn">Topic 24</span><span class="wt">Business Cycles and National Accounts<small>Recording booms and busts</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Market economies have alternated between expansion and contraction since the early nineteenth century. National accounts let us measure what rises and falls.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Unemployment has private and social costs.</li><li>GDP can be added up from spending or from income, with the same total.</li><li>GDP leaves out household work and environmental damage.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 36–37.</p>
+    <div class="think"><b>Question to think about:</b> What would a better measure than GDP include?</div></div></details>
+  <details class="wk" id="topic-25"><summary><span class="wn">Topic 25</span><span class="wt">Aggregate Supply and Demand<small>Say, the neoclassicals, and Keynes</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Does a market economy return to full employment by itself? Say and the neoclassical economists gave three reasons to think so, and Keynes answered each one.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Say’s law holds that aggregate demand adjusts to aggregate supply.</li><li>The neoclassical argument runs through goods prices, wages, and interest rates.</li><li>Keynes replied that falling wages cut spending and that expected profit drives investment.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 38–40.</p><p class="rd">John Maynard Keynes, <em>The General Theory</em> (1936), chapter 18.</p>
+    <div class="think"><b>Question to think about:</b> Which of Keynes’s three replies do you find strongest?</div></div></details>
+  <details class="wk" id="topic-26"><summary><span class="wn">Topic 26</span><span class="wt">Consumption and Investment<small>What moves demand</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Consumption is the largest part of spending, and investment is the most volatile. The topic shows how each is measured over the cycle and what drives it.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Average and marginal propensities describe how households spend income.</li><li>Income distribution, debt, and wealth affect total consumption.</li><li>Investment follows profits with a lag.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 41–43.</p>
+    <div class="think"><b>Question to think about:</b> How does rising household debt change the link between wages and spending?</div></div></details>
+  <details class="wk" id="topic-27"><summary><span class="wn">Topic 27</span><span class="wt">The Multiplier and Theories of the Cycle<small>Why expansions end</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>A change in spending sets off further rounds of spending. Economists disagree about whether downturns come from outside shocks or from within the expansion itself.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>The simple multiplier equals 1/(1 − MPC).</li><li>The accelerator ties investment to changes in demand.</li><li>Underconsumption, wage-cost, and shock theories explain downturns differently.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 44–45.</p>
+    <div class="think"><b>Question to think about:</b> Which theory fits the recession of 2008, and which fits 2020?</div></div></details>
+  <details class="wk" id="topic-28"><summary><span class="wn">Topic 28</span><span class="wt">Growth and Its Costs<small>Sources, sharing, and waste</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Growth depends on saving, investment, and productivity, and also on whether there is enough demand. This topic asks how growth is shared and what it costs.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>The classical formula links growth to saving and the productivity of investment.</li><li>U.S. growth slowed after about 1970 while income grew more unequal.</li><li>Some growth reflects spending that adds little to well-being.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 46.</p>
+    <div class="think"><b>Question to think about:</b> Is faster growth always better?</div></div></details>
+  <details class="wk" id="topic-29"><summary><span class="wn">Topic 29</span><span class="wt">Fiscal Policy<small>Spending, taxes, and deficits</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Government spending and taxes affect demand, sometimes automatically and sometimes by choice. The debate concerns whether they should be used to stabilize the economy.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Automatic stabilizers raise the deficit in recessions and reduce it in expansions.</li><li>Critics point to crowding out, lags, and politics.</li><li>Wars and military budgets have been a major part of U.S. fiscal history.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 47–48.</p>
+    <div class="think"><b>Question to think about:</b> Should the government balance its budget every year?</div></div></details>
+  <details class="wk" id="topic-30"><summary><span class="wn">Topic 30</span><span class="wt">Money, Banking, and Credit<small>How banks create money</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Money evolved from barter to coin, paper, credit, and electronic entries. Banks create money when they lend, and credit can amplify booms and busts.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Money serves as a medium of exchange, a unit of account, and a store of value.</li><li>New loans create new deposits.</li><li>Credit rises in expansions and falls in recessions.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 49.</p>
+    <div class="think"><b>Question to think about:</b> If banks create money, what limits how much they create?</div></div></details>
+  <details class="wk" id="topic-31"><summary><span class="wn">Topic 31</span><span class="wt">Inflation and Monetary Policy<small>Prices and the Federal Reserve</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Inflation has come from strong demand, rising costs, and wars. Central banks answer mainly through interest rates, and economists disagree about how well this works. The book predates quantitative easing and the inflation of 2021–23.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Demand-pull and cost-push inflation call for different remedies.</li><li>Stagflation combined rising prices with high unemployment.</li><li>The Fed has used reserve requirements, open market operations, and the discount rate.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 50–51.</p>
+    <div class="think"><b>Question to think about:</b> Who gains and who loses when a central bank fights inflation?</div></div></details>
+  <div class="part">Part IV · The World Economy</div>
+  <details class="wk" id="topic-32"><summary><span class="wn">Topic 32</span><span class="wt">Trade, Finance, and World Cycles<small>How instability travels</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Trade, investment, and finance link national cycles, so that booms and recessions pass from one country to another.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Imports rise and fall with national income.</li><li>A trade deficit reduces demand for domestic products.</li><li>Foreign investment and lending can speed growth and spread crises.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 52–53.</p>
+    <div class="think"><b>Question to think about:</b> How did trouble in U.S. housing become a world crisis in 2008?</div></div></details>
+  <details class="wk" id="topic-33"><summary><span class="wn">Topic 33</span><span class="wt">Globalization and Free Trade<small>Two long debates</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Comparative advantage is the classic case for free trade, and infant industry is the classic reply. The globalization debate adds labor, environment, and distribution.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Comparative advantage depends on relative, not absolute, cost.</li><li>Defenders of infant industries favor temporary protection; Prebisch and Singer questioned who gains from specialization.</li><li>Globalization has brought growth and innovation, and also dislocation.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapters 54–55.</p><p class="rd">David Ricardo, <em>On the Principles of Political Economy and Taxation</em> (1817), chapter 7.</p>
+    <div class="think"><b>Question to think about:</b> Is there a fair way to share the gains and losses from trade?</div></div></details>
+  <details class="wk" id="topic-34"><summary><span class="wn">Topic 34</span><span class="wt">Development<small>Why some countries are poorer</small></span><span class="chev">▸</span></summary>
+    <div class="wb"><div class="ctx"><b>Context</b><br>Income gaps between countries remain large. This topic compares explanations based on population, government, and markets with those based on colonial history and the use of the surplus.</div>
+    <h4>Core ideas</h4><ul class="ideas"><li>Development means more than growth in income per person.</li><li>Colonial trade patterns left lasting effects.</li><li>The concept of the surplus asks who controls what a country produces beyond basic needs, and how it is used.</li></ul>
+    <h4>Readings</h4><p class="rd">Sherman et al., chapter 56.</p>
+    <div class="think"><b>Question to think about:</b> Which obstacles to development are internal, and which come from the world economy?</div></div></details>
+
+  <h2>Text</h2>
+  <p class="rd">Howard J. Sherman, E. K. Hunt, Reynold F. Nesiba, Phillip A. O’Hara, and Barbara Wiens-Tuers, <em>Economics: An Introduction to Traditional and Progressive Views</em>, 7th ed. (M. E. Sharpe, 2008; Routledge, 2015).</p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  function openHash() { const d = /^#topic-\d+$/.test(location.hash) && document.querySelector(location.hash); if (d) { d.open = true; d.scrollIntoView(); } }
+  window.addEventListener('hashchange', openHash); openHash();
+})();
+</script>
+</body>
+</html>
