@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>The Multiplier and Theories of the Cycle | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: The Multiplier and Theories of the Cycle. Why expansions end.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/multiplier-cycles.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/multiplier-cycles.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/multiplier-cycles.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 27</p>
+  <h1>The Multiplier and Theories of the Cycle</h1>
+  <p class="lead">A change in spending sets off further rounds of spending. Economists disagree about whether downturns come from outside shocks or from within the expansion itself.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">The multiplier</a></li><li><a href="#s2">The accelerator</a></li><li><a href="#s3">The two together</a></li><li><a href="#s4">Shocks from outside</a></li><li><a href="#s5">Forces from inside</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. The multiplier</h2>
+  <p>When the government hires a teacher, the teacher spends part of the pay, the seller spends part of that, and so on. If each person spends 80 percent of any extra income, 1,000 dollars of new spending raises income by 5,000 in the end: the <b>multiplier</b> is 1/(1 − MPC). New investment and new exports work in the same way. In practice the figure is smaller. Taxes, imports, and delays drain each round, and taxes raised to pay for the spending offset much of it.</p>
+  <h2 id="s2">2. The accelerator</h2>
+  <p>Firms build capacity to meet growth in demand. If three dollars of capital are needed for each dollar of yearly output, demand must keep rising for net investment to stay positive; merely slowing the growth of sales makes investment fall. The <b>accelerator</b> helps explain why investment is so unstable. It works weakly when capacity is idle, and it ignores costs and finance.</p>
+  <h2 id="s3">3. The two together</h2>
+  <p>Consumption drives investment and investment drives consumption, so an expansion feeds itself and a contraction does too. Paul Samuelson showed in 1939 that the two can produce smooth adjustment, cycles that die out, or cycles that grow, depending on their size.</p>
+  <div data-sim="samuelson"></div>
+  <h2 id="s4">4. Shocks from outside</h2>
+  <p>For many neoclassical economists the economy returns quickly to equilibrium, so downturns must come from outside. Lucas stressed unexpected monetary and fiscal policy. <b>Real business cycle</b> theory stresses changes in technology and in prices such as that of oil, and holds that fluctuations can be efficient responses to them.</p>
+  <h2 id="s5">5. Forces from inside</h2>
+  <p>The text’s own account centers on profit. Early in an expansion, sales rise while wages, interest, and materials are still cheap. Later, consumption lags because the labor share has fallen, while raw materials and interest grow dearer. Profit is squeezed from both sides, investment turns down, and a contraction feeds on itself until costs have fallen enough to restore profit. <b>Underconsumption</b> theories stress the demand side. <b>Overinvestment</b> theories stress costs, in some versions wages late in the boom.</p>
+  <p class="note"><b>Note:</b> The crisis of 2008 brought new attention to a third line of thought, Hyman Minsky’s, in which stable times encourage risky borrowing. The 2020 recession is the clearest recent case of an outside shock.</p>
+  <div class="think"><b>Question to think about:</b> Which theory fits the recession of 2008, and which fits 2020?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapters 44–45.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Paul A. Samuelson, “Interactions between the Multiplier Analysis and the Principle of Acceleration,” <em>Review of Economics and Statistics</em> 21 (1939).</p>
+  <p class="rd">Hyman P. Minsky, “The Financial Instability Hypothesis” (Levy Economics Institute Working Paper 74, 1992).</p>
+  <p class="pn"><a href="consumption-investment.html">← Consumption and Investment</a><a href="growth-costs.html">Growth and Its Costs →</a></p>
+  <p><a href="index.html#topic-27">← Back to Topic 27 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

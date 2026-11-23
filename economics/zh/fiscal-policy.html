@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>财政政策 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：财政政策. 支出、税收与赤字.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/fiscal-policy.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/fiscal-policy.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../fiscal-policy.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题29</p>
+  <h1>财政政策</h1>
+  <p class="lead">政府支出和税收影响需求，有时自动发生，有时出于选择。争论在于是否应当用它们来稳定经济。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">预算与需求</a></li><li><a href="#s2">自动的与相机抉择的</a></li><li><a href="#s3">反对积极政策的理由</a></li><li><a href="#s4">支持的理由</a></li><li><a href="#s5">军费</a></li><li><a href="#s6">债务是负担吗？</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 预算与需求</h2>
+  <p><b>财政政策</b>指政府支出和税收。<b>赤字</b>向支出流注入的多于税收抽走的，<b>盈余</b>则相反。<b>债务</b>是过去赤字减去盈余的累计。社会保障和利息等转移支付转移收入而不购买商品。</p>
+  <h2 id="s2">2. 自动的与相机抉择的</h2>
+  <p><b>自动的</b>政策在现行法律下运作。衰退时失业救济增加、税收下降，赤字不经表决就扩大；扩张时则缩小。教材中1970至2001年的平均数据显示了和平时期的这种情形。战争是重大例外，因为支出猛增而税收滞后。<b>相机抉择的</b>政策需要新的决定。</p>
+  <div data-sim="stabilizer"></div>
+  <h2 id="s3">3. 反对积极政策的理由</h2>
+  <p>米尔顿·弗里德曼认为，经济能够自我纠正，公共支出占用了本会由私人使用的资源（<b>挤出</b>），政府的职责应当有限。时滞是另一个问题：认识到衰退、通过法律、修建桥梁所需的时间可能比衰退本身还长。</p>
+  <h2 id="s4">4. 支持的理由</h2>
+  <p>凯恩斯主义者回答说，闲置资源谈不上被挤出，而等待代价高昂。简单的规则是：萧条时增支或减税，繁荣时相反。教材也补充了局限：私人利益抵制许多公共支出，对高收入者的减税支出缓慢，一种政策无法同时对付失业和通货膨胀。</p>
+  <h2 id="s5">5. 军费</h2>
+  <p>战争生产结束了大萧条。作者认为，军费比民用支出遇到的反对更少，因此常常填补了需求的缺口，但在充分就业时它会挤占消费和投资。他们主张以民用支出代替；另一些人则认为军费主要由安全需要决定。</p>
+  <h2 id="s6">6. 债务是负担吗？</h2>
+  <p>以本国货币借款的政府不会被迫违约，但可能引起通货膨胀。利息使收入从纳税人转向债券持有者。欠外国的债务是对未来产出的索取权，而欠本国人的债务则不同。</p>
+  <p class="note"><b>说明：</b> 2009年和2020—2021年的大规模财政计划提供了许多新证据。许多研究发现，利率接近零时乘数更大；至于2021年的计划在多大程度上推高了通货膨胀，经济学家意见不一。</p>
+  <div class="think"><b>思考题：</b> 政府应当每年平衡预算吗？</div>
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第47—48章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Abba Lerner, “Functional Finance and the Federal Debt,” <em>Social Research</em> 10 (1943).</p>
+  <p class="rd">Michał Kalecki, “Political Aspects of Full Employment,” <em>Political Quarterly</em> 14 (1943).</p>
+  <p class="pn"><a href="growth-costs.html">← 增长及其代价</a><a href="money-banking.html">货币、银行与信用 →</a></p>
+  <p><a href="index.html#topic-29">← 返回课程大纲中的专题29</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

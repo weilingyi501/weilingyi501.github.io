@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>经济周期与国民账户 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：经济周期与国民账户. 记录繁荣与衰退.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/cycles-national-accounts.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/cycles-national-accounts.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../cycles-national-accounts.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题24</p>
+  <h1>经济周期与国民账户</h1>
+  <p class="lead">自19世纪初以来，市场经济在扩张与收缩之间交替。国民账户使我们能够衡量什么在上升、什么在下降。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">繁荣与衰退的历史</a></li><li><a href="#s2">统计失业者</a></li><li><a href="#s3">代价</a></li><li><a href="#s4">国民账户</a></li><li><a href="#s5">GDP遗漏了什么</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 繁荣与衰退的历史</h2>
+  <p>早期社会遭受的是战争、干旱和瘟疫。产出与就业有规律的波动随市场经济而来：教材把现代周期的起点定在英国的1793年、法国的1847年和德国的1857年，到19世纪末衰退已具有国际性。在美国，1890年代的萧条最严重时，失业率因估计方法不同约为12%至18%，1930年代约为四分之一。</p>
+  <h2 id="s2">2. 统计失业者</h2>
+  <p>官方失业率只统计完全没有工作并且近期找过工作的人。每周工作一小时的人算就业，灰心而不再找工作的人不算在劳动力之内。一年中曾经失业的人数远多于任何一个月的失业人数。把丧失信心者和非自愿兼职者计算在内的更宽口径总是更高。</p>
+  <h2 id="s3">3. 代价</h2>
+  <p>衰退使社会失去未生产的商品、未进行的投资和未运用的技能。企业倒闭。对失业者而言，代价不止于收入：研究把失业上升与疾病、离婚和自杀联系起来。</p>
+  <h2 id="s4">4. 国民账户</h2>
+  <p><b>国内生产总值</b>是一国一年内生产的最终商品和服务的价值。按支出加总，等于 C + I + G + NX；按收入加总，等于支付给劳动和财产的收入，并对折旧和企业税作调整。可支配收入是家庭在纳税和获得转移支付之后可用于支出或储蓄的收入。按2005年首次公布的数字，消费接近GDP的70%，个人储蓄略为负值。这类数字会在多年中不断修订：2005年的储蓄率现为可支配收入的2.2%。</p>
+  <div data-sim="gdp"></div>
+  <h2 id="s5">5. GDP遗漏了什么</h2>
+  <p>GDP没有计入家务劳动（教材估计约相当于统计产出的四分之一），也没有扣除污染和资源消耗。事故和离婚反而可能使它上升。<b>真实进步指标</b>等试图加以修正，代价是在加减什么的问题上需要作许多判断。</p>
+  <p class="note"><b>说明：</b> 在教材写成之后，失业率在2009年10月达到10.0%，2020年4月达到14.8%，为1948年官方序列开始以来的最高月度值。</p>
+  <div class="think"><b>思考题：</b> 比GDP更好的指标应当包括什么？</div>
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第36—37章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Marilyn Waring, <em>If Women Counted</em> (Harper &amp; Row, 1988).</p>
+  <p class="rd">Joseph Stiglitz, Amartya Sen, and Jean-Paul Fitoussi, <em>Mismeasuring Our Lives</em> (New Press, 2010).</p>
+  <p class="pn"><a href="market-failure.html">← 市场失灵</a><a href="aggregate-supply-demand.html">总供给与总需求 →</a></p>
+  <p><a href="index.html#topic-24">← 返回课程大纲中的专题24</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

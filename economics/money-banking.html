@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Money, Banking, and Credit | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Money, Banking, and Credit. How banks create money.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/money-banking.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/money-banking.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/money-banking.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 30</p>
+  <h1>Money, Banking, and Credit</h1>
+  <p class="lead">Money evolved from barter to coin, paper, credit, and electronic entries. Banks create money when they lend, and credit can amplify booms and busts.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">What money does</a></li><li><a href="#s2">From goldsmith to bank</a></li><li><a href="#s3">The money multiplier</a></li><li><a href="#s4">Balance sheets and panics</a></li><li><a href="#s5">Credit and the cycle</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. What money does</h2>
+  <p>Money is a medium of exchange, a unit of account, and a store of value. The text tells its history in stages: barter, goods used as money, metal coins, paper claims on metal, paper not convertible into metal, and bank deposits.</p>
+  <h2 id="s2">2. From goldsmith to bank</h2>
+  <p>Goldsmiths stored coin and gave receipts, which began to pass as payment. Since few holders asked for coin on the same day, a goldsmith could lend by issuing more receipts than there was coin in the vault. Lending had created money. Modern banks do the same when they credit a borrower’s account.</p>
+  <h2 id="s3">3. The money multiplier</h2>
+  <p>In the textbook account a bank keeps a required fraction of deposits as reserves and lends the rest, which is spent and deposited again. With a reserve ratio of 20 percent, a new deposit of 1,000 dollars can support deposits of 5,000. Banks that hold extra reserves, and people who hold cash, make the figure smaller.</p>
+  <div data-sim="deposits"></div>
+  <h2 id="s4">4. Balance sheets and panics</h2>
+  <p>A bank’s assets are reserves, securities, and loans, and its liabilities are mostly deposits. It earns by lending long and borrowing short, so it trades profit against <b>liquidity</b>. If depositors all ask for cash at once, a sound bank can fail, and failures spread. Panics were frequent in the nineteenth century; deposit insurance, begun in the 1930s, greatly reduced runs by small depositors.</p>
+  <h2 id="s5">5. Credit and the cycle</h2>
+  <p>Borrowing grows in expansions as confidence rises, and debts grow faster than incomes. Interest rates rise with demand for loans, usually with a lag. When incomes fall, debts cannot be met, lenders withdraw, and a small downturn becomes a large one.</p>
+  <p class="note"><b>Note:</b> Many economists and central banks now describe the order differently: banks lend first, creating deposits, and find reserves afterward, limited by profitability, capital, and the interest rate the central bank sets. The United States reduced reserve requirements to zero in March 2020.</p>
+  <div class="think"><b>Question to think about:</b> If banks create money, what limits how much they create?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapter 49.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Michael McLeay, Amar Radia, and Ryland Thomas, “Money Creation in the Modern Economy,” <em>Bank of England Quarterly Bulletin</em> (2014 Q1).</p>
+  <p class="pn"><a href="fiscal-policy.html">← Fiscal Policy</a><a href="inflation-monetary-policy.html">Inflation and Monetary Policy →</a></p>
+  <p><a href="index.html#topic-30">← Back to Topic 30 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

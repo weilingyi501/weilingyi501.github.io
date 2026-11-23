@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>消费与投资 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：消费与投资. 什么推动需求.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/consumption-investment.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/consumption-investment.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../consumption-investment.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题26</p>
+  <h1>消费与投资</h1>
+  <p class="lead">消费是支出中最大的部分，投资则波动最大。本专题说明如何在周期中衡量二者，以及推动它们的因素。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">衡量周期</a></li><li><a href="#s2">消费函数</a></li><li><a href="#s3">分配与债务</a></li><li><a href="#s4">投资</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 衡量周期</h2>
+  <p>米切尔确定了波峰和波谷的日期，把每个周期分为九个阶段，从起始波谷（阶段1）经波峰（5）到最终波谷（9）。<b>周期相对数</b>把每个阶段表示为周期平均值的百分比，使不同周期可以比较。失业在扩张中下降、在收缩中上升，产能利用率则相反。</p>
+  <h2 id="s2">2. 消费函数</h2>
+  <p>凯恩斯观察到，消费随收入增加，但增加得较少。<b>平均消费倾向</b>是消费除以收入，<b>边际消费倾向</b>是额外一美元中用于消费的部分。较穷的家庭花光所得甚至更多，富裕家庭储蓄相当一部分。习俗、广告和他人的消费塑造着消费的欲望。</p>
+  <h2 id="s3">3. 分配与债务</h2>
+  <p>由于消费习惯不同，分配十分重要。如果收入从工资转向财产，给定收入下的总消费趋于下降。教材指出，在平均的扩张中劳动份额大部分时间下降，在收缩中大部分时间上升，消费倾向随之变化。它还认为，1970年以后工资增长缓慢，是不断上升的家庭债务支撑了消费。债务支持扩张，也加深随后的收缩。财富也有影响，主要是对拥有财富的人。</p>
+  <div data-sim="apc"></div>
+  <h2 id="s4">4. 投资</h2>
+  <p><b>总</b>投资包括对磨损资本的替换，<b>净</b>投资则增加资本存量。投资的波动远大于消费。企业需要资金（留存利润、贷款或新股），也需要预期利润。购买已有的土地或股票不是这种意义上的投资，因为没有生产出新的东西。在教材的平均数据中，利润先转折，投资在几个季度后跟随，因为信息、规划、融资和建造都需要时间。情绪随利润波动，又放大了波动。</p>
+  <p class="note"><b>说明：</b> 证据并不都指向同一方向。对投资的研究发现，除利润之外，销售增长和信贷条件也有重要作用；而劳动份额的测量取决于如何处理自雇者的收入。</p>
+  <div class="think"><b>思考题：</b> 家庭债务上升怎样改变了工资与支出之间的联系？</div>
+  <h2 id="read">5. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第41—43章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">John Maynard Keynes, <em>The General Theory</em> (1936), chapters 8 and 12.</p>
+  <p class="rd">Wesley C. Mitchell, <em>Business Cycles</em> (University of California Press, 1913).</p>
+  <p class="pn"><a href="aggregate-supply-demand.html">← 总供给与总需求</a><a href="multiplier-cycles.html">乘数与周期理论 →</a></p>
+  <p><a href="index.html#topic-26">← 返回课程大纲中的专题26</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

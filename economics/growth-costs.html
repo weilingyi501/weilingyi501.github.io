@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Growth and Its Costs | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Growth and Its Costs. Sources, sharing, and waste.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/growth-costs.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/growth-costs.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/growth-costs.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 28</p>
+  <h1>Growth and Its Costs</h1>
+  <p class="lead">Growth depends on saving, investment, and productivity, and also on whether there is enough demand. This topic asks how growth is shared and what it costs.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">A simple formula</a></li><li><a href="#s2">Does saving become investment?</a></li><li><a href="#s3">The U.S. record</a></li><li><a href="#s4">Growth of what?</a></li><li><a href="#s5">Population</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. A simple formula</h2>
+  <p>If a tenth of output is saved and invested, and each 100 dollars of capital yields 30 dollars of output a year, output grows by 3 percent. In general the growth rate is the saving ratio times output per unit of capital. Saving and better technology raise growth.</p>
+  <h2 id="s2">2. Does saving become investment?</h2>
+  <p>Here the two traditions part. One assumes that saving is invested and favors policies that raise saving and research, often through lower taxes on high incomes and business. The other follows Keynes: when buyers are few, more saving means less demand, and funds lie idle. Whether more saving, consumption, or military spending helps depends on whether the economy is at full employment.</p>
+  <div data-sim="harrod"></div>
+  <h2 id="s3">3. The U.S. record</h2>
+  <div style="overflow-x:auto"><table><tr><th>Decade</th><th>Average growth of real GDP, percent a year</th></tr><tr><td>1950s</td><td>4.2</td></tr><tr><td>1960s</td><td>4.5</td></tr><tr><td>1970s</td><td>3.2</td></tr><tr><td>1980s</td><td>3.1</td></tr><tr><td>1990s</td><td>3.2</td></tr></table></div>
+  <p>The table uses current Bureau of Economic Analysis data. The text explains the postwar boom by the American lead after the war, saved-up demand, strong unions, and high public spending, and the slowdown by foreign competition, trade deficits, debt, market power, and weaker unions. It emphasizes that after the early 1970s wages grew much more slowly than productivity.</p>
+  <h2 id="s4">4. Growth of what?</h2>
+  <p>Some output adds little to well-being. The authors list much military production, most advertising, yearly style changes, planned obsolescence, and pollution. Others would draw the line elsewhere: advertising informs, variety has value, and defense protects.</p>
+  <h2 id="s5">5. Population</h2>
+  <p>Malthus expected diminishing returns on limited land. Better technology, more capital per worker, and the fall in birth rates that has come with rising incomes and education have so far worked the other way.</p>
+  <p class="note"><b>Note:</b> The formula here is close to the Harrod–Domar model. Robert Solow’s model (1956) lets capital and labor substitute for each other and traces most long-run growth in output per worker to technical change, which later work tries to explain.</p>
+  <div class="think"><b>Question to think about:</b> Is faster growth always better?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapter 46.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Robert M. Solow, “A Contribution to the Theory of Economic Growth,” <em>Quarterly Journal of Economics</em> 70 (1956).</p>
+  <p class="pn"><a href="multiplier-cycles.html">← The Multiplier and Theories of the Cycle</a><a href="fiscal-policy.html">Fiscal Policy →</a></p>
+  <p><a href="index.html#topic-28">← Back to Topic 28 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>总供给与总需求 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：总供给与总需求. 萨伊、新古典经济学家与凯恩斯.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/aggregate-supply-demand.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/aggregate-supply-demand.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../aggregate-supply-demand.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题25</p>
+  <h1>总供给与总需求</h1>
+  <p class="lead">市场经济会自行恢复充分就业吗？萨伊和新古典经济学家给出了三个理由，凯恩斯逐一作了回答。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">萨伊定律</a></li><li><a href="#s2">什么改变了</a></li><li><a href="#s3">新古典的三个论证</a></li><li><a href="#s4">作为成本与作为需求的工资</a></li><li><a href="#s5">需求过多</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 萨伊定律</h2>
+  <p>J. B. 萨伊认为，生产商品就创造了购买商品的收入。正如李嘉图所说，某一种商品可能过多，但不可能所有商品都过多。在鲁滨逊的经济中，或在自给自足的庄园里，储蓄的东西立即得到使用，这一结论成立。</p>
+  <h2 id="s2">2. 什么改变了</h2>
+  <p>马克思、韦斯利·米切尔和凯恩斯指出资本主义经济的三个特征：为市场生产、使用货币、为利润生产。货币可以持有不用；信用把债务人连成可能断裂的链条；预期没有利润的企业停止生产。这些特征合在一起，使总需求普遍不足成为可能，但它们本身不能解释何时发生。</p>
+  <h2 id="s3">3. 新古典的三个论证</h2>
+  <div style="overflow-x:auto"><table><tr><th>市场</th><th>新古典的论证</th><th>凯恩斯的回答</th></tr><tr><td>商品</td><td>价格下降使购买量增加</td><td>价格下降也减少收入和利润</td></tr><tr><td>劳动</td><td>工资下降使雇用有利可图</td><td>工资既是成本也是支出</td></tr><tr><td>储蓄与投资</td><td>利率下降使储蓄转化为投资</td><td>投资取决于预期利润，而利率有下限</td></tr></table></div>
+  <p>按照这种观点，只有外部冲击才会扰乱充分就业。罗伯特·卢卡斯等人建立了模型，其中失业反映了人们在冲击之后的选择。凯恩斯主义者回答说，萧条持续得太久、太有规律，不能这样解释。</p>
+  <h2 id="s4">4. 作为成本与作为需求的工资</h2>
+  <p>关于工资的分歧可以用一个简单模型来说明。工资份额下降会削减工人的支出，但可能提高利润，从而增加投资。哪种作用更大，取决于投资的反应有多强。</p>
+  <div data-sim="wageshare"></div>
+  <h2 id="s5">5. 需求过多</h2>
+  <p>同样的框架也能解释通货膨胀。如果计划支出超过充分就业时的产能，物价就会上涨，战时是最明显的例子。</p>
+  <p class="note"><b>说明：</b> 如今多数经济学家把两种观点的部分内容结合起来：价格和工资调整缓慢，因此需求在数年内起作用，而长期中供给更重要。调整究竟有多慢仍有争论。</p>
+  <div class="think"><b>思考题：</b> 你认为凯恩斯的三个回答中哪一个最有力？</div>
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第38—40章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">John Maynard Keynes, <em>The General Theory</em> (1936), chapter 18.</p>
+  <p class="rd">John Maynard Keynes, <em>The General Theory</em> (1936), chapter 19.</p>
+  <p class="pn"><a href="cycles-national-accounts.html">← 经济周期与国民账户</a><a href="consumption-investment.html">消费与投资 →</a></p>
+  <p><a href="index.html#topic-25">← 返回课程大纲中的专题25</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
