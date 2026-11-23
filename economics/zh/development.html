@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>发展 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：发展. 为什么有些国家更贫穷.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/development.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/development.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../development.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题34</p>
+  <h1>发展</h1>
+  <p class="lead">国家之间的收入差距依然很大。本专题比较以人口、政府和市场为基础的解释，以及以殖民历史和剩余的使用为基础的解释。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">衡量差距</a></li><li><a href="#s2">差距在缩小吗？</a></li><li><a href="#s3">殖民历史</a></li><li><a href="#s4">人口、政府与市场</a></li><li><a href="#s5">剩余</a></li><li><a href="#s6">贸易、投资与债务</a></li><li><a href="#s7">中国及其他</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 衡量差距</h2>
+  <p>人均收入是衡量发展的常用指标。它掩盖了收入如何分配，也很少反映文化、健康或教育。教材补充了<b>欠发达</b>经济的其他特征：农业人口比重大、技术简单、教育和投资水平低。下列数字为世界银行现行估计，按平滑后的市场汇率折算为美元，未就此后的通胀或各地物价差异作调整。</p>
+  <div style="overflow-x:auto"><table><tr><th>人均国民总收入（现价美元）</th><th>2005</th><th>2024</th></tr><tr><td>美国</td><td>46,190</td><td>82,910</td></tr><tr><td>日本</td><td>41,690</td><td>37,170</td></tr><tr><td>世界</td><td>7,363</td><td>13,433</td></tr><tr><td>拉丁美洲和加勒比</td><td>4,675</td><td>9,898</td></tr><tr><td>中国</td><td>1,790</td><td>13,660</td></tr><tr><td>撒哈拉以南非洲</td><td>1,020</td><td>1,600</td></tr><tr><td>南亚</td><td>683</td><td>2,581</td></tr><tr><td>最不发达国家（联合国名单）</td><td>457</td><td>1,292</td></tr></table></div>
+  <h2 id="s2">2. 差距在缩小吗？</h2>
+  <p>答案取决于时期和地区。1980年至2000年，拉丁美洲和非洲进一步落后于富国，正如教材所强调的。2000年以来，南亚和东亚的增长远快于富国，而就整个时期看，撒哈拉以南非洲和拉丁美洲的增长慢于富国。</p>
+  <div style="overflow-x:auto"><table><tr><th>人均产出年均增长率（%）</th><th>1980–1990</th><th>1990–2000</th><th>2000–2024</th></tr><tr><td>高收入国家</td><td>2.4</td><td>2.0</td><td>1.4</td></tr><tr><td>拉丁美洲和加勒比</td><td>−0.6</td><td>1.6</td><td>1.2</td></tr><tr><td>撒哈拉以南非洲</td><td>−1.6</td><td>−0.7</td><td>1.2</td></tr><tr><td>南亚</td><td>3.0</td><td>3.4</td><td>4.8</td></tr><tr><td>中国</td><td>7.7</td><td>9.3</td><td>7.7</td></tr></table></div>
+  <h2 id="s3">3. 殖民历史</h2>
+  <p>从15世纪起，欧洲列强控制了世界大部分地区。教材描述了掠夺、强制劳动和有利于宗主国的贸易规则。印度在18世纪出口棉布，到1850年已成为英国棉布的大进口国。殖民地转而出口原料和粮食，进口制成品。未被殖民的日本较早实现了工业化。</p>
+  <p>1945年之后的几十年里，大多数殖民地获得独立。教材用<b>新殖民主义</b>指旧有的贸易格局、外国所有权和政治影响得以延续的情形。这一概念存在争议。1970年代以来，亚洲和拉丁美洲许多国家建立了制造业，往往有外国企业参与。</p>
+  <h2 id="s4">4. 人口、政府与市场</h2>
+  <p>一种解释来自马尔萨斯：人口增长过快。教材回答说，一些人口稠密的国家很富裕，而且收入提高后出生率会下降。第二种解释指向政府：国有企业、庞大的开支和规制。国际货币基金组织和世界银行常以改变这些政策作为贷款条件。作者以运行良好的公共企业、教育的高回报和政府积极作为的快速增长经济体来回应。另一些经济学家则看重产权、稳定的政府和贸易开放。</p>
+  <h2 id="s5">5. 剩余</h2>
+  <p>教材自己的解释使用<b>剩余</b>概念：一国超出人民基本需要的产出。剩余若在国内投资，就会带来增长。它也可能用于奢侈消费、土地投机、军备或面子工程，或以利润、利息和外移储蓄的形式流出。支付高额地租和利息的佃农几乎没有余力改良土地。<b>绿色革命</b>的新种子提高了产量，教材认为，买得起灌溉和化肥的大土地所有者得益最多。后来的研究发现，许多地方的小农也采用了新种子，结果因地区而异。</p>
+  <div data-sim="surplususe"></div>
+  <h2 id="s6">6. 贸易、投资与债务</h2>
+  <p>三种流动把穷国与富国联系起来。原料出口的收入与进口品相比可能很低。外国投资带来资本和技术，日后又把利润汇回本国；教材认为，在拉丁美洲，利润长期超过新增投资。贷款若能为增长融资就有帮助，否则便成为负担。教材统计欠发达国家的银行危机，1970年代为2次，1980年代25次，1990年代28次。对策包括削减公共开支、债务减免和限制资本流动，每一种都有很大争议。</p>
+  <h2 id="s7">7. 中国及其他</h2>
+  <p>1949年革命之后，中国建立了计划经济；从1978年起，中国向市场、私营企业和外国投资开放。人均收入成倍增长。教材写作时中国人均收入不到2,000美元，它指出城乡差距、工厂工资低以及外国企业所占的重要地位。对中国经验有不同解读：市场的成功、国家主导政策的成功，或二者结合的成功。</p>
+  <p>一篇简短的附录讨论军费开支。军费创造就业，而作者认为，同样的钱用于医疗和教育会创造更有用的就业，并且大多数企业在和平时期经营得更好。</p>
+  <p class="note"><b>说明：</b> 此后许多发展研究运用历史资料和实地实验考察制度、教育和健康。1990年以来，世界极端贫困人口的比例大幅下降，亚洲降幅最大，非洲较慢。</p>
+  <div class="think"><b>思考题：</b> 哪些发展障碍来自内部，哪些来自世界经济？</div>
+  <h2 id="read">8. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第56章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Paul A. Baran, <em>The Political Economy of Growth</em> (Monthly Review Press, 1957).</p>
+  <p class="rd">W. Arthur Lewis, “Economic Development with Unlimited Supplies of Labour,” <em>Manchester School</em> 22 (1954).</p>
+  <p class="rd">Amartya Sen, <em>Development as Freedom</em> (Knopf, 1999).</p>
+  <p class="rd">Daron Acemoglu, Simon Johnson, and James A. Robinson, “The Colonial Origins of Comparative Development: An Empirical Investigation,” <em>American Economic Review</em> 91 (2001).</p>
+  <p class="rd">Joseph E. Stiglitz, <em>Globalization and Its Discontents</em> (Norton, 2002).</p>
+  <p class="pn"><a href="globalization-free-trade.html">← 全球化与自由贸易</a><span></span></p>
+  <p><a href="index.html#topic-34">← 返回课程大纲中的专题34</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

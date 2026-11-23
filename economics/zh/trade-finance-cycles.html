@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>贸易、金融与世界周期 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：贸易、金融与世界周期. 不稳定如何传播.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/trade-finance-cycles.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/trade-finance-cycles.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../trade-finance-cycles.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题32</p>
+  <h1>贸易、金融与世界周期</h1>
+  <p class="lead">贸易、投资和金融把各国的周期联系在一起，繁荣与衰退由此从一国传到另一国。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">出口、进口与需求</a></li><li><a href="#s2">周期中的贸易</a></li><li><a href="#s3">三条渠道</a></li><li><a href="#s4">大国与小国</a></li><li><a href="#s5">跨境资金</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 出口、进口与需求</h2>
+  <p><b>出口</b>增加对本国产品的需求，<b>进口</b>把支出引向国外。二者之差为<b>净出口</b>：贸易顺差时为正，贸易逆差时为负。从1870年代到1970年代初，美国大多数年份为顺差；1976年以来，商品与服务贸易每年都是逆差。逆差在2005年和2006年达到GDP的5.7%，2024年为3.0%。</p>
+  <div style="overflow-x:auto"><table><tr><th>占美国GDP的比例（%）</th><th>出口</th><th>进口</th><th>净出口</th></tr><tr><td>1950</td><td>4.1</td><td>3.9</td><td>0.2</td></tr><tr><td>1975</td><td>8.2</td><td>7.3</td><td>0.9</td></tr><tr><td>2000</td><td>10.7</td><td>14.4</td><td>−3.7</td></tr><tr><td>2006</td><td>10.6</td><td>16.3</td><td>−5.7</td></tr><tr><td>2009</td><td>10.9</td><td>13.8</td><td>−2.9</td></tr><tr><td>2024</td><td>11.0</td><td>14.0</td><td>−3.0</td></tr></table></div>
+  <h2 id="s2">2. 周期中的贸易</h2>
+  <p>进口随本国收入变动，扩张时上升，衰退时下降。出口取决于国外收入，与本国经济只有松散的联系。因此，按教材使用的美国数据，逆差在扩张中扩大，带走部分需求；在衰退中缩小，提供一定支撑。</p>
+  <p>原材料带来成本压力。矿山、油井和作物的扩张不如工厂快，因此在繁荣后期，它们的价格往往比制成品涨得更快，在萧条中则跌得更快。制造商的利润率先受挤压，后得缓解。</p>
+  <h2 id="s3">3. 三条渠道</h2>
+  <p>教材指出繁荣与萧条跨越国界的三条途径。通过<b>贸易</b>，一国收入下降意味着他国出口减少，影响又会部分返回。通过<b>对外投资</b>，国内利润下降、国外前景变差的企业在两地都削减支出。通过<b>金融</b>，贷款被收回，共担损失的银行减少放贷，股市同步下跌。2007年2月27日，上海股市下跌近9%，美国主要股指下跌3%以上。</p>
+  <div data-sim="spill"></div>
+  <h2 id="s4">4. 大国与小国</h2>
+  <p>规模和专业化程度决定谁受冲击。只向一个大买主出售一种作物或金属的国家，在买主经济放缓时，数量和价格都会受损。按通常的估计，第二次世界大战后美国生产了世界约一半的制成品，很少受他国影响。此后贸易在其经济中的比重上升，它比过去更易受冲击。</p>
+  <p>各国的政策也受到限制。1981—1982年，法国试图独自扩大需求，部分新增支出流向进口，逆差扩大，政府随后改变方向。</p>
+  <h2 id="s5">5. 跨境资金</h2>
+  <p>1944年的布雷顿森林协定使美元成为主要储备货币。该体系在1970年代初终结后，资本管制放松，资金流动更加自由。这种流动可以为增长融资，也可能逆转：1997年始于泰国的危机蔓延到邻国。经济学家对其原因仍有争论，包括银行脆弱、固定汇率、短期债务和恐慌。教材强调还款压力和国际货币基金组织设定的条件。</p>
+  <p class="note"><b>说明：</b> 叙述止于2007年。随后的金融危机经由这三条渠道传播，2009年世界商品贸易量下降约12%。贸易逆差也反映国民储蓄与投资，并与资本流入相对应，因此许多经济学家并不只把它看作需求的流失。</p>
+  <div class="think"><b>思考题：</b> 美国住房市场的问题怎样在2008年演变为世界危机？</div>
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第52—53章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Charles P. Kindleberger, <em>The World in Depression, 1929–1939</em> (University of California Press, 1973).</p>
+  <p class="rd">Robin Hahnel, <em>Panic Rules! Everything You Need to Know About the Global Economy</em> (South End Press, 1999).</p>
+  <p class="rd">Adam Tooze, <em>Crashed: How a Decade of Financial Crises Changed the World</em> (Viking, 2018).</p>
+  <p class="pn"><a href="inflation-monetary-policy.html">← 通货膨胀与货币政策</a><a href="globalization-free-trade.html">全球化与自由贸易 →</a></p>
+  <p><a href="index.html#topic-32">← 返回课程大纲中的专题32</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

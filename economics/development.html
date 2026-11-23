@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Development | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Development. Why some countries are poorer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/development.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/development.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/development.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 34</p>
+  <h1>Development</h1>
+  <p class="lead">Income gaps between countries remain large. This topic compares explanations based on population, government, and markets with those based on colonial history and the use of the surplus.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">Measuring the gap</a></li><li><a href="#s2">Is the gap closing?</a></li><li><a href="#s3">Colonial history</a></li><li><a href="#s4">Population, government, and markets</a></li><li><a href="#s5">The surplus</a></li><li><a href="#s6">Trade, investment, and debt</a></li><li><a href="#s7">China and beyond</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. Measuring the gap</h2>
+  <p>Income per person is the usual measure of development. It hides how income is shared, and it says little about culture, health, or schooling. The text adds other marks of a <b>less developed</b> economy: a large share of people in farming, simple techniques, and low levels of education and investment. The figures below are the World Bank’s current estimates, in dollars at smoothed market exchange rates and not adjusted for later inflation or for differences in local prices.</p>
+  <div style="overflow-x:auto"><table><tr><th>Income per person (GNI, current US$)</th><th>2005</th><th>2024</th></tr><tr><td>United States</td><td>46,190</td><td>82,910</td></tr><tr><td>Japan</td><td>41,690</td><td>37,170</td></tr><tr><td>World</td><td>7,363</td><td>13,433</td></tr><tr><td>Latin America and Caribbean</td><td>4,675</td><td>9,898</td></tr><tr><td>China</td><td>1,790</td><td>13,660</td></tr><tr><td>Sub-Saharan Africa</td><td>1,020</td><td>1,600</td></tr><tr><td>South Asia</td><td>683</td><td>2,581</td></tr><tr><td>Least developed countries (UN list)</td><td>457</td><td>1,292</td></tr></table></div>
+  <h2 id="s2">2. Is the gap closing?</h2>
+  <p>The answer depends on the period and the region. From 1980 to 2000 Latin America and Africa fell further behind the rich countries, as the text stresses. Since 2000 South Asia and East Asia have grown much faster than the rich countries, while Sub-Saharan Africa and Latin America have grown more slowly than the rich countries over the whole period.</p>
+  <div style="overflow-x:auto"><table><tr><th>Output per person, growth % a year</th><th>1980–90</th><th>1990–2000</th><th>2000–24</th></tr><tr><td>High-income countries</td><td>2.4</td><td>2.0</td><td>1.4</td></tr><tr><td>Latin America and Caribbean</td><td>−0.6</td><td>1.6</td><td>1.2</td></tr><tr><td>Sub-Saharan Africa</td><td>−1.6</td><td>−0.7</td><td>1.2</td></tr><tr><td>South Asia</td><td>3.0</td><td>3.4</td><td>4.8</td></tr><tr><td>China</td><td>7.7</td><td>9.3</td><td>7.7</td></tr></table></div>
+  <h2 id="s3">3. Colonial history</h2>
+  <p>From the fifteenth century European powers took control of much of the world. The text describes plunder, forced labor, and trade rules that favored the ruling country. India, an exporter of cotton cloth in the eighteenth century, had become a large importer of British cloth by 1850. Colonies came to export raw materials and food and to import manufactures. Japan, which was not colonized, industrialized early.</p>
+  <p>Most colonies became independent in the decades after 1945. The text uses <b>neocolonialism</b> for cases in which the old pattern of trade, foreign ownership, and political influence continued. The term is contested. Since the 1970s many countries in Asia and Latin America have built manufacturing industries, often with foreign firms.</p>
+  <h2 id="s4">4. Population, government, and markets</h2>
+  <p>One explanation, from Malthus, is rapid population growth. The text answers that some crowded countries are rich, and that birth rates fall as incomes rise. A second points to government: state firms, heavy spending, and regulation. The IMF and World Bank often made loans conditional on changing these policies. The authors reply with public enterprises that work well, with high returns to education, and with fast-growing economies in which the state is active. Other economists put weight on property rights, stable government, and openness to trade.</p>
+  <h2 id="s5">5. The surplus</h2>
+  <p>The text’s own account uses the <b>surplus</b>: what a country produces beyond the basic needs of its people. Invested at home, a surplus brings growth. It may instead go to luxury consumption, land speculation, arms, or showcase projects, or leave the country as profit, interest, and savings sent abroad. Tenants who pay high rents and interest have little left to improve their land. New seeds in the <b>green revolution</b> raised yields, and the text argues that larger owners, who could afford irrigation and fertilizer, gained most. Later studies find that small farmers also adopted the seeds in many places, with results that varied by region.</p>
+  <div data-sim="surplususe"></div>
+  <h2 id="s6">6. Trade, investment, and debt</h2>
+  <p>Three flows link poorer and richer countries. Exports of raw materials may earn little compared with imported goods. Foreign investment brings capital and techniques and later sends profits home; the text argues that for Latin America the profits long exceeded the new investment. Loans help when they finance growth and burden a country when they do not. The text counts 2 banking crises in less developed countries in the 1970s, 25 in the 1980s, and 28 in the 1990s. Answers have included cuts in public spending, debt relief, and limits on capital flows, each much debated.</p>
+  <h2 id="s7">7. China and beyond</h2>
+  <p>After the revolution of 1949 China built a planned economy, and from 1978 it opened to markets, private firms, and foreign investment. Income per person multiplied. The text, writing when income was below 2,000 dollars, notes the gap between city and countryside, low factory pay, and the large part played by foreign firms. Its experience is read in different ways: as a success of markets, of state-led policy, or of their combination.</p>
+  <p>A short appendix turns to military spending. It creates jobs, and the authors argue that the same money spent on health and education would create more useful ones, and that most firms do better in peace.</p>
+  <p class="note"><b>Note:</b> Much later work on development uses history and field experiments to study institutions, schooling, and health. The share of the world’s people living in extreme poverty has fallen greatly since 1990, most of all in Asia, and more slowly in Africa.</p>
+  <div class="think"><b>Question to think about:</b> Which obstacles to development are internal, and which come from the world economy?</div>
+  <h2 id="read">8. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapter 56.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Paul A. Baran, <em>The Political Economy of Growth</em> (Monthly Review Press, 1957).</p>
+  <p class="rd">W. Arthur Lewis, “Economic Development with Unlimited Supplies of Labour,” <em>Manchester School</em> 22 (1954).</p>
+  <p class="rd">Amartya Sen, <em>Development as Freedom</em> (Knopf, 1999).</p>
+  <p class="rd">Daron Acemoglu, Simon Johnson, and James A. Robinson, “The Colonial Origins of Comparative Development: An Empirical Investigation,” <em>American Economic Review</em> 91 (2001).</p>
+  <p class="rd">Joseph E. Stiglitz, <em>Globalization and Its Discontents</em> (Norton, 2002).</p>
+  <p class="pn"><a href="globalization-free-trade.html">← Globalization and Free Trade</a><span></span></p>
+  <p><a href="index.html#topic-34">← Back to Topic 34 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
