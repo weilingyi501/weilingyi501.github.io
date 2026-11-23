@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>马克思的资本主义观 | Lingyi Wei</title>
+  <meta name="description" content="教学模块：历史唯物主义、作为社会关系的市场、资本主义的阶级结构，以及马克思对私有财产和资本的看法，含阶级地位的互动分类练习。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/zh/marx-capitalism.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/capitalism/marx-capitalism.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/capitalism/zh/marx-capitalism.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../marx-capitalism.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">资本主义：制度与意识形态</a> › 专题6</p>
+  <h1>马克思的资本主义观</h1>
+  <p class="lead">马克思向早期社会主义者学习，但认为他们没有看清自己的对手。在追问资本主义错在哪里之前，他先问它是一种什么样的社会。本专题讨论他的历史理论，以及他对市场、阶级和财产的看法。专题7讨论他的经济学。</p>
+
+  <div class="map"><div><b>制度</b>十九世纪中叶英国成熟的竞争资本主义</div><div><b>主导观念</b>利润是节欲和风险的报酬；资本是一种物</div><div><b>反对者与批评者</b>马克思与恩格斯；第一国际</div></div>
+
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#hm">历史唯物主义</a></li><li><a href="#market">作为社会关系的市场</a></li><li><a href="#class">阶级结构</a></li><li><a href="#prop">私有财产</a></li><li><a href="#capital">什么是资本？</a></li><li><a href="#debate">亨特之外</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+
+  <h2 id="hm">1. 历史唯物主义</h2>
+  <p>马克思的出发点是：人必须生产才能生活，而在生产中人们彼此结成关系。<b>生产力</b>包括工具、技能、知识和劳动；<b>生产关系</b>是阶级关系，首先是财产关系。二者合在一起构成<b>生产方式</b>，它是法律、政治、宗教和观念得以产生的基础。马克思在1859年的序言中用一句话概括：不是人们的意识决定人们的存在，相反，是“人们的社会存在决定人们的意识”。</p><p>基础并不机械地决定观念，亨特强调影响是双向的，只是从长远看经济关系更为根本。当生产力的发展超出曾经促进它的生产关系时，历史就向前推进，各阶级为社会将采取的形式而斗争。亨特列举了欧洲经历过的四种生产方式：原始公社制、奴隶制、封建制和资本主义。马克思预期资本主义是最后一个划分为阶级的生产方式。</p><p>这一思想是全书的背景。亨特认为意识形态为财产关系辩护，这是历史唯物主义的一种说法，不过他在序言中说，因果问题留给读者自己判断。</p>
+  <h2 id="market">2. 作为社会关系的市场</h2>
+  <p>在任何社会中，生产都是社会性的：没有人只靠自己的劳动生活。资本主义的特殊之处在于，生产者私下劳动，到了市场上才知道自己的劳动是否为社会所需。他们彼此的关系表现为物与物的关系，即价格。马克思把这称为<b>商品拜物教</b>。小麦和布在物理上没有任何共同点可以解释为什么一定量的这个换一定量的那个。它们的共同点是：两者都是社会劳动的产品。</p>
+  <h2 id="class">3. 阶级结构</h2>
+  <p>亨特列出四个阶级：</p><ul><li><b>资本家</b>拥有足够的生产资料，可以靠财产收入即利润、利息和地租生活。</li><li><b>中间阶级</b>由小业主和独立专业人士组成，拥有一些生产资料，但也必须劳动。</li><li><b>工人</b>不拥有生产资料，靠出卖劳动力为生。</li><li><b>最贫困者</b>从所有权或劳动中得到的收入都很少。有些人不能劳动，有些人愿意劳动却失业。后一部分人削弱了在业者的讨价还价能力，并随商业周期被吸纳和抛出。</li></ul><p>这里的阶级是与生产的关系，不是收入水平。亨特有一个讽刺性的观察：最富的人和最穷的人都不生产而有收入，保守派作者通常把怒气对准穷人，受马克思影响的人则对准富人。</p><div class="box"><h3>收入从哪里来？</h3><p class="note">设定一个家庭每年各种来源的收入。分类采用亨特的标准，即收入来源；门槛数值是为演示而选定的。</p><div class="grid2"><div><label>工资和薪金（千美元）：<b id="wv"></b></label><input type="range" id="w" data-suf="" min="0" max="300" step="5" value="50"></div><div><label>自有小企业或独立执业：<b id="sev"></b></label><input type="range" id="se" data-suf="" min="0" max="300" step="5" value="0"></div><div><label>利润、利息、股息和地租：<b id="prv"></b></label><input type="range" id="pr" data-suf="" min="0" max="1000" step="10" value="2"></div><div><label>公共转移支付和慈善：<b id="trv"></b></label><input type="range" id="tr" data-suf="" min="0" max="60" step="2" value="0"></div></div><svg id="ch" viewBox="0 0 640 60" width="100%" role="img" aria-label="按来源划分的收入"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="prop">4. 私有财产</h2>
+  <p>按亨特的定义，财产是人与人之间的关系，而不是人与物的关系：它是附着于物的一套特权和制裁，由一个其武力使用被视为正当的机构设立和维持。多数人听到“私有财产”，想到的是一所房子或一件外套。马克思对此并无异议。他的目标是由许多人共同使用的<b>生产资料</b>的私有制。为财产辩护的人常常描绘一个有权享有自己劳动果实的独立工匠或农民。马克思认为这颠倒了事实：资本主义财产是靠剥夺这样的生产者成长起来的，它赋予所有者的是享有他人劳动果实的权利。有了股份公司，所有者甚至不必管理；管理成为一种熟练劳动，利润则只是对所有权的支付。</p><p>对于利润是节欲或牺牲之报酬的说法，马克思回答说：牺牲本身并不为社会创造任何东西；任何统治阶级都可以用同样的借口（在美国南方，当上奴隶主也不容易）；而且多数资本家的财富来自继承，或来自精明和运气。</p>
+  <h2 id="capital">5. 什么是资本？</h2>
+  <p>如果资本就是工具和材料，那么它在每个社会都存在，资本主义也就显得永恒。亨特解释说，在马克思看来，只有具备三个条件时资本才存在：工具是作为商品生产的；它们为使用者以外的另一个阶级所有；使用者只有放弃产品、接受一份价值低于其产出的工资，才被允许劳动。用《资本论》的语言说，货币这时被用来赚取更多的货币（M–C–M′），取代了简单交换（C–M–C）。资本是采取物的形式的<b>社会关系</b>。这是霍奇斯金的洞见（专题5），在这里被发展成一种理论。</p>
+  <h2 id="debate">6. 亨特之外</h2>
+  <ul><li><b>谁居首位？</b>G. A. 科恩（1978）为一种严格的解读辩护，即用生产力来解释生产关系。E. P. 汤普森和艾伦·梅克辛斯·伍德则把阶级斗争放在首位。马克斯·韦伯承认阶级的重要性，但认为身份地位和观念有独立的力量。</li><li><b>经理与专业人士。</b>埃里克·奥林·赖特分析了“矛盾的阶级位置”，例如经理，他们既出卖劳动力，又支配他人的劳动。</li><li><b>有养老金和股票的工人。</b>许多工人现在拥有一些金融资产。滑块练习说明为什么少量财产收入本身并不改变阶级位置，以及界线在哪里变得模糊。</li><li><b>分析学派的替代方案。</b>约翰·罗默（1982）从资产所有权的不平等推导出剥削，不需要劳动价值论。</li></ul><div class="think"><b>思考题：</b>马克思按收入来源和与生产的关系来界定阶级。如果改按收入水平、教育或职业来界定，会得到什么，又会失去什么？</div>
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p><p class="rd">亨特，<em>Property and Prophets</em>，第6章。</p><p class="rd">卡尔·马克思，《〈政治经济学批判〉序言》（1859）。</p><p class="rl">辅助阅读</p><p class="rd">卡尔·马克思、弗里德里希·恩格斯，《共产党宣言》（1848），第一、二章。</p><p class="rd">卡尔·马克思，《资本论》第一卷（1867），第一章第四节，第四至六章（英文版章次）。</p><p class="rd">埃里克·奥林·赖特，<em>Understanding Class</em>（《理解阶级》，2015），选读。</p>
+  <p class="pn"><a href="socialist-protest.html">← 专题5：工业革命中的社会主义抗议</a><a href="marx-economics.html">专题7：马克思的社会与经济理论 →</a></p>
+  <p><a href="index.html#topic-6">← 返回课程大纲中的专题6</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年11月</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const a=[['工资',V('w'),'#023e8a'],['自营',V('se'),'#3f8f6b'],['财产',V('pr'),'#c47a2c'],['转移支付',V('tr'),'#7b5ea7']],t=a.reduce((s,x)=>s+x[1],0);if(!t){$('ch').innerHTML='';$('out').textContent='请至少设定一种收入来源。';return;}
+let x=10,g='';a.forEach(p=>{const wd=p[1]/t*620;if(wd>0)g+=`<rect x="${x}" y="8" width="${wd}" height="36" fill="${p[2]}"/>`;if(wd>84)g+=`<text x="${x+wd/2}" y="31" text-anchor="middle" style="fill:#fff;font-weight:600">${p[0]} ${Math.round(p[1]/t*100)}%</text>`;x+=wd;});$('ch').innerHTML=g;
+const pr=a[2][1],sh=a.map(p=>p[1]/t);let m;if(pr>=150&&sh[2]>=.5)m='<b>资本家阶级。</b>单靠财产收入就足以生活，而且它占主导。工资或薪金可有可无。';else if(sh[3]>.5)m='亨特分类中的<b>最贫困者</b>：财产和固定工作都不是主要收入来源。（按这一规则，领取公共养老金的退休工人也落在这里，这显示了按当前收入分类的局限。）';else if(sh[1]>=.4)m='亨特意义上的<b>中间阶级</b>：既拥有生产资料又参加劳动的小业主或独立专业人士。';else if(pr>=100||sh[2]>=.4)m='<b>有争议的位置。</b>在其他收入之外有相当多的财产收入。这是高薪经理、小食利者，还是资本家？赖特的“矛盾的阶级位置”讨论的就是这类情形。';else m='<b>工人阶级。</b>这个家庭主要靠出卖劳动力生活。一些财产收入并不改变它必须劳动的处境。';$('out').innerHTML=`总收入：${t}千美元。`+m;}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

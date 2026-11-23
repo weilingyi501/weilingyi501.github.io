@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>凯恩斯主义经济学与大萧条 | Lingyi Wei</title>
+  <meta name="description" content="教学模块：大萧条、凯恩斯关于漏出与注入的循环流量、新古典综合，以及亨特对军事凯恩斯主义的批判，含乘数互动模型。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/zh/keynes.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/capitalism/keynes.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/capitalism/zh/keynes.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../keynes.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">资本主义：制度与意识形态</a> › 专题12</p>
+  <h1>凯恩斯主义经济学与大萧条</h1>
+  <p class="lead">大萧条使人不再相信市场会自行恢复充分就业。凯恩斯解释了原因，并提出了保留资本主义的药方。亨特追问这个药方在实践中是什么样子，代价又是什么。</p>
+
+  <div class="map"><div><b>制度</b>1929—1933年产出和就业崩溃；战争；战后繁荣</div><div><b>主导观念</b>与新古典理论相结合的凯恩斯式管理</div><div><b>反对者与批评者</b>1930年代的社会主义者和共产主义者；后来的军国主义批评者</div></div>
+
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#dep">崩溃</a></li><li><a href="#key">凯恩斯的答案</a></li><li><a href="#ideol">从理论到意识形态</a></li><li><a href="#war">战争经济</a></li><li><a href="#debate">亨特之外</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+
+  <h2 id="dep">1. 崩溃</h2>
+  <p>1920年代结束时，美国是世界首要的制造国和债权国。1929年10月之后，下跌自我加剧。亨特写道，到1932年，有85000多家企业倒闭，5000多家银行停业；纽约交易所股票从870亿美元跌到190亿美元；1200万人失业。黑人工人受打击最重。工厂、土地和技能都还在，究竟发生了什么？</p>
+  <h2 id="key">2. 凯恩斯的答案</h2>
+  <p>每一美元的产出都是某个人的一美元收入，所以收入总是足以买下产品。但并非所有收入都作为支出回到企业。亨特用<b>循环流量</b>解释凯恩斯，其中有三项<b>漏出</b>（储蓄、进口、税收）和三项<b>注入</b>（投资、出口、政府支出）。如果计划的注入不足，商品卖不出去，企业削减生产，收入下降，直到漏出缩减到与之相等。经济可以停留在那里，伴随大规模失业。</p><p>（三项漏出的图示是教科书的版本；《通论》本身主要使用储蓄和投资。）问题在于投资。富裕社会储蓄更多，需要更多投资来填补缺口，而每一笔投资又增加产能，需要更多的需求。亨特认为，这一诊断在要点上为马克思、霍布森和凯恩斯所共有，凯恩斯自己的贡献是说明经济如何会停留在稳定的萧条中。他的办法是政府支出。他更希望建造住房和学校。在《通论》的一段名言中，他说就算把钞票埋进旧煤矿、让私人企业去挖出来，也比什么都不做好。</p><div class="box"><h3>漏出与注入</h3><p class="note">漏出等于注入时的收入即为均衡收入。充分就业收入为100。</p><div class="grid2"><div><label>投资：<b id="Iv"></b></label><input type="range" id="I" data-suf="" min="2" max="30" step="1" value="10"></div><div><label>政府支出：<b id="Gv"></b></label><input type="range" id="G" data-suf="" min="0" max="40" step="1" value="12"></div><div><label>出口：<b id="Xv"></b></label><input type="range" id="X" data-suf="" min="0" max="25" step="1" value="8"></div><div><label>储蓄率：<b id="sv"></b></label><input type="range" id="s" data-suf="%" min="2" max="30" step="1" value="14"></div><div><label>税率：<b id="tv"></b></label><input type="range" id="t" data-suf="%" min="0" max="35" step="1" value="13"></div><div><label>进口率：<b id="mv"></b></label><input type="range" id="m" data-suf="%" min="0" max="25" step="1" value="10"></div></div><svg id="ch" viewBox="0 0 640 130" width="100%" role="img" aria-label="漏出、注入与收入"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="ideol">3. 从理论到意识形态</h2>
+  <p>1930年代，苏联经济快速增长而西方陷于萧条，所以对资本主义纯粹消极的辩护是不够的。战后，保罗·萨缪尔森的<b>新古典综合</b>把两套理论结合起来：政府管理总需求，而在充分就业的经济中，新古典对市场的论证重新成立。1946年的《就业法》使高就业成为官方目标。亨特的解读是，凯恩斯的理论使旧的意识形态得以与大萧条和解。</p>
+  <h2 id="war">4. 战争经济</h2>
+  <p>这些政策有效吗？没有出现第二次大萧条，不过亨特数出战后有十次衰退，并指出通货膨胀持续存在。他追问政府把钱花在了哪里。充分就业是随第二次世界大战到来的，当时军费达到国民生产总值的近40%。冷战期间军费居高不下，1987年仍占国民生产总值的6.3%，占非农就业的6.5%。在亨特的叙述中，军备的作用就像凯恩斯所说的金字塔：它使资本品行业保持忙碌，增加需求而不增加经济的生产能力，并造就了一个由军官、公司和政治家组成、与军费增长利害攸关的军事工业复合体。他把1991年之后的缓慢复苏与冷战后的小幅削减联系起来。</p><p>一个相关的论点来自米哈尔·卡莱茨基1943年的文章，亨特没有引用：商界领袖出于政治原因反对用公共支出实现充分就业，因为没有解雇的威胁，工厂里的纪律就会松弛。军备是他们接受的例外。</p>
+  <h2 id="debate">5. 亨特之外</h2>
+  <ul><li><b>大萧条的原因。</b>弗里德曼和施瓦茨（1963）归咎于美联储听任货币存量下降。伯南克强调银行倒闭和信贷，艾肯格林强调金本位。凯恩斯主义者和马克思主义者强调需求和盈利能力。</li><li><b>什么结束了它？</b>克里斯蒂娜·罗默（1992）认为，1942年以前的复苏很大程度上可由货币扩张解释。战争支出完成了余下的工作。</li><li><b>军事凯恩斯主义。</b>美国国防支出从1968年约占GDP的9%降到2000年前后的3%左右，2023年约为3.5%。1990年代后期的强劲增长出现在这一份额下降之时，这很难与亨特的看法相合，他认为2002年的繁荣对军备的依赖一如既往。学者们仍在争论军费在技术（从计算机到互联网）中的作用。</li><li><b>凯恩斯是亨特笔下的凯恩斯吗？</b>琼·罗宾逊和明斯基等后凯恩斯主义者强调不确定性和金融，并把这一综合斥为“冒牌凯恩斯主义”。见经济思想史课程的<a href="/het/zh/keynes.html">凯恩斯</a>和<a href="/het/zh/post-keynesian.html">后凯恩斯主义经济学</a>模块。</li></ul><div class="think"><b>思考题：</b>为什么商界领袖可能更喜欢军费，而不是同等数额的住房或学校支出？这一论点今天还有说服力吗？</div>
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p><p class="rd">亨特，<em>Property and Prophets</em>，第12章。</p><p class="rd">约翰·梅纳德·凯恩斯，《就业、利息和货币通论》（1936），第1—3章和第24章。</p><p class="rl">辅助阅读</p><p class="rd">米哈尔·卡莱茨基，《充分就业的政治方面》（1943）。</p><p class="rd">保罗·巴兰、保罗·斯威齐，《垄断资本》（1966），第6—7章。</p><p class="rd">克里斯蒂娜·罗默，“What Ended the Great Depression?”（《什么结束了大萧条？》，1992）。</p>
+  <p class="pn"><a href="imperialism.html">← 专题11：帝国主义与革命社会主义</a><a href="defenders.html">专题13：当代美国资本主义及其辩护者 →</a></p>
+  <p><a href="index.html#topic-12">← 返回课程大纲中的专题12</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年11月</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const I=V('I'),G=V('G'),X=V('X'),z=(V('s')+V('t')+V('m'))/100,J=I+G+X,Y=J/z,M=1/z,top=Math.max(J,z*100,1);const sc=440/top;const seg=(y,arr)=>{let x=110,g='';arr.forEach(a=>{const w=a[1]*sc;g+=`<rect x="${x}" y="${y}" width="${w}" height="34" fill="${a[2]}"/>`;if(w>48)g+=`<text x="${x+w/2}" y="${y+22}" text-anchor="middle" style="fill:#fff;font-weight:600">${a[0]}</text>`;x+=w;});return g;};
+$('ch').innerHTML='<text x="4" y="30">注入</text><text x="4" y="84">收入100时漏出</text>'+seg(8,[['投资',I,'#023e8a'],['政府',G,'#3f8f6b'],['出口',X,'#7b5ea7']])+seg(62,[['储蓄',V('s'),'#4a7fa7'],['税收',V('t'),'#6fa886'],['进口',V('m'),'#a38fc4']])+'<text x="110" y="118">充分就业要求两条长度相等。</text>';
+const gap=100-Y,dG=gap/M;$('out').innerHTML=`均衡收入为<b>${Y.toFixed(0)}</b>，乘数为<b>${M.toFixed(2)}</b>。`+(gap>.5?`这比充分就业低${gap.toFixed(0)}。政府支出增加<b>${dG.toFixed(1)}</b>即可弥合缺口。无论钱花在学校还是炸弹上，算术都一样，这正是亨特的意思：选择是政治性的。`:gap<-.5?`支出超过充分就业产出${(-gap).toFixed(0)}，压力落在价格上。模型给出的出路是通货膨胀、增税或进口。`:'经济处于充分就业。');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

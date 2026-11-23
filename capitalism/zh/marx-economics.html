@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>马克思的社会与经济理论 | Lingyi Wei</title>
+  <meta name="description" content="教学模块：马克思论异化、劳动价值论、剩余价值、积累、危机、集中与资本主义国家，含产业后备军的古德温互动模型。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://lingyiwei.org/capitalism/zh/marx-economics.html">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/capitalism/marx-economics.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/capitalism/zh/marx-economics.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.vt .map div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; border-top: 4px solid var(--link); }
+.vt .map div:nth-child(2) { border-top-color: #3f8f6b; } .vt .map div:nth-child(3) { border-top-color: #c47a2c; }
+.vt .map b { display: block; color: var(--bar); margin-bottom: 4px; }
+.vt .map div, .vt td, .vt th { text-align: left; }
+@media (max-width: 680px) { .vt .map { grid-template-columns: 1fr; } .vt .tw { overflow-x: auto; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../marx-economics.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">资本主义：制度与意识形态</a> › 专题7</p>
+  <h1>马克思的社会与经济理论</h1>
+  <p class="lead">马克思对资本主义的批判所依据的不只是贫困。他认为资本主义使人与自身最具人性的东西相隔绝，利润来自无偿劳动，积累在竞争推动下经历反复的危机。</p>
+
+  <div class="map"><div><b>制度</b>积累、商业周期、资本集中</div><div><b>主导观念</b>古典的利益和谐论；萨伊定律</div><div><b>反对者与批评者</b>马克思的《资本论》；1864年之后的工人阶级政党</div></div>
+
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#alien">异化</a></li><li><a href="#sv">剩余价值</a></li><li><a href="#acc">原始积累与积累的动力</a></li><li><a href="#crisis">工资、后备军与危机</a></li><li><a href="#long">集中、贫困化与国家</a></li><li><a href="#debate">亨特之外</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+
+  <h2 id="alien">1. 异化</h2>
+  <p>许多社会主义者谴责资本主义使工人贫穷。亨特强调，这不是马克思的主要指控：吃得饱的奴隶仍然是奴隶。人在劳动中发展自己：人改变自然，同时也发展自己的感官、技能和关系。在资本主义之下，劳动的产品、过程和目的都属于别人。工人与自己的产品、与生产活动、与自身的能力、与他人相疏离。1844年的手稿说，工人只有在不劳动时才觉得自在。提高工资可以减轻这种处境，却不能消除它。</p>
+  <h2 id="sv">2. 剩余价值</h2>
+  <p>如果商品按价值交换，利润从何而来？马克思的答案系于一种特殊的商品。资本家按价值购买<b>劳动力</b>，即劳动的能力，其价值是生产工人生活资料所需的劳动。劳动力在使用中创造的价值大于它的费用。亨特举例说，如果八小时工作日中有六小时生产出工人工资品的价值，其余两小时就是<b>剩余劳动</b>，即利润、利息和地租的源泉。</p><div class="eq">产品价值 = c + v + s &nbsp;&nbsp; 剩余价值率 = s / v &nbsp;&nbsp; 利润率 = s / (c + v)</div><p>完整的讲解和互动模型见经济思想史课程的<a href="/het/zh/marx-value.html">马克思的价值理论</a>和<a href="/het/zh/marx-profit-rate.html">利润率</a>模块。</p>
+  <h2 id="acc">3. 原始积累与积累的动力</h2>
+  <p>政治经济学家把最初的资本解释为节俭者的储蓄。马克思嘲笑这是类似原罪的寓言，并指出圈地、殖民掠夺和奴隶制（专题2）。资本主义一旦存在，积累就不需要贪婪：竞争迫使每个资本家扩张和机械化，否则就会被消灭。</p>
+  <h2 id="crisis">4. 工资、后备军与危机</h2>
+  <p>快速积累吸收失业工人，工资上升。较高的工资削减利润，鼓励采用节省劳动的机器，于是工人被解雇，<b>产业后备军</b>重新充实。机械化还造成第二个问题：如果产量增长而工资被压低，谁来购买消费品？亨特用两大部门的平衡来解释马克思的危机理论，一个部门生产消费品，另一个生产资本品。一个部门的失衡会波及另一个部门，造成累积性的崩溃。萧条中工资下降，但产量下降得更快，于是供给跌到消费需求之下，复苏开始。亨特补充说，马克思不是停滞论者：他预期的是一阵阵的增长，伴随周期性的大规模失业。</p><div class="box"><h3>后备军周期</h3><p class="note">理查德·古德温（1967）把马克思的叙述变成了一个模型。利润用于投资。就业率高时，工资增长快于生产率，挤压利润；利润下降时，增长放慢，就业减少。图中显示60年间的就业率和工资份额。</p><div class="grid2"><div><label>起始工资份额：<b id="u0v"></b></label><input type="range" id="u0" data-suf="%" min="70" max="88" step="1" value="76"></div><div><label>起始就业率：<b id="v0v"></b></label><input type="range" id="v0" data-suf="%" min="84" max="97" step="0.5" value="90"></div><div><label>工资对就业的反应强度：<b id="bv"></b></label><input type="range" id="b" data-suf="" min="0.3" max="1.5" step="0.1" value="0.6"></div></div><svg id="ch" viewBox="0 0 640 258" width="100%" role="img" aria-label="就业率与工资份额随时间的变化"></svg><div class="out" id="out" aria-live="polite"></div></div>
+  <h2 id="long">5. 集中、贫困化与国家</h2>
+  <p>马克思预期资本会<b>集中</b>，因为大企业打败小企业，技术又提高了可行的最小规模。他预期工人阶级会壮大，其处境会恶化。亨特对这一论断的解读很谨慎。马克思写的是，工人的状况必然恶化，“不管工人的报酬高低如何”，所以这一论断说的是相对地位和劳动中的贬抑，而不是工资下降。马克思还预期利润率长期下降，亨特对此只是略提一笔。</p><p>按这种看法，<b>国家</b>保护阶级权力所依据的财产关系，并调解资本家之间的争斗，所以它可以对付其中的一些人，却不会对付全体。因此马克思怀疑仅靠选举能实现社会主义，这成为专题10和专题11的重大争论。</p>
+  <h2 id="debate">6. 亨特之外</h2>
+  <ul><li><b>价值与价格。</b>“转形问题”从1894年争论至今：庞巴维克称之为致命的矛盾；博特凯维奇、斯拉法派经济学家、“新解释”和跨期单一体系学派都提出过解法。</li><li><b>危机。</b>马克思主义者对危机的根源看法不一：消费不足、部门比例失调、利润挤压，或利润率下降。亨特在这里强调部门失衡和需求。</li><li><b>贫困化。</b>马克思之后，富国的实际工资大幅上升。辩护者指出相对份额、劳动条件和世界范围；批评者把它算作失败的预言。</li><li><b>集中</b>常被视为他最成功的预言（专题8）。</li></ul><div class="think"><b>思考题：</b>假设工资稳步上升，工人生活舒适。马克思对资本主义的批判还剩下什么？</div>
+  <h2 id="read">7. 阅读材料</h2>
+  <p class="rl">核心阅读</p><p class="rd">亨特，<em>Property and Prophets</em>，第7章。</p><p class="rd">卡尔·马克思，“异化劳动”，载《1844年经济学哲学手稿》。</p><p class="rl">辅助阅读</p><p class="rd">卡尔·马克思，《资本论》第一卷（1867），第七、二十五和二十六章（英文版章次）。</p><p class="rd">保罗·斯威齐，《资本主义发展论》（1942），论危机的各章。</p><p class="rd">理查德·古德温，“A Growth Cycle”（《一个增长周期》，1967）。</p>
+  <p class="pn"><a href="marx-capitalism.html">← 专题6：马克思的资本主义观</a><a href="corporate-capitalism.html">专题8：公司资本主义及其意识形态辩护 →</a></p>
+  <p><a href="index.html#topic-7">← 返回课程大纲中的专题7</a></p>
+</main>
+
+<footer>Lingyi Wei · 犹他大学经济系 · 最后更新于2026年11月</footer>
+
+<script>
+const $ = id => document.getElementById(id), V = id => +$(id).value;
+function sync() { document.querySelectorAll('.box input[type=range]').forEach(e => { $(e.id + 'v').textContent = e.value + (e.dataset.suf || ''); }); }
+function run(){const al=.025,be=.015,k=5;let u=V('u0')/100,v=V('v0')/100;const rho=V('b'),vs=.93,ga=rho*vs-al;const us=1-k*(al+be);const f=(u,v)=>[u*(rho*v-ga-al),v*((1-u)/k-al-be)];const dt=.05,N=1200,U=[],E=[];for(let i=0;i<=N;i++){if(i%4===0){U.push(u);E.push(v);}const a=f(u,v),b=f(u+dt/2*a[0],v+dt/2*a[1]),c=f(u+dt/2*b[0],v+dt/2*b[1]),d=f(u+dt*c[0],v+dt*c[1]);u+=dt/6*(a[0]+2*b[0]+2*c[0]+d[0]);v+=dt/6*(a[1]+2*b[1]+2*c[1]+d[1]);}
+const L=44,W=640,H=250,B=32,all=U.concat(E,[.6,1]),lo=Math.floor(Math.min(...all)*10)/10,hi=Math.ceil(Math.max(...all)*10-1e-9)/10,n=U.length-1,X=i=>L+i/n*(W-L-14),Y=z=>12+(1-(z-lo)/(hi-lo))*(H-B-12),p=A=>A.map((z,i)=>(i?'L':'M')+X(i).toFixed(1)+','+Y(z).toFixed(1)).join(' ');let g='';for(let z=lo;z<=hi+.001;z+=.1)g+=`<line x1="${L}" x2="${W-14}" y1="${Y(z)}" y2="${Y(z)}" stroke="#f0f2f4"/><text x="${L-6}" y="${Y(z)+4}" text-anchor="end">${Math.round(z*100)}%</text>`;[0,20,40,60].forEach(y=>g+=`<text x="${X(y/60*n)}" y="${H-16}" text-anchor="middle">${y}</text>`);g+=`<path d="${p(U)}" fill="none" stroke="#c47a2c" stroke-width="2.4"/><path d="${p(E)}" fill="none" stroke="#023e8a" stroke-width="2.4" stroke-dasharray="6 3"/><text x="${L+8}" y="${H-1}" style="fill:#023e8a">就业率（虚线）</text><text x="${L+170}" y="${H-1}" style="fill:#c47a2c">工资份额（实线）</text><text x="${W-14}" y="${H-1}" text-anchor="end">年</text>`;$('ch').innerHTML=g;
+$('out').innerHTML=`两条曲线围绕各自的平均值循环：工资份额<b>${Math.round(us*100)}%</b>，就业率<b>93%</b>。60年间工资份额的最低和最高值为${Math.round(Math.min(...U)*100)}%和${Math.round(Math.max(...U)*100)}%，就业率的最低和最高值为${Math.round(Math.min(...E)*100)}%和${Math.round(Math.max(...E)*100)}%。`+(Math.max(...E)>1?'就业率不可能超过100%；这个简单模型没有上限，请选择更温和的起点。':'就业率先达到高峰，工资随后。高就业抬高工资，利润受挤压使积累放慢，失业又反过来约束工资。');}
+document.querySelectorAll('.box input[type=range]').forEach(e => e.addEventListener('input', () => { sync(); run(); }));
+sync(); run();
+</script>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
