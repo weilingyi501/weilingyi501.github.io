@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>经济学的两种起点 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：经济学的两种起点. 个人还是制度.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/two-approaches.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/two-approaches.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../two-approaches.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题11</p>
+  <h1>经济学的两种起点</h1>
+  <p class="lead">人们常用鲁滨逊的故事，从一个人的选择引入经济学。另一些人则从人们实际工作和交易的制度开始。本专题比较这两种起点。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">岛上的鲁滨逊</a></li><li><a href="#s2">从制度出发</a></li><li><a href="#s3">微观与宏观</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 岛上的鲁滨逊</h2>
+  <p>教科书常以鲁滨逊开篇：他独自一人，选择如何使用时间。这个故事使稀缺和选择变得生动：要采集一种东西，就必须放弃另一种。如果有几个岛民，各自生产并自愿交易，那么每次交换都使双方受益。新古典方法以这一图景为基础，从关于个人的假设出发进行演绎推理。</p>
+  <h2 id="s2">2. 从制度出发</h2>
+  <p>教材的第二种方法借鉴马克思、凡勃伦和凯恩斯，从人们生来所处的制度开始：财产、企业、法律、家庭和政府。按照这种看法，鲁滨逊的故事会产生误导：他没有雇主，没有失业，没有货币，也没有历史；而小说中星期五的处境引出了教科书版本略去的权力问题。</p>
+  <div style="overflow-x:auto"><table><tr><th>问题</th><th>个人方法</th><th>制度方法</th></tr><tr><td>出发点</td><td>在稀缺下选择的个人</td><td>处于既有制度中的人</td></tr><tr><td>方法</td><td>从假设演绎</td><td>历史、证据与理论相结合</td></tr><tr><td>典型问题</td><td>什么是有效率的选择？</td><td>谁来决定，谁得益？</td></tr></table></div>
+  <h2 id="s3">3. 微观与宏观</h2>
+  <p><b>微观经济学</b>研究消费者、劳动者、企业和市场。<b>宏观经济学</b>研究增长、失业、通货膨胀和周期。第二部分从两个角度讲微观经济学：专题12—17从分配和制度出发，专题18—23介绍标准模型以及对它的批评。</p>
+  <p class="note"><b>说明：</b> 两种方法并非互不相通。博弈论、行为经济学和制度经济学如今用形式化的工具研究权力、规范和有限理性。</p>
+  <div class="think"><b>思考题：</b> 鲁滨逊的故事遗漏了什么？这重要吗？</div>
+  <h2 id="read">4. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第17章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Milton Friedman, <em>Capitalism and Freedom</em> (University of Chicago Press, 1962), chapter 1.</p>
+  <p class="pn"><a href="global-economy.html">← 全球经济中的美国</a><a href="income-wealth-class.html">收入、财富与阶级 →</a></p>
+  <p><a href="index.html#topic-11">← 返回课程大纲中的专题11</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

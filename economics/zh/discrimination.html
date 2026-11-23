@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>歧视 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：歧视. 种族、性别与劳动力市场.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/discrimination.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/discrimination.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../discrimination.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题15</p>
+  <h1>歧视</h1>
+  <p class="lead">不同群体之间在工资、就业、教育和住房方面的差距持续存在。本专题考察证据和相互竞争的解释。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">概念</a></li><li><a href="#s2">证据</a></li><li><a href="#s3">竞争会消除歧视吗？</a></li><li><a href="#s4">拥挤效应</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 概念</h2>
+  <p><b>刻板印象</b>是对一个群体的过度简化的印象，<b>偏见</b>是以此为基础的厌恶，<b>歧视</b>是因群体身份而非个人生产率对人的不利对待。种族主义和性别歧视等意识形态声称某一群体天生优越。</p>
+  <h2 id="s2">2. 证据</h2>
+  <p>按教材2005年的数据，非西班牙裔白人家庭收入中位数为50,784美元，西班牙裔35,967美元，黑人30,954美元，亚裔61,048美元。财富差距要大得多。女性相对于男性的报酬在1950至1970年间从65%降至59%，后来回升。差距本身并不等于歧视：教育、经验、职业和家庭角色也有差异，而这些差异本身可能反映了更早的歧视。</p>
+  <h2 id="s3">3. 竞争会消除歧视吗？</h2>
+  <p>米尔顿·弗里德曼认为，拒绝以较低工资雇用能干之人的雇主要为自己的偏好付出代价，因此竞争应当把这类企业淘汰。另一些人回答说，在有市场势力时代价很小，歧视可以持续。教材自己的观点是，分裂的工人谈判能力较弱，因此雇主作为整体可能得益，而各群体的工人都受损；迈克尔·赖克关于种族不平等的研究发展了这一论点。</p>
+  <h2 id="s4">4. 拥挤效应</h2>
+  <p>如果一个群体被排除在某些职业之外，其成员就会涌入其他职业，那里的供给增加使报酬下降。芭芭拉·伯格曼等人用这一思想解释女性占多数的职业为何工资较低。</p>
+  <div data-sim="crowd"></div>
+  <p class="note"><b>说明：</b> 此后，克劳迪娅·戈尔丁等人就性别差距提供了详细证据，包括工时缺乏弹性的作用，实地实验也直接测量了招聘中的歧视。</p>
+  <div class="think"><b>思考题：</b> 谁从歧视中得益，谁受损？</div>
+  <h2 id="read">5. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第22章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Milton Friedman, <em>Capitalism and Freedom</em> (University of Chicago Press, 1962), chapter 7.</p>
+  <p class="rd">Michael Reich, <em>Racial Inequality: A Political-Economic Analysis</em> (Princeton University Press, 1981).</p>
+  <p class="pn"><a href="market-power.html">← 市场势力与大企业</a><a href="environment.html">环境 →</a></p>
+  <p><a href="index.html#topic-15">← 返回课程大纲中的专题15</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

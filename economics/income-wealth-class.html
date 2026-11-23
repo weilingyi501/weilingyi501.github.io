@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Income, Wealth, and Class | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Income, Wealth, and Class. Measuring inequality.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/income-wealth-class.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/income-wealth-class.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/income-wealth-class.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 12</p>
+  <h1>Income, Wealth, and Class</h1>
+  <p class="lead">Before theory come facts: how income and wealth are distributed in the United States, and how the distribution has changed.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">Income</a></li><li><a href="#s2">The Gini coefficient</a></li><li><a href="#s3">Wealth and poverty</a></li><li><a href="#s4">Class as a relationship</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. Income</h2>
+  <p><b>Income</b> is a flow received over a period: wages and salaries, profits, interest, rent, and government transfers. In the text’s figures for 2006, employee compensation made up about 69 percent of personal income. Ranked by income, the top fifth of U.S. households received 50.4 percent of household income in 2005, up from 43.6 percent in 1975, while the bottom fifth received 3.4 percent.</p>
+  <h2 id="s2">2. The Gini coefficient</h2>
+  <p>The <b>Gini coefficient</b> runs from 0, when everyone has the same, to 1, when one person has everything. Around 2000 the World Bank figures quoted in the text ranged from about 0.25 in Denmark and Sweden to 0.41 in the United States and about 0.6 in Bolivia. Surveys, years, and definitions differ, so comparisons need care.</p>
+  <div data-sim="gini"></div>
+  <h2 id="s3">3. Wealth and poverty</h2>
+  <p><b>Wealth</b> is a stock: assets minus debts. It is far more concentrated than income. Median net worth in 2000 was $7,396 in the lowest income fifth and $185,500 in the highest, and much of the difference lies outside the home. The official poverty rate was 12.6 percent in 2005, and some of the poor worked full time all year. The text also reports falling real weekly wages between 1973 and 1998 while output grew.</p>
+  <h2 id="s4">4. Class as a relationship</h2>
+  <p>“Middle class” usually refers to an income range. The text instead defines <b>class</b> by how people get their income and how that relates them to others: employees live on wages and salaries, and owners on profit. A well-paid athlete is an employee by this definition. Managers, professionals, and small proprietors fall in between, and many employees own some stock through pensions.</p>
+  <p class="note"><b>Note:</b> The figures are the text’s and end around 2005. The slow growth of wages looks different when benefits, household size, and other price indexes are used, and economists disagree about how much.</p>
+  <div class="think"><b>Question to think about:</b> Which measure of inequality tells you most, and what does each one hide?</div>
+  <h2 id="read">5. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapter 18.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Thomas Piketty, <em>Capital in the Twenty-First Century</em> (Harvard University Press, 2014), introduction.</p>
+  <p class="pn"><a href="two-approaches.html">← Two Ways to Start Economics</a><a href="labor-prices-profits.html">Labor, Prices, and Profits →</a></p>
+  <p><a href="index.html#topic-12">← Back to Topic 12 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

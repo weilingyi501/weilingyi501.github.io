@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>劳动、价格与利润 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：劳动、价格与利润. 古典与马克思的观点.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/labor-prices-profits.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/labor-prices-profits.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../labor-prices-profits.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题13</p>
+  <h1>劳动、价格与利润</h1>
+  <p class="lead">斯密和李嘉图把价格与劳动联系起来，马克思用这一思想解释利润。这些章节阐述了该理论以及对它的反对意见，包括来自同情者的批评。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">必要劳动与剩余劳动</a></li><li><a href="#s2">什么决定工资</a></li><li><a href="#s3">劳动与价格</a></li><li><a href="#s4">转形问题</a></li><li><a href="#s5">其他理论</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 必要劳动与剩余劳动</h2>
+  <p>在古典和马克思的解释中，工作日分为两部分。雇员在<b>必要劳动</b>时间里生产出相当于自己报酬的价值，在<b>剩余劳动</b>时间里生产出雇主的利润。两者之比称为剥削率，这里是一个技术性术语，既适用于低薪劳动，也适用于高薪劳动。教材把同样的划分用于奴隶制和农奴制，以说明剩余的形式在不同制度下有何不同。</p>
+  <h2 id="s2">2. 什么决定工资</h2>
+  <p>报酬介于上限（全部产品）与由生存和习俗决定的下限之间。在这个区间内，教材强调围绕工时、报酬和劳动强度的谈判。谈判力量取决于失业、工会、社会保障、法律和舆论。美国的工会会员比例从1950年代中期的三分之一以上降至2000年代初的约13%。</p>
+  <h2 id="s3">3. 劳动与价格</h2>
+  <p>斯密设想了一个简单的社会，商品按所需劳动进行交换。如果养一头猪所需的劳动是养一只鸡的两倍，一头猪就换两只鸡。在资本主义下，价格还包括材料和利润。劳动价值论认为，长期的竞争价格反映过去和现在的全部劳动时间，利润来自其中的剩余部分。</p>
+  <h2 id="s4">4. 转形问题</h2>
+  <p>如果各行业的剩余率相同，而每个工人使用的材料数量不同，劳动价值就意味着不同的利润率。然而竞争趋于使利润率相等。因此价格必然偏离劳动价值，如何把两者联系起来已争论了一个多世纪。</p>
+  <div data-sim="transform"></div>
+  <h2 id="s5">5. 其他理论</h2>
+  <p>一些承认剩余存在的经济学家并不接受劳动价格理论。斯拉法沿着李嘉图的思路，从生产和分配的物质条件推导价格。罗默用新古典的工具，通过所有权的不平等来定义剥削。大多数新古典经济学家不接受这一概念：在他们看来，竞争市场中的工资已经等于劳动者的贡献（见专题21）。</p>
+  <div class="think"><b>思考题：</b> 没有劳动价值论，利润理论能否成立？</div>
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第19—20章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">David Ricardo, <em>On the Principles of Political Economy and Taxation</em> (1817), chapter 1.</p>
+  <p class="pn"><a href="income-wealth-class.html">← 收入、财富与阶级</a><a href="market-power.html">市场势力与大企业 →</a></p>
+  <p><a href="index.html#topic-13">← 返回课程大纲中的专题13</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

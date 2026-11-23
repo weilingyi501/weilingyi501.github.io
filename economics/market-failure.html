@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Market Failure | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Market Failure. Public goods, externalities, and taxes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/market-failure.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/market-failure.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/market-failure.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 23</p>
+  <h1>Market Failure</h1>
+  <p class="lead">Even in standard theory markets can fail. The topic asks when they do and what governments can do about it.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">When markets fall short</a></li><li><a href="#s2">Public goods</a></li><li><a href="#s3">Externalities</a></li><li><a href="#s4">Principles of taxation</a></li><li><a href="#s5">Exception or rule?</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. When markets fall short</h2>
+  <p>In the standard theory, markets are efficient only under strict conditions. They can fail because of market power, poor information, economic fluctuations, public goods, and <b>externalities</b>.</p>
+  <h2 id="s2">2. Public goods</h2>
+  <p>A public good is <b>nonexcludable</b> and <b>nonrival</b>: no one can be kept from it, and one person’s use leaves as much for others. National defense is the usual example. Because people can benefit without paying, markets provide too little, and the amount is decided through politics.</p>
+  <h2 id="s3">3. Externalities</h2>
+  <p>Pollution is a cost that the price leaves out, so too much is produced. A. C. Pigou proposed a tax equal to the external cost. Education and research bring benefits to others, so too little is produced without a subsidy. The efficient amount of pollution is rarely zero, since the last units are costly to remove, and measuring external costs is hard.</p>
+  <div data-sim="pigou"></div>
+  <h2 id="s4">4. Principles of taxation</h2>
+  <p>An efficient tax changes behavior little and is cheap to collect. Two ideas of fairness compete: <b>ability to pay</b> and <b>benefits received</b>. Efficient taxes, such as a uniform head tax, are often the least fair by the first standard. Some taxes are earmarked, as gasoline taxes are for roads.</p>
+  <h2 id="s5">5. Exception or rule?</h2>
+  <p>For many neoclassical economists failures are limited and can be repaired. The text’s progressive view is that pollution, market power, and neglected public goods run through the whole economy, and that governments open to private influence will not fully correct them. A third view, public choice theory, warns that governments fail too.</p>
+  <div class="think"><b>Question to think about:</b> Are market failures exceptions, or the normal case?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapter 35.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">A. C. Pigou, <em>The Economics of Welfare</em> (1920), part II, chapter 9.</p>
+  <p class="rd">Ronald Coase, “The Problem of Social Cost,” <em>Journal of Law and Economics</em> 3 (1960).</p>
+  <p class="pn"><a href="market-structures.html">← Market Structures</a><span></span></p>
+  <p><a href="index.html#topic-23">← Back to Topic 23 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

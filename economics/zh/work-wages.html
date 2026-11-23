@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>工作与工资 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：工作与工资. 边际生产率及其批评.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/work-wages.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/work-wages.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../work-wages.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题21</p>
+  <h1>工作与工资</h1>
+  <p class="lead">按照新古典的解释，每种投入得到它所增加的价值。本章将其与工资也反映谈判和权力的观点并列。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">劳动需求</a></li><li><a href="#s2">劳动供给</a></li><li><a href="#s3">工资为何不同</a></li><li><a href="#s4">公平吗？</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 劳动需求</h2>
+  <p>企业雇用工人是为了他们增加的产出。<b>边际收益产品</b>是多雇一个工人带来的额外收入：在竞争市场中等于额外产出乘以价格。企业雇用到它等于工资为止，因此边际收益产品曲线就是劳动需求曲线。产品价格上升或技术改进使它外移。</p>
+  <div data-sim="mrp"></div>
+  <h2 id="s2">2. 劳动供给</h2>
+  <p>工资提高使闲暇变得更昂贵，从而鼓励工作（替代效应）；同时使人更富裕，可以享受更多闲暇（收入效应）。当后者更强时，供给曲线向后弯曲。人口、劳动参与、税收和福利使曲线移动。</p>
+  <h2 id="s3">3. 工资为何不同</h2>
+  <p>差别来自令人不快或危险的工作（补偿性差别）、教育和培训（人力资本）、流动的障碍以及歧视。</p>
+  <h2 id="s4">4. 公平吗？</h2>
+  <p>J. B. 克拉克把边际生产率当作公正的原则：每种要素得到它所增加的部分。教材的批评是，这一理论把机器增加的产出归功于所有者，而拥有机器不同于劳动；它还忽略了谈判力量。如今许多经济学家把边际生产率当作描述而非辩护，并补充说，具有工资决定权的雇主所付的工资低于该理论的预测。</p>
+  <p class="note"><b>说明：</b> 在教材出版之后，关于最低工资和买方垄断的研究使许多经济学家不再依赖简单的竞争性劳动市场模型。</p>
+  <div class="think"><b>思考题：</b> 人们的报酬等于他们的产出吗？</div>
+  <h2 id="read">5. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第31章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">John Bates Clark, <em>The Distribution of Wealth</em> (1899), chapter 1.</p>
+  <p class="pn"><a href="production-costs.html">← 生产与成本</a><a href="market-structures.html">市场结构 →</a></p>
+  <p><a href="index.html#topic-21">← 返回课程大纲中的专题21</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

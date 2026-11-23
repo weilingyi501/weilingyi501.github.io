@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>环境 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：环境. 污染、价格与限度.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/environment.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/environment.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../environment.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题16</p>
+  <h1>环境</h1>
+  <p class="lead">生产消耗资源并产生废物，而市场价格往往忽略它们。本专题比较从可交易许可证、管制到更深层制度变革的各种方案。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">问题</a></li><li><a href="#s2">四类回答</a></li><li><a href="#s3">税收与许可证</a></li><li><a href="#s4">增长与人口</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 问题</h2>
+  <p>污染包括固体废物、水中的有机废物、地方性空气污染、温室气体、持久性毒物和辐射。这些成本大多不由污染者承担，因此只看自身成本的企业，其污染会超过对社会有利的水平。</p>
+  <h2 id="s2">2. 四类回答</h2>
+  <p>一种主张是创设产权，使所有者有理由保护资源；“公地悲剧”描述了没有产权时会发生什么。第二种主张对污染征税。第三种主张直接管制，因为清洁空气无法分割，不能只卖给一些人而不卖给另一些人。教材中的进步派作者则认为，对利润和增长的追求是问题的根源，需要更深层的制度变革。</p>
+  <h2 id="s3">3. 税收与许可证</h2>
+  <p><b>碳税</b>为每单位排放定价；<b>总量控制与交易</b>规定总量，允许企业买卖许可证。无论哪种方式，减排成本低的企业减得更多，总成本低于要求每个企业作同样削减。</p>
+  <div data-sim="abate"></div>
+  <h2 id="s4">4. 增长与人口</h2>
+  <p>马尔萨斯的忧虑以零增长主张的形式再次出现。教材回答说，技术进步和出生率下降减轻了压力，不同产出的污染差别很大，而不作再分配就停止增长，会固化国家内部和国家之间现有的不平等。</p>
+  <p class="note"><b>说明：</b> 计划经济也造成了严重污染，这使仅以利润为根据的解释变得复杂。埃莉诺·奥斯特罗姆指出，社区往往在既无私人所有者也无国家的情况下管理公共资源。</p>
+  <div class="think"><b>思考题：</b> 清洁的空气应该有价格吗？</div>
+  <h2 id="read">5. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第23章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Garrett Hardin, “The Tragedy of the Commons,” <em>Science</em> 162 (1968).</p>
+  <p class="rd">Elinor Ostrom, <em>Governing the Commons</em> (Cambridge University Press, 1990), chapter 1.</p>
+  <p class="pn"><a href="discrimination.html">← 歧视</a><a href="government-democracy.html">政府、民主与经济 →</a></p>
+  <p><a href="index.html#topic-16">← 返回课程大纲中的专题16</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

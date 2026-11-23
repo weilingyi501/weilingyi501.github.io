@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Labor, Prices, and Profits | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Labor, Prices, and Profits. The classical and Marxian view.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/labor-prices-profits.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/labor-prices-profits.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/labor-prices-profits.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 13</p>
+  <h1>Labor, Prices, and Profits</h1>
+  <p class="lead">Smith and Ricardo linked prices to labor, and Marx used the idea to explain profit. The chapters set out that theory and the objections to it, including those of sympathetic economists.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">Necessary and surplus labor</a></li><li><a href="#s2">What sets wages</a></li><li><a href="#s3">Labor and price</a></li><li><a href="#s4">The transformation problem</a></li><li><a href="#s5">Alternatives</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. Necessary and surplus labor</h2>
+  <p>In the classical and Marxian account the working day has two parts. In <b>necessary labor</b> time employees produce the equivalent of their pay, and in <b>surplus labor</b> time they produce the employer’s profit. The ratio of the two is called the rate of exploitation, a technical term here that can apply to high-paid as well as low-paid work. The text applies the same division to slavery and serfdom to show how the form of the surplus differs across systems.</p>
+  <h2 id="s2">2. What sets wages</h2>
+  <p>Pay lies between a ceiling, the full product, and a floor set by subsistence and custom. Within that range the text stresses bargaining over hours, pay, and the intensity of work. Bargaining power depends on unemployment, unions, the safety net, law, and public opinion. Union membership in the United States fell from over a third of employees in the mid-1950s to about 13 percent in the early 2000s.</p>
+  <h2 id="s3">3. Labor and price</h2>
+  <p>Smith imagined a simple society where goods exchange according to the labor they take. If a pig takes twice the work of a chicken, one pig trades for two chickens. Under capitalism prices also cover materials and profit. The labor theory holds that competitive prices in the long run reflect total labor time, past and present, with profit coming from the surplus part.</p>
+  <h2 id="s4">4. The transformation problem</h2>
+  <p>If every industry has the same rate of surplus but uses different amounts of materials per worker, labor values imply different profit rates. Yet competition tends to equalize profit rates. Prices must therefore depart from labor values, and how to connect the two has been debated for more than a century.</p>
+  <div data-sim="transform"></div>
+  <h2 id="s5">5. Alternatives</h2>
+  <p>Some economists who accept that a surplus exists reject the labor theory of price. Sraffa, following Ricardo, derived prices from the physical conditions of production and distribution. Roemer used neoclassical tools to define exploitation through unequal ownership. Most neoclassical economists reject the concept: for them, a wage in a competitive market already equals the worker’s contribution (see topic 21).</p>
+  <div class="think"><b>Question to think about:</b> Can a theory of profit stand without the labor theory of value?</div>
+  <h2 id="read">6. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapters 19–20.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">David Ricardo, <em>On the Principles of Political Economy and Taxation</em> (1817), chapter 1.</p>
+  <p class="pn"><a href="income-wealth-class.html">← Income, Wealth, and Class</a><a href="market-power.html">Market Power and the Large Firm →</a></p>
+  <p><a href="index.html#topic-13">← Back to Topic 13 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
