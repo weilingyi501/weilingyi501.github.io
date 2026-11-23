@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>凡勃伦与制度 | Lingyi Wei</title>
+  <meta name="description" content="《经济学导论》教学模块：凡勃伦与制度. 产业、商业与消费.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/veblen.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/veblen.html">
+  <link rel="stylesheet" href="../../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: normal; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/research.html">研究</a></li>
+      <li><a href="/teaching.html">教学</a></li>
+      <li><a href="/food.html">食物</a></li>
+      <li><a href="/resources.html" class="on">资源</a></li>
+      <li><a href="/cv.html">简历</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="../veblen.html" lang="en">English</a><a href="/resources.html">资源</a> › <a href="index.html">经济学导论</a> › 专题8</p>
+  <h1>凡勃伦与制度</h1>
+  <p class="lead">索尔斯坦·凡勃伦目睹大公司及其所有者改变了美国人的生活。他把经济作为一套不断演化的习惯和制度来研究。</p>
+  <div class="toc"><b>本专题内容</b><ol><li><a href="#s1">两套习惯</a></li><li><a href="#s2">产业与商业</a></li><li><a href="#s3">财产与政府</a></li><li><a href="#s4">炫耀性消费</a></li><li><a href="#s5">影响</a></li><li><a href="#read">阅读材料</a></li></ol></div>
+  <h2 id="s1">1. 两套习惯</h2>
+  <p>索尔斯坦·凡勃伦（1857—1929）认为，每个社会中都有两组行为特征在起作用。<b>作业本能</b>倾向于有用的工作、合作和好奇心；<b>掠夺本能</b>倾向于强取、等级和仪式。制度强化其中的一种，两者之间的冲突推动着社会生活。</p>
+  <h2 id="s2">2. 产业与商业</h2>
+  <p>凡勃伦把<b>产业</b>，即工程师和工人制造有用物品的活动，与<b>商业</b>，即往往不在场的所有者赚钱的活动，对立起来。当技术能够生产的数量超过按有利可图的价格能卖出的数量时，商业就会限制产量。凡勃伦称之为“破坏”，即“有意识地收回效率”。他认为，在为利润而运行的机器经济中，长期萧条是常态。</p>
+  <div data-sim="sabotage"></div>
+  <h2 id="s3">3. 财产与政府</h2>
+  <p>在凡勃伦的历史叙述中，当生产率的提高使夺取有利可图时，私有财产便开始了，随后习惯使占有获得了正当性。他认为现代政府主要保护财产和商业，而民族主义和尚武精神转移了人们对国内经济争端的注意力。这些是他对当时美国的判断，在当时和现在都有争议。</p>
+  <h2 id="s4">4. 炫耀性消费</h2>
+  <p>《有闲阶级论》（1899）描写富人如何通过昂贵而往往无用的物品来显示成功，其他人则竞相效仿。由于尊重取决于拥有的和邻人一样多或略多，每一次所得很快成为新的标准，满足无法持久。攀比也使人们安于攀登阶梯，而不去追问是谁搭建了它。</p>
+  <h2 id="s5">5. 影响</h2>
+  <p>凡勃伦开创了美国的制度经济学。他关于习惯、地位以及制造物品与赚钱之间差距的问题，在消费行为、公司治理和金融的研究中一再出现。</p>
+  <div class="think"><b>思考题：</b> 我们购买的东西有多少是出于对他人看法的考虑？</div>
+  <h2 id="read">6. 阅读材料</h2>
+  <p class="rl">核心阅读</p>
+  <p class="rd">谢尔曼等，第13章。</p>
+  <p class="rl">辅助阅读</p>
+  <p class="rd">Thorstein Veblen, <em>The Theory of the Leisure Class</em> (1899), chapter 4.</p>
+  <p class="rd">Thorstein Veblen, <em>The Engineers and the Price System</em> (1921), chapter 1.</p>
+  <p class="pn"><a href="corporation-neoclassical.html">← 公司与新古典经济学</a><a href="depression-keynes.html">增长、萧条与凯恩斯 →</a></p>
+  <p><a href="index.html#topic-8">← 返回课程大纲中的专题8</a></p>
+</main>
+<footer>Lingyi Wei · 犹他大学经济系 · 更新于2026年11月</footer>
+<button type="button" class="totop" id="totop" aria-label="返回顶部" title="返回顶部">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>

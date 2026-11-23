@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-w-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-w-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-w.png">
+  <title>Feudalism in Western Europe | Lingyi Wei</title>
+  <meta name="description" content="A teaching module for Introduction to Economics: Feudalism in Western Europe. Lords, serfs, and the Christian paternalist ethic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://lingyiwei.org/economics/feudalism.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://lingyiwei.org/economics/zh/feudalism.html">
+  <link rel="stylesheet" href="../style.css">
+<style>
+.vt { --soft:#f5f6f8; --faint:#8a929b; }
+.page.vt { max-width: 900px; padding-top: 40px; }
+.vt .crumb { font-size: 15px; margin: 0 0 18px; color: var(--muted); }
+.vt p, .vt li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.vt .toc { background: var(--soft); border-radius: 10px; padding: 12px 18px; }
+.vt .toc ol { margin: 4px 0 0; }
+.vt h3.sub { font-size: 18px; margin: 22px 0 6px; color: var(--bar); }
+.vt blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--link); background: var(--blue-soft); border-radius: 0 6px 6px 0; font-style: italic; }
+.vt blockquote cite { display: block; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 4px; }
+.vt .box { border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px; margin: 16px 0; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.vt .box h3 { margin: 0 0 10px; font-size: 19px; }
+.vt .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+@media (max-width: 680px) { .vt .grid2 { grid-template-columns: 1fr; } }
+.vt label { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 2px; }
+.vt input[type=range] { width: 100%; accent-color: var(--link); }
+.vt .out { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
+.vt .out b { color: var(--bar); }
+.vt table { border-collapse: collapse; width: 100%; font-size: 15.5px; margin: 8px 0; }
+.vt th, .vt td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+.vt th { color: var(--muted); font-weight: 600; font-size: 14px; }
+.vt .eq { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; background: var(--soft); padding: 8px 12px; border-radius: 6px; overflow-x: auto; }
+.vt svg text { font-size: 12px; fill: #5b6670; }
+.vt .note { font-size: 14.5px; color: var(--muted); }
+.vt .think { border-left: 4px solid var(--link); background: var(--blue-soft); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.vt p.rl { font-size: 14px; color: var(--muted); margin: 8px 0 4px; font-weight: 600; }
+.vt p.rd { margin: 0 0 6px; padding-left: 14px; border-left: 2px solid var(--blue-line); text-align: left; }
+.vt .btn { font: inherit; font-size: 14.5px; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 999px; padding: 3px 14px; cursor: pointer; margin: 0 8px 6px 0; }
+.vt .btn.on { background: var(--link); color: #fff; }
+.vt .tag { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 13.5px; font-weight: 600; color: #fff; }
+.vt .split { display: flex; height: 36px; border-radius: 8px; overflow: hidden; margin: 10px 0 4px; }
+.vt .split div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.vt .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+.vt .vs div { background: var(--soft); border-radius: 10px; padding: 12px 14px; font-size: 16px; }
+.vt .vs b { display: block; color: var(--bar); margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .vs { grid-template-columns: 1fr; } }
+.vt .zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0; }
+.vt .zones div { border-radius: 10px; padding: 12px 14px; font-size: 15.5px; }
+.vt .zones b { display: block; margin-bottom: 4px; }
+@media (max-width: 680px) { .vt .zones { grid-template-columns: 1fr; } }
+.vt .pn { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; text-align: left; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <a class="brand" href="/">Lingyi Wei</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/teaching.html">Teaching</a></li>
+      <li><a href="/food.html">Food</a></li>
+      <li><a href="/resources.html" class="on">Resources</a></li>
+      <li><a href="/cv.html">CV</a></li>
+    </ul>
+  </div>
+</header>
+<main class="page vt">
+  <p class="crumb"><a class="langbtn" href="zh/feudalism.html" lang="zh-CN">中文</a><a href="/resources.html">Resources</a> › <a href="index.html">Introduction to Economics</a> › Topic 2</p>
+  <h1>Feudalism in Western Europe</h1>
+  <p class="lead">As Roman slavery declined, former slaves, free farmers, and members of the Germanic tribes became serfs bound to a manor. The medieval Church taught that rank carried obligations and that the pursuit of wealth was dangerous.</p>
+  <div class="toc"><b>In this topic</b><ol><li><a href="#s1">Why Rome’s economy stalled</a></li><li><a href="#s2">From slave to serf</a></li><li><a href="#s3">The manor</a></li><li><a href="#s4">The Christian paternalist ethic</a></li><li><a href="#read">Readings</a></li></ol></div>
+  <h2 id="s1">1. Why Rome’s economy stalled</h2>
+  <p>Slavery produced Rome’s wealth and, in the book’s account, its limits. Owners looked down on production, and free farmers and artisans, who had reason to improve methods, were driven out of business. Slaves gained nothing from better techniques, could break expensive equipment, and had to be watched closely. Easily supervised single crops wore out the soil, and slaves could not safely be armed, so the army came to depend on mercenaries.</p>
+  <h2 id="s2">2. From slave to serf</h2>
+  <p>As order broke down between the third and fifth centuries, landowners wanted workers who would work with less supervision and help defend an estate. A <b>serf</b> owed labor or goods to the lord, was bound to the land, and had a plot to farm, but could not be sold away like a slave. Serfs came from three groups: former slaves, ruined free farmers, and ordinary members of Germanic tribes whose chiefs had become lords.</p>
+  <h2 id="s3">3. The manor</h2>
+  <p>The manor was nearly self-sufficient, and economic, legal, and military power lay with its lord. Custom fixed most obligations, and lords who demanded too much met resistance. Land was held in return for service and was not owned in the modern sense. The Church was the largest landowner, the main teacher, and a lord like others. Technology fell back after Rome and then improved very slowly.</p>
+  <div style="overflow-x:auto"><table><tr><th>Feature</th><th>Communal</th><th>Ancient slavery</th><th>Feudalism</th><th>Capitalism</th></tr><tr><td>Technology</td><td>Stone tools, hunting and gathering</td><td>Stone to iron tools, farming and herding</td><td>Iron tools, slow change</td><td>Machines, rapid change</td></tr><tr><td>Who works, who receives</td><td>All work and share</td><td>Slaves work, masters receive</td><td>Serfs work, lords receive</td><td>Employees earn wages, owners earn profit</td></tr><tr><td>Ruling ideas</td><td>Community</td><td>Natural rank</td><td>Christian paternalism</td><td>Individualism and the market</td></tr></table></div>
+  <h2 id="s4">4. The Christian paternalist ethic</h2>
+  <p>Medieval thought compared society to a family in which the powerful had a father’s duty to protect the weak. Clement of Alexandria taught that wealth was acceptable if used well. Thomas Aquinas justified property by the duty of almsgiving and saw ranks as ordained. The <b>just price</b> was supposed to keep a seller in his customary station, and <b>usury</b>, lending at interest, was condemned because most borrowers were poor people in trouble. Lords and bishops often broke the rules, but the values were the opposite of those of a market economy.</p>
+  <p class="note"><b>Note:</b> The text dates Rome’s fall to 456; historians usually give 476 for the end of the Western Empire.</p>
+  <div class="think"><b>Question to think about:</b> What holds an economy together when few things are bought and sold?</div>
+  <h2 id="read">5. Readings</h2>
+  <p class="rl">Core reading</p>
+  <p class="rd">Sherman et al., chapters 3–4.</p>
+  <p class="rl">Companion reading</p>
+  <p class="rd">Perry Anderson, <em>Passages from Antiquity to Feudalism</em> (New Left Books, 1974).</p>
+  <p class="rd">Eileen Power, <em>Medieval People</em> (1924).</p>
+  <p class="pn"><a href="early-economies.html">← Early Economies</a><a href="feudalism-to-capitalism.html">From Feudalism to Capitalism →</a></p>
+  <p><a href="index.html#topic-2">← Back to Topic 2 in the course outline</a></p>
+</main>
+<footer>Lingyi Wei · Department of Economics, University of Utah · Last updated November 2026</footer>
+<button type="button" class="totop" id="totop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="/economics/sims.js"></script>
+<script>
+(function () {
+  const b = document.getElementById('totop');
+  const t = () => b.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', t, {passive: true}); t();
+  b.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+})();
+</script>
+</body>
+</html>
